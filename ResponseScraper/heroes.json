@@ -1,0 +1,1014 @@
+{
+    "count": 112,
+    "status": 200,
+    "heroes": [
+        {
+            "localized_name": "Anti-Mage",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/antimage_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/antimage_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/antimage_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/antimage_vert.jpg",
+            "name": "npc_dota_hero_antimage",
+            "id": 1
+        },
+        {
+            "localized_name": "Axe",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/axe_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/axe_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/axe_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/axe_vert.jpg",
+            "name": "npc_dota_hero_axe",
+            "id": 2
+        },
+        {
+            "localized_name": "Bane",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/bane_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/bane_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/bane_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/bane_vert.jpg",
+            "name": "npc_dota_hero_bane",
+            "id": 3
+        },
+        {
+            "localized_name": "Bloodseeker",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/bloodseeker_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/bloodseeker_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/bloodseeker_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/bloodseeker_vert.jpg",
+            "name": "npc_dota_hero_bloodseeker",
+            "id": 4
+        },
+        {
+            "localized_name": "Crystal Maiden",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/crystal_maiden_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/crystal_maiden_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/crystal_maiden_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/crystal_maiden_vert.jpg",
+            "name": "npc_dota_hero_crystal_maiden",
+            "id": 5
+        },
+        {
+            "localized_name": "Drow Ranger",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/drow_ranger_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/drow_ranger_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/drow_ranger_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/drow_ranger_vert.jpg",
+            "name": "npc_dota_hero_drow_ranger",
+            "id": 6
+        },
+        {
+            "localized_name": "Earthshaker",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/earthshaker_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/earthshaker_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/earthshaker_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/earthshaker_vert.jpg",
+            "name": "npc_dota_hero_earthshaker",
+            "id": 7
+        },
+        {
+            "localized_name": "Juggernaut",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/juggernaut_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/juggernaut_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/juggernaut_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/juggernaut_vert.jpg",
+            "name": "npc_dota_hero_juggernaut",
+            "id": 8
+        },
+        {
+            "localized_name": "Mirana",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/mirana_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/mirana_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/mirana_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/mirana_vert.jpg",
+            "name": "npc_dota_hero_mirana",
+            "id": 9
+        },
+        {
+            "localized_name": "Shadow Fiend",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/nevermore_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/nevermore_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/nevermore_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/nevermore_vert.jpg",
+            "name": "npc_dota_hero_nevermore",
+            "id": 11
+        },
+        {
+            "localized_name": "Morphling",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/morphling_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/morphling_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/morphling_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/morphling_vert.jpg",
+            "name": "npc_dota_hero_morphling",
+            "id": 10
+        },
+        {
+            "localized_name": "Phantom Lancer",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/phantom_lancer_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/phantom_lancer_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/phantom_lancer_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/phantom_lancer_vert.jpg",
+            "name": "npc_dota_hero_phantom_lancer",
+            "id": 12
+        },
+        {
+            "localized_name": "Puck",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/puck_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/puck_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/puck_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/puck_vert.jpg",
+            "name": "npc_dota_hero_puck",
+            "id": 13
+        },
+        {
+            "localized_name": "Pudge",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/pudge_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/pudge_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/pudge_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/pudge_vert.jpg",
+            "name": "npc_dota_hero_pudge",
+            "id": 14
+        },
+        {
+            "localized_name": "Razor",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/razor_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/razor_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/razor_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/razor_vert.jpg",
+            "name": "npc_dota_hero_razor",
+            "id": 15
+        },
+        {
+            "localized_name": "Sand King",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/sand_king_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/sand_king_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/sand_king_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/sand_king_vert.jpg",
+            "name": "npc_dota_hero_sand_king",
+            "id": 16
+        },
+        {
+            "localized_name": "Storm Spirit",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/storm_spirit_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/storm_spirit_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/storm_spirit_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/storm_spirit_vert.jpg",
+            "name": "npc_dota_hero_storm_spirit",
+            "id": 17
+        },
+        {
+            "localized_name": "Sven",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/sven_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/sven_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/sven_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/sven_vert.jpg",
+            "name": "npc_dota_hero_sven",
+            "id": 18
+        },
+        {
+            "localized_name": "Tiny",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/tiny_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/tiny_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/tiny_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/tiny_vert.jpg",
+            "name": "npc_dota_hero_tiny",
+            "id": 19
+        },
+        {
+            "localized_name": "Vengeful Spirit",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_vert.jpg",
+            "name": "npc_dota_hero_vengefulspirit",
+            "id": 20
+        },
+        {
+            "localized_name": "Windranger",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/windrunner_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/windrunner_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/windrunner_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/windrunner_vert.jpg",
+            "name": "npc_dota_hero_windrunner",
+            "id": 21
+        },
+        {
+            "localized_name": "Zeus",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/zuus_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/zuus_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/zuus_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/zuus_vert.jpg",
+            "name": "npc_dota_hero_zuus",
+            "id": 22
+        },
+        {
+            "localized_name": "Kunkka",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/kunkka_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/kunkka_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/kunkka_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/kunkka_vert.jpg",
+            "name": "npc_dota_hero_kunkka",
+            "id": 23
+        },
+        {
+            "localized_name": "Lina",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lina_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lina_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lina_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lina_vert.jpg",
+            "name": "npc_dota_hero_lina",
+            "id": 25
+        },
+        {
+            "localized_name": "Lich",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lich_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lich_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lich_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lich_vert.jpg",
+            "name": "npc_dota_hero_lich",
+            "id": 31
+        },
+        {
+            "localized_name": "Lion",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lion_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lion_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lion_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lion_vert.jpg",
+            "name": "npc_dota_hero_lion",
+            "id": 26
+        },
+        {
+            "localized_name": "Shadow Shaman",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/shadow_shaman_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/shadow_shaman_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/shadow_shaman_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/shadow_shaman_vert.jpg",
+            "name": "npc_dota_hero_shadow_shaman",
+            "id": 27
+        },
+        {
+            "localized_name": "Slardar",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/slardar_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/slardar_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/slardar_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/slardar_vert.jpg",
+            "name": "npc_dota_hero_slardar",
+            "id": 28
+        },
+        {
+            "localized_name": "Tidehunter",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/tidehunter_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/tidehunter_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/tidehunter_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/tidehunter_vert.jpg",
+            "name": "npc_dota_hero_tidehunter",
+            "id": 29
+        },
+        {
+            "localized_name": "Witch Doctor",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/witch_doctor_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/witch_doctor_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/witch_doctor_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/witch_doctor_vert.jpg",
+            "name": "npc_dota_hero_witch_doctor",
+            "id": 30
+        },
+        {
+            "localized_name": "Riki",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/riki_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/riki_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/riki_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/riki_vert.jpg",
+            "name": "npc_dota_hero_riki",
+            "id": 32
+        },
+        {
+            "localized_name": "Enigma",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/enigma_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/enigma_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/enigma_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/enigma_vert.jpg",
+            "name": "npc_dota_hero_enigma",
+            "id": 33
+        },
+        {
+            "localized_name": "Tinker",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/tinker_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/tinker_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/tinker_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/tinker_vert.jpg",
+            "name": "npc_dota_hero_tinker",
+            "id": 34
+        },
+        {
+            "localized_name": "Sniper",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/sniper_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/sniper_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/sniper_vert.jpg",
+            "name": "npc_dota_hero_sniper",
+            "id": 35
+        },
+        {
+            "localized_name": "Necrophos",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/necrolyte_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/necrolyte_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/necrolyte_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/necrolyte_vert.jpg",
+            "name": "npc_dota_hero_necrolyte",
+            "id": 36
+        },
+        {
+            "localized_name": "Warlock",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/warlock_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/warlock_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/warlock_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/warlock_vert.jpg",
+            "name": "npc_dota_hero_warlock",
+            "id": 37
+        },
+        {
+            "localized_name": "Beastmaster",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/beastmaster_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/beastmaster_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/beastmaster_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/beastmaster_vert.jpg",
+            "name": "npc_dota_hero_beastmaster",
+            "id": 38
+        },
+        {
+            "localized_name": "Queen of Pain",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/queenofpain_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/queenofpain_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/queenofpain_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/queenofpain_vert.jpg",
+            "name": "npc_dota_hero_queenofpain",
+            "id": 39
+        },
+        {
+            "localized_name": "Venomancer",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/venomancer_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/venomancer_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/venomancer_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/venomancer_vert.jpg",
+            "name": "npc_dota_hero_venomancer",
+            "id": 40
+        },
+        {
+            "localized_name": "Faceless Void",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/faceless_void_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/faceless_void_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/faceless_void_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/faceless_void_vert.jpg",
+            "name": "npc_dota_hero_faceless_void",
+            "id": 41
+        },
+        {
+            "localized_name": "Wraith King",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/skeleton_king_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/skeleton_king_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/skeleton_king_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/skeleton_king_vert.jpg",
+            "name": "npc_dota_hero_skeleton_king",
+            "id": 42
+        },
+        {
+            "localized_name": "Death Prophet",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/death_prophet_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/death_prophet_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/death_prophet_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/death_prophet_vert.jpg",
+            "name": "npc_dota_hero_death_prophet",
+            "id": 43
+        },
+        {
+            "localized_name": "Phantom Assassin",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/phantom_assassin_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/phantom_assassin_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/phantom_assassin_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/phantom_assassin_vert.jpg",
+            "name": "npc_dota_hero_phantom_assassin",
+            "id": 44
+        },
+        {
+            "localized_name": "Pugna",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/pugna_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/pugna_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/pugna_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/pugna_vert.jpg",
+            "name": "npc_dota_hero_pugna",
+            "id": 45
+        },
+        {
+            "localized_name": "Templar Assassin",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/templar_assassin_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/templar_assassin_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/templar_assassin_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/templar_assassin_vert.jpg",
+            "name": "npc_dota_hero_templar_assassin",
+            "id": 46
+        },
+        {
+            "localized_name": "Viper",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/viper_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/viper_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/viper_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/viper_vert.jpg",
+            "name": "npc_dota_hero_viper",
+            "id": 47
+        },
+        {
+            "localized_name": "Luna",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/luna_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/luna_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/luna_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/luna_vert.jpg",
+            "name": "npc_dota_hero_luna",
+            "id": 48
+        },
+        {
+            "localized_name": "Dragon Knight",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/dragon_knight_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/dragon_knight_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/dragon_knight_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/dragon_knight_vert.jpg",
+            "name": "npc_dota_hero_dragon_knight",
+            "id": 49
+        },
+        {
+            "localized_name": "Dazzle",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/dazzle_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/dazzle_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/dazzle_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/dazzle_vert.jpg",
+            "name": "npc_dota_hero_dazzle",
+            "id": 50
+        },
+        {
+            "localized_name": "Clockwerk",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_vert.jpg",
+            "name": "npc_dota_hero_rattletrap",
+            "id": 51
+        },
+        {
+            "localized_name": "Leshrac",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/leshrac_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/leshrac_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/leshrac_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/leshrac_vert.jpg",
+            "name": "npc_dota_hero_leshrac",
+            "id": 52
+        },
+        {
+            "localized_name": "Nature's Prophet",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/furion_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/furion_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/furion_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/furion_vert.jpg",
+            "name": "npc_dota_hero_furion",
+            "id": 53
+        },
+        {
+            "localized_name": "Lifestealer",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/life_stealer_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/life_stealer_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/life_stealer_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/life_stealer_vert.jpg",
+            "name": "npc_dota_hero_life_stealer",
+            "id": 54
+        },
+        {
+            "localized_name": "Dark Seer",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/dark_seer_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/dark_seer_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/dark_seer_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/dark_seer_vert.jpg",
+            "name": "npc_dota_hero_dark_seer",
+            "id": 55
+        },
+        {
+            "localized_name": "Clinkz",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/clinkz_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/clinkz_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/clinkz_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/clinkz_vert.jpg",
+            "name": "npc_dota_hero_clinkz",
+            "id": 56
+        },
+        {
+            "localized_name": "Omniknight",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/omniknight_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/omniknight_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/omniknight_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/omniknight_vert.jpg",
+            "name": "npc_dota_hero_omniknight",
+            "id": 57
+        },
+        {
+            "localized_name": "Enchantress",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/enchantress_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/enchantress_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/enchantress_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/enchantress_vert.jpg",
+            "name": "npc_dota_hero_enchantress",
+            "id": 58
+        },
+        {
+            "localized_name": "Huskar",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/huskar_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/huskar_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/huskar_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/huskar_vert.jpg",
+            "name": "npc_dota_hero_huskar",
+            "id": 59
+        },
+        {
+            "localized_name": "Night Stalker",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/night_stalker_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/night_stalker_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/night_stalker_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/night_stalker_vert.jpg",
+            "name": "npc_dota_hero_night_stalker",
+            "id": 60
+        },
+        {
+            "localized_name": "Broodmother",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/broodmother_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/broodmother_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/broodmother_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/broodmother_vert.jpg",
+            "name": "npc_dota_hero_broodmother",
+            "id": 61
+        },
+        {
+            "localized_name": "Bounty Hunter",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/bounty_hunter_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/bounty_hunter_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/bounty_hunter_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/bounty_hunter_vert.jpg",
+            "name": "npc_dota_hero_bounty_hunter",
+            "id": 62
+        },
+        {
+            "localized_name": "Weaver",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/weaver_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/weaver_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/weaver_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/weaver_vert.jpg",
+            "name": "npc_dota_hero_weaver",
+            "id": 63
+        },
+        {
+            "localized_name": "Jakiro",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/jakiro_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/jakiro_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/jakiro_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/jakiro_vert.jpg",
+            "name": "npc_dota_hero_jakiro",
+            "id": 64
+        },
+        {
+            "localized_name": "Batrider",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/batrider_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/batrider_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/batrider_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/batrider_vert.jpg",
+            "name": "npc_dota_hero_batrider",
+            "id": 65
+        },
+        {
+            "localized_name": "Chen",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/chen_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/chen_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/chen_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/chen_vert.jpg",
+            "name": "npc_dota_hero_chen",
+            "id": 66
+        },
+        {
+            "localized_name": "Spectre",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/spectre_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/spectre_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/spectre_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/spectre_vert.jpg",
+            "name": "npc_dota_hero_spectre",
+            "id": 67
+        },
+        {
+            "localized_name": "Doom",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/doom_bringer_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/doom_bringer_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/doom_bringer_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/doom_bringer_vert.jpg",
+            "name": "npc_dota_hero_doom_bringer",
+            "id": 69
+        },
+        {
+            "localized_name": "Ancient Apparition",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/ancient_apparition_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/ancient_apparition_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/ancient_apparition_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/ancient_apparition_vert.jpg",
+            "name": "npc_dota_hero_ancient_apparition",
+            "id": 68
+        },
+        {
+            "localized_name": "Ursa",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/ursa_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/ursa_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/ursa_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/ursa_vert.jpg",
+            "name": "npc_dota_hero_ursa",
+            "id": 70
+        },
+        {
+            "localized_name": "Spirit Breaker",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/spirit_breaker_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/spirit_breaker_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/spirit_breaker_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/spirit_breaker_vert.jpg",
+            "name": "npc_dota_hero_spirit_breaker",
+            "id": 71
+        },
+        {
+            "localized_name": "Gyrocopter",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_vert.jpg",
+            "name": "npc_dota_hero_gyrocopter",
+            "id": 72
+        },
+        {
+            "localized_name": "Alchemist",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/alchemist_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/alchemist_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/alchemist_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/alchemist_vert.jpg",
+            "name": "npc_dota_hero_alchemist",
+            "id": 73
+        },
+        {
+            "localized_name": "Invoker",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/invoker_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/invoker_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/invoker_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/invoker_vert.jpg",
+            "name": "npc_dota_hero_invoker",
+            "id": 74
+        },
+        {
+            "localized_name": "Silencer",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/silencer_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/silencer_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/silencer_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/silencer_vert.jpg",
+            "name": "npc_dota_hero_silencer",
+            "id": 75
+        },
+        {
+            "localized_name": "Outworld Devourer",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/obsidian_destroyer_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/obsidian_destroyer_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/obsidian_destroyer_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/obsidian_destroyer_vert.jpg",
+            "name": "npc_dota_hero_obsidian_destroyer",
+            "id": 76
+        },
+        {
+            "localized_name": "Lycan",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lycan_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lycan_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lycan_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lycan_vert.jpg",
+            "name": "npc_dota_hero_lycan",
+            "id": 77
+        },
+        {
+            "localized_name": "Brewmaster",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/brewmaster_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/brewmaster_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/brewmaster_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/brewmaster_vert.jpg",
+            "name": "npc_dota_hero_brewmaster",
+            "id": 78
+        },
+        {
+            "localized_name": "Shadow Demon",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/shadow_demon_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/shadow_demon_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/shadow_demon_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/shadow_demon_vert.jpg",
+            "name": "npc_dota_hero_shadow_demon",
+            "id": 79
+        },
+        {
+            "localized_name": "Lone Druid",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lone_druid_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lone_druid_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lone_druid_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/lone_druid_vert.jpg",
+            "name": "npc_dota_hero_lone_druid",
+            "id": 80
+        },
+        {
+            "localized_name": "Chaos Knight",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/chaos_knight_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/chaos_knight_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/chaos_knight_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/chaos_knight_vert.jpg",
+            "name": "npc_dota_hero_chaos_knight",
+            "id": 81
+        },
+        {
+            "localized_name": "Meepo",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/meepo_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/meepo_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/meepo_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/meepo_vert.jpg",
+            "name": "npc_dota_hero_meepo",
+            "id": 82
+        },
+        {
+            "localized_name": "Treant Protector",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/treant_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/treant_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/treant_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/treant_vert.jpg",
+            "name": "npc_dota_hero_treant",
+            "id": 83
+        },
+        {
+            "localized_name": "Ogre Magi",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/ogre_magi_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/ogre_magi_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/ogre_magi_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/ogre_magi_vert.jpg",
+            "name": "npc_dota_hero_ogre_magi",
+            "id": 84
+        },
+        {
+            "localized_name": "Undying",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/undying_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/undying_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/undying_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/undying_vert.jpg",
+            "name": "npc_dota_hero_undying",
+            "id": 85
+        },
+        {
+            "localized_name": "Rubick",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/rubick_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/rubick_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/rubick_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/rubick_vert.jpg",
+            "name": "npc_dota_hero_rubick",
+            "id": 86
+        },
+        {
+            "localized_name": "Disruptor",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/disruptor_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/disruptor_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/disruptor_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/disruptor_vert.jpg",
+            "name": "npc_dota_hero_disruptor",
+            "id": 87
+        },
+        {
+            "localized_name": "Nyx Assassin",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/nyx_assassin_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/nyx_assassin_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/nyx_assassin_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/nyx_assassin_vert.jpg",
+            "name": "npc_dota_hero_nyx_assassin",
+            "id": 88
+        },
+        {
+            "localized_name": "Naga Siren",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/naga_siren_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/naga_siren_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/naga_siren_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/naga_siren_vert.jpg",
+            "name": "npc_dota_hero_naga_siren",
+            "id": 89
+        },
+        {
+            "localized_name": "Keeper of the Light",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/keeper_of_the_light_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/keeper_of_the_light_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/keeper_of_the_light_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/keeper_of_the_light_vert.jpg",
+            "name": "npc_dota_hero_keeper_of_the_light",
+            "id": 90
+        },
+        {
+            "localized_name": "Io",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/wisp_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/wisp_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/wisp_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/wisp_vert.jpg",
+            "name": "npc_dota_hero_wisp",
+            "id": 91
+        },
+        {
+            "localized_name": "Visage",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/visage_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/visage_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/visage_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/visage_vert.jpg",
+            "name": "npc_dota_hero_visage",
+            "id": 92
+        },
+        {
+            "localized_name": "Slark",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/slark_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/slark_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/slark_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/slark_vert.jpg",
+            "name": "npc_dota_hero_slark",
+            "id": 93
+        },
+        {
+            "localized_name": "Medusa",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/medusa_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/medusa_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/medusa_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/medusa_vert.jpg",
+            "name": "npc_dota_hero_medusa",
+            "id": 94
+        },
+        {
+            "localized_name": "Troll Warlord",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/troll_warlord_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/troll_warlord_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/troll_warlord_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/troll_warlord_vert.jpg",
+            "name": "npc_dota_hero_troll_warlord",
+            "id": 95
+        },
+        {
+            "localized_name": "Centaur Warrunner",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/centaur_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/centaur_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/centaur_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/centaur_vert.jpg",
+            "name": "npc_dota_hero_centaur",
+            "id": 96
+        },
+        {
+            "localized_name": "Magnus",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/magnataur_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/magnataur_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/magnataur_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/magnataur_vert.jpg",
+            "name": "npc_dota_hero_magnataur",
+            "id": 97
+        },
+        {
+            "localized_name": "Timbersaw",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/shredder_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/shredder_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/shredder_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/shredder_vert.jpg",
+            "name": "npc_dota_hero_shredder",
+            "id": 98
+        },
+        {
+            "localized_name": "Bristleback",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/bristleback_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/bristleback_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/bristleback_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/bristleback_vert.jpg",
+            "name": "npc_dota_hero_bristleback",
+            "id": 99
+        },
+        {
+            "localized_name": "Tusk",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/tusk_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/tusk_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/tusk_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/tusk_vert.jpg",
+            "name": "npc_dota_hero_tusk",
+            "id": 100
+        },
+        {
+            "localized_name": "Skywrath Mage",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/skywrath_mage_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/skywrath_mage_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/skywrath_mage_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/skywrath_mage_vert.jpg",
+            "name": "npc_dota_hero_skywrath_mage",
+            "id": 101
+        },
+        {
+            "localized_name": "Abaddon",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/abaddon_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/abaddon_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/abaddon_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/abaddon_vert.jpg",
+            "name": "npc_dota_hero_abaddon",
+            "id": 102
+        },
+        {
+            "localized_name": "Elder Titan",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/elder_titan_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/elder_titan_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/elder_titan_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/elder_titan_vert.jpg",
+            "name": "npc_dota_hero_elder_titan",
+            "id": 103
+        },
+        {
+            "localized_name": "Legion Commander",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/legion_commander_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/legion_commander_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/legion_commander_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/legion_commander_vert.jpg",
+            "name": "npc_dota_hero_legion_commander",
+            "id": 104
+        },
+        {
+            "localized_name": "Ember Spirit",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_vert.jpg",
+            "name": "npc_dota_hero_ember_spirit",
+            "id": 106
+        },
+        {
+            "localized_name": "Earth Spirit",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/earth_spirit_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/earth_spirit_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/earth_spirit_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/earth_spirit_vert.jpg",
+            "name": "npc_dota_hero_earth_spirit",
+            "id": 107
+        },
+        {
+            "localized_name": "Terrorblade",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/terrorblade_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/terrorblade_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/terrorblade_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/terrorblade_vert.jpg",
+            "name": "npc_dota_hero_terrorblade",
+            "id": 109
+        },
+        {
+            "localized_name": "Phoenix",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/phoenix_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/phoenix_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/phoenix_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/phoenix_vert.jpg",
+            "name": "npc_dota_hero_phoenix",
+            "id": 110
+        },
+        {
+            "localized_name": "Oracle",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/oracle_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/oracle_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/oracle_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/oracle_vert.jpg",
+            "name": "npc_dota_hero_oracle",
+            "id": 111
+        },
+        {
+            "localized_name": "Techies",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/techies_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/techies_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/techies_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/techies_vert.jpg",
+            "name": "npc_dota_hero_techies",
+            "id": 105
+        },
+        {
+            "localized_name": "Winter Wyvern",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/winter_wyvern_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/winter_wyvern_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/winter_wyvern_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/winter_wyvern_vert.jpg",
+            "name": "npc_dota_hero_winter_wyvern",
+            "id": 112
+        },
+        {
+            "localized_name": "Arc Warden",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/arc_warden_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/arc_warden_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/arc_warden_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/arc_warden_vert.jpg",
+            "name": "npc_dota_hero_arc_warden",
+            "id": 113
+        },
+        {
+            "localized_name": "Underlord",
+            "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/abyssal_underlord_sb.png",
+            "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/abyssal_underlord_full.png",
+            "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/abyssal_underlord_lg.png",
+            "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/abyssal_underlord_vert.jpg",
+            "name": "npc_dota_hero_abyssal_underlord",
+            "id": 108
+        }
+    ]
+}
