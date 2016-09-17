@@ -19,9 +19,12 @@ text = f.read()
 
 f.close()
 
-# this wont work for when people are idiots and do a single slash to comment, like in npc_abilities
+# To get rid of comments
 text = re.sub(r'//(.*)\n', '\n', text)
+# To deal with how some people are idiots and only do single slash comments
+text = re.sub(r'\n\s*/(.*)\n', '\n', text)
 
+# The following are to convert Valve's KeyValue format to Json
 text = re.sub(r'"([^"]*)"(\s*){', r'"\1": {', text)
 text = re.sub(r'"([^"]*)"\s*"([^"]*)"', r'"\1": "\2",', text)
 text = re.sub(r',(\s*[}\]])', r'\1', text)
