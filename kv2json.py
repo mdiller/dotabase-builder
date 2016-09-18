@@ -1,6 +1,9 @@
 import json
 import re
 
+# Regex strings from:
+# http://dev.dota2.com/showthread.php?t=87191
+
 def uncommentkvfile(text):
 	in_value = False
 	in_comment = False

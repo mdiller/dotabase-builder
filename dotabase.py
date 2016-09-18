@@ -2,7 +2,7 @@
 
 import os
 import sys
-import dota2api
+import json
 from kv2json import kvfile2json
 from model import *
 
@@ -10,45 +10,19 @@ session = dotabase_session()
 
 # paths---------------
 vpk_path = "dota-vpk"
-item_img_path = vpk_path + "/resource/flash3/images/items/"
-hero_img_path = vpk_path + "/resource/flash3/images/heroes/"
-hero_icon_path = vpk_path + "/resource/flash3/images/miniheroes/"
-hero_icon_path = vpk_path + "/resource/flash3/images/miniheroes/"
-hero_scripts_path = vpk_path + "/scripts/npc/npc_heroes.txt"
-dota_english_path = vpk_path + "/resource/dota_english.txt"
-
-# important dictionaries----------------
-attr_icon_dict = {
-	"STR" : hero_img_path + "selection/pip_str.png",
-	"INT" : hero_img_path + "selection/pip_int.png",
-	"AGI" : hero_img_path + "selection/pip_agi.png"
-}
+item_img_path = "/resource/flash3/images/items/"
+hero_image_path = "/resource/flash3/images/heroes/"
+hero_icon_path = "/resource/flash3/images/miniheroes/"
+hero_selection_path = "/resource/flash3/images/heroes/selection/"
+hero_scripts_file = vpk_path + "/scripts/npc/npc_heroes.txt"
+dota_english_file = vpk_path + "/resource/dota_english.txt"
 
 def load_abilities():
 	# spell imgs in /resource/flash3/images/spellicons
 	print("abilities loaded")
 
 def load_items():
-	session.delete(Item)
-	for item in dota_api.get_game_items()['items']:
-		db.session.add(Item(id=item['id'], 
-							name=item['name'],  
-							localized_name=item['localized_name'], 
-							cost=item['cost'], 
-							recipe=item['recipe'], 
-							secret_shop=item['secret_shop'], 
-							side_shop=item['side_shop']))
-
-	# load all images for items
-	for item in Item.query.all():
-		if(item.recipe):
-			item.img_path = item_img_path + "recipe.png"
-		else:
-			item.img_path = item_img_path + item.name[5:] + ".png"
-
-	db.session.commit()
 	print("items loaded")
-
 
 def get_value(hero_data, key, base_data):
 	if(key in hero_data):
@@ -61,7 +35,7 @@ def load_heroes():
 	session.query(Hero).delete()
 
 	# load all of the hero scripts data information
-	data = kvfile2json(hero_scripts_path)["DOTAHeroes"]
+	data = kvfile2json(hero_scripts_file)["DOTAHeroes"]
 	base_data = data["npc_dota_hero_base"]
 	for heroname in data:
 		if(heroname == "Version" or
@@ -72,7 +46,8 @@ def load_heroes():
 		hero_data = data[heroname]
 		hero = Hero()
 
-		hero.name = heroname
+		hero.full_name = heroname
+		hero.name = heroname.replace("npc_dota_hero_", "")
 		hero.id = get_value(hero_data, 'HeroID', base_data)
 		hero.base_health_regen = get_value(hero_data, 'StatusHealthRegen', base_data)
 		hero.base_movement = get_value(hero_data, 'MovementSpeed', base_data)
@@ -92,13 +67,22 @@ def load_heroes():
 		hero.attr_base_agility = get_value(hero_data, 'AttributeBaseAgility', base_data)
 		hero.attr_agility_gain = get_value(hero_data, 'AttributeAgilityGain', base_data)
 
+		hero.json_data = json.dumps(hero_data, indent=4)
+
 		session.add(hero)
 
 	# Load additional information from the dota_english.txt file
-	data = kvfile2json(dota_english_path)["lang"]["Tokens"]
+	data = kvfile2json(dota_english_file)["lang"]["Tokens"]
 	for hero in session.query(Hero):
-		hero.localized_name = data[hero.name]
-		hero.bio = data[hero.name + "_bio"]
+		hero.localized_name = data[hero.full_name]
+		hero.bio = data[hero.full_name + "_bio"]
+
+	# Add img files to hero
+	for hero in session.query(Hero):
+		hero.icon = hero_icon_path + hero.name + ".png"
+		hero.image = hero_image_path + hero.name + ".png"
+		hero.portrait = hero_selection_path + hero.full_name + ".png"
+
 
 	session.commit()
 	print("heroes loaded")

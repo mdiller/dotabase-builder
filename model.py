@@ -10,10 +10,12 @@ class Hero(Base):
 
 	id = Column(Integer, primary_key=True)
 	name = Column(String)
+	full_name = Column(String)
 	localized_name = Column(String)
 	bio = Column(String)
-	img_path = Column(String)
-	icon_path = Column(String)
+	image = Column(String)
+	icon = Column(String)
+	portrait = Column(String)
 
 	base_health_regen = Column(Float)
 	base_movement = Column(Integer)
@@ -32,6 +34,8 @@ class Hero(Base):
 	attr_intelligence_gain = Column(Float)
 	attr_base_agility = Column(Integer)
 	attr_agility_gain = Column(Float)
+
+	json_data = Column(String)
 
 	def __repr__(self):
 		return "<Hero(name='%s', localized_name='%s')>" % (self.name, self.localized_name)
