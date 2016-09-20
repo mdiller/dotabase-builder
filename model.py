@@ -40,6 +40,13 @@ class Hero(Base):
 	def __repr__(self):
 		return "<Hero(name='%s', localized_name='%s')>" % (self.name, self.localized_name)
 
+class Response(Base):
+	__tablename__ = 'responses'
+
+	name = Column(String, primary_key=True)
+	path = Column(String)
+	text = Column(String)
+
 
 # class Item(Base):
 #     id = Column(Integer,primary_key=True)

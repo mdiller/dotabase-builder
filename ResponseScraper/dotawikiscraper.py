@@ -65,15 +65,15 @@ for hero in heroes:
 
 	for line in lines:
 		if line.startswith("* &lt;sm2>"):
-			# line = unicodetoascii(line)
-			# line = line.replace("* &lt;sm2>", "\t\"")
-			# line = line.replace("&lt;sm2>", "")
-			# line = line.replace(".mp3&lt;/sm2> ", "\": \"")
-			# line = line.replace("\\'", "'")
-			# line = line.replace("[", "")
-			# line = line.replace("]", "")
-			# line = re.sub("\{.*\} ", "", line)
-			# line = line + "\","
+			line = unicodetoascii(line)
+			line = line.replace("* &lt;sm2>", "\t\"")
+			line = line.replace("&lt;sm2>", "")
+			line = line.replace(".mp3&lt;/sm2> ", "\": \"")
+			line = line.replace("\\'", "'")
+			line = line.replace("[", "")
+			line = line.replace("]", "")
+			line = re.sub("\{.*\} ", "", line)
+			line = line + "\","
 			f.write(line + "\n")
 			print(line)
 

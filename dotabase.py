@@ -87,6 +87,9 @@ def load_heroes():
 	session.commit()
 	print("heroes loaded")
 
+# def load_responses():
+	
+
 def build_dotabase():
 	load_heroes()
 	#load_items()
