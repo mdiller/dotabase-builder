@@ -3,7 +3,7 @@
 import os
 import sys
 import json
-from valve2json import kvfile2json, rulesfile2json
+from valve2json import kvfile2json, rulesfile2json, scrapedresponses2json
 from model import *
 
 session = dotabase_session()
@@ -14,7 +14,7 @@ item_img_path = "/resource/flash3/images/items/"
 hero_image_path = "/resource/flash3/images/heroes/"
 hero_icon_path = "/resource/flash3/images/miniheroes/"
 hero_selection_path = "/resource/flash3/images/heroes/selection/"
-response_rules_path = "/resource/scripts/talker/"
+response_rules_path = "/scripts/talker/"
 response_mp3_path = "/sounds/vo/"
 hero_scripts_file = vpk_path + "/scripts/npc/npc_heroes.txt"
 dota_english_file = vpk_path + "/resource/dota_english.txt"
@@ -112,7 +112,22 @@ def load_responses():
 	print("- loading response_rules")
 	# Load response_rules
 	# for hero in session.query(Hero):
-	# 	data = rulesfile2json(response_rules_path + "response_rules_" + hero.name + ".txt")
+	# 	data = rulesfile2json(vpk_path + response_rules_path + "response_rules_" + hero.name + ".txt")
+	# 	rules = {}
+	# 	groups = {}
+	# 	for key in data:
+	# 		if key.startswith("rule_"):
+	# 			rules[key[4:]] = data[key]
+	# 		if key.startswith("response_"):
+	# 			groups[key[9:]] = data[key]
+
+	print("- loading response texts")
+	data = scrapedresponses2json("ResponseScraper/responses_data.txt")
+	for response in session.query(Response):
+		if response.name in data:
+			response.text = data[response.name]
+		else:
+			response.text = ""
 
 
 	session.commit()

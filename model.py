@@ -51,21 +51,14 @@ class Response(Base):
 	fullname = Column(String, primary_key=True)
 	mp3 = Column(String)
 	hero_id = Column(Integer, ForeignKey("heroes.id"))
+	text = Column(String)
+	group = Column(String)
+	criteria = Column(String)
 
 	hero = relationship("Hero", back_populates="responses")
 
 	def __repr__(self):
 		return "Response: %s" % (self.name)
-
-# class Item(Base):
-#     id = Column(Integer,primary_key=True)
-#     name = Column(String)
-#     localized_name = Column(String)
-#     cost = Column(Integer)
-#     recipe = Column(Boolean)
-#     secret_shop = Column(Boolean)
-#     side_shop = Column(Boolean)
-#     img_path = Column(String)
 
 
 # returns an open dotabase session

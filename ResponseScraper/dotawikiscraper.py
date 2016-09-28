@@ -61,25 +61,10 @@ for hero in heroes:
 	start = string.find("wpTextbox1\">")
 	end = string.find("</textarea>", start)
 
-	lines = string[start:end].split("\\n")
+	lines = unicodetoascii(string[start:end]).split("\\n")
 
 	for line in lines:
-		if line.startswith("* &lt;sm2>"):
-			line = unicodetoascii(line)
-			line = line.replace("* &lt;sm2>", "\t\"")
-			line = line.replace("&lt;sm2>", "")
-			line = line.replace(".mp3&lt;/sm2> ", "\": \"")
-			line = line.replace("\\'", "'")
-			line = line.replace("[", "")
-			line = line.replace("]", "")
-			line = re.sub("\{.*\} ", "", line)
-			line = line + "\","
+		if line.startswith("* <sm2>"):
 			f.write(line + "\n")
-			print(line)
 
-# f.write("}")
 f.close()
-#FOR ALL HEROES
-#download responses html page for hero
-#grab important box "wpTextbox1"
-#parse for important data and export to hero.json file
