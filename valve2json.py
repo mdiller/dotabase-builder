@@ -1,8 +1,11 @@
 import json
 import re
 
-# Regex strings from:
-# http://dev.dota2.com/showthread.php?t=87191
+# Converts valve's obsure and unusable text formats to json
+# can do the following formats:
+# KV3 (KeyValue)
+# response_rules script format
+
 
 def uncommentkvfile(text):
 	in_value = False
@@ -29,6 +32,9 @@ def uncommentkvfile(text):
 
 	return result
 
+# Regex strings for vk2json from:
+# http://dev.dota2.com/showthread.php?t=87191
+# Loads a kv file as json
 def kvfile2json(filename):
 	f = open(filename, 'r', encoding="UTF8")
 	text = f.read()
@@ -47,3 +53,21 @@ def kvfile2json(filename):
 	text = "{ " + text + " }"
 
 	return json.loads(text, strict=False)
+
+# Loads a response_rules file as json
+def rules2json(filename):
+	f = open(filename, 'r')
+	text = f.read()
+	f.close()
+
+	text = re.sub(r'scene "scenes(.*)vcd".*\n', r'"sounds/vo\1mp3",\n', text)
+	text = re.sub(r'Response ([^\s]*)\n{([^}]*)}', r'"response_\1": [\2],', text)
+	text = re.sub(r'Rule ([^\s]*)\n{([^}]*)}', r'"rule_\1": {\2},', text)
+	text = re.sub(r'criteria (.*)\n', r'"criteria": "\1",\n', text)
+	text = re.sub(r'response (.*)\n', r'"response": "\1",\n', text)
+	text = re.sub(r'criterion.*\n', r'', text)
+	text = "{" + text + "}"
+	text = re.sub(r',(\s*)}', r'\1}', text)
+	text = re.sub(r',(\s*)]', r'\1]', text)
+
+	return json.loads(text)
