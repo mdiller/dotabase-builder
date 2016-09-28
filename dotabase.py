@@ -3,7 +3,7 @@
 import os
 import sys
 import json
-from kv2json import kvfile2json
+from valve2json import kvfile2json, rulesfile2json
 from model import *
 
 session = dotabase_session()
@@ -14,6 +14,8 @@ item_img_path = "/resource/flash3/images/items/"
 hero_image_path = "/resource/flash3/images/heroes/"
 hero_icon_path = "/resource/flash3/images/miniheroes/"
 hero_selection_path = "/resource/flash3/images/heroes/selection/"
+response_rules_path = "/resource/scripts/talker/"
+response_mp3_path = "/sounds/vo/"
 hero_scripts_file = vpk_path + "/scripts/npc/npc_heroes.txt"
 dota_english_file = vpk_path + "/resource/dota_english.txt"
 
@@ -33,7 +35,9 @@ def get_value(hero_data, key, base_data):
 
 def load_heroes():
 	session.query(Hero).delete()
+	print("Heroes")
 
+	print("- loading heroes from hero scripts")
 	# load all of the hero scripts data information
 	data = kvfile2json(hero_scripts_file)["DOTAHeroes"]
 	base_data = data["npc_dota_hero_base"]
@@ -71,12 +75,14 @@ def load_heroes():
 
 		session.add(hero)
 
+	print("- loading hero data from dota_english")
 	# Load additional information from the dota_english.txt file
 	data = kvfile2json(dota_english_file)["lang"]["Tokens"]
 	for hero in session.query(Hero):
 		hero.localized_name = data[hero.full_name]
 		hero.bio = data[hero.full_name + "_bio"]
 
+	print("- adding hero image files")
 	# Add img files to hero
 	for hero in session.query(Hero):
 		hero.icon = hero_icon_path + hero.name + ".png"
@@ -87,11 +93,36 @@ def load_heroes():
 	session.commit()
 	print("heroes loaded")
 
-# def load_responses():
+def load_responses():
+	session.query(Response).delete()
+	print("Responses")
+
+	print("- loading reponses from /sounds/vo/ mp3 files")
+	# Add a response for each file in each hero folder in the /sounds/vo folder
+	for hero in session.query(Hero):
+		for root, dirs, files in os.walk(vpk_path + response_mp3_path + hero.name):
+			for file in files:
+				response = Response()
+				response.name = file[:-4]
+				response.fullname = hero.name + "_" + response.name
+				response.mp3 = response_mp3_path + hero.name + "/" + file
+				response.hero_id = hero.id
+				session.add(response)
+
+	print("- loading response_rules")
+	# Load response_rules
+	# for hero in session.query(Hero):
+	# 	data = rulesfile2json(response_rules_path + "response_rules_" + hero.name + ".txt")
+
+
+	session.commit()
+	print("responses loaded")
 	
 
 def build_dotabase():
 	load_heroes()
+	load_responses()
+	print("done")
 	#load_items()
 	#load_abilities()
 

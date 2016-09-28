@@ -55,7 +55,7 @@ def kvfile2json(filename):
 	return json.loads(text, strict=False)
 
 # Loads a response_rules file as json
-def rules2json(filename):
+def rulesfile2json(filename):
 	f = open(filename, 'r')
 	text = f.read()
 	f.close()

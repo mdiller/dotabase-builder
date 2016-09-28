@@ -1,7 +1,9 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String, Float
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy import Column, Integer, String, Float, ForeignKey
+from sqlalchemy.orm import sessionmaker, relationship
+
+# built using: http://docs.sqlalchemy.org/en/latest/orm/tutorial.html
 
 Base = declarative_base()
 
@@ -35,18 +37,25 @@ class Hero(Base):
 	attr_base_agility = Column(Integer)
 	attr_agility_gain = Column(Float)
 
+	responses = relationship("Response", back_populates="hero")
+
 	json_data = Column(String)
 
 	def __repr__(self):
-		return "<Hero(name='%s', localized_name='%s')>" % (self.name, self.localized_name)
+		return "Hero: %s" % (self.localized_name)
 
 class Response(Base):
 	__tablename__ = 'responses'
 
-	name = Column(String, primary_key=True)
-	path = Column(String)
-	text = Column(String)
+	name = Column(String)
+	fullname = Column(String, primary_key=True)
+	mp3 = Column(String)
+	hero_id = Column(Integer, ForeignKey("heroes.id"))
 
+	hero = relationship("Hero", back_populates="responses")
+
+	def __repr__(self):
+		return "Response: %s" % (self.name)
 
 # class Item(Base):
 #     id = Column(Integer,primary_key=True)
