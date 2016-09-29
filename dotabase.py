@@ -147,23 +147,23 @@ def load_responses():
 		session.add(criterion)
 
 	for key in rules:
-		responsegroup = ResponseGroup()
-		responsegroup.name = rules[key]['response']
-		for fullname in groups[responsegroup.name]:
+		responserule = ResponseRule()
+		responserule.name = rules[key]['response']
+		for fullname in groups[responserule.name]:
 			response = session.query(Response).filter_by(fullname=fullname).first()
 			if response is not None:
-				response.group_name = responsegroup.name
+				response.groups.append(responserule)
 
 		index = 0
 		for arg in rules[key]['criteria'].split(" "):
 			criteriarg = CriteriArg()
 			criteriarg.criterion_name = arg
-			criteriarg.group_name = responsegroup.name
+			criteriarg.group_name = responserule.name
 			criteriarg.index = index
 			index += 1
 			session.add(criteriarg)
 
-		session.add(responsegroup)
+		session.add(responserule)
 
 
 	session.commit()

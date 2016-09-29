@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String, Float, Boolean, ForeignKey
+from sqlalchemy import Column, Integer, String, Float, Boolean, ForeignKey, Table
 from sqlalchemy.orm import sessionmaker, relationship
 import os
 
@@ -46,6 +46,11 @@ class Hero(Base):
 	def __repr__(self):
 		return "Hero: %s" % (self.localized_name)
 
+responsegroupings_table = Table('responsegroupings', Base.metadata,
+    Column('response_fullname', Integer, ForeignKey('responses.fullname')),
+    Column('responserule_name', Integer, ForeignKey('responserules.name'))
+)
+
 class Response(Base):
 	__tablename__ = 'responses'
 
@@ -54,13 +59,20 @@ class Response(Base):
 	mp3 = Column(String)
 	hero_id = Column(Integer, ForeignKey("heroes.id"))
 	text = Column(String)
-	group_name = Column(String, ForeignKey("responsegroups.name"))
 
 	hero = relationship("Hero", back_populates="responses")
-	group = relationship("ResponseGroup", back_populates="responses")
+	groups = relationship("ResponseRule", secondary=responsegroupings_table, back_populates="responses")
 
 	def __repr__(self):
 		return "Response: %s" % (self.name)
+
+class ResponseRule(Base):
+	__tablename__ = 'responserules'
+
+	name = Column(String, primary_key=True)
+
+	responses = relationship("Response", secondary=responsegroupings_table, back_populates="groups")
+	criteriargs = relationship("CriteriArg", order_by="CriteriArg.index")
 
 class Criterion(Base):
 	__tablename__ = 'criteria'
@@ -71,18 +83,10 @@ class Criterion(Base):
 	weight = Column(Float)
 	required = Column(Boolean)
 
-class ResponseGroup(Base):
-	__tablename__ = 'responsegroups'
-
-	name = Column(String, primary_key=True)
-
-	responses = relationship("Response", back_populates="group")
-	criteriargs = relationship("CriteriArg", order_by="CriteriArg.index")
-
 class CriteriArg(Base):
 	__tablename__ = 'criteriargs'
 
-	group_name = Column(String, ForeignKey("responsegroups.name"), primary_key=True)
+	group_name = Column(String, ForeignKey("responserules.name"), primary_key=True)
 	index = Column(Integer, primary_key=True)
 	criterion_name = Column(String, ForeignKey("criteria.name"))
 
