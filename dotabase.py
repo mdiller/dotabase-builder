@@ -51,6 +51,7 @@ def load_heroes():
 		hero = Hero()
 
 		hero.full_name = heroname
+		hero.media_name = hero_data['VoiceFile'][37:-9]
 		hero.name = heroname.replace("npc_dota_hero_", "")
 		hero.id = get_value(hero_data, 'HeroID', base_data)
 		hero.base_health_regen = get_value(hero_data, 'StatusHealthRegen', base_data)
@@ -100,26 +101,14 @@ def load_responses():
 	print("- loading reponses from /sounds/vo/ mp3 files")
 	# Add a response for each file in each hero folder in the /sounds/vo folder
 	for hero in session.query(Hero):
-		for root, dirs, files in os.walk(vpk_path + response_mp3_path + hero.name):
+		for root, dirs, files in os.walk(vpk_path + response_mp3_path + hero.media_name):
 			for file in files:
 				response = Response()
 				response.name = file[:-4]
-				response.fullname = hero.name + "_" + response.name
-				response.mp3 = response_mp3_path + hero.name + "/" + file
+				response.fullname = hero.media_name + "_" + response.name
+				response.mp3 = response_mp3_path + hero.media_name + "/" + file
 				response.hero_id = hero.id
 				session.add(response)
-
-	print("- loading response_rules")
-	# Load response_rules
-	# for hero in session.query(Hero):
-	# 	data = rulesfile2json(vpk_path + response_rules_path + "response_rules_" + hero.name + ".txt")
-	# 	rules = {}
-	# 	groups = {}
-	# 	for key in data:
-	# 		if key.startswith("rule_"):
-	# 			rules[key[4:]] = data[key]
-	# 		if key.startswith("response_"):
-	# 			groups[key[9:]] = data[key]
 
 	print("- loading response texts")
 	data = scrapedresponses2json("ResponseScraper/responses_data.txt")
@@ -128,6 +117,53 @@ def load_responses():
 			response.text = data[response.name]
 		else:
 			response.text = ""
+
+	print("- loading response_rules (takes long time)")
+	rules = {}
+	groups = {}
+	criteria = {}
+	# Load response_rules
+	for root, dirs, files in os.walk(vpk_path + response_rules_path):
+		for file in files:
+			if "announcer" in file:
+				continue
+			data = rulesfile2json(vpk_path + response_rules_path + file)
+			for key in data:
+				if key.startswith("rule_"):
+					rules[key[5:]] = data[key]
+				elif key.startswith("response_"):
+					groups[key[9:]] = data[key]
+				elif key.startswith("criterion_"):
+					criteria[key[10:]] = data[key]
+
+	for key in criteria:
+		criterion = Criterion()
+		criterion.name = key
+		vals = criteria[key].split(" ")
+		criterion.matchkey = vals[0]
+		criterion.matchvalue = vals[1]
+		criterion.weight = vals[3] if "weight" in vals else 1.0
+		criterion.required = "required" in vals
+		session.add(criterion)
+
+	for key in rules:
+		responsegroup = ResponseGroup()
+		responsegroup.name = rules[key]['response']
+		for fullname in groups[responsegroup.name]:
+			response = session.query(Response).filter_by(fullname=fullname).first()
+			if response is not None:
+				response.group_name = responsegroup.name
+
+		index = 0
+		for arg in rules[key]['criteria'].split(" "):
+			criteriarg = CriteriArg()
+			criteriarg.criterion_name = arg
+			criteriarg.group_name = responsegroup.name
+			criteriarg.index = index
+			index += 1
+			session.add(criteriarg)
+
+		session.add(responsegroup)
 
 
 	session.commit()

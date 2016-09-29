@@ -9,36 +9,50 @@ import html
 # KV3 (KeyValue)
 # response_rules script format
 
+def tryloadjson(text, strict=True):
+	try:
+		return json.loads(text, strict=strict)
+	except json.JSONDecodeError as e:
+		lines = text.split("\n")
+		start = e.lineno - 2
+		end = e.lineno + 2
+		if start < 0:
+			start = 0
+		if end > len(lines):
+			end = len(lines)
+		print("Error parsing this JSON text:\n" + "\n".join(lines[start:end]) + "\n")
+		raise
+
 def unicodetoascii(text):
-    TEXT = (text.
-    		replace('\\xe2\\x80\\x99', "'").
-            replace('\\xc3\\xa9', 'e').
-            replace('\\xe2\\x80\\x90', '-').
-            replace('\\xe2\\x80\\x91', '-').
-            replace('\\xe2\\x80\\x92', '-').
-            replace('\\xe2\\x80\\x93', '-').
-            replace('\\xe2\\x80\\x94', '-').
-            replace('\\xe2\\x80\\x94', '-').
-            replace('\\xe2\\x80\\x98', "'").
-            replace('\\xe2\\x80\\x9b', "'").
-            replace('\\xe2\\x80\\x9c', '"').
-            replace('\\xe2\\x80\\x9c', '"').
-            replace('\\xe2\\x80\\x9d', '"').
-            replace('\\xe2\\x80\\x9e', '"').
-            replace('\\xe2\\x80\\x9f', '"').
-            replace('\\xe2\\x80\\xa6', '...').#
-            replace('\\xe2\\x80\\xb2', "'").
-            replace('\\xe2\\x80\\xb3', "'").
-            replace('\\xe2\\x80\\xb4', "'").
-            replace('\\xe2\\x80\\xb5', "'").
-            replace('\\xe2\\x80\\xb6', "'").
-            replace('\\xe2\\x80\\xb7', "'").
-            replace('\\xe2\\x81\\xba', "+").
-            replace('\\xe2\\x81\\xbb', "-").
-            replace('\\xe2\\x81\\xbc', "=").
-            replace('\\xe2\\x81\\xbd', "(").
-            replace('\\xe2\\x81\\xbe', ")"))
-    return TEXT
+	TEXT = (text.
+			replace('\\xe2\\x80\\x99', "'").
+			replace('\\xc3\\xa9', 'e').
+			replace('\\xe2\\x80\\x90', '-').
+			replace('\\xe2\\x80\\x91', '-').
+			replace('\\xe2\\x80\\x92', '-').
+			replace('\\xe2\\x80\\x93', '-').
+			replace('\\xe2\\x80\\x94', '-').
+			replace('\\xe2\\x80\\x94', '-').
+			replace('\\xe2\\x80\\x98', "'").
+			replace('\\xe2\\x80\\x9b', "'").
+			replace('\\xe2\\x80\\x9c', '"').
+			replace('\\xe2\\x80\\x9c', '"').
+			replace('\\xe2\\x80\\x9d', '"').
+			replace('\\xe2\\x80\\x9e', '"').
+			replace('\\xe2\\x80\\x9f', '"').
+			replace('\\xe2\\x80\\xa6', '...').#
+			replace('\\xe2\\x80\\xb2', "'").
+			replace('\\xe2\\x80\\xb3', "'").
+			replace('\\xe2\\x80\\xb4', "'").
+			replace('\\xe2\\x80\\xb5', "'").
+			replace('\\xe2\\x80\\xb6', "'").
+			replace('\\xe2\\x80\\xb7', "'").
+			replace('\\xe2\\x81\\xba', "+").
+			replace('\\xe2\\x81\\xbb', "-").
+			replace('\\xe2\\x81\\xbc', "=").
+			replace('\\xe2\\x81\\xbd', "(").
+			replace('\\xe2\\x81\\xbe', ")"))
+	return TEXT
 
 def uncommentkvfile(text):
 	in_value = False
@@ -85,7 +99,7 @@ def kvfile2json(filename):
 	text = re.sub(r'}(\s*"[^"]*":)', r'},\1', text)
 	text = "{ " + text + " }"
 
-	return json.loads(text, strict=False)
+	return tryloadjson(text, strict=False)
 
 # Loads a response_rules file as json
 def rulesfile2json(filename):
@@ -93,17 +107,22 @@ def rulesfile2json(filename):
 	text = f.read()
 	f.close()
 
-	text = re.sub(r'scene "scenes.*/(.*)\.vcd".*\n', r'"\1",\n', text)
+	text = "\n" + text + "\n"
+	text = re.sub(r'\n//[^\n]*', r'\n', text)
+	text = re.sub(r'\n#[^\n]*', r'\n', text)
+
+	text = re.sub(r'scene "(.*)".*\n', r'"\1",\n', text)
+	text = re.sub(r'"scenes.*/(.*)\.vcd"', r'"\1"', text)
 	text = re.sub(r'Response ([^\s]*)\n{([^}]*)}', r'"response_\1": [\2],', text)
 	text = re.sub(r'Rule ([^\s]*)\n{([^}]*)}', r'"rule_\1": {\2},', text)
 	text = re.sub(r'criteria (.*)\n', r'"criteria": "\1",\n', text)
 	text = re.sub(r'response (.*)\n', r'"response": "\1",\n', text)
-	text = re.sub(r'criterion.*\n', r'', text)
+	text = re.sub(r'criterion\s*"(.*)"\s*"(.*)"\s*"(.*)"(.*)\n', r'"criterion_\1": "\2 \3\4",\n', text)
 	text = "{" + text + "}"
 	text = re.sub(r',(\s*)}', r'\1}', text)
 	text = re.sub(r',(\s*)]', r'\1]', text)
 
-	return json.loads(text)
+	return tryloadjson(text)
 
 # Loads the response_texts scraped from the wiki as json
 def scrapedresponses2json(filename):
@@ -129,7 +148,7 @@ def scrapedresponses2json(filename):
 	text = "{" + text + "}"
 	text = re.sub(r',(\s*)}', r'\1}', text)
 
-	data = json.loads(text)
+	data = tryloadjson(text)
 	newdata = {}
 	for key in data:
 		newdata[key.lower()] = data[key]

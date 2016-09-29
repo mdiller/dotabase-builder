@@ -1,7 +1,8 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String, Float, ForeignKey
+from sqlalchemy import Column, Integer, String, Float, Boolean, ForeignKey
 from sqlalchemy.orm import sessionmaker, relationship
+import os
 
 # built using: http://docs.sqlalchemy.org/en/latest/orm/tutorial.html
 
@@ -13,6 +14,7 @@ class Hero(Base):
 	id = Column(Integer, primary_key=True)
 	name = Column(String)
 	full_name = Column(String)
+	media_name = Column(String)
 	localized_name = Column(String)
 	bio = Column(String)
 	image = Column(String)
@@ -52,18 +54,44 @@ class Response(Base):
 	mp3 = Column(String)
 	hero_id = Column(Integer, ForeignKey("heroes.id"))
 	text = Column(String)
-	group = Column(String)
-	criteria = Column(String)
+	group_name = Column(String, ForeignKey("responsegroups.name"))
 
 	hero = relationship("Hero", back_populates="responses")
+	group = relationship("ResponseGroup", back_populates="responses")
 
 	def __repr__(self):
 		return "Response: %s" % (self.name)
+
+class Criterion(Base):
+	__tablename__ = 'criteria'
+
+	name = Column(String, primary_key=True)
+	matchkey = Column(String)
+	matchvalue = Column(String)
+	weight = Column(Float)
+	required = Column(Boolean)
+
+class ResponseGroup(Base):
+	__tablename__ = 'responsegroups'
+
+	name = Column(String, primary_key=True)
+
+	responses = relationship("Response", back_populates="group")
+	criteriargs = relationship("CriteriArg", order_by="CriteriArg.index")
+
+class CriteriArg(Base):
+	__tablename__ = 'criteriargs'
+
+	group_name = Column(String, ForeignKey("responsegroups.name"), primary_key=True)
+	index = Column(Integer, primary_key=True)
+	criterion_name = Column(String, ForeignKey("criteria.name"))
 
 
 # returns an open dotabase session
 # if recreate is true, deletes any existing database first
 def dotabase_session(recreate=True):
+	if recreate and os.path.exists("dotabase.db"):
+		os.remove("dotabase.db")
 	engine = create_engine('sqlite:///dotabase.db')
 	Base.metadata.create_all(engine)
 	Session = sessionmaker(bind=engine)

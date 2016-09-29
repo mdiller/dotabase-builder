@@ -92,4 +92,5 @@ ENV/
 obj
 bin
 
-dota-vpk
+dota-vpk/
+notes/
