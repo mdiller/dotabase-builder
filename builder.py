@@ -9,15 +9,16 @@ from dotabase import *
 session = dotabase_session()
 
 # paths---------------
-vpk_path = "dota-vpk"
-item_img_path = "/resource/flash3/images/items/"
-hero_image_path = "/resource/flash3/images/heroes/"
-hero_icon_path = "/resource/flash3/images/miniheroes/"
-hero_selection_path = "/resource/flash3/images/heroes/selection/"
-response_rules_path = "/scripts/talker/"
-response_mp3_path = "/sounds/vo/"
+vpk_path = os.path.join(dotabase_dir, "dota-vpk")
+item_img_path = vpk_path + "/resource/flash3/images/items/"
+hero_image_path = vpk_path + "/resource/flash3/images/heroes/"
+hero_icon_path = vpk_path + "/resource/flash3/images/miniheroes/"
+hero_selection_path = vpk_path + "/resource/flash3/images/heroes/selection/"
+response_rules_path = vpk_path + "/scripts/talker/"
+response_mp3_path = vpk_path + "/sounds/vo/"
 hero_scripts_file = vpk_path + "/scripts/npc/npc_heroes.txt"
 dota_english_file = vpk_path + "/resource/dota_english.txt"
+scraped_responses_file = "ResponseScraper/responses_data.txt"
 
 def load_abilities():
 	# spell imgs in /resource/flash3/images/spellicons
@@ -101,7 +102,7 @@ def load_responses():
 	print("- loading reponses from /sounds/vo/ mp3 files")
 	# Add a response for each file in each hero folder in the /sounds/vo folder
 	for hero in session.query(Hero):
-		for root, dirs, files in os.walk(vpk_path + response_mp3_path + hero.media_name):
+		for root, dirs, files in os.walk(response_mp3_path + hero.media_name):
 			for file in files:
 				response = Response()
 				response.name = file[:-4]
@@ -111,7 +112,7 @@ def load_responses():
 				session.add(response)
 
 	print("- loading response texts")
-	data = scrapedresponses2json("ResponseScraper/responses_data.txt")
+	data = scrapedresponses2json(scraped_responses_file)
 	for response in session.query(Response):
 		if response.name in data:
 			response.text = data[response.name]
@@ -123,11 +124,11 @@ def load_responses():
 	groups = {}
 	criteria = {}
 	# Load response_rules
-	for root, dirs, files in os.walk(vpk_path + response_rules_path):
+	for root, dirs, files in os.walk(response_rules_path):
 		for file in files:
 			if "announcer" in file:
 				continue
-			data = rulesfile2json(vpk_path + response_rules_path + file)
+			data = rulesfile2json(response_rules_path + file)
 			for key in data:
 				if key.startswith("rule_"):
 					rules[key[5:]] = data[key]
