@@ -10,14 +10,14 @@ session = dotabase_session()
 
 # paths---------------
 vpk_path = os.path.join(dotabase_dir, "dota-vpk")
-item_img_path = vpk_path + "/resource/flash3/images/items/"
-hero_image_path = vpk_path + "/resource/flash3/images/heroes/"
-hero_icon_path = vpk_path + "/resource/flash3/images/miniheroes/"
-hero_selection_path = vpk_path + "/resource/flash3/images/heroes/selection/"
-response_rules_path = vpk_path + "/scripts/talker/"
-response_mp3_path = vpk_path + "/sounds/vo/"
-hero_scripts_file = vpk_path + "/scripts/npc/npc_heroes.txt"
-dota_english_file = vpk_path + "/resource/dota_english.txt"
+item_img_path = "/resource/flash3/images/items/"
+hero_image_path = "/resource/flash3/images/heroes/"
+hero_icon_path = "/resource/flash3/images/miniheroes/"
+hero_selection_path = "/resource/flash3/images/heroes/selection/"
+response_rules_path = "/scripts/talker/"
+response_mp3_path = "/sounds/vo/"
+hero_scripts_file = "/scripts/npc/npc_heroes.txt"
+dota_english_file = "/resource/dota_english.txt"
 scraped_responses_file = "ResponseScraper/responses_data.txt"
 
 def load_abilities():
@@ -40,7 +40,7 @@ def load_heroes():
 
 	print("- loading heroes from hero scripts")
 	# load all of the hero scripts data information
-	data = kvfile2json(hero_scripts_file)["DOTAHeroes"]
+	data = kvfile2json(vpk_path + hero_scripts_file)["DOTAHeroes"]
 	base_data = data["npc_dota_hero_base"]
 	for heroname in data:
 		if(heroname == "Version" or
@@ -79,7 +79,7 @@ def load_heroes():
 
 	print("- loading hero data from dota_english")
 	# Load additional information from the dota_english.txt file
-	data = kvfile2json(dota_english_file)["lang"]["Tokens"]
+	data = kvfile2json(vpk_path + dota_english_file)["lang"]["Tokens"]
 	for hero in session.query(Hero):
 		hero.localized_name = data[hero.full_name]
 		hero.bio = data[hero.full_name + "_bio"]
@@ -97,12 +97,15 @@ def load_heroes():
 
 def load_responses():
 	session.query(Response).delete()
+	session.query(ResponseRule).delete()
+	session.query(Criterion).delete()
+	session.query(CriteriArg).delete()
 	print("Responses")
 
 	print("- loading reponses from /sounds/vo/ mp3 files")
 	# Add a response for each file in each hero folder in the /sounds/vo folder
 	for hero in session.query(Hero):
-		for root, dirs, files in os.walk(response_mp3_path + hero.media_name):
+		for root, dirs, files in os.walk(vpk_path + response_mp3_path + hero.media_name):
 			for file in files:
 				response = Response()
 				response.name = file[:-4]
@@ -124,11 +127,11 @@ def load_responses():
 	groups = {}
 	criteria = {}
 	# Load response_rules
-	for root, dirs, files in os.walk(response_rules_path):
+	for root, dirs, files in os.walk(vpk_path + response_rules_path):
 		for file in files:
 			if "announcer" in file:
 				continue
-			data = rulesfile2json(response_rules_path + file)
+			data = rulesfile2json(vpk_path + response_rules_path + file)
 			for key in data:
 				if key.startswith("rule_"):
 					rules[key[5:]] = data[key]
