@@ -3,7 +3,8 @@
 import os
 import sys
 import json
-from valve2json import kvfile2json, rulesfile2json, scrapedresponses2json
+import re
+from valve2json import valve_readfile
 from dotabase import *
 
 session = dotabase_session()
@@ -18,7 +19,8 @@ response_rules_path = "/scripts/talker/"
 response_mp3_path = "/sounds/vo/"
 hero_scripts_file = "/scripts/npc/npc_heroes.txt"
 dota_english_file = "/resource/dota_english.txt"
-scraped_responses_file = "ResponseScraper/responses_data.txt"
+scraped_responses_dir = "ResponseScraper"
+scraped_responses_file = "/responses_data.txt"
 
 def load_abilities():
 	# spell imgs in /resource/flash3/images/spellicons
@@ -40,7 +42,7 @@ def load_heroes():
 
 	print("- loading heroes from hero scripts")
 	# load all of the hero scripts data information
-	data = kvfile2json(vpk_path + hero_scripts_file)["DOTAHeroes"]
+	data = valve_readfile(vpk_path, hero_scripts_file, "kv")["DOTAHeroes"]
 	base_data = data["npc_dota_hero_base"]
 	for heroname in data:
 		if(heroname == "Version" or
@@ -79,7 +81,7 @@ def load_heroes():
 
 	print("- loading hero data from dota_english")
 	# Load additional information from the dota_english.txt file
-	data = kvfile2json(vpk_path + dota_english_file)["lang"]["Tokens"]
+	data = valve_readfile(vpk_path, dota_english_file, "kv")["lang"]["Tokens"]
 	for hero in session.query(Hero):
 		hero.localized_name = data[hero.full_name]
 		hero.bio = data[hero.full_name + "_bio"]
@@ -114,13 +116,7 @@ def load_responses():
 				response.hero_id = hero.id
 				session.add(response)
 
-	print("- loading response texts")
-	data = scrapedresponses2json(scraped_responses_file)
-	for response in session.query(Response):
-		if response.name in data:
-			response.text = data[response.name]
-		else:
-			response.text = ""
+	load_responses_text()
 
 	print("- loading response_rules (takes long time)")
 	rules = {}
@@ -131,7 +127,7 @@ def load_responses():
 		for file in files:
 			if "announcer" in file:
 				continue
-			data = rulesfile2json(vpk_path + response_rules_path + file)
+			data = valve_readfile(vpk_path, response_rules_path + file, "rules")
 			for key in data:
 				if key.startswith("rule_"):
 					rules[key[5:]] = data[key]
@@ -156,7 +152,7 @@ def load_responses():
 		for fullname in groups[responserule.name]:
 			response = session.query(Response).filter_by(fullname=fullname).first()
 			if response is not None:
-				response.groups.append(responserule)
+				responserule.responses.append(response)
 
 		index = 0
 		for arg in rules[key]['criteria'].split(" "):
@@ -170,8 +166,24 @@ def load_responses():
 		session.add(responserule)
 
 
+	print("commiting responses")
 	session.commit()
 	print("responses loaded")
+
+def load_responses_text():
+	print("- loading response texts")
+	data = valve_readfile(scraped_responses_dir, scraped_responses_file, "scrapedresponses")
+	for response in session.query(Response):
+		if response.name in data:
+			text = data[response.name]
+			text = re.sub(r'<!--.*-->', r'', text)
+			text = re.sub(r'{{Tooltip\|([^|]+)\|(.*)}}', r'\1 (\2)', text)
+			text = re.sub(r'{{tooltip\|\?\|(.*)}}', r'(\1)', text)
+			text = re.sub(r'{{.*}}', r'', text)
+			response.text = text
+			response.text_simple = " " + re.sub(r'[^a-z^0-9^A-Z^\s]', r'', text).lower() + " "
+		else:
+			response.text = ""
 	
 
 def build_dotabase():

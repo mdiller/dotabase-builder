@@ -3,11 +3,14 @@ import re
 import urllib
 import string
 import html
+import os.path
 
 # Converts valve's obsure and unusable text formats to json
 # can do the following formats:
 # KV3 (KeyValue)
 # response_rules script format
+
+json_cache_dir = "jsoncache"
 
 def tryloadjson(text, strict=True):
 	try:
@@ -153,3 +156,28 @@ def scrapedresponses2json(filename):
 	for key in data:
 		newdata[key.lower()] = data[key]
 	return newdata
+
+# Reads from converted json file unless overwrite parameter is specified
+def valve_readfile(sourcedir, filepath, fileformat, overwrite=False):
+	json_file = os.path.splitext(json_cache_dir + filepath)[0]+'.json'
+	vpk_file = sourcedir + filepath
+
+	if (not overwrite) and os.path.isfile(json_file):
+		with open(json_file, 'r') as f:
+			text = f.read()
+		return tryloadjson(text)
+
+	if(fileformat == "scrapedresponses"):
+		data = scrapedresponses2json(vpk_file)
+	elif(fileformat == "rules"):
+		data = rulesfile2json(vpk_file)
+	elif(fileformat == "kv"):
+		data = kvfile2json(vpk_file)
+	else:
+		raise ValueError("invalid fileformat argument: " + fileformat)
+
+
+	os.makedirs(os.path.dirname(json_file), exist_ok=True)
+	with open(json_file, 'w+') as f:
+		json.dump(data, f, indent=4)
+	return data
