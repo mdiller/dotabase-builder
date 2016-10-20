@@ -1,5 +1,5 @@
 # Dotabase Builder
-A collection of scripts and programs to extract dota's game files and build an sqlite database. See the output of this builder at my [Dotabase GitLab repository](https://gitlab.com/dillerm/dotabase "Dotabase").
+A collection of scripts and programs to extract dota's game files and build an sqlite database. See the output of this builder at my [Dotabase repository](https://github.com/mdiller/dotabase "Dotabase").
 
 ## VPK Extraction
 The main library/tool that this builder leans on is [ValveResourceFormat](https://github.com/SteamDatabase/ValveResourceFormat "Valve Source 2 file decompiler/compiler"). This lovely project is what allows me to extract the data from dota's vpk files, and decompile some of the obscure file formats like vsnd_c into more friendly ones like mp3.
