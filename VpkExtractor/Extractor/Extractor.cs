@@ -27,8 +27,13 @@ namespace VpkExtractor
 
             try
             {
+                ExtractFiles("vxml_c", true);
+                ExtractFiles("vjs_c", true);
+                ExtractFiles("vcss_c", true);
                 ExtractFiles("png");
                 ExtractFiles("txt");
+                ExtractFiles("cfg");
+                ExtractFiles("res");
                 ExtractFiles("vsnd_c", true);
                 ExtractFiles("vtex_c", true);
             }
@@ -48,17 +53,17 @@ namespace VpkExtractor
 		/// </summary>
 		/// <param name="extension">The extension/filetype to extract</param>
 		/// <param name="convert">Whether or not the file should be converted when extracting</param>
-		private static void ExtractFiles(string extension, bool convert = false)
+		private static void ExtractFiles(string extension, bool convert = false, string newExtension = null)
 		{
             var entries = package.Entries[extension];
 
             Console.WriteLine("extracting {1} '{0}' files", extension, entries.Count);
 
-            progress.Start(entries.Count, 5);
+            progress.Start(entries.Count);
 
             foreach (var entry in entries)
             {
-                EntryFile file = new EntryFile(entry, convert);
+                EntryFile file = new EntryFile(entry, newExtension, convert);
                 file.Dump();
                 if(Console.KeyAvailable)
                 {

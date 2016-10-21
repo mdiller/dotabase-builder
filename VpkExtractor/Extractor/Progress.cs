@@ -12,26 +12,17 @@ namespace VpkExtractor
     public class Progress
     {
         private int total;
-        private int totalChunks;
         private int count;
 
-        private int chunkSize
-        {
-            get { return total / totalChunks; }
-        }
-
-        public void Start(int total, int totalChunks)
+        public void Start(int total)
         {
             this.total = total;
-            this.totalChunks = totalChunks;
             count = 0;
         }
 
         public void Inc()
         {
             count++;
-            if (count == total || count % chunkSize == 0)
-                Print();
         }
 
         public void Print()

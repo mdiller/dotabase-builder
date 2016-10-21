@@ -31,10 +31,10 @@ namespace VpkExtractor
 		/// </summary>
 		/// <param name="entry">the packageentry that this entryfile represents</param>
 		/// <param name="convert">whether or not to convert this packageentry</param>
-		public EntryFile(PackageEntry entry, bool convert)
+		public EntryFile(PackageEntry entry, string newExtension, bool convert)
 		{
 			this.entry = entry;
-			extension = entry.TypeName;
+			extension = newExtension ?? entry.TypeName;
 
 			LoadData(convert);
 		}
@@ -63,8 +63,28 @@ namespace VpkExtractor
             switch (resource.ResourceType)
             {
                 case ResourceType.Panorama:
-                    data = ((Panorama)resource.Blocks[BlockType.DATA]).Data;
+                case ResourceType.PanoramaScript:
+                case ResourceType.PanoramaStyle:
+                case ResourceType.PanoramaLayout:
+                    switch (entry.TypeName)
+                    {
+                        case "vxml_c":
+                            extension = "xml";
+                            data = ((Panorama)resource.Blocks[BlockType.DATA]).Data;
+                            break;
+                        case "vcss_c":
+                            extension = "css";
+                            data = ((Panorama)resource.Blocks[BlockType.DATA]).Data;
+                            break;
+                        case "vjs_c":
+                            extension = "js";
+                            data = ((Panorama)resource.Blocks[BlockType.DATA]).Data;
+                            break;
+                        default:
+                            throw new Exception("invalid type for panoramastuff");
+                    }
                     break;
+
                 case ResourceType.Sound:
                     var sound = ((Sound)resource.Blocks[BlockType.DATA]);
                     data = sound.GetSound();
@@ -110,11 +130,11 @@ namespace VpkExtractor
 		{
             if(!File.Exists(outfile))
             {
-                // Log created new file outfile
+                Logger.LogNewFile(outfile);
             }
             else if(overwrite || !File.ReadAllBytes(outfile).SequenceEqual(data))
             {
-                // Log overwrote file output
+                Logger.LogOverwriteFile(outfile);
             }
             else
             {
