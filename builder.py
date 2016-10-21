@@ -10,7 +10,7 @@ from dotabase import *
 session = dotabase_session()
 
 # paths---------------
-vpk_path = os.path.join(dotabase_dir, "dota-vpk")
+vpk_path = "C:/xampp/htdocs/dota-vpk" # Should be updated to be command line variable if needed
 item_img_path = "/resource/flash3/images/items/"
 hero_image_path = "/resource/flash3/images/heroes/"
 hero_icon_path = "/resource/flash3/images/miniheroes/"

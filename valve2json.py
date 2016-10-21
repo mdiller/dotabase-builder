@@ -162,7 +162,7 @@ def valve_readfile(sourcedir, filepath, fileformat, overwrite=False):
 	json_file = os.path.splitext(json_cache_dir + filepath)[0]+'.json'
 	vpk_file = sourcedir + filepath
 
-	if (not overwrite) and os.path.isfile(json_file):
+	if ((not overwrite) and os.path.isfile(json_file) and (os.path.getmtime(json_file) > os.path.getmtime(vpk_file))):
 		with open(json_file, 'r') as f:
 			text = f.read()
 		return tryloadjson(text)
