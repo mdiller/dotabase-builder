@@ -7,8 +7,8 @@
     <ProjectGuid>{BD9C8E96-1616-43E9-8E38-0B6AF03DD21E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Extractor</RootNamespace>
-    <AssemblyName>Extractor</AssemblyName>
+    <RootNamespace>VpkExtractor</RootNamespace>
+    <AssemblyName>VpkExtractor</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,7 +47,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="EntryFile.cs" />
+    <Compile Include="Extractor.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Progress.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
