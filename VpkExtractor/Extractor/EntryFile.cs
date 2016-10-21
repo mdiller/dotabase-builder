@@ -18,7 +18,7 @@ namespace VpkExtractor
 
 		public string vpkpath
 		{
-			get { return Path.Combine(entry.DirectoryName, string.Format("{0}.{1}", entry.FileName, entry.TypeName)); }
+			get { return Path.Combine(entry.DirectoryName ?? "", string.Format("{0}.{1}", entry.FileName, entry.TypeName)); }
 		}
 
 		public string outfile

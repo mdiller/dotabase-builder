@@ -27,9 +27,10 @@ namespace VpkExtractor
 
             try
             {
-                ExtractFiles("vsnd_c", true);
                 ExtractFiles("png");
                 ExtractFiles("txt");
+                ExtractFiles("vsnd_c", true);
+                ExtractFiles("vtex_c", true);
             }
             catch (Exception e)
             {
