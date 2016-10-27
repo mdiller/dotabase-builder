@@ -50,7 +50,6 @@ def load_abilities():
 		if(abilityname == "Version" or
 			abilityname == "ability_base" or
 			abilityname == "ability_deward" or
-			abilityname == "attribute_bonus" or
 			abilityname == "default_attack"):
 			continue
 
@@ -123,6 +122,12 @@ def load_heroes():
 		hero.json_data = json.dumps(hero_data, indent=4)
 
 		session.add(hero)
+		# Link abilities
+		for slot in range(1, 20):
+			if "Ability" + str(slot) in hero_data:
+				ability = session.query(Ability).filter_by(name=hero_data["Ability" + str(slot)]).first()
+				ability.hero_id = hero.id
+				ability.ability_slot = slot
 
 	print("- loading hero data from dota_english")
 	# Load additional information from the dota_english.txt file
