@@ -12,12 +12,14 @@ session = dotabase_session()
 # paths---------------
 vpk_path = "C:/xampp/htdocs/dota-vpk" # Should be updated to be command line variable if needed
 item_img_path = "/resource/flash3/images/items/"
+ability_icon_path = "/resource/flash3/images/spellicons/"
 hero_image_path = "/resource/flash3/images/heroes/"
 hero_icon_path = "/resource/flash3/images/miniheroes/"
 hero_selection_path = "/resource/flash3/images/heroes/selection/"
 response_rules_path = "/scripts/talker/"
 response_mp3_path = "/sounds/vo/"
 hero_scripts_file = "/scripts/npc/npc_heroes.txt"
+ability_scripts_file = "/scripts/npc/npc_abilities.txt"
 dota_english_file = "/resource/dota_english.txt"
 scraped_responses_dir = "ResponseScraper"
 scraped_responses_file = "/responses_data.txt"
@@ -35,6 +37,49 @@ def get_value(hero_data, key, base_data):
 	else:
 		return base_data[key]
 		print("using default for: " + key)
+
+def load_abilities():
+	session.query(Ability).delete()
+	print("Abilities")
+
+	print("- loading abilities from ability scripts")
+	# load all of the ability scripts data information
+	data = valve_readfile(vpk_path, ability_scripts_file, "kv")["DOTAAbilities"]
+	base_data = data["ability_base"]
+	for abilityname in data:
+		if(abilityname == "Version" or
+			abilityname == "ability_base" or
+			abilityname == "ability_deward" or
+			abilityname == "attribute_bonus" or
+			abilityname == "default_attack"):
+			continue
+
+		ability_data = data[abilityname]
+		ability = Ability()
+
+		ability.name = abilityname
+		ability.id = ability_data['ID']
+
+		ability.json_data = json.dumps(ability_data, indent=4)
+
+		session.add(ability)
+
+	print("- loading ability data from dota_english")
+	# Load additional information from the dota_english.txt file
+	data = valve_readfile(vpk_path, dota_english_file, "kv")["lang"]["Tokens"]
+	for ability in session.query(Ability):
+		ability_tooltip = "DOTA_Tooltip_ability_" + ability.name 
+		ability.localized_name = data.get(ability_tooltip, ability.name)
+		ability.description = data.get(ability_tooltip + "_Description", "")
+		ability.lore = data.get(ability_tooltip + "_Lore", "")
+
+	print("- adding ability icon files")
+	# Add img files to ability
+	for ability in session.query(Ability):
+		ability.icon = ability_icon_path + ability.name + ".png"
+
+	session.commit()
+	print("abilities loaded")
 
 def load_heroes():
 	session.query(Hero).delete()
@@ -179,6 +224,7 @@ def load_responses_text():
 	
 
 def build_dotabase():
+	load_abilities()
 	load_heroes()
 	load_responses()
 	print("done")
@@ -187,3 +233,4 @@ def build_dotabase():
 
 if __name__ == "__main__":
     build_dotabase()
+    #data = valve_readfile(vpk_path, abilities_scripts_file, "kv")
