@@ -99,9 +99,7 @@ def load_heroes():
 
 def load_responses():
 	session.query(Response).delete()
-	session.query(ResponseRule).delete()
 	session.query(Criterion).delete()
-	session.query(CriteriArg).delete()
 	print("Responses")
 
 	print("- loading reponses from /sounds/vo/ mp3 files")
@@ -114,11 +112,12 @@ def load_responses():
 				response.fullname = hero.media_name + "_" + response.name
 				response.mp3 = response_mp3_path + hero.media_name + "/" + file
 				response.hero_id = hero.id
+				response.criteria = ""
 				session.add(response)
 
 	load_responses_text()
 
-	print("- loading response_rules (takes long time)")
+	print("- loading criteria")
 	rules = {}
 	groups = {}
 	criteria = {}
@@ -146,24 +145,17 @@ def load_responses():
 		criterion.required = "required" in vals
 		session.add(criterion)
 
+	print("- loading criteria into responses (takes long time)")
 	for key in rules:
-		responserule = ResponseRule()
-		responserule.name = rules[key]['response']
-		for fullname in groups[responserule.name]:
+		response_criteria = rules[key]['criteria'].rstrip()
+
+		for fullname in groups[rules[key]['response']]:
 			response = session.query(Response).filter_by(fullname=fullname).first()
 			if response is not None:
-				responserule.responses.append(response)
-
-		index = 0
-		for arg in rules[key]['criteria'].split(" "):
-			criteriarg = CriteriArg()
-			criteriarg.criterion_name = arg
-			criteriarg.group_name = responserule.name
-			criteriarg.index = index
-			index += 1
-			session.add(criteriarg)
-
-		session.add(responserule)
+				if response.criteria == "":
+					response.criteria = response_criteria
+				else:
+					response.criteria += "|" + response_criteria
 
 
 	print("commiting responses")

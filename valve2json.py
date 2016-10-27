@@ -4,6 +4,7 @@ import urllib
 import string
 import html
 import os.path
+import collections
 
 # Converts valve's obsure and unusable text formats to json
 # can do the following formats:
@@ -14,7 +15,7 @@ json_cache_dir = "jsoncache"
 
 def tryloadjson(text, strict=True):
 	try:
-		return json.loads(text, strict=strict)
+		return json.loads(text, strict=strict, object_pairs_hook=collections.OrderedDict)
 	except json.JSONDecodeError as e:
 		lines = text.split("\n")
 		start = e.lineno - 2
