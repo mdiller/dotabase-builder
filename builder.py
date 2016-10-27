@@ -75,7 +75,10 @@ def load_abilities():
 	print("- adding ability icon files")
 	# Add img files to ability
 	for ability in session.query(Ability):
-		ability.icon = ability_icon_path + ability.name + ".png"
+		if(os.path.isfile(vpk_path + ability_icon_path + ability.name + ".png")):
+			ability.icon = ability_icon_path + ability.name + ".png"
+		else:
+			ability.icon = ability_icon_path + "wisp_empty1.png"
 
 	session.commit()
 	print("abilities loaded")
