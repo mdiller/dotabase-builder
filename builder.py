@@ -226,7 +226,9 @@ def load_responses_text():
 			text = re.sub(r'{{tooltip\|\?\|(.*)}}', r'(\1)', text)
 			text = re.sub(r'{{.*}}', r'', text)
 			response.text = text
-			response.text_simple = " " + re.sub(r'[^a-z^0-9^A-Z^\s]', r'', text).lower() + " "
+			response.text_simple = text.replace("...", " ")
+			response.text_simple = " " + re.sub(r'[^a-z^0-9^A-Z^\s]', r'', response.text_simple).lower() + " "
+			response.text_simple = re.sub(r'\s+', r' ', response.text_simple)
 		else:
 			response.text = ""
 	
