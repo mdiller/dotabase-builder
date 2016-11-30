@@ -4,7 +4,7 @@ import os
 import sys
 import json
 import re
-from valve2json import valve_readfile
+from valve2json import valve_readfile, read_json
 from dotabase import *
 
 session = dotabase_session()
@@ -146,6 +146,24 @@ def load_heroes():
 		hero.image = hero_image_path + hero.name + ".png"
 		hero.portrait = hero_selection_path + hero.full_name + ".png"
 
+	print("- adding hero real names")
+	data = read_json("builderdata/hero_names.json")
+	for hero in session.query(Hero):
+		hero.real_name = data.get(hero.name, "")
+
+	print("- adding hero aliases")
+	data = read_json("builderdata/hero_aliases.json")
+	for hero in session.query(Hero):
+		aliases = []
+		aliases.append(hero.name.replace("_", " "))
+		text = re.sub(r'[^a-z^\s]', r'', hero.localized_name.replace("_", " ").lower())
+		if text not in aliases:
+			aliases.append(text)
+		if hero.real_name != "":
+			aliases.append(re.sub(r'[^a-z^\s]', r'', hero.real_name.lower()))
+		aliases.extend(data.get(hero.name, []))
+		hero.aliases = "|".join(aliases)
+
 
 	session.commit()
 	print("heroes loaded")
@@ -239,8 +257,6 @@ def build_dotabase():
 	load_responses()
 	print("done")
 	#load_items()
-	#load_abilities()
 
 if __name__ == "__main__":
     build_dotabase()
-    #data = valve_readfile(vpk_path, abilities_scripts_file, "kv")

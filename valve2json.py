@@ -158,6 +158,11 @@ def scrapedresponses2json(filename):
 		newdata[key.lower()] = data[key]
 	return newdata
 
+def read_json(filename):
+	with open(filename, 'r') as f:
+		text = f.read()
+		return tryloadjson(text)
+
 # Reads from converted json file unless overwrite parameter is specified
 def valve_readfile(sourcedir, filepath, fileformat, overwrite=False):
 	json_file = os.path.splitext(json_cache_dir + filepath)[0]+'.json'
@@ -166,7 +171,7 @@ def valve_readfile(sourcedir, filepath, fileformat, overwrite=False):
 	if ((not overwrite) and os.path.isfile(json_file) and (os.path.getmtime(json_file) > os.path.getmtime(vpk_file))):
 		with open(json_file, 'r') as f:
 			text = f.read()
-		return tryloadjson(text)
+			return tryloadjson(text)
 
 	if(fileformat == "scrapedresponses"):
 		data = scrapedresponses2json(vpk_file)
@@ -180,5 +185,5 @@ def valve_readfile(sourcedir, filepath, fileformat, overwrite=False):
 
 	os.makedirs(os.path.dirname(json_file), exist_ok=True)
 	with open(json_file, 'w+') as f:
-		json.dump(data, f, indent=4)
+		json.dump(data, f, indent='\t')
 	return data
