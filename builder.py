@@ -17,16 +17,55 @@ hero_selection_path = "/resource/flash3/images/heroes/selection/"
 response_rules_path = "/scripts/talker/"
 response_mp3_path = "/sounds/vo/"
 hero_scripts_file = "/scripts/npc/npc_heroes.txt"
+item_scripts_file = "/scripts/npc/items.txt"
 ability_scripts_file = "/scripts/npc/npc_abilities.txt"
 dota_english_file = "/resource/dota_english.txt"
 scraped_responses_dir = "ResponseScraper"
 scraped_responses_file = "/responses_data.txt"
 
-def load_abilities():
-	# spell imgs in /resource/flash3/images/spellicons
-	print("abilities loaded")
-
 def load_items():
+	session.query(Item).delete()
+	print("items")
+
+	print("- loading items from item scripts")
+	# load all of the item scripts data information
+	data = valve_readfile(vpk_path, item_scripts_file, "kv")["DOTAAbilities"]
+	for itemname in data:
+		if itemname == "Version":
+			continue
+		item_data = data[itemname]
+		item = Item()
+
+		item.name = itemname
+		item.id = item_data['ID']
+		item.cost = item_data['ItemCost']
+
+		item.json_data = json.dumps(item_data, indent=4)
+
+		session.add(item)
+
+	print("- loading item data from dota_english")
+	# Load additional information from the dota_english.txt file
+	data = valve_readfile(vpk_path, dota_english_file, "kv")["lang"]["Tokens"]
+	for item in session.query(Item):
+		item_tooltip = "DOTA_Tooltip_Ability_" + item.name 
+		item_tooltip2 = "DOTA_Tooltip_ability_" + item.name 
+		item.localized_name = data.get(item_tooltip, item.name)
+		item.description = data.get(item_tooltip + "_Description", data.get(item_tooltip2 + "_Description", ""))
+		item.lore = data.get(item_tooltip + "_Lore", data.get(item_tooltip2 + "_Lore", ""))
+
+	print("- adding item icon files")
+	# Add img files to item
+	for item in session.query(Item):
+		if os.path.isfile(vpk_path + item_img_path + item.name.replace("item_", "") + ".png"):
+			item.icon = item_img_path + item.name.replace("item_", "") + ".png"
+		else:
+			if "recipe" in item.name:
+				item.icon = item_img_path + "recipe.png"
+			else:
+				raise ValueError("icon file not found for {}".format(item.name))
+
+	session.commit()
 	print("items loaded")
 
 def get_value(hero_data, key, base_data):
@@ -43,7 +82,6 @@ def load_abilities():
 	print("- loading abilities from ability scripts")
 	# load all of the ability scripts data information
 	data = valve_readfile(vpk_path, ability_scripts_file, "kv")["DOTAAbilities"]
-	base_data = data["ability_base"]
 	for abilityname in data:
 		if(abilityname == "Version" or
 			abilityname == "ability_base" or
@@ -73,7 +111,7 @@ def load_abilities():
 	print("- adding ability icon files")
 	# Add img files to ability
 	for ability in session.query(Ability):
-		if(os.path.isfile(vpk_path + ability_icon_path + ability.name + ".png")):
+		if os.path.isfile(vpk_path + ability_icon_path + ability.name + ".png"):
 			ability.icon = ability_icon_path + ability.name + ".png"
 		else:
 			ability.icon = ability_icon_path + "wisp_empty1.png"
@@ -102,6 +140,7 @@ def load_heroes():
 		hero.media_name = hero_data['VoiceFile'][37:-9]
 		hero.name = heroname.replace("npc_dota_hero_", "")
 		hero.id = get_value(hero_data, 'HeroID', base_data)
+		hero.team = get_value(hero_data, 'Team', base_data)
 		hero.base_health_regen = get_value(hero_data, 'StatusHealthRegen', base_data)
 		hero.base_movement = get_value(hero_data, 'MovementSpeed', base_data)
 		hero.turn_rate = get_value(hero_data, 'MovementTurnRate', base_data)
@@ -258,11 +297,11 @@ def load_responses_text():
 	
 
 def build_dotabase():
+	load_items()
 	load_abilities()
 	load_heroes()
 	load_responses()
 	print("done")
-	#load_items()
 
 if __name__ == "__main__":
 	global session
