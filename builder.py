@@ -122,13 +122,23 @@ def load_heroes():
 
 		hero.json_data = json.dumps(hero_data, indent=4)
 
-		session.add(hero)
-		# Link abilities
-		for slot in range(1, 20):
+		talents = []
+
+		# Link abilities and add talents
+		for slot in range(1, 30):
 			if "Ability" + str(slot) in hero_data:
 				ability = session.query(Ability).filter_by(name=hero_data["Ability" + str(slot)]).first()
-				ability.hero_id = hero.id
-				ability.ability_slot = slot
+				if ability.name.startswith("special_bonus"):
+					talents.append(ability.localized_name)
+				else:
+					ability.hero_id = hero.id
+					ability.ability_slot = slot
+		if len(talents) != 8:
+			raise ValueError("{} only has {} talents?".format(hero.localized_name, len(talents)))
+		hero.talents = "|".join(talents)
+
+		session.add(hero)
+
 
 	print("- loading hero data from dota_english")
 	# Load additional information from the dota_english.txt file
