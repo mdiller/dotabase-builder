@@ -107,6 +107,7 @@ def scrapedresponses2json(filename):
 	text = re.sub(r'\.mp3</sm2> ', r'": "', text)
 	text = re.sub(r'\.mp3</sm2>', r'": "', text)
 	text = re.sub(r'\\\'', r"'", text)
+	text = re.sub(r'\[\[[^[]+]]', r'', text)
 	text = re.sub(r'\[', r'', text)
 	text = re.sub(r']', r'', text)
 	text = re.sub(r'\{.*\} ', r'', text)
