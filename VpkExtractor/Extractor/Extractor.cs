@@ -12,7 +12,7 @@ namespace VpkExtractor
     public static class Extractor
     {
         public static bool log_console = true;
-        public static string vpk_destination = "C:\\xampp\\htdocs\\dota-vpk"; // I am lazy but this should be read from a config file or passed in thru console args
+        public static string vpk_destination = "C:\\Development\\Projects\\dotabase-web\\dota-vpk"; // I am lazy but this should be read from a config file or passed in thru console args
 		public static Package package;
         public static Progress progress = new Progress();
         public static int entryProgress = 0;

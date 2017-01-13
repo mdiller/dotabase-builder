@@ -8,7 +8,7 @@ from valve2json import valve_readfile, read_json
 from dotabase import *
 
 # paths---------------
-vpk_path = "C:/xampp/htdocs/dota-vpk" # Should be updated to be command line variable if needed
+vpk_path = "C:/Development/Projects/dotabase-web/dota-vpk" # Should be updated to be command line variable if needed
 item_img_path = "/resource/flash3/images/items/"
 ability_icon_path = "/resource/flash3/images/spellicons/"
 hero_image_path = "/resource/flash3/images/heroes/"
