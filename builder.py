@@ -7,8 +7,6 @@ import re
 from valve2json import valve_readfile, read_json
 from dotabase import *
 
-session = dotabase_session()
-
 # paths---------------
 vpk_path = "C:/xampp/htdocs/dota-vpk" # Should be updated to be command line variable if needed
 item_img_path = "/resource/flash3/images/items/"
@@ -228,8 +226,6 @@ def load_responses():
 				else:
 					response.criteria += "|" + response_criteria
 
-
-	print("commiting responses")
 	session.commit()
 	print("responses loaded")
 
@@ -259,4 +255,8 @@ def build_dotabase():
 	#load_items()
 
 if __name__ == "__main__":
-    build_dotabase()
+	global session
+	if os.path.isfile(dotabase_db):
+		os.remove(dotabase_db)
+	session = dotabase_session()
+	build_dotabase()
