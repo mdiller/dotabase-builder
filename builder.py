@@ -5,6 +5,7 @@ import sys
 import json
 import re
 from valve2json import valve_readfile, read_json
+from criteria_sentancing import get_pretty_crit, get_response_pretty_crit, init_pretty_dicts
 from dotabase import *
 
 # paths---------------
@@ -274,6 +275,13 @@ def load_responses():
 					response.criteria = response_criteria
 				else:
 					response.criteria += "|" + response_criteria
+
+	init_pretty_dicts(session)
+	print("- generating pretty criteria")
+	for criterion in session.query(Criterion):
+		criterion.pretty = get_pretty_crit(criterion.name)
+	for response in session.query(Response):
+		response.pretty_criteria = get_response_pretty_crit(response.criteria)
 
 	session.commit()
 	print("responses loaded")
