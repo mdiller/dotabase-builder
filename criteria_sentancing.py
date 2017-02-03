@@ -156,7 +156,7 @@ def load_pretty_criteria(session):
 	build_dictionaries(session)
 
 	for criterion in session.query(Criterion):
-		criterion.pretty = pretty_dict.get(replace_template(criterion.name, []))
+		criterion.pretty = replace_template(pretty_dict.get(criterion.name.lower(), criterion.name), [])
 	for response in session.query(Response):
 		if response.criteria == "" or response.criteria is None:
 			response.pretty_criteria = "Unused"
