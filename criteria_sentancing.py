@@ -59,13 +59,21 @@ def build_dictionaries(session):
 			replace_type_dict[key] = "rune"
 
 	for match in replace_dict:
-		for crit in session.query(Criterion).filter_by(matchvalue=match):
+		for crit in session.query(Criterion).filter(func.lower(Criterion.matchvalue) == func.lower(match)):
 			pretty_dict[crit.name] = replace_dict[match]
 			crit_type_dict[crit.name] = replace_type_dict.get(match)
+			if crit.matchkey == "stolenspell":
+				pretty_dict[crit.name] = "and stealing " + replace_dict[match]
+				crit_type_dict[crit.name] = "stolenspell"
 
 	for crit in session.query(Criterion).filter_by(matchkey="classname"):
 		pretty_dict[crit.name] = ""
 		crit_type_dict[crit.name] = None
+	for crit in session.query(Criterion).filter_by(matchkey="taunt_type"):
+		pretty_dict[crit.name] = ""
+
+	for crit in session.query(Criterion).filter_by(matchkey="arrowhithero"):
+		pretty_dict[crit.name] = "Arrow hits " + {"yes":"a hero","no":"a creep","roshan":"roshan"}[crit.matchvalue]
 
 
 	for crit in session.query(Criterion).filter(Criterion.name.like("Chance_%")):
@@ -96,18 +104,29 @@ def build_dictionaries(session):
 	pretty_dict["SuperNag"] = "very naggy"
 	crit_type_dict["SuperNag"] = "nag"
 
+	pretty_dict["IsExpensiveItem"] = "expensive"
+	crit_type_dict["IsExpensiveItem"] = "price"
+
+	for crit in session.query(Criterion).filter_by(matchkey="multiplekillcount"):
+		pretty_dict[crit.name] = {"2":"two", "3":"three", "4":"four", ">4":"more than four"}[crit.matchvalue] + " heroes"
+		crit_type_dict[crit.name] = "hero" # Because this takes the spot for 'Killing a hero'
+
 	for crit in session.query(Criterion).filter_by(matchkey="customresponse"):
-		pretty_dict[crit.name] = "(using the '{}' cosmetic)".format(crit.matchvalue)
+		pretty_dict[crit.name] = ""
+		# pretty_dict[crit.name] = "(using the '{}' cosmetic)".format(crit.matchvalue)
+
+	pretty_dict = {k.lower():v for k, v in pretty_dict.items()}
+	crit_type_dict = {k.lower():v for k, v in crit_type_dict.items()}
 
 def replace_template(template, crit_list):
-	pattern = re.compile(r"\{(.*?)\|(.*?)\|(.*?)\}")
+	pattern = re.compile(r"\{([^\{]*?)\|([^\{]*?)\|([^\{]*?)\}")
 	match = pattern.search(template)
 
 	while match:
 		replacement = match.group(2)
 		for i in range(len(crit_list)):
-			if crit_type_dict.get(crit_list[i]) == match.group(1):
-				replacement = match.group(3).replace("%", pretty_dict[crit_list[i]])
+			if crit_type_dict.get(crit_list[i].lower()) == match.group(1):
+				replacement = match.group(3).replace("%", pretty_dict[crit_list[i].lower()])
 				crit_list.pop(i)
 				break
 		
@@ -119,13 +138,13 @@ def replace_template(template, crit_list):
 def pretty_response_crit(crits):
 	crits = crits.split(" ")
 	result = crits.pop(0)
-	result =  pretty_dict.get(result, result)
+	result =  pretty_dict.get(result.lower(), result)
 
 	result = replace_template(result, crits)
-	ending = replace_template("{gametime|| %}{nag|| %}{chance|| (%)}", crits)
+	ending = replace_template("{gametime|| %}{nag|| (%)}{chance|| (%)}", crits)
 
 	for crit in crits:
-		temp = pretty_dict.get(crit, crit)
+		temp = pretty_dict.get(crit.lower(), crit)
 		if temp != "":
 			result += " " + temp
 

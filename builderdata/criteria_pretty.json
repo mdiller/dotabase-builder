@@ -9,7 +9,7 @@
 	"Powerup": "Activating {rune|a rune|%}",
 	"Respawn": "Respawning",
 	"CastOrder": "Ordered to cast {ability|an ability|%}",
-	"CastExecute": "Casting {ability|an ability|%}",
+	"CastExecute": "Casting {ability|an ability|%}{hero|| on %}",
 	"Death": "Dying",
 	"Deny": "Denying",
 	"Bottling": "Bottling {rune|a rune|%}",
@@ -17,10 +17,10 @@
 	"ItemDrop": "Recieving {droptype|a|%} cosmetic item",
 	"Custom": "",
 	"Missing": "Calling missing for {lane|a lane|%}",
-	"Spawn": "Spawning for the first time",
+	"Spawn": "Spawning",
 	"Learn": "Leveling up {ability|an ability|%}",
 	"LastHit": "Last hitting",
-	"Purchase": "Buying {item|an item|%}",
+	"Purchase": "Buying {item|an {price||%} item|%}",
 	"LevelUpAbility": "Leveling up {ability|an ability|%}",
 	"Attack": "Attacking",
 	"Emote": "Laughing",
@@ -32,5 +32,12 @@
 	"Pain": "Taking damage",
 
 	"AllyNear": "{hero|An ally|%} is nearby",
-	"IsGolem": "while in golem form"
+	"IsGolem": "while in golem form",
+	"IsTerrorDemonForm": "while in demon form",
+	"IsInDragonForm": "while in dragon form",
+	"IsBearForm": "while in bear form",
+	"IsInWolfForm": "while in wolf form",
+	"IsFirstBlood": "(First Blood)",
+	"IsReincarnating": "and respawning from aegis",
+	"IsGameStart": "As the game starts"
 }
