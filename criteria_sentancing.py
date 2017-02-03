@@ -1,5 +1,6 @@
 from valve2json import valve_readfile, read_json
 from dotabase import *
+from sqlalchemy import func
 import re
 
 
@@ -24,16 +25,25 @@ def pretty_time(time):
 
 
 # pretty criteria which alters the first criteria in the list
-def get_special_pretty_crit_dict(session):
+def build_dictionaries(session):
+	global pretty_dict
+	global crit_type_dict
+	pretty_dict = read_json("builderdata/criteria_pretty.json")
+	crit_type_dict = {}
+
 	replace_dict = {}
+	replace_type_dict = {}
 	for hero in session.query(Hero):
 		replace_dict[hero.full_name] = hero.localized_name
+		replace_type_dict[hero.full_name] = "hero"
 
 	for ability in session.query(Ability):
 		replace_dict[ability.name] = ability.localized_name
+		replace_type_dict[ability.name] = "ability"
 
 	for item in session.query(Item):
-		replace_dict[item.name] = "a " + item.localized_name
+		replace_dict[item.name] = item.localized_name
+		replace_type_dict[item.name] = "item"
 
 	replace_dict.update({
 		"DOTA_RUNE_ARCANE": "an arcane rune",
@@ -44,25 +54,33 @@ def get_special_pretty_crit_dict(session):
 		"DOTA_RUNE_ILLUSION": "an illusion rune",
 		"DOTA_RUNE_INVISIBILITY": "an invisibility rune"
 		})
+	for key in replace_dict:
+		if key.startswith("DOTA_RUNE"):
+			replace_type_dict[key] = "rune"
 
-	pretty_dict = {}
 	for match in replace_dict:
 		for crit in session.query(Criterion).filter_by(matchvalue=match):
-			pretty_dict[crit.name] = replace_dict[match] if crit.matchkey != "classname" else ""
-	return pretty_dict
+			pretty_dict[crit.name] = replace_dict[match]
+			crit_type_dict[crit.name] = replace_type_dict.get(match)
 
+	for crit in session.query(Criterion).filter_by(matchkey="classname"):
+		pretty_dict[crit.name] = ""
+		crit_type_dict[crit.name] = None
 
-def get_pretty_crit_dict(session):
-	pretty_dict = read_json("builderdata/criteria_pretty.json")
 
 	for crit in session.query(Criterion).filter(Criterion.name.like("Chance_%")):
-		pretty_dict[crit.name] = "({} chance)".format(crit.name[7:])
+		pretty_dict[crit.name] = "{} chance".format(crit.name[7:])
+		crit_type_dict[crit.name] = "chance"
 
 	for crit in session.query(Criterion).filter_by(matchkey="gametime"):
-		pretty_dict[crit.name] = "and the game is {} in".format(pretty_time(crit.matchvalue))
+		pretty_dict[crit.name] = "at {} in".format(pretty_time(crit.matchvalue))
+		crit_type_dict[crit.name] = "gametime"
 
 	for crit in session.query(Criterion).filter_by(matchkey="drop_type"):
-		pretty_dict[crit.name] = "of type {}".format(crit.matchvalue)
+		pretty_dict[crit.name] = "a " + crit.matchvalue
+		if pretty_dict[crit.name] == "a ultra_rare":
+			pretty_dict[crit.name] = "an ultra rare"
+		crit_type_dict[crit.name] = "droptype"
 
 	for crit in session.query(Criterion).filter_by(matchkey="lane"):
 		pretty_dict[crit.name] = "from {} lane".format({
@@ -70,51 +88,59 @@ def get_pretty_crit_dict(session):
 			"bot": "bottom",
 			"top": "top"
 			}[crit.matchvalue.lower()])
+		crit_type_dict[crit.name] = "lane"
 
 	pretty_dict["LittleNag"] = ""
-	pretty_dict["MediumNag"] = "(medium naggy)"
-	pretty_dict["SuperNag"] = "(very naggy)"
+	pretty_dict["MediumNag"] = "medium naggy"
+	crit_type_dict["MediumNag"] = "nag"
+	pretty_dict["SuperNag"] = "very naggy"
+	crit_type_dict["SuperNag"] = "nag"
 
 	for crit in session.query(Criterion).filter_by(matchkey="customresponse"):
 		pretty_dict[crit.name] = "(using the '{}' cosmetic)".format(crit.matchvalue)
 
-	return pretty_dict
+def replace_template(template, crit_list):
+	pattern = re.compile(r"\{(.*?)\|(.*?)\|(.*?)\}")
+	match = pattern.search(template)
 
-def to_pretty_criteria(crits):
+	while match:
+		replacement = match.group(2)
+		for i in range(len(crit_list)):
+			if crit_type_dict.get(crit_list[i]) == match.group(1):
+				replacement = match.group(3).replace("%", pretty_dict[crit_list[i]])
+				crit_list.pop(i)
+				break
+		
+		template = re.sub(pattern, replacement, template, count=1)
+		match = pattern.search(template)
+
+	return template
+
+def pretty_response_crit(crits):
 	crits = crits.split(" ")
-	postfixes = re.compile(" (a rune|a hero|an ability|an item|a lane)$")
-	i = 0
-	while i < len(crits):
-		if crits[i] in pretty_dict:
-			crits[i] = pretty_dict[crits[i]]
-		elif crits[i] in special_pretty_dict:
-			crits[i] = special_pretty_dict[crits[i]]
-			if crits[0] == pretty_dict["AllyNear"]:
-				crits[0] = "{} is nearby".format(crits[i])
-				crits[i] = ""
-			if crits[i] != "":
-				crits[0] = re.sub(postfixes, "", crits[0])
+	result = crits.pop(0)
+	result =  pretty_dict.get(result, result)
 
-		if crits[i] == "":
-			crits.pop(i) # Indicates to remove this from pretty list
-			continue
-		i += 1
-	return " ".join(crits)
+	result = replace_template(result, crits)
+	ending = replace_template("{gametime|| %}{nag|| %}{chance|| (%)}", crits)
+
+	for crit in crits:
+		temp = pretty_dict.get(crit, crit)
+		if temp != "":
+			result += " " + temp
+
+	result += ending
+	return result
 
 
-def get_pretty_crit(crit_name):
-	return pretty_dict.get(crit_name, special_pretty_dict.get(crit_name))
+def load_pretty_criteria(session):
+	build_dictionaries(session)
 
-def get_response_pretty_crit(response_crit):
-	if response_crit == "" or response_crit is None:
-		return "Unused"
-	else:
-		return "\n".join([to_pretty_criteria(c) for c in response_crit.split("|")])
-
-def init_pretty_dicts(session):
-	global pretty_dict
-	global special_pretty_dict
-	# This stuff in the main function
-	pretty_dict = get_pretty_crit_dict(session)
-	special_pretty_dict = get_special_pretty_crit_dict(session)
+	for criterion in session.query(Criterion):
+		criterion.pretty = pretty_dict.get(replace_template(criterion.name, []))
+	for response in session.query(Response):
+		if response.criteria == "" or response.criteria is None:
+			response.pretty_criteria = "Unused"
+		else:
+			response.pretty_criteria = "\n".join([pretty_response_crit(c) for c in response.criteria.split("|")])
 
