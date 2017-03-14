@@ -331,11 +331,11 @@ def load_responses_text():
 	
 
 def build_dotabase():
+	load_emoticons()
 	load_items()
 	load_abilities()
 	load_heroes()
 	load_responses()
-	load_emoticons()
 	print("done")
 
 if __name__ == "__main__":
@@ -343,4 +343,7 @@ if __name__ == "__main__":
 	if os.path.isfile(dotabase_db):
 		os.remove(dotabase_db)
 	session = dotabase_session()
-	build_dotabase()
+	try:
+		build_dotabase()
+	except KeyboardInterrupt:
+		print("\ndone (canceled)")

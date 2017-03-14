@@ -54,9 +54,8 @@ def uncommentkvfile(text):
 # http://dev.dota2.com/showthread.php?t=87191
 # Loads a kv file as json
 def kvfile2json(filename):
-	f = open(filename, 'r', encoding="UTF8")
-	text = f.read()
-	f.close()
+	with open(filename, 'r', encoding="UTF16") as f:
+		text = f.read()
 
 	# To fix html quotes in values
 	text = re.sub(r'\\"', 'QUOTE', text)
@@ -74,9 +73,8 @@ def kvfile2json(filename):
 
 # Loads a response_rules file as json
 def rulesfile2json(filename):
-	f = open(filename, 'r')
-	text = f.read()
-	f.close()
+	with open(filename, 'r') as f:
+		text = f.read()
 
 	text = "\n" + text + "\n"
 	text = re.sub(r'\n//[^\n]*', r'\n', text)
@@ -97,9 +95,8 @@ def rulesfile2json(filename):
 
 # Loads the response_texts scraped from the wiki as json
 def scrapedresponses2json(filename):
-	f = open(filename, 'r')
-	text = f.read()
-	f.close()
+	with open(filename, 'r') as f:
+		text = f.read()
 
 	text = re.sub(r'"', r"'", text)
 	text = re.sub(r'\* <sm2>', r'\t"', text)
@@ -129,6 +126,12 @@ def read_json(filename):
 		text = f.read()
 		return tryloadjson(text)
 
+file_formats = {
+	"scrapedresponses": scrapedresponses2json,
+	"rules": rulesfile2json,
+	"kv": kvfile2json
+}
+
 # Reads from converted json file unless overwrite parameter is specified
 def valve_readfile(sourcedir, filepath, fileformat, overwrite=False):
 	json_file = os.path.splitext(json_cache_dir + filepath)[0]+'.json'
@@ -139,12 +142,8 @@ def valve_readfile(sourcedir, filepath, fileformat, overwrite=False):
 			text = f.read()
 			return tryloadjson(text)
 
-	if(fileformat == "scrapedresponses"):
-		data = scrapedresponses2json(vpk_file)
-	elif(fileformat == "rules"):
-		data = rulesfile2json(vpk_file)
-	elif(fileformat == "kv"):
-		data = kvfile2json(vpk_file)
+	if(fileformat in file_formats):
+		data = file_formats[fileformat](vpk_file)
 	else:
 		raise ValueError("invalid fileformat argument: " + fileformat)
 
