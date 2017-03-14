@@ -13,7 +13,8 @@ namespace VpkExtractor
     {
         public static bool log_console = true;
         public static string vpk_destination = "C:\\Development\\Projects\\dotabase-web\\dota-vpk"; // I am lazy but this should be read from a config file or passed in thru console args
-		public static Package package;
+        public static string dota_path = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\dota 2 beta";
+        public static Package package;
         public static Progress progress = new Progress();
         public static int entryProgress = 0;
         public static int entryCount = 0;
@@ -21,12 +22,13 @@ namespace VpkExtractor
         static void Main(string[] args)
         {
             package = new Package();
-            package.Read("C:\\Program Files (x86)\\Steam\\steamapps\\common\\dota 2 beta\\game\\dota\\pak01_dir.vpk");
+            package.Read(dota_path + "\\game\\dota\\pak01_dir.vpk");
 
             Logger.Start();
 
             try
             {
+                CopyNormalFile("/game/dota/resource/dota_english.txt", "/resource/dota_english.txt");
                 ExtractFiles("vxml_c", true);
                 ExtractFiles("vjs_c", true);
                 ExtractFiles("vcss_c", true);
@@ -45,6 +47,22 @@ namespace VpkExtractor
             Console.WriteLine("\ndone!\n{0}", Logger.Report);
             Logger.DumpLog();
             Console.ReadKey(); // Wait for key to close
+        }
+
+        private static void CopyNormalFile(string source, string destination)
+        {
+            string source_path =dota_path + source;
+            string destination_path = vpk_destination + destination;
+
+            if(!File.Exists(destination_path) || File.GetLastWriteTime(source_path) > File.GetLastWriteTime(destination_path))
+            {
+                // Write all data to file
+                File.Copy(source_path, destination_path, true);
+                if (log_console)
+                {
+                    Console.WriteLine("Copied file to: " + destination);
+                }
+            }
         }
 		
 
