@@ -34,7 +34,7 @@ def load_emoticons():
 
 	print("- loading emoticons from scripts")
 	# load all of the item scripts data information
-	data = valve_readfile(vpk_path, emoticon_scripts_file, "kv")["emoticons"]
+	data = valve_readfile(vpk_path, emoticon_scripts_file, "kv", encoding="UTF-16")["emoticons"]
 	for emoticonid in data:
 		if int(emoticonid) >= 1000:
 			continue # These are team emoticons
@@ -77,7 +77,7 @@ def load_items():
 
 	print("- loading item data from dota_english")
 	# Load additional information from the dota_english.txt file
-	data = valve_readfile(vpk_path, dota_english_file, "kv")["lang"]["Tokens"]
+	data = valve_readfile(vpk_path, dota_english_file, "kv", encoding="UTF-16")["lang"]["Tokens"]
 	for item in session.query(Item):
 		item_tooltip = "DOTA_Tooltip_Ability_" + item.name 
 		item_tooltip2 = "DOTA_Tooltip_ability_" + item.name 
@@ -131,7 +131,7 @@ def load_abilities():
 
 	print("- loading ability data from dota_english")
 	# Load additional information from the dota_english.txt file
-	data = valve_readfile(vpk_path, dota_english_file, "kv")["lang"]["Tokens"]
+	data = valve_readfile(vpk_path, dota_english_file, "kv", encoding="UTF-16")["lang"]["Tokens"]
 	for ability in session.query(Ability):
 		ability_tooltip = "DOTA_Tooltip_ability_" + ability.name 
 		ability.localized_name = data.get(ability_tooltip, ability.name)
@@ -211,7 +211,7 @@ def load_heroes():
 
 	print("- loading hero data from dota_english")
 	# Load additional information from the dota_english.txt file
-	data = valve_readfile(vpk_path, dota_english_file, "kv")["lang"]["Tokens"]
+	data = valve_readfile(vpk_path, dota_english_file, "kv", encoding="UTF-16")["lang"]["Tokens"]
 	for hero in session.query(Hero):
 		hero.localized_name = data[hero.full_name]
 		hero.bio = data[hero.full_name + "_bio"]
