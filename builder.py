@@ -8,6 +8,7 @@ from PIL import Image
 from valve2json import valve_readfile, read_json
 import criteria_sentancing
 from dotabase import *
+from utils import *
 
 # paths---------------
 vpk_path = "C:/Development/Projects/dotabase-web/dota-vpk" # Should be updated to be command line variable if needed
@@ -52,7 +53,6 @@ def load_emoticons():
 		session.add(emoticon)
 
 	session.commit()
-	print("emoticons loaded")
 
 def load_items():
 	session.query(Item).delete()
@@ -97,7 +97,6 @@ def load_items():
 				raise ValueError("icon file not found for {}".format(item.name))
 
 	session.commit()
-	print("items loaded")
 
 def get_value(hero_data, key, base_data):
 	if(key in hero_data):
@@ -148,17 +147,17 @@ def load_abilities():
 			ability.icon = ability_icon_path + "wisp_empty1.png"
 
 	session.commit()
-	print("abilities loaded")
 
 def load_heroes():
 	session.query(Hero).delete()
 	print("Heroes")
 
-	print("- loading heroes from hero scripts")
 	# load all of the hero scripts data information
 	data = valve_readfile(vpk_path, hero_scripts_file, "kv")["DOTAHeroes"]
 	base_data = data["npc_dota_hero_base"]
+	progress = ProgressBar(len(data), title="- loading from hero scripts")
 	for heroname in data:
+		progress.tick()
 		if(heroname == "Version" or
 			heroname == "npc_dota_hero_target_dummy" or
 			heroname == "npc_dota_hero_base"):
@@ -244,16 +243,16 @@ def load_heroes():
 
 
 	session.commit()
-	print("heroes loaded")
 
 def load_responses():
 	session.query(Response).delete()
 	session.query(Criterion).delete()
 	print("Responses")
 
-	print("- loading reponses from /sounds/vo/ mp3 files")
 	# Add a response for each file in each hero folder in the /sounds/vo folder
+	progress = ProgressBar(session.query(Hero).count(), title="- loading from mp3 files:")
 	for hero in session.query(Hero):
+		progress.tick()
 		for root, dirs, files in os.walk(vpk_path + response_mp3_path + hero.media_name):
 			for file in files:
 				response = Response()
@@ -294,9 +293,10 @@ def load_responses():
 		criterion.required = "required" in vals
 		session.add(criterion)
 
-	print("- loading criteria into responses (takes long time)")
+	progress = ProgressBar(len(rules), title="- linking rules:")
 	for key in rules:
 		response_criteria = rules[key]['criteria'].rstrip()
+		progress.tick()
 
 		for fullname in groups[rules[key]['response']]:
 			response = session.query(Response).filter_by(fullname=fullname).first()
@@ -310,12 +310,12 @@ def load_responses():
 	criteria_sentancing.load_pretty_criteria(session)
 
 	session.commit()
-	print("responses loaded")
 
 def load_responses_text():
-	print("- loading response texts")
+	progress = ProgressBar(session.query(Response).count(), title="- loading response texts")
 	data = valve_readfile(scraped_responses_dir, scraped_responses_file, "scrapedresponses")
 	for response in session.query(Response):
+		progress.tick()
 		if response.name in data:
 			text = data[response.name]
 			text = re.sub(r'<!--.*-->', r'', text)
