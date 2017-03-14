@@ -3,6 +3,8 @@ import re
 import string
 import os.path
 import collections
+from utils import *
+from __main__ import config
 
 # Converts valve's obsure and unusable text formats to json
 # can do the following formats:
@@ -24,6 +26,12 @@ def tryloadjson(text, strict=True):
 			end = len(lines)
 		print("Error parsing this JSON text:\n" + "\n".join(lines[start:end]) + "\n")
 		raise
+
+# Redefine with error printing
+def read_json(filename):
+	with open(filename, 'r') as f:
+		text = f.read()
+		return tryloadjson(text)
 
 def uncommentkvfile(text):
 	in_value = False
@@ -114,11 +122,6 @@ def scrapedresponses2json(text):
 		newdata[key.lower()] = data[key]
 	return newdata
 
-def read_json(filename):
-	with open(filename, 'r') as f:
-		text = f.read()
-		return tryloadjson(text)
-
 file_formats = {
 	"scrapedresponses": scrapedresponses2json,
 	"rules": rulesfile2json,
@@ -130,7 +133,7 @@ def valve_readfile(sourcedir, filepath, fileformat, encoding=None, overwrite=Fal
 	json_file = os.path.splitext(json_cache_dir + filepath)[0]+'.json'
 	vpk_file = sourcedir + filepath
 
-	if ((not overwrite) and os.path.isfile(json_file) and (os.path.getmtime(json_file) > os.path.getmtime(vpk_file))):
+	if (not (overwrite or config.overwrite_json)) and os.path.isfile(json_file) and (os.path.getmtime(json_file) > os.path.getmtime(vpk_file)):
 		with open(json_file, 'r') as f:
 			text = f.read()
 			return tryloadjson(text)
@@ -144,6 +147,5 @@ def valve_readfile(sourcedir, filepath, fileformat, encoding=None, overwrite=Fal
 
 
 	os.makedirs(os.path.dirname(json_file), exist_ok=True)
-	with open(json_file, 'w+') as f:
-		json.dump(data, f, indent='\t')
+	write_json(json_file, data)
 	return data

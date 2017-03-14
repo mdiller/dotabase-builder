@@ -1,4 +1,4 @@
-import sys, os, json
+import sys, os, json, re
 from collections import OrderedDict
 
 def write_json(filename, data):
@@ -40,7 +40,7 @@ class ProgressBar:
 class Config:
 	def __init__(self):
 		self.path = "config.json"
-		self.defaults = OrderedDict([  ("vpk_path", None) ])
+		self.defaults = OrderedDict([  ("vpk_path", None), ("overwrite_db", True), ("overwrite_json", False)  ])
 		if not os.path.exists(self.path):
 			self.json_data = self.defaults
 			self.save_settings()
@@ -62,3 +62,11 @@ class Config:
 	@property
 	def vpk_path(self):
 		return self.json_data["vpk_path"]
+
+	@property
+	def overwrite_db(self):
+		return self.json_data["overwrite_db"]
+
+	@property
+	def overwrite_json(self):
+		return self.json_data["overwrite_json"]
