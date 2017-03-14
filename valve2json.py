@@ -54,8 +54,8 @@ def uncommentkvfile(text):
 # http://dev.dota2.com/showthread.php?t=87191
 # Loads a kv file as json
 def kvfile2json(text):
-	# To fix html quotes in values
-	text = re.sub(r'\\"', 'QUOTE', text)
+	# To temporarily hide non-functional quotes
+	text = re.sub(r'\\"', 'TEMP_QUOTE_TOKEN', text)
 	# get rid of troublesome comments
 	text = uncommentkvfile(text)
 	# To convert Valve's KeyValue format to Json
@@ -65,6 +65,8 @@ def kvfile2json(text):
 	text = re.sub(r'([}\]])(\s*)("[^"]*":\s*)?([{\[])', r'\1,\2\3\4', text)
 	text = re.sub(r'}(\s*"[^"]*":)', r'},\1', text)
 	text = "{ " + text + " }"
+	# To re-include non-functional quotes
+	text = re.sub(r'TEMP_QUOTE_TOKEN', '\\"', text)
 
 	return tryloadjson(text, strict=False)
 
