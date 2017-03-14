@@ -10,8 +10,9 @@ import criteria_sentancing
 from dotabase import *
 from utils import *
 
+config = Config()
+
 # paths---------------
-vpk_path = "C:/Development/Projects/dotabase-web/dota-vpk" # Should be updated to be command line variable if needed
 item_img_path = "/resource/flash3/images/items/"
 ability_icon_path = "/resource/flash3/images/spellicons/"
 hero_image_path = "/resource/flash3/images/heroes/"
@@ -34,7 +35,7 @@ def load_emoticons():
 
 	print("- loading emoticons from scripts")
 	# load all of the item scripts data information
-	data = valve_readfile(vpk_path, emoticon_scripts_file, "kv", encoding="UTF-16")["emoticons"]
+	data = valve_readfile(config.vpk_path, emoticon_scripts_file, "kv", encoding="UTF-16")["emoticons"]
 	for emoticonid in data:
 		if int(emoticonid) >= 1000:
 			continue # These are team emoticons
@@ -44,7 +45,7 @@ def load_emoticons():
 		emoticon.ms_per_frame = data[emoticonid]['ms_per_frame']
 		emoticon.url = emoticon_image_path + data[emoticonid]['image_name']
 		try:
-			img = Image.open(vpk_path + emoticon.url)
+			img = Image.open(config.vpk_path + emoticon.url)
 			emoticon.frames = int(img.size[0] / img.size[1])
 		except:
 			# Error loading this image, so dont add it to the database
@@ -60,7 +61,7 @@ def load_items():
 
 	print("- loading items from item scripts")
 	# load all of the item scripts data information
-	data = valve_readfile(vpk_path, item_scripts_file, "kv")["DOTAAbilities"]
+	data = valve_readfile(config.vpk_path, item_scripts_file, "kv")["DOTAAbilities"]
 	for itemname in data:
 		if itemname == "Version":
 			continue
@@ -77,7 +78,7 @@ def load_items():
 
 	print("- loading item data from dota_english")
 	# Load additional information from the dota_english.txt file
-	data = valve_readfile(vpk_path, dota_english_file, "kv", encoding="UTF-16")["lang"]["Tokens"]
+	data = valve_readfile(config.vpk_path, dota_english_file, "kv", encoding="UTF-16")["lang"]["Tokens"]
 	for item in session.query(Item):
 		item_tooltip = "DOTA_Tooltip_Ability_" + item.name 
 		item_tooltip2 = "DOTA_Tooltip_ability_" + item.name 
@@ -88,7 +89,7 @@ def load_items():
 	print("- adding item icon files")
 	# Add img files to item
 	for item in session.query(Item):
-		if os.path.isfile(vpk_path + item_img_path + item.name.replace("item_", "") + ".png"):
+		if os.path.isfile(config.vpk_path + item_img_path + item.name.replace("item_", "") + ".png"):
 			item.icon = item_img_path + item.name.replace("item_", "") + ".png"
 		else:
 			if "recipe" in item.name:
@@ -98,20 +99,13 @@ def load_items():
 
 	session.commit()
 
-def get_value(hero_data, key, base_data):
-	if(key in hero_data):
-		return hero_data[key]
-	else:
-		return base_data[key]
-		print("using default for: " + key)
-
 def load_abilities():
 	session.query(Ability).delete()
 	print("Abilities")
 
 	print("- loading abilities from ability scripts")
 	# load all of the ability scripts data information
-	data = valve_readfile(vpk_path, ability_scripts_file, "kv")["DOTAAbilities"]
+	data = valve_readfile(config.vpk_path, ability_scripts_file, "kv")["DOTAAbilities"]
 	for abilityname in data:
 		if(abilityname == "Version" or
 			abilityname == "ability_base" or
@@ -131,7 +125,7 @@ def load_abilities():
 
 	print("- loading ability data from dota_english")
 	# Load additional information from the dota_english.txt file
-	data = valve_readfile(vpk_path, dota_english_file, "kv", encoding="UTF-16")["lang"]["Tokens"]
+	data = valve_readfile(config.vpk_path, dota_english_file, "kv", encoding="UTF-16")["lang"]["Tokens"]
 	for ability in session.query(Ability):
 		ability_tooltip = "DOTA_Tooltip_ability_" + ability.name 
 		ability.localized_name = data.get(ability_tooltip, ability.name)
@@ -141,7 +135,7 @@ def load_abilities():
 	print("- adding ability icon files")
 	# Add img files to ability
 	for ability in session.query(Ability):
-		if os.path.isfile(vpk_path + ability_icon_path + ability.name + ".png"):
+		if os.path.isfile(config.vpk_path + ability_icon_path + ability.name + ".png"):
 			ability.icon = ability_icon_path + ability.name + ".png"
 		else:
 			ability.icon = ability_icon_path + "wisp_empty1.png"
@@ -153,8 +147,7 @@ def load_heroes():
 	print("Heroes")
 
 	# load all of the hero scripts data information
-	data = valve_readfile(vpk_path, hero_scripts_file, "kv")["DOTAHeroes"]
-	base_data = data["npc_dota_hero_base"]
+	data = valve_readfile(config.vpk_path, hero_scripts_file, "kv")["DOTAHeroes"]
 	progress = ProgressBar(len(data), title="- loading from hero scripts")
 	for heroname in data:
 		progress.tick()
@@ -163,31 +156,37 @@ def load_heroes():
 			heroname == "npc_dota_hero_base"):
 			continue
 
-		hero_data = data[heroname]
 		hero = Hero()
+		hero_data = data[heroname]
+
+		def get_val(key):
+			if key in hero_data:
+				return hero_data[key]
+			else:
+				return data["npc_dota_hero_base"][key]
 
 		hero.full_name = heroname
 		hero.media_name = hero_data['VoiceFile'][37:-9]
 		hero.name = heroname.replace("npc_dota_hero_", "")
-		hero.id = get_value(hero_data, 'HeroID', base_data)
-		hero.team = get_value(hero_data, 'Team', base_data)
-		hero.base_health_regen = get_value(hero_data, 'StatusHealthRegen', base_data)
-		hero.base_movement = get_value(hero_data, 'MovementSpeed', base_data)
-		hero.turn_rate = get_value(hero_data, 'MovementTurnRate', base_data)
-		hero.base_armor = get_value(hero_data, 'ArmorPhysical', base_data)
-		hero.attack_range = get_value(hero_data, 'AttackRange', base_data)
-		hero.attack_projectile_speed = get_value(hero_data, 'ProjectileSpeed', base_data)
-		hero.attack_damage_min = get_value(hero_data, 'AttackDamageMin', base_data)
-		hero.attack_damage_max = get_value(hero_data, 'AttackDamageMax', base_data)
-		hero.attack_rate = get_value(hero_data, 'AttackRate', base_data)
-		hero.attack_point = get_value(hero_data, 'AttackAnimationPoint', base_data)
-		hero.attr_primary = get_value(hero_data, 'AttributePrimary', base_data)
-		hero.attr_base_strength = get_value(hero_data, 'AttributeBaseStrength', base_data)
-		hero.attr_strength_gain = get_value(hero_data, 'AttributeStrengthGain', base_data)
-		hero.attr_base_intelligence = get_value(hero_data, 'AttributeBaseIntelligence', base_data)
-		hero.attr_intelligence_gain = get_value(hero_data, 'AttributeIntelligenceGain', base_data)
-		hero.attr_base_agility = get_value(hero_data, 'AttributeBaseAgility', base_data)
-		hero.attr_agility_gain = get_value(hero_data, 'AttributeAgilityGain', base_data)
+		hero.id = get_val('HeroID')
+		hero.team = get_val('Team')
+		hero.base_health_regen = get_val('StatusHealthRegen')
+		hero.base_movement = get_val('MovementSpeed')
+		hero.turn_rate = get_val('MovementTurnRate')
+		hero.base_armor = get_val('ArmorPhysical')
+		hero.attack_range = get_val('AttackRange')
+		hero.attack_projectile_speed = get_val('ProjectileSpeed')
+		hero.attack_damage_min = get_val('AttackDamageMin')
+		hero.attack_damage_max = get_val('AttackDamageMax')
+		hero.attack_rate = get_val('AttackRate')
+		hero.attack_point = get_val('AttackAnimationPoint')
+		hero.attr_primary = get_val('AttributePrimary')
+		hero.attr_base_strength = get_val('AttributeBaseStrength')
+		hero.attr_strength_gain = get_val('AttributeStrengthGain')
+		hero.attr_base_intelligence = get_val('AttributeBaseIntelligence')
+		hero.attr_intelligence_gain = get_val('AttributeIntelligenceGain')
+		hero.attr_base_agility = get_val('AttributeBaseAgility')
+		hero.attr_agility_gain = get_val('AttributeAgilityGain')
 
 		hero.json_data = json.dumps(hero_data, indent=4)
 
@@ -211,7 +210,7 @@ def load_heroes():
 
 	print("- loading hero data from dota_english")
 	# Load additional information from the dota_english.txt file
-	data = valve_readfile(vpk_path, dota_english_file, "kv", encoding="UTF-16")["lang"]["Tokens"]
+	data = valve_readfile(config.vpk_path, dota_english_file, "kv", encoding="UTF-16")["lang"]["Tokens"]
 	for hero in session.query(Hero):
 		hero.localized_name = data[hero.full_name]
 		hero.bio = data[hero.full_name + "_bio"]
@@ -253,7 +252,7 @@ def load_responses():
 	progress = ProgressBar(session.query(Hero).count(), title="- loading from mp3 files:")
 	for hero in session.query(Hero):
 		progress.tick()
-		for root, dirs, files in os.walk(vpk_path + response_mp3_path + hero.media_name):
+		for root, dirs, files in os.walk(config.vpk_path + response_mp3_path + hero.media_name):
 			for file in files:
 				response = Response()
 				response.name = file[:-4]
@@ -270,11 +269,11 @@ def load_responses():
 	groups = {}
 	criteria = {}
 	# Load response_rules
-	for root, dirs, files in os.walk(vpk_path + response_rules_path):
+	for root, dirs, files in os.walk(config.vpk_path + response_rules_path):
 		for file in files:
 			if "announcer" in file:
 				continue
-			data = valve_readfile(vpk_path, response_rules_path + file, "rules")
+			data = valve_readfile(config.vpk_path, response_rules_path + file, "rules")
 			for key in data:
 				if key.startswith("rule_"):
 					rules[key[5:]] = data[key]
