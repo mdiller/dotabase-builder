@@ -1,0 +1,17 @@
+{
+	"item_img_path": "/resource/flash3/images/items/",
+	"ability_icon_path": "/resource/flash3/images/spellicons/",
+	"hero_image_path": "/resource/flash3/images/heroes/",
+	"hero_icon_path": "/resource/flash3/images/miniheroes/",
+	"emoticon_image_path": "/resource/flash3/images/emoticons/",
+	"hero_selection_path": "/resource/flash3/images/heroes/selection/",
+	"response_rules_path": "/scripts/talker/",
+	"response_mp3_path": "/sounds/vo/",
+	"hero_scripts_file": "/scripts/npc/npc_heroes.txt",
+	"item_scripts_file": "/scripts/npc/items.txt",
+	"ability_scripts_file": "/scripts/npc/npc_abilities.txt",
+	"emoticon_scripts_file": "/scripts/emoticons.txt",
+	"dota_english_file": "/resource/dota_english.txt",
+	"scraped_responses_dir": "ResponseScraper",
+	"scraped_responses_file": "/responses_data.txt"
+}

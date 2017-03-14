@@ -11,23 +11,7 @@ from dotabase import *
 from utils import *
 
 config = Config()
-
-# paths---------------
-item_img_path = "/resource/flash3/images/items/"
-ability_icon_path = "/resource/flash3/images/spellicons/"
-hero_image_path = "/resource/flash3/images/heroes/"
-hero_icon_path = "/resource/flash3/images/miniheroes/"
-emoticon_image_path = "/resource/flash3/images/emoticons/"
-hero_selection_path = "/resource/flash3/images/heroes/selection/"
-response_rules_path = "/scripts/talker/"
-response_mp3_path = "/sounds/vo/"
-hero_scripts_file = "/scripts/npc/npc_heroes.txt"
-item_scripts_file = "/scripts/npc/items.txt"
-ability_scripts_file = "/scripts/npc/npc_abilities.txt"
-emoticon_scripts_file = "/scripts/emoticons.txt"
-dota_english_file = "/resource/dota_english.txt"
-scraped_responses_dir = "ResponseScraper"
-scraped_responses_file = "/responses_data.txt"
+paths = read_json("paths.json")
 
 def load_emoticons():
 	session.query(Emoticon).delete()
@@ -35,7 +19,7 @@ def load_emoticons():
 
 	print("- loading emoticons from scripts")
 	# load all of the item scripts data information
-	data = valve_readfile(config.vpk_path, emoticon_scripts_file, "kv", encoding="UTF-16")["emoticons"]
+	data = valve_readfile(config.vpk_path, paths['emoticon_scripts_file'], "kv", encoding="UTF-16")["emoticons"]
 	for emoticonid in data:
 		if int(emoticonid) >= 1000:
 			continue # These are team emoticons
@@ -43,7 +27,7 @@ def load_emoticons():
 		emoticon.id = int(emoticonid)
 		emoticon.name = data[emoticonid]['aliases']['0']
 		emoticon.ms_per_frame = data[emoticonid]['ms_per_frame']
-		emoticon.url = emoticon_image_path + data[emoticonid]['image_name']
+		emoticon.url = paths['emoticon_image_path'] + data[emoticonid]['image_name']
 		try:
 			img = Image.open(config.vpk_path + emoticon.url)
 			emoticon.frames = int(img.size[0] / img.size[1])
@@ -61,7 +45,7 @@ def load_items():
 
 	print("- loading items from item scripts")
 	# load all of the item scripts data information
-	data = valve_readfile(config.vpk_path, item_scripts_file, "kv")["DOTAAbilities"]
+	data = valve_readfile(config.vpk_path, paths['item_scripts_file'], "kv")["DOTAAbilities"]
 	for itemname in data:
 		if itemname == "Version":
 			continue
@@ -78,7 +62,7 @@ def load_items():
 
 	print("- loading item data from dota_english")
 	# Load additional information from the dota_english.txt file
-	data = valve_readfile(config.vpk_path, dota_english_file, "kv", encoding="UTF-16")["lang"]["Tokens"]
+	data = valve_readfile(config.vpk_path, paths['dota_english_file'], "kv", encoding="UTF-16")["lang"]["Tokens"]
 	for item in session.query(Item):
 		item_tooltip = "DOTA_Tooltip_Ability_" + item.name 
 		item_tooltip2 = "DOTA_Tooltip_ability_" + item.name 
@@ -89,11 +73,11 @@ def load_items():
 	print("- adding item icon files")
 	# Add img files to item
 	for item in session.query(Item):
-		if os.path.isfile(config.vpk_path + item_img_path + item.name.replace("item_", "") + ".png"):
-			item.icon = item_img_path + item.name.replace("item_", "") + ".png"
+		if os.path.isfile(config.vpk_path + paths['item_img_path'] + item.name.replace("item_", "") + ".png"):
+			item.icon = paths['item_img_path'] + item.name.replace("item_", "") + ".png"
 		else:
 			if "recipe" in item.name:
-				item.icon = item_img_path + "recipe.png"
+				item.icon = paths['item_img_path'] + "recipe.png"
 			else:
 				raise ValueError("icon file not found for {}".format(item.name))
 
@@ -105,7 +89,7 @@ def load_abilities():
 
 	print("- loading abilities from ability scripts")
 	# load all of the ability scripts data information
-	data = valve_readfile(config.vpk_path, ability_scripts_file, "kv")["DOTAAbilities"]
+	data = valve_readfile(config.vpk_path, paths['ability_scripts_file'], "kv")["DOTAAbilities"]
 	for abilityname in data:
 		if(abilityname == "Version" or
 			abilityname == "ability_base" or
@@ -125,7 +109,7 @@ def load_abilities():
 
 	print("- loading ability data from dota_english")
 	# Load additional information from the dota_english.txt file
-	data = valve_readfile(config.vpk_path, dota_english_file, "kv", encoding="UTF-16")["lang"]["Tokens"]
+	data = valve_readfile(config.vpk_path, paths['dota_english_file'], "kv", encoding="UTF-16")["lang"]["Tokens"]
 	for ability in session.query(Ability):
 		ability_tooltip = "DOTA_Tooltip_ability_" + ability.name 
 		ability.localized_name = data.get(ability_tooltip, ability.name)
@@ -135,10 +119,10 @@ def load_abilities():
 	print("- adding ability icon files")
 	# Add img files to ability
 	for ability in session.query(Ability):
-		if os.path.isfile(config.vpk_path + ability_icon_path + ability.name + ".png"):
-			ability.icon = ability_icon_path + ability.name + ".png"
+		if os.path.isfile(config.vpk_path + paths['ability_icon_path'] + ability.name + ".png"):
+			ability.icon = paths['ability_icon_path'] + ability.name + ".png"
 		else:
-			ability.icon = ability_icon_path + "wisp_empty1.png"
+			ability.icon = paths['ability_icon_path'] + "wisp_empty1.png"
 
 	session.commit()
 
@@ -147,7 +131,7 @@ def load_heroes():
 	print("Heroes")
 
 	# load all of the hero scripts data information
-	data = valve_readfile(config.vpk_path, hero_scripts_file, "kv")["DOTAHeroes"]
+	data = valve_readfile(config.vpk_path, paths['hero_scripts_file'], "kv")["DOTAHeroes"]
 	progress = ProgressBar(len(data), title="- loading from hero scripts")
 	for heroname in data:
 		progress.tick()
@@ -210,7 +194,7 @@ def load_heroes():
 
 	print("- loading hero data from dota_english")
 	# Load additional information from the dota_english.txt file
-	data = valve_readfile(config.vpk_path, dota_english_file, "kv", encoding="UTF-16")["lang"]["Tokens"]
+	data = valve_readfile(config.vpk_path, paths['dota_english_file'], "kv", encoding="UTF-16")["lang"]["Tokens"]
 	for hero in session.query(Hero):
 		hero.localized_name = data[hero.full_name]
 		hero.bio = data[hero.full_name + "_bio"]
@@ -218,9 +202,9 @@ def load_heroes():
 	print("- adding hero image files")
 	# Add img files to hero
 	for hero in session.query(Hero):
-		hero.icon = hero_icon_path + hero.name + ".png"
-		hero.image = hero_image_path + hero.name + ".png"
-		hero.portrait = hero_selection_path + hero.full_name + ".png"
+		hero.icon = paths['hero_icon_path'] + hero.name + ".png"
+		hero.image = paths['hero_image_path'] + hero.name + ".png"
+		hero.portrait = paths['hero_selection_path'] + hero.full_name + ".png"
 
 	print("- adding hero real names")
 	data = read_json("builderdata/hero_names.json")
@@ -252,12 +236,12 @@ def load_responses():
 	progress = ProgressBar(session.query(Hero).count(), title="- loading from mp3 files:")
 	for hero in session.query(Hero):
 		progress.tick()
-		for root, dirs, files in os.walk(config.vpk_path + response_mp3_path + hero.media_name):
+		for root, dirs, files in os.walk(config.vpk_path + paths['response_mp3_path'] + hero.media_name):
 			for file in files:
 				response = Response()
 				response.name = file[:-4]
 				response.fullname = hero.media_name + "_" + response.name
-				response.mp3 = response_mp3_path + hero.media_name + "/" + file
+				response.mp3 = paths['response_mp3_path'] + hero.media_name + "/" + file
 				response.hero_id = hero.id
 				response.criteria = ""
 				session.add(response)
@@ -269,11 +253,11 @@ def load_responses():
 	groups = {}
 	criteria = {}
 	# Load response_rules
-	for root, dirs, files in os.walk(config.vpk_path + response_rules_path):
+	for root, dirs, files in os.walk(config.vpk_path + paths['response_rules_path']):
 		for file in files:
 			if "announcer" in file:
 				continue
-			data = valve_readfile(config.vpk_path, response_rules_path + file, "rules")
+			data = valve_readfile(config.vpk_path, paths['response_rules_path'] + file, "rules")
 			for key in data:
 				if key.startswith("rule_"):
 					rules[key[5:]] = data[key]
@@ -312,7 +296,7 @@ def load_responses():
 
 def load_responses_text():
 	progress = ProgressBar(session.query(Response).count(), title="- loading response texts")
-	data = valve_readfile(scraped_responses_dir, scraped_responses_file, "scrapedresponses")
+	data = valve_readfile(paths['scraped_responses_dir'], paths['scraped_responses_file'], "scrapedresponses")
 	for response in session.query(Response):
 		progress.tick()
 		if response.name in data:
