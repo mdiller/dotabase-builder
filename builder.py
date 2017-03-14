@@ -4,6 +4,7 @@ import os
 import sys
 import json
 import re
+from PIL import Image
 from valve2json import valve_readfile, read_json
 import criteria_sentancing
 from dotabase import *
@@ -14,15 +15,44 @@ item_img_path = "/resource/flash3/images/items/"
 ability_icon_path = "/resource/flash3/images/spellicons/"
 hero_image_path = "/resource/flash3/images/heroes/"
 hero_icon_path = "/resource/flash3/images/miniheroes/"
+emoticon_image_path = "/resource/flash3/images/emoticons/"
 hero_selection_path = "/resource/flash3/images/heroes/selection/"
 response_rules_path = "/scripts/talker/"
 response_mp3_path = "/sounds/vo/"
 hero_scripts_file = "/scripts/npc/npc_heroes.txt"
 item_scripts_file = "/scripts/npc/items.txt"
 ability_scripts_file = "/scripts/npc/npc_abilities.txt"
+emoticon_scripts_file = "/scripts/emoticons.txt"
 dota_english_file = "/resource/dota_english.txt"
 scraped_responses_dir = "ResponseScraper"
 scraped_responses_file = "/responses_data.txt"
+
+def load_emoticons():
+	session.query(Emoticon).delete()
+	print("emoticons")
+
+	print("- loading emoticons from scripts")
+	# load all of the item scripts data information
+	data = valve_readfile(vpk_path, emoticon_scripts_file, "kv")["emoticons"]
+	for emoticonid in data:
+		if int(emoticonid) >= 1000:
+			continue # These are team emoticons
+		emoticon = Emoticon()
+		emoticon.id = int(emoticonid)
+		emoticon.name = data[emoticonid]['aliases']['0']
+		emoticon.ms_per_frame = data[emoticonid]['ms_per_frame']
+		emoticon.url = emoticon_image_path + data[emoticonid]['image_name']
+		try:
+			img = Image.open(vpk_path + emoticon.url)
+			emoticon.frames = int(img.size[0] / img.size[1])
+		except:
+			# Error loading this image, so dont add it to the database
+			continue
+
+		session.add(emoticon)
+
+	session.commit()
+	print("emoticons loaded")
 
 def load_items():
 	session.query(Item).delete()
@@ -305,6 +335,7 @@ def build_dotabase():
 	load_abilities()
 	load_heroes()
 	load_responses()
+	load_emoticons()
 	print("done")
 
 if __name__ == "__main__":
