@@ -48,6 +48,9 @@ def load():
 		hero.attr_intelligence_gain = get_val('AttributeIntelligenceGain')
 		hero.attr_base_agility = get_val('AttributeBaseAgility')
 		hero.attr_agility_gain = get_val('AttributeAgilityGain')
+		glow_color = hero_data.get('HeroGlowColor', None)
+		if glow_color:
+			hero.glow_color = "#{0:02x}{1:02x}{2:02x}".format(*map(int, glow_color.split(' ')))
 
 		hero.json_data = json.dumps(hero_data, indent=4)
 

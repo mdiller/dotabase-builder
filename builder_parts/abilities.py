@@ -13,16 +13,34 @@ def load():
 	data = valve_readfile(config.vpk_path, paths['ability_scripts_file'], "kv")["DOTAAbilities"]
 	for abilityname in data:
 		if(abilityname == "Version" or
-			abilityname == "ability_base" or
-			abilityname == "ability_deward" or
-			abilityname == "default_attack"):
+			abilityname == "ability_deward"):
 			continue
 
 		ability_data = data[abilityname]
 		ability = Ability()
 
+		def get_val(key, default_base=False):
+			if key in ability_data:
+				val = ability_data[key]
+				if ' ' in val and all(x == val.split(' ')[0] for x in val.split(' ')):
+					return val.split(' ')[0]
+				return val
+			elif default_base:
+				return data["ability_base"][key]
+			else:
+				return None
+
 		ability.name = abilityname
 		ability.id = ability_data['ID']
+		ability.type = get_val('AbilityType', default_base=True)
+		ability.behavior = get_val('AbilityBehavior', default_base=True)
+		ability.cast_range = get_val('AbilityCastRange')
+		ability.cast_point = get_val('AbilityCastPoint')
+		ability.channel_time = get_val('AbilityChannelTime')
+		ability.cooldown = get_val('AbilityCooldown')
+		ability.duration = get_val('AbilityDuration')
+		ability.damage = get_val('AbilityDamage')
+		ability.mana_cost = get_val('AbilityManaCost')
 
 		ability.json_data = json.dumps(ability_data, indent=4)
 
@@ -36,6 +54,12 @@ def load():
 		ability.localized_name = data.get(ability_tooltip, ability.name)
 		ability.description = data.get(ability_tooltip + "_Description", "")
 		ability.lore = data.get(ability_tooltip + "_Lore", "")
+		notes = []
+		for i in range(8):
+			key = f"{ability_tooltip}_Note{i}"
+			if key in data:
+				notes.append(data[key])
+		ability.note = "" if len(notes) == 0 else "\n".join(notes)
 
 	print("- adding ability icon files")
 	# Add img files to ability
