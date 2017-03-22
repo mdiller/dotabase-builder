@@ -3,6 +3,12 @@ from dotabase import *
 from utils import *
 from valve2json import valve_readfile
 
+attribute_dict = {
+	"DOTA_ATTRIBUTE_STRENGTH": "strength",
+	"DOTA_ATTRIBUTE_AGILITY": "agility",
+	"DOTA_ATTRIBUTE_INTELLECT": "intelligence"
+}
+
 def load():
 	session.query(Hero).delete()
 	print("Heroes")
@@ -41,13 +47,15 @@ def load():
 		hero.attack_damage_max = get_val('AttackDamageMax')
 		hero.attack_rate = get_val('AttackRate')
 		hero.attack_point = get_val('AttackAnimationPoint')
-		hero.attr_primary = get_val('AttributePrimary')
-		hero.attr_base_strength = get_val('AttributeBaseStrength')
+		hero.attr_primary = attribute_dict[get_val('AttributePrimary')]
+		hero.attr_strength_base = get_val('AttributeBaseStrength')
 		hero.attr_strength_gain = get_val('AttributeStrengthGain')
-		hero.attr_base_intelligence = get_val('AttributeBaseIntelligence')
+		hero.attr_intelligence_base = get_val('AttributeBaseIntelligence')
 		hero.attr_intelligence_gain = get_val('AttributeIntelligenceGain')
-		hero.attr_base_agility = get_val('AttributeBaseAgility')
+		hero.attr_agility_base = get_val('AttributeBaseAgility')
 		hero.attr_agility_gain = get_val('AttributeAgilityGain')
+		hero.roles = hero_data.get('Role', '').replace(',', '|')
+		hero.role_levels = hero_data.get('Rolelevels', '').replace(',', '|')
 		glow_color = hero_data.get('HeroGlowColor', None)
 		if glow_color:
 			hero.glow_color = "#{0:02x}{1:02x}{2:02x}".format(*map(int, glow_color.split(' ')))
