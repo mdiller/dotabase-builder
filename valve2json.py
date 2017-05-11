@@ -90,7 +90,7 @@ def rulesfile2json(text):
 	text = re.sub(r'Rule ([^\s]*)\n{([^}]*)}', r'"rule_\1": {\2},', text)
 	text = re.sub(r'criteria (.*)\n', r'"criteria": "\1",\n', text)
 	text = re.sub(r'response (.*)\n', r'"response": "\1",\n', text)
-	text = re.sub(r'criterion\s*"(.*)"\s*"(.*)"\s*"(.*)"(.*)\n', r'"criterion_\1": "\2 \3\4",\n', text)
+	text = re.sub(r'criterion\s*"(.*)"\s*"(.*)"\s*"(.*)\n?"(.*)\n', r'"criterion_\1": "\2 \3\4",\n', text)
 	text = "{" + text + "}"
 	text = re.sub(r',(\s*)}', r'\1}', text)
 	text = re.sub(r',(\s*)]', r'\1]', text)
