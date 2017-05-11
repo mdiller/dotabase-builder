@@ -57,6 +57,7 @@ def load():
 		hero.attr_agility_gain = get_val('AttributeAgilityGain')
 		hero.vision_day = get_val('VisionDaytimeRange')
 		hero.vision_night = get_val('VisionNighttimeRange')
+		hero.is_melee = get_val('AttackCapabilities') == "DOTA_UNIT_CAP_MELEE_ATTACK"
 		hero.roles = hero_data.get('Role', '').replace(',', '|')
 		hero.role_levels = hero_data.get('Rolelevels', '').replace(',', '|')
 		glow_color = hero_data.get('HeroGlowColor', None)
