@@ -95,7 +95,7 @@ def build_dictionaries(session):
 			"mid": "middle",
 			"bot": "bottom",
 			"top": "top"
-			}[crit.matchvalue.lower()])
+			}.get(crit.matchvalue.lower(), "a"))
 		crit_type_dict[crit.name] = "lane"
 
 	pretty_dict["LittleNag"] = ""
