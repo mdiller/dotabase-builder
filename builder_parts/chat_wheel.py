@@ -31,5 +31,7 @@ def load():
 			message.label = data[message.label[1:]]
 		if message.message.startswith("#") and message.message[1:] in data:
 			message.message = data[message.message[1:]]
+		if message.id in [ 71, 72 ]:
+			message.message = message.message.replace("%s1", "A hero")
 
 	session.commit()
