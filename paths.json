@@ -11,6 +11,7 @@
 	"item_scripts_file": "/scripts/npc/items.txt",
 	"ability_scripts_file": "/scripts/npc/npc_abilities.txt",
 	"emoticon_scripts_file": "/scripts/emoticons.txt",
+	"chat_wheel_scripts_file": "/scripts/chat_wheel.txt",
 	"dota_english_file": "/resource/dota_english.txt",
 	"scraped_responses_dir": "ResponseScraper",
 	"scraped_responses_file": "/responses_data.txt"

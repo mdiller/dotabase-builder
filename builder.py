@@ -12,6 +12,7 @@ session = dotabase_session()
 
 # Import all parts now that we have the things they need
 from builder_parts import (
+chat_wheel,
 emoticons, 
 items, 
 abilities, 
@@ -20,6 +21,7 @@ responses)
 	
 
 def build_dotabase():
+	chat_wheel.load()
 	emoticons.load()
 	items.load()
 	abilities.load()
