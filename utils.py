@@ -1,6 +1,16 @@
 import sys, os, json, re
 from collections import OrderedDict
 
+def clean_values(values):
+	if values is None:
+		return None
+	values = values.split(" ")
+	for i in range(len(values)):
+		values[i] = re.sub(r"\.0+$", "", values[i])
+	if all(x == values[0] for x in values):
+		return values[0]
+	return " ".join(values)
+
 def write_json(filename, data):
 	text = json.dumps(data, indent="\t")
 	with open(filename, "w+") as f:

@@ -3,6 +3,7 @@ from dotabase import *
 from utils import *
 from valve2json import valve_readfile
 
+	
 
 def load():
 	session.query(Ability).delete()
@@ -34,13 +35,13 @@ def load():
 		ability.id = ability_data['ID']
 		ability.type = get_val('AbilityType', default_base=True)
 		ability.behavior = get_val('AbilityBehavior', default_base=True)
-		ability.cast_range = get_val('AbilityCastRange')
-		ability.cast_point = get_val('AbilityCastPoint')
-		ability.channel_time = get_val('AbilityChannelTime')
-		ability.cooldown = get_val('AbilityCooldown')
-		ability.duration = get_val('AbilityDuration')
-		ability.damage = get_val('AbilityDamage')
-		ability.mana_cost = get_val('AbilityManaCost')
+		ability.cast_range = clean_values(get_val('AbilityCastRange'))
+		ability.cast_point = clean_values(get_val('AbilityCastPoint'))
+		ability.channel_time = clean_values(get_val('AbilityChannelTime'))
+		ability.cooldown = clean_values(get_val('AbilityCooldown'))
+		ability.duration = clean_values(get_val('AbilityDuration'))
+		ability.damage = clean_values(get_val('AbilityDamage'))
+		ability.mana_cost = clean_values(get_val('AbilityManaCost'))
 
 		ability.json_data = json.dumps(ability_data, indent=4)
 
