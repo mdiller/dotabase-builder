@@ -21,6 +21,8 @@ def load():
 		message.message = msg_data["message"]
 		message.sound = msg_data.get("sound")
 		if message.sound:
+			if message.sound == "soundboard.crash":
+				message.sound = "soundboard.crash_burn"
 			message.sound = f"/sounds/misc/soundboard/{message.sound.replace('soundboard.', '')}.wav"
 
 		session.add(message)
