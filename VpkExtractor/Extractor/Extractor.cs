@@ -49,12 +49,12 @@ namespace VpkExtractor
 
 			try
 			{
-				CopyNormalFile("/game/dota/resource/dota_english.txt", "/resource/dota_english.txt");
+                CopyNormalFiles("txt");
+				ExtractFiles("txt");
 				ExtractFiles("vxml_c", true);
 				ExtractFiles("vjs_c", true);
 				ExtractFiles("vcss_c", true);
 				ExtractFiles("png");
-				ExtractFiles("txt");
 				ExtractFiles("cfg");
 				ExtractFiles("res");
 				ExtractFiles("vsnd_c", true);
@@ -70,21 +70,37 @@ namespace VpkExtractor
 			Console.ReadKey(); // Wait for key to close
 		}
 
-		private static void CopyNormalFile(string source, string destination)
+		private static void CopyNormalFile(string path)
 		{
-			string source_path = config.dota_path + source;
-			string destination_path = config.vpk_destination + destination;
+			string source_path = config.dota_path + "/game/dota" + path;
+			string destination_path = config.vpk_destination + path;
 
-			if(!File.Exists(destination_path) || File.GetLastWriteTime(source_path) > File.GetLastWriteTime(destination_path))
+            if (!File.Exists(destination_path) || File.GetLastWriteTime(source_path) > File.GetLastWriteTime(destination_path))
 			{
-				// Write all data to file
-				File.Copy(source_path, destination_path, true);
-				if (log_console)
-				{
-					Console.WriteLine("Copied file to: " + destination);
-				}
+                if (!File.Exists(destination_path))
+                {
+                    Logger.LogNewFile(destination_path);
+                }
+                else
+                {
+                    Logger.LogOverwriteFile(destination_path);
+                }
+                // Write all data to file
+                Directory.CreateDirectory(Path.GetDirectoryName(destination_path));
+                File.Copy(source_path, destination_path, true);
 			}
 		}
+
+        private static void CopyNormalFiles(string extension)
+        {
+            string root_path = config.dota_path + "/game/dota";
+
+            string[] fileEntries = Directory.GetFiles(root_path, "*." + extension, SearchOption.AllDirectories);
+            foreach (string filename in fileEntries)
+            {
+                CopyNormalFile(filename.Replace(root_path, ""));
+            }
+        }
 		
 
 		/// <summary>
