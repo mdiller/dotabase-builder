@@ -62,6 +62,7 @@ namespace VpkExtractor
 			}
 			catch (Exception e)
 			{
+                Console.WriteLine();
 				Console.WriteLine("stopped because: " + e.Message);
 			}
 
@@ -96,8 +97,12 @@ namespace VpkExtractor
             string root_path = config.dota_path + "/game/dota";
 
             string[] fileEntries = Directory.GetFiles(root_path, "*." + extension, SearchOption.AllDirectories);
+
+            progress.Start(extension, fileEntries.Count());
+
             foreach (string filename in fileEntries)
             {
+                progress.Inc();
                 CopyNormalFile(filename.Replace(root_path, ""));
             }
         }
@@ -112,9 +117,9 @@ namespace VpkExtractor
 		{
 			var entries = package.Entries[extension];
 
-			Console.WriteLine("extracting {1} '{0}' files", extension, entries.Count);
+			// Console.WriteLine("extracting {1} '{0}' files", extension, entries.Count);
 
-			progress.Start(entries.Count);
+			progress.Start(extension, entries.Count);
 
 			foreach (var entry in entries)
 			{
@@ -136,8 +141,8 @@ namespace VpkExtractor
 				}
 				progress.Inc();
 			}
-			Console.WriteLine("done extracting '{0}' files.", extension);
-			Console.WriteLine("Status so far: {0}", Logger.Report);
+			// Console.WriteLine("done extracting '{0}' files.", extension);
+			Console.WriteLine("Status: {0}", Logger.Report);
 		}
 	}
 }
