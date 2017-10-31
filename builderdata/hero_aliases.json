@@ -71,5 +71,6 @@
 	"phoenix": [ "icarus" ],
 	"winter_wyvern": [ "ww" ],
 	"arc_warden": [ "aw" ],
-	"monkey_king": [ "mk" ]
+	"monkey_king": [ "mk" ],
+	"dark_willow": [ "sylph", "dw" ]
 }
