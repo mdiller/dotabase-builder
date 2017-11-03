@@ -12,7 +12,7 @@ namespace VpkExtractor
 {
 	public class Config
 	{
-		public string vpk_destination { get; set; }
+		public string vpk_path { get; set; }
 		public string dota_path { get; set; }
 
 		public static Config LoadConfig(string path)
@@ -23,7 +23,7 @@ namespace VpkExtractor
 
 	public static class Extractor
 	{
-		public static bool log_console = true;
+		public static bool log_console = false;
 		public static Package package;
 		public static Progress progress = new Progress();
 		public static int entryProgress = 0;
@@ -74,7 +74,7 @@ namespace VpkExtractor
 		private static void CopyNormalFile(string path)
 		{
 			string source_path = config.dota_path + "/game/dota" + path;
-			string destination_path = config.vpk_destination + path;
+			string destination_path = config.vpk_path + path;
 
             if (!File.Exists(destination_path) || File.GetLastWriteTime(source_path) > File.GetLastWriteTime(destination_path))
 			{

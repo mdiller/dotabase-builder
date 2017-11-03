@@ -23,7 +23,7 @@ namespace VpkExtractor
 
 		public string outfile
 		{
-			get { return Path.ChangeExtension(Path.Combine(Extractor.config.vpk_destination, vpkpath), extension); }
+			get { return Path.ChangeExtension(Path.Combine(Extractor.config.vpk_path, vpkpath), extension); }
 		}
 
 		/// <summary>
