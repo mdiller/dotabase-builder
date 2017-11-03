@@ -10,6 +10,9 @@ if config.overwrite_db and os.path.isfile(dotabase_db):
 	os.remove(dotabase_db)
 session = dotabase_session()
 
+
+from generate_json import generate_json
+
 # Import all parts now that we have the things they need
 from builder_parts import (
 chat_wheel,
@@ -27,7 +30,9 @@ def build_dotabase():
 	abilities.load()
 	heroes.load()
 	responses.load()
+	generate_json()
 	print("done")
+
 
 if __name__ == "__main__":
 	try:
