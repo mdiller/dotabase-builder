@@ -73,7 +73,7 @@ def build_dictionaries(session):
 		pretty_dict[crit.name] = ""
 
 	for crit in session.query(Criterion).filter_by(matchkey="arrowhithero"):
-		pretty_dict[crit.name] = "Arrow hits " + {"yes":"a hero","no":"a creep","roshan":"roshan"}[crit.matchvalue]
+		pretty_dict[crit.name] = "Arrow hits " + {"yes":"a hero","no":"a creep","roshan":"roshan", "neutral_creep":"a neutral creep"}[crit.matchvalue]
 
 
 	for crit in session.query(Criterion).filter(Criterion.name.like("Chance_%")):
