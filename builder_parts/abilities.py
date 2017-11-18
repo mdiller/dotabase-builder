@@ -14,7 +14,8 @@ def load():
 	data = valve_readfile(config.vpk_path, paths['ability_scripts_file'], "kv")["DOTAAbilities"]
 	for abilityname in data:
 		if(abilityname == "Version" or
-			abilityname == "ability_deward"):
+			abilityname == "ability_deward" or
+			abilityname == "dota_base_ability"):
 			continue
 
 		ability_data = data[abilityname]
