@@ -19,7 +19,7 @@ def load():
 
 		item.name = itemname
 		item.id = item_data['ID']
-		item.cost = item_data['ItemCost']
+		item.cost = item_data.get('ItemCost')
 
 		item.json_data = json.dumps(item_data, indent=4)
 
