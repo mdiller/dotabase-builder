@@ -4,6 +4,7 @@ using System.Text;
 using System.Linq;
 using ValveResourceFormat;
 using ValveResourceFormat.ResourceTypes;
+using SteamDatabase.ValvePak;
 
 namespace VpkExtractor
 {
