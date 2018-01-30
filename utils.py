@@ -1,7 +1,7 @@
 import sys, os, json, re
 from collections import OrderedDict
 
-def clean_values(values):
+def clean_values(values, join_string=" "):
 	if values is None:
 		return None
 	values = values.split(" ")
@@ -9,7 +9,7 @@ def clean_values(values):
 		values[i] = re.sub(r"\.0+$", "", values[i])
 	if all(x == values[0] for x in values):
 		return values[0]
-	return " ".join(values)
+	return join_string.join(values)
 
 def get_ability_special(ability_special, name):
 	if ability_special is None:
@@ -48,7 +48,8 @@ def clean_description(text, ability_special):
 		else:
 			for attrib in ability_special:
 				if attrib["key"] == value:
-					return f"**{attrib['value']}**"
+					value = clean_values(attrib["value"], "/")
+					return f"**{value}**"
 			print(f"Missing attrib %{value}%")
 			return f"%{value}%"
 
