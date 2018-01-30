@@ -11,6 +11,54 @@ def clean_values(values):
 		return values[0]
 	return " ".join(values)
 
+def get_ability_special(ability_special, name):
+	if ability_special is None:
+		return []
+	result = []
+	for index_key in ability_special:
+		obj = ability_special[index_key].copy()
+
+		# remove unneeded stuff (mostly talents linking)
+		bad_keys = [ "LinkedSpecialBonus", "LinkedSpecialBonusField", "LinkedSpecialBonusOperation", "CalculateSpellDamageTooltip", "levelkey" ]
+		for key in bad_keys:
+			if key in obj:
+				del obj[key]
+
+		items = list(obj.items())
+		if len(items) != 2: # catch this for future bad_keys
+			raise ValueError(f"Theres a bad key in the AbilitySpecial of {name}")
+
+		new_item = OrderedDict()
+		new_item["key"] = items[1][0]
+		new_item["value"] = clean_values(items[1][1])
+		result.append(new_item)
+
+	return result
+
+# Cleans up the descriptions of items and abilities
+def clean_description(text, ability_special):
+	text = re.sub(r'</h1> ', r'</h1>', text)
+	text = re.sub(r'<h1>([^<]+)</h1>', r'\n**\1**\n', text)
+	text = re.sub(r'<br>', r'\n', text)
+
+	def replace_attrib(match):
+		value = match.group(1)
+		if value == "":
+			return "%"
+		else:
+			for attrib in ability_special:
+				if attrib["key"] == value:
+					return f"**{attrib['value']}**"
+			print(f"Missing attrib %{value}%")
+			return f"%{value}%"
+
+	text = re.sub(r'%([^%\s]*)%', replace_attrib, text)
+
+	# include the percent in bold if the value is in bold
+	text = re.sub(r'\*\*%', '%**', text) 
+
+	return text
+
 def write_json(filename, data):
 	text = json.dumps(data, indent="\t")
 	with open(filename, "w+") as f:

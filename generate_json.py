@@ -26,7 +26,7 @@ def dump_table(table, query=None):
 		data = OrderedDict()
 		for col in table.__table__.columns:
 			value = getattr(item, col.name)
-			if col.name == "json_data":
+			if col.name in [ "json_data", "ability_special" ]:
 				data[col.name] = json.loads(value, object_pairs_hook=OrderedDict)
 			elif value is None or value == "":
 				continue

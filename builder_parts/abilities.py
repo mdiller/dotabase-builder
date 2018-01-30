@@ -43,6 +43,7 @@ def load():
 		ability.duration = clean_values(get_val('AbilityDuration'))
 		ability.damage = clean_values(get_val('AbilityDamage'))
 		ability.mana_cost = clean_values(get_val('AbilityManaCost'))
+		ability.ability_special = json.dumps(get_ability_special(ability_data.get("AbilitySpecial"), abilityname), indent=4)
 
 		ability.json_data = json.dumps(ability_data, indent=4)
 
@@ -56,12 +57,16 @@ def load():
 		ability.localized_name = data.get(ability_tooltip, ability.name)
 		ability.description = data.get(ability_tooltip + "_Description", "")
 		ability.lore = data.get(ability_tooltip + "_Lore", "")
+		ability.aghanim = data.get(ability_tooltip + "_aghanim_description", "")
 		notes = []
 		for i in range(8):
 			key = f"{ability_tooltip}_Note{i}"
 			if key in data:
 				notes.append(data[key])
 		ability.note = "" if len(notes) == 0 else "\n".join(notes)
+
+		ability_special = json.loads(ability.ability_special, object_pairs_hook=OrderedDict)
+		ability.description = clean_description(ability.description, ability_special)
 
 	print("- adding ability icon files")
 	# Add img files to ability

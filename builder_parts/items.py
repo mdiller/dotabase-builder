@@ -20,6 +20,7 @@ def load():
 		item.name = itemname
 		item.id = item_data['ID']
 		item.cost = item_data.get('ItemCost')
+		item.ability_special = json.dumps(get_ability_special(item_data.get("AbilitySpecial"), itemname), indent=4)
 
 		item.json_data = json.dumps(item_data, indent=4)
 
@@ -34,6 +35,9 @@ def load():
 		item.localized_name = data.get(item_tooltip, item.name)
 		item.description = data.get(item_tooltip + "_Description", data.get(item_tooltip2 + "_Description", ""))
 		item.lore = data.get(item_tooltip + "_Lore", data.get(item_tooltip2 + "_Lore", ""))
+
+		ability_special = json.loads(item.ability_special, object_pairs_hook=OrderedDict)
+		item.description = clean_description(item.description, ability_special)
 
 	print("- adding item icon files")
 	# Add img files to item
