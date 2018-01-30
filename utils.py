@@ -55,7 +55,10 @@ def clean_description(text, ability_special):
 	text = re.sub(r'%([^%\s]*)%', replace_attrib, text)
 
 	# include the percent in bold if the value is in bold
-	text = re.sub(r'\*\*%', '%**', text) 
+	text = re.sub(r'\*\*%', '%**', text)
+
+	if text.startswith("\n"):
+		text = text[1:]
 
 	return text
 
