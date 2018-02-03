@@ -51,15 +51,15 @@ namespace VpkExtractor
 			try
 			{
                 CopyNormalFiles("txt");
-				ExtractFiles("txt");
-				ExtractFiles("vxml_c", true);
-				ExtractFiles("vjs_c", true);
-				ExtractFiles("vcss_c", true);
-				ExtractFiles("png");
-				ExtractFiles("cfg");
-				ExtractFiles("res");
-				ExtractFiles("vsnd_c", true);
-				ExtractFiles("vtex_c", true);
+                ExtractFiles("txt");
+                ExtractFiles("vxml_c", true);
+                ExtractFiles("vjs_c", true);
+                ExtractFiles("vcss_c", true);
+                ExtractFiles("png");
+                ExtractFiles("cfg");
+                ExtractFiles("res");
+                ExtractFiles("vsnd_c", true);
+                ExtractFiles("vtex_c", true);
 			}
 			catch (Exception e)
 			{
@@ -124,8 +124,16 @@ namespace VpkExtractor
 
 			foreach (var entry in entries)
 			{
-				EntryFile file = new EntryFile(entry, newExtension, convert);
-				file.Dump();
+                try
+                {
+				    EntryFile file = new EntryFile(entry, newExtension, convert);
+				    file.Dump();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Errored when loading file: " + e.Message);
+                    Console.WriteLine(e.GetType().ToString());
+                }
 				if(Console.KeyAvailable)
 				{
 					switch(Console.ReadKey(true).Key)
