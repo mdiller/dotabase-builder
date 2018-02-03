@@ -22,6 +22,7 @@ def load():
 		item.cost = item_data.get('ItemCost')
 		item.mana_cost = clean_values(item_data.get('AbilityManaCost'))
 		item.cooldown = clean_values(item_data.get('AbilityCooldown'))
+		item.base_level = item_data.get("ItemBaseLevel")
 		item.ability_special = json.dumps(get_ability_special(item_data.get("AbilitySpecial"), itemname), indent=4)
 
 		item.json_data = json.dumps(item_data, indent=4)
