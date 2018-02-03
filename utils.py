@@ -1,12 +1,14 @@
 import sys, os, json, re
 from collections import OrderedDict
 
-def clean_values(values, join_string=" "):
+def clean_values(values, join_string=" ", percent=False):
 	if values is None:
 		return None
 	values = values.split(" ")
 	for i in range(len(values)):
 		values[i] = re.sub(r"\.0+$", "", values[i])
+		if percent and values[i][-1] != "%":
+			values[i] += "%"
 	if all(x == values[0] for x in values):
 		return values[0]
 	return join_string.join(values)
@@ -35,10 +37,29 @@ def get_ability_special(ability_special, name):
 
 	return result
 
+def ability_special_add_header(ability_special, strings, name):
+	for attribute in ability_special:
+		header = strings.get(f"DOTA_Tooltip_ability_{name}_{attribute['key']}")
+		if header is None:
+			continue
+		match = re.match(r"(%)?(\+\$)?(.*)", header)
+		header = match.group(3)
+
+		if match.group(2):
+			attribute["header"] = "+"
+			attribute["value"] = clean_values(attribute["value"], percent=match.group(1))
+			attribute["footer"] = strings[f"dota_ability_variable_{header}"]
+			if header in "dota_ability_variable_attack_range":
+				attribute["footer"] = re.sub(r"<[^>]*>", "", attribute["footer"])
+		else:
+			attribute["header"] = re.sub(r"<[^>]*>", "", header)
+			attribute["value"] = clean_values(attribute["value"], percent=match.group(1))
+	return ability_special
+
 # Cleans up the descriptions of items and abilities
 def clean_description(text, ability_special):
 	text = re.sub(r'</h1> ', r'</h1>', text)
-	text = re.sub(r'<h1>([^<]+)</h1>', r'\n**\1**\n', text)
+	text = re.sub(r'<h1>([^<]+)</h1>', r'\n# \1\n', text)
 	text = re.sub(r'<br>', r'\n', text)
 
 	def replace_attrib(match):

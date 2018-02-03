@@ -66,6 +66,8 @@ def load():
 		ability.note = "" if len(notes) == 0 else "\n".join(notes)
 
 		ability_special = json.loads(ability.ability_special, object_pairs_hook=OrderedDict)
+		ability_special = ability_special_add_header(ability_special, data, ability.name)
+		ability.ability_special = json.dumps(ability_special, indent=4)
 		ability.description = clean_description(ability.description, ability_special)
 
 	print("- adding ability icon files")

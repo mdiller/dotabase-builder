@@ -39,6 +39,8 @@ def load():
 		item.lore = data.get(item_tooltip + "_Lore", data.get(item_tooltip2 + "_Lore", ""))
 
 		ability_special = json.loads(item.ability_special, object_pairs_hook=OrderedDict)
+		ability_special = ability_special_add_header(ability_special, data, item.name)
+		item.ability_special = json.dumps(ability_special, indent=4)
 		item.description = clean_description(item.description, ability_special)
 
 	print("- adding item icon files")
