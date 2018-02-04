@@ -126,6 +126,8 @@ def clean_description(text, ability_special, base_level=None):
 
 	# include the percent in bold if the value is in bold
 	text = re.sub(r'\*\*%', '%**', text)
+	# replace double percents that are redundant now
+	text = re.sub(r'%%', '%', text)
 
 	if text.startswith("\n"):
 		text = text[1:]
