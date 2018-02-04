@@ -2,6 +2,7 @@ from __main__ import session, config, paths
 from dotabase import *
 from utils import *
 from valve2json import valve_readfile
+import re
 
 	
 
@@ -48,13 +49,13 @@ def load():
 		def get_enum_val(key, prefix):
 			value = get_val(key)
 			if value:
-				return value.replace(prefix, "").lower().replace(" ", "")
+				return re.sub(prefix, "", value).lower().replace(" ", "")
 			else:
 				return value
 
 		ability.behavior = get_enum_val('AbilityBehavior', "DOTA_ABILITY_BEHAVIOR_")
 		ability.damage_type = get_enum_val('AbilityUnitDamageType', "DAMAGE_TYPE_")
-		ability.spell_immunity = get_enum_val('SpellImmunityType', "SPELL_IMMUNITY_ENEMIES_")
+		ability.spell_immunity = get_enum_val('SpellImmunityType', "SPELL_IMMUNITY_(ENEMIES|ALLIES)_")
 		ability.target_team = get_enum_val('AbilityUnitTargetTeam', "DOTA_UNIT_TARGET_TEAM_")
 		ability.dispellable = get_enum_val('SpellDispellableType', "SPELL_DISPELLABLE_")
 
