@@ -44,7 +44,7 @@ def load():
 		ability_special = json.loads(item.ability_special, object_pairs_hook=OrderedDict)
 		ability_special = ability_special_add_header(ability_special, data, item.name)
 		item.ability_special = json.dumps(ability_special, indent=4)
-		item.description = clean_description(item.description, ability_special)
+		item.description = clean_description(item.description, ability_special, base_level=item.base_level)
 
 	print("- adding item icon files")
 	# Add img files to item

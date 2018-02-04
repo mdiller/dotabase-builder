@@ -13,6 +13,14 @@ def clean_values(values, join_string=" ", percent=False):
 		return values[0]
 	return join_string.join(values)
 
+def bold_values(values, separator, base_level):
+	values = values.split(separator)
+	if base_level and base_level <= len(values):
+		values[base_level - 1] = f"**{values[base_level - 1]}**"
+	else:
+		values = map(lambda v: f"**{v}**", values)
+	return separator.join(values)
+
 
 def get_ability_special(ability_special, name):
 	if ability_special is None:
@@ -97,7 +105,7 @@ def ability_special_add_header(ability_special, strings, name):
 	return ability_special
 
 # Cleans up the descriptions of items and abilities
-def clean_description(text, ability_special):
+def clean_description(text, ability_special, base_level=None):
 	text = re.sub(r'</h1> ', r'</h1>', text)
 	text = re.sub(r'<h1>([^<]+)</h1>', r'\n# \1\n', text)
 	text = re.sub(r'<br>', r'\n', text)
@@ -110,7 +118,7 @@ def clean_description(text, ability_special):
 			for attrib in ability_special:
 				if attrib["key"] == value:
 					value = clean_values(attrib["value"], "/")
-					return f"**{value}**"
+					return bold_values(value, "/", base_level)
 			print(f"Missing attrib %{value}%")
 			return f"%{value}%"
 
