@@ -20,6 +20,8 @@ def load():
 		item.name = itemname
 		item.id = item_data['ID']
 		item.cost = item_data.get('ItemCost')
+		item.aliases = "|".join(item_data.get("ItemAliases", "").split(";"))
+		item.quality = item_data.get("ItemQuality")
 		item.mana_cost = clean_values(item_data.get('AbilityManaCost'))
 		item.cooldown = clean_values(item_data.get('AbilityCooldown'))
 		item.base_level = item_data.get("ItemBaseLevel")
