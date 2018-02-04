@@ -55,6 +55,8 @@ def load():
 		ability.behavior = get_enum_val('AbilityBehavior', "DOTA_ABILITY_BEHAVIOR_")
 		ability.damage_type = get_enum_val('AbilityUnitDamageType', "DAMAGE_TYPE_")
 		ability.spell_immunity = get_enum_val('SpellImmunityType', "SPELL_IMMUNITY_ENEMIES_")
+		ability.target_team = get_enum_val('AbilityUnitTargetTeam', "DOTA_UNIT_TARGET_TEAM_")
+		ability.dispellable = get_enum_val('SpellDispellableType', "SPELL_DISPELLABLE_")
 
 		ability.json_data = json.dumps(ability_data, indent=4)
 
