@@ -45,6 +45,17 @@ def load():
 		ability.mana_cost = clean_values(get_val('AbilityManaCost'))
 		ability.ability_special = json.dumps(get_ability_special(ability_data.get("AbilitySpecial"), abilityname), indent=4)
 
+		def get_enum_val(key, prefix):
+			value = get_val(key)
+			if value:
+				return value.replace(prefix, "").lower().replace(" ", "")
+			else:
+				return value
+
+		ability.behavior = get_enum_val('AbilityBehavior', "DOTA_ABILITY_BEHAVIOR_")
+		ability.damage_type = get_enum_val('AbilityUnitDamageType', "DAMAGE_TYPE_")
+		ability.spell_immunity = get_enum_val('SpellImmunityType', "SPELL_IMMUNITY_ENEMIES_")
+
 		ability.json_data = json.dumps(ability_data, indent=4)
 
 		session.add(ability)

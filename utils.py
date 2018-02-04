@@ -108,7 +108,9 @@ def ability_special_add_header(ability_special, strings, name):
 def clean_description(text, ability_special, base_level=None):
 	text = re.sub(r'</h1> ', r'</h1>', text)
 	text = re.sub(r'<h1>([^<]+)</h1>', r'\n# \1\n', text)
-	text = re.sub(r'<br>', r'\n', text)
+	text = re.sub(r'<(br|BR)>', r'\n', text)
+	text = re.sub(r'<span class="GameplayValues GameplayVariable">(.*)</span>', r'**\1**', text)
+	text = re.sub(r'<font color=.*>(.*)</font>', r'\1', text)
 
 	def replace_attrib(match):
 		value = match.group(1)
