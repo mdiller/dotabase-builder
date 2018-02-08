@@ -1946,6 +1946,293 @@
 * <sm2>dlc_bastion_announcer_event_neg_14.mp3</sm2> This ain't going to end well will it?
 * <sm2>dlc_bastion_announcer_event_neg_15.mp3</sm2> Just hang on tight.
 * <sm2>dlc_bastion_announcer_event_neg_16.mp3</sm2> Ain't this a treat.
+* <sm2>bris_ann_welcome_01.mp3</sm2> Welcome to Dota. <small>[[#welcome|''followup'']]</small>
+* <sm2>bris_ann_welcome_02.mp3</sm2> Ah, so you's come back for another beating, have ya? Ha ha. <small>[[#welcome|''followup'']]</small>
+* <sm2>bris_ann_welcome_03.mp3</sm2> You again? You ain't learned your lesson yet, have ya? <small>[[#welcome|''followup'']]</small>
+* <sm2>bris_ann_welcome_04.mp3</sm2> Well, look what we've got here. You come to pick a fight, have ya sunshine? Ha ha! <small>[[#welcome|''followup'']]</small>
+* <sm2>bris_ann_welcome_05.mp3</sm2> Welcome to Dota. <small>[[#welcome|''followup'']]</small>
+* <sm2>bris_ann_type_all_pick_01.mp3</sm2> {{resp|r}} All pick. <small>[[#all pick|''followup'']]</small>
+* <sm2>bris_ann_type_all_random_01.mp3</sm2> {{resp|r}} All random. <small>[[#all random|''followup'']]</small>
+* <sm2>bris_ann_type_all_random_02.mp3</sm2> {{resp|r}} All random. <small>[[#all random|''followup'']]</small>
+* <sm2>bris_ann_type_capt_draft_01.mp3</sm2> {{resp|r}} The captain's draft. <small>[[#captain's draft|''followup'']]</small>
+* <sm2>bris_ann_type_capt_mode_01.mp3</sm2> {{resp|r}} Captain's mode.
+* <sm2>bris_ann_type_death_match_01.mp3</sm2> {{resp|r}} Deathmatch. <small>[[#deathmatch|''followup'']]</small>
+* <sm2>bris_ann_type_easy_mode_01.mp3</sm2> {{resp|u}} Easy mode.
+* <sm2>bris_ann_type_least_played_01.mp3</sm2> {{resp|r}} Least played.
+* <sm2>bris_ann_type_all_mid_01.mp3</sm2> {{resp|r}} All mid. <small>[[#mid only|''followup'']]</small>
+* <sm2>bris_ann_choose_hero_01.mp3</sm2> {{resp|r}} Choose your hero. <small>[[#one vs one|''followup'']]</small>
+* <sm2>bris_ann_type_ran_draft_01.mp3</sm2> {{resp|r}} Random draft.
+* <sm2>bris_ann_type_rev_capt_01.mp3</sm2> {{resp|r}} Reverse captain's mode.
+* <sm2>bris_ann_type_sing_draft_01.mp3</sm2> {{resp|r}} Single draft.
+* <sm2>bris_ann_choose_hero_01.mp3</sm2> {{resp|r}} Choose your hero.
+* <sm2>bris_ann_pick_yr_01.mp3</sm2> Your turn to pick. <small>[[#picking|''followup'']]</small>
+* <sm2>bris_ann_pick_yr_02.mp3</sm2> Come on. Your turn to pick now! <small>[[#picking|''followup'']]</small>
+* <sm2>bris_ann_pick_yr_03.mp3</sm2> Go on! Choose what mate you want! <small>[[#picking|''followup'']]</small>
+* <sm2>bris_ann_pick_yr_04.mp3</sm2> Go on! Choose what mate you want! <small>[[#picking|''followup'']]</small>
+* <sm2>bris_ann_pick_enm_01.mp3</sm2> Enemy's turn to pick.
+* <sm2>bris_ann_pick_enm_02.mp3</sm2> Enemy's turn! Don't look now, they're picking bashers!
+* <sm2>bris_ann_pick_rad_01.mp3</sm2> Radiant team pick.
+* <sm2>bris_ann_pick_dire_01.mp3</sm2> Dire team pick.
+* <sm2>bris_ann_ban_yr_01.mp3</sm2> Your turn to ban.
+* <sm2>bris_ann_ban_yr_02.mp3</sm2> Your ban now. Go on, ban what basher you don't want to face, mate. It's easy!
+* <sm2>bris_ann_ban_enm_01.mp3</sm2> Enemy's turn to ban.
+* <sm2>bris_ann_ban_enm_02.mp3</sm2> Enemy's turn to ban. They're gonna ban your best mate, you can be sure of that!
+* <sm2>bris_ann_ban_rad_01.mp3</sm2> Radiant team ban.
+* <sm2>bris_ann_ban_dire_01.mp3</sm2> Dire team ban.
+* <sm2>bris_ann_count_pick_10_01.mp3</sm2> Ten seconds remaining.
+* <sm2>bris_ann_count_pick_05_01.mp3</sm2> Five seconds remaining.
+* <sm2>bris_ann_count_pick_10_02.mp3</sm2> You got ten seconds. What's the holdup, sunshine?
+* <sm2>bris_ann_count_pick_05_02.mp3</sm2> Five seconds! You're cutting this close!
+* <sm2>bris_ann_time_reserve_01.mp3</sm2> Reserve time. <small>[[#reserve time|''followup'']]</small>
+* <sm2>bris_ann_time_reserve_02.mp3</sm2> Breaking into reserve to time now! <small>[[#reserve time|''followup'']]</small>
+* <sm2>bris_ann_complete_yr_01.mp3</sm2> {{resp|u}} Your team is complete!
+* <sm2>bris_ann_comp_yr_01.mp3</sm2> {{resp|u}} So this is the lot you picked then, is it? Well good luck to you son. You'll need it.
+* <sm2>bris_ann_complete_rad_01.mp3</sm2> {{resp|u}} Radiant's team is complete!
+* <sm2>bris_ann_comp_rad_01.mp3</sm2> {{resp|u}} Radiant's team's full up. That is one bruising bunch of fighters!
+* <sm2>bris_ann_complete_dire_01.mp3</sm2> {{resp|u}} Dire's team is complete!
+* <sm2>bris_ann_comp_dire_01.mp3</sm2> {{resp|u}} Dire's team's done. And I mean that. They are done. Proper!
+* <sm2>bris_ann_choose_hero_01.mp3</sm2> Choose your hero.
+* <sm2>bris_ann_hero_selection_01.mp3</sm2> {{Hero icon|Bristleback|16px}} {{resp|r}} Ey! Good choice!
+* <sm2>bris_ann_hero_selection_02.mp3</sm2> {{Hero icon|Slark|16px}} {{resp|r}} A little runty, isn't he?
+* <sm2>bris_ann_hero_selection_03.mp3</sm2> {{Hero icon|Invoker|16px}} {{resp|r}} Invoker? Are you sure about that?
+* <sm2>bris_ann_hero_selection_04.mp3</sm2> {{Hero icon|Sniper|16px}} {{resp|r}} Who brings a gun to a sword fight? I mean, that's a little bit like cheating. I approve. Ha ha ha!
+* <sm2>bris_ann_hero_selection_07.mp3</sm2> {{Hero icon|Tusk|16px}} {{resp|r}} What? Oh, come on, really? You just did that? You're having a laugh!
+* <sm2>bris_ann_hero_selection_06.mp3</sm2> {{Hero icon|Bristleback|16px}} {{resp|r}} Wisely done, sunshine. Wisely done!
+* <sm2>bris_ann_hero_selection_08.mp3</sm2> {{resp|r}} What? You left me on the subs bench? You're mental, son. Mental!
+* <sm2>bris_ann_hero_selection_09.mp3</sm2> {{resp|r}} You ain't picking me? You're leaving me on the subs bench? You're mental mate. Mental. Chicken fundamental.
+* <sm2>bris_ann_hero_selection_10.mp3</sm2> {{resp|r}} Are you serious? You're not going to pick me? Nah, you're having a laugh mate. You're having a proper laugh. A bubble bath. A giraffe.
+* <sm2>bris_ann_hero_selection_06.mp3</sm2> {{Hero icon|Bristleback|16px}} {{resp|r}} Wisely done, sunshine. Wisely done!
+* <sm2>bris_ann_hero_selection_11.mp3</sm2> {{resp|r}} Oh mate you've just made a grave error. A grave error not picking me. Yeah mate, you're having a laugh. You're having a giraffe. A bubble bath. A wizard's staff. Ha!
+* <sm2>bris_ann_prepare_01.mp3</sm2> Prepare for battle!
+* <sm2>bris_ann_count_battle_30.mp3</sm2> Thirty seconds to battle!
+* <sm2>bris_ann_count_battle_10.mp3</sm2> Ten seconds to battle.
+* <sm2>bris_ann_battle_begins_02.mp3</sm2> Tick tock mate. Tick tock!
+* <sm2>bris_ann_battle_begins_01.mp3</sm2> The battle begins!
+* <sm2>bris_ann_battle_begins_03.mp3</sm2> Let's be about it!
+* <sm2>bris_ann_battle_begins_04.mp3</sm2> Let's get this fight started!
+* <sm2>bris_ann_kill_1stblood_01.mp3</sm2> First blood!
+* <sm2>bris_ann_kill_double_01.mp3</sm2> Double kill!
+* <sm2>bris_ann_kill_triple_01.mp3</sm2> Triple kill!
+* <sm2>bris_ann_kill_ultra_01.mp3</sm2> Ultra kill!
+* <sm2>bris_ann_kill_rampage_01.mp3</sm2> Rampage! <small>[[#rampage|''followup'']]</small>
+* <sm2>bris_ann_kill_spree_01.mp3</sm2> Killing spree!
+* <sm2>bris_ann_kill_dominate_01.mp3</sm2> Dominating!
+* <sm2>bris_ann_kill_mega_01.mp3</sm2> Mega kill!
+* <sm2>bris_ann_kill_unstop_01.mp3</sm2> Unstoppable!
+* <sm2>bris_ann_kill_wicked_01.mp3</sm2> Wicked sick!
+* <sm2>bris_ann_kill_monster_01.mp3</sm2> Monster kill!
+* <sm2>bris_ann_kill_godlike_01.mp3</sm2> Godlike!
+* <sm2>bris_ann_kill_holy_01.mp3</sm2> Holy shite! <small>[[#rampage|''followup'']]</small>
+* <sm2>bris_ann_kill_ownage_01.mp3</sm2> {{resp|15}} Ownage!
+* <sm2>bris_ann_kill_teamwipe_04.mp3</sm2> {{resp|r}} Your whole team's been wiped out?
+* <sm2>bris_ann_kill_teamwipe_05.mp3</sm2> {{resp|r}} Your whole team's taking the dirt nap, I see.
+* <sm2>bris_ann_kill_teamwipe_06.mp3</sm2> Enemy team's wiped out! <small>[[#team wipe|''followup'']]</small>
+* <sm2>bris_ann_kill_teamwipe_03.mp3</sm2> Radiant team wipeout! <small>[[#team wipe|''followup'']]</small>
+* <sm2>bris_ann_kill_teamwipe_01.mp3</sm2> Dire team wipeout! <small>[[#team wipe|''followup'']]</small>
+* <sm2>bris_ann_kill_teamwipe_02.mp3</sm2> {{resp|r}} All dead! Every last one!
+* <sm2>bris_ann_cour_kill_rad_01.mp3</sm2> Radiant's courier has been slain! <small>[[#courier killed|''followup'']]</small>
+* <sm2>bris_ann_cour_kill_dire_01.mp3</sm2> Dire's courier has been slain! <small>[[#courier killed|''followup'']]</small>
+* <sm2>bris_ann_cour_kill_dire_02.mp3</sm2> Dire's courier, well, caring and feeding ain't gonna be a problem now.
+* <sm2>bris_ann_rosh_fallen_rad_01.mp3</sm2> Roshan has fallen to the Radiant!
+* <sm2>bris_ann_rosh_fallen_rad_follow_up_01.mp3</sm2> I didn't think it could be done, but the Radiant, they pulled it off!
+* <sm2>bris_ann_rosh_fallen_rad_follow_up_02.mp3</sm2> Well, look who's dead. Radiant's to blame!
+* <sm2>bris_ann_rosh_fallen_dire_01.mp3</sm2> Roshan has fallen to the Dire!
+* <sm2>bris_ann_rosh_fallen_dire_follow_up_01.mp3</sm2> The big guy, he got himself killed. That Dire team, they don't muck about.
+* <sm2>bris_ann_rosh_fallen_dire_follow_up_02.mp3</sm2> That big bastard got done for looks like. Dire's to blame!
+* <sm2>bris_ann_twr_attack_yr_top_01.mp3</sm2> {{resp|7}} Oy! Your top tower! It's under attack! <small>[[#structure under attack|''followup'']]</small>
+* <sm2>bris_ann_twr_attack_yr_mid_01.mp3</sm2> {{resp|7}} Oy come on! Your middle tower is under attack! <small>[[#structure under attack|''followup'']]</small>
+* <sm2>bris_ann_twr_attack_yr_mid_02.mp3</sm2> {{resp|7}} Your middle tower! Are you seeing that? <small>[[#structure under attack|''followup'']]</small>
+* <sm2>bris_ann_twr_attack_yr_bot_01.mp3</sm2> {{resp|7}} Your bottom tower is under attack, son! <small>[[#structure under attack|''followup'']]</small>
+* <sm2>bris_ann_twr_attack_yr_bot_02.mp3</sm2> {{resp|7}} Your bottom tower, mate! You better hop to it! <small>[[#structure under attack|''followup'']]</small>
+* <sm2>bris_ann_rax_attack_yr_top_01.mp3</sm2> Your top barracks are under attack! <small>[[#structure under attack|''followup'']]</small>
+* <sm2>bris_ann_rax_attack_top_follow_up_01.mp3</sm2> Your top barracks. I mean are you even seeing this? Come on.
+* <sm2>bris_ann_rax_attack_yr_mid_01.mp3</sm2> Your middle barracks are under attack! <small>[[#structure under attack|''followup'']]</small>
+* <sm2>bris_ann_rax_attack_yr_mid_02.mp3</sm2> Ey your middle barracks! They're under attack!
+* <sm2>bris_ann_rax_attack_mid_follow_up_01.mp3</sm2> Oy your middle barracks needs you, son!
+* <sm2>bris_ann_rax_attack_yr_01.mp3</sm2> Your barracks are under attack! <small>[[#structure under attack|''followup'']]</small>
+* <sm2>bris_ann_rax_attack_yr_bot_01.mp3</sm2> Your bottom barracks! They're under attack!
+* <sm2>bris_ann_rax_attack_bot_follow_up_01.mp3</sm2> Your bottom barracks! Come on, do something!
+* <sm2>bris_ann_yr_ancient_attack_01.mp3</sm2> Your Ancient is under attack! <small>[[#ancient under attack|''followup'']]</small>
+* <sm2>bris_ann_ancient_attack_follow_up_01.mp3</sm2> You seeing your Ancient?
+* <sm2>bris_ann_ancient_attack_follow_up_02.mp3</sm2> You're just going to let them bash your Ancient like that?
+* <sm2>bris_ann_twr_attack_rad_top_01.mp3</sm2> {{resp|10}} Radiant's top tower is under attack!
+* <sm2>bris_ann_twr_attack_rad_mid_01.mp3</sm2> {{resp|10}} Radiant's middle tower is under attack!
+* <sm2>bris_ann_twr_attack_rad_mid_02.mp3</sm2> {{resp|10}} Radiant's middle tower is taking a drubbing!
+* <sm2>bris_ann_twr_attack_rad_bot_01.mp3</sm2> {{resp|10}} Radiant's bottom tower is under attack!
+* <sm2>bris_ann_rax_attack_rad_top_01.mp3</sm2> {{resp|10}} Radiant's top barracks are under attack!
+* <sm2>bris_ann_rax_attack_rad_mid_01.mp3</sm2> {{resp|10}} Radiant's middle barracks! They're under attack!
+* <sm2>bris_ann_rax_attack_rad_bot_01.mp3</sm2> {{resp|10}} Radiant's bottom barracks are under attack!
+* <sm2>bris_ann_rad_ancient_attack_01.mp3</sm2> Radiant's Ancient is under attack! <small>[[#ancient under attack|''followup'']]</small>
+* <sm2>bris_ann_twr_attack_dire_top_01.mp3</sm2> {{resp|10}} Dire's top tower! It's under attack!
+* <sm2>bris_ann_twr_attack_dire_mid_01.mp3</sm2> {{resp|10}} Dire's middle tower is under attack.
+* <sm2>bris_ann_twr_attack_dire_bot_01.mp3</sm2> {{resp|10}} Dire's bottom tower is under attack.
+* <sm2>bris_ann_twr_attack_dire_bot_02.mp3</sm2> {{resp|10}} Dire's bottom tower is taking a beating.
+* <sm2>bris_ann_rax_attack_dire_top_01.mp3</sm2> {{resp|10}} Dire's top barracks are under attack!
+* <sm2>bris_ann_rax_attack_dire_mid_01.mp3</sm2> {{resp|10}} Dire's middle barracks are under attack!
+* <sm2>bris_ann_rax_attack_dire_bot_01.mp3</sm2> {{resp|10}} Dire's bottom barracks! They're under attack!
+* <sm2>bris_ann_dire_ancient_attack_01.mp3</sm2> Dire's Ancient is under attack! <small>[[#ancient under attack|''followup'']]</small>
+* <sm2>bris_ann_twr_fall_yr_top_01.mp3</sm2> Your top tower has fallen! <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_twr_fall_yr_top_02.mp3</sm2> Your top tower, let's just say it's no longer a going proposition.
+* <sm2>bris_ann_twr_fall_yr_mid_01.mp3</sm2> Your middle tower has fallen! <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_twr_fall_yr_mid_02.mp3</sm2> Your middle tower! Oh... Don't even looks at it. It's brutal what they've done.
+* <sm2>bris_ann_twr_fall_yr_mid_03.mp3</sm2> Oh, your middle tower. No mate, don't even look at it. It is brutal what they have done.
+* <sm2>bris_ann_twr_fall_yr_bot_01.mp3</sm2> Your bottom tower has fallen! <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_twr_fall_yr_bot_02.mp3</sm2> Oh, your bottom tower just passed mate. Yeah, I am sorry for your loss.
+* <sm2>bris_ann_rax_fall_yr_top_01.mp3</sm2> {{resp|5}} Oh, your top barracks have fallen! <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_rax_fall_yr_mid_01.mp3</sm2> {{resp|5}} Your middle barracks have fallen! <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_rax_fall_yr_bot_01.mp3</sm2> {{resp|5}} Your bottom barracks have fallen! <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_twr_fall_rad_top_01.mp3</sm2> Radiant's top tower has fallen!
+* <sm2>bris_ann_twr_fall_rad_mid_01.mp3</sm2> Radiant's middle tower has fallen.
+* <sm2>bris_ann_twr_fall_rad_mid_02.mp3</sm2> Radiant's middle tower ain't radiating no more, I'll vouch you that. You know what I mean? Ha ha ha!
+* <sm2>bris_ann_twr_fall_rad_bot_01.mp3</sm2> Radiant's bottom tower has fallen.
+* <sm2>bris_ann_rax_fall_rad_top_01.mp3</sm2> {{resp|5}} Radiant's top barracks have fallen! <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_rax_fall_rad_mid_01.mp3</sm2> {{resp|5}} Radiant's middle barracks have fallen! <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_rax_fall_rad_bot_01.mp3</sm2> {{resp|5}} Radiant's bottom barracks have fallen! <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_twr_fall_dire_top_01.mp3</sm2> Dire's top tower has fallen!
+* <sm2>bris_ann_twr_fall_dire_top_02.mp3</sm2> Dire's top tower just died. Sad, really. I heard that tower had kids.
+* <sm2>bris_ann_twr_fall_dire_mid_01.mp3</sm2> Dire's middle tower has fallen!
+* <sm2>bris_ann_twr_fall_dire_bot_01.mp3</sm2> Dire's bottom tower has fallen.
+* <sm2>bris_ann_twr_fall_dire_bot_02.mp3</sm2> Dire's bottom tower has crumbled to the dust from which it came. It's the fate of us all.
+* <sm2>bris_ann_rax_fall_dire_top_01.mp3</sm2> {{resp|5}} Dire's top barracks have fallen! <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_rax_fall_dire_mid_01.mp3</sm2> {{resp|5}} Dire's middle barracks have fallen! <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_rax_fall_dire_bot_01.mp3</sm2> {{resp|5}} Dire's bottom barracks have fallen! <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_twr_fall_enm_top_01.mp3</sm2> The enemy's top tower has fallen! <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_twr_fall_enm_top_02.mp3</sm2> The enemy's top tower regrets the day it was born.
+* <sm2>bris_ann_twr_fall_enm_mid_01.mp3</sm2> The enemy's middle tower has fallen. <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_twr_fall_enm_mid_02.mp3</sm2> The enemy's middle tower got what was coming to it. Yeah, it did.
+* <sm2>bris_ann_twr_fall_enm_bot_01.mp3</sm2> The enemy's bottom tower has fallen! <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_twr_fall_enm_bot_02.mp3</sm2> The enemy's bottom tower. It's about time.
+* <sm2>bris_ann_twr_fall_enm_bot_03.mp3</sm2> The enemy's bottom tower has fallen. Some towers, they just can't be reasoned with.
+* <sm2>bris_ann_rax_fall_enm_top_01.mp3</sm2> {{resp|5}} Ey! The enemy's top barracks have fallen! <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_rax_fall_enm_top_02.mp3</sm2> {{resp|5}} The enemy's top barracks won't be troubling you again. <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_rax_fall_enm_mid_01.mp3</sm2> {{resp|5}} The enemy's middle barracks have fallen. <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_rax_fall_enm_bot_01.mp3</sm2> {{resp|5}} The enemy's bottom barracks have fallen. <small>[[#structure fallen|''followup'']]</small>
+* <sm2>bris_ann_twr_deny_yr_top_01.mp3</sm2> Your top tower has been denied! <small>[[#tower denied|''followup'']]</small>
+* <sm2>bris_ann_twr_deny_yr_mid_01.mp3</sm2> Your middle tower has been denied! <small>[[#tower denied|''followup'']]</small>
+* <sm2>bris_ann_twr_deny_yr_bot_01.mp3</sm2> Your bottom tower has been denied! <small>[[#tower denied|''followup'']]</small>
+* <sm2>bris_ann_twr_deny_rad_top_01.mp3</sm2> Radiant's top tower has been denied!
+* <sm2>bris_ann_twr_deny_rad_mid_01.mp3</sm2> Radiant's middle tower has been denied!
+* <sm2>bris_ann_twr_deny_rad_bot_01.mp3</sm2> Radiant's bottom tower! It's been denied!
+* <sm2>bris_ann_twr_deny_dire_top_01.mp3</sm2> Dire's top tower has been denied!
+* <sm2>bris_ann_twr_deny_dire_mid_01.mp3</sm2> Dire's middle tower has been denied!
+* <sm2>bris_ann_twr_deny_dire_bot_01.mp3</sm2> Dire's bottom tower has been denied!
+* <sm2>bris_ann_twr_deny_enm_top_01.mp3</sm2> The enemy's top tower has been denied! <small>[[#tower denied|''followup'']]</small>
+* <sm2>bris_ann_twr_deny_enm_mid_01.mp3</sm2> The enemy's middle tower has been denied! <small>[[#tower denied|''followup'']]</small>
+* <sm2>bris_ann_twr_deny_enm_bot_01.mp3</sm2> The enemy's bottom tower has been denied! <small>[[#tower denied|''followup'']]</small>
+* <sm2>bris_ann_fort_rad_01.mp3</sm2> Radiant structures. They're fortified!
+* <sm2>bris_ann_fort_rad_02.mp3</sm2> Radiant forts have been foritified.
+* <sm2>bris_ann_fort_rad_03.mp3</sm2> Radiant's been fortified. Nah, mate. Don't waste your time.
+* <sm2>bris_ann_fort_rad_04.mp3</sm2> Radiant's been fortificated. Don't waste your time.
+* <sm2>bris_ann_fort_dire_01.mp3</sm2> Dire's structures are fortified!
+* <sm2>bris_ann_fort_dire_02.mp3</sm2> Dire's fortified, I see.
+* <sm2>bris_ann_fort_dire_03.mp3</sm2> Oh, look. Dire's fortified, I see.
+* <sm2>bris_ann_mega_now_you_01.mp3</sm2> You now have megacreeps. <small>[[#megacreeps|''followup'']]</small>
+* <sm2>bris_ann_mega_now_rad_01.mp3</sm2> The Radiant now have megacreeps. <small>[[#megacreeps|''followup'']]</small>
+* <sm2>bris_ann_mega_now_dire_01.mp3</sm2> The Dire now have megacreeps. <small>[[#megacreeps|''followup'']]</small>
+* <sm2>bris_ann_mega_now_enm_01.mp3</sm2> The enemy now has megacreeps. <small>[[#megacreeps|''followup'']]</small>
+* <sm2>bris_ann_victory_rad_01.mp3</sm2> Radiant victory!
+* <sm2>bris_ann_victory_rad_02.mp3</sm2> Radiant's the top today!
+* <sm2>bris_ann_victory_follow_up_01.mp3</sm2> Well, that's the end to that.
+* <sm2>bris_ann_victory_dire_01.mp3</sm2> Dire victory!
+* <sm2>bris_ann_victory_dire_02.mp3</sm2> Dire came out on top!
+* <sm2>bris_ann_victory_follow_up_01.mp3</sm2> Well, that's the end to that.
+* <sm2>bris_ann_respawn_01.mp3</sm2> {{resp|r}} Less hiding, more fighting! Come on, let's have it!
+* <sm2>bris_ann_respawn_02.mp3</sm2> {{resp|r}} Now go get 'em!
+* <sm2>bris_ann_respawn_03.mp3</sm2> {{resp|r}} Oy! Try to do better this time!
+* <sm2>bris_ann_lane_missing_01.mp3</sm2> {{resp|u}} Top's gone missing!
+* <sm2>bris_ann_lane_missing_02.mp3</sm2> {{resp|u}} Middle's gonemissing!
+* <sm2>bris_ann_lane_missing_03.mp3</sm2> {{resp|u}} Bottom's gone missing!
+* <sm2>bris_ann_lane_missing_04.mp3</sm2> {{resp|u}} Oy! Bottom's gone walkies, just so's you know.
+* <sm2>bris_ann_idle_02.mp3</sm2> {{resp|u}} Oy where's Tusk, anyway?
+* <sm2>bris_ann_idle_01.mp3</sm2> Nothing like watching a good fight while sharpening the bristles. Ha ha! Love it
+* <sm2>bris_ann_disconnect_01.mp3</sm2> {{resp|r}} Oh! Un, a player's disconnected.
+* <sm2>bris_ann_disconnect_02.mp3</sm2> {{resp|r}} Oh? Oh, looks like someone's just dropped out.
+* <sm2>bris_ann_disconnect_03.mp3</sm2> {{resp|r}} Looks like you lost someone there, mate.
+* <sm2>bris_ann_disconnect_04.mp3</sm2> {{resp|r}} I've got a disconnect.
+* <sm2>bris_ann_disconnect_05.mp3</sm2> {{resp|r}} Got a disconnect.
+* <sm2>bris_ann_disconnect_06.mp3</sm2> {{resp|r}} Maybe should pause things for a bit till we find the little lost lamb.
+* <sm2>bris_ann_reconnect_01.mp3</sm2> {{resp|300}} The player has reconnected.
+* <sm2>bris_ann_reconnect_02.mp3</sm2> {{resp|300}} The prodigal hero returns. Yeah I knew they'd be back.
+* <sm2>bris_ann_quit_01.mp3</sm2> {{resp|r}} You sure you wanna do that?
+* <sm2>bris_ann_quit_02.mp3</sm2> {{resp|r}} There is a lower plane of hell for people like you.
+* <sm2>bris_ann_quit_03.mp3</sm2> {{resp|u}} You dirty fighter.
+* <sm2>bris_ann_quit_04.mp3</sm2> {{resp|r}} Couldn't handle it, could ya? Ey? Couldn't handle it!
+* <sm2>bris_ann_quit_05.mp3</sm2> {{resp|r}} Where you going, son?
+* <sm2>bris_ann_unpause_01.mp3</sm2> {{resp|120}} The battle resumes!
+* <sm2>bris_ann_unpause_02.mp3</sm2> {{resp|120}} Here we go!
+* <sm2>bris_ann_unpause_03.mp3</sm2> {{resp|120}} Yeah, it's about time!
+* <sm2>bris_ann_item_purchase_04.mp3</sm2> {{Item|Dagon 5|20px}} {{resp|r}} Spending gold like it's water, Ha ha ha!
+* <sm2>bris_ann_item_purchase_03.mp3</sm2> {{Item|Divine Rapier|20px}} {{resp|r}} Oh, they are in for it now!
+* <sm2>bris_ann_item_purchase_01.mp3</sm2> {{Item|Observer and Sentry Wards|20px}} {{resp|r}} Nice wards!
+* <sm2>bris_ann_item_purchase_02.mp3</sm2> {{Item|Observer and Sentry Wards|20px}} {{resp|r}} Someone's buying wards? I can't believe it!
+* <sm2>bris_ann_type_all_pick_01.mp3</sm2> All pick.
+* <sm2>bris_ann_type_least_played_01.mp3</sm2> Least played.
+* <sm2>bris_ann_choose_hero_01.mp3</sm2> Choose your hero.
+* <sm2>bris_ann_type_all_mid_01.mp3</sm2> All mid.
+* <sm2>bris_ann_type_follow_up_03.mp3</sm2> {{resp|u}} If you're the captain, I don't have high hopes, I gottal tell ya.
+* <sm2>bris_ann_type_follow_up_07.mp3</sm2> {{resp|u}} Now there's a mode you can handle.
+* <sm2>bris_ann_type_follow_up_08.mp3</sm2> {{resp|u}} Reverse what? What exactly are you reversing? What does that even mean?
+* <sm2>bris_ann_type_follow_up_01.mp3</sm2> {{resp|r}} Every muck and his brother.
+* <sm2>bris_ann_type_follow_up_02.mp3</sm2> {{resp|r}} If it's really random, how do I know you'll pick the worst one.
+* <sm2>bris_ann_type_follow_up_04.mp3</sm2> {{resp|r}} Random takes the thinking out of it. It's for the best really, all things considered.
+* <sm2>bris_ann_type_follow_up_05.mp3</sm2> {{resp|r}} What? Like, malt liquor?
+* <sm2>bris_ann_type_follow_up_11.mp3</sm2> {{resp|r}} Captain's draft. More like captain's daft. Ha!
+* <sm2>bris_ann_type_follow_up_06.mp3</sm2> {{resp|r}} Son, I don't think you're up for this.
+* <sm2>bris_ann_type_follow_up_12.mp3</sm2> {{resp|r}} Son, I don't thick you're up for this.
+* <sm2>bris_ann_type_follow_up_09.mp3</sm2> {{resp|r}} Now this, this is a strategy after me own heart. Here's what you wanna do: run straight at 'em and bash!
+* <sm2>bris_ann_type_follow_up_10.mp3</sm2> {{resp|r}} Put on a brave face, son.
+* <sm2>bris_ann_follow_up_02.mp3</sm2> {{resp|r}} Alright, try putting a little thought into it this time, okay?
+* <sm2>bris_ann_follow_up_03.mp3</sm2> {{resp|r}} Hold on a minute. Are you throwing darts or something to decide your picks? What is your strategy here?
+* <sm2>bris_ann_kill_follow_up_02.mp3</sm2> {{resp|300}} Bet you're glad he's on your team, eh? Ha ha!
+* <sm2>bris_ann_kill_follow_up_01.mp3</sm2> {{resp|300}} I'd stay away from him!
+* <sm2>bris_ann_kill_teamwipe_07.mp3</sm2> Now that is impressive, I'll say that.
+* <sm2>bris_ann_kill_teamwipe_08.mp3</sm2> Not an enemy left standing!
+* <sm2>bris_ann_kill_teamwipe_09.mp3</sm2> Now's the time to push, I'd say.
+* <sm2>bris_ann_kill_teamwipe_07.mp3</sm2> {{resp|r}} Now that is impressive, I'll say that.
+* <sm2>bris_ann_cour_kill_follow_up_01.mp3</sm2> {{resp|r}} Oh! Why'd they have to go and do that?
+* <sm2>bris_ann_cour_kill_follow_up_01.mp3</sm2> {{resp|r}} Oh! Why'd they have to go and do that?
+* <sm2>bris_ann_cour_kill_follow_up_02.mp3</sm2> {{resp|r}} That courier never did wrong by nobody. Now that is a crying shame.
+* <sm2>bris_ann_cour_kill_follow_up_03.mp3</sm2> {{resp|r}} Poor little courier!
+* <sm2>bris_ann_cour_kill_follow_up_04.mp3</sm2> {{resp|r}} Poor little courier! I'm gonna miss that little guy. Oh he's got me all going over emotional. Oh you little poor courier...
+* <sm2>bris_ann_negative_event_01.mp3</sm2> {{resp|r}} Oy. You might wanna do something about that.
+* <sm2>bris_ann_negative_event_02.mp3</sm2> {{resp|r}} Are you seeing what I'm seeing?
+* <sm2>bris_ann_negative_event_03.mp3</sm2> {{resp|r}} I'd look out of I was you.
+* <sm2>bris_ann_negative_event_04.mp3</sm2> {{resp|r}} Ah, that's a tight spot.
+* <sm2>bris_ann_negative_event_05.mp3</sm2> {{resp|r}} This don't look good.
+* <sm2>bris_ann_rax_attack_follow_up_01.mp3</sm2> {{resp|r}} I bet barracks to a barn door those rax are going down soon!
+* <sm2>bris_ann_rax_attack_follow_up_02.mp3</sm2> {{resp|r}} Oh! Look at em go! Ha ha ha!
+* <sm2>bris_ann_ancient_attack_follow_up_03.mp3</sm2> {{resp|r}} Something tells me that Ancient ain't gonna be getting any more ancient...
+* <sm2>bris_ann_negative_event_06.mp3</sm2> {{resp|r}} No. No. Not good. Not good.
+* <sm2>bris_ann_negative_event_end_01.mp3</sm2> {{resp|r}} Ah. That hurts.
+* <sm2>bris_ann_negative_event_end_02.mp3</sm2> {{resp|r}} Oh, tough luck there.
+* <sm2>bris_ann_negative_event_end_03.mp3</sm2> {{resp|r}} Oh, that is rough that is. That is propper rough.
+* <sm2>bris_ann_negative_event_end_04.mp3</sm2> {{resp|r}} All right, buck up now. No sense in crying. Come on!
+* <sm2>bris_ann_negative_event_end_05.mp3</sm2> {{resp|r}} Ah, you'll get 'em next time.
+* <sm2>bris_ann_rax_fall_follow_up_01.mp3</sm2> {{resp|r}} They was brave barracks, as far as barracks go, but it weren't enough.
+* <sm2>bris_ann_rax_fall_follow_up_02.mp3</sm2> {{resp|r}} Well that is just a straight kick in the barracks.
+* <sm2>bris_ann_rax_fall_follow_up_04.mp3</sm2> {{resp|r}} Oh, this don't bode well.
+* <sm2>bris_ann_positive_event_end_01.mp3</sm2> {{resp|r}} Well done!
+* <sm2>bris_ann_positive_event_end_02.mp3</sm2> {{resp|r}} Now that sets their ears back a bit!
+* <sm2>bris_ann_positive_event_end_03.mp3</sm2> {{resp|r}} Yeah that put them on their heels.
+* <sm2>bris_ann_positive_event_end_04.mp3</sm2> {{resp|r}} A scrapper after me own heart!
+* <sm2>bris_ann_positive_event_end_05.mp3</sm2> {{resp|r}} Pretty as I picture.
+* <sm2>bris_ann_positive_event_end_06.mp3</sm2> {{resp|r}} Nice!
+* <sm2>bris_ann_positive_event_end_07.mp3</sm2> {{resp|r}} There we go!
+* <sm2>bris_ann_rax_fall_follow_up_03.mp3</sm2> {{resp|r}} You done got, son.
+* <sm2>bris_ann_rax_fall_follow_up_01.mp3</sm2> {{resp|r}} They was brave barracks, as far as barracks go, but it weren't enough.
+* <sm2>bris_ann_rax_fall_follow_up_02.mp3</sm2> {{resp|r}} Well that is just a straight kick in the barracks.
+* <sm2>bris_ann_rax_fall_follow_up_04.mp3</sm2> {{resp|r}} Oh, this don't bode well.
+* <sm2>bris_ann_twr_deny_yr_follow_up_01.mp3</sm2> {{resp|r}} It was a hard choice, mate. But it had to be done.
+* <sm2>bris_ann_twr_deny_yr_follow_up_02.mp3</sm2> {{resp|r}} Oh, that is cold, that is. Oh, freezing! Brrr!
+* <sm2>bris_ann_twr_deny_enm_follow_up_01.mp3</sm2> {{resp|r}} Now that's dirty fighting!
+* <sm2>bris_ann_twr_deny_enm_follow_up_02.mp3</sm2> {{resp|r}} Oh I thought I'd seen dirty fighting in my day but that! That takes the cake!
+* <sm2>bris_ann_twr_deny_enm_follow_up_03.mp3</sm2> {{resp|r}} They gone and done in their own tower!
+* <sm2>bris_ann_mega_now_follow_up_02.mp3</sm2> {{resp|r}} Oh these creeps is serious now.
+* <sm2>bris_ann_mega_now_follow_up_03.mp3</sm2> {{resp|r}} You see this size of these creeps?
+* <sm2>bris_ann_mega_now_follow_up_01.mp3</sm2> {{resp|r}} Uh oh. This don't look good.
+* <sm2>bris_ann_mega_now_follow_up_01.mp3</sm2> {{resp|r}} Uh oh. This don't look good.
+* <sm2>bris_ann_mega_now_follow_up_02.mp3</sm2> {{resp|r}} Oh these creeps is serious now.
+* <sm2>bris_ann_mega_now_follow_up_03.mp3</sm2> {{resp|r}} You see this size of these creeps?
 * <sm2>dlc_clockwerk_announcer_welcome_01.mp3</sm2> {{resp|u}} Welcome to Dota!
 * <sm2>dlc_clockwerk_announcer_type_all_pick.mp3</sm2> {{resp|r}} All pick.
 * <sm2>dlc_clockwerk_announcer_type_all_random.mp3</sm2> {{resp|r}} All random.
@@ -3830,6 +4117,350 @@
 * <sm2>dlc_jensen_ann_ally_pos_014.mp3</sm2> {{resp|r}} Not bad.
 * <sm2>dlc_jensen_ann_ally_pos_018.mp3</sm2> {{resp|r}} That was pretty good.
 * <sm2>dlc_jensen_ann_ally_pos_020.mp3</sm2> {{resp|r}} Hey, nice.
+* <sm2>dlc_kleiner_announcer_welcome_01.mp3</sm2> {{resp|u}} Welcome! Welcome to Dota!
+* <sm2>dlc_kleiner_announcer_type_all_pick.mp3</sm2> {{resp|r}} All pick.
+* <sm2>dlc_kleiner_announcer_type_all_random.mp3</sm2> {{resp|r}} All random.
+* <sm2>dlc_kleiner_announcer_type_capt_draft.mp3</sm2> {{resp|r}} Captain's draft.
+* <sm2>dlc_kleiner_announcer_type_capt_mode.mp3</sm2> {{resp|r}} Captains mode.
+* <sm2>dlc_kleiner_announcer_type_death_match.mp3</sm2> {{resp|r}} Deathmatch.
+* <sm2>dlc_kleiner_announcer_type_easy_mode.mp3</sm2> {{resp|u}} Easy mode.
+* <sm2>dlc_kleiner_announcer_type_random_draft.mp3</sm2> {{resp|r}} Random draft.
+* <sm2>dlc_kleiner_announcer_type_capt_mode.mp3</sm2> {{resp|r}} Captains mode.
+* <sm2>dlc_kleiner_announcer_type_single_draft.mp3</sm2> {{resp|r}} Single draft.
+* <sm2>dlc_kleiner_announcer_choose_hero.mp3</sm2> {{resp|r}} Choose your hero, my good friend.
+* <sm2>dlc_kleiner_announcer_pick_yr.mp3</sm2> Your turn to pick.
+* <sm2>dlc_kleiner_announcer_pick_enm.mp3</sm2> I'm afraid it's the enemy's turn to pick.
+* <sm2>dlc_kleiner_announcer_pick_rad.mp3</sm2> Radiant team pick.
+* <sm2>dlc_kleiner_announcer_pick_dire.mp3</sm2> Dire team pick.
+* <sm2>dlc_kleiner_announcer_ban_yr.mp3</sm2> It's your turn to ban.
+* <sm2>dlc_kleiner_announcer_ban_enm.mp3</sm2> I believe it's the enemy's turn to ban.
+* <sm2>dlc_kleiner_announcer_ban_rad.mp3</sm2> Radiant team ban.
+* <sm2>dlc_kleiner_announcer_ban_dire.mp3</sm2> Dire team ban.
+* <sm2>dlc_kleiner_announcer_count_pick_10.mp3</sm2> Ten seconds remaining.
+* <sm2>dlc_kleiner_announcer_count_pick_5.mp3</sm2> Five seconds remaining.
+* <sm2>dlc_kleiner_announcer_time_reserve.mp3</sm2> Reserve time.
+* <sm2>dlc_kleiner_announcer_time_reserve_using.mp3</sm2> {{resp|u}} You are using Reserve Time.
+* <sm2>dlc_kleiner_announcer_time_extra.mp3</sm2> {{resp|u}} Extra time.
+* <sm2>dlc_kleiner_announcer_time_extra_using.mp3</sm2> {{resp|u}} You are using Extra Time.
+* <sm2>dlc_kleiner_announcer_team_complete_yr.mp3</sm2> {{resp|u}} Your team is complete.
+* <sm2>dlc_kleiner_announcer_team_complete_rad.mp3</sm2> {{resp|u}} Radiant's team is completely complete.
+* <sm2>dlc_kleiner_announcer_team_complete_dire.mp3</sm2> {{resp|u}} Dire's team is quite complete.
+* <sm2>dlc_kleiner_announcer_team_complete_post.mp3</sm2> {{resp|u}} The ball is in play. The dice have been thrown. Et cetera et cetera.
+* <sm2>dlc_kleiner_announcer_choose_hero.mp3</sm2> Choose your hero, my good friend.
+* <sm2>dlc_kleiner_announcer_now_select.mp3</sm2> Go ahead. Select your heroes.
+* <sm2>dlc_kleiner_announcer_heropick_01.mp3</sm2> {{resp|u}} Yes, yes.
+* <sm2>dlc_kleiner_announcer_heropick_02.mp3</sm2> {{resp|u}} Now who might you be?
+* <sm2>dlc_kleiner_announcer_heropick_03.mp3</sm2> {{resp|u}} You make a very fine first impression.
+* <sm2>dlc_kleiner_announcer_heropick_04.mp3</sm2> {{resp|u}} What sort of creature are you supposed to be?
+* <sm2>dlc_kleiner_announcer_battle_prepare_01.mp3</sm2> You really should prepare for battle. <small>[[#entering battle|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_count_battle_30.mp3</sm2> Thirty seconds to battle. <small>[[#time before battle|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_count_battle_10.mp3</sm2> Ten seconds to battle.
+* <sm2>dlc_kleiner_announcer_battle_begin_01.mp3</sm2> The battle begins! <small>[[#battle begins|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_battle_begin_02.mp3</sm2> The battle begins! Or so I am told. <small>[[#battle begins|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_battle_begin_03.mp3</sm2> This is it! The battle begins. <small>[[#battle begins|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_firstblood_01.mp3</sm2> {{resp|u}} I hope they take a sample.
+* <sm2>dlc_kleiner_announcer_firstblood_02.mp3</sm2> {{resp|u}} I'm AB negative myself.
+* <sm2>dlc_kleiner_announcer_teamdeath_01.mp3</sm2> {{resp|u}} You might want to find a way to be more useful to your boon companions.
+* <sm2>dlc_kleiner_announcer_teamdeath_02.mp3</sm2> {{resp|u}} Your entire team destroyed? I wish I could say I had no idea what you're feeling right now.
+* <sm2>dlc_kleiner_announcer_cour_kill_rad_01.mp3</sm2> Brace yourself for sad tidings: Radiant's courier has been slain. <small>[[#courier killed|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_cour_kill_rad_02.mp3</sm2> Radiant's courier has been slain. <small>[[#courier killed|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_cour_kill_rad_03.mp3</sm2> Bad tidings, I'm afraid: Radiant's courier has been slain. <small>[[#courier killed|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_cour_kill_rad_04.mp3</sm2> Radiant's courier has been slain. Let us hope it left no little ones behind.
+* <sm2>dlc_kleiner_announcer_cour_kill_rad_05.mp3</sm2> Radiant's courier has been slain. A moment of silence please.
+* <sm2>dlc_kleiner_announcer_cour_kill_rad_06.mp3</sm2> Radiant's courier has been slain. This is no sort of place for a peaceable beast.
+* <sm2>dlc_kleiner_announcer_cour_kill_dire_01.mp3</sm2> Ladies and gentlemen, Dire's courier has been slain. <small>[[#courier killed|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_cour_kill_dire_02.mp3</sm2> Dire's courier has been slain. <small>[[#courier killed|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_cour_kill_dire_03.mp3</sm2> It is with grave emotion that I report the death of Dire's courier.
+* <sm2>dlc_kleiner_announcer_cour_kill_dire_04.mp3</sm2> Dire's courier has been slain. News of the death is expected to travel swiftly.
+* <sm2>dlc_kleiner_announcer_cour_kill_dire_05.mp3</sm2> I take no pleasure in informing you that Dire's courier has been slain. <small>[[#courier killed|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_cour_kill_dire_06.mp3</sm2> Dire's courier has been slain. Another innocent slain for our amusement. <small>[[#courier killed|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_roshan_fallen_rad_01.mp3</sm2> Roshan has fallen to the Radiant! <small>[[#roshan killed|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_roshan_fallen_rad_02.mp3</sm2> For reasons known only to itself, the Radiant have slain Roshan. <small>[[#roshan killed|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_roshan_fallen_rad_03.mp3</sm2> We now have confirmation that Roshan is the latest victim of Radiant hostility. <small>[[#roshan killed|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_roshan_fallen_rad_04.mp3</sm2> Roshan has fallen to the Radiant! Roshan, we hardly knew ye. <small>[[#roshan killed|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_roshan_fallen_rad_05.mp3</sm2> And so Roshan passes into history, leaving nothing but fond memories, a taste of immortality, and a questionable cheese. <small>[[#roshan killed|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_roshan_fallen_dire_01.mp3</sm2> Roshan has fallen to the Dire! <small>[[#roshan killed|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_roshan_fallen_dire_02.mp3</sm2> Roshan has been ruthlessly exploited by the Dire. <small>[[#roshan killed|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_roshan_fallen_dire_03.mp3</sm2> Oh dear, Poor Roshan has fallen afoul of the Dire. <small>[[#roshan killed|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_roshan_fallen_dire_04.mp3</sm2> Roshan has fallen to the Dire! I hope the magnificent creature did not suffer overmuch. <small>[[#roshan killed|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_roshan_fallen_dire_05.mp3</sm2> Whatever race Roshan represented is now officially extinct. <small>[[#roshan killed|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_twr_attack_yr_top_01.mp3</sm2> {{resp|7}} Your top tower is under attack.
+* <sm2>dlc_kleiner_announcer_twr_attack_yr_top_02.mp3</sm2> {{resp|7}} Your top tower is under attack. No reflection on you, you understand.
+* <sm2>dlc_kleiner_announcer_twr_attack_yr_top_03.mp3</sm2> {{resp|7}} I hate to inform you that your top tower is under attack.
+* <sm2>dlc_kleiner_announcer_twr_attack_yr_mid_01.mp3</sm2> {{resp|7}} Your middle tower is under attack.
+* <sm2>dlc_kleiner_announcer_twr_attack_yr_mid_02.mp3</sm2> {{resp|7}} Your middle tower is under attack. Just thought you'd want to know.
+* <sm2>dlc_kleiner_announcer_twr_attack_yr_mid_03.mp3</sm2> {{resp|7}} Regrettably, your middle tower is under attack.
+* <sm2>dlc_kleiner_announcer_twr_attack_yr_bot_01.mp3</sm2> {{resp|7}} Your bottom tower is under attack.
+* <sm2>dlc_kleiner_announcer_twr_attack_yr_bot_02.mp3</sm2> {{resp|7}} Your bottom tower is under attack. Does this happen a lot?
+* <sm2>dlc_kleiner_announcer_twr_attack_yr_bot_03.mp3</sm2> {{resp|7}} Excuse me but your bottom tower is under attack.
+* <sm2>dlc_kleiner_announcer_rax_attack_yr_top_01.mp3</sm2> {{resp|7}} Your top barracks are under attack.
+* <sm2>dlc_kleiner_announcer_rax_attack_yr_top_02.mp3</sm2> {{resp|7}} Your top barracks are under attack. Most distressing.
+* <sm2>dlc_kleiner_announcer_rax_attack_yr_top_03.mp3</sm2> {{resp|7}} Get moving! Your top barracks are under attack!
+* <sm2>dlc_kleiner_announcer_rax_attack_yr_mid_01.mp3</sm2> {{resp|7}} Your middle barracks are under attack.
+* <sm2>dlc_kleiner_announcer_rax_attack_yr_mid_02.mp3</sm2> {{resp|7}} Your middle barracks are under attack. I regret being bearer of such tidings.
+* <sm2>dlc_kleiner_announcer_rax_attack_yr_mid_03.mp3</sm2> {{resp|7}} You should know that your middle barracks are under attack.
+* <sm2>dlc_kleiner_announcer_rax_attack_yr_bot_01.mp3</sm2> {{resp|7}} Your bottom barracks are under attack.
+* <sm2>dlc_kleiner_announcer_rax_attack_yr_bot_02.mp3</sm2> {{resp|7}} Your bottom barracks are under attack. I'm sure this can still be remedied.
+* <sm2>dlc_kleiner_announcer_rax_attack_yr_bot_03.mp3</sm2> {{resp|7}} I hate to say it, but your bottom barracks are under attack.
+* <sm2>dlc_kleiner_announcer_anc_attack_yr_01.mp3</sm2> {{resp|6}} Your ancient is under attack.
+* <sm2>dlc_kleiner_announcer_anc_attack_yr_02.mp3</sm2> {{resp|6}} Your ancient is under attack. And I'm not feeling so well myself.
+* <sm2>dlc_kleiner_announcer_anc_attack_yr_03.mp3</sm2> {{resp|6}} Your ancient is under attack. Imagine how I feel.
+* <sm2>dlc_kleiner_announcer_anc_attack_yr_04.mp3</sm2> {{resp|6}} Good grief! Your ancient is under attack!
+* <sm2>dlc_kleiner_announcer_twr_attack_rad_top_01.mp3</sm2> {{resp|10}} Radiant's top tower is under attack.
+* <sm2>dlc_kleiner_announcer_twr_attack_rad_top_02.mp3</sm2> {{resp|10}} Radiant's top tower is under attack. And not in a good way.
+* <sm2>dlc_kleiner_announcer_twr_attack_rad_top_03.mp3</sm2> {{resp|10}} It would appear Radiant's top tower is under attack.
+* <sm2>dlc_kleiner_announcer_twr_attack_rad_mid_01.mp3</sm2> {{resp|10}} Radiant's middle tower is under attack.
+* <sm2>dlc_kleiner_announcer_twr_attack_rad_mid_02.mp3</sm2> {{resp|10}} Radiant's middle tower is under attack. I have no reason to lie about such things.
+* <sm2>dlc_kleiner_announcer_twr_attack_rad_mid_03.mp3</sm2> {{resp|10}} Strange to say, Radiant's middle tower is under attack.
+* <sm2>dlc_kleiner_announcer_twr_attack_rad_bot_01.mp3</sm2> {{resp|10}} Radiant's bottom tower is under attack.
+* <sm2>dlc_kleiner_announcer_twr_attack_rad_bot_02.mp3</sm2> {{resp|10}} Radiant's bottom tower is under attack. Has that ever been cause for celebration?
+* <sm2>dlc_kleiner_announcer_twr_attack_rad_bot_03.mp3</sm2> {{resp|10}} Radiant's bottom tower is being subjected to extreme violence.
+* <sm2>dlc_kleiner_announcer_rax_attack_rad_top_01.mp3</sm2> {{resp|10}} Radiant's top barracks are under attack.
+* <sm2>dlc_kleiner_announcer_rax_attack_rad_top_02.mp3</sm2> {{resp|10}} Radiant's top barracks are under attack. And what an attack it is.
+* <sm2>dlc_kleiner_announcer_rax_attack_rad_top_03.mp3</sm2> {{resp|10}} A little bird tells me that Radiant's top barracks are under attack!
+* <sm2>dlc_kleiner_announcer_rax_attack_rad_mid_01.mp3</sm2> {{resp|10}} Radiant's middle barracks are under attack.
+* <sm2>dlc_kleiner_announcer_rax_attack_rad_mid_02.mp3</sm2> {{resp|10}} Radiant's middle barracks are under attack. Pay very close attention now.
+* <sm2>dlc_kleiner_announcer_rax_attack_rad_mid_03.mp3</sm2> {{resp|10}} Radiant's lovely middle barracks are under great duress.
+* <sm2>dlc_kleiner_announcer_rax_attack_rad_bot_01.mp3</sm2> {{resp|10}} Radiant's bottom barracks are under attack.
+* <sm2>dlc_kleiner_announcer_rax_attack_rad_bot_02.mp3</sm2> {{resp|10}} Radiant's bottom barracks are under attack. It seems to be going around.
+* <sm2>dlc_kleiner_announcer_rax_attack_rad_bot_03.mp3</sm2> {{resp|10}} I spy with my little eye that Radiant's bottom barracks are under attack!
+* <sm2>dlc_kleiner_announcer_anc_attack_rad_01.mp3</sm2> {{resp|8}} Radiant's ancient is under attack.
+* <sm2>dlc_kleiner_announcer_anc_attack_rad_02.mp3</sm2> {{resp|8}} Radiant's ancient is under attack. Someone had better do something.
+* <sm2>dlc_kleiner_announcer_anc_attack_rad_03.mp3</sm2> {{resp|8}} Radiant's ancient is under attack. I can't believe my eyes.
+* <sm2>dlc_kleiner_announcer_anc_attack_rad_04.mp3</sm2> {{resp|8}} My goodness. Radiant's ancient is under attack.
+* <sm2>dlc_kleiner_announcer_twr_attack_dire_top_01.mp3</sm2> {{resp|10}} Dire's top tower is under attack.
+* <sm2>dlc_kleiner_announcer_twr_attack_dire_top_02.mp3</sm2> {{resp|10}} Dire's top tower is under attack. Must I repeat myself?
+* <sm2>dlc_kleiner_announcer_twr_attack_dire_top_03.mp3</sm2> {{resp|10}} Dire's top tower is being attacked like nobody's business.
+* <sm2>dlc_kleiner_announcer_twr_attack_dire_mid_01.mp3</sm2> {{resp|10}} Dire's middle tower is under attack.
+* <sm2>dlc_kleiner_announcer_twr_attack_dire_mid_02.mp3</sm2> {{resp|10}} Dire's middle tower is under attack. I feel like a broken record.
+* <sm2>dlc_kleiner_announcer_twr_attack_dire_mid_03.mp3</sm2> {{resp|10}} Dire's middle tower is under an extraordinary amount of stress.
+* <sm2>dlc_kleiner_announcer_twr_attack_dire_bot_01.mp3</sm2> {{resp|10}} Dire's bottom tower is under attack.
+* <sm2>dlc_kleiner_announcer_twr_attack_dire_bot_02.mp3</sm2> {{resp|10}} I don't mean to be alarmist, but...Dire's bottom tower is under attack.
+* <sm2>dlc_kleiner_announcer_twr_attack_dire_bot_03.mp3</sm2> {{resp|10}} Sorry, I just noticed that Dire's bottom tower is under attack.
+* <sm2>dlc_kleiner_announcer_rax_attack_dire_top_01.mp3</sm2> {{resp|10}} Dire's top barracks are under attack.
+* <sm2>dlc_kleiner_announcer_rax_attack_dire_top_02.mp3</sm2> {{resp|10}} Dire's top barracks are under attack. To put it bluntly.
+* <sm2>dlc_kleiner_announcer_rax_attack_dire_top_03.mp3</sm2> {{resp|10}} Wouldn't you just know it? Dire's top barracks are under attack.
+* <sm2>dlc_kleiner_announcer_rax_attack_dire_mid_01.mp3</sm2> {{resp|10}} Dire's middle barracks are under attack.
+* <sm2>dlc_kleiner_announcer_rax_attack_dire_mid_02.mp3</sm2> {{resp|10}} Dire's middle barracks are under attack. Oh this is a sorry state of affairs.
+* <sm2>dlc_kleiner_announcer_rax_attack_dire_mid_03.mp3</sm2> {{resp|10}} Dear me. Dire's middle barracks are under attack.
+* <sm2>dlc_kleiner_announcer_rax_attack_dire_bot_01.mp3</sm2> {{resp|10}} Dire's bottom barracks are under attack.
+* <sm2>dlc_kleiner_announcer_rax_attack_dire_bot_02.mp3</sm2> {{resp|10}} Dire's bottom barracks are under attack. That's good news for someone, rather worse news for someone else.
+* <sm2>dlc_kleiner_announcer_rax_attack_dire_bot_03.mp3</sm2> {{resp|10}} It cannot be stated firmly enough that Dire's bottom barracks are under attack.
+* <sm2>dlc_kleiner_announcer_anc_attack_dire_01.mp3</sm2> {{resp|8}} Dire's ancient is under attack.
+* <sm2>dlc_kleiner_announcer_anc_attack_dire_02.mp3</sm2> {{resp|8}} Dire's ancient is under attack. That can't be a positive development.
+* <sm2>dlc_kleiner_announcer_anc_attack_dire_03.mp3</sm2> {{resp|8}} Dire's ancient is under attack. You heard it here first!
+* <sm2>dlc_kleiner_announcer_anc_attack_dire_04.mp3</sm2> {{resp|8}} Stop the presses! Dire's ancient is under attack.
+* <sm2>dlc_kleiner_announcer_anc_attack_dire_05.mp3</sm2> {{resp|8}} Can it be that Dire's ancient is under attack? Yes! Yes it is!
+* <sm2>dlc_kleiner_announcer_twr_fall_yr_top.mp3</sm2> Oh dear. Your top tower has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_yr_mid_01.mp3</sm2> Your middle tower has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_yr_mid_02.mp3</sm2> Your middle tower has fallen. Let's hope that's the worst of it.
+* <sm2>dlc_kleiner_announcer_twr_fall_yr_bot_01.mp3</sm2> Your bottom tower has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_yr_bot_02.mp3</sm2> Your bottom tower has fallen. They seem rather prone to that don't they?
+* <sm2>dlc_kleiner_announcer_twr_fall_yr_bot_03.mp3</sm2> It would appear that your bottom tower has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_yr_top_01.mp3</sm2> Your top barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_yr_top_02.mp3</sm2> Your top barracks has fallen. I'm afraid there's no fixing it.
+* <sm2>dlc_kleiner_announcer_rax_fall_yr_top_03.mp3</sm2> Well, drat. Your top barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_yr_mid_01.mp3</sm2> Your middle barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_yr_mid_02.mp3</sm2> You rmiddle barracks has fallen. Was that an important one?
+* <sm2>dlc_kleiner_announcer_rax_fall_yr_mid_03.mp3</sm2> I regret to inform you of the loss of your middle barracks.
+* <sm2>dlc_kleiner_announcer_rax_fall_yr_bot_01.mp3</sm2> Your bottom barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_yr_bot_02.mp3</sm2> {{resp|u}} Your bottom barracks has fallen. I assure you, any disappointment you may hear in my voice is completely imaginary.
+* <sm2>dlc_kleiner_announcer_rax_fall_yr_bot_03.mp3</sm2> Your bottom barracks are no more, my friend.
+* <sm2>dlc_kleiner_announcer_twr_fall_rad_top_01.mp3</sm2> Radiant's top tower has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_rad_top_02.mp3</sm2> Radiant's top tower has fallen. Surely that was intentional?
+* <sm2>dlc_kleiner_announcer_twr_fall_rad_top_03.mp3</sm2> Well, it seems that Radiant's top tower has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_rad_mid_01.mp3</sm2> Radiant's middle tower has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_rad_mid_02.mp3</sm2> Radiant's middle tower has fallen. Someone must be very pleased with themselves.
+* <sm2>dlc_kleiner_announcer_twr_fall_rad_mid_03.mp3</sm2> I would like to point out that Radiant's middle tower has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_rad_mid_04.mp3</sm2> Radiant's middle tower has fallen. Someone must be very pleased with themselves. Or himself...uh...singular antecedent, singular pronoun.
+* <sm2>dlc_kleiner_announcer_twr_fall_rad_bot_01.mp3</sm2> Radiant's bottom tower has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_rad_bot_02.mp3</sm2> Radiant's bottom tower has fallen. Seems to be the day for it.
+* <sm2>dlc_kleiner_announcer_twr_fall_rad_bot_03.mp3</sm2> Oh look, Radiant's bottom tower has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_rad_top_01.mp3</sm2> Radiant's top barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_rad_top_02.mp3</sm2> {{resp|u}} Radiant's top barracks has fallen. Well, that seals it. Seals something anyway.
+* <sm2>dlc_kleiner_announcer_rax_fall_rad_top_03.mp3</sm2> Fascinating. Radiant's top barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_rad_mid_01.mp3</sm2> Radiant's middle barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_rad_mid_02.mp3</sm2> Radiant's middle barracks has fallen. And yet, all is not lost.
+* <sm2>dlc_kleiner_announcer_rax_fall_rad_mid_03.mp3</sm2> Dear me! Radiant's middle barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_rad_mid_04.mp3</sm2> I'll just point out that Radiant's middle barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_rad_bot_01.mp3</sm2> Radiant's bottom barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_rad_bot_02.mp3</sm2> Radiant's bottom barracks has fallen. Could still go either way though.
+* <sm2>dlc_kleiner_announcer_rax_fall_rad_bot_03.mp3</sm2> I don't believe it! Radiant's bottom barracks has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_dire_top_01.mp3</sm2> Dire's top tower has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_dire_top_02.mp3</sm2> Dire's top tower has fallen. I could have predicted this.
+* <sm2>dlc_kleiner_announcer_twr_fall_dire_top_03.mp3</sm2> In a stunning development, Dire's top tower has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_dire_mid_01.mp3</sm2> Dire's middle tower has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_dire_mid_02.mp3</sm2> Dire's middle tower has fallen. As any fool can see.
+* <sm2>dlc_kleiner_announcer_twr_fall_dire_mid_03.mp3</sm2> I am required to point out that Dire's middle tower has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_dire_bot_01.mp3</sm2> Dire's bottom tower has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_dire_bot_02.mp3</sm2> Dire's bottom tower has fallen. If that's the proper term for it, and I believe it is.
+* <sm2>dlc_kleiner_announcer_twr_fall_dire_bot_03.mp3</sm2> In a blow to the Dire, their bottom tower has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_dire_top_01.mp3</sm2> Dire's top barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_dire_top_02.mp3</sm2> Dire's top barracks has fallen. Fate is smiling, but not in their direction.
+* <sm2>dlc_kleiner_announcer_rax_fall_dire_top_03.mp3</sm2> Someone might want to inform the Dire that their top barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_dire_mid_01.mp3</sm2> Dire's middle barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_dire_mid_02.mp3</sm2> Dire's middle barracks has fallen. That seems like it might be a significant development.
+* <sm2>dlc_kleiner_announcer_rax_fall_dire_mid_03.mp3</sm2> If you're just tuning in, Dire's middle barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_dire_bot_01.mp3</sm2> Dire's bottom barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_dire_bot_02.mp3</sm2> Dire's bottom barracks has fallen. There are more where that came from. Ah wait, ah what, there are no more where that came from.
+* <sm2>dlc_kleiner_announcer_rax_fall_dire_bot_03.mp3</sm2> Sadly, Dire's bottom barracks has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_enm_top_01.mp3</sm2> The enemy's top tower has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_enm_top_02.mp3</sm2> The enemy's top tower has fallen. There, that must feel good.
+* <sm2>dlc_kleiner_announcer_twr_fall_enm_top_03.mp3</sm2> Note well: The enemy's top tower has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_enm_mid_01.mp3</sm2> The enemy's middle tower has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_enm_mid_02.mp3</sm2> The enemy's middle tower has fallen. It's hard to see that as anything but advantageous.
+* <sm2>dlc_kleiner_announcer_twr_fall_enm_mid_03.mp3</sm2> At last, the enemy's middle tower has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_enm_bot_01.mp3</sm2> The enemy's bottom tower has fallen.
+* <sm2>dlc_kleiner_announcer_twr_fall_enm_bot_02.mp3</sm2> The enemy's bottom tower has fallen. One in a series, I daresay.
+* <sm2>dlc_kleiner_announcer_twr_fall_enm_bot_03.mp3</sm2> You'll be delighted to hear the enemy's bottom tower has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_enm_top_01.mp3</sm2> The enemy's top barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_enm_top_02.mp3</sm2> The enemy's top barracks has fallen. As I knew it eventually must.
+* <sm2>dlc_kleiner_announcer_rax_fall_enm_top_03.mp3</sm2> Pat yourself on the back. The enemy's top barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_enm_mid_01.mp3</sm2> The enemy's middle barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_enm_mid_02.mp3</sm2> The enemy's middle barracks has fallen. Someone's worst fears confirmed.
+* <sm2>dlc_kleiner_announcer_rax_fall_enm_mid_03.mp3</sm2> It's too good to be true! The enemy's middle barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_enm_bot_01.mp3</sm2> The enemy's bottom barracks has fallen.
+* <sm2>dlc_kleiner_announcer_rax_fall_enm_bot_02.mp3</sm2> The enemy's bottom barracks has fallen. Well, I hope you're very pleased with yourself.
+* <sm2>dlc_kleiner_announcer_rax_fall_enm_bot_03.mp3</sm2> The enemy's bottom barracks has incredibly fallen.
+* <sm2>dlc_kleiner_announcer_twr_deny_yr_top_01.mp3</sm2> Your top tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_yr_top_02.mp3</sm2> Your top tower has been denied. It's a little thing I know but take some pride in it.
+* <sm2>dlc_kleiner_announcer_twr_deny_yr_top_03.mp3</sm2> Well done. Your top tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_yr_mid_01.mp3</sm2> Your middle tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_yr_mid_02.mp3</sm2> Your middle tower has been denied. Better than the alternative certainly.
+* <sm2>dlc_kleiner_announcer_twr_deny_yr_mid_03.mp3</sm2> Just in time, your middle tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_yr_mid_04.mp3</sm2> Your midmost stony obelisk has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_yr_bot_01.mp3</sm2> Your bottom tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_yr_bot_02.mp3</sm2> Your bottom tower has been denied. Does it get any better than this?
+* <sm2>dlc_kleiner_announcer_twr_deny_yr_bot_03.mp3</sm2> Not to brag but your bottom tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_rad_top_01.mp3</sm2> Radiant's top tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_rad_top_02.mp3</sm2> Radiant's top tower has been denied. Let it never be said of that tower that it is such a jolly good fellow that nobody shall deny it.
+* <sm2>dlc_kleiner_announcer_twr_deny_rad_top_03.mp3</sm2> Surprisingly or not, Radiant's top tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_rad_mid_01.mp3</sm2> Radiant's middle tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_rad_mid_02.mp3</sm2> Radiant's middle tower has been denied. I've never seen a tower more denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_rad_mid_03.mp3</sm2> My oh my, Radiant's middle tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_rad_bot_01.mp3</sm2> Radiant's bottom tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_rad_bot_02.mp3</sm2> Radiant's bottom tower has been denied. This is quite a day.
+* <sm2>dlc_kleiner_announcer_twr_deny_rad_bot_03.mp3</sm2> Radiant's bottom tower has been soundly denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_dire_top_01.mp3</sm2> Dire's top tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_dire_top_02.mp3</sm2> Dire's top tower has been denied. We won't be seeing that tower again.
+* <sm2>dlc_kleiner_announcer_twr_deny_dire_top_03.mp3</sm2> What a blow! Dire's top tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_dire_top_04.mp3</sm2> In the grand tradition of tower denial, Dire's top tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_dire_mid_01.mp3</sm2> Dire's middle tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_dire_mid_02.mp3</sm2> Dire's middle tower has been denied. And not a moment too soon.
+* <sm2>dlc_kleiner_announcer_twr_deny_dire_mid_03.mp3</sm2> In a master stroke of sorts, Dire denied its middle tower.
+* <sm2>dlc_kleiner_announcer_twr_deny_dire_bot_01.mp3</sm2> Dire's bottom tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_dire_bot_02.mp3</sm2> Dire's bottom tower has been denied. As have I on various occasions.
+* <sm2>dlc_kleiner_announcer_twr_deny_dire_bot_03.mp3</sm2> How about that? Dire's bottom tower has been denied!
+* <sm2>dlc_kleiner_announcer_twr_deny_dire_bot_04.mp3</sm2> It is my solemn duty to inform you that Dire's bottom tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_enm_top_01.mp3</sm2> The enemy's top tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_enm_top_02.mp3</sm2> The enemy's top tower has been denied. Keep up the good...ah what? Never mind.
+* <sm2>dlc_kleiner_announcer_twr_deny_enm_top_03.mp3</sm2> The enemy just denied their top tower.
+* <sm2>dlc_kleiner_announcer_twr_deny_enm_mid_01.mp3</sm2> The enemy's middle tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_enm_mid_02.mp3</sm2> The enemy's middle tower has been denied. Has there ever been a more flagrant injustice?
+* <sm2>dlc_kleiner_announcer_twr_deny_enm_mid_03.mp3</sm2> The enemy's middle tower was flagrantly denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_enm_bot_01.mp3</sm2> The enemy's bottom tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_enm_bot_01a.mp3</sm2> The enemy's bottom tower has been denied.
+* <sm2>dlc_kleiner_announcer_twr_deny_enm_bot_02.mp3</sm2> The enemy's bottom tower has been denied. Well, I'm crushed.
+* <sm2>dlc_kleiner_announcer_twr_deny_enm_bot_03.mp3</sm2> Well, well, the enemy's bottom tower has been denied.
+* <sm2>dlc_kleiner_announcer_fort_rad_01.mp3</sm2> I've never seen Radiant's structures looking so fortified.
+* <sm2>dlc_kleiner_announcer_fort_rad_02.mp3</sm2> Radiant's structures are beautifully fortified.
+* <sm2>dlc_kleiner_announcer_fort_rad_03.mp3</sm2> Radiant's structures are fortified.
+* <sm2>dlc_kleiner_announcer_fort_rad_04.mp3</sm2> Radiant's structures are fortified. There appears to be some sort of magic at work.
+* <sm2>dlc_kleiner_announcer_fort_rad_05.mp3</sm2> Radiant's structures are fortified. In fact they appear radiant with health.
+* <sm2>dlc_kleiner_announcer_fort_rad_06.mp3</sm2> Radiant's structures are not only fortified, they are positively glowing.
+* <sm2>dlc_kleiner_announcer_fort_dire_01.mp3</sm2> Very nice. Dire's structures are fortified.
+* <sm2>dlc_kleiner_announcer_fort_dire_02.mp3</sm2> Dire's structures are cunningly fortified.
+* <sm2>dlc_kleiner_announcer_fort_dire_03.mp3</sm2> Dire's structures are fortified.
+* <sm2>dlc_kleiner_announcer_fort_dire_04.mp3</sm2> Dire's structures are fortified. They are looking quite robust.
+* <sm2>dlc_kleiner_announcer_fort_dire_05.mp3</sm2> Dire's structures are fortified.
+* <sm2>dlc_kleiner_announcer_fort_dire_06.mp3</sm2> In a stroke of cunning, or perhaps of desperation, Dire's structures have been fortified!
+* <sm2>dlc_kleiner_announcer_mega_now_we.mp3</sm2> Rejoice! You now have megacreeps.
+* <sm2>dlc_kleiner_announcer_mega_now_rad.mp3</sm2> I have it on good authority that the Radiant now have megacreeps.
+* <sm2>dlc_kleiner_announcer_mega_now_dire.mp3</sm2> In late breaking news, the Dire now have megacreeps.
+* <sm2>dlc_kleiner_announcer_mega_now_enm.mp3</sm2> I'm sorry to report, the enemy now has megacreeps.
+* <sm2>dlc_kleiner_announcer_victory_rad_01.mp3</sm2> Radiant victory! <small>[[#victory|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_victory_rad_02.mp3</sm2> Victory of the most Radiant sort! <small>[[#victory|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_victory_rad_03.mp3</sm2> I'm certain no one here will forget where they were when the Radiant seized their victory. <small>[[#victory|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_victory_dire_01.mp3</sm2> Dire victory! And I do mean dire. <small>[[#victory|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_victory_dire_02.mp3</sm2> And the Dire seize the day in the direst possible way. <small>[[#victory|''followup'']]</small>
+* <sm2>dlc_kleiner_announcer_respawn_01.mp3</sm2> {{resp|r}} Good of you to return.
+* <sm2>dlc_kleiner_announcer_respawn_02.mp3</sm2> {{resp|r}} Well, don't be discouraged.
+* <sm2>dlc_kleiner_announcer_respawn_03.mp3</sm2> {{resp|r}} Let's not dwell on the past. Get right back to it.
+* <sm2>dlc_kleiner_announcer_respawn_04.mp3</sm2> {{resp|r}} You again!
+* <sm2>dlc_kleiner_announcer_spectat_05.mp3</sm2> {{resp|r}} Quite active, aren't they?
+* <sm2>dlc_kleiner_announcer_spectat_07.mp3</sm2> {{resp|r}} What I wouldn't give for a net and a killing jar.
+* <sm2>dlc_kleiner_announcer_spectat_09.mp3</sm2> {{resp|r}} What a peaceful scene.
+* <sm2>dlc_kleiner_announcer_spectat_06.mp3</sm2> {{resp|r}} I believe that is a juvenile form of neutral creep.
+* <sm2>dlc_kleiner_announcer_spectat_08.mp3</sm2> {{resp|r}} I was distracted for a moment there. What just happened?
+* <sm2>dlc_kleiner_announcer_spectat_10.mp3</sm2> {{resp|r}} Ah, butterflies!
+* <sm2>dlc_kleiner_announcer_spectat_11.mp3</sm2> {{resp|r}} Nothing quite as restful as a river.
+* <sm2>dlc_kleiner_announcer_spectat_12.mp3</sm2> {{resp|r}} I can't quite identify these trees. I wonder if there's a field guide.
+* <sm2>dlc_kleiner_announcer_spectat_15.mp3</sm2> {{resp|r}} I hope you will forgive my meager display of expert knowledge.
+* <sm2>dlc_kleiner_announcer_spectat_16.mp3</sm2> {{resp|r}} I truly am confused.
+* <sm2>dlc_kleiner_announcer_spectat_13.mp3</sm2> {{resp|r}} Does this always go on this long?
+* <sm2>dlc_kleiner_announcer_spectat_14.mp3</sm2> {{resp|r}} It won't be long now, one way or another.
+* <sm2>dlc_kleiner_announcer_purchase_01.mp3</sm2> {{resp|u}} Excellent.
+* <sm2>dlc_kleiner_announcer_purchase_02.mp3</sm2> {{resp|r}} Almost certainly a sound investment.
+* <sm2>dlc_kleiner_announcer_purchase_03.mp3</sm2> {{resp|r}} Is that an allowable expense?
+* <sm2>dlc_kleiner_announcer_purchase_04.mp3</sm2> {{resp|r}} I didn't see that in the budget. Well, no matter.
+* <sm2>dlc_kleiner_announcer_purchase_05.mp3</sm2> {{resp|r}} That is bound to pay off.
+* <sm2>dlc_kleiner_announcer_special_01.mp3</sm2> {{resp|u}} One of your finest.
+* <sm2>dlc_kleiner_announcer_special_02.mp3</sm2> {{resp|u}} Splendid.
+* <sm2>dlc_kleiner_announcer_special_03.mp3</sm2> {{resp|u}} That must be your specialty.
+* <sm2>dlc_kleiner_announcer_special_04.mp3</sm2> {{resp|u}} How did you do that?
+* <sm2>dlc_kleiner_announcer_special_05.mp3</sm2> {{resp|u}} Don't let it go to your head.
+* <sm2>dlc_kleiner_announcer_deny_01.mp3</sm2> {{resp|u}} Nicely done.
+* <sm2>dlc_kleiner_announcer_deny_02.mp3</sm2> {{resp|u}} Well well.
+* <sm2>dlc_kleiner_announcer_deny_03.mp3</sm2> {{resp|u}} Hear hear!
+* <sm2>dlc_kleiner_announcer_deny_04.mp3</sm2> {{resp|u}} I like to think I'd have done the same.
+* <sm2>dlc_kleiner_announcer_deny_05.mp3</sm2> {{resp|u}} A master stroke.
+* <sm2>dlc_kleiner_announcer_kill_01.mp3</sm2> {{resp|u}} Very efficient.
+* <sm2>dlc_kleiner_announcer_kill_02.mp3</sm2> {{resp|u}} It's no less than I expect of you.
+* <sm2>dlc_kleiner_announcer_kill_03.mp3</sm2> {{resp|u}} If you'll excuse me for a moment, I am a bit squeamish.
+* <sm2>dlc_kleiner_announcer_kill_04.mp3</sm2> {{resp|u}} You were well within your rights, I'd say.
+* <sm2>dlc_kleiner_announcer_kill_05.mp3</sm2> {{resp|u}} Mercy doesn't enter into it, hm?
+* <sm2>dlc_kleiner_announcer_kill_06.mp3</sm2> {{resp|u}} You're rather good at killing things.
+* <sm2>dlc_kleiner_announcer_kill_07.mp3</sm2> {{resp|u}} Quite a pummelling.
+* <sm2>dlc_kleiner_announcer_kill_08.mp3</sm2> {{resp|u}} How terribly heroic.
+* <sm2>dlc_kleiner_announcer_lvlup_01.mp3</sm2> {{resp|u}} You cut a dashing figure.
+* <sm2>dlc_kleiner_announcer_lvlup_02.mp3</sm2> {{resp|u}} You cut a most appealing figure.
+* <sm2>dlc_kleiner_announcer_lvlup_03.mp3</sm2> {{resp|u}} Well, that was unexpected.
+* <sm2>dlc_kleiner_announcer_lvlup_04.mp3</sm2> {{resp|u}} You appear to be glowing.
+* <sm2>dlc_kleiner_announcer_lvlup_05.mp3</sm2> {{resp|u}} I expect you're rather pleased with yourself.
+* <sm2>dlc_kleiner_announcer_death_01.mp3</sm2> {{resp|u}} Most regrettable.
+* <sm2>dlc_kleiner_announcer_death_02.mp3</sm2> {{resp|u}} Oh dear.
+* <sm2>dlc_kleiner_announcer_death_03.mp3</sm2> {{resp|u}} That was less than optimal.
+* <sm2>dlc_kleiner_announcer_death_04.mp3</sm2> {{resp|u}} Oh fie.
+* <sm2>dlc_kleiner_announcer_death_05.mp3</sm2> {{resp|u}} Was that the best you can do?
+* <sm2>dlc_kleiner_announcer_death_06.mp3</sm2> {{resp|u}} I'm not distracting you am I?
+* <sm2>dlc_kleiner_announcer_death_07.mp3</sm2> {{resp|u}} Glad I'm not in your shoes...if those are shoes.
+* <sm2>dlc_kleiner_announcer_roshan_01.mp3</sm2> {{resp|u}} What sort of beast is that?
+* <sm2>dlc_kleiner_announcer_roshan_02.mp3</sm2> {{resp|u}} What sort of beast is that?
+* <sm2>dlc_kleiner_announcer_roshan_03.mp3</sm2> {{resp|u}} Catch and release wild Roshan.
+* <sm2>dlc_kleiner_announcer_roshan_04.mp3</sm2> {{resp|u}} Oh dear, and that was the last of its kind.
+* <sm2>dlc_kleiner_announcer_roshan_06.mp3</sm2> {{resp|u}} Nothing good will come of this, I fear!
+* <sm2>dlc_kleiner_announcer_roshan_07.mp3</sm2> {{resp|u}} Oh wonderful! Well deserved.
+* <sm2>dlc_kleiner_announcer_roshan_08.mp3</sm2> {{resp|u}} I was hoping that would fall to you. Well, perhaps it's for the best.
+* <sm2>dlc_kleiner_announcer_roshan_09.mp3</sm2> {{resp|u}} Any chance you could tag that thing and release it into the wild?
+* <sm2>dlc_kleiner_announcer_spectat_01.mp3</sm2> {{resp|r}} Is this on?
+* <sm2>dlc_kleiner_announcer_spectat_02.mp3</sm2> {{resp|r}} Will I need my calculator for this?
+* <sm2>dlc_kleiner_announcer_spectat_03.mp3</sm2> {{resp|r}} I'm not much of an announcer but I'll do my best.
+* <sm2>dlc_kleiner_announcer_intro_01.mp3</sm2> {{resp|r}} Ah heh hem. Is this on?
+* <sm2>dlc_kleiner_announcer_intro_02.mp3</sm2> {{resp|r}} Is this on?
+* <sm2>dlc_kleiner_announcer_intro_03.mp3</sm2> {{resp|r}} Hello?
+* <sm2>dlc_kleiner_announcer_intro_04.mp3</sm2> {{resp|r}} Oh, I see. Are those little...little people down there? Wonderful what they can do these days.
+* <sm2>dlc_kleiner_announcer_intro_05.mp3</sm2> {{resp|r}} I had a terrarium once...rather like this...well, except with mice. And a chameleon. But the possibilities for combat were much the same.
+* <sm2>dlc_kleiner_announcer_spectat_04.mp3</sm2> {{resp|r}} There they go! Uh, where are they going?
+* <sm2>dlc_kleiner_announcer_start_01.mp3</sm2> {{resp|r}} Oh, is this it?
+* <sm2>dlc_kleiner_announcer_start_02.mp3</sm2> {{resp|r}} Are we starting now?
+* <sm2>dlc_kleiner_announcer_start_03.mp3</sm2> {{resp|r}} Look at them go!
+* <sm2>dlc_kleiner_announcer_start_04.mp3</sm2> {{resp|r}} I suppose I better start paying closer attention to the...oh...butterflies!
+* <sm2>dlc_kleiner_announcer_spectat_17.mp3</sm2> {{resp|r}} There is certain to be unimaginable retaliation.
+* <sm2>dlc_kleiner_announcer_roshan_05.mp3</sm2> {{resp|r}} There appears to be cheese in the lava.
+* <sm2>dlc_kleiner_announcer_victory_01.mp3</sm2> {{resp|r}} A foregone conclusion, I should think.
+* <sm2>dlc_kleiner_announcer_victory_02.mp3</sm2> {{resp|r}} I like to think your success is a testament to my mentorship.
+* <sm2>dlc_kleiner_announcer_defeat_01.mp3</sm2> {{resp|r}} Back to the drawing board. In fact, maybe we should draw up plans for a new drawing board.
+* <sm2>dlc_kleiner_announcer_defeat_02.mp3</sm2> {{resp|r}} Don't be discouraged. It only encourages them.
 * <sm2>dlc_fallout4_announcer_misterhandy_welcome_welcometodota_01.mp3</sm2> {{resp|u}} Welcome to Dota!
 * <sm2>dlc_fallout4_announcer_misterhandy_welcome_goodmorning_01.mp3</sm2> Good morning! <small>[[#welcome|''followup'']]</small>
 * <sm2>dlc_fallout4_announcer_misterhandy_welcome_goodmorning_02.mp3</sm2> Good morning. <small>[[#welcome|''followup'']]</small>
@@ -4067,6 +4698,422 @@
 * <sm2>dlc_fallout4_announcer_misterhandy_negativeevent_takecareofthat_01.mp3</sm2> {{resp|600}} Ehm... You may want to take care of that.
 * <sm2>dlc_fallout4_announcer_misterhandy_negativeevent_watchout_01.mp3</sm2> {{resp|600}} I hate to nag, but WATCH OUT!
 * <sm2>dlc_fallout4_announcer_misterhandy_negativeevent_watchout_02.mp3</sm2> {{resp|600}} I hate to nag, but watch out.
+* <sm2>Dlc_glados_ann_glados_prelim_01.mp3</sm2> Welcome to Dota. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_prelim_02.mp3</sm2> Well, look who's come crawling back. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_prelim_03.mp3</sm2> Oh, it's you. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_prelim_04.mp3</sm2> This is Dota. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_prelim_05.mp3</sm2> Oh good, you're back. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_prelim_06.mp3</sm2> Welcome to Ota. The D is silent. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_prelim_07.mp3</sm2> Hello. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_prelim_08.mp3</sm2> You're back. You must really enjoy crushing defeat. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_prelim_09.mp3</sm2> {{resp|u}} It's not too late to abandon, and save time.
+* <sm2>Dlc_glados_ann_glados_prelim_10.mp3</sm2> Today is a good day to die in a forest defending a statue from goblins. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_prelim_11.mp3</sm2> Hello. I hope you're ready this time. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_prelim_12.mp3</sm2> You must be the one the others were talking about. The-well, I'm sure you'll do fine. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_prelim_13.mp3</sm2> You must be the one the others were talking about. That talent-less one. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_prelim_17.mp3</sm2> Welcome to Dota. It's like chess with one piece and a forest. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_prelim_18.mp3</sm2> {{resp|u}} Welcome to Dota. It's like chess...for idiots.
+* <sm2>Dlc_glados_ann_glados_prelim_20.mp3</sm2> Welcome to Dota.
+* <sm2>Dlc_glados_ann_glados_prelim_14.mp3</sm2> Welcome to Dota. It's the hot new game you've been reading about in your eating magazines. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_prelim_15.mp3</sm2> Welcome to Dota. Don't forget your little plastic sword. And all your chins. And your giant flagon of gravy. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_prelim_19.mp3</sm2> You must be the one the others were talking about. The one with all the chins. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_prelim_16.mp3</sm2> Welcome to Medieval Times. How many in your party tonight? <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_gamemode_12.mp3</sm2> {{resp|u}} You're not going to like this one.
+* <sm2>Dlc_glados_ann_glados_gamemode_14.mp3</sm2> {{resp|u}} Oh good, something new to fail at.
+* <sm2>Dlc_glados_ann_glados_gamemode_15.mp3</sm2> {{resp|u}} This is new.
+* <sm2>Dlc_glados_ann_glados_gamemode_17.mp3</sm2> {{resp|u}} I don't want to tell you your business, but if it were me I'd leave this new game mode alone.
+* <sm2>Dlc_glados_ann_glados_gamemode_18.mp3</sm2> {{resp|u}} I wouldn't bother with this mode. My guess is that just clicking it will make your life even worse somehow.
+* <sm2>Dlc_glados_ann_glados_gamemode_19.mp3</sm2> {{resp|u}} I was getting bored watching you lose in those other modes anyway.
+* <sm2>Dlc_glados_ann_glados_gamemode_01.mp3</sm2> {{resp|r}} All pick.
+* <sm2>Dlc_glados_ann_glados_now_select_01.mp3</sm2> {{resp|r}} Time to select from all these... things.
+* <sm2>Dlc_glados_ann_glados_gamemode_02.mp3</sm2> {{resp|r}} All random.
+* <sm2>Dlc_glados_ann_glados_gamemode_03.mp3</sm2> {{resp|r}} Captain's draft.
+* <sm2>Dlc_glados_ann_glados_gamemode_04.mp3</sm2> {{resp|r}} Captain's mode.
+* <sm2>Dlc_glados_ann_glados_gamemode_07.mp3</sm2> {{resp|r}} Deathmatch.
+* <sm2>Dlc_glados_ann_glados_gamemode_08.mp3</sm2> {{resp|u}} Easy mode.
+* <sm2>Dlc_glados_ann_glados_gamemode_11.mp3</sm2> {{resp|r}} Least played.
+* <sm2>Dlc_glados_ann_glados_gamemode_09.mp3</sm2> {{resp|r}} Mid only.
+* <sm2>Dlc_glados_ann_glados_gamemode_16.mp3</sm2> {{resp|r}} This looks challenging. For you, I mean.
+* <sm2>Dlc_glados_ann_glados_choose_hero_01.mp3</sm2> {{resp|r}} Choose your hero.
+* <sm2>Dlc_glados_ann_glados_gamemode_05.mp3</sm2> {{resp|r}} Random draft.
+* <sm2>Dlc_glados_ann_glados_gamemode_10.mp3</sm2> {{resp|r}} Reverse captain's mode.
+* <sm2>Dlc_glados_ann_glados_gamemode_06.mp3</sm2> {{resp|r}} Single draft.
+* <sm2>Dlc_glados_ann_glados_choose_hero_01.mp3</sm2> {{resp|r}} Choose your hero.
+* <sm2>Dlc_glados_ann_glados_pick_yr_01.mp3</sm2> Your pick.
+* <sm2>Dlc_glados_ann_glados_pick_yr_02.mp3</sm2> Your pick. Take your time.
+* <sm2>Dlc_glados_ann_glados_pick_yr_03.mp3</sm2> Your pick. No pressure.
+* <sm2>Dlc_glados_ann_glados_pick_yr_04.mp3</sm2> Your pick. Try not to embarrass yourself.
+* <sm2>Dlc_glados_ann_glados_pick_enm_01.mp3</sm2> Their pick.
+* <sm2>Dlc_glados_ann_glados_pick_rad_01.mp3</sm2> Radiant's pick.
+* <sm2>Dlc_glados_ann_glados_pick_dire_01.mp3</sm2> Dire's pick.
+* <sm2>Dlc_glados_ann_glados_ban_yr_01.mp3</sm2> Your turn to ban.
+* <sm2>Dlc_glados_ann_glados_ban_yr_02.mp3</sm2> Your favorite part: banning.
+* <sm2>Dlc_glados_ann_glados_ban_enm_01.mp3</sm2> Their ban.
+* <sm2>Dlc_glados_ann_glados_ban_enm_02.mp3</sm2> Now they get to ban.
+* <sm2>Dlc_glados_ann_glados_ban_rad_01.mp3</sm2> Radiant's ban.
+* <sm2>Dlc_glados_ann_glados_ban_rad_02.mp3</sm2> Radiant team ban.
+* <sm2>Dlc_glados_ann_glados_ban_dire_01.mp3</sm2> Dire's ban.
+* <sm2>Dlc_glados_ann_glados_ban_dire_02.mp3</sm2> Dire team ban.
+* <sm2>Dlc_glados_ann_glados_count_pick_01.mp3</sm2> Ten seconds to go.
+* <sm2>Dlc_glados_ann_glados_count_pick_02.mp3</sm2> Five seconds.
+* <sm2>Dlc_glados_ann_glados_time_reserve_01.mp3</sm2> Reserve time.
+* <sm2>Dlc_glados_ann_glados_time_reserve_using_01.mp3</sm2> {{resp|u}} You're using reserve time.
+* <sm2>Dlc_glados_ann_glados_time_extra_01.mp3</sm2> {{resp|u}} Extra time.
+* <sm2>Dlc_glados_ann_glados_time_extra_using_01.mp3</sm2> {{resp|u}} You're using extra time.
+* <sm2>Dlc_glados_ann_glados_choose_hero_01.mp3</sm2> Choose your hero.
+* <sm2>Dlc_glados_ann_glados_now_select_01.mp3</sm2> Time to select from all these... things.
+* <sm2>Dlc_glados_ann_glados_team_complete_yr_01.mp3</sm2> Your team is ready. <small>''[[#draft end|followup]]</small>
+* <sm2>Dlc_glados_ann_glados_team_complete_enm_01.mp3</sm2> {{resp|u}} The enemy team is ready.
+* <sm2>Dlc_glados_ann_glados_team_complete_rad_01.mp3</sm2> {{resp|u}} Radiant's team is ready.
+* <sm2>Dlc_glados_ann_glados_team_complete_dire_01.mp3</sm2> {{resp|u}} Dire's team is ready.
+* <sm2>Dlc_glados_ann_glados_battle_prepare_01.mp3</sm2> I'd get ready if I were you.
+* <sm2>Dlc_glados_ann_glados_battle_prepare_04.mp3</sm2> This should be interesting.
+* <sm2>Dlc_glados_ann_glados_battle_prepare_09.mp3</sm2> {{resp|u}} Nobody'd think less of you if you abandoned, by the way.
+* <sm2>Dlc_glados_ann_glados_battle_prepare_06.mp3</sm2> It's almost time for everybody to die.
+* <sm2>Dlc_glados_ann_glados_count_battle_30_01.mp3</sm2> Thirty seconds to battle.
+* <sm2>Dlc_glados_ann_glados_count_battle_30_02.mp3</sm2> Battle will commence in thirty seconds.
+* <sm2>Dlc_glados_ann_glados_battle_prepare_07.mp3</sm2> Last chance to run.
+* <sm2>Dlc_glados_ann_glados_battle_prepare_10.mp3</sm2> Well, if you're ready-you're not, by the way-let's get started.
+* <sm2>Dlc_glados_ann_glados_count_battle_10_01.mp3</sm2> Ten seconds to battle.
+* <sm2>Dlc_glados_ann_glados_count_battle_10_02.mp3</sm2> Battle is imminent.
+* <sm2>Dlc_glados_ann_glados_battle_prepare_02.mp3</sm2> Ready? Well if you say so.
+* <sm2>Dlc_glados_ann_glados_battle_prepare_05.mp3</sm2> Well, hope you like bloodbaths.
+* <sm2>Dlc_glados_ann_glados_count_battle_01.mp3</sm2> {{resp|10}} Battle starts in 3, 2, 1. <small>''[[#battle begins|followup]]</small>
+* <sm2>Dlc_glados_ann_glados_battle_begin_01.mp3</sm2> Battle begins.
+* <sm2>Dlc_glados_ann_glados_battle_begin_02.mp3</sm2> It begins.
+* <sm2>Dlc_glados_ann_glados_battle_begin_03.mp3</sm2> Let's begin.
+* <sm2>Dlc_glados_ann_glados_battle_begin_04.mp3</sm2> Let's get this farce over with.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_1stblood_01.mp3</sm2> First blood.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_double_01.mp3</sm2> Double kill.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_triple_01.mp3</sm2> Triple homicide.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_ultra_01.mp3</sm2> Ultra kill.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_ultra_02.mp3</sm2> Quadruple homicide.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_rampage_01.mp3</sm2> {{resp|10}} Rampage.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_rampage_02.mp3</sm2> {{resp|10}} Quintuple homicide.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_spree_01.mp3</sm2> Murder spree.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_dominate_02.mp3</sm2> Dominating.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_dominate_01.mp3</sm2> I hope you're proud of yourself.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_mega_01.mp3</sm2> Mega kill.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_mega_02.mp3</sm2> Those people had families.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_unstop_02.mp3</sm2> Unstoppable.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_unstop_01.mp3</sm2> You should be in prison.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_wicked_01.mp3</sm2> That blood won't come off.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_wicked_02.mp3</sm2> I'm going to be sick.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_monster_01.mp3</sm2> War criminal.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_monster_02.mp3</sm2> You monster.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_godlike_01.mp3</sm2> Godlike.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_godlike_02.mp3</sm2> Serial killer.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_holy_01.mp3</sm2> {{resp|u}} Holy shit.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_holy_02.mp3</sm2> This is genocide.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_holy_04.mp3</sm2> I'm starting to think this was premeditated.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_holy_03.mp3</sm2> What you're doing is wrong.
+* <sm2>Dlc_glados_killing_spree_ann_glados_kill_ownage_01.mp3</sm2> {{resp|10}} Great teamwork, you vicious thugs.
+* <sm2>Dlc_glados_killing_spree_ann_glados_allied_teamwipe_01.mp3</sm2> {{resp|r}} Your entire team is dead.
+* <sm2>Dlc_glados_killing_spree_ann_glados_allied_teamwipe_02.mp3</sm2> {{resp|r}} Your team has been wiped out.
+* <sm2>Dlc_glados_killing_spree_ann_glados_allied_teamwipe_03.mp3</sm2> {{resp|r}} You and everyone you cared about is dead.
+* <sm2>Dlc_glados_killing_spree_ann_glados_allied_teamwipe_04.mp3</sm2> {{resp|r}} Remember that team of living people you used to be alive in?
+* <sm2>Dlc_glados_killing_spree_ann_glados_allied_teamwipe_05.mp3</sm2> {{resp|u}} Everybody seems to be missing. I didn't do it.
+* <sm2>Dlc_glados_killing_spree_ann_glados_enemy_teamwipe_01.mp3</sm2> {{resp|r}} There's nobody left to kill. You killed them all.
+* <sm2>Dlc_glados_killing_spree_ann_glados_enemy_teamwipe_02.mp3</sm2> {{resp|r}} The enemy team has been wiped out.
+* <sm2>Dlc_glados_killing_spree_ann_glados_enemy_teamwipe_03.mp3</sm2> {{resp|r}} There's five more angels in heaven.
+* <sm2>Dlc_glados_killing_spree_ann_glados_enemy_teamwipe_04.mp3</sm2> {{resp|r}} The enemy's team has been wiped out after a long illness. I'm joking of course-you butchered them.
+* <sm2>Dlc_glados_killing_spree_ann_glados_spectated_teamwipe_01.mp3</sm2> {{resp|r}} The Radiant team has been slaughtered.
+* <sm2>Dlc_glados_killing_spree_ann_glados_spectated_teamwipe_02.mp3</sm2> {{resp|r}} The Dire team has been slaughtered.
+* <sm2>Dlc_glados_killing_spree_ann_glados_spectated_teamwipe_03.mp3</sm2> {{resp|r}} The Dire team has been slaughtered. While you watched. And did nothing.
+* <sm2>Dlc_glados_killing_spree_ann_glados_spectated_teamwipe_04.mp3</sm2> {{resp|r}} The Dire team has been slaughtered. While you sat there. And did nothing.
+* <sm2>Dlc_glados_ann_glados_cour_kill_rad_01.mp3</sm2> Radiant's courier has fallen.
+* <sm2>Dlc_glados_ann_glados_cour_kill_rad_02.mp3</sm2> Radiant's courier has been callously murdered.
+* <sm2>Dlc_glados_ann_glados_cour_kill_dire_01.mp3</sm2> Dire's courier has fallen.
+* <sm2>Dlc_glados_ann_glados_cour_kill_dire_02.mp3</sm2> Dire's courier has been callously murdered.
+* <sm2>Dlc_glados_ann_glados_roshan_fallen_rad_01.mp3</sm2> Roshan has fallen to the Radiant.
+* <sm2>Dlc_glados_ann_glados_roshan_fallen_rad_03.mp3</sm2> Roshan has been killed by the Radiant.
+* <sm2>Dlc_glados_ann_glados_roshan_fallen_rad_02.mp3</sm2> Roshan has been murdered by the Radiant.<br />I guess we know who the real monster was all along.
+* <sm2>Dlc_glados_ann_glados_roshan_fallen_rad_04.mp3</sm2> Roshan has been callously butchered by the Radiant.<br />I'll put in a request to notify his children that they're orphans now.
+* <sm2>Dlc_glados_ann_glados_roshan_fallen_3x_dire_01.mp3</sm2> The Radiant continues to murder poor, innocent Roshan.
+* <sm2>Dlc_glados_ann_glados_roshan_fallen_dire_01.mp3</sm2> Roshan has fallen to the Dire.
+* <sm2>Dlc_glados_ann_glados_roshan_fallen_dire_02.mp3</sm2> Roshan has been killed by the Dire.
+* <sm2>Dlc_glados_ann_glados_roshan_fallen_dire_04.mp3</sm2> Roshan, who was just minding his own business,<br />has been callously murdered by the Dire.
+* <sm2>Dlc_glados_ann_glados_roshan_fallen_dire_03.mp3</sm2> Roshan-bestselling novelist, avid fly fisherman,<br />proud father of three-has just been murdered by the Dire.<br />I hope they're proud of themselves.
+* <sm2>Dlc_glados_ann_glados_roshan_fallen_3x_rad_01.mp3</sm2> The Dire's bloodlust for Roshan is insatiable.
+* <sm2>Dlc_glados_ann_glados_twr_attack_yr_top_01.mp3</sm2> {{resp|10}} Your top tower is under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_attack_yr_top_02.mp3</sm2> {{resp|10}} Your top tower is being attacked.
+* <sm2>Dlc_glados_ann_glados_twr_attack_yr_top_03.mp3</sm2> {{resp|10}} Your top tower is under siege.
+* <sm2>Dlc_glados_ann_glados_twr_attack_yr_top_long_01.mp3</sm2> Your top tower is, well let's be honest, doomed.
+* <sm2>Dlc_glados_ann_glados_twr_attack_yr_mid_01.mp3</sm2> {{resp|10}} Your middle tower is under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_attack_yr_mid_02.mp3</sm2> {{resp|10}} Your middle tower is under siege.
+* <sm2>Dlc_glados_ann_glados_twr_attack_yr_mid_03.mp3</sm2> {{resp|10}} Your middle tower is being attacked.
+* <sm2>Dlc_glados_ann_glados_twr_attack_yr_mid_long_01.mp3</sm2> I hope you weren't close with your middle tower.
+* <sm2>Dlc_glados_ann_glados_twr_attack_yr_bot_01.mp3</sm2> {{resp|10}} Your bottom tower is under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_attack_yr_bot_02.mp3</sm2> {{resp|10}} Your bottom tower is under siege.
+* <sm2>Dlc_glados_ann_glados_twr_attack_yr_bot_03.mp3</sm2> {{resp|10}} Your bottom tower is being attacked.
+* <sm2>Dlc_glados_ann_glados_twr_attack_yr_bot_long_01.mp3</sm2> Your bottom tower looks fantastic, by the way. Very fire-covered.
+* <sm2>Dlc_glados_ann_glados_rax_attack_yr_top_01.mp3</sm2> {{resp|10}} Your top barracks is under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_rax_attack_yr_top_02.mp3</sm2> {{resp|10}} Your top barracks is being attacked. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_rax_attack_yr_mid_01.mp3</sm2> {{resp|10}} Your middle barracks is under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_rax_attack_yr_mid_02.mp3</sm2> {{resp|10}} Your middle barracks is being attacked. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_rax_attack_yr_bot_01.mp3</sm2> {{resp|10}} Your bottom barracks is under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_rax_attack_yr_bot_02.mp3</sm2> {{resp|10}} Your bottom barracks is being attacked. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_anc_attack_yr_01.mp3</sm2> {{resp|10}} Your ancient is under attack. <small>[[#ancient under attack|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_anc_attack_yr_02.mp3</sm2> {{resp|10}} Isn't that your ancient under attack? <small>[[#ancient under attack|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_anc_attack_yr_03.mp3</sm2> {{resp|10}} I think your ancient's under attack. <small>[[#ancient under attack|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_anc_attack_yr_04.mp3</sm2> {{resp|10}} By the way, your ancient is under attack. <small>[[#ancient under attack|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_anc_attack_yr_05.mp3</sm2> {{resp|10}} Your ancient's under attack. <small>[[#ancient under attack|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_anc_attack_yr_long_03.mp3</sm2> Your ancient's getting destroyed.
+* <sm2>Dlc_glados_ann_glados_anc_attack_yr_long_01.mp3</sm2> Remember that pristine, unattacked ancient you used to have?
+* <sm2>Dlc_glados_ann_glados_anc_attack_yr_long_02.mp3</sm2> Your ancient is doing... really great.
+* <sm2>Dlc_glados_ann_glados_anc_attack_yr_long_04.mp3</sm2> I'm sure you've noticed already, but your ancient's under attack.
+* <sm2>Dlc_glados_ann_glados_twr_attack_rad_top_01.mp3</sm2> {{resp|10}} Radiant's top tower is under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_attack_rad_top_02.mp3</sm2> {{resp|10}} Radiant's top tower is under siege.
+* <sm2>Dlc_glados_ann_glados_twr_attack_rad_top_03.mp3</sm2> {{resp|10}} Radiant's top tower is being attacked.
+* <sm2>Dlc_glados_ann_glados_twr_attack_rad_mid_01.mp3</sm2> {{resp|10}} Radiant's middle tower is under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_attack_rad_mid_02.mp3</sm2> {{resp|10}} Radiant's middle tower is under siege.
+* <sm2>Dlc_glados_ann_glados_twr_attack_rad_mid_03.mp3</sm2> {{resp|10}} Radiant's middle tower is being attacked.
+* <sm2>Dlc_glados_ann_glados_twr_attack_rad_bot_01.mp3</sm2> {{resp|10}} Radiant's bottom tower is being attacked. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_attack_rad_bot_02.mp3</sm2> {{resp|10}} Radiant's bottom tower is under siege.
+* <sm2>Dlc_glados_ann_glados_rax_attack_rad_top_01.mp3</sm2> {{resp|10}} Radiant's top barracks is under attack.
+* <sm2>Dlc_glados_ann_glados_rax_attack_rad_top_02.mp3</sm2> {{resp|10}} Radiant's top barracks is being attacked.
+* <sm2>Dlc_glados_ann_glados_rax_attack_rad_mid_01.mp3</sm2> {{resp|10}} Radiant's middle barracks is under attack.
+* <sm2>Dlc_glados_ann_glados_rax_attack_rad_mid_02.mp3</sm2> {{resp|10}} Radiant's middle barracks is being attacked.
+* <sm2>Dlc_glados_ann_glados_rax_attack_rad_bot_01.mp3</sm2> {{resp|10}} Radiant's bottom barracks is under attack.
+* <sm2>Dlc_glados_ann_glados_rax_attack_rad_bot_02.mp3</sm2> {{resp|10}} Radiant's bottom barracks is being attacked.
+* <sm2>Dlc_glados_ann_glados_anc_attack_rad_01.mp3</sm2> {{resp|10}} Radiant's ancient is under attack. <small>[[#ancient under attack|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_anc_attack_rad_02.mp3</sm2> {{resp|10}} Radiant's ancient is being attacked. <small>[[#ancient under attack|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_attack_dire_top_01.mp3</sm2> {{resp|10}} Dire's top tower is under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_attack_dire_top_02.mp3</sm2> {{resp|10}} Dire's top tower is under siege.
+* <sm2>Dlc_glados_ann_glados_twr_attack_dire_top_03.mp3</sm2> {{resp|10}} Dire's top tower is being attacked.
+* <sm2>Dlc_glados_ann_glados_twr_attack_dire_mid_01.mp3</sm2> {{resp|10}} Dire's middle tower is under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_attack_dire_mid_02.mp3</sm2> {{resp|10}} Dire's middle tower is under siege.
+* <sm2>Dlc_glados_ann_glados_twr_attack_dire_mid_03.mp3</sm2> {{resp|10}} Dire's middle tower is being attacked.
+* <sm2>Dlc_glados_ann_glados_twr_attack_dire_bot_01.mp3</sm2> {{resp|10}} Dire's bottom tower is under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_attack_dire_bot_02.mp3</sm2> {{resp|10}} Dire's bottom tower is under siege.
+* <sm2>Dlc_glados_ann_glados_twr_attack_dire_bot_03.mp3</sm2> {{resp|10}} Dire's bottom tower is being attacked.
+* <sm2>Dlc_glados_ann_glados_rax_attack_dire_top_01.mp3</sm2> {{resp|10}} Dire's top barracks is under attack.
+* <sm2>Dlc_glados_ann_glados_rax_attack_dire_top_02.mp3</sm2> {{resp|10}} Dire's top barracks is being attacked.
+* <sm2>Dlc_glados_ann_glados_rax_attack_dire_mid_01.mp3</sm2> {{resp|10}} Dire's middle barracks is under attack.
+* <sm2>Dlc_glados_ann_glados_rax_attack_dire_mid_02.mp3</sm2> {{resp|10}} Dire's middle barracks is being attacked.
+* <sm2>Dlc_glados_ann_glados_rax_attack_dire_bot_01.mp3</sm2> {{resp|10}} Dire's bottom barracks is under attack.
+* <sm2>Dlc_glados_ann_glados_rax_attack_dire_bot_02.mp3</sm2> {{resp|10}} Dire's bottom barracks is being attacked.
+* <sm2>Dlc_glados_ann_glados_anc_attack_dire_01.mp3</sm2> {{resp|10}} Dire's ancient is under attack. <small>[[#ancient under attack|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_anc_attack_dire_02.mp3</sm2> {{resp|10}} Dire's ancient is being attacked. <small>[[#ancient under attack|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_fall_yr_top_01.mp3</sm2> {{resp|10}} Your top tower has fallen. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_fall_yr_top_02.mp3</sm2> Your top tower has been destroyed.
+* <sm2>Dlc_glados_ann_glados_twr_fall_yr_mid_01.mp3</sm2> {{resp|10}} Your middle tower has fallen. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_fall_yr_mid_02.mp3</sm2> Your middle tower has been destroyed.
+* <sm2>Dlc_glados_ann_glados_twr_fall_yr_bot_01.mp3</sm2> {{resp|10}} Your bottom tower has fallen. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_fall_yr_bot_02.mp3</sm2> Your bottom tower has been destroyed.
+* <sm2>Dlc_glados_ann_glados_rax_fall_yr_top_01.mp3</sm2> {{resp|10}} Your top barracks has fallen. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_rax_fall_yr_top_02.mp3</sm2> Your top barracks has been destroyed.
+* <sm2>Dlc_glados_ann_glados_rax_fall_yr_mid_01.mp3</sm2> {{resp|10}} Your middle barracks has fallen. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_rax_fall_yr_mid_02.mp3</sm2> Your middle barracks has been destroyed.
+* <sm2>Dlc_glados_ann_glados_rax_fall_yr_bot_01.mp3</sm2> {{resp|10}} Your bottom barracks has fallen. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_rax_fall_yr_bot_02.mp3</sm2> Your bottom barracks has been destroyed.
+* <sm2>Dlc_glados_ann_glados_twr_fall_rad_top_01.mp3</sm2> Radiant's top tower has fallen.
+* <sm2>Dlc_glados_ann_glados_twr_fall_rad_top_02.mp3</sm2> Radiant's top tower has been destroyed.
+* <sm2>Dlc_glados_ann_glados_twr_fall_rad_mid_01.mp3</sm2> Radiant's middle tower has fallen.
+* <sm2>Dlc_glados_ann_glados_twr_fall_rad_mid_02.mp3</sm2> Radiant's middle tower has been destroyed.
+* <sm2>Dlc_glados_ann_glados_twr_fall_rad_bot_01.mp3</sm2> Radiant's bottom tower has fallen.
+* <sm2>Dlc_glados_ann_glados_twr_fall_rad_bot_02.mp3</sm2> Radiant's bottom tower has been destroyed.
+* <sm2>Dlc_glados_ann_glados_rax_fall_rad_top_01.mp3</sm2> Radiant's top barracks has fallen.
+* <sm2>Dlc_glados_ann_glados_rax_fall_rad_top_02.mp3</sm2> Radiant's top barracks has been destroyed.
+* <sm2>Dlc_glados_ann_glados_rax_fall_rad_mid_01.mp3</sm2> Radiant's middle barracks has fallen.
+* <sm2>Dlc_glados_ann_glados_rax_fall_rad_mid_02.mp3</sm2> Radiant's middle barracks has been destroyed.
+* <sm2>Dlc_glados_ann_glados_rax_fall_rad_bot_01.mp3</sm2> Radiant's bottom barracks has fallen.
+* <sm2>Dlc_glados_ann_glados_rax_fall_rad_bot_02.mp3</sm2> Radiant's bottom barracks has been destroyed.
+* <sm2>Dlc_glados_ann_glados_twr_fall_dire_top_01.mp3</sm2> Dire's top tower has fallen.
+* <sm2>Dlc_glados_ann_glados_twr_fall_dire_top_02.mp3</sm2> Dire's top tower has been destroyed.
+* <sm2>Dlc_glados_ann_glados_twr_fall_dire_mid_01.mp3</sm2> Dire's middle tower has fallen.
+* <sm2>Dlc_glados_ann_glados_twr_fall_dire_mid_02.mp3</sm2> Dire's middle tower has been destroyed.
+* <sm2>Dlc_glados_ann_glados_twr_fall_dire_bot_01.mp3</sm2> Dire's bottom tower has fallen.
+* <sm2>Dlc_glados_ann_glados_twr_fall_dire_bot_02.mp3</sm2> Dire's bottom tower has been destroyed.
+* <sm2>Dlc_glados_ann_glados_rax_fall_dire_top_01.mp3</sm2> Dire's top barracks has fallen.
+* <sm2>Dlc_glados_ann_glados_rax_fall_dire_top_02.mp3</sm2> Dire's top barracks has been destroyed.
+* <sm2>Dlc_glados_ann_glados_rax_fall_dire_mid_01.mp3</sm2> Dire's middle barracks has fallen.
+* <sm2>Dlc_glados_ann_glados_rax_fall_dire_mid_02.mp3</sm2> Dire's middle barracks has been destroyed.
+* <sm2>Dlc_glados_ann_glados_rax_fall_dire_bot_01.mp3</sm2> Dire's bottom barracks has fallen.
+* <sm2>Dlc_glados_ann_glados_rax_fall_dire_bot_02.mp3</sm2> Dire's bottom barracks has been destroyed.
+* <sm2>Dlc_glados_ann_glados_twr_fall_enm_top_01.mp3</sm2> {{resp|10}} The enemy's top tower has fallen. <small>[[#positive|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_fall_enm_top_02.mp3</sm2> The enemy's top tower has been destroyed.
+* <sm2>Dlc_glados_ann_glados_twr_fall_enm_mid_01.mp3</sm2> {{resp|10}} The enemy's middle tower has fallen. <small>[[#positive|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_fall_enm_mid_02.mp3</sm2> The enemy's middle tower has been destroyed.
+* <sm2>Dlc_glados_ann_glados_twr_fall_enm_bot_01.mp3</sm2> {{resp|10}} The enemy's bottom tower has fallen. <small>[[#positive|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_fall_enm_bot_02.mp3</sm2> The enemy's bottom tower has been destroyed.
+* <sm2>Dlc_glados_ann_glados_rax_fall_enm_top_01.mp3</sm2> {{resp|10}} The enemy's top barracks has fallen. <small>[[#positive|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_rax_fall_enm_top_02.mp3</sm2> The enemy's top barracks has been destroyed.
+* <sm2>Dlc_glados_ann_glados_rax_fall_enm_mid_01.mp3</sm2> {{resp|10}} The enemy's middle barracks has fallen. <small>[[#positive|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_rax_fall_enm_mid_02.mp3</sm2> The enemy's middle barracks has been destroyed.
+* <sm2>Dlc_glados_ann_glados_rax_fall_enm_bot_01.mp3</sm2> {{resp|10}} The enemy's bottom barracks has fallen. <small>[[#positive|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_rax_fall_enm_bot_02.mp3</sm2> The enemy's bottom barracks has been destroyed.
+* <sm2>Dlc_glados_ann_glados_twr_deny_yr_top_01.mp3</sm2> Your top tower has been denied. <small>[[#positive|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_deny_yr_mid_01.mp3</sm2> Your middle tower has been denied. <small>[[#positive|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_deny_yr_bot_01.mp3</sm2> Your bottom tower has been denied. <small>[[#positive|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_deny_rad_top_01.mp3</sm2> Radiant's top tower has been denied.
+* <sm2>Dlc_glados_ann_glados_twr_deny_rad_mid_01.mp3</sm2> Radiant's middle tower has been denied.
+* <sm2>Dlc_glados_ann_glados_twr_deny_rad_bot_01.mp3</sm2> Radiant's bottom tower has been denied.
+* <sm2>Dlc_glados_ann_glados_twr_deny_dire_top_01.mp3</sm2> Dire's top tower has been denied.
+* <sm2>Dlc_glados_ann_glados_twr_deny_dire_mid_01.mp3</sm2> Dire's middle tower has been denied.
+* <sm2>Dlc_glados_ann_glados_twr_deny_dire_bot_01.mp3</sm2> Dire's bottom tower has been denied.
+* <sm2>Dlc_glados_ann_glados_twr_deny_enm_top_01.mp3</sm2> The enemy's top tower has been denied. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_deny_enm_mid_01.mp3</sm2> The enemy's middle tower has been denied. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_twr_deny_enm_bot_01.mp3</sm2> The enemy's bottom tower has been denied. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_fort_rad_01.mp3</sm2> Radiant structures have been fortified.
+* <sm2>Dlc_glados_ann_glados_fort_rad_02.mp3</sm2> Radiant has fortified its structures.
+* <sm2>Dlc_glados_ann_glados_fort_dire_01.mp3</sm2> Dire's structures have been fortified.
+* <sm2>Dlc_glados_ann_glados_fort_dire_02.mp3</sm2> Dire has fortified its structures.
+* <sm2>Dlc_glados_ann_glados_mega_now_you_01.mp3</sm2> You have spawned megacreeps. <small>[[#positive|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_mega_now_rad_01.mp3</sm2> Radiant has spawned megacreeps.
+* <sm2>Dlc_glados_ann_glados_mega_now_dire_01.mp3</sm2> Dire has spawned megacreeps.
+* <sm2>Dlc_glados_ann_glados_mega_now_enm_01.mp3</sm2> Your enemy has spawned megacreeps. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_victory_01.mp3</sm2> You won. <small>[[#victory|''followup'']]</small>
+* <sm2>Dlc_glados_ann_glados_victory_rad_01.mp3</sm2> Radiant victory.
+* <sm2>Dlc_glados_ann_glados_victory_rad_02.mp3</sm2> Victory for Radiant.
+* <sm2>Dlc_glados_ann_glados_victory_rad_03.mp3</sm2> Victory goes to Radiant.
+* <sm2>Dlc_glados_ann_glados_victory_rad_long_01.mp3</sm2> Radiant performed marginally less poorly than Dire<br />and is, I suppose, the winner.
+* <sm2>Dlc_glados_ann_glados_victory_dire_01.mp3</sm2> Dire victory.
+* <sm2>Dlc_glados_ann_glados_victory_dire_02.mp3</sm2> Victory for Dire.
+* <sm2>Dlc_glados_ann_glados_victory_dire_03.mp3</sm2> Victory goes to Dire.
+* <sm2>Dlc_glados_ann_glados_victory_dire_long_01.mp3</sm2> Dire did not lose as badly as Radiant, and is<br />technically the winner.
+* <sm2>Dlc_glados_ann_glados_defeat_01.mp3</sm2> You lost.
+* <sm2>Dlc_glados_ann_glados_followup_respaw_01.mp3</sm2> Oh good. You're back.
+* <sm2>Dlc_glados_ann_glados_followup_respaw_02.mp3</sm2> Oh, you were gone. Because nobody noticed.
+* <sm2>Dlc_glados_ann_glados_followup_respaw_03.mp3</sm2> You're back. That's... great.
+* <sm2>Dlc_glados_ann_glados_followup_respaw_04.mp3</sm2> You're going to break that respawner using it so much. It wasn't built for this kind of traffic.
+* <sm2>Dlc_glados_ann_glados_followup_respaw_05.mp3</sm2> I hope you bought the fire gauntlets of strength goblet boots. I don't understand any of this.
+* <sm2>Dlc_glados_ann_glados_followup_respaw_06.mp3</sm2> You again.
+* <sm2>Dlc_glados_ann_glados_followup_respaw_07.mp3</sm2> Your terrifying reign of dying continues.
+* <sm2>Dlc_glados_ann_glados_followup_respaw_08.mp3</sm2> Well, see you back here soon.
+* <sm2>Dlc_glados_ann_glados_followup_respaw_09.mp3</sm2> Just because we can bring you back from the dead doesn't mean you can't dodge occasionally.
+* <sm2>Dlc_glados_ann_glados_followup_respaw_13.mp3</sm2> I thought you were dead. I'll let everybody who was worried about you know-okay I'm done.
+* <sm2>Dlc_glados_ann_glados_followup_respaw_14.mp3</sm2> Oh, you're back from whatever idiotic afterlife your preposterous race believes in.
+* <sm2>Dlc_glados_ann_glados_followup_respaw_16.mp3</sm2> Get back to battle. I think there's still a spot of ground out there that doesn't have your blood on it.
+* <sm2>Dlc_glados_ann_glados_followup_respaw_17.mp3</sm2> They struck you down, but you've come back stronger! Wait, I'm sorry. I meant heavier. In the face. Anyway, waddle out there and do your best.
+* <sm2>Dlc_glados_ann_glados_mia_top_01.mp3</sm2> {{resp|u}} The top lane is missing.
+* <sm2>Dlc_glados_ann_glados_mia_top_02.mp3</sm2> {{resp|u}} Top is missing.
+* <sm2>Dlc_glados_ann_glados_mia_mid_01.mp3</sm2> {{resp|u}} The middle lane is missing.
+* <sm2>Dlc_glados_ann_glados_mia_mid_02.mp3</sm2> {{resp|u}} Middle is missing.
+* <sm2>Dlc_glados_ann_glados_mia_bot_01.mp3</sm2> {{resp|u}} The bottom lane is missing.
+* <sm2>Dlc_glados_ann_glados_mia_bot_02.mp3</sm2> {{resp|u}} Bottom is missing.
+* <sm2>Dlc_glados_ann_glados_spectat_01.mp3</sm2> {{resp|r}} Don't wear out the edge of your seat.
+* <sm2>Dlc_glados_ann_glados_spectat_03.mp3</sm2> {{resp|r}} Gripping, isn't it?
+* <sm2>Dlc_glados_ann_glados_spectat_04.mp3</sm2> {{resp|r}} You paid for the whole seat, so get comfortable because it looks like we may be here a long time.
+* <sm2>Dlc_glados_ann_glados_spectat_05.mp3</sm2> {{resp|r}} I know, I can't wait either.
+* <sm2>Dlc_glados_ann_glados_spectat_06.mp3</sm2> {{resp|r}} Here's a Dota play-by-play. That fat, batwinged thing just flew left. A goblin punched a... ghost I think. Good for him. Good for everyone. Anyway: Dota.
+* <sm2>Dlc_glados_ann_glados_spectat_07.mp3</sm2> {{resp|r}} So, what's happening here then? Oh! The game's still on. Gripping, isn't it?
+* <sm2>Dlc_glados_ann_glados_spectat_09.mp3</sm2> {{resp|r}} I spy with my robot eye something that makes no sense. Did you guess everything that's going on here? Because this is all nonsense.
+* <sm2>Dlc_glados_ann_glados_event_neg_23.mp3</sm2> {{resp|r}} The game already started, by the way. I wasn't sure if you were waiting for a whistle. There isn't one.
+* <sm2>Dlc_glados_ann_glados_exitgame_01.mp3</sm2> {{resp|r}} Based on the way you've been playing, I understand.
+* <sm2>Dlc_glados_ann_glados_gamemode_01.mp3</sm2> {{resp|r}} All pick.
+* <sm2>Dlc_glados_ann_glados_gamemode_11.mp3</sm2> {{resp|r}} Least played.
+* <sm2>Dlc_glados_ann_glados_choose_hero_01.mp3</sm2> {{resp|r}} Choose your hero.
+* <sm2>Dlc_glados_ann_glados_gamemode_09.mp3</sm2> {{resp|r}} Mid only.
+* <sm2>Dlc_glados_ann_glados_team_complete_yr_follow_01.mp3</sm2> To die, probably.
+* <sm2>Dlc_glados_ann_glados_team_complete_yr_follow_02.mp3</sm2> For disappointment.
+* <sm2>Dlc_glados_ann_glados_team_complete_yr_follow_03.mp3</sm2> Your poorly chosen, hopelessly outmatched team.
+* <sm2>Dlc_glados_ann_glados_team_complete_yr_follow_05.mp3</sm2> Some... Interesting choices there.
+* <sm2>Dlc_glados_ann_glados_team_complete_yr_follow_06.mp3</sm2> Hmm, well, good luck.
+* <sm2>Dlc_glados_ann_glados_battle_prepare_03.mp3</sm2> Your funeral.
+* <sm2>Dlc_glados_ann_glados_battle_begin_follow.mp3</sm2> I've calculated who will win to a 99.93% certainty, if you're interested.
+* <sm2>Dlc_glados_ann_glados_anc_attack_dire_follow_01.mp3</sm2> {{resp|r}} If that's what they're calling attacks now.
+* <sm2>Dlc_glados_ann_glados_anc_attack_dire_follow_02.mp3</sm2> {{resp|r}} Not well, mind you. But it's technically attacking.
+* <sm2>Dlc_glados_ann_glados_anc_attack_rad_follow_01.mp3</sm2> {{resp|r}} Let's not tell them. It'll be a surprise.
+* <sm2>Dlc_glados_ann_glados_anc_attack_rad_follow_02.mp3</sm2> {{resp|r}} Well, that's a stroke of luck, and not skill.
+* <sm2>Dlc_glados_ann_glados_vict_follow_01.mp3</sm2> {{resp|r}} Wait until your loved ones hear about this. This should make them proud. Or bored. One of those.
+* <sm2>Dlc_glados_ann_glados_vict_follow_02.mp3</sm2> {{resp|r}} Well, really there should be an entirely new word for whatever it was you just stumbled and pinwheeled your arms through. But I guess for now let's call it winning.
+* <sm2>Dlc_glados_ann_glados_vict_follow_03.mp3</sm2> {{resp|r}} All your little goblins destroyed a magic whatever-it-was in the middle of a forest. That's quite a skill you have. If I were you I'd wait by the mailbox for my big check.
+* <sm2>Dlc_glados_ann_glados_vict_follow_04.mp3</sm2> {{resp|r}} I was going to say it's not that big a deal, but then I looked at your file and saw the list of your other accomplishements. The space on the form where they should have been, I mean.
+* <sm2>Dlc_glados_ann_glados_vict_follow_05.mp3</sm2> {{resp|r}} Congratulations. You solved Dota. You are the best hero. Turn off your computer now.
+* <sm2>Dlc_glados_ann_glados_ally_pos_01.mp3</sm2> Don't get cocky.
+* <sm2>Dlc_glados_ann_glados_ally_pos_03.mp3</sm2> Don't let it go to your giant, misshapen fantasy head.
+* <sm2>Dlc_glados_ann_glados_ally_pos_04.mp3</sm2> So at least your teammates know what they're doing.
+* <sm2>Dlc_glados_ann_glados_ally_pos_07.mp3</sm2> Here, let me engrave a trophy for you: nobody cares.
+* <sm2>Dlc_glados_ann_glados_ally_pos_10.mp3</sm2> Your teammates are doing a really great job.
+* <sm2>Dlc_glados_ann_glados_ally_pos_17.mp3</sm2> You must be so proud of your teammates right now.
+* <sm2>Dlc_glados_ann_glados_ally_pos_18.mp3</sm2> You were almost helpful that time.
+* <sm2>Dlc_glados_ann_glados_ally_pos_19.mp3</sm2> Well, you offered moral support.
+* <sm2>Dlc_glados_ann_glados_ally_pos_20.mp3</sm2> It's a good feeling, isn't it? I wouldn't get used to it.
+* <sm2>Dlc_glados_ann_glados_ally_pos_21.mp3</sm2> Not bad. Not as bad, I mean, as your other decisions so far.
+* <sm2>Dlc_glados_ann_glados_ally_pos_23.mp3</sm2> Well, aren't you the little hero of the forest.
+* <sm2>Dlc_glados_ann_glados_ally_pos_26.mp3</sm2> Let's be honest: it probably won't help.
+* <sm2>Dlc_glados_ann_glados_ally_pos_27.mp3</sm2> For all the good it will do you.
+* <sm2>Dlc_glados_ann_glados_ally_pos_29.mp3</sm2> By accident, if I had to guess.
+* <sm2>Dlc_glados_ann_glados_ally_pos_34.mp3</sm2> That's funny, I didn't even see you cheat.
+* <sm2>Dlc_glados_ann_glados_ally_pos_38.mp3</sm2> That should delay the inevitable slightly.
+* <sm2>Dlc_glados_ann_glados_ally_pos_39.mp3</sm2> Let's be honest: it probably won't help.
+* <sm2>Dlc_glados_ann_glados_ally_pos_02.mp3</sm2> Don't let it go to your fat, jowly head.
+* <sm2>Dlc_glados_ann_glados_ally_pos_05.mp3</sm2> You're winning the epic battle for this small field with a creek running through it.
+* <sm2>Dlc_glados_ann_glados_ally_pos_08.mp3</sm2> If this backward, illiterate fantasy forest had a newspaper, you'd be on the front page.
+* <sm2>Dlc_glados_ann_glados_ally_pos_09.mp3</sm2> Let me record this victory in your file. Where did I put it? Oh, who cares.
+* <sm2>Dlc_glados_ann_glados_ally_pos_11.mp3</sm2> They're just going to build another one. They're made of cement. You can buy them at the supermarket.
+* <sm2>Dlc_glados_ann_glados_ally_pos_13.mp3</sm2> This should impress all the people who doubted you at the comic book store.
+* <sm2>Dlc_glados_ann_glados_ally_pos_14.mp3</sm2> {{resp|u}} This should impress all the people who doubted you about your Green Lantern theories.
+* <sm2>Dlc_glados_ann_glados_ally_pos_15.mp3</sm2> Why don't you celebrate with two fistfulls of potatochips once you've swallowed the chips you're probably eating now.
+* <sm2>Dlc_glados_ann_glados_ally_pos_16.mp3</sm2> This is probably the most heroic thing anyone's ever done while sitting motionless in their parents' rec room.
+* <sm2>Dlc_glados_ann_glados_ally_pos_22.mp3</sm2> Well, that's probably the game. You win. Hands off the keyboard.
+* <sm2>Dlc_glados_ann_glados_ally_pos_24.mp3</sm2> So that's a minor victory, right square in the middle of all your failures.
+* <sm2>Dlc_glados_ann_glados_ally_pos_28.mp3</sm2> If you had any idea what you were doing, this would be a real achievement.
+* <sm2>Dlc_glados_ann_glados_ally_pos_30.mp3</sm2> Did you win? I don't have the first clue what's happening right now. What about those things? The tree-people things. Are they important?
+* <sm2>Dlc_glados_ann_glados_ally_pos_31.mp3</sm2> You're winning. More accurately, you're on the same team as winners who happen to be near you while they win. Anyway, congratulations.
+* <sm2>Dlc_glados_ann_glados_neutral_followup_01.mp3</sm2> This should be interesting.
+* <sm2>Dlc_glados_ann_glados_neutral_followup_02.mp3</sm2> I was on the edge of my seat.
+* <sm2>Dlc_glados_ann_glados_neutral_followup_05.mp3</sm2> Let's watch and see what happens.
+* <sm2>Dlc_glados_ann_glados_neutral_followup_08.mp3</sm2> Good.
+* <sm2>Dlc_glados_ann_glados_neutral_followup_10.mp3</sm2> In case you weren't paying attention.
+* <sm2>Dlc_glados_ann_glados_ally_neg_01.mp3</sm2> Thanks to you.
+* <sm2>Dlc_glados_ann_glados_ally_neg_02.mp3</sm2> That's bad, by the way.
+* <sm2>Dlc_glados_ann_glados_ally_neg_04.mp3</sm2> I honestly, truly didn't think you'd allow that to happen.
+* <sm2>Dlc_glados_ann_glados_ally_neg_05.mp3</sm2> You're allowed to defend those, you know.
+* <sm2>Dlc_glados_ann_glados_ally_neg_06.mp3</sm2> Because of poor decisions. Yours most likely.
+* <sm2>Dlc_glados_ann_glados_ally_neg_07.mp3</sm2> {{resp|u}} Just abandon. No one will even notice.
+* <sm2>Dlc_glados_ann_glados_ally_neg_08.mp3</sm2> Because someone-I'm talking about you here-doesn't know what they're doing.
+* <sm2>Dlc_glados_ann_glados_ally_neg_10.mp3</sm2> What counts is that you tried, so maybe do that next time.
+* <sm2>Dlc_glados_ann_glados_ally_neg_11.mp3</sm2> There are no handicaps on this match by the way. You can stop them from doing that.
+* <sm2>Dlc_glados_ann_glados_ally_neg_12.mp3</sm2> If you were saving your real strategy for a crisis, now would be the time.
+* <sm2>Dlc_glados_ann_glados_ally_neg_13.mp3</sm2> That outfit you're wearing looks stupid. That's not me talking. It's right here in your file.
+* <sm2>Dlc_glados_ann_glados_ally_neg_15.mp3</sm2> Grief counseling will be available at the conclusion of the match.
+* <sm2>Dlc_glados_ann_glados_ally_neg_16.mp3</sm2> But on the bright side, I just won. Money. Gambling money. By betting against you.
+* <sm2>Dlc_glados_ann_glados_ally_neg_18.mp3</sm2> Interesting stategy. Let them obliterate all your defenses, then swoop in for the kill.
+* <sm2>Dlc_glados_ann_glados_ally_neg_24.mp3</sm2> Now you're really in for it.
+* <sm2>Dlc_glados_ann_glados_ally_neg_26.mp3</sm2> I can't even begin to describe how badly you've screwed this up. Oh wait, I just did.
+* <sm2>Dlc_glados_ann_glados_ally_neg_28.mp3</sm2> If I was a betting artificial intelligence, I'd put money on them killing you now.
+* <sm2>Dlc_glados_ann_glados_ally_neg_29.mp3</sm2> That's bad, by the way.
+* <sm2>Dlc_glados_ann_glados_ally_neg_30.mp3</sm2> That doesn't mean you have to like it.
+* <sm2>Dlc_glados_ann_glados_ally_neg_14.mp3</sm2> When other people play that hero it looks fine. But right here a scientist has noted that when you play it looks stupid.
+* <sm2>Dlc_glados_ann_glados_ally_neg_17.mp3</sm2> But we're all winners here. Especially those players over there. In the enemy camp. You know, the ones celebrating.
+* <sm2>Dlc_glados_ann_glados_ally_neg_19.mp3</sm2> That doesn't mean you have to like it. It just means you'll probably keep doing it because of your aptitude at failure.
+* <sm2>Dlc_glados_ann_glados_ally_neg_20.mp3</sm2> But don't worry, losing builds character. In fact it's making you a better person right now. A great, big, well-rounded loser with lots of personality.
+* <sm2>Dlc_glados_ann_glados_ally_neg_21.mp3</sm2> But looking at it another way, I think you've won a real moral victory here. Which doesn't mean we should forget about the first way. The more accurate and humiliating way.
+* <sm2>Dlc_glados_ann_glados_ally_neg_22.mp3</sm2> But it's not a big loss really. It's one in a series of very small losses over a 45 minute timespan that, when added up, will look like one big, spectacular failure.
+* <sm2>Dlc_glados_ann_glados_ally_neg_23.mp3</sm2> Well nobody will hold it against you. Let's be honest, I doubt anyone will even find it surprising.
+* <sm2>Dlc_glados_ann_glados_neutral_followup_01.mp3</sm2> This should be interesting.
+* <sm2>Dlc_glados_ann_glados_neutral_followup_02.mp3</sm2> I was on the edge of my seat.
+* <sm2>Dlc_glados_ann_glados_neutral_followup_05.mp3</sm2> Let's watch and see what happens.
+* <sm2>Dlc_glados_ann_glados_neutral_followup_08.mp3</sm2> Good.
+* <sm2>Dlc_glados_ann_glados_neutral_followup_10.mp3</sm2> In case you weren't paying attention.
+* <sm2>Dlc_glados_ann_glados_event_neg_01.mp3</sm2> If that's something you cared about.
+* <sm2>Dlc_glados_ann_glados_event_neg_02.mp3</sm2> It's probably nothing to worry about.
+* <sm2>Dlc_glados_ann_glados_event_neg_03.mp3</sm2> You might want to look into that.
+* <sm2>Dlc_glados_ann_glados_event_neg_04.mp3</sm2> So there's that.
+* <sm2>Dlc_glados_ann_glados_event_neg_05.mp3</sm2> You're allowed to start trying now.
+* <sm2>Dlc_glados_ann_glados_event_neg_06.mp3</sm2> But you probably already knew that.
+* <sm2>Dlc_glados_ann_glados_event_neg_07.mp3</sm2> Not that I care one way or the other.
+* <sm2>Dlc_glados_ann_glados_event_neg_08.mp3</sm2> So that's something that's happening.
+* <sm2>Dlc_glados_ann_glados_event_neg_09.mp3</sm2> But just continue doing whatever it was you were doing.
+* <sm2>Dlc_glados_ann_glados_event_neg_11.mp3</sm2> I hope that's part of your plan.
+* <sm2>Dlc_glados_ann_glados_event_neg_12.mp3</sm2> You don't even care, do you?
+* <sm2>Dlc_glados_ann_glados_event_neg_13.mp3</sm2> It'll probably be fine.
+* <sm2>Dlc_glados_ann_glados_event_neg_18.mp3</sm2> I only mention it as a conversation starter. How are you doing otherwise?
+* <sm2>Dlc_glados_ann_glados_event_neg_20.mp3</sm2> You're really losing now. Or winning. Well, back to my mad-libs.
+* <sm2>Dlc_glados_ann_glados_event_neg_21.mp3</sm2> Wait, maybe they're not actually damaging it. No, they are.
+* <sm2>Dlc_glados_ann_glados_event_neg_22.mp3</sm2> I know. I don't care either.
+* <sm2>Dlc_glados_ann_glados_event_neg_15.mp3</sm2> Is this part of an elaborate trap you're going to spring on them later? Because it looks like they're really falling for it.
+* <sm2>Dlc_glados_ann_glados_event_neg_16.mp3</sm2> I know it's not a plate of nachos or anything, but it is important to the game.
+* <sm2>Dlc_glados_ann_glados_event_neg_17.mp3</sm2> It's probably fine. Trust me: I'm a super-computer and I barely understand what's happening right now.
+* <sm2>Dlc_glados_ann_glados_event_neg_19.mp3</sm2> Let me put it in old English so that it will penetrate your wizard's cap: thou art losing.
+* <sm2>Dlc_glados_ann_glados_event_neg_25.mp3</sm2> This is the hardest part about being an impartial announcer: balancing how little I care about anything that's happening here.
+* <sm2>Dlc_glados_ann_glados_neutral_followup_01.mp3</sm2> This should be interesting.
+* <sm2>Dlc_glados_ann_glados_neutral_followup_05.mp3</sm2> Let's watch and see what happens.
+* <sm2>Dlc_glados_ann_glados_neutral_followup_10.mp3</sm2> In case you weren't paying attention.
+* <sm2>Dlc_glados_ann_glados_spectat_02.mp3</sm2> Yes, yes. Oh that was a great mad-lib. So, what's happening here then?
+* <sm2>Dlc_glados_ann_glados_neutral_followup_04.mp3</sm2> Bad news for you fans of towers out there.
 * <sm2>dlc_juggernaut_announcer_welcome_01.mp3</sm2> {{resp|u}} Welcome to Dota!
 * <sm2>dlc_juggernaut_announcer_type_all_pick.mp3</sm2> {{resp|r}} All pick.
 * <sm2>dlc_juggernaut_announcer_type_all_random.mp3</sm2> {{resp|r}} All random.
@@ -4325,6 +5372,467 @@
 * <sm2>dlc_juggernaut_announcer_victory_rad_02.mp3</sm2> Radiant victory! An achievement for the ages.
 * <sm2>dlc_juggernaut_announcer_victory_dire_01.mp3</sm2> Dire victory!
 * <sm2>dlc_juggernaut_announcer_victory_dire_02.mp3</sm2> Dire victory! And well deserved.
+* <sm2>Tiku_ann_welcome_01.mp3</sm2> Welcome to Dota. <small>[[#welcome|''followup'']]</small>
+* <sm2>Tiku_ann_welcome_02.mp3</sm2> Welcome to Dota. <small>[[#welcome|''followup'']]</small>
+* <sm2>Tiku_ann_welcome_03.mp3</sm2> Welcome to Dota. Time to sink or swim! <small>[[#welcome|''followup'']]</small>
+* <sm2>Tiku_ann_welcome_04.mp3</sm2> Welcome to Dota. Apologies in advance. For what? <small>[[#welcome|''followup'']]</small>
+* <sm2>Tiku_ann_welcome_05.mp3</sm2> Welcome to Dota. The most fun you can have out of water. <small>[[#welcome|''followup'']]</small>
+* <sm2>Tiku_ann_welcome_06.mp3</sm2> Raise the main. It's time for Dota! <small>[[#welcome|''followup'']]</small>
+* <sm2>Tiku_ann_welcome_07.mp3</sm2> Let's get this boat on the row. Yeah! So I can swamp it! <small>[[#welcome|''followup'']]</small>
+* <sm2>Tiku_ann_type_all_pick_01.mp3</sm2> {{resp|r}} All pick. <small>[[#all pick|''followup'']]</small>
+* <sm2>Tiku_ann_type_all_pick_02.mp3</sm2> {{resp|r}} All pick. <small>[[#all pick|''followup'']]</small>
+* <sm2>Tiku_ann_type_all_random_01.mp3</sm2> {{resp|r}} All random. <small>[[#all random|''followup'']]</small>
+* <sm2>Tiku_ann_type_all_random_02.mp3</sm2> {{resp|r}} All random. <small>[[#all random|''followup'']]</small>
+* <sm2>Tiku_ann_type_capt_draft_01.mp3</sm2> {{resp|r}} Captains draft. <small>[[#captain's draft|''followup'']]</small>
+* <sm2>Tiku_ann_type_capt_draft_02.mp3</sm2> {{resp|r}} Captains draft. <small>[[#captain's draft|''followup'']]</small>
+* <sm2>Tiku_ann_type_capt_mode_01.mp3</sm2> {{resp|r}} Captains mode. <small>[[#captain's mode|''followup'']]</small>
+* <sm2>Tiku_ann_type_capt_mode_02.mp3</sm2> {{resp|r}} Captains mode. <small>[[#captain's mode|''followup'']]</small>
+* <sm2>Tiku_ann_type_death_match_01.mp3</sm2> {{resp|r}} Death match. <small>[[#deathmatch|''followup'']]</small>
+* <sm2>Tiku_ann_type_death_match_02.mp3</sm2> {{resp|r}} Death match. <small>[[#deathmatch|''followup'']]</small>
+* <sm2>Tiku_ann_type_easy_mode_01.mp3</sm2> {{resp|u}} Easy mode.
+* <sm2>Tiku_ann_type_easy_mode_02.mp3</sm2> {{resp|u}} Easy mode.
+* <sm2>Tiku_ann_type_least_played_01.mp3</sm2> {{resp|r}} Least played. <small>[[#least played|''followup'']]</small>
+* <sm2>Tiku_ann_type_least_played_02.mp3</sm2> {{resp|r}} Least played. <small>[[#least played|''followup'']]</small>
+* <sm2>Tiku_ann_type_all_mid_01.mp3</sm2> {{resp|r}} All mid. <small>[[#mid only|''followup'']]</small>
+* <sm2>Tiku_ann_type_all_mid_02.mp3</sm2> {{resp|r}} All mid. <small>[[#mid only|''followup'']]</small>
+* <sm2>Tiku_ann_choose_hero_02.mp3</sm2> {{resp|r}} Choose your hero. <small>[[#one vs one|''followup'']]</small>
+* <sm2>Tiku_ann_choose_hero_03.mp3</sm2> {{resp|r}} Choose your hero. <small>[[#one vs one|''followup'']]</small>
+* <sm2>Tiku_ann_type_ran_draft_01.mp3</sm2> {{resp|r}} Random draft. <small>[[#random draft|''followup'']]</small>
+* <sm2>Tiku_ann_type_ran_draft_02.mp3</sm2> {{resp|r}} Random draft. <small>[[#random draft|''followup'']]</small>
+* <sm2>Tiku_ann_type_rev_capt_01.mp3</sm2> {{resp|r}} Reverse captains mode. <small>[[#reverse captain's mode|''followup'']]</small>
+* <sm2>Tiku_ann_type_rev_capt_02.mp3</sm2> {{resp|r}} Reverse captains mode. <small>[[#reverse captain's mode|''followup'']]</small>
+* <sm2>Tiku_ann_type_sing_draft_01.mp3</sm2> {{resp|r}} Single draft. <small>[[#single draft|''followup'']]</small>
+* <sm2>Tiku_ann_type_sing_draft_02.mp3</sm2> {{resp|r}} Single draft. <small>[[#single draft|''followup'']]</small>
+* <sm2>Tiku_ann_choose_hero_02.mp3</sm2> {{resp|r}} Choose your hero.
+* <sm2>Tiku_ann_choose_hero_03.mp3</sm2> {{resp|r}} Choose your hero.
+* <sm2>Tiku_ann_pick_yr_01.mp3</sm2> Your pick. Send out the press-gang! <small>[[#picking|''followup'']]</small>
+* <sm2>Tiku_ann_pick_yr_02.mp3</sm2> Your turn to pick. Use it wisely. <small>[[#picking|''followup'']]</small>
+* <sm2>Tiku_ann_pick_yr_03.mp3</sm2> Pick someone. <small>[[#picking|''followup'']]</small>
+* <sm2>Tiku_ann_pick_yr_04.mp3</sm2> Choose your crew. Hahaha. Hope they fare better than Kunkka's!
+* <sm2>Tiku_ann_pick_enm_01.mp3</sm2> Enemy's turn to pick.
+* <sm2>Tiku_ann_pick_enm_02.mp3</sm2> Enemy pick on the horizon.
+* <sm2>Tiku_ann_pick_enm_03.mp3</sm2> The enemy's shorthanded. Time for a pick.
+* <sm2>Tiku_ann_pick_enm_04.mp3</sm2> Here comes the enemy's pick.
+* <sm2>Tiku_ann_pick_rad_01.mp3</sm2> Radiant's turn to pick.
+* <sm2>Tiku_ann_pick_dire_01.mp3</sm2> Dire's turn to pick.
+* <sm2>Tiku_ann_ban_yr_01.mp3</sm2> It's your ban, mate.
+* <sm2>Tiku_ann_ban_yr_02.mp3</sm2> It's banning time.
+* <sm2>Tiku_ann_ban_yr_03.mp3</sm2> Whose commission to revoke?
+* <sm2>Tiku_ann_ban_yr_04.mp3</sm2> Sink a hero before the boat even launches.
+* <sm2>Tiku_ann_ban_yr_05.mp3</sm2> Time to ban a salty scallywag. What did you call me?
+* <sm2>Tiku_ann_ban_enm_01.mp3</sm2> Enemy ban.
+* <sm2>Tiku_ann_ban_enm_02.mp3</sm2> Enemy ban. The smart choice is Kunkka.
+* <sm2>Tiku_ann_ban_enm_03.mp3</sm2> It's the enemy's turn to ban. Pay attention now.
+* <sm2>Tiku_ann_ban_enm_04.mp3</sm2> It's the enemy's ban. How many times can you ban Kunkka?
+* <sm2>Tiku_ann_ban_enm_05.mp3</sm2> Enemy ban incoming! Maybe your favorite hero.
+* <sm2>Tiku_ann_ban_enm_06.mp3</sm2> Enemy's ban now. What are they afraid of?
+* <sm2>Tiku_ann_ban_rad_01.mp3</sm2> Radiant's turn to ban.
+* <sm2>Tiku_ann_ban_rad_02.mp3</sm2> Here's the Radiant ban.
+* <sm2>Tiku_ann_ban_dire_01.mp3</sm2> The Dire get a ban!
+* <sm2>Tiku_ann_ban_dire_02.mp3</sm2> Dire's ban now.
+* <sm2>Tiku_ann_count_pick_10_01.mp3</sm2> Ten seconds.
+* <sm2>Tiku_ann_count_pick_05_01.mp3</sm2> Five seconds remaining.
+* <sm2>Tiku_ann_time_reserve_01.mp3</sm2> Reserve time. <small>[[#reserve time|''followup'']]</small>
+* <sm2>Tiku_ann_time_reserve_02.mp3</sm2> Tapped into reserve time. <small>[[#reserve time|''followup'']]</small>
+* <sm2>Tiku_ann_count_pick_10_02.mp3</sm2> Ten seconds left by my count.
+* <sm2>Tiku_ann_count_pick_05_02.mp3</sm2> Five seconds. What'll it be?
+* <sm2>Tiku_ann_choose_hero_02.mp3</sm2> Choose your hero.
+* <sm2>Tiku_ann_choose_hero_03.mp3</sm2> Choose your hero.
+* <sm2>Tiku_ann_choose_hero_05.mp3</sm2> Choose your hero.
+* <sm2>Tiku_ann_choose_hero_06.mp3</sm2> Choose your hero.
+* <sm2>Tiku_ann_choose_hero_04.mp3</sm2> Don't you dare pick Tidehunter. Hahah. What? Kunkka!
+* <sm2>tiku_ann_hero_selection_01.mp3</sm2> {{Hero icon|Kunkka|16px}} {{resp|r}} Now there's a jolly rogue!
+* <sm2>tiku_ann_hero_selection_04.mp3</sm2> {{Hero icon|Storm Spirit|16px}} {{resp|r}} Best set a reef in the main!
+* <sm2>tiku_ann_hero_selection_02.mp3</sm2> {{Hero icon|Tidehunter|16px}} {{resp|r}} Really dredging the bottom there, hmm?
+* <sm2>tiku_ann_hero_selection_06.mp3</sm2> {{Hero icon|Tidehunter|16px}} {{resp|r}} Go team green!
+* <sm2>tiku_ann_hero_selection_03.mp3</sm2> {{Hero icon|Gyrocopter|16px}} {{resp|r}} What's this, Gyro? Gone on the account?
+* <sm2>tiku_ann_hero_selection_08.mp3</sm2> {{Hero icon|Morphling|16px}} {{resp|r}} The rogue wave himself.
+* <sm2>tiku_ann_hero_selection_05.mp3</sm2> {{Hero icon|Kunkka|16px}} {{resp|r}} Kunkka!
+* <sm2>tiku_ann_hero_selection_07.mp3</sm2> {{Hero icon|Naga Siren|16px}} {{resp|r}} Ahh, the music of the sea.
+* <sm2>tiku_ann_hero_selection_09.mp3</sm2> {{Hero icon|Techies|16px}} {{resp|r}} A controversial pick!
+* <sm2>tiku_ann_hero_selection_10.mp3</sm2> {{Hero icon|Techies|16px}} {{resp|r}} I hate mines.
+* <sm2>tiku_ann_hero_selection_11.mp3</sm2> {{Hero icon|Slardar|16px}} {{resp|r}} They netted Slardar into this?
+* <sm2>tiku_ann_hero_selection_12.mp3</sm2> {{resp|r}} A fine choice!
+* <sm2>tiku_ann_hero_selection_13.mp3</sm2> {{resp|r}} I'm willing to allow it.
+* <sm2>Tiku_ann_prepare_01.mp3</sm2> Prepare for battle!
+* <sm2>Tiku_ann_prepare_02.mp3</sm2> Prepare to make way! Who made you captain? It's pronounced Admiral.
+* <sm2>Tiku_ann_count_battle_30.mp3</sm2> Thirty seconds to battle!
+* <sm2>Tiku_ann_count_battle_10.mp3</sm2> Ten seconds to battle!
+* <sm2>Tiku_ann_count_battle_10_02.mp3</sm2> The squall approaches.
+* <sm2>Tiku_ann_battle_begins_01.mp3</sm2> At last, the battle begins!
+* <sm2>Tiku_ann_battle_begins_02.mp3</sm2> Cast off the lines. We embark for battle!
+* <sm2>Tiku_ann_battle_begins_03.mp3</sm2> Now we get to good stuff. For once, we're in agreement.
+* <sm2>Tiku_ann_battle_begins_04.mp3</sm2> And we're clear for running!
+* <sm2>tiku_ann_hero_selection_16.mp3</sm2> {{resp|r}} Time for another go-round, Tidehunter! Bring it on, sea dog!
+* <sm2>Tiku_ann_kill_1stblood_01.mp3</sm2> First blood!
+* <sm2>Tiku_ann_kill_1stblood_02.mp3</sm2> First blood!
+* <sm2>Tiku_ann_kill_double_01.mp3</sm2> Double kill!
+* <sm2>Tiku_ann_kill_double_02.mp3</sm2> Double kill!
+* <sm2>Tiku_ann_kill_triple_01.mp3</sm2> Triple kill!
+* <sm2>Tiku_ann_kill_triple_02.mp3</sm2> Triple kill!
+* <sm2>Tiku_ann_kill_ultra_01.mp3</sm2> Ultra kill!
+* <sm2>Tiku_ann_kill_ultra_02.mp3</sm2> Ultra kill!
+* <sm2>Tiku_ann_kill_rampage_01.mp3</sm2> Rampage! <small>[[#rampage|''followup'']]</small>
+* <sm2>Tiku_ann_kill_rampage_02.mp3</sm2> Rampage! <small>[[#rampage|''followup'']]</small>
+* <sm2>Tiku_ann_kill_spree_01.mp3</sm2> Killing spree!
+* <sm2>Tiku_ann_kill_spree_02.mp3</sm2> Killing spree!
+* <sm2>Tiku_ann_kill_dominate_01.mp3</sm2> Dominating!
+* <sm2>Tiku_ann_kill_dominate_02.mp3</sm2> Dominating!
+* <sm2>Tiku_ann_kill_mega_01.mp3</sm2> Mega kill!
+* <sm2>Tiku_ann_kill_mega_02.mp3</sm2> Mega kill!
+* <sm2>Tiku_ann_kill_unstop_01.mp3</sm2> Unstoppable!
+* <sm2>Tiku_ann_kill_unstop_02.mp3</sm2> Unstoppable!
+* <sm2>Tiku_ann_kill_wicked_01.mp3</sm2> Wicked sick!
+* <sm2>Tiku_ann_kill_wicked_02.mp3</sm2> Wicked sick!
+* <sm2>Tiku_ann_kill_monster_01.mp3</sm2> Monster kill!
+* <sm2>Tiku_ann_kill_monster_02.mp3</sm2> Monster kill!
+* <sm2>Tiku_ann_kill_godlike_01.mp3</sm2> Godlike!
+* <sm2>Tiku_ann_kill_godlike_02.mp3</sm2> Godlike!
+* <sm2>Tiku_ann_kill_holy_01.mp3</sm2> Holy Shit! <small>[[#holy shit|''followup'']]</small>
+* <sm2>Tiku_ann_kill_holy_02.mp3</sm2> Holy Shit! <small>[[#holy shit|''followup'']]</small>
+* <sm2>Tiku_ann_kill_ownage_01.mp3</sm2> {{resp|15}} Ownage!
+* <sm2>Tiku_ann_kill_ownage_02.mp3</sm2> {{resp|15}} Ownage!
+* <sm2>Tiku_ann_kill_teamwipe_04.mp3</sm2> The sea is an unforgiving mistress.
+* <sm2>Tiku_ann_kill_teamwipe_05.mp3</sm2> An ocean of life will feast on your carcass.
+* <sm2>Tiku_ann_kill_teamwipe_06.mp3</sm2> Radiant are all dead. <small>[[#team wipe|''followup'']]</small>
+* <sm2>Tiku_ann_kill_teamwipe_10.mp3</sm2> Stride the king plank, the Dire fleet is burning! <small>[[#team wipe|''followup'']]</small>
+* <sm2>Tiku_ann_kill_teamwipe_01.mp3</sm2> Green seas on deck! Team Dire just got swept away. <small>[[#team wipe|''followup'']]</small>
+* <sm2>Tiku_ann_kill_teamwipe_03.mp3</sm2> All that's left of Team Radiant are air bubbles. <small>[[#team wipe|''followup'']]</small>
+* <sm2>Tiku_ann_kill_teamwipe_02.mp3</sm2> Down she goes with all souls lost. Hahaha, my kind of fight.
+* <sm2>Tiku_ann_cour_kill_rad_01.mp3</sm2> Radiant's courier has been killed. <small>[[#courier killed|''followup'']]</small>
+* <sm2>Tiku_ann_cour_kill_rad_02.mp3</sm2> {{resp|r}} Radiant's courier just drowned in a pool of blood.
+* <sm2>Tiku_ann_cour_kill_dire_01.mp3</sm2> Dire's courier has been killed. <small>[[#courier killed|''followup'']]</small>
+* <sm2>Tiku_ann_cour_kill_dire_02.mp3</sm2> {{resp|r}} Dire's courier just went belly up.
+* <sm2>Tiku_ann_rosh_fallen_rad_01.mp3</sm2> Roshan has fallen to the Radiant.
+* <sm2>Tiku_ann_rosh_fallen_rad_03.mp3</sm2> {{resp|r}} Roshan's dead. Stop me if you've heard this one.
+* <sm2>Tiku_ann_rosh_fallen_rad_02.mp3</sm2> {{resp|r}} They killed Roshan. He lives in a rough neighborhood. Time to move?
+* <sm2>Tiku_ann_rosh_fallen_dire_01.mp3</sm2> Roshan has fallen to the Dire.
+* <sm2>Tiku_ann_rosh_fallen_dire_03.mp3</sm2> {{resp|r}} Roshan falls again. Like Kunkka will!
+* <sm2>Tiku_ann_rosh_fallen_dire_02.mp3</sm2> {{resp|r}} Roshan's pit'd be a lot safer in the ocean. Can't ford an ocean!
+* <sm2>Tiku_ann_twr_attack_yr_top_01.mp3</sm2> {{resp|7}} Your top tower is under attack. <small>[[#structure under attack|''followup'']]</small>
+* <sm2>Tiku_ann_twr_attack_yr_top_02.mp3</sm2> {{resp|7}} Something bad is happening to your top tower. <small>[[#structure under attack|''followup'']]</small>
+* <sm2>Tiku_ann_twr_attack_yr_top_03.mp3</sm2> {{resp|r}} Raaah! Your top tower! Use your words.
+* <sm2>Tiku_ann_twr_attack_yr_mid_01.mp3</sm2> {{resp|7}} Your middle tower is under attack. <small>[[#structure under attack|''followup'']]</small>
+* <sm2>Tiku_ann_twr_attack_yr_mid_02.mp3</sm2> {{resp|7}} They're trying to break your middle tower. <small>[[#structure under attack|''followup'']]</small>
+* <sm2>Tiku_ann_twr_attack_yr_mid_03.mp3</sm2> {{resp|7}} Your middle tower is taking a drubbing. <small>[[#structure under attack|''followup'']]</small>
+* <sm2>Tiku_ann_twr_attack_yr_mid_04.mp3</sm2> {{resp|7}} Your middle tower is under attack! <small>[[#structure under attack|''followup'']]</small>
+* <sm2>Tiku_ann_twr_attack_yr_bot_01.mp3</sm2> {{resp|7}} Your bottom tower is under attack. <small>[[#structure under attack|''followup'']]</small>
+* <sm2>Tiku_ann_twr_attack_yr_bot_02.mp3</sm2> {{resp|7}} Did you notice they're attacking your bottom tower? <small>[[#structure under attack|''followup'']]</small>
+* <sm2>Tiku_ann_twr_attack_yr_bot_03.mp3</sm2> {{resp|7}} Help your bottom tower! <small>[[#structure under attack|''followup'']]</small>
+* <sm2>Tiku_ann_rax_attack_yr_top_01.mp3</sm2> Your top barracks are under attack! <small>[[#structure under attack|''followup'']]</small>
+* <sm2>Tiku_ann_rax_attack_yr_top_02.mp3</sm2> Top barracks under attack!
+* <sm2>Tiku_ann_rax_attack_yr_mid_01.mp3</sm2> Your middle barracks are under attack! <small>[[#structure under attack|''followup'']]</small>
+* <sm2>Tiku_ann_rax_attack_yr_mid_02.mp3</sm2> Middle barracks under attack!
+* <sm2>Tiku_ann_rax_attack_yr_bot_01.mp3</sm2> Your bottom barracks are under attack! <small>[[#structure under attack|''followup'']]</small>
+* <sm2>Tiku_ann_rax_attack_yr_bot_02.mp3</sm2> Bottom barracks under attack! <small>[[#structure under attack|''followup'']]</small>
+* <sm2>Tiku_ann_yr_topshrine_attack_01.mp3</sm2> {{resp|15}} Your top shrine is under attack.
+* <sm2>Tiku_ann_yr_topshrine_attack_02.mp3</sm2> {{resp|15}} Your top shrine is under attack.
+* <sm2>Tiku_ann_yr_botshrine_attack_01.mp3</sm2> {{resp|15}} Your bottom shrine is under attack.
+* <sm2>Tiku_ann_yr_ancient_attack_01.mp3</sm2> Your Ancient is under attack! <small>[[#structure under attack|''followup'']]</small> 
+* <sm2>Tiku_ann_yr_ancient_attack_02.mp3</sm2> Your Ancient is under attack! <small>[[#structure under attack|''followup'']]</small> 
+* <sm2>Tiku_ann_yr_ancient_attack_03.mp3</sm2> {{resp|r}} Defend your Ancient! What he said!
+* <sm2>Tiku_ann_yr_ancient_attack_04.mp3</sm2> {{resp|r}} This isn't how you win! Defend your Ancient!
+* <sm2>Tiku_ann_twr_attack_rad_top_01.mp3</sm2> {{resp|10}} Radiant's top tower is under attack.
+* <sm2>Tiku_ann_twr_attack_rad_top_02.mp3</sm2> {{resp|10}} Radiant's top tower is on the rocks.
+* <sm2>Tiku_ann_twr_attack_rad_top_03.mp3</sm2> {{resp|10}} They're trying to bring down Radiant's top tower.
+* <sm2>Tiku_ann_twr_attack_rad_mid_01.mp3</sm2> {{resp|10}} Radiant's middle tower is under attack.
+* <sm2>Tiku_ann_twr_attack_rad_mid_02.mp3</sm2> {{resp|r}} Throw a line to Radiant's middle tower. It's sinking just like your ships!
+* <sm2>Tiku_ann_twr_attack_rad_mid_03.mp3</sm2> {{resp|10}} Radiant's middle tower can't handle this deluge.
+* <sm2>Tiku_ann_twr_attack_rad_bot_01.mp3</sm2> {{resp|10}} Radiant's bottom tower is under attack.
+* <sm2>Tiku_ann_twr_attack_rad_bot_02.mp3</sm2> {{resp|10}} Radiant's bottom tower faces a stiff wind.
+* <sm2>Tiku_ann_twr_attack_rad_bot_03.mp3</sm2> {{resp|r}} Radiant's bottom tower is staggering. Like a drunk sailor.
+* <sm2>Tiku_ann_rax_attack_rad_top_01.mp3</sm2> {{resp|10}} Radiant's top barracks are under attack.
+* <sm2>Tiku_ann_rax_attack_rad_top_02.mp3</sm2> {{resp|r}} The tide turns against Radiant's top barracks. I was always against 'em!
+* <sm2>Tiku_ann_rax_attack_rad_top_03.mp3</sm2> {{resp|r}} I can't wait to see Radiant's top barracks fall.
+* <sm2>Tiku_ann_rax_attack_rad_mid_01.mp3</sm2> {{resp|10}} Radiant's middle barracks are under attack.
+* <sm2>Tiku_ann_rax_attack_rad_mid_02.mp3</sm2> {{resp|30}} Radiant's middle barracks are taking water.
+* <sm2>Tiku_ann_rax_attack_rad_mid_03.mp3</sm2> {{resp|30}} Radiant's middle barracks getting what they deserve.
+* <sm2>Tiku_ann_rax_attack_rad_bot_01.mp3</sm2> {{resp|10}} Radiant's bottom barracks are under attack.
+* <sm2>Tiku_ann_rax_attack_rad_bot_02.mp3</sm2> {{resp|30}} They're running full spread at Radiant's bottom barracks.
+* <sm2>Tiku_ann_rax_attack_rad_bot_03.mp3</sm2> {{resp|120}} Radiant better raise a defense for their bottom barracks.
+* <sm2>Tiku_ann_rad_topshrine_attack_01.mp3</sm2> {{resp|15}} Radiant's top shrine is under attack.
+* <sm2>Tiku_ann_rad_botshrine_attack_01.mp3</sm2> {{resp|15}} Radiant's bottom shrine is under attack.
+* <sm2>Tiku_ann_rad_ancient_attack_01.mp3</sm2> Radiant's Ancient is under attack! <small>[[#structure under attack|''followup'']]</small> 
+* <sm2>Tiku_ann_rad_ancient_attack_02.mp3</sm2> Radiant's Ancient is under attack! <small>[[#structure under attack|''followup'']]</small> 
+* <sm2>Tiku_ann_rad_ancient_attack_03.mp3</sm2> Radiant's Ancient is under attack! <small>[[#structure under attack|''followup'']]</small> 
+* <sm2>Tiku_ann_rad_ancient_attack_04.mp3</sm2> Radiant's Ancient is under attack! <small>[[#structure under attack|''followup'']]</small> 
+* <sm2>Tiku_ann_twr_attack_dire_top_01.mp3</sm2> {{resp|10}} Dire's top tower is under attack.
+* <sm2>Tiku_ann_twr_attack_dire_top_02.mp3</sm2> {{resp|r}} Dire's top tower needs some friends. Same as you, Tidehunter.
+* <sm2>Tiku_ann_twr_attack_dire_top_03.mp3</sm2> {{resp|10}} Dire's top tower is about to take the plunge.
+* <sm2>Tiku_ann_twr_attack_dire_mid_01.mp3</sm2> {{resp|10}} Dire's middle tower is under attack.
+* <sm2>Tiku_ann_twr_attack_dire_mid_02.mp3</sm2> {{resp|10}} Dire's middle tower is under pressure.
+* <sm2>Tiku_ann_twr_attack_dire_mid_03.mp3</sm2> {{resp|10}} Dire's middle tower is drowning.
+* <sm2>Tiku_ann_twr_attack_dire_bot_01.mp3</sm2> {{resp|10}} Dire's bottom tower is under attack.
+* <sm2>Tiku_ann_twr_attack_dire_bot_02.mp3</sm2> {{resp|10}} Dire's bottom tower won't last long.
+* <sm2>Tiku_ann_twr_attack_dire_bot_03.mp3</sm2> {{resp|10}} Dire's bottom tower is about to flounder.
+* <sm2>Tiku_ann_rax_attack_dire_top_01.mp3</sm2> {{resp|10}} Dire's top barracks are under attack.
+* <sm2>Tiku_ann_rax_attack_dire_top_02.mp3</sm2> {{resp|120}} Someone should help Dire's top barracks.
+* <sm2>Tiku_ann_rax_attack_dire_top_03.mp3</sm2> {{resp|r}} The waves are breaking against Dire's top barracks.
+* <sm2>Tiku_ann_rax_attack_dire_mid_01.mp3</sm2> {{resp|10}} Dire's middle barracks are under attack.
+* <sm2>Tiku_ann_rax_attack_dire_mid_02.mp3</sm2> {{resp|90}} Dire's middle barracks might fall. It's a spout of violence.
+* <sm2>Tiku_ann_rax_attack_dire_mid_03.mp3</sm2> {{resp|r}} Is this how Dire's middle barracks fall?
+* <sm2>Tiku_ann_rax_attack_dire_bot_01.mp3</sm2> {{resp|10}} Dire's bottom barracks are under attack.
+* <sm2>Tiku_ann_rax_attack_dire_bot_02.mp3</sm2> {{resp|30}} They're wrecking Dire's bottom barracks.
+* <sm2>Tiku_ann_rax_attack_dire_bot_03.mp3</sm2> {{resp|10}} By the board, Dire's bottom barracks are under attack.
+* <sm2>Tiku_ann_dire_topshrine_attack_01.mp3</sm2> {{resp|15}} Dire's top shrine is under attack.
+* <sm2>Tiku_ann_dire_botshrine_attack_01.mp3</sm2> {{resp|15}} Dire's bottom shrine is under attack.
+* <sm2>Tiku_ann_dire_ancient_attack_01.mp3</sm2> Dire's Ancient is under attack! <small>[[#structure under attack|''followup'']]</small> 
+* <sm2>Tiku_ann_dire_ancient_attack_02.mp3</sm2> Dire's Ancient is under attack! <small>[[#structure under attack|''followup'']]</small> 
+* <sm2>Tiku_ann_dire_ancient_attack_03.mp3</sm2> Dire's Ancient is under attack! <small>[[#structure under attack|''followup'']]</small> 
+* <sm2>Tiku_ann_dire_ancient_attack_04.mp3</sm2> Dire's Ancient is under attack! <small>[[#structure under attack|''followup'']]</small> 
+* <sm2>Tiku_ann_twr_fall_yr_top_01.mp3</sm2> Your top tower has fallen. <small>[[#own structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_twr_fall_yr_top_02.mp3</sm2> Give your top tower a burial at sea.
+* <sm2>Tiku_ann_twr_fall_yr_top_03.mp3</sm2> {{resp|r}} Your top tower just got sent to the bottom. Come up with that on your own?
+* <sm2>Tiku_ann_twr_fall_yr_mid_01.mp3</sm2> Your middle tower has fallen. <small>[[#own structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_twr_fall_yr_mid_02.mp3</sm2> {{resp|r}} Your middle tower ran afoul of some harsh fellows.
+* <sm2>Tiku_ann_twr_fall_yr_mid_03.mp3</sm2> Your middle tower just went hard over.
+* <sm2>Tiku_ann_twr_fall_yr_bot_01.mp3</sm2> Your bottom tower has fallen. <small>[[#own structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_twr_fall_yr_bot_02.mp3</sm2> To the depths with your bottom tower.
+* <sm2>Tiku_ann_twr_fall_yr_bot_03.mp3</sm2> Say goodbye to your bottom tower.
+* <sm2>Tiku_ann_rax_fall_yr_top_01.mp3</sm2> {{resp|5}} Your top barracks have fallen. <small>[[#own structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_rax_fall_yr_top_02.mp3</sm2> {{resp|5}} Your top barracks were snuffed out. <small>[[#own structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_rax_fall_yr_mid_01.mp3</sm2> {{resp|5}} Your middle barracks have fallen. <small>[[#own structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_rax_fall_yr_mid_02.mp3</sm2> {{resp|5}} Your middle barracks just got liquidated. <small>[[#own structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_rax_fall_yr_bot_01.mp3</sm2> {{resp|5}} Your bottom barracks have fallen. <small>[[#own structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_rax_fall_yr_bot_02.mp3</sm2> {{resp|5}} Your bottom barracks are lost at sea. <small>[[#own structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_yr_topshrine_fall_01.mp3</sm2> Your top shrine has fallen. <small>[[#own structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_yr_botshrine_fall_01.mp3</sm2> Your bottom shrine has fallen. <small>[[#own structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_twr_fall_rad_top_01.mp3</sm2> Radiant's top tower has fallen.
+* <sm2>Tiku_ann_twr_fall_rad_top_02.mp3</sm2> {{resp|r}} Radiant's top tower just got sent to the bottom. Really, Tidehunter?
+* <sm2>Tiku_ann_twr_fall_rad_mid_01.mp3</sm2> Radiant's middle tower has fallen.
+* <sm2>Tiku_ann_twr_fall_rad_mid_02.mp3</sm2> {{resp|60}} Radiant's middle tower just keeled over.
+* <sm2>Tiku_ann_twr_fall_rad_bot_01.mp3</sm2> Radiant's bottom tower has fallen.
+* <sm2>Tiku_ann_twr_fall_rad_bot_02.mp3</sm2> {{resp|60}} Radiant's bottom tower has rung its last bell.
+* <sm2>Tiku_ann_rax_fall_rad_top_01.mp3</sm2> {{resp|5}} Radiant's top barracks have fallen. <small>[[#structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_rax_fall_rad_mid_01.mp3</sm2> {{resp|5}} Radiant's middle barracks have fallen. <small>[[#structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_rax_fall_rad_bot_01.mp3</sm2> {{resp|5}} Radiant's bottom barracks have fallen. <small>[[#structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_rad_topshrine_fall_01.mp3</sm2> Radiant's top shrine has fallen. <small>[[#structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_rad_botshrine_fall_01.mp3</sm2> Radiant's bottom shrine has fallen. <small>[[#structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_twr_fall_dire_top_01.mp3</sm2> Dire's top tower has fallen.
+* <sm2>Tiku_ann_twr_fall_dire_top_02.mp3</sm2> Dire's top tower is gone.
+* <sm2>Tiku_ann_twr_fall_dire_mid_01.mp3</sm2> Dire's middle tower has fallen.
+* <sm2>Tiku_ann_twr_fall_dire_mid_02.mp3</sm2> Dire's middle tower just got knocked down.
+* <sm2>Tiku_ann_twr_fall_dire_bot_01.mp3</sm2> Dire's bottom tower has fallen.
+* <sm2>Tiku_ann_twr_fall_dire_bot_02.mp3</sm2> {{resp|r}} Dire's bottom tower couldn't withstand the tide.
+* <sm2>Tiku_ann_rax_fall_dire_top_01.mp3</sm2> {{resp|5}} Dire's top barracks have fallen. <small>[[#structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_rax_fall_dire_mid_01.mp3</sm2> {{resp|5}} Dire's middle barracks have fallen. <small>[[#structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_rax_fall_dire_bot_01.mp3</sm2> {{resp|5}} Dire's bottom barracks have fallen. <small>[[#structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_dire_topshrine_fall_01.mp3</sm2> Dire's top shrine has fallen. <small>[[#structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_dire_botshrine_fall_01.mp3</sm2> Dire's bottom shrine has fallen. <small>[[#structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_twr_fall_enm_top_01.mp3</sm2> The enemy's top tower has fallen. <small>[[#enemy structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_twr_fall_enm_top_02.mp3</sm2> {{resp|r}} When did the enemy's top tower fall? Pay attention, melonhead!
+* <sm2>Tiku_ann_twr_fall_enm_top_03.mp3</sm2> {{resp|r}} Sing a shanty for the enemy's top tower.
+* <sm2>Tiku_ann_twr_fall_enm_mid_01.mp3</sm2> The enemy's middle tower has fallen. <small>[[#enemy structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_twr_fall_enm_mid_02.mp3</sm2> The enemy's middle tower just ran aground.
+* <sm2>Tiku_ann_twr_fall_enm_mid_03.mp3</sm2> You just smashed the enemy's middle tower.
+* <sm2>Tiku_ann_twr_fall_enm_mid_04.mp3</sm2> {{resp|r}} Enemy's mid tower down. Another bulwark falls. <small>[[#enemy structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_twr_fall_enm_bot_01.mp3</sm2> The enemy's bottom tower has fallen. <small>[[#enemy structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_twr_fall_enm_bot_02.mp3</sm2> {{resp|r}} There goes the enemy's bottom tower. Thar she goes?
+* <sm2>Tiku_ann_twr_fall_enm_bot_03.mp3</sm2> The enemy's bottom tower just keeled over.
+* <sm2>Tiku_ann_rax_fall_enm_top_01.mp3</sm2> {{resp|5}} The enemy's top barracks have fallen. <small>[[#enemy structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_rax_fall_enm_top_02.mp3</sm2> {{resp|5}} The enemy's top barracks got caught in the crush. <small>[[#enemy structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_rax_fall_enm_mid_01.mp3</sm2> {{resp|5}} The enemy's middle barracks have fallen. <small>[[#enemy structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_rax_fall_enm_mid_02.mp3</sm2> {{resp|5}} The enemy's middle barracks just capsized. <small>[[#enemy structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_rax_fall_enm_bot_01.mp3</sm2> {{resp|5}} The enemy's bottom barracks have fallen. <small>[[#enemy structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_rax_fall_enm_bot_02.mp3</sm2> {{resp|5}} The enemy's bottom barracks just took a dip. <small>[[#enemy structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_enm_topshrine_fall_01.mp3</sm2> The enemy's top shrine has fallen. <small>[[#enemy structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_enm_botshrine_fall_01.mp3</sm2> The enemy's bottom shrine has fallen. <small>[[#enemy structure fallen|''followup'']]</small>
+* <sm2>Tiku_ann_twr_deny_yr_top_01.mp3</sm2> Your top tower has been denied. <small>[[#tower denied|''followup'']]</small>
+* <sm2>Tiku_ann_twr_deny_yr_top_02.mp3</sm2> Your top tower just got denied. <small>[[#tower denied|''followup'']]</small>
+* <sm2>Tiku_ann_twr_deny_yr_mid_01.mp3</sm2> Your middle tower has been denied. <small>[[#tower denied|''followup'']]</small>
+* <sm2>Tiku_ann_twr_deny_yr_mid_02.mp3</sm2> Your middle tower just got denied. <small>[[#tower denied|''followup'']]</small>
+* <sm2>Tiku_ann_twr_deny_yr_bot_01.mp3</sm2> Your bottom tower has been denied. <small>[[#tower denied|''followup'']]</small>
+* <sm2>Tiku_ann_twr_deny_yr_bot_02.mp3</sm2> Your bottom tower just got denied. <small>[[#tower denied|''followup'']]</small>
+* <sm2>Tiku_ann_twr_deny_rad_top_01.mp3</sm2> Radiant's top tower has been denied.
+* <sm2>Tiku_ann_twr_deny_rad_top_02.mp3</sm2> Radaint doused their own top tower.
+* <sm2>Tiku_ann_twr_deny_rad_mid_01.mp3</sm2> Radiant's middle tower has been denied.
+* <sm2>Tiku_ann_twr_deny_rad_mid_02.mp3</sm2> Radiant just smothered their own middle tower.
+* <sm2>Tiku_ann_twr_deny_rad_bot_01.mp3</sm2> Radiant's bottom tower has been denied.
+* <sm2>Tiku_ann_twr_deny_rad_bot_02.mp3</sm2> Radiant scum denied their bottom tower.
+* <sm2>Tiku_ann_twr_deny_dire_top_01.mp3</sm2> Dire's top tower has been denied.
+* <sm2>Tiku_ann_twr_deny_dire_top_02.mp3</sm2> Defiant Dire just denied their top tower.
+* <sm2>Tiku_ann_twr_deny_dire_mid_01.mp3</sm2> Dire's middle tower has been denied.
+* <sm2>Tiku_ann_twr_deny_dire_mid_02.mp3</sm2> What? Dire's middle tower was denied?
+* <sm2>Tiku_ann_twr_deny_dire_bot_01.mp3</sm2> Dire's bottom tower has been denied.
+* <sm2>Tiku_ann_twr_deny_dire_bot_02.mp3</sm2> Those Dire swine denied their bottom tower.
+* <sm2>Tiku_ann_twr_deny_enm_top_01.mp3</sm2> The enemy's top tower has been denied. <small>[[#tower denied|''followup'']]</small>
+* <sm2>Tiku_ann_twr_deny_enm_top_02.mp3</sm2> The enemy's top tower was just denied. <small>[[#tower denied|''followup'']]</small>
+* <sm2>Tiku_ann_twr_deny_enm_mid_01.mp3</sm2> The enemy's middle tower has been denied. <small>[[#tower denied|''followup'']]</small>
+* <sm2>Tiku_ann_twr_deny_enm_mid_02.mp3</sm2> The enemy's middle tower was just denied. <small>[[#tower denied|''followup'']]</small>
+* <sm2>Tiku_ann_twr_deny_enm_bot_01.mp3</sm2> The enemy's bottom tower has been denied. <small>[[#tower denied|''followup'']]</small>
+* <sm2>Tiku_ann_twr_deny_enm_bot_02.mp3</sm2> The enemy's bottom tower was just denied. <small>[[#tower denied|''followup'']]</small>
+* <sm2>Tiku_ann_fort_rad_01.mp3</sm2> Radiant structures are fortified.
+* <sm2>Tiku_ann_fort_rad_02.mp3</sm2> {{resp|r}} Radiant fortified their structures. Attack the heroes?
+* <sm2>Tiku_ann_fort_rad_03.mp3</sm2> {{resp|r}} Radiant think fortification can save them. Any port in a storm!
+* <sm2>Tiku_ann_fort_dire_01.mp3</sm2> Dire structures are fortified.
+* <sm2>Tiku_ann_fort_dire_02.mp3</sm2> {{resp|r}} What's this? Dire fortified their structures?
+* <sm2>Tiku_ann_fort_dire_03.mp3</sm2> {{resp|r}} Fortified structures can't be breached. I could!
+* <sm2>Tiku_ann_rad_scan_01.mp3</sm2> Radiant are scanning for enemies.
+* <sm2>Tiku_ann_rad_scan_02.mp3</sm2> {{resp|r}} Are Radiant using echo location?
+* <sm2>Tiku_ann_dire_scan_01.mp3</sm2> Dire are scanning for enemies.
+* <sm2>Tiku_ann_dire_scan_02.mp3</sm2> {{resp|r}} Dire have the spyglass at hand.
+* <sm2>Tiku_ann_mega_now_you_01.mp3</sm2> You now have megacreeps. <small>[[#megacreeps|''followup'']]</small>
+* <sm2>Tiku_ann_mega_now_rad_01.mp3</sm2> The Radiant now have megacreeps. <small>[[#megacreeps|''followup'']]</small>
+* <sm2>Tiku_ann_mega_now_dire_01.mp3</sm2> The Dire now have megacreeps. <small>[[#megacreeps|''followup'']]</small>
+* <sm2>Tiku_ann_mega_now_enm_01.mp3</sm2> The enemy now have megacreeps. <small>[[#megacreeps|''followup'']]</small>
+* <sm2>Tiku_ann_victory_rad_01.mp3</sm2> Land ho! Radiant victory!
+* <sm2>Tiku_ann_victory_rad_02.mp3</sm2> Sun's over the foreyard. Radiant win!
+* <sm2>Tiku_ann_victory_rad_03.mp3</sm2> The Dire Ancient is decommissioned! Radiant take the day!
+* <sm2>Tiku_ann_victory_dire_01.mp3</sm2> Dire victory!
+* <sm2>Tiku_ann_victory_dire_04.mp3</sm2> Dire victory!
+* <sm2>Tiku_ann_victory_dire_02.mp3</sm2> To the depths goes Radiant's Ancient. The sea reclaims all!
+* <sm2>Tiku_ann_victory_dire_05.mp3</sm2> Dire victory!
+* <sm2>Tiku_ann_victory_dire_03.mp3</sm2> Dire does it! The Radiant Ancient is dead in the water.
+* <sm2>Tiku_ann_respawn_01.mp3</sm2> {{resp|r}} Back from the maelstrom!
+* <sm2>Tiku_ann_respawn_02.mp3</sm2> {{resp|r}} The watch bell is ringing!
+* <sm2>Tiku_ann_respawn_03.mp3</sm2> {{resp|r}} Time to get your head above water. Grow some gills.
+* <sm2>Tiku_ann_idle_02.mp3</sm2> {{resp|r}} Maelrawn take me, this is boring!
+* <sm2>Tiku_ann_idle_01.mp3</sm2> {{resp|r}} This game has certainly run aground.
+* <sm2>Tiku_ann_idle_03.mp3</sm2> {{resp|r}} Looks like we've run against the ash breeze. It's dead calm.
+* <sm2>Tiku_ann_idle_04.mp3</sm2> {{resp|r}} This is like swimming in slack water.
+* <sm2>Tiku_ann_idle_05.mp3</sm2> {{resp|r}} You layabouts! Swab the back-head grating!
+* <sm2>Tiku_ann_idle_06.mp3</sm2> {{resp|r}} Maybe I'll take up beachcombing. Take me with you.
+* <sm2>Tiku_ann_idle_07.mp3</sm2> {{resp|r}} What's the word from the crow's nest? It's dead calm.
+* <sm2>Tiku_ann_disconnect_01.mp3</sm2> {{resp|r}} Man overboard! Heave to!
+* <sm2>Tiku_ann_disconnect_02.mp3</sm2> {{resp|r}} Someone's connection just drowned.
+* <sm2>Tiku_ann_disconnect_03.mp3</sm2> {{resp|r}} Hahaha. I wreck any undersea cable I get my hands on.
+* <sm2>Tiku_ann_disconnect_04.mp3</sm2> {{resp|r}} If they're wearing a corkshirt, they'll pop up soon enough.
+* <sm2>Tiku_ann_disconnect_05.mp3</sm2> {{resp|r}} They always float to the top eventually. Just wait a minute.
+* <sm2>Tiku_ann_disconnect_06.mp3</sm2> {{resp|r}} Now is the time for diplomacy. That's rich coming from you, Kunkka.
+* <sm2>Tiku_ann_reconnect_01.mp3</sm2> {{resp|300}} Finally came up for air!
+* <sm2>Tiku_ann_reconnect_02.mp3</sm2> {{resp|300}} Welcome back, landlubber. Get any salt in your lungs?
+* <sm2>Tiku_ann_quit_01.mp3</sm2> {{resp|r}} Jumping ship, you traitorous dog?
+* <sm2>Tiku_ann_quit_02.mp3</sm2> {{resp|r}} Sea slime has more backbone than a quitter.
+* <sm2>Tiku_ann_quit_03.mp3</sm2> {{resp|r}} A quitter, ay? Throw him in the brig!
+* <sm2>Tiku_ann_quit_04.mp3</sm2> {{resp|r}} The sea hates a coward.
+* <sm2>Tiku_ann_quit_05.mp3</sm2> {{resp|r}} A captain should go down with the ship. My thoughts exactly!
+* <sm2>Tiku_ann_unpause_01.mp3</sm2> {{resp|120}} Weigh anchor, this game is on.
+* <sm2>Tiku_ann_unpause_02.mp3</sm2> {{resp|120}} I was practicing my backstroke.
+* <sm2>Tiku_ann_unpause_03.mp3</sm2> {{resp|120}} And we're under way.
+* <sm2>Tiku_ann_unpause_04.mp3</sm2> {{resp|120}} I had time to find a snack.
+* <sm2>tiku_ann_item_purchase_01.mp3</sm2> {{Item|Sentry Ward|20px}} {{resp|r}} Searching for hidden treasure?
+* <sm2>tiku_ann_item_purchase_02.mp3</sm2> {{Item|Sentry Ward|20px}} {{resp|r}} Those are worth more than gold.
+* <sm2>tiku_ann_item_purchase_03.mp3</sm2> {{Item|Observer Ward|20px}} {{resp|r}} Clear skies ahead!
+* <sm2>tiku_ann_item_purchase_04.mp3</sm2> {{Item|Observer Ward|20px}} {{resp|r}} Kunkka's not the only one with a spyglass.
+* <sm2>tiku_ann_item_purchase_05.mp3</sm2> {{Item|Divine Rapier|20px}} {{resp|r}} Now there's a powder-packed magazine!
+* <sm2>tiku_ann_item_purchase_07.mp3</sm2> {{Item|Divine Rapier|20px}} {{resp|r}} There's a gollywobbler!
+* <sm2>tiku_ann_item_purchase_06.mp3</sm2> {{Item|Refresher Orb|20px}} {{resp|r}} A refreshing possibility!
+* <sm2>Tiku_ann_type_all_pick_01.mp3</sm2> All pick.
+* <sm2>Tiku_ann_type_all_pick_02.mp3</sm2> All pick.
+* <sm2>Tiku_ann_type_least_played_01.mp3</sm2> Least played.
+* <sm2>Tiku_ann_type_least_played_02.mp3</sm2> Least played.
+* <sm2>Tiku_ann_choose_hero_02.mp3</sm2> Choose your hero.
+* <sm2>Tiku_ann_choose_hero_03.mp3</sm2> Choose your hero.
+* <sm2>Tiku_ann_type_all_mid_01.mp3</sm2> All mid.
+* <sm2>Tiku_ann_type_all_mid_02.mp3</sm2> All mid.
+* <sm2>Tiku_ann_type_follow_up_02.mp3</sm2> {{resp|r}} Who you going to put on the hook?
+* <sm2>Tiku_ann_type_follow_up_01.mp3</sm2> {{resp|r}} What's the scuttle butt, anyway?
+* <sm2>Tiku_ann_type_follow_up_06.mp3</sm2> {{resp|r}} Let the wind take us where she may!
+* <sm2>Tiku_ann_type_follow_up_07.mp3</sm2> {{resp|r}} Why's it always captains? I hate captains!
+* <sm2>Tiku_ann_type_follow_up_13.mp3</sm2> {{resp|r}} For the novice captain.
+* <sm2>Tiku_ann_type_follow_up_05.mp3</sm2> {{resp|r}} More like Admirals Mode!
+* <sm2>Tiku_ann_type_follow_up_08.mp3</sm2> {{resp|r}} Where the heroes choose you.
+* <sm2>Tiku_ann_type_follow_up_11.mp3</sm2> {{resp|r}} This compass must be broken.
+* <sm2>Tiku_ann_type_follow_up_12.mp3</sm2> {{resp|r}} How about... Tidehunter versus Kunkka.
+* <sm2>Tiku_ann_type_follow_up_03.mp3</sm2> {{resp|r}} Let's narrow it down some.
+* <sm2>Tiku_ann_type_follow_up_04.mp3</sm2> {{resp|r}} Probably some good ones in there.
+* <sm2>Tiku_ann_type_follow_up_10.mp3</sm2> {{resp|r}} Now I'M the admiral!
+* <sm2>Tiku_ann_type_follow_up_14.mp3</sm2> {{resp|r}} One of three we shall see!
+* <sm2>Tiku_ann_type_follow_up_15.mp3</sm2> {{resp|r}} This number of choices I can handle.
+* <sm2>Tiku_ann_follow_up_01.mp3</sm2> {{resp|r}} The right crew makes all the difference!
+* <sm2>Tiku_ann_follow_up_02.mp3</sm2> {{resp|r}} I wouldn't take any advice from Kunkka!
+* <sm2>Tiku_ann_follow_up_03.mp3</sm2> {{resp|r}} Don't think so much. Just roll with it.
+* <sm2>Tiku_ann_kill_follow_up_03.mp3</sm2> {{resp|300}} There'll be singing and dancing tonight!
+* <sm2>Tiku_ann_kill_follow_up_01.mp3</sm2> {{resp|300}} Hauled in the net and bludgeoned on deck!
+* <sm2>Tiku_ann_kill_follow_up_spec_01.mp3</sm2> {{resp|300}} Hang the rascals from the yardarm!
+* <sm2>Tiku_ann_kill_follow_up_spec_02.mp3</sm2> {{resp|300}} I'm hungry enough to eat FIVE walruses.
+* <sm2>Tiku_ann_kill_follow_up_04.mp3</sm2> {{resp|300}} I should find you a colossal squid!
+* <sm2>Tiku_ann_kill_follow_up_02.mp3</sm2> {{resp|300}} Learn how to swim before you sail in deep water.
+* <sm2>Tiku_ann_kill_follow_up_spec_03.mp3</sm2> {{resp|300}} There's one to sing songs about!
+* <sm2>Tiku_ann_kill_follow_up_spec_04.mp3</sm2> {{resp|300}} A widowmaker rises!
+* <sm2>Tiku_ann_kill_teamwipe_07.mp3</sm2> {{resp|r}} Cold as the blackest sea, Tidehunter.
+* <sm2>Tiku_ann_kill_teamwipe_08.mp3</sm2> {{resp|r}} It's just what I always wanted.
+* <sm2>Tiku_ann_kill_teamwipe_09.mp3</sm2> {{resp|r}} Your heart's as cold as your hide, Tidehunter.
+* <sm2>Tiku_ann_kill_teamwipe_11.mp3</sm2> {{resp|r}} Maelrawn... have mercy on them.
+* <sm2>Tiku_ann_kill_teamwipe_12.mp3</sm2> {{resp|r}} And the land lubbers lie down below!
+* <sm2>Tiku_ann_kill_teamwipe_13.mp3</sm2> {{resp|r}} Your black heart shows itself, Kunkka!
+* <sm2>Tiku_ann_kill_teamwipe_rad_flw_01.mp3</sm2> {{resp|r}} Those aren't air bubbles.
+* <sm2>Tiku_ann_kill_teamwipe_dire_flw_01.mp3</sm2> {{resp|r}} Down into the icy depths.
+* <sm2>Tiku_ann_cour_kill_follow_up_05.mp3</sm2> {{resp|r}} It should've known better.
+* <sm2>Tiku_ann_cour_kill_follow_up_01.mp3</sm2> {{resp|r}} Throw it in the stew!
+* <sm2>Tiku_ann_cour_kill_follow_up_02.mp3</sm2> {{resp|r}} They're fishing for guppies with cannon fire.
+* <sm2>Tiku_ann_cour_kill_follow_up_03.mp3</sm2> {{resp|r}} I could eat one of those.
+* <sm2>Tiku_ann_cour_kill_follow_up_04.mp3</sm2> {{resp|r}} Swallowed up by a bigger fish. And then by me.
+* <sm2>Tiku_ann_negative_event_01.mp3</sm2> {{resp|r}} Don't let them dismast you!
+* <sm2>Tiku_ann_negative_event_04.mp3</sm2> {{resp|r}} You're heading for dead water.
+* <sm2>Tiku_ann_negative_event_06.mp3</sm2> {{resp|r}} Do you like sucking bilge water?
+* <sm2>Tiku_ann_negative_event_07.mp3</sm2> {{resp|r}} What kind of skipper are you? Look who's talking.
+* <sm2>Tiku_ann_negative_event_02.mp3</sm2> {{resp|r}} Is that a mirage?
+* <sm2>Tiku_ann_negative_event_03.mp3</sm2> {{resp|r}} Douse those fires!
+* <sm2>Tiku_ann_negative_event_05.mp3</sm2> {{resp|r}} If the beacon goes out...
+* <sm2>Tiku_ann_rax_attack_follow_up_03.mp3</sm2> {{resp|r}} Do something! Anything!
+* <sm2>Tiku_ann_rax_attack_mid_follow_up_01.mp3</sm2> {{resp|r}} Are you hungry enough to win this? <small>''mid barracks only</small>
+* <sm2>Tiku_ann_rax_attack_follow_up_01.mp3</sm2> {{resp|r}} Barracks don't rise again.
+* <sm2>Tiku_ann_rax_attack_follow_up_02.mp3</sm2> {{resp|r}} You're heading for heavy seas, mate.
+* <sm2>Tiku_ann_rax_attack_top_follow_up_01.mp3</sm2> {{resp|r}} When it rains, it pours. It's monsoon season! <small>''top barracks only</small>
+* <sm2>Tiku_ann_rax_attack_bot_follow_up_01.mp3</sm2> {{resp|r}} Charting a course for defeat! That's Kunkka's specialty. <small>''bottom barracks only</small>
+* <sm2>Tiku_ann_ancient_attack_follow_up_01.mp3</sm2> {{resp|r}} Your chances are sinking faster than Kunkka's fleet.
+* <sm2>Tiku_ann_ancient_attack_follow_up_02.mp3</sm2> {{resp|r}} This one's going right down the bilge.
+* <sm2>Tiku_ann_ancient_attack_follow_up_03.mp3</sm2> {{resp|r}} We're nearly done here. I say when we're done, Kunkka.
+* <sm2>Tiku_ann_ancient_attack_follow_up_04.mp3</sm2> {{resp|r}} Good thing Ancients don't scream. You surprise me, sometimes, Tidehunter.
+* <sm2>Tiku_ann_negative_event_end_01.mp3</sm2> {{resp|r}} Are you playing half seas over?
+* <sm2>Tiku_ann_negative_event_end_02.mp3</sm2> {{resp|r}} Fiddleheads!
+* <sm2>Tiku_ann_negative_event_end_03.mp3</sm2> {{resp|r}} This isn't a hen frigate!
+* <sm2>Tiku_ann_negative_event_end_04.mp3</sm2> {{resp|r}} I've seen tadpoles put up more fight.
+* <sm2>Tiku_ann_negative_event_end_05.mp3</sm2> {{resp|r}} Hell of a shakedown cruise.
+* <sm2>Tiku_ann_negative_event_end_06.mp3</sm2> {{resp|r}} Bottoms-up!
+* <sm2>Tiku_ann_rax_fall_yr_follow_up_01.mp3</sm2> {{resp|r}} Barratry at its worst. What does that mean?
+* <sm2>Tiku_ann_rax_fall_yr_follow_up_02.mp3</sm2> {{resp|r}} They're rolling over you!
+* <sm2>Tiku_ann_rax_fall_yr_follow_up_03.mp3</sm2> {{resp|r}} You're sailing against the current now.
+* <sm2>Tiku_ann_negative_event_end_07.mp3</sm2> {{resp|r}} This ship's making water.
+* <sm2>Tiku_ann_negative_event_end_08.mp3</sm2> {{resp|r}} Let's just blame Kunkka for that.
+* <sm2>Tiku_ann_negative_event_end_09.mp3</sm2> {{resp|r}} This is dereliction of duty!
+* <sm2>Tiku_ann_negative_event_end_10.mp3</sm2> {{resp|r}} Did you kill an albatross or something?
+* <sm2>Tiku_ann_negative_event_end_11.mp3</sm2> {{resp|r}} Are you running a skeleton crew?
+* <sm2>Tiku_ann_negative_event_end_12.mp3</sm2> {{resp|r}} That's hogwash!
+* <sm2>Tiku_ann_yr_shrine_fall_followup_01.mp3</sm2> {{resp|r}} Now you're bound to get scurvy.
+* <sm2>Tiku_ann_positive_event_end_01.mp3</sm2> {{resp|r}} You're looking shipshape indeed!
+* <sm2>Tiku_ann_positive_event_end_03.mp3</sm2> {{resp|r}} Pride of the morning!
+* <sm2>Tiku_ann_positive_event_end_04.mp3</sm2> {{resp|r}} Give me more!
+* <sm2>Tiku_ann_positive_event_end_06.mp3</sm2> {{resp|r}} Hahaha! They're in rough waters now.
+* <sm2>Tiku_ann_positive_event_end_07.mp3</sm2> {{resp|r}} Handsomely done! Yeah. Not bad for a human.
+* <sm2>Tiku_ann_positive_event_end_02.mp3</sm2> {{resp|r}} I love the smell of ambergris in the morning.
+* <sm2>Tiku_ann_positive_event_end_05.mp3</sm2> {{resp|r}} And no lazy jack to catch it!
+* <sm2>Tiku_ann_rax_fall_enm_follow_up_01.mp3</sm2> {{resp|r}} Nothing left but debris!
+* <sm2>Tiku_ann_rax_fall_enm_follow_up_02.mp3</sm2> {{resp|r}} Flood waters rising!
+* <sm2>Tiku_ann_positive_event_end_09.mp3</sm2> {{resp|r}} Let's see them ride this one out!
+* <sm2>Tiku_ann_positive_event_end_10.mp3</sm2> {{resp|r}} Leave them high and dry!
+* <sm2>Tiku_ann_positive_event_end_11.mp3</sm2> {{resp|r}} You'll get your sea legs yet!
+* <sm2>Tiku_ann_positive_event_end_12.mp3</sm2> {{resp|r}} Caught in the tide rip!
+* <sm2>Tiku_ann_positive_event_end_13.mp3</sm2> {{resp|r}} Time to forge ahead!
+* <sm2>Tiku_ann_positive_event_end_15.mp3</sm2> {{resp|r}} Hopes sink just like Kunkka's ships.
+* <sm2>Tiku_ann_enm_shrine_fall_followup_01.mp3</sm2> {{resp|r}} The sea holds no sanctuary.
+* <sm2>Tiku_ann_rax_fall_follow_up_04.mp3</sm2> {{resp|r}} Guess they got inundated.
+* <sm2>Tiku_ann_rax_fall_follow_up_05.mp3</sm2> {{resp|r}} They must have trained under you, Kunkka!
+* <sm2>Tiku_ann_rax_fall_follow_up_06.mp3</sm2> {{resp|r}} Do they even know the rules?
+* <sm2>Tiku_ann_rax_fall_follow_up_01.mp3</sm2> {{resp|r}} A team that gives up their barracks earns no rum.
+* <sm2>Tiku_ann_rax_fall_follow_up_02.mp3</sm2> {{resp|r}} Like stabbing fish in a barrel.
+* <sm2>Tiku_ann_rax_fall_follow_up_03.mp3</sm2> {{resp|r}} That set their gameplan adrift.
+* <sm2>Tiku_ann_spec_shrine_fall_followup_02.mp3</sm2> {{resp|r}} Splish splash!
+* <sm2>Tiku_ann_spec_shrine_fall_followup_01.mp3</sm2> {{resp|r}} That cup runneth empty.
+* <sm2>Tiku_ann_twr_deny_yr_follow_up_01.mp3</sm2> {{resp|r}} Earned your grog there!
+* <sm2>Tiku_ann_twr_deny_yr_follow_up_02.mp3</sm2> {{resp|r}} Slippery!
+* <sm2>Tiku_ann_twr_deny_yr_follow_up_03.mp3</sm2> {{resp|r}} Will you look at that? Not if you're asking.
+* <sm2>Tiku_ann_twr_deny_enm_follow_up_02.mp3</sm2> {{resp|r}} That should've been yours!
+* <sm2>Tiku_ann_twr_deny_enm_follow_up_03.mp3</sm2> {{resp|r}} You can do better than that.
+* <sm2>Tiku_ann_twr_deny_enm_follow_up_01.mp3</sm2> {{resp|r}} Talk about a fail boat! Ugh. Hahahaha!
+* <sm2>Tiku_ann_mega_now_follow_up_02.mp3</sm2> {{resp|r}} Once they're done with the Ancient, we can start on Kunkka.
+* <sm2>Tiku_ann_mega_now_follow_up_03.mp3</sm2> {{resp|r}} That's my kind of crew. Says Abraham the sailor.
+* <sm2>Tiku_ann_mega_now_follow_up_01.mp3</sm2> {{resp|r}} We might be near the bitter end.
+* <sm2>Tiku_ann_mega_now_follow_up_06.mp3</sm2> {{resp|r}} It's about time to jump ship, perhaps. Coward.
+* <sm2>Tiku_ann_mega_now_follow_up_07.mp3</sm2> {{resp|r}} I'm hungry enough to eat one of those. Truly, a one-track mind.
+* <sm2>Tiku_ann_mega_now_follow_up_04.mp3</sm2> {{resp|r}} Radiant's ship is into the eye of the wind.
+* <sm2>Tiku_ann_mega_now_follow_up_05.mp3</sm2> {{resp|r}} This one's about to sink beneath the waves.
 * <sm2>Dlc_lina_announcer_welcome_02.mp3</sm2> Ready to set the world on fire? <small>[[#welcome|''followup'']]</small>
 * <sm2>Dlc_lina_announcer_welcome_03.mp3</sm2> This one is gonna burn. <small>[[#welcome|''followup'']]</small>
 * <sm2>Dlc_lina_announcer_welcome_01.mp3</sm2> Welcome to Dota. <small>[[#welcome|''followup'']]</small>
@@ -6892,6 +8400,399 @@
 * <sm2>dlc_stormspirit_announcer_event_neg_15.mp3</sm2> In case you hadn't noticed.
 * <sm2>dlc_stormspirit_announcer_event_neg_16.mp3</sm2> This wasn't in the forecast.
 * <sm2>dlc_stormspirit_announcer_event_neg_17.mp3</sm2> Gear up for heavy weather.
+* <sm2>Dlc_tech_ann_welcome_03.mp3</sm2> Oh ho ho! I can't wait to see this! Me neither. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_tech_ann_welcome_04.mp3</sm2> Oh it's you again. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_tech_ann_welcome_06.mp3</sm2> So, who's gonna blow up today? <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_tech_ann_welcome_07.mp3</sm2> Welcome back. <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_tech_ann_welcome_01.mp3</sm2> Welcome to Dota! <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_tech_ann_welcome_02.mp3</sm2> Welcome to Dota! <small>[[#welcome|''followup'']]</small>
+* <sm2>Dlc_tech_ann_get_to_it_01.mp3</sm2> {{resp|r}} Get to it!
+* <sm2>Dlc_tech_ann_get_to_it_02.mp3</sm2> {{resp|r}} Get to it!
+* <sm2>Dlc_tech_ann_type_all_pick_01.mp3</sm2> {{resp|r}} All pick!
+* <sm2>Dlc_tech_ann_type_all_pick_02.mp3</sm2> {{resp|r}} All pick!
+* <sm2>Dlc_tech_ann_type_all_pick_03.mp3</sm2> {{resp|r}} Who's it gonna be?
+* <sm2>Dlc_tech_ann_type_all_pick_04.mp3</sm2> {{resp|r}} Who's it gonna be?
+* <sm2>Dlc_tech_ann_type_all_random_01.mp3</sm2> {{resp|r}} All random.
+* <sm2>Dlc_tech_ann_type_all_random_02.mp3</sm2> {{resp|r}} All random.
+* <sm2>Dlc_tech_ann_type_capt_draft_01.mp3</sm2> {{resp|r}} Captain's draft.
+* <sm2>Dlc_tech_ann_type_capt_draft_02.mp3</sm2> {{resp|r}} Captain's draft.
+* <sm2>Dlc_tech_ann_type_capt_mode_01.mp3</sm2> {{resp|r}} Captain's mode.
+* <sm2>Dlc_tech_ann_type_capt_mode_02.mp3</sm2> {{resp|r}} Captain's mode.
+* <sm2>Dlc_tech_ann_type_death_match_01.mp3</sm2> {{resp|r}} Deathmatch.
+* <sm2>Dlc_tech_ann_type_death_match_02.mp3</sm2> {{resp|r}} Deathmatch.
+* <sm2>Dlc_tech_ann_type_easy_mode_01.mp3</sm2> {{resp|u}} Easy mode.
+* <sm2>Dlc_tech_ann_type_easy_mode_02.mp3</sm2> {{resp|u}} Easy mode.
+* <sm2>Dlc_tech_ann_type_least_played_01.mp3</sm2> {{resp|r}} Least played.
+* <sm2>Dlc_tech_ann_type_least_played_02.mp3</sm2> {{resp|r}} Least played.
+* <sm2>Dlc_tech_ann_type_mid_only_01.mp3</sm2> {{resp|r}} Mid only.
+* <sm2>Dlc_tech_ann_type_mid_only_02.mp3</sm2> {{resp|r}} Mid only.
+* <sm2>Dlc_tech_ann_type_random_draft_01.mp3</sm2> {{resp|r}} Random draft.
+* <sm2>Dlc_tech_ann_type_random_draft_02.mp3</sm2> {{resp|r}} Random draft.
+* <sm2>Dlc_tech_ann_type_capt_mode_rev_01.mp3</sm2> {{resp|r}} Reverse captain's mode.
+* <sm2>Dlc_tech_ann_type_capt_mode_rev_02.mp3</sm2> {{resp|r}} Reverse captain's mode.
+* <sm2>Dlc_tech_ann_type_single_draft_01.mp3</sm2> {{resp|r}} Single draft.
+* <sm2>Dlc_tech_ann_type_single_draft_02.mp3</sm2> {{resp|r}} Single draft.
+* <sm2>Dlc_tech_ann_choose_hero_01.mp3</sm2> {{resp|r}} Choose your hero!
+* <sm2>Dlc_tech_ann_choose_hero_02.mp3</sm2> {{resp|r}} Choose your hero!
+* <sm2>Dlc_tech_ann_pick_yr_01.mp3</sm2> Your turn to pick.
+* <sm2>Dlc_tech_ann_pick_yr_02.mp3</sm2> Your turn to pick.
+* <sm2>Dlc_tech_ann_pick_enm_01.mp3</sm2> The enemy's turn to pick.
+* <sm2>Dlc_tech_ann_pick_enm_02.mp3</sm2> The enemy's turn to pick.
+* <sm2>Dlc_tech_ann_pick_their_01.mp3</sm2> Their turn to pick.
+* <sm2>Dlc_tech_ann_pick_their_02.mp3</sm2> Their turn to pick.
+* <sm2>Dlc_tech_ann_pick_rad_01.mp3</sm2> Radiant team pick.
+* <sm2>Dlc_tech_ann_pick_rad_02.mp3</sm2> Radiant team pick.
+* <sm2>Dlc_tech_ann_pick_dire_01.mp3</sm2> Dire team pick.
+* <sm2>Dlc_tech_ann_pick_dire_02.mp3</sm2> Dire team pick.
+* <sm2>Dlc_tech_ann_ban_yr_01.mp3</sm2> Your turn to ban.
+* <sm2>Dlc_tech_ann_ban_yr_02.mp3</sm2> Your turn to ban.
+* <sm2>Dlc_tech_ann_ban_enm_01.mp3</sm2> The enemy's turn to ban.
+* <sm2>Dlc_tech_ann_ban_enm_02.mp3</sm2> The enemy's turn to ban.
+* <sm2>Dlc_tech_ann_ban_their_01.mp3</sm2> Their turn to ban.
+* <sm2>Dlc_tech_ann_ban_their_02.mp3</sm2> Their turn to ban.
+* <sm2>Dlc_tech_ann_ban_rad_01.mp3</sm2> Radiant team ban.
+* <sm2>Dlc_tech_ann_ban_rad_02.mp3</sm2> Radiant team ban.
+* <sm2>Dlc_tech_ann_ban_dire_01.mp3</sm2> Dire team ban.
+* <sm2>Dlc_tech_ann_ban_dire_02.mp3</sm2> Dire team ban.
+* <sm2>Dlc_tech_ann_count_pick_10_01.mp3</sm2> Ten seconds remamining.
+* <sm2>Dlc_tech_ann_count_pick_10_02.mp3</sm2> Ten seconds remamining.
+* <sm2>Dlc_tech_ann_count_pick_05_01.mp3</sm2> Five seconds remaining.
+* <sm2>Dlc_tech_ann_count_pick_05_02.mp3</sm2> Five seconds remaining.
+* <sm2>Dlc_tech_ann_time_reserve_01.mp3</sm2> Reserve time. <small>[[#reserve time|''followup'']]</small>
+* <sm2>Dlc_tech_ann_time_reserve_02.mp3</sm2> Reserve time. <small>[[#reserve time|''followup'']]</small>
+* <sm2>Dlc_tech_ann_complete_yr_01.mp3</sm2> {{resp|u}} Your team is complete.
+* <sm2>Dlc_tech_ann_complete_yr_02.mp3</sm2> {{resp|u}} Your team is complete.
+* <sm2>Dlc_tech_ann_complete_their.mp3</sm2> {{resp|u}} Their team is complete.
+* <sm2>Dlc_tech_ann_complete_enm_01.mp3</sm2> {{resp|u}} The enemy team is complete.
+* <sm2>Dlc_tech_ann_complete_enm_02.mp3</sm2> {{resp|u}} The enemy team is complete.
+* <sm2>Dlc_tech_ann_complete_rad_01.mp3</sm2> {{resp|u}} Radiant team is complete.
+* <sm2>Dlc_tech_ann_complete_rad_02.mp3</sm2> {{resp|u}} Radiant team is complete.
+* <sm2>Dlc_tech_ann_complete_dire_01.mp3</sm2> {{resp|u}} Dire's team is complete.
+* <sm2>Dlc_tech_ann_complete_dire_02.mp3</sm2> {{resp|u}} Dire team is complete.
+* <sm2>Dlc_tech_ann_choose_hero_01.mp3</sm2> Choose your hero!
+* <sm2>Dlc_tech_ann_choose_hero_02.mp3</sm2> Choose your hero!
+* <sm2>Dlc_tech_ann_tech_pick_01.mp3</sm2> {{Hero icon|Techies|16px}} {{resp|r}} Ooo! Someone has good taste!
+* <sm2>Dlc_tech_ann_tech_pick_02.mp3</sm2> {{Hero icon|Techies|16px}} {{resp|r}} I knew we'd be picked! No you didn't.
+* <sm2>Dlc_tech_ann_tech_pick_03.mp3</sm2> {{Hero icon|Techies|16px}} {{resp|r}} Huh! Someone's picked us. They'll never live to regret it.
+* <sm2>Dlc_tech_ann_tech_pick_04.mp3</sm2> {{Hero icon|Techies|16px}} {{resp|r}} Huh! We're on? Grab the mines, we're on!
+* <sm2>Dlc_tech_ann_prepare_01.mp3</sm2> Prepare for battle!
+* <sm2>Dlc_tech_ann_prepare_02.mp3</sm2> Prepare to battle!
+* <sm2>Dlc_tech_ann_count_battle_30_01.mp3</sm2> Thirty seconds to battle.
+* <sm2>Dlc_tech_ann_count_battle_30_02.mp3</sm2> Thirty seconds to battle.
+* <sm2>Dlc_tech_ann_count_battle_10_01.mp3</sm2> Ten seconds to battle.
+* <sm2>Dlc_tech_ann_count_battle_10_02.mp3</sm2> Ten seconds to battle.
+* <sm2>Dlc_tech_ann_battle_begin_01.mp3</sm2> The battle begins! <small>[[#battle begins|''followup'']]</small>
+* <sm2>Dlc_tech_ann_battle_begin_08.mp3</sm2> The battle begins! <small>[[#battle begins|''followup'']]</small>
+* <sm2>Dlc_tech_ann_battle_begin_03.mp3</sm2> {{resp|r}} Where'd that horn come from?
+* <sm2>Dlc_tech_ann_battle_begin_04.mp3</sm2> {{resp|r}} Oh boy oh boy! This is gonna be fun!
+* <sm2>Dlc_tech_ann_battle_begin_05.mp3</sm2> {{resp|r}} Woo! It's starting, it's starting!
+* <sm2>Dlc_tech_ann_kill_1stblood_01.mp3</sm2> First blood. <small>[[#first blood|''followup'']]</small>
+* <sm2>Dlc_tech_ann_kill_double_01.mp3</sm2> Double kill.
+* <sm2>Dlc_tech_ann_kill_triple_01.mp3</sm2> Triple kill.
+* <sm2>Dlc_tech_ann_kill_ultra_01.mp3</sm2> Ultra kill.
+* <sm2>Dlc_tech_ann_kill_rampage_01.mp3</sm2> {{resp|5}} Rampage.
+* <sm2>Dlc_tech_ann_kill_spree_01.mp3</sm2> Killing spree.
+* <sm2>Dlc_tech_ann_kill_dominate_01.mp3</sm2> Dominating.
+* <sm2>Dlc_tech_ann_kill_mega_01.mp3</sm2> Mega kill.
+* <sm2>Dlc_tech_ann_kill_unstop_01.mp3</sm2> Unstoppable.
+* <sm2>Dlc_tech_ann_kill_wicked_01.mp3</sm2> Wicked sick.
+* <sm2>Dlc_tech_ann_kill_monster_01.mp3</sm2> Monster kill.
+* <sm2>Dlc_tech_ann_kill_godlike_01.mp3</sm2> Godlike.
+* <sm2>Dlc_tech_ann_kill_holy_01.mp3</sm2> Holy shit.
+* <sm2>Dlc_tech_ann_kill_holy_02.mp3</sm2> Kaboom.
+* <sm2>Dlc_tech_ann_kill_holy_03.mp3</sm2> Holy shit.
+* <sm2>Dlc_tech_ann_kill_holy_04.mp3</sm2> Holy shit. Language!
+* <sm2>Dlc_tech_ann_kill_godlike_02.mp3</sm2> Techies-like.
+* <sm2>Dlc_tech_ann_kill_ownage_01.mp3</sm2> {{resp|5}} Ownage.
+* <sm2>Dlc_tech_ann_kill_teamwipe_02.mp3</sm2> Looks like the Radiant are... Well, they aren't.
+* <sm2>Dlc_tech_ann_kill_teamwipe_03.mp3</sm2> Radiant's having an existential crisis. You mean they're dead. Yeah.
+* <sm2>Dlc_tech_ann_kill_teamwipe_04.mp3</sm2> Well, Dire's been defused.
+* <sm2>Dlc_tech_ann_kill_teamwipe_05.mp3</sm2> The Dire finally cratered. More like vaporized.
+* <sm2>Dlc_tech_ann_kill_teamwipe_01.mp3</sm2> Huh. They're all dead. Yeah, it's kind of peaceful, isn't it?
+* <sm2>Dlc_tech_ann_cour_kill_rad_01.mp3</sm2> Radiant's courier has been slain! <small>[[#courier|''followup'']]</small>
+* <sm2>Dlc_tech_ann_cour_kill_rad_02.mp3</sm2> Radiant's courier was caught in the crossfire. <small>[[#courier|''followup'']]</small>
+* <sm2>Dlc_tech_ann_cour_kill_dire_01.mp3</sm2> Dire's courier has been slain! <small>[[#courier|''followup'']]</small>
+* <sm2>Dlc_tech_ann_cour_kill_dire_02.mp3</sm2> Dire's courier's gone down in flames. <small>[[#courier|''followup'']]</small>
+* <sm2>Dlc_tech_ann_roshan_fallen_rad_01.mp3</sm2> Roshan has fallen to the Radiant. <small>[[#roshan|''followup'']]</small>
+* <sm2>Dlc_tech_ann_roshan_fallen_rad_02.mp3</sm2> Roshan has fallen to the Radiant. <small>[[#roshan|''followup'']]</small>
+* <sm2>Dlc_tech_ann_roshan_fallen_dire_01.mp3</sm2> Roshan has fallen to the Dire. <small>[[#roshan|''followup'']]</small>
+* <sm2>Dlc_tech_ann_roshan_fallen_dire_02.mp3</sm2> Roshan has fallen to the Dire. <small>[[#roshan|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_attack_yr_top_01.mp3</sm2> {{resp|10}} Your top tower is under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_attack_yr_top_02.mp3</sm2> {{resp|10}} Your top tower is under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_attack_yr_mid_01.mp3</sm2> {{resp|10}} Your middle tower is under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_attack_yr_mid_02.mp3</sm2> {{resp|10}} Your middle tower is under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_attack_yr_bot_01.mp3</sm2> {{resp|10}} Your bottom tower is under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_attack_yr_bot_02.mp3</sm2> {{resp|10}} Your bottom tower is under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_tech_ann_rax_attack_yr_top_01.mp3</sm2> {{resp|10}} Your top barracks are under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_tech_ann_rax_attack_yr_top_02.mp3</sm2> {{resp|10}} Your top barracks are under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_tech_ann_rax_attack_yr_mid_01.mp3</sm2> {{resp|10}} Your middle barracks are under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_tech_ann_rax_attack_yr_mid_02.mp3</sm2> {{resp|10}} Your middle barracks are under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_tech_ann_rax_attack_yr_bot_01.mp3</sm2> {{resp|10}} Your bottom barracks are under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_tech_ann_rax_attack_yr_bot_02.mp3</sm2> {{resp|10}} Your bottom barracks are under attack. <small>[[#negative ongoing|''followup'']]</small>
+* <sm2>Dlc_tech_ann_your_ancient_attack_01.mp3</sm2> {{resp|6}} Your ancient is under attack.
+* <sm2>Dlc_tech_ann_your_ancient_attack_02.mp3</sm2> {{resp|6}} Your ancient is under attack.
+* <sm2>Dlc_tech_ann_twr_attack_rad_top_01.mp3</sm2> {{resp|10}} Radiant's top tower is under attack.
+* <sm2>Dlc_tech_ann_twr_attack_rad_top_02.mp3</sm2> {{resp|10}} Radiant's top tower is under attack.
+* <sm2>Dlc_tech_ann_twr_attack_rad_mid_01.mp3</sm2> {{resp|10}} Radiant's middle tower is under attack.
+* <sm2>Dlc_tech_ann_twr_attack_rad_mid_02.mp3</sm2> {{resp|10}} Radiant's middle tower is under attack.
+* <sm2>Dlc_tech_ann_twr_attack_rad_bot_01.mp3</sm2> {{resp|10}} Radiant's bottom tower is under attack.
+* <sm2>Dlc_tech_ann_twr_attack_rad_bot_02.mp3</sm2> {{resp|10}} Radiant's bottom tower is under attack.
+* <sm2>Dlc_tech_ann_rax_attack_rad_top.mp3</sm2> Radiant's top barracks are under attack.
+* <sm2>Dlc_tech_ann_rax_attack_rad_mid.mp3</sm2> Radiant's middle barracks are under attack.
+* <sm2>Dlc_tech_ann_rax_attack_rad_bot.mp3</sm2> Radiant's bottom barracks are under attack.
+* <sm2>Dlc_tech_ann_rad_ancient_attack_01.mp3</sm2> {{resp|8}} Radiant's ancient is under attack.
+* <sm2>Dlc_tech_ann_rad_ancient_attack_03.mp3</sm2> {{resp|8}} Radiant's ancient is under attack.
+* <sm2>Dlc_tech_ann_rad_ancient_attack_02.mp3</sm2> {{resp|8}} Think the Radiant know about their ancient?
+* <sm2>Dlc_tech_ann_twr_attack_dire_top_01.mp3</sm2> {{resp|10}} Dire's top tower is under attack.
+* <sm2>Dlc_tech_ann_twr_attack_dire_top_02.mp3</sm2> {{resp|10}} Dire's top tower is under attack.
+* <sm2>Dlc_tech_ann_twr_attack_dire_mid_01.mp3</sm2> {{resp|10}} Dire's middle tower is under attack.
+* <sm2>Dlc_tech_ann_twr_attack_dire_mid_02.mp3</sm2> {{resp|10}} Dire's middle tower is under attack.
+* <sm2>Dlc_tech_ann_twr_attack_dire_bot_01.mp3</sm2> {{resp|10}} Dire's bottom tower is under attack.
+* <sm2>Dlc_tech_ann_twr_attack_dire_bot_02.mp3</sm2> {{resp|10}} Dire's bottom tower is under attack.
+* <sm2>Dlc_tech_ann_rax_attack_dire_top.mp3</sm2> Dire's top barracks are under attack.
+* <sm2>Dlc_tech_ann_rax_attack_dire_mid.mp3</sm2> Dire's middle barracks are under attack.
+* <sm2>Dlc_tech_ann_rax_attack_dire_bot.mp3</sm2> Dire's bottom barracks are under attack.
+* <sm2>Dlc_tech_ann_dire_ancient_attack_01.mp3</sm2> {{resp|8}} Dire's ancient is under attack.
+* <sm2>Dlc_tech_ann_dire_ancient_attack_02.mp3</sm2> {{resp|8}} Dire's ancient is under attack.
+* <sm2>Dlc_tech_ann_twr_fall_yr_top_01.mp3</sm2> {{resp|10}} Your top tower has fallen. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_fall_yr_top_02.mp3</sm2> {{resp|10}} Your top tower has fallen. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_fall_yr_mid_01.mp3</sm2> {{resp|10}} Your middle tower has fallen. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_fall_yr_mid_02.mp3</sm2> {{resp|10}} Your middle tower has fallen. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_fall_yr_bot_01.mp3</sm2> {{resp|10}} Your bottom tower has fallen. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_fall_yr_bot_02.mp3</sm2> {{resp|10}} Your bottom tower has fallen. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_tech_ann_rax_fall_yr_top_01.mp3</sm2> {{resp|10}} Your top barracks have fallen. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_tech_ann_rax_fall_yr_top_02.mp3</sm2> {{resp|10}} Your top barracks have fallen. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_tech_ann_rax_fall_yr_mid_01.mp3</sm2> {{resp|10}} Your middle barracks have fallen. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_tech_ann_rax_fall_yr_mid_02.mp3</sm2> {{resp|10}} Your middle barracks have fallen. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_tech_ann_rax_fall_yr_bot_01.mp3</sm2> {{resp|10}} Your bottom barracks have fallen. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_tech_ann_rax_fall_yr_bot_02.mp3</sm2> {{resp|10}} Your bottom barracks have fallen. <small>[[#negative|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_fall_rad_top.mp3</sm2> Radiant's top tower has fallen.
+* <sm2>Dlc_tech_ann_twr_fall_rad_mid.mp3</sm2> Radiant's middle tower has fallen.
+* <sm2>Dlc_tech_ann_twr_fall_rad_bot.mp3</sm2> Radiant's bottom tower has fallen.
+* <sm2>Dlc_tech_ann_rax_fall_rad_top.mp3</sm2> Radiant's top barracks have fallen.
+* <sm2>Dlc_tech_ann_rax_fall_rad_mid.mp3</sm2> Radiant's middle barracks have fallen.
+* <sm2>Dlc_tech_ann_rax_fall_rad_bot.mp3</sm2> Radiant's bottom barracks have fallen.
+* <sm2>Dlc_tech_ann_twr_fall_dire_top.mp3</sm2> Dire's top tower has fallen.
+* <sm2>Dlc_tech_ann_twr_fall_dire_mid.mp3</sm2> Dire's middle tower has fallen.
+* <sm2>Dlc_tech_ann_twr_fall_dire_bot.mp3</sm2> Dire's bottom tower has fallen.
+* <sm2>Dlc_tech_ann_rax_fall_dire_top.mp3</sm2> Dire's top barracks have fallen.
+* <sm2>Dlc_tech_ann_rax_fall_dire_mid.mp3</sm2> Dire's middle barracks have fallen.
+* <sm2>Dlc_tech_ann_rax_fall_dire_bot.mp3</sm2> Dire's bottom barracks have fallen.
+* <sm2>Dlc_tech_ann_twr_fall_their_top.mp3</sm2> Their top tower has fallen.
+* <sm2>Dlc_tech_ann_twr_fall_enm_top.mp3</sm2> {{resp|10}} The enemy's top tower has fallen. <small>[[#positive|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_fall_their_mid.mp3</sm2> Their middle tower has fallen.
+* <sm2>Dlc_tech_ann_twr_fall_enm_mid.mp3</sm2> {{resp|10}} The enemy's middle tower has fallen. <small>[[#positive|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_fall_their_bot.mp3</sm2> Their bottom tower has fallen.
+* <sm2>Dlc_tech_ann_twr_fall_enm_bot.mp3</sm2> {{resp|10}} The enemy's bottom tower has fallen. <small>[[#positive|''followup'']]</small>
+* <sm2>Dlc_tech_ann_rax_fall_their_top.mp3</sm2> Their top barracks have fallen.
+* <sm2>Dlc_tech_ann_rax_fall_enm_top.mp3</sm2> {{resp|10}} The enemy's top barracks have fallen. <small>[[#positive|''followup'']]</small>
+* <sm2>Dlc_tech_ann_rax_fall_their_mid.mp3</sm2> Their middle barracks have fallen.
+* <sm2>Dlc_tech_ann_rax_fall_enm_mid.mp3</sm2> {{resp|10}} The enemy's middle barracks have fallen. <small>[[#positive|''followup'']]</small>
+* <sm2>Dlc_tech_ann_rax_fall_their_bot.mp3</sm2> Their bottom barracks have fallen.
+* <sm2>Dlc_tech_ann_rax_fall_enm_bot.mp3</sm2> {{resp|10}} The enemy's bottom barracks have fallen. <small>[[#positive|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_deny_yr_top_01.mp3</sm2> Your top tower has been denied. <small>[[#tower deny your|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_deny_yr_top_02.mp3</sm2> Your top tower has been denied. <small>[[#tower deny your|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_deny_yr_mid_01.mp3</sm2> Your middle tower has been denied. <small>[[#tower deny your|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_deny_yr_mid_02.mp3</sm2> Your middle tower has been denied. <small>[[#tower deny your|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_deny_yr_bot_01.mp3</sm2> Your bottom tower has been denied. <small>[[#tower deny your|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_deny_yr_bot_02.mp3</sm2> Your bottom tower has been denied. <small>[[#tower deny your|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_deny_rad_top.mp3</sm2> Radiant's top tower has been denied.
+* <sm2>Dlc_tech_ann_twr_deny_rad_mid.mp3</sm2> Radiant's middle tower has been denied.
+* <sm2>Dlc_tech_ann_twr_deny_rad_bot.mp3</sm2> Radiant's bottom tower has been denied.
+* <sm2>Dlc_tech_ann_twr_deny_dire_top.mp3</sm2> Dire's top tower has been denied.
+* <sm2>Dlc_tech_ann_twr_deny_dire_mid.mp3</sm2> Dire's middle tower has been denied.
+* <sm2>Dlc_tech_ann_twr_deny_dire_bot.mp3</sm2> Dire's bottom tower has been denied.
+* <sm2>Dlc_tech_ann_twr_deny_their_top_01.mp3</sm2> Their top tower has been denied. <small>[[#tower deny enemy|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_deny_their_top_02.mp3</sm2> Their top tower has been denied. <small>[[#tower deny enemy|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_deny_their_mid_01.mp3</sm2> Their middle tower has been denied. <small>[[#tower deny enemy|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_deny_their_mid_02.mp3</sm2> Their middle tower has been denied. <small>[[#tower deny enemy|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_deny_their_bot_01.mp3</sm2> Their bottom tower has been denied. <small>[[#tower deny enemy|''followup'']]</small>
+* <sm2>Dlc_tech_ann_twr_deny_their_bot_02.mp3</sm2> Their bottom tower has been denied. <small>[[#tower deny enemy|''followup'']]</small>
+* <sm2>Dlc_tech_ann_fort_rad_01.mp3</sm2> Radiant structures are fortified.
+* <sm2>Dlc_tech_ann_fort_rad_02.mp3</sm2> Radiant structures are fireproof.
+* <sm2>Dlc_tech_ann_fort_rad_03.mp3</sm2> Looks like Radiant closed the blast doors.
+* <sm2>Dlc_tech_ann_fort_rad_04.mp3</sm2> Radiant structures are fortified.
+* <sm2>Dlc_tech_ann_fort_dire_01.mp3</sm2> Dire structures are fortified.
+* <sm2>Dlc_tech_ann_fort_dire_02.mp3</sm2> The Dire have reinforced their structures.
+* <sm2>Dlc_tech_ann_fort_dire_03.mp3</sm2> Dire locked down their structures.
+* <sm2>Dlc_tech_ann_fort_dire_04.mp3</sm2> Dire structures are fortified.
+* <sm2>Dlc_tech_ann_mega_now_you_01.mp3</sm2> You now have megacreeps! <small>[[#megacreeps|''followup'']]</small>
+* <sm2>Dlc_tech_ann_mega_now_you_02.mp3</sm2> You now have megacreeps! <small>[[#megacreeps|''followup'']]</small>
+* <sm2>Dlc_tech_ann_mega_now_rad.mp3</sm2> The Radiant now have megacreeps.
+* <sm2>Dlc_tech_ann_mega_now_dire.mp3</sm2> The Dire now have megacreeps.
+* <sm2>Dlc_tech_ann_mega_now_enm_01.mp3</sm2> The enemy now has megacreeps. <small>[[#megacreeps|''followup'']]</small>
+* <sm2>Dlc_tech_ann_mega_now_enm_02.mp3</sm2> The enemy now has megacreeps. <small>[[#megacreeps|''followup'']]</small>
+* <sm2>Dlc_tech_ann_victory_followup_02.mp3</sm2> Good job! Well done!
+* <sm2>Dlc_tech_ann_victory_followup_03.mp3</sm2> You sure showed them! Showed who what?
+* <sm2>Dlc_tech_ann_victory_rad_01.mp3</sm2> Radiant victory! <small>[[#victory|''followup'']]</small>
+* <sm2>Dlc_tech_ann_victory_rad_02.mp3</sm2> Radiant victory! <small>[[#victory|''followup'']]</small>
+* <sm2>Dlc_tech_ann_victory_dire_01.mp3</sm2> Dire victory! <small>[[#victory|''followup'']]</small>
+* <sm2>Dlc_tech_ann_victory_dire_02.mp3</sm2> Dire victory! <small>[[#victory|''followup'']]</small>
+* <sm2>Dlc_tech_ann_lane_missing_01.mp3</sm2> {{resp|u}} Top is missing!
+* <sm2>Dlc_tech_ann_lane_missing_02.mp3</sm2> {{resp|u}} Top is missing!
+* <sm2>Dlc_tech_ann_lane_missing_03.mp3</sm2> {{resp|u}} Middle is missing!
+* <sm2>Dlc_tech_ann_lane_missing_04.mp3</sm2> {{resp|u}} Middle is missing!
+* <sm2>Dlc_tech_ann_lane_missing_05.mp3</sm2> {{resp|u}} Bottom is missing!
+* <sm2>Dlc_tech_ann_lane_missing_06.mp3</sm2> {{resp|u}} Bottom is missing!
+* <sm2>Dlc_tech_ann_idle_01.mp3</sm2> {{resp|r}} Huh. Nothing's exploded in minutes. I'm bored.
+* <sm2>Dlc_tech_ann_idle_02.mp3</sm2> {{resp|r}} Everything seems so safe. I know, it's awful!
+* <sm2>Dlc_tech_ann_idle_03.mp3</sm2> {{resp|r}} So quiet. So placid. So dull.
+* <sm2>Dlc_tech_ann_idle_04.mp3</sm2> {{resp|r}} So. Yep. Uh-huh. Exactly.
+* <sm2>Dlc_tech_ann_idle_05.mp3</sm2> {{resp|r}} Why aren't they doing anything?
+* <sm2>Dlc_tech_ann_idle_07.mp3</sm2> {{resp|r}} Anything going on? Nah.
+* <sm2>Dlc_tech_ann_idle_06.mp3</sm2> {{resp|r}} Okay, what if we took 2 parts nitrate, 1 part sulfur, some potassium, a bit of brimstone, some cayenne, a pinch of thyme, oregano, basil. Um, I-I think you're just hungry.
+* <sm2>Dlc_tech_ann_something.mp3</sm2> {{resp|u}} Ooo!
+* <sm2>Dlc_tech_ann_kill_exp_01.mp3</sm2> {{resp|u}} ''explosion noises''
+* <sm2>Dlc_tech_ann_kill_exp_02.mp3</sm2> {{resp|u}} ''explosion noises''
+* <sm2>Dlc_tech_ann_kill_exp_03.mp3</sm2> {{resp|u}} ''explosion noises''
+* <sm2>Dlc_tech_ann_kill_exp_04.mp3</sm2> {{resp|u}} ''explosion noises''
+* <sm2>Dlc_tech_ann_kill_exp_05.mp3</sm2> {{resp|u}} ''explosion noises''
+* <sm2>Dlc_tech_ann_kill_exp_06.mp3</sm2> {{resp|u}} ''explosion noises''
+* <sm2>Dlc_tech_ann_kill_exp_07.mp3</sm2> {{resp|u}} ''explosion noises''
+* <sm2>Dlc_tech_ann_kill_exp_08.mp3</sm2> {{resp|u}} Kpow!
+* <sm2>Dlc_tech_ann_kill_exp_09.mp3</sm2> {{resp|u}} Bang!
+* <sm2>Dlc_tech_ann_kill_exp_10.mp3</sm2> {{resp|u}} Biff!
+* <sm2>Dlc_tech_ann_kill_exp_11.mp3</sm2> {{resp|u}} Baam!
+* <sm2>Dlc_tech_ann_kill_exp_12.mp3</sm2> {{resp|u}} Kablooey!
+* <sm2>Dlc_tech_ann_kill_exp_13.mp3</sm2> {{resp|u}} Ssmash!
+* <sm2>Dlc_tech_ann_kill_exp_14.mp3</sm2> {{resp|u}} Bang!
+* <sm2>Dlc_tech_ann_kill_exp_15.mp3</sm2> {{resp|u}} Suck!
+* <sm2>Dlc_tech_ann_kill_exp_16.mp3</sm2> {{resp|u}} ''explosion noises''
+* <sm2>Dlc_tech_ann_kill_exp_17.mp3</sm2> {{resp|u}} ''explosion noises''
+* <sm2>Dlc_tech_ann_kill_exp_18.mp3</sm2> {{resp|u}} ''explosion noises''
+* <sm2>Dlc_tech_ann_kill_exp_19.mp3</sm2> {{resp|u}} ''explosion noises''
+* <sm2>Dlc_tech_ann_kill_exp_20.mp3</sm2> {{resp|u}} ''explosion noises''
+* <sm2>Dlc_tech_ann_kill_exp_21.mp3</sm2> {{resp|u}} Bam!
+* <sm2>Dlc_tech_ann_kill_exp_22.mp3</sm2> {{resp|u}} Pow!
+* <sm2>Dlc_tech_ann_kill_exp_23.mp3</sm2> {{resp|u}} Puuff!
+* <sm2>Dlc_tech_ann_kill_exp_24.mp3</sm2> {{resp|u}} Peww!
+* <sm2>Dlc_tech_ann_kill_exp_25.mp3</sm2> {{resp|u}} ''explosion noises'' yeah!
+* <sm2>Dlc_tech_ann_kill_exp_26.mp3</sm2> {{resp|u}} Ploom! Papooom!
+* <sm2>Dlc_tech_ann_kill_exp_27.mp3</sm2> {{resp|u}} Kapoow!
+* <sm2>Dlc_tech_ann_kill_exp_28.mp3</sm2> {{resp|u}} Baaang!
+* <sm2>Dlc_tech_ann_kill_exp_29.mp3</sm2> {{resp|u}} Bang bang bang bang bang!
+* <sm2>Dlc_tech_ann_kill_exp_30.mp3</sm2> {{resp|u}} Pew! Pew pew pew pew! Pew pewpewpewpewpewpewpewpew! Pew pew!
+* <sm2>Dlc_tech_ann_choose_hero_01.mp3</sm2> {{resp|r}} Choose your hero!
+* <sm2>Dlc_tech_ann_choose_hero_02.mp3</sm2> {{resp|r}} Choose your hero!
+* <sm2>Dlc_tech_ann_get_to_it_01.mp3</sm2> {{resp|r}} Get to it!
+* <sm2>Dlc_tech_ann_get_to_it_02.mp3</sm2> {{resp|r}} Get to it!
+* <sm2>Dlc_tech_ann_type_all_pick_01.mp3</sm2> {{resp|r}} All pick!
+* <sm2>Dlc_tech_ann_type_all_pick_02.mp3</sm2> {{resp|r}} All pick!
+* <sm2>Dlc_tech_ann_type_all_pick_03.mp3</sm2> {{resp|r}} Who's it gonna be?
+* <sm2>Dlc_tech_ann_type_all_pick_04.mp3</sm2> {{resp|r}} Who's it gonna be?
+* <sm2>Dlc_tech_ann_type_least_played_01.mp3</sm2> {{resp|r}} Least played.
+* <sm2>Dlc_tech_ann_type_least_played_02.mp3</sm2> {{resp|r}} Least played.
+* <sm2>Dlc_tech_ann_type_mid_only_01.mp3</sm2> {{resp|r}} Mid only.
+* <sm2>Dlc_tech_ann_type_mid_only_02.mp3</sm2> {{resp|r}} Mid only.
+* <sm2>Dlc_tech_ann_pick_someone_01.mp3</sm2> {{resp|r}} Pick someone.
+* <sm2>Dlc_tech_ann_pick_someone_02.mp3</sm2> {{resp|r}} Pick someone.
+* <sm2>Dlc_tech_ann_battle_begin_02.mp3</sm2> {{resp|r}} Here comes the violence! Oh ho-ho!
+* <sm2>Dlc_tech_ann_battle_begin_06.mp3</sm2> {{resp|r}} So, you think anyone's gonna live through this? Not even one.
+* <sm2>Dlc_tech_ann_battle_begin_07.mp3</sm2> {{resp|r}} I got a lot of gold riding on this.
+* <sm2>Dlc_tech_ann_cour_kill_followup_01.mp3</sm2> {{resp|r}} Aww.
+* <sm2>Dlc_tech_ann_cour_kill_followup_02.mp3</sm2> {{resp|r}} It had so much left to give. And carry.
+* <sm2>Dlc_tech_ann_cour_kill_followup_03.mp3</sm2> {{resp|r}} Somebody spent a lot of money on that thing.
+* <sm2>Dlc_tech_ann_cour_kill_followup_04.mp3</sm2> {{resp|r}} Aren't those things endangered?
+* <sm2>Dlc_tech_ann_roshan_fallen_followup_03.mp3</sm2> {{resp|r}} If I know Roshan--And you don't--he'll be back in a few minutes.
+* <sm2>Dlc_tech_ann_roshan_fallen_followup_01.mp3</sm2> {{resp|r}} Well, technically Roshan didn't really fall. More like imploded.
+* <sm2>Dlc_tech_ann_roshan_fallen_followup_05.mp3</sm2> {{resp|r}} Wonder what Roshan ever did to them.
+* <sm2>Dlc_tech_ann_roshan_fallen_followup_06.mp3</sm2> {{resp|r}} You know that trick you can only do once? They can do it twice now.
+* <sm2>Dlc_tech_ann_roshan_fallen_followup_04.mp3</sm2> {{resp|r}} Mmm, cheese!
+* <sm2>Dlc_tech_ann_twr_deny_yr_01.mp3</sm2> {{resp|r}} Aw, what did it ever do to you?
+* <sm2>Dlc_tech_ann_twr_deny_yr_02.mp3</sm2> {{resp|r}} Practicing on your own towers, eh? Ah ha, good idea.
+* <sm2>Dlc_tech_ann_twr_deny_yr_03.mp3</sm2> {{resp|r}} It was really getting in the way.
+* <sm2>Dlc_tech_ann_twr_deny_yr_04.mp3</sm2> {{resp|r}} Demolition safety starts at home. Safety?
+* <sm2>Dlc_tech_ann_twr_deny_yr_05.mp3</sm2> {{resp|r}} Is that a failure or a success? Uh, both?
+* <sm2>Dlc_tech_ann_twr_deny_their_01.mp3</sm2> {{resp|r}} Well why even have it if you can't blow it up.
+* <sm2>Dlc_tech_ann_twr_deny_their_02.mp3</sm2> {{resp|r}} They're just doing what's best for everybody.
+* <sm2>Dlc_tech_ann_twr_deny_their_03.mp3</sm2> {{resp|r}} Why didn't we think of that?
+* <sm2>Dlc_tech_ann_twr_deny_their_04.mp3</sm2> {{resp|r}} Think it was sabotage?
+* <sm2>Dlc_tech_ann_mega_now_followup_01.mp3</sm2> {{resp|r}} And here come the demolition squads. Thought that was us.
+* <sm2>Dlc_tech_ann_mega_now_followup_02.mp3</sm2> {{resp|r}} Welp, it was fun while it lasted.
+* <sm2>Dlc_tech_ann_mega_now_followup_03.mp3</sm2> {{resp|r}} Why do they call em creeps anyway? Huh, have you ever met one?
+* <sm2>Dlc_tech_ann_mega_now_followup_04.mp3</sm2> {{resp|r}} Don't worry. It'll all be over soon.
+* <sm2>Dlc_tech_ann_victory_followup_04.mp3</sm2> How'd you like to be an honorary Techie?
+* <sm2>Dlc_tech_ann_victory_followup_07.mp3</sm2> That gives me an idea. New bomb? Let's go!
+* <sm2>Dlc_tech_ann_victory_followup_09.mp3</sm2> Well, that was fun. You get any good data? Uh, data?
+* <sm2>Dlc_tech_ann_victory_followup_05.mp3</sm2> Well, great explosion at least.
+* <sm2>Dlc_tech_ann_victory_followup_06.mp3</sm2> It's not the end of the world. Well it looks like the end of the world.
+* <sm2>Dlc_tech_ann_victory_followup_01.mp3</sm2> {{resp|r}} Ooo! Ahh!
+* <sm2>Dlc_tech_ann_victory_followup_08.mp3</sm2> {{resp|r}} Pretty colors. Yeah!
+* <sm2>Dlc_tech_ann_event_pos_end_01.mp3</sm2> {{resp|r}} Kaboom!
+* <sm2>Dlc_tech_ann_event_pos_end_02.mp3</sm2> {{resp|r}} I give it a 4.
+* <sm2>Dlc_tech_ann_event_pos_end_03.mp3</sm2> {{resp|r}} I give it a 5.
+* <sm2>Dlc_tech_ann_event_pos_end_04.mp3</sm2> {{resp|r}} I give it a 6.
+* <sm2>Dlc_tech_ann_event_pos_end_05.mp3</sm2> {{resp|r}} I give it a 7.
+* <sm2>Dlc_tech_ann_event_pos_end_06.mp3</sm2> {{resp|r}} I guess it wasn't up to code.
+* <sm2>Dlc_tech_ann_event_pos_end_07.mp3</sm2> {{resp|r}} Love it when that happens. Me too.
+* <sm2>Dlc_tech_ann_event_pos_end_08.mp3</sm2> {{resp|r}} Got some good data from that!
+* <sm2>Dlc_tech_ann_event_pos_end_09.mp3</sm2> {{resp|r}} Is that good? Let's say yes.
+* <sm2>Dlc_tech_ann_event_pos_end_10.mp3</sm2> {{resp|r}} Now that was an explosion.
+* <sm2>Dlc_tech_ann_event_pos_end_11.mp3</sm2> {{resp|r}} Good for you! Now do it again.
+* <sm2>Dlc_tech_ann_event_pos_end_12.mp3</sm2> {{resp|r}} Oh this is so exciting.
+* <sm2>Dlc_tech_ann_event_pos_end_13.mp3</sm2> {{resp|r}} Don't quit now! Still so many things to blow up.
+* <sm2>Dlc_tech_ann_event_pos_end_14.mp3</sm2> {{resp|r}} That'll show 'em!
+* <sm2>Dlc_tech_ann_event_pos_end_15.mp3</sm2> {{resp|r}} Mkhsm he he he he. Hehehehe.
+* <sm2>Dlc_tech_ann_event_pos_end_16.mp3</sm2> {{resp|r}} They had that coming. Yeah.
+* <sm2>Dlc_tech_ann_event_pos_end_18.mp3</sm2> {{resp|r}} It's a start.
+* <sm2>Dlc_tech_ann_event_pos_end_20.mp3</sm2> {{resp|r}} They're not gonna take that lying down. Or breathing.
+* <sm2>Dlc_tech_ann_event_pos_end_21.mp3</sm2> {{resp|r}} Well I hope they're proud of themselves.
+* <sm2>Dlc_tech_ann_event_pos_end_22.mp3</sm2> {{resp|r}} Very nice! How are they ever going to follow that up?
+* <sm2>Dlc_tech_ann_event_pos_end_23.mp3</sm2> {{resp|r}} Ah! That was refreshing.
+* <sm2>Dlc_tech_ann_event_pos_end_24.mp3</sm2> {{resp|r}} Hehehe. Hehehehehehaha!
+* <sm2>Dlc_tech_ann_event_pos_end_26.mp3</sm2> {{resp|r}} Ooo! Crumbly!
+* <sm2>Dlc_tech_ann_firstblood_follow_01.mp3</sm2> {{resp|r}} Look at all those pieces.
+* <sm2>Dlc_tech_ann_firstblood_follow_02.mp3</sm2> {{resp|r}} Took em long enough.
+* <sm2>Dlc_tech_ann_event_pos_end_17.mp3</sm2> {{resp|r}} Nice.
+* <sm2>Dlc_tech_ann_event_pos_end_19.mp3</sm2> {{resp|r}} Yup.
+* <sm2>Dlc_tech_ann_event_pos_end_25.mp3</sm2> {{resp|r}} Keep it up.
+* <sm2>Dlc_tech_ann_event_neg_end_01.mp3</sm2> {{resp|r}} Welp, there's always next time. Is there?
+* <sm2>Dlc_tech_ann_event_neg_end_02.mp3</sm2> {{resp|r}} But that was my favorite. Ah, they're all your favorite.
+* <sm2>Dlc_tech_ann_event_neg_end_03.mp3</sm2> {{resp|r}} Coulda been a lot worse. I doubt it.
+* <sm2>Dlc_tech_ann_event_neg_end_04.mp3</sm2> {{resp|r}} Are those smithereens or rubble? I think technically both.
+* <sm2>Dlc_tech_ann_event_neg_end_05.mp3</sm2> {{resp|r}} Well, at least the blast was pretty. Oh you would say that--I would too.
+* <sm2>Dlc_tech_ann_event_neg_end_06.mp3</sm2> {{resp|r}} Well it's not all bad news. Yes it is. Oh.
+* <sm2>Dlc_tech_ann_event_neg_end_07.mp3</sm2> {{resp|r}} It was nice. But it was missing something. Yeah.
+* <sm2>Dlc_tech_ann_event_neg_end_08.mp3</sm2> {{resp|r}} That was bad, wasn't it?
+* <sm2>Dlc_tech_ann_event_neg_end_09.mp3</sm2> {{resp|r}} We're not impressed. Well, I am.
+* <sm2>Dlc_tech_ann_event_neg_end_10.mp3</sm2> {{resp|r}} This isn't looking good. Unless you like watching things blow up.
+* <sm2>Dlc_tech_ann_event_neg_end_13.mp3</sm2> {{resp|r}} That ended well. Yeah, for the other guys.
+* <sm2>Dlc_tech_ann_event_neg_end_15.mp3</sm2> {{resp|r}} Well, they tried. Probably.
+* <sm2>Dlc_tech_ann_event_neg_end_17.mp3</sm2> {{resp|r}} They can call that one the control.
+* <sm2>Dlc_tech_ann_event_neg_end_18.mp3</sm2> {{resp|r}} Well, failure is a result too.
+* <sm2>Dlc_tech_ann_event_neg_end_19.mp3</sm2> {{resp|r}} I hope they learned something.
+* <sm2>Dlc_tech_ann_event_neg_end_20.mp3</sm2> {{resp|r}} Coulda been worse. How? Coulda been their ancient.
+* <sm2>Dlc_tech_ann_event_neg_end_21.mp3</sm2> {{resp|r}} Oh well, can't win 'em all. But you should try.
+* <sm2>Dlc_tech_ann_event_neg_end_22.mp3</sm2> {{resp|r}} Why do they get to have all the fun?
+* <sm2>Dlc_tech_ann_event_neg_end_23.mp3</sm2> {{resp|r}} It really brought the lane together.
+* <sm2>Dlc_tech_ann_event_neg_end_24.mp3</sm2> {{resp|r}} What were they thinking?
+* <sm2>Dlc_tech_ann_event_neg_end_28.mp3</sm2> {{resp|r}} So, that happened.
+* <sm2>Dlc_tech_ann_event_neg_end_25.mp3</sm2> {{resp|r}} Well, it's not over yet.
+* <sm2>Dlc_tech_ann_event_neg_end_26.mp3</sm2> {{resp|r}} Ouch.
+* <sm2>Dlc_tech_ann_event_neg_end_27.mp3</sm2> {{resp|r}} Oh well.
+* <sm2>Dlc_tech_ann_event_neg_01.mp3</sm2> {{resp|r}} Somebody oughtta do something about that. Yeah, they really should.
+* <sm2>Dlc_tech_ann_event_neg_02.mp3</sm2> {{resp|r}} Ah, it's not very urgent.
+* <sm2>Dlc_tech_ann_event_neg_04.mp3</sm2> {{resp|r}} You think they know? Well, they will!
+* <sm2>Dlc_tech_ann_event_neg_05.mp3</sm2> {{resp|r}} Better get there before the fuse goes!
+* <sm2>Dlc_tech_ann_event_neg_06.mp3</sm2> {{resp|r}} Is it fireproof? We'll see!
+* <sm2>Dlc_tech_ann_event_neg_07.mp3</sm2> {{resp|r}} Exciting! Quiet.
+* <sm2>Dlc_tech_ann_event_neg_08.mp3</sm2> {{resp|r}} Cheer up! Could be worse!
+* <sm2>Dlc_tech_ann_event_neg_10.mp3</sm2> {{resp|r}} Here we go! Here we go!
+* <sm2>Dlc_tech_ann_event_neg_13.mp3</sm2> {{resp|r}} In-depth analysis!
+* <sm2>Dlc_tech_ann_event_neg_14.mp3</sm2> {{resp|r}} This isn't going to end well, is it?
+* <sm2>Dlc_tech_ann_event_neg_16.mp3</sm2> {{resp|r}} This might finally be getting out of hand.
+* <sm2>Dlc_tech_ann_event_neg_17.mp3</sm2> {{resp|r}} It's starting to show cracks. When was the last time an inspector was here?
+* <sm2>Dlc_tech_ann_event_neg_19.mp3</sm2> {{resp|r}} It could go at any moment. Oh boy!
+* <sm2>Dlc_tech_ann_event_neg_20.mp3</sm2> {{resp|r}} Should they be worried? I would be.
+* <sm2>Dlc_tech_ann_event_neg_21.mp3</sm2> {{resp|r}} Do you think they heard us? Eh, doubtful.
+* <sm2>Dlc_tech_ann_event_neg_22.mp3</sm2> {{resp|r}} You know, it's probably fine.
+* <sm2>Dlc_tech_ann_event_neg_23.mp3</sm2> {{resp|r}} You know what comes next, right? Explosions.
+* <sm2>Dlc_tech_ann_event_neg_24.mp3</sm2> {{resp|r}} They'll figure something out.
+* <sm2>Dlc_tech_ann_event_neg_25.mp3</sm2> {{resp|r}} So many flames. So much potential.
+* <sm2>Dlc_tech_ann_event_neg_26.mp3</sm2> {{resp|r}} That's the kind of in-depth analysis you've come to expect from us.
+* <sm2>Dlc_tech_ann_event_neg_27.mp3</sm2> {{resp|r}} They'll come around.
+* <sm2>Dlc_tech_ann_event_neg_28.mp3</sm2> {{resp|r}} It'll be fine.
+* <sm2>Dlc_tech_ann_event_neg_29.mp3</sm2> {{resp|r}} Careful.
 * <sm2>announcer_capn_welcome.mp3</sm2> {{resp|u}} Welcome to Dota.
 * <sm2>announcer_capn_intro_arrhearties.mp3</sm2> {{resp|u}} ARR me hearties!
 * <sm2>announcer_capn_intro_allashore.mp3</sm2> {{resp|u}} All ashore!

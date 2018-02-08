@@ -4,8 +4,14 @@ from utils import *
 from valve2json import valve_readfile
 
 def name_to_url(name):
-	name = name.replace(" ", "_")
-	name = name.replace("'", "%27")
+	conversions = {
+		' ': '_',
+		'\'': '%27',
+		'.': '%2E',
+		'&': '%26'
+	}
+	for key in conversions:
+		name = name.replace(key, conversions[key])
 	return name
 
 def load():
@@ -33,7 +39,9 @@ def load():
 	custom_urls = {
 		"Announcer: Tuskar": "Announcer:_Tusk",
 		"Default Announcer": "Announcer_responses",
-		"Default Mega-Kill Announcer": "Announcer_responses"
+		"Default Mega-Kill Announcer": "Announcer_responses",
+		"Announcer: Bristleback": "Bristleback_Announcer_Pack",
+		"Mega-Kills: Bristleback": "Bristleback_Announcer_Pack"
 	}
 	custom_vsndevts = {
 		"Default Announcer": "/soundevents/voscripts/game_sounds_vo_announcer.vsndevts",
@@ -73,7 +81,7 @@ def load():
 	print("- associating announcer packs")
 	for key in data:
 		pack = data[key]
-		if pack.get("prefab") != "bundle" or "Announcer" not in pack.get("name"):
+		if pack.get("prefab") != "bundle" or pack.get("name") == "Assembly of Announcers Pack":
 			continue
 		for name in pack.get("bundle", []):
 			for voice in session.query(Voice).filter_by(name=name):

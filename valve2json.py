@@ -169,8 +169,16 @@ def scrapedresponses2json(text):
 	text = re.sub(r'"(.*)": "(.*)": "(.*)\n', r'"\1": "\3\n', text) # Multiple Arcana stuff
 	text = re.sub(r'\n.*\.wav.*\n', r'\n', text) # No wav files allowed
 	text = re.sub(r'\n', '",\n', text)
+	text = re.sub(r'<br />', ' ', text)
+	text = re.sub(r'<small>[^<]*</small>', r'', text)
+	text = re.sub(r'<([^>]+)>', r'*\1*', text)
 	text = "{" + text + "}"
 	text = re.sub(r',(\s*)}', r'\1}', text)
+
+	# custom issues for these 2
+	text = re.sub('rick_and_morty_announcer_', 'rick_and_morty_', text, flags=re.IGNORECASE)
+	text = re.sub('rick_and_morty_killing_spree_announcer_', 'rick_and_morty_killing_spree_', text, flags=re.IGNORECASE)
+	text = re.sub('dlc_cm_', 'cm_ann_', text, flags=re.IGNORECASE)
 
 	data = tryloadjson(text)
 	newdata = {}

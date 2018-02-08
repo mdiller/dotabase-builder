@@ -85,8 +85,16 @@ def load_responses_text():
 	data = valve_readfile(paths['scraped_responses_dir'], paths['scraped_responses_file'], "scrapedresponses")
 	for response in session.query(Response):
 		progress.tick()
-		if response.name in data:
+		text = ""
+		fullname = re.sub(r'^announcer_', '', response.fullname)
+		if response.fullname in data:
+			text = data[response.fullname]
+		elif fullname in data:
+			text = data[fullname]
+		elif response.name in data:
 			text = data[response.name]
+
+		if text != "":
 			text = re.sub(r'<!--.*-->', r'', text)
 			text = re.sub(r'{{Tooltip\|([^|]+)\|(.*)}}', r'\1 (\2)', text)
 			text = re.sub(r'{{tooltip\|\?\|(.*)}}', r'(\1)', text)

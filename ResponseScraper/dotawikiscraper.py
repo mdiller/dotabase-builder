@@ -42,9 +42,14 @@ for voice in session.query(Voice).order_by(Voice.name):
 
 	lines = string.split("\n")
 
+	loaded_lines = False
 	for line in lines:
 		if line.startswith("* <sm2>"):
 			f.write(line + "\n")
+			loaded_lines = True
+
+	if not loaded_lines:
+		print(f"didnt load any lines from {voice.name}")
 
 
 f.close()
