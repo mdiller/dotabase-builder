@@ -20,7 +20,8 @@ emoticons,
 items, 
 abilities, 
 heroes, 
-responses)
+responses,
+voices)
 	
 
 def build_dotabase():
@@ -29,6 +30,7 @@ def build_dotabase():
 	items.load()
 	abilities.load()
 	heroes.load()
+	voices.load()
 	responses.load()
 	generate_json()
 	print("done")

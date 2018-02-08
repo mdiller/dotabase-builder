@@ -59,6 +59,10 @@ def dump_criteria(filename):
 	data = dump_table(Criterion)
 	write_json(filename, data)
 
+def dump_voices(filename):
+	data = dump_table(Voice)
+	write_json(filename, data)
+
 def dump_responses(directory):
 	os.makedirs(directory)
 	for hero in session.query(Hero):
@@ -77,4 +81,5 @@ def generate_json():
 	dump_emoticons(json_path + "emoticons.json")
 	dump_chatwheel(json_path + "chatwheel.json")
 	dump_criteria(json_path + "criteria.json")
+	dump_voices(json_path + "voices.json")
 	dump_responses(json_path + "responses")

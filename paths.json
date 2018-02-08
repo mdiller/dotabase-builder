@@ -6,7 +6,6 @@
 	"emoticon_image_path": "/resource/flash3/images/emoticons/",
 	"hero_selection_path": "/resource/flash3/images/heroes/selection/",
 	"response_rules_path": "/scripts/talker/",
-	"vo_scripts_path": "/soundevents/voscripts/",
 	"response_mp3_path": "/sounds/vo/",
 	"hero_scripts_file": "/scripts/npc/npc_heroes.txt",
 	"item_scripts_file": "/scripts/npc/items.txt",
@@ -15,5 +14,6 @@
 	"chat_wheel_scripts_file": "/scripts/chat_wheel.txt",
 	"dota_english_file": "/resource/dota_english.txt",
 	"scraped_responses_dir": "ResponseScraper",
-	"scraped_responses_file": "/responses_data.txt"
+	"scraped_responses_file": "/responses_data.txt",
+	"cosmetics_scripts_file": "/scripts/items/items_game.txt"
 }

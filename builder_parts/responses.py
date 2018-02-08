@@ -10,13 +10,11 @@ def load():
 	session.query(Criterion).delete()
 	print("Responses")
 
-	# Add a response for each file in each hero folder in the /sounds/vo folder
-	progress = ProgressBar(session.query(Hero).count(), title="- loading from mp3 files:")
-	for hero in session.query(Hero):
+	progress = ProgressBar(session.query(Voice).count(), title="- loading from vsnd files:")
+	for voice in session.query(Voice):
 		progress.tick()
 
-		hero_data = json.loads(hero.json_data, object_pairs_hook=OrderedDict)
-		vsndevts_data = valve_readfile(config.vpk_path, "/" + hero_data.get("VoiceFile"), "vsndevts")
+		vsndevts_data = valve_readfile(config.vpk_path, voice.vsndevts_path, "vsndevts")
 
 		for key in vsndevts_data:
 			data = vsndevts_data[key]
@@ -26,7 +24,8 @@ def load():
 			response.fullname = key
 			response.name = os.path.basename(filename).replace(".mp3", "")
 			response.mp3 = filename
-			response.hero_id = hero.id
+			response.voice_id = voice.id
+			response.hero_id = voice.hero_id
 			response.criteria = ""
 			session.add(response)
 

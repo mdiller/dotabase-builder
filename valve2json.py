@@ -18,7 +18,7 @@ def tryloadjson(text, strict=True):
 		return json.loads(text, strict=strict, object_pairs_hook=collections.OrderedDict)
 	except json.JSONDecodeError as e:
 		filename = "jsoncache/errored.json"
-		with open(filename, "w+") as f:
+		with open(filename, "wb+") as f:
 			f.write(text)
 		print(f"bad converted file saved to: {filename}")
 
@@ -104,15 +104,21 @@ def vsndevts2json(text):
 
 	return tryloadjson(text, strict=False)
 
+# Regex strings for vk2json from:
+# http://dev.dota2.com/showthread.php?t=87191
+# Loads a kv file as json
+def kv_nocommentfile2json(text):
+	return kvfile2json(text, False)
 
 # Regex strings for vk2json from:
 # http://dev.dota2.com/showthread.php?t=87191
 # Loads a kv file as json
-def kvfile2json(text):
+def kvfile2json(text, remove_comments=True):
 	# To temporarily hide non-functional quotes
 	text = re.sub(r'\\"', 'TEMP_QUOTE_TOKEN', text)
 	# get rid of troublesome comments
-	text = uncommentkvfile(text)
+	if remove_comments:
+		text = uncommentkvfile(text)
 	# To convert Valve's KeyValue format to Json
 	text = re.sub(r'"([^"]*)"(\s*){', r'"\1": {', text)
 	text = re.sub(r'"([^"]*)"\s*"([^"]*)"', r'"\1": "\2",', text)
@@ -175,6 +181,7 @@ file_formats = {
 	"scrapedresponses": scrapedresponses2json,
 	"rules": rulesfile2json,
 	"kv": kvfile2json,
+	"kv_nocomment": kv_nocommentfile2json,
 	"vsndevts": vsndevts2json
 }
 
