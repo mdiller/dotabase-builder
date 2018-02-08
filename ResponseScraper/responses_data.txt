@@ -331,8 +331,8 @@
 * <sm2>alch_spawn_05.mp3</sm2> I\'m the brains! And I\'m the brawn!
 * <sm2>alch_spawn_06.mp3</sm2> {{resp|u}} Admire the brawn! Thanks, brains!
 * <sm2>alch_inthebag_01.mp3</sm2> Hey little buddy, it's in the bag!
-* <sm2>alch_battlebegins_01.mp3</sm2>  Aaand we\'re off!
-* <sm2>alch_battlebegins_02.mp3</sm2>  You have your marching orders!
+* <sm2>alch_battlebegins_01.mp3</sm2> Aaand we\'re off!
+* <sm2>alch_battlebegins_02.mp3</sm2> You have your marching orders!
 * <sm2>alch_move_01.mp3</sm2> Yes!
 * <sm2>alch_move_02.mp3</sm2> Yes!
 * <sm2>alch_move_03.mp3</sm2> Yep!
@@ -702,6 +702,18 @@
 * <sm2>appa_spawn_02.mp3</sm2> The Age of Ice begins!
 * <sm2>appa_spawn_03.mp3</sm2> A cold wind blows.
 * <sm2>appa_spawn_04.mp3</sm2> Ice elemental.
+* <sm2>appa_move_10.mp3</sm2> I run cold!
+* <sm2>appa_firstblood_02.mp3</sm2> Cold blooded!
+* <sm2>appa_attack_04.mp3</sm2> In cold blood.
+* <sm2>appa_attack_10.mp3</sm2> Behold the apparition.
+* <sm2>appa_attack_11.mp3</sm2> Ancient onslaught.
+* <sm2>appa_cast_02.mp3</sm2> I come for you.
+* <sm2>appa_ability_touch_01.mp3</sm2> Feel the chill!
+* <sm2>appa_ability_iceblast_03.mp3</sm2> A dark summons!
+* <sm2>appa_spawn_01.mp3</sm2> Ancient Apparition!
+* <sm2>appa_spawn_02.mp3</sm2> The Age of Ice begins!
+* <sm2>appa_spawn_03.mp3</sm2> A cold wind blows.
+* <sm2>appa_spawn_04.mp3</sm2> Ice elemental.
 * <sm2>appa_inthebag_01.mp3</sm2> It\'s in the bag!
 * <sm2>appa_battlebegins_01.mp3</sm2> Time to break the ice!
 * <sm2>appa_move_01.mp3</sm2> Yes!
@@ -975,7 +987,7 @@
 * <sm2>anti_attack_06.mp3</sm2> I\'ll strike thee down!
 * <sm2>anti_attack_07.mp3</sm2> Vile creatures.
 * <sm2>anti_attack_08.mp3</sm2> Spawn of sorcery.
-* <sm2>anti_attack_09.mp3</sm2> Tis on thy head.
+* <sm2>anti_attack_09.mp3</sm2> \'tis on thy head.
 * <sm2>anti_attack_10.mp3</sm2> Have at thee!
 * <sm2>anti_cast_01.mp3</sm2> Prepare thyself! 
 * <sm2>anti_cast_02.mp3</sm2> Get thee gone!
@@ -990,7 +1002,7 @@
 * <sm2>anti_ability_multi_03.mp3</sm2> One less dark conspiracy!
 * <sm2>anti_level_01.mp3</sm2> By grace!
 * <sm2>anti_level_02.mp3</sm2> The reward of virtue!
-* <sm2>anti_level_03.mp3</sm2> Tis a blessing!
+* <sm2>anti_level_03.mp3</sm2> \'tis a blessing!
 * <sm2>anti_level_04.mp3</sm2> Magic be dashed!
 * <sm2>anti_level_05.mp3</sm2> I turn magic aside!
 * <sm2>anti_level_06.mp3</sm2> {{resp|u}} Ha ha ha ha ha ha ha ha ha ha ha!
@@ -1033,15 +1045,15 @@
 * <sm2>anti_brother_02.mp3</sm2> {{Hero icon|Terrorblade|16px}} {{resp|u}} The disgrace of magic stricken from our family.
 * <sm2>anti_brother_03.mp3</sm2> {{Hero icon|Terrorblade|16px}} {{resp|u}} My brother\'s keeper after all.
 * <sm2>anti_firstblood_01.mp3</sm2> First blood! Hahahahahahaha!
-* <sm2>anti_brother_04.mp3</sm2> {{Hero icon|Terrorblade|16px}} {{resp|u}} Terror Blade.
+* <sm2>anti_brother_04.mp3</sm2> {{Hero icon|Terrorblade|16px}} {{resp|u}} Terrorblade.
 * <sm2>anti_brother_05.mp3</sm2> {{Hero icon|Terrorblade|16px}} {{resp|u}} Hello, brother.
 * <sm2>anti_brother_06.mp3</sm2> {{Hero icon|Terrorblade|16px}} {{resp|u}} Hello, brother.
-* <sm2>anti_lasthit_01.mp3</sm2> Thou\'art mine.
+* <sm2>anti_lasthit_01.mp3</sm2> Thou art mine.
 * <sm2>anti_lasthit_02.mp3</sm2> What\'s thine is mine.
 * <sm2>anti_lasthit_03.mp3</sm2> Well gotten gains.
 * <sm2>anti_lasthit_04.mp3</sm2> I lighten thy load.
 * <sm2>anti_lasthit_05.mp3</sm2> Now count thy costs.
-* <sm2>anti_lasthit_06.mp3</sm2> T\'is most rewarding.
+* <sm2>anti_lasthit_06.mp3</sm2> \'tis most rewarding.
 * <sm2>anti_lasthit_07.mp3</sm2> Thou hast paid the price.
 * <sm2>anti_lasthit_08.mp3</sm2> Now count thy costs.
 * <sm2>anti_lasthit_09.mp3</sm2> Thou art mine.
@@ -1053,8 +1065,8 @@
 * <sm2>anti_deny_05.mp3</sm2> Denied.
 * <sm2>anti_deny_06.mp3</sm2> Nay.
 * <sm2>anti_deny_07.mp3</sm2> It shall not be.
-* <sm2>anti_deny_08.mp3</sm2> Tis not for thee.
-* <sm2>anti_deny_09.mp3</sm2> Tis mine.
+* <sm2>anti_deny_08.mp3</sm2> \'tis not for thee.
+* <sm2>anti_deny_09.mp3</sm2> \'tis mine.
 * <sm2>anti_deny_10.mp3</sm2> Thou art denied.
 * <sm2>anti_deny_11.mp3</sm2> Ha ha ha ha ha!
 * <sm2>anti_deny_12.mp3</sm2> Are you even trying?
@@ -1111,7 +1123,7 @@
 * <sm2>anti_anger_04.mp3</sm2> {{resp|300}} Oh.
 * <sm2>anti_ability_failure_02.mp3</sm2> {{resp|r}} A disappointment.
 * <sm2>anti_ability_failure_01.mp3</sm2> {{resp|r}} Scarce worth the effort.
-* <sm2>anti_deny_09.mp3</sm2> {{resp|300}} Tis mine.
+* <sm2>anti_deny_09.mp3</sm2> {{resp|300}} \'tis mine.
 * <sm2>anti_doubdam_01.mp3</sm2> Double damage!
 * <sm2>anti_doubdam_02.mp3</sm2> Double down on sorcery.
 * <sm2>anti_haste_01.mp3</sm2> Haste!
@@ -1173,7 +1185,7 @@
 * <sm2>anti_happy_02.mp3</sm2> Mm.
 * <sm2>anti_happy_01.mp3</sm2> Mm.
 * <sm2>anti_level_07.mp3</sm2> Ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha!
-* <sm2>anti_ability_failure_03.mp3</sm2> {{resp|u}} Tis often thus with mana.
+* <sm2>anti_ability_failure_03.mp3</sm2> {{resp|u}} \'tis often thus with mana.
 * <sm2>anti_shitwiz_01.mp3</sm2> {{resp|u}} [[Shitty wizard]]!
 * <sm2>anti_crumwiz_01.mp3</sm2> {{resp|u}} Crummy wizard!
 * <sm2>anti_anger_01.mp3</sm2> {{resp|u}} Uh!
@@ -3550,7 +3562,7 @@
 * <sm2>brew_firstblood_02.mp3</sm2> First blood. Well, that was quick.
 * <sm2>brew_firstblood_03.mp3</sm2> First blood! I\'ll drink to that.
 * <sm2>brew_firstblood_04.mp3</sm2> {{resp|u}} Who is that? Show yourself!
-* <sm2>brew_ally_01.mp3</sm2> {{Hero icon| Tusk|16px}} {{resp|r}} Let\'s raise a cup before battle!
+* <sm2>brew_ally_01.mp3</sm2> {{Hero icon|Tusk|16px}} {{resp|r}} Let\'s raise a cup before battle!
 * <sm2>brew_lasthit_01.mp3</sm2> Gold for my tab.
 * <sm2>brew_lasthit_02.mp3</sm2> Punch drunk.
 * <sm2>brew_lasthit_03.mp3</sm2> Bottom of the barrel.
@@ -3608,7 +3620,7 @@
 * <sm2>brew_rival_24.mp3</sm2> {{Hero icon|Storm Spirit|16px}} Bury me beneath the Ruined City.
 * <sm2>brew_rival_13.mp3</sm2> {{Hero icon|Bloodseeker|16px}} Careful, my blood alcohol level is fatal.
 * <sm2>brew_rival_19.mp3</sm2> {{Hero icon|Huskar|16px}} Spear before liquor, never sicker.
-* <sm2>brew_rival_27.mp3</sm2> {{Hero icon| Earth Spirit|16px}} The mountains shall wail my name.
+* <sm2>brew_rival_27.mp3</sm2> {{Hero icon|Earth Spirit|16px}} The mountains shall wail my name.
 * <sm2>brew_rival_30.mp3</sm2> {{Hero icon|Chaos Knight|16px}} I used to like horses.
 * <sm2>brew_respawn_01.mp3</sm2> It\'s happy hour!
 * <sm2>brew_respawn_02.mp3</sm2> Next round is on me.
@@ -5555,6 +5567,9 @@
 * <sm2>ratt_cuz_05.mp3</sm2> {{Hero icon|Tinker|16px}} Tinker!
 * <sm2>ratt_cuz_03.mp3</sm2> {{Hero icon|Sniper|16px}} Coming for you, Sniper!
 * <sm2>ratt_cuz_04.mp3</sm2> {{Hero icon|Sniper|16px}} Sniper!
+* <sm2>ratt_cuz_06.mp3</sm2> {{resp|u}} Killing cousins.
+* <sm2>ratt_cuz_07.mp3</sm2> {{resp|u}} Blood feud.
+* <sm2>ratt_cuz_08.mp3</sm2> {{resp|u}} Blood is thicker than gear oil.
 * <sm2>ratt_cast_01.mp3</sm2> The gears are in motion!
 * <sm2>ratt_cast_02.mp3</sm2> I call entrapment!
 * <sm2>ratt_cast_03.mp3</sm2> I\'ll rattle ya, Jack!
@@ -5724,9 +5739,6 @@
 * <sm2>ratt_death_16.mp3</sm2> Metal will never die...
 * <sm2>ratt_cuz_21.mp3</sm2> {{Hero icon|Tinker|16px}} Tinker, you were like a brother to me!
 * <sm2>ratt_cuz_23.mp3</sm2> {{Hero icon|Tinker|16px}} Tinker, where\'d you get those wonderful toys?
-* <sm2>ratt_cuz_06.mp3</sm2> {{resp|u}} Killing cousins.
-* <sm2>ratt_cuz_07.mp3</sm2> {{resp|u}} Blood feud.
-* <sm2>ratt_cuz_08.mp3</sm2> {{resp|u}} Blood is thicker than gear oil.
 * <sm2>ratt_cuz_22.mp3</sm2> {{Hero icon|Sniper|16px}} Sniper, you? There\'s one in every family.
 * <sm2>ratt_respawn_01.mp3</sm2> An escapement mechanism!
 * <sm2>ratt_respawn_02.mp3</sm2> My spring is wound again!
@@ -6727,7 +6739,7 @@
 * <sm2>sylph_rival_72.mp3</sm2> {{Hero icon|Huskar|16px}} {{resp|r}} You\'re just a pawn of the Gods, Huskar.
 * <sm2>sylph_rival_73.mp3</sm2> {{Hero icon|Invoker|16px}} {{resp|r}} Everyone hates you, Invoker. Everyone.
 * <sm2>sylph_rival_74.mp3</sm2> {{Hero icon|Invoker|16px}} {{resp|r}} You talk too much.
-* <sm2>sylph_rival_76.mp3</sm2> {{Hero icon|Wisp|16px}} {{resp|r}} Lights out!
+* <sm2>sylph_rival_76.mp3</sm2> {{Hero icon|Io|16px}} {{resp|r}} Lights out!
 * <sm2>sylph_rival_77.mp3</sm2> {{Hero icon|Jakiro|16px}} {{resp|r}} Two heads, no skill.
 * <sm2>sylph_rival_78.mp3</sm2> {{Hero icon|Jakiro|16px}} {{resp|r}} I\'m gonna make a jaunty little hat out of you.
 * <sm2>sylph_rival_79.mp3</sm2> {{Hero icon|Juggernaut|16px}} {{resp|r}} Where\'d all that honor get you?
@@ -6884,7 +6896,7 @@
 * <sm2>sylph_rival_02.mp3</sm2> {{Hero icon|Abaddon|16px}} {{resp|r}} Cute horse. I\'m going to take it.
 * <sm2>sylph_rival_05.mp3</sm2> {{Hero icon|Ancient Apparition|16px}} {{resp|r}} You should\'ve stayed incorporeal.
 * <sm2>sylph_rival_08.mp3</sm2> {{Hero icon|Anti-Mage|16px}} {{resp|r}} You think you can drag me to the [[Tyler Estate]]?
-* <sm2>sylph_rival_09.mp3</sm2> {{Hero icon|Arc Warden|16px}} {{resp|r}} You amy imprisoned the Ancients, but you\'ll never capture me.
+* <sm2>sylph_rival_09.mp3</sm2> {{Hero icon|Arc Warden|16px}} {{resp|r}} You may imprisoned the Ancients, but you\'ll never capture me.
 * <sm2>sylph_rival_18.mp3</sm2> {{Hero icon|Beastmaster|16px}} {{resp|r}} Jex is going to tear your little pet apart.
 * <sm2>sylph_rival_22.mp3</sm2> {{Hero icon|Bounty Hunter|16px}} {{resp|r}} [[Mireska\'s Father|My father]] sent you, didn\'t he?
 * <sm2>sylph_rival_31.mp3</sm2> {{Hero icon|Chaos Knight|16px}} {{resp|r}} You ride a pony. Adorable.
@@ -7011,7 +7023,7 @@
 * <sm2>sylph_ally_109.mp3</sm2> {{Hero icon|Mirana|16px}} {{resp|r}} You don\'t actually trust Luna, do you?
 * <sm2>sylph_ally_110.mp3</sm2> {{Hero icon|Mirana|16px}} {{resp|r}} Cute cat.
 * <sm2>sylph_ally_111.mp3</sm2> {{Hero icon|Monkey King|16px}} {{resp|r}} So you\'re the chatty little rodent man everyone\'s been talking about.
-* <sm2>sylph_ally_112.mp3</sm2> {{Hero icon|Monkey King|16px}} {{resp|r}} Now, walk me through this. You have your staff, but you still have to [[Monkey King bar|buy]] your staff?
+* <sm2>sylph_ally_112.mp3</sm2> {{Hero icon|Monkey King|16px}} {{resp|r}} Now, walk me through this. You have your staff, but you still have to [[Monkey King Bar|buy]] your staff?
 * <sm2>sylph_ally_113.mp3</sm2> {{Hero icon|Morphling|16px}} {{resp|r}} Never stop changing, Morphling.
 * <sm2>sylph_ally_114.mp3</sm2> {{Hero icon|Morphling|16px}} {{resp|r}} I think it\'s great you keep reinventing yourself.
 * <sm2>sylph_ally_115.mp3</sm2> {{Hero icon|Naga Siren|16px}} {{resp|r}} We\'re going to ruin their day.
@@ -7189,7 +7201,7 @@
 * <sm2>sylph_item_12.mp3</sm2> {{Item|Mjollnir|20px}} {{resp|r}} Mjollnir.
 * <sm2>sylph_item_13.mp3</sm2> {{Item|Assault Cuirass|20px}} {{resp|r}} Got to keep them on their toes.
 * <sm2>sylph_item_14.mp3</sm2> {{Item|Abyssal Blade|20px}} {{resp|r}} A wicked blade for a naughty little lady.
-* <sm2>sylph_item_15.mp3</sm2> {{Item|Basher|20px}} {{resp|r}} Time to bash a few skulls.
+* <sm2>sylph_item_15.mp3</sm2> {{Item|Skull Basher|20px}} {{resp|r}} Time to bash a few skulls.
 * <sm2>sylph_item_16.mp3</sm2> {{Item|Radiance|20px}} {{resp|r}} Radiance.
 * <sm2>sylph_item_17.mp3</sm2> {{Item|Eye of Skadi|20px}} {{resp|r}} Eye of Skadi.
 * <sm2>sylph_item_18.mp3</sm2> {{Item|Hurricane Pike|20px}} {{resp|r}} Let\'s try to keep our distance.
@@ -8874,13 +8886,23 @@
 * <sm2>DK_drag_happy_03.mp3</sm2> <sm2>DK_dragon_happy_03.mp3</sm2> {{resp|u}} Ughheh.
 * <sm2>DK_drag_happy_04.mp3</sm2> <sm2>DK_dragon_happy_04.mp3</sm2> {{resp|u}} Huh.
 * <sm2>DK_drag_dragonsound_01.mp3</sm2> <sm2>DK_dragon_dragonsound_01.mp3</sm2> {{resp|u}} Uhhh.
-* <sm2>dro_spawn_01.mp3</sm2> {{resp|u}} Traxex!
+* <sm2>dro_spawn_01.mp3</sm2> Traxex!
 * <sm2>dro_spawn_02.mp3</sm2> Traxex here.
 * <sm2>dro_spawn_03.mp3</sm2> Drow Ranger!
 * <sm2>dro_spawn_04.mp3</sm2> My quiver and bow are ready!
 * <sm2>dro_spawn_05.mp3</sm2> I quiver with anticipation!
 * <sm2>dro_spawn_06.mp3</sm2> Beware the bite of frost.
-* <sm2>dro_spawn_07.mp3</sm2> {{resp|u}} Let the battle begin!
+* <sm2>dro_spawn_07.mp3</sm2> Let the battle begin!
+* <sm2>dro_move_02.mp3</sm2> I go in silence.
+* <sm2>dro_move_03.mp3</sm2> My bow is drawn!
+* <sm2>dro_attack_03.mp3</sm2> Arrow, find your target!
+* <sm2>dro_attack_04.mp3</sm2> Death comes silently.
+* <sm2>drow_levelup_03.mp3</sm2> Pride of the Drow!
+* <sm2>dro_spawn_02.mp3</sm2> Traxex here.
+* <sm2>dro_spawn_03.mp3</sm2> Drow Ranger!
+* <sm2>dro_spawn_04.mp3</sm2> My quiver and bow are ready!
+* <sm2>dro_spawn_05.mp3</sm2> I quiver with anticipation!
+* <sm2>dro_spawn_06.mp3</sm2> Beware the bite of frost.
 * <sm2>dro_inthebag_01.mp3</sm2> It\'s in the bag!
 * <sm2>drow_battlebegins_01.mp3</sm2> I\'m notched, I\'m taut, I\'m ready to fly.
 * <sm2>dro_cast_01.mp3</sm2> I have waited for this moment...
@@ -9307,7 +9329,7 @@
 * <sm2>earthspi_rival_13.mp3</sm2> {{Hero icon|Chaos Knight|16px}} Go toward the light, Chaos Knight.
 * <sm2>earthspi_rival_14.mp3</sm2> {{resp|u}} There\'s no body to even bury.
 * <sm2>earthspi_rival_15.mp3</sm2> {{Hero icon|Io|16px}} Your chimes go silent.
-* <sm2>earthspi_rival_16.mp3</sm2> {{Hero icon|Terrorblade|16px}} Terror blade, with errors made.
+* <sm2>earthspi_rival_16.mp3</sm2> {{Hero icon|Terrorblade|16px}} Terrorblade, with errors made.
 * <sm2>earthspi_rival_17.mp3</sm2> {{Hero icon|Terrorblade|16px}} The great terror is no more.
 * <sm2>earthspi_rival_18.mp3</sm2> {{Hero icon|Tusk|16px}} Tusk, your snowball was no match for my boulders.
 * <sm2>earthspi_rival_19.mp3</sm2> {{Hero icon|Kunkka|16px}} Your ship has run aground.
@@ -11485,8 +11507,8 @@
 * <sm2>gyro_rival_08.mp3</sm2> {{Hero icon|Sniper|16px}} Those scopes are no match for my view!
 * <sm2>gyro_rival_09.mp3</sm2> {{Hero icon|Tinker|16px}} Too bad Tinker. You\'re my kind of nut!
 * <sm2>gyro_rival_10.mp3</sm2> {{Hero icon|Clockwerk|16px}} All those gears don\'t work so well with rockets lodged in \'em, huh?
-* <sm2>gyro_rival_11.mp3</sm2> {{Hero icon|Goblin Techies|16px}} Hey Techies, next time try launching your explosives!
-* <sm2>gyro_rival_12.mp3</sm2> {{Hero icon|Goblin Techies|16px}} {{resp|u}} Next time try launching your explosives!
+* <sm2>gyro_rival_11.mp3</sm2> {{Hero icon|Techies|16px}} Hey Techies, next time try launching your explosives!
+* <sm2>gyro_rival_12.mp3</sm2> {{Hero icon|Techies|16px}} {{resp|u}} Next time try launching your explosives!
 * <sm2>gyro_rival_13.mp3</sm2> {{Hero icon|Invoker|16px}} A hundred times my age and you\'re still a fool!
 * <sm2>gyro_rival_14.mp3</sm2> {{Hero icon|Brewmaster|16px}} Consider that an intervention!
 * <sm2>gyro_rival_15.mp3</sm2> {{Hero icon|Zeus|16px}} Ah keep your sparks to yourself!
@@ -12629,8 +12651,18 @@
 * <sm2>jak_brother_05.mp3</sm2> {{resp|u}} Someone\'s been eating peppers.
 * <sm2>jak_brother_06.mp3</sm2> {{resp|u}} Care for a wintermint?
 * <sm2>jak_brother_07.mp3</sm2> {{resp|u}} You need a wintermint.
-* <sm2>jug_spawn_01.mp3</sm2> <sm2>jugsc_arc_spawn_01.mp3</sm2> {{resp|u}} Yurnero here.
-* <sm2>jug_spawn_02.mp3</sm2> <sm2>jugsc_arc_spawn_02.mp3</sm2> {{resp|u}} I am Yurnero.
+* <sm2>jug_spawn_01.mp3</sm2> <sm2>jugsc_arc_spawn_01.mp3</sm2> Yurnero here.
+* <sm2>jug_spawn_02.mp3</sm2> <sm2>jugsc_arc_spawn_02.mp3</sm2> I am Yurnero.
+* <sm2>jug_spawn_03.mp3</sm2> <sm2>jugsc_arc_spawn_03.mp3</sm2> Juggernaut.
+* <sm2>jug_spawn_04.mp3</sm2> <sm2>jugsc_arc_spawn_04.mp3</sm2> Call me Juggernaut.
+* <sm2>jug_spawn_05.mp3</sm2> <sm2>jugsc_arc_spawn_05.mp3</sm2> Juggernaut stands ready.
+* <sm2>jug_spawn_06.mp3</sm2> <sm2>jugsc_arc_spawn_06.mp3</sm2> You have summoned Juggernaut.
+* <sm2>jug_spawn_07.mp3</sm2> <sm2>jugsc_arc_spawn_07.mp3</sm2> Oh, it\'s the Juggernaut.
+* <sm2>jug_spawn_08.mp3</sm2> <sm2>jugsc_arc_spawn_08.mp3</sm2> Oh, it\'s the Juggernaut.
+* <sm2>jug_move_15.mp3</sm2> <sm2>jugsc_arc_move_15.mp3</sm2> I bring my blade.
+* <sm2>jug_attack_08.mp3</sm2> <sm2>jugsc_arc_attack_08.mp3</sm2> Stand and face me!
+* <sm2>jug_kill_03.mp3</sm2> <sm2>jugsc_arc_kill_03.mp3</sm2> To die at my hand is an honor.
+* <sm2>jug_rare_02.mp3</sm2> <sm2>jugsc_arc_rare_02.mp3</sm2> Each blow sharpens my blade!
 * <sm2>jug_spawn_03.mp3</sm2> <sm2>jugsc_arc_spawn_03.mp3</sm2> Juggernaut.
 * <sm2>jug_spawn_04.mp3</sm2> <sm2>jugsc_arc_spawn_04.mp3</sm2> Call me Juggernaut.
 * <sm2>jug_spawn_05.mp3</sm2> <sm2>jugsc_arc_spawn_05.mp3</sm2> Juggernaut stands ready.
@@ -15864,6 +15896,18 @@
 * <sm2>lone_druid_happy_08.mp3</sm2> <sm2>lone_druid_bearform_happy_08.mp3</sm2> {{resp|u}} Hmm.
 * <sm2>Luna_spawn_01.mp3</sm2> Luna!
 * <sm2>Luna_spawn_02.mp3</sm2> The Moon Rider has arrived.
+* <sm2>Luna_spawn_03.mp3</sm2> In the service of Selemene.
+* <sm2>Luna_spawn_04.mp3</sm2> Nova could use a snack.
+* <sm2>Luna_battlebegins_01.mp3</sm2> The Dark Moon comes.
+* <sm2>Luna_move_13.mp3</sm2> The night sees all.
+* <sm2>Luna_move_15.mp3</sm2> Selemene commands.
+* <sm2>Luna_levelup_03.mp3</sm2> Blessings upon a loyal warrior.
+* <sm2>Luna_levelup_08.mp3</sm2> They will find my blade sharp, and cruel.
+* <sm2>Luna_respawn_06.mp3</sm2> Oh they will rue this day.
+* <sm2>Luna_move_17.mp3</sm2> On the prowl.
+* <sm2>Luna_levelup_07.mp3</sm2> They will fear me.
+* <sm2>Luna_spawn_01.mp3</sm2> Luna!
+* <sm2>Luna_spawn_02.mp3</sm2> The Moon Rider has arrived.
 * <sm2>Luna_spawn_04.mp3</sm2> Nova could use a snack.
 * <sm2>Luna_spawn_03.mp3</sm2> In the service of Selemene.
 * <sm2>Luna_inthebag_01.mp3</sm2> Look how they flee before us. This one\'s in the bag!
@@ -16172,27 +16216,38 @@
 * <sm2>lycan_spawn_02.mp3</sm2> A wolf in man\'s clothing.
 * <sm2>lycan_spawn_03.mp3</sm2> Who keeps the company of wolves?
 * <sm2>lycan_spawn_04.mp3</sm2> The rogue wolf comes.
+* <sm2>lycan_battlebegins_02.mp3</sm2> The trails will run red.
+* <sm2>lycan_ability_summon_04.mp3</sm2> In the company of wolves.
+* <sm2>lycan_level_05.mp3</sm2> I am the alpha wolf.
+* <sm2>lycan_respawn_06.mp3</sm2> The wolf rises.
+* <sm2>lycan_wolf_move_11.mp3</sm2> I lope to battle.
+* <sm2>lycan_wolf_move_12.mp3</sm2> Fealty to none.
+* <sm2>lycan_wolf_move_14.mp3</sm2> Called to battle.
+* <sm2>lycan_wolf_move_18.mp3</sm2> Beware the wolf.
+* <sm2>lycan_spawn_01.mp3</sm2> Lycan!
+* <sm2>lycan_spawn_02.mp3</sm2> A wolf in man\'s clothing.
+* <sm2>lycan_spawn_03.mp3</sm2> Who keeps the company of wolves?
+* <sm2>lycan_spawn_04.mp3</sm2> The rogue wolf comes.
 * <sm2>lycan_inthebag_01.mp3</sm2> I assure you that this one is in the bag.
 * <sm2>lycan_battlebegins_01.mp3</sm2> Ha! The savagery starts now.
 * <sm2>lycan_battlebegins_02.mp3</sm2> The trails will run red.
-* <sm2>lycan_move_01.mp3</sm2> <sm2>lycan_wolf_move_01.mp3</sm2>  Yes!
-* <sm2>lycan_move_02.mp3</sm2> <sm2>lycan_wolf_move_02.mp3</sm2>  Uh! / Grraf.
-* <sm2>lycan_move_03.mp3</sm2> <sm2>lycan_wolf_move_03.mp3</sm2>  Ah! / Rorf.
-* <sm2>lycan_move_04.mp3</sm2> <sm2>lycan_wolf_move_04.mp3</sm2>  The wolf runs.
-* <sm2>lycan_move_05.mp3</sm2> <sm2>lycan_wolf_move_05.mp3</sm2>  So you say.
-* <sm2>lycan_move_06.mp3</sm2> <sm2>lycan_wolf_move_06.mp3</sm2>  Hunting.
-* <sm2>lycan_wolf_move_07.mp3</sm2> Hunting.
-* <sm2>lycan_move_07.mp3</sm2> <sm2>lycan_wolf_move_08.mp3</sm2>  As it please you.
-* <sm2>lycan_move_08.mp3</sm2> <sm2>lycan_wolf_move_09.mp3</sm2>  Onward. /  Onwards.
-* <sm2>lycan_move_09.mp3</sm2> <sm2>lycan_wolf_move_10.mp3</sm2>  Of course.
-* <sm2>lycan_move_10.mp3</sm2> <sm2>lycan_wolf_move_11.mp3</sm2>  I lope to battle.
-* <sm2>lycan_move_11.mp3</sm2> <sm2>lycan_wolf_move_12.mp3</sm2>  Fealty to none.
-* <sm2>lycan_move_12.mp3</sm2> <sm2>lycan_wolf_move_13.mp3</sm2>  On the trail.
-* <sm2>lycan_move_13.mp3</sm2> <sm2>lycan_wolf_move_14.mp3</sm2>  Call to battle. / Called to battle.
-* <sm2>lycan_move_14.mp3</sm2> <sm2>lycan_wolf_move_15.mp3</sm2>  Indeed.
-* <sm2>lycan_move_15.mp3</sm2> <sm2>lycan_wolf_move_16.mp3</sm2>  As must be.
-* <sm2>lycan_move_16.mp3</sm2> <sm2>lycan_wolf_move_17.mp3</sm2>  Ah, my instincts are keen. / My instincts are keen.
-* <sm2>lycan_move_17.mp3</sm2> <sm2>lycan_wolf_move_18.mp3</sm2>  Beware the wolf.
+* <sm2>lycan_move_01.mp3</sm2> <sm2>lycan_wolf_move_01.mp3</sm2> Yes!
+* <sm2>lycan_move_02.mp3</sm2> <sm2>lycan_wolf_move_02.mp3</sm2> Uh! / Grraf.
+* <sm2>lycan_move_03.mp3</sm2> <sm2>lycan_wolf_move_03.mp3</sm2> Ah! / Rorf.
+* <sm2>lycan_move_04.mp3</sm2> <sm2>lycan_wolf_move_04.mp3</sm2> The wolf runs.
+* <sm2>lycan_move_05.mp3</sm2> <sm2>lycan_wolf_move_05.mp3</sm2> So you say.
+* <sm2>lycan_move_06.mp3</sm2> <sm2>lycan_wolf_move_06.mp3</sm2> <sm2>lycan_wolf_move_07.mp3</sm2> Hunting.
+* <sm2>lycan_move_07.mp3</sm2> <sm2>lycan_wolf_move_08.mp3</sm2> As it please you.
+* <sm2>lycan_move_08.mp3</sm2> <sm2>lycan_wolf_move_09.mp3</sm2> Onward. /  Onwards.
+* <sm2>lycan_move_09.mp3</sm2> <sm2>lycan_wolf_move_10.mp3</sm2> Of course.
+* <sm2>lycan_move_10.mp3</sm2> <sm2>lycan_wolf_move_11.mp3</sm2> I lope to battle.
+* <sm2>lycan_move_11.mp3</sm2> <sm2>lycan_wolf_move_12.mp3</sm2> Fealty to none.
+* <sm2>lycan_move_12.mp3</sm2> <sm2>lycan_wolf_move_13.mp3</sm2> On the trail.
+* <sm2>lycan_move_13.mp3</sm2> <sm2>lycan_wolf_move_14.mp3</sm2> Call to battle. / Called to battle.
+* <sm2>lycan_move_14.mp3</sm2> <sm2>lycan_wolf_move_15.mp3</sm2> Indeed.
+* <sm2>lycan_move_15.mp3</sm2> <sm2>lycan_wolf_move_16.mp3</sm2> As must be.
+* <sm2>lycan_move_16.mp3</sm2> <sm2>lycan_wolf_move_17.mp3</sm2> Ah, my instincts are keen. / My instincts are keen.
+* <sm2>lycan_move_17.mp3</sm2> <sm2>lycan_wolf_move_18.mp3</sm2> Beware the wolf.
 * <sm2>lycan_attack_01.mp3</sm2> <sm2>lycan_wolf_attack_01.mp3</sm2> Attack!
 * <sm2>lycan_attack_02.mp3</sm2> <sm2>lycan_wolf_attack_02.mp3</sm2> The wolf is at your door.
 * <sm2>lycan_attack_03.mp3</sm2> <sm2>lycan_wolf_attack_03.mp3</sm2> Tooth and nail.
@@ -16210,7 +16265,6 @@
 * <sm2>lycan_ability_summon_01.mp3</sm2> {{resp|u}} Wolves, to me!
 * <sm2>lycan_ability_summon_02.mp3</sm2> {{resp|u}} My pack assembles.
 * <sm2>lycan_ability_summon_03.mp3</sm2> Gather, wolves!
-* <sm2>lycan_ability_summon_04.mp3</sm2> {{resp|u}} In the company of wolves.
 * <sm2>lycan_ability_summon_05.mp3</sm2> Now my wolves will feast.
 * <sm2>lycan_ability_summon_06.mp3</sm2> Gather, wolves!
 * <sm2>lycan_ability_howl_01.mp3</sm2> {{resp|u}} Arp arooo!
@@ -16453,6 +16507,18 @@
 * <sm2>lycan_anger_03.mp3</sm2> {{resp|u}} Grr.
 * <sm2>lycan_anger_04.mp3</sm2> {{resp|u}} Grrr.
 * <sm2>lycan_anger_05.mp3</sm2> {{resp|u}} Nyeh.
+* <sm2>magn_spawn_02.mp3</sm2> Let them try and stop me.
+* <sm2>magn_spawn_04.mp3</sm2> My horn is sharp, my pike is sharper still.
+* <sm2>magn_spawn_05.mp3</sm2> Keep your eye on my horn!
+* <sm2>magn_spawn_06.mp3</sm2> Behold the horn of Magnus!
+* <sm2>magn_move_10.mp3</sm2> They cannot hide.
+* <sm2>magn_move_12.mp3</sm2> Stand aside!
+* <sm2>magn_move_14.mp3</sm2> By the gleam of my horn!
+* <sm2>magn_attack_01.mp3</sm2> Under my hoof you will find your fate.
+* <sm2>magn_attack_04.mp3</sm2> I\'ll trample them.
+* <sm2>magn_attack_07.mp3</sm2> Who stands against me?
+* <sm2>magn_move_09.mp3</sm2> I shall find them.
+* <sm2>magn_levelup_08.mp3</sm2> My hooves are mighty.
 * <sm2>magn_spawn_01.mp3</sm2> {{resp|u}} Magnataur!
 * <sm2>magn_spawn_02.mp3</sm2> Let them try and stop me.
 * <sm2>magn_spawn_03.mp3</sm2> {{resp|u}} We Magnataurs are not known for restraint.
@@ -16791,6 +16857,18 @@
 * <sm2>magn_happy_15.mp3</sm2> {{resp|u}} Hm hm hmhm.
 * <sm2>magn_happy_16.mp3</sm2> {{resp|u}} Ah!
 * <sm2>magn_ban_01.mp3</sm2> {{resp|u}} Huh?
+* <sm2>medus_spawn_01.mp3</sm2> Medusa!
+* <sm2>medus_spawn_02.mp3</sm2> The Gorgon!
+* <sm2>medus_spawn_03.mp3</sm2> Unblinking, I rise.
+* <sm2>medus_spawn_04.mp3</sm2> Gorgons, I\'ll avenge you!
+* <sm2>medus_spawn_05.mp3</sm2> Sharpening my fangs.
+* <sm2>medus_begin_03.mp3</sm2> Gaze upon Medusa\'s beauty, and despair!
+* <sm2>medus_attack_05.mp3</sm2> None can resist!
+* <sm2>medus_attack_07.mp3</sm2> Look me in the eye.
+* <sm2>medus_attack_10.mp3</sm2> Lock eyes with a Gorgon!
+* <sm2>medus_kill_08.mp3</sm2> There is no heart colder than mine.
+* <sm2>medus_respawn_08.mp3</sm2> There will be a reckoning.
+* <sm2>medus_attack_04.mp3</sm2> Fall before me!
 * <sm2>medus_spawn_01.mp3</sm2> Medusa!
 * <sm2>medus_spawn_02.mp3</sm2> The Gorgon!
 * <sm2>medus_spawn_03.mp3</sm2> Unblinking, I rise.
@@ -17173,6 +17251,18 @@
 * <sm2>meepo_spawn_03.mp3</sm2> A digger\'s gotta dig!
 * <sm2>meepo_spawn_04.mp3</sm2> Name\'s Meepo. Geomancer. Pleased to meet ya.
 * <sm2>meepo_spawn_05.mp3</sm2> Hey, what\'s cookin\'?
+* <sm2>meepo_move_16.mp3</sm2> Aw yeah!
+* <sm2>meepo_move_28.mp3</sm2> Mischief for mischief!
+* <sm2>meepo_move_37.mp3</sm2> Let\'s go to work!
+* <sm2>meepo_attack_13.mp3</sm2> Come out and play!
+* <sm2>meepo_cast_01.mp3</sm2> Comin\' for ya!
+* <sm2>meepo_levelup_03.mp3</sm2> Ain\'t nothing gonna stop me now!
+* <sm2>meepo_levelup_15.mp3</sm2> Oh now that\'s what I\'m talking about!
+* <sm2>meepo_spawn_01.mp3</sm2> Meepo!
+* <sm2>meepo_spawn_02.mp3</sm2> Meepo the Geomancer!
+* <sm2>meepo_spawn_03.mp3</sm2> A digger\'s gotta dig!
+* <sm2>meepo_spawn_04.mp3</sm2> Name\'s Meepo. Geomancer. Pleased to meet ya.
+* <sm2>meepo_spawn_05.mp3</sm2> Hey, what\'s cookin\'?
 * <sm2>meepo_inthebag_01.mp3</sm2> Don\'t tell nobody, but this one\'s already in the bag!
 * <sm2>meepo_inthebag_02.mp3</sm2> Hey! Hey! Don\'t tell nobody, but this one\'s already in the bag!
 * <sm2>meepo_begin_01.mp3</sm2> Let\'s get this over with. I ain\'t leaving empty handed!
@@ -17203,7 +17293,6 @@
 * <sm2>meepo_move_25.mp3</sm2> {{resp|u}} We gotta move!
 * <sm2>meepo_move_26.mp3</sm2> {{resp|u}} Let\'s head out!
 * <sm2>meepo_move_27.mp3</sm2> {{resp|u}} And we\'re off!
-* <sm2>meepo_move_28.mp3</sm2> {{resp|u}} Mischief for mischief!
 * <sm2>meepo_move_29.mp3</sm2> {{resp|u}} Pack rats!
 * <sm2>meepo_move_30.mp3</sm2> {{resp|u}} The rat pack!
 * <sm2>meepo_move_31.mp3</sm2> {{resp|u}} We got numbers!
@@ -17212,7 +17301,6 @@
 * <sm2>meepo_move_34.mp3</sm2> {{resp|u}} C\'mon guys!
 * <sm2>meepo_move_35.mp3</sm2> {{resp|u}} Strut it!
 * <sm2>meepo_move_36.mp3</sm2> {{resp|u}} We\'re lookin\' good!
-* <sm2>meepo_move_37.mp3</sm2> {{resp|u}} Let\'s go to work!
 * <sm2>meepo_attack_01.mp3</sm2> Attack!
 * <sm2>meepo_attack_02.mp3</sm2> Where do you think you\'re going?
 * <sm2>meepo_attack_03.mp3</sm2> Ey!
@@ -18817,6 +18905,18 @@
 * <sm2>mrph_spawn_04.mp3</sm2> My waters rise.
 * <sm2>mrph_spawn_05.mp3</sm2> Flood stage.
 * <sm2>mrph_spawn_06.mp3</sm2> Beware the riptide.
+* <sm2>mrph_spawn_08.mp3</sm2> Time to test the waters.
+* <sm2>mrph_attack_03a.mp3</sm2> Dangerous waters.
+* <sm2>mrph_level_02a.mp3</sm2> Waters rising.
+* <sm2>mrph_move_07.mp3</sm2> I flow.
+* <sm2>mrph_move_12.mp3</sm2> The wave breaks.
+* <sm2>mrph_attack_02.mp3</sm2> Raging waters!
+* <sm2>mrph_cast_02.mp3</sm2> My power flows!
+* <sm2>mrph_ability_repfriend_01.mp3</sm2> The waters are teeming!
+* <sm2>mrph_spawn_01.mp3</sm2> Morphling.
+* <sm2>mrph_spawn_04.mp3</sm2> My waters rise.
+* <sm2>mrph_spawn_05.mp3</sm2> Flood stage.
+* <sm2>mrph_spawn_06.mp3</sm2> Beware the riptide.
 * <sm2>mrph_inthebag_01.mp3</sm2> It is in the bag!
 * <sm2>mrph_spawn_08.mp3</sm2> Time to test the waters.
 * <sm2>mrph_move_01.mp3</sm2> Yes.
@@ -19245,6 +19345,7 @@
 * <sm2>naga_bottle_01.mp3</sm2> More than a message in this bottle.
 * <sm2>naga_bottle_02.mp3</sm2> Cork high, and bottle deep.
 * <sm2>naga_bottle_03.mp3</sm2> Into sea glass.
+* <sm2>naga_itemcommon_01.mp3</sm2> {{resp|300}} What have we here?
 * <sm2>naga_levelup_03.mp3</sm2> {{resp|300}} Loaded to the gills.
 * <sm2>naga_doubdam_01.mp3</sm2> Double damage!
 * <sm2>naga_doubdam_02.mp3</sm2> Double decibels.
@@ -19341,6 +19442,18 @@
 * <sm2>naga_sing_04.mp3</sm2> {{resp|u}} [singing]
 * <sm2>naga_sing_05.mp3</sm2> {{resp|u}} [singing]
 * <sm2>naga_sing_06.mp3</sm2> {{resp|u}} [singing]
+* <sm2>furi_spawn_01.mp3</sm2> I speak for the trees....
+* <sm2>furi_spawn_02.mp3</sm2> I summon the forces of nature.
+* <sm2>furi_spawn_03.mp3</sm2> I guard the wooded ways.
+* <sm2>furi_move_10.mp3</sm2> Nature calls.
+* <sm2>furi_cast_03.mp3</sm2> I answer the wild\'s call!
+* <sm2>furi_ability_teleport_04.mp3</sm2> Wild is my way!
+* <sm2>furi_ability_force_04.mp3</sm2> Warriors of the wood!
+* <sm2>furi_level_02.mp3</sm2> Ah, the sun in my leaves.
+* <sm2>furi_respawn_11.mp3</sm2> Nature\'s guardian returns.
+* <sm2>furi_move_11.mp3</sm2> With a wild spirit.
+* <sm2>furi_attack_02.mp3</sm2> For the trees!
+* <sm2>furi_attack_07.mp3</sm2> Nature\'s ferocity.
 * <sm2>furi_spawn_01.mp3</sm2> I speak for the trees....
 * <sm2>furi_spawn_02.mp3</sm2> I summon the forces of nature.
 * <sm2>furi_spawn_03.mp3</sm2> I guard the wooded ways.
@@ -19603,6 +19716,18 @@
 * <sm2>necr_spawn_02.mp3</sm2> I am the Plague Mage.
 * <sm2>necr_spawn_03.mp3</sm2> Comes the Dark Rot.
 * <sm2>necr_spawn_04.mp3</sm2> Behold the Pope of Pestilence.
+* <sm2>necr_move_04.mp3</sm2> Plague spreader.
+* <sm2>necr_ability_tox_02.mp3</sm2> A pox upon you!
+* <sm2>necr_ability_reap_01.mp3</sm2> Greet the reaper!
+* <sm2>necr_level_05.mp3</sm2> Spread the contagion!
+* <sm2>necr_move_14.mp3</sm2> I\'ll plague you.
+* <sm2>necr_move_15.mp3</sm2> Affliction.
+* <sm2>necr_attack_09.mp3</sm2> Sweet spoilage.
+* <sm2>necr_attack_10.mp3</sm2> Spoiling for a fight.
+* <sm2>necr_spawn_01.mp3</sm2> Necrophos.
+* <sm2>necr_spawn_02.mp3</sm2> I am the Plague Mage.
+* <sm2>necr_spawn_03.mp3</sm2> Comes the Dark Rot.
+* <sm2>necr_spawn_04.mp3</sm2> Behold the Pope of Pestilence.
 * <sm2>necr_inthebag_01.mp3</sm2> It\'s in the bag!
 * <sm2>necr_cast_02.mp3</sm2> No escape!
 * <sm2>necr_move_01.mp3</sm2> Yes.
@@ -19747,6 +19872,7 @@
 * <sm2>necr_bottle_01.mp3</sm2> A prescription for disaster.
 * <sm2>necr_bottle_02.mp3</sm2> Damn child-proof cap!
 * <sm2>necr_bottle_03.mp3</sm2> Let this sit and rot a bit.
+* <sm2>necr_happy_05.mp3</sm2> {{resp|300}} Ah.
 * <sm2>necr_lasthit_04.mp3</sm2> {{resp|300}} Coin for me.
 * <sm2>necr_doubdam_01.mp3</sm2> Double damage!
 * <sm2>necr_doubdam_02.mp3</sm2> Secondary infection.
@@ -19826,7 +19952,18 @@
 * <sm2>necr_anger_03.mp3</sm2> {{resp|u}} Huh owww.
 * <sm2>necr_happy_02.mp3</sm2> {{resp|u}} Mm ah.
 * <sm2>necr_happy_03.mp3</sm2> {{resp|u}} Ahhh.
-* <sm2>necr_happy_05.mp3</sm2> {{resp|u}} Ah.
+* <sm2>nstalk_spawn_01.mp3</sm2> Night Stalker.
+* <sm2>nstalk_spawn_02.mp3</sm2> Night-time is my time.
+* <sm2>nstalk_spawn_03.mp3</sm2> I\'m the beast of bedtime tales.
+* <sm2>nstalk_spawn_04.mp3</sm2> From blackest night, I come.
+* <sm2>nstalk_spawn_05.mp3</sm2> Creature of the dark.
+* <sm2>nstalk_battlebegins_02.mp3</sm2> And the hunt begins.
+* <sm2>nstalk_move_07.mp3</sm2> Day walker, night stalker.
+* <sm2>nstalk_move_09.mp3</sm2> On the hunt.
+* <sm2>nstalk_attack_02.mp3</sm2> I come to feed.
+* <sm2>nstalk_attack_03.mp3</sm2> I\'ll feast tonight.
+* <sm2>nstalk_attack_08.mp3</sm2> None can stand against me.
+* <sm2>nstalk_cast_01.mp3</sm2> There\'s no escape.
 * <sm2>nstalk_spawn_01.mp3</sm2> Night Stalker.
 * <sm2>nstalk_spawn_02.mp3</sm2> Night-time is my time.
 * <sm2>nstalk_spawn_03.mp3</sm2> I\'m the beast of bedtime tales.
@@ -19978,6 +20115,7 @@
 * <sm2>nstalk_bottle_01.mp3</sm2> Saved for later.
 * <sm2>nstalk_bottle_02.mp3</sm2> For when the time is right.
 * <sm2>nstalk_bottle_03.mp3</sm2> Dark as bottled ink.
+* <sm2>nstalk_purch_03.mp3</sm2> {{resp|300}} Now they will suffer.
 * <sm2>nstalk_lasthit_04.mp3</sm2> {{resp|300}} Flesh sustains, gold remains.
 * <sm2>nstalk_doubdam_01.mp3</sm2> Double damage!
 * <sm2>nstalk_doubdam_02.mp3</sm2> {{resp|u}} Nightling strikes twice.
@@ -20064,6 +20202,18 @@
 * <sm2>nyx_spawn_01.mp3</sm2> Nyx Assassin.
 * <sm2>nyx_spawn_02.mp3</sm2> Nyx Assassin.
 * <sm2>nyx_spawn_03.mp3</sm2> Five targets marked for death.
+* <sm2>nyx_spawn_04.mp3</sm2> I will fulfill my purpose.
+* <sm2>nyx_spawn_05.mp3</sm2> Assassination is inevitable.
+* <sm2>nyx_begin_01.mp3</sm2> My purpose is clear, my targets doomed.
+* <sm2>nyx_nyx_10.mp3</sm2> Ah, Nyx, Nyx, Nyx, Nyx.
+* <sm2>nyx_attack_16.mp3</sm2> I see your fears.
+* <sm2>nyx_burn_03.mp3</sm2> Soon you shall perish.
+* <sm2>nyx_levelup_05.mp3</sm2> I am the pride of Nyx.
+* <sm2>nyx_kill_14.mp3</sm2> Nyx welcomes you.
+* <sm2>nyx_levelup_10.mp3</sm2> Nyx, Nyx, Nyx, Nyx.
+* <sm2>nyx_spawn_01.mp3</sm2> Nyx Assassin.
+* <sm2>nyx_spawn_02.mp3</sm2> Nyx Assassin.
+* <sm2>nyx_spawn_03.mp3</sm2> Five targets marked for death.
 * <sm2>nyx_spawn_03_alt_01.mp3</sm2> {{resp|u}} Five targets marked for death.
 * <sm2>nyx_spawn_04.mp3</sm2> I will fulfill my purpose.
 * <sm2>nyx_spawn_05.mp3</sm2> Assassination is inevitable.
@@ -20113,7 +20263,6 @@
 * <sm2>nyx_impale_03.mp3</sm2> {{resp|u}} Impale.
 * <sm2>nyx_burn_01.mp3</sm2> {{resp|u}} Mana burn.
 * <sm2>nyx_burn_02.mp3</sm2> {{resp|u}} Your talents wane.
-* <sm2>nyx_burn_03.mp3</sm2> {{resp|u}} Soon you shall perish.
 * <sm2>nyx_burn_04.mp3</sm2> {{resp|u}} Talents stolen.
 * <sm2>nyx_burn_05.mp3</sm2> {{resp|u}} Talentless.
 * <sm2>nyx_burn_06.mp3</sm2> {{resp|u}} Skills erode!
@@ -20127,7 +20276,6 @@
 * <sm2>nyx_vendetta_03.mp3</sm2> None may see.
 * <sm2>nyx_vendetta_09.mp3</sm2> For Nyx!
 * <sm2>nyx_nyx_09.mp3</sm2> {{resp|u}} For Nyx.
-* <sm2>nyx_nyx_10.mp3</sm2> {{resp|u}} Ah, Nyx, Nyx, Nyx, Nyx.
 * <sm2>nyx_vendetta_07.mp3</sm2> {{resp|u}} Take that.
 * <sm2>nyx_vendetta_08.mp3</sm2> {{resp|u}} Pain.
 * <sm2>nyx_impale_02.mp3</sm2> {{resp|30}} Burrowing.
@@ -20290,6 +20438,7 @@
 * <sm2>nyx_bottle_01.mp3</sm2> Bottled.
 * <sm2>nyx_bottle_02.mp3</sm2> Set aside for now.
 * <sm2>nyx_bottle_03.mp3</sm2> Better later.
+* <sm2>nyx_happy_03.mp3</sm2> {{resp|300}} Nyx, neh.
 * <sm2>nyx_lasthit_07.mp3</sm2> {{resp|300}} Death and gold are linked.
 * <sm2>nyx_doubdam_01.mp3</sm2> Double damage!
 * <sm2>nyx_doubdam_02.mp3</sm2> I crackle with power!
@@ -20383,11 +20532,22 @@
 * <sm2>nyx_anger_09.mp3</sm2> {{resp|u}} Agghhhh.
 * <sm2>nyx_happy_01.mp3</sm2> {{resp|u}} Hah, heh heh.
 * <sm2>nyx_happy_02.mp3</sm2> {{resp|u}} Eh.
-* <sm2>nyx_happy_03.mp3</sm2> {{resp|u}} Nyx, neh.
 * <sm2>nyx_happy_04.mp3</sm2> {{resp|u}} Nennn.
 * <sm2>nyx_happy_05.mp3</sm2> {{resp|u}} Ehhh.
 * <sm2>nyx_watchyourback_01.mp3</sm2> {{resp|u}} Watch your back.
 * <sm2>nyx_waiting_01.mp3</sm2> {{resp|u}} I\'m waiting for you.
+* <sm2>ogmag_spawn_01.mp3</sm2> Ogre Magi!
+* <sm2>ogmag_spawn_02.mp3</sm2> Ogre Magi! The very same.
+* <sm2>ogmag_spawn_03.mp3</sm2> Ogre Magi! I wanted to say that.
+* <sm2>ogmag_spawn_04.mp3</sm2> They picked me! No one ever picks me.
+* <sm2>ogmag_spawn_05.mp3</sm2> I\'m the Ogre Magi! No, you are!
+* <sm2>ogmag_spawn_06.mp3</sm2> After you. No, me first!
+* <sm2>ogmag_move_01.mp3</sm2> Yeah!
+* <sm2>ogmag_attack_02.mp3</sm2> Here we go!
+* <sm2>ogmag_attack_05.mp3</sm2> I like this part! Me too.
+* <sm2>ogmag_ability_multi_01.mp3</sm2> Damn. We\'re good.
+* <sm2>ogmag_respawn_06.mp3</sm2> Pleased to meet ya. Likewise I\'m sure.
+* <sm2>ogmag_attack_04.mp3</sm2> Hittin stuff is fun. Hah aha ha ha ha!
 * <sm2>ogmag_spawn_01.mp3</sm2> Ogre Magi!
 * <sm2>ogmag_spawn_02.mp3</sm2> Ogre Magi! The very same.
 * <sm2>ogmag_spawn_03.mp3</sm2> Ogre Magi! I wanted to say that.
@@ -20612,6 +20772,7 @@
 * <sm2>ogmag_bottle_02.mp3</sm2> You carry the bottle. No, I will.
 * <sm2>ogmag_bottle_03.mp3</sm2> My bottle. My cork.
 * <sm2>ogmag_bottle_04.mp3</sm2> {{resp|u}} Was that a rune? Not telling.
+* <sm2>ogmag_lasthit_06.mp3</sm2> {{resp|300}} Gifts for the magi.
 * <sm2>ogmag_lasthit_01.mp3</sm2> {{resp|300}} Mine! Selfish.
 * <sm2>ogmag_doubdam_01.mp3</sm2> Double damage!
 * <sm2>ogmag_doubdam_02.mp3</sm2> Double or nothing.
@@ -20706,6 +20867,18 @@
 * <sm2>omni_spawn_03.mp3</sm2> By the Omniscience.
 * <sm2>omni_spawn_04.mp3</sm2> My hammer is ready in the service of the All-knowing One.
 * <sm2>omni_spawn_05.mp3</sm2> Where piety fails, my hammer falls.
+* <sm2>omni_move_03.mp3</sm2> Strength guides me.
+* <sm2>omni_move_04.mp3</sm2> Omniscient light!
+* <sm2>omni_move_05.mp3</sm2> I stand for the light.
+* <sm2>omni_move_11.mp3</sm2> The All-knowing One guides me.
+* <sm2>omni_attack_08.mp3</sm2> Surrender to the Omniscience.
+* <sm2>omni_ability_guard_03.mp3</sm2> The All-knowing One protects us all.
+* <sm2>omni_ability_guard_07.mp3</sm2> Fear not my friends, our guardian is here.
+* <sm2>omni_spawn_01.mp3</sm2> Omniknight.
+* <sm2>omni_spawn_02.mp3</sm2> By virtue, by strength.
+* <sm2>omni_spawn_03.mp3</sm2> By the Omniscience.
+* <sm2>omni_spawn_04.mp3</sm2> My hammer is ready in the service of the All-knowing One.
+* <sm2>omni_spawn_05.mp3</sm2> Where piety fails, my hammer falls.
 * <sm2>omni_inthebag_01.mp3</sm2> This one, my brethren, is in the bag!
 * <sm2>omni_inthebag_02.mp3</sm2> The Omniscience has decreed that this one is in the bag.
 * <sm2>omni_battlebegins_01.mp3</sm2> The Omniscience may spare them, but I will not.
@@ -20742,7 +20915,6 @@
 * <sm2>omni_attack_05.mp3</sm2> They shall know.
 * <sm2>omni_attack_06.mp3</sm2> Strength.
 * <sm2>omni_attack_07.mp3</sm2> Charge!
-* <sm2>omni_attack_08.mp3</sm2> {{resp|u}} Surrender to the Omniscience.
 * <sm2>omni_attack_09.mp3</sm2> The Omniscience knows your sins.
 * <sm2>omni_attack_10.mp3</sm2> Smite!
 * <sm2>omni_attack_11.mp3</sm2> Stricken!
@@ -20779,7 +20951,6 @@
 * <sm2>omni_ability_degaura_06.mp3</sm2> {{resp|u}} You will never escape your sins.
 * <sm2>omni_ability_degaura_07.mp3</sm2> {{resp|u}} For all your transgressions you shall pay.
 * <sm2>omni_ability_degaura_09.mp3</sm2> {{resp|u}} The weight of all worlds is on your shoulders.
-* <sm2>omni_ability_degaura_11.mp3</sm2> {{resp|u}} Come and be judged fairly.
 * <sm2>omni_ability_guard_01.mp3</sm2> {{resp|u}} The wings of omniscience enwrap us.
 * <sm2>omni_ability_guard_02.mp3</sm2> {{resp|u}} Come into the Omniscience.
 * <sm2>omni_ability_guard_04.mp3</sm2> Guardian of us all.
@@ -20920,6 +21091,7 @@
 * <sm2>omni_bottle_01.mp3</sm2> Waste not, want not.
 * <sm2>omni_bottle_02.mp3</sm2> Into my rucksack.
 * <sm2>omni_bottle_03.mp3</sm2> Be always prepared.
+* <sm2>omni_ability_degaura_11.mp3</sm2> {{resp|300}} Come and be judged fairly.
 * <sm2>omni_lasthit_02.mp3</sm2> {{resp|300}} A tithe.
 * <sm2>omni_doubdam_01.mp3</sm2> Double damage!
 * <sm2>omni_doubdam_02.mp3</sm2> {{resp|u}} The All-knowing one sees damage to be done.
@@ -21003,6 +21175,18 @@
 * <sm2>omni_happy_01.mp3</sm2> {{resp|u}} Heahhwh.
 * <sm2>omni_happy_02.mp3</sm2> {{resp|u}} Howuhh.
 * <sm2>omni_happy_03.mp3</sm2> {{resp|u}} Hemmmmm.
+* <sm2>Orac_spawn_01.mp3</sm2> Oracle.
+* <sm2>Orac_spawn_02.mp3</sm2> The Oracle sees all.
+* <sm2>Orac_spawn_03.mp3</sm2> Let if be all that we see or seem.
+* <sm2>orac_battlebegins_01.mp3</sm2> The odds are with us. Or are they?
+* <sm2>orac_move_18.mp3</sm2> Like those odds, do you, hmm?
+* <sm2>orac_move_23.mp3</sm2> So many paths to choose.
+* <sm2>Orac_purifyingflames_02.mp3</sm2> I must harm to heal.
+* <sm2>Orac_purifyingflames_03.mp3</sm2> The flames of fate.
+* <sm2>orac_attack_02.mp3</sm2> Prepare for your fate.
+* <sm2>Orac_levelup_05.mp3</sm2> More wisdom, more danger.
+* <sm2>Orac_fatesedict_06.mp3</sm2> Trust in the Oracle!
+* <sm2>Orac_falsepromise_04.mp3</sm2> Beware what you wish for.
 * <sm2>Orac_spawn_01.mp3</sm2> Oracle.
 * <sm2>Orac_spawn_02.mp3</sm2> The Oracle sees all.
 * <sm2>Orac_spawn_03.mp3</sm2> Let if be all that we see or seem.
@@ -21491,6 +21675,18 @@
 * <sm2>orac_happy_05.mp3</sm2> {{resp|u}} Mm.
 * <sm2>orac_happy_06.mp3</sm2> {{resp|u}} Mm.
 * <sm2>orac_happy_07.mp3</sm2> {{resp|u}} Mmm.
+* <sm2>Odest_spawn_02.mp3</sm2> Outworld Devourer.
+* <sm2>odest_spawn_04.mp3</sm2> From the outer dark I come.
+* <sm2>odest_spawn_05.mp3</sm2> From the fortress afloat in the dark.
+* <sm2>odest_levelup_01.mp3</sm2> My wings beat with the rhythms of eternity.
+* <sm2>odest_begin_01.mp3</sm2> Their sanity I\'ll shatter, their dreams of conquest I\'ll destroy.
+* <sm2>odest_move_06.mp3</sm2> From the world on the rim.
+* <sm2>odest_move_07.mp3</sm2> The blood sun rises.
+* <sm2>odest_move_08.mp3</sm2> Darkness advances.
+* <sm2>odest_move_10.mp3</sm2> Path of destruction.
+* <sm2>odest_move_16.mp3</sm2> Darkness advances.
+* <sm2>odest_attack_03.mp3</sm2> I bring destruction.
+* <sm2>odest_ability_eclipse_04.mp3</sm2> I\'ll overshadow you.
 * <sm2>Odest_spawn_01.mp3</sm2> {{resp|u}} Destroyer.
 * <sm2>Odest_spawn_02.mp3</sm2> Outworld Devourer.
 * <sm2>Odest_spawn_03.mp3</sm2> {{resp|u}} Outworld Destroyer.
@@ -21556,11 +21752,9 @@
 * <sm2>odest_ability_imprison_10.mp3</sm2> {{resp|u}} I\'ve received some intelligence.
 * <sm2>odest_ability_imprison_11.mp3</sm2> {{resp|u}} Think it over.
 * <sm2>odest_ability_imprison_12.mp3</sm2> {{resp|u}} Take some time to think it over.
-* <sm2>odest_ability_imprison_14.mp3</sm2> {{resp|u}} Enough.
 * <sm2>odest_ability_eclipse_01.mp3</sm2> {{resp|u}} Precurse you.
 * <sm2>odest_ability_eclipse_02.mp3</sm2> Your sanity, eclipsed.
 * <sm2>odest_ability_eclipse_03.mp3</sm2> My mind blots yours out.
-* <sm2>odest_ability_eclipse_04.mp3</sm2> {{resp|u}} I\'ll overshadow you.
 * <sm2>odest_ability_eclipse_05.mp3</sm2> {{resp|u}} You\'re a lesser power.
 * <sm2>odest_ability_eclipse_06.mp3</sm2> Small minds are quickly broken.
 * <sm2>odest_ability_eclipse_07.mp3</sm2> I\'ll snuff out your sanity.
@@ -21708,6 +21902,7 @@
 * <sm2>odest_bottle_01.mp3</sm2> Dark destinies await.
 * <sm2>odest_bottle_02.mp3</sm2> Ill omens to be fulfilled.
 * <sm2>odest_bottle_03.mp3</sm2> Let\'s put off the inevitable.
+* <sm2>odest_ability_imprison_14.mp3</sm2> {{resp|300}} Enough.
 * <sm2>odest_purch_03.mp3</sm2> {{resp|300}} I was meant to have this.
 * <sm2>odest_doubdam_01.mp3</sm2> Double damage!
 * <sm2>odest_haste_01.mp3</sm2> Haste!
@@ -21819,7 +22014,7 @@
 * <sm2>pangolin_spawn_14.mp3</sm2> Life is but a game. And I\'ve certainly come to play.
 * <sm2>pangolin_spawn_15.mp3</sm2> A thing is only worth doing when death is on the line.
 * <sm2>pangolin_spawn_16.mp3</sm2> You\'ve never met a [[Nivan Gallant]]? Well, you won\'t soon forget this encounter.
-* <sm2>pangolin_spawn_17.mp3</sm2> Those who know me well call me...Donte.
+* <sm2>pangolin_spawn_17.mp3</sm2> Those who know me well call me...Donte. 
 * <sm2>pangolin_spawn_18.mp3</sm2> The [[Nivan Gallant]].
 * <sm2>pangolin_spawn_20.mp3</sm2> Donte Panlin.
 * <sm2>pangolin_spawn_21.mp3</sm2> Donte!
@@ -21866,10 +22061,10 @@
 * <sm2>pangolin_move_31.mp3</sm2> Mm hm. 
 * <sm2>pangolin_move_32.mp3</sm2> I know.
 * <sm2>pangolin_move_33.mp3</sm2> Uh huh. 
-* <sm2>pangolin_move_34.mp3</sm2> {{resp|120}} 
-* <sm2>pangolin_move_35.mp3</sm2> An honorable path.
-* <sm2>pangolin_move_36.mp3</sm2> Where does this lead?
-* <sm2>pangolin_move_37.mp3</sm2> {{resp|120}} An excellent choice.
+* <sm2>pangolin_move_34.mp3</sm2> {{resp|120}} An honorable path.
+* <sm2>pangolin_move_35.mp3</sm2> Where does this lead?
+* <sm2>pangolin_move_36.mp3</sm2> An excellent choice.
+* <sm2>pangolin_move_37.mp3</sm2> {{resp|120}} Is that a challenge?
 * <sm2>pangolin_move_12.mp3</sm2> {{resp|r}} I cannot refuse.
 * <sm2>pangolin_move_17.mp3</sm2> {{resp|240}} The danger, she is this way?
 * <sm2>pangolin_move_22_b.mp3</sm2> {{resp|240}} Oui.
@@ -22076,7 +22271,7 @@
 * <sm2>pangolin_rival_38.mp3</sm2> {{Hero icon|Clockwerk|16px}} {{resp|r}} No armor exists that can stop this blade. 
 * <sm2>pangolin_rival_39.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} {{resp|r}} [[Pierpont]] had high hopes for you... oh well. 
 * <sm2>pangolin_rival_40.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} {{resp|r}} Don\'t look at me. It was a miracle she survived this long.
-* <sm2>pangolin_rival_41.mp3</sm2> {{Hero icon|Dark Seer|16px}} {{resp|r}} You overthought things, my friend.
+* <sm2>pangolin_rival_41.mp3</sm2> {{Hero icon|Dark Seer|16px}} {{resp|r}} You overthought things, my friend. My path to victory was quite simple.
 * <sm2>pangolin_rival_42.mp3</sm2> {{Hero icon|Dark Seer|16px}} {{resp|r}} Did it ever occur to you that you may have merely been the smartest among a race of imbeciles?
 * <sm2>pangolin_rival_43.mp3</sm2> {{Hero icon|Dazzle|16px}} {{resp|r}} Oh ho ho, Dazzle. That tickled. 
 * <sm2>pangolin_rival_44.mp3</sm2> {{Hero icon|Dazzle|16px}} {{resp|r}} Even a shallow grave is deep enough.
@@ -22570,7 +22765,7 @@
 * <sm2>pangolin_item_15.mp3</sm2> {{Item|Skull Basher|20px}} {{resp|r}} Basher.
 * <sm2>pangolin_item_16.mp3</sm2> {{Item|Radiance|20px}} {{resp|r}} Radiance.
 * <sm2>pangolin_item_17.mp3</sm2> {{Item|Eye of Skadi|20px}} {{resp|r}} Eye of Skadi.
-* <sm2>pangolin_item_18.mp3</sm2> {{Item|Hurricane Pike|20px}} {{resp|r}} Hurricaine Pike, for some reason...
+* <sm2>pangolin_item_18.mp3</sm2> {{Item|Hurricane Pike|20px}} {{resp|r}} Hurricane Pike, for some reason...
 * <sm2>pangolin_item_19.mp3</sm2> {{Item|Divine Rapier|20px}} {{resp|r}} Divine Rapier,
 * <sm2>pangolin_item_39.mp3</sm2> {{Item|Divine Rapier|20px}} {{resp|r}} Ha ha! Rapier!
 * <sm2>pangolin_item_20.mp3</sm2> {{Item|Refresher Orb|20px}} {{resp|r}} Refresher Orb. 
@@ -22825,6 +23020,18 @@
 * <sm2>phass_spawn_03.mp3</sm2> <sm2>phass_arc_spawn_03.mp3</sm2> The Phantom creeps in.
 * <sm2>phass_spawn_04.mp3</sm2> <sm2>phass_arc_spawn_04.mp3</sm2> The Veiled Sisters sent me.
 * <sm2>phass_spawn_05.mp3</sm2> <sm2>phass_arc_spawn_05.mp3</sm2> I\'m here to blur the line between life and death.
+* <sm2>phass_move_14.mp3</sm2> <sm2>phass_arc_move_14.mp3</sm2> Where falls my shadow, fells my blade.
+* <sm2>phass_move_09.mp3</sm2> <sm2>phass_arc_move_09.mp3</sm2> Don\'t blink, or you\'ll miss me.
+* <sm2>phass_move_10.mp3</sm2> <sm2>phass_arc_move_10.mp3</sm2> In the blink of an eye.
+* <sm2>phass_cast_01.mp3</sm2> <sm2>phass_arc_cast_01.mp3</sm2> Marked for death!
+* <sm2>phass_cast_04.mp3</sm2> <sm2>phass_arc_cast_04.mp3</sm2> I sting from the shadows.
+* <sm2>phass_kill_10.mp3</sm2> <sm2>phass_arc_kill_10.mp3</sm2> Death at my hands is an honor.
+* <sm2>phass_kill_03.mp3</sm2> <sm2>phass_arc_kill_03.mp3</sm2> The Veiled Oracle chose you.
+* <sm2>phass_spawn_01.mp3</sm2> <sm2>phass_arc_spawn_01.mp3</sm2> Phantom Assassin!
+* <sm2>phass_spawn_02.mp3</sm2> <sm2>phass_arc_spawn_02.mp3</sm2> Unseen and unheard.
+* <sm2>phass_spawn_03.mp3</sm2> <sm2>phass_arc_spawn_03.mp3</sm2> The Phantom creeps in.
+* <sm2>phass_spawn_04.mp3</sm2> <sm2>phass_arc_spawn_04.mp3</sm2> The Veiled Sisters sent me.
+* <sm2>phass_spawn_05.mp3</sm2> <sm2>phass_arc_spawn_05.mp3</sm2> I\'m here to blur the line between life and death.
 * <sm2>phass_inthebag_01.mp3</sm2> <sm2>phass_arc_inthebag_01.mp3</sm2> It is in the bag!
 * <sm2>phass_battlebegins_01.mp3</sm2> <sm2>phass_arc_battlebegins_01.mp3</sm2> My list has five names on it.
 * <sm2>phass_move_01.mp3</sm2> <sm2>phass_arc_move_01.mp3</sm2> Yes.
@@ -22965,6 +23172,7 @@
 * <sm2>phass_bottle_01.mp3</sm2> <sm2>phass_arc_bottle_01.mp3</sm2> I\'ll just hide this away.
 * <sm2>phass_bottle_02.mp3</sm2> <sm2>phass_arc_bottle_02.mp3</sm2> Stop it up.
 * <sm2>phass_bottle_03.mp3</sm2> <sm2>phass_arc_bottle_03.mp3</sm2> Phantom\'s pleasure.
+* <sm2>phass_happy_02.mp3</sm2> <sm2>phass_arc_happy_02.mp3</sm2> {{resp|300}} Ohh...
 * <sm2>phass_purch_01.mp3</sm2> <sm2>phass_arc_purch_01.mp3</sm2> {{resp|300}} This should make my life easier.
 * <sm2>phass_doubdam_01.mp3</sm2> <sm2>phass_arc_doubdam_01.mp3</sm2> Double damage!
 * <sm2>phass_doubdam_02.mp3</sm2> <sm2>phass_arc_doubdam_02.mp3</sm2> {{resp|u}} Strike and strike again.
@@ -23055,10 +23263,21 @@
 * <sm2>phass_anger_07.mp3</sm2> <sm2>phass_arc_anger_07.mp3</sm2> {{resp|u}} Hm.
 * <sm2>phass_anger_08.mp3</sm2> <sm2>phass_arc_anger_08.mp3</sm2> {{resp|u}} Rhmmm!
 * <sm2>phass_happy_01.mp3</sm2> <sm2>phass_arc_happy_01.mp3</sm2> {{resp|u}} Ahhh...
-* <sm2>phass_happy_02.mp3</sm2> <sm2>phass_arc_happy_02.mp3</sm2> {{resp|u}} Ohh...
 * <sm2>phass_happy_04.mp3</sm2> <sm2>phass_arc_happy_04.mp3</sm2> {{resp|u}} Ohh...
 * <sm2>phass_happy_07.mp3</sm2> <sm2>phass_arc_happy_07.mp3</sm2> {{resp|u}} Ah, divine...
 * <sm2>phass_happy_08.mp3</sm2> <sm2>phass_arc_happy_08.mp3</sm2> {{resp|u}} Ah, divine!
+* <sm2>plance_spawn_01.mp3</sm2> Phantom Lancer!
+* <sm2>plance_spawn_02.mp3</sm2> For home. For peace.
+* <sm2>plance_spawn_03.mp3</sm2> We are but a simple servant.
+* <sm2>plance_spawn_04.mp3</sm2> We will do as needed.
+* <sm2>plance_spawn_05.mp3</sm2> From one: an army.
+* <sm2>plance_battlebegins_01.mp3</sm2> We are coiled, ready to strike.
+* <sm2>plance_attack_06.mp3</sm2> We shall strike.
+* <sm2>plance_attack_07.mp3</sm2> They cannot hide from us!
+* <sm2>plance_attack_14.mp3</sm2> Our lance is ready.
+* <sm2>plance_cast_02.mp3</sm2> We come for you!
+* <sm2>plance_levelup_05.mp3</sm2> Nothing can stop our march!
+* <sm2>plance_levelup_06.mp3</sm2> We will set things to right.
 * <sm2>plance_spawn_01.mp3</sm2> Phantom Lancer!
 * <sm2>plance_spawn_02.mp3</sm2> For home. For peace.
 * <sm2>plance_spawn_03.mp3</sm2> We are but a simple servant.
@@ -23297,6 +23516,7 @@
 * <sm2>plance_bottle_01.mp3</sm2> We are patient.
 * <sm2>plance_bottle_02.mp3</sm2> We will tuck it away.
 * <sm2>plance_bottle_03.mp3</sm2> For when our moment comes.
+* <sm2>plance_illus_04.mp3</sm2> {{resp|300}} Why not?
 * <sm2>plance_lasthit_04.mp3</sm2> {{resp|300}} Mere coin?
 * <sm2>plance_doubdam_01.mp3</sm2> Double damage!
 * <sm2>plance_doubdam_02.mp3</sm2> {{resp|u}} Two lances for each of us.
@@ -23305,7 +23525,6 @@
 * <sm2>plance_illus_01.mp3</sm2> Illusion!
 * <sm2>plance_illus_02.mp3</sm2> {{resp|u}} Now this is just silly.
 * <sm2>plance_illus_03.mp3</sm2> Because at this point: why not?
-* <sm2>plance_illus_04.mp3</sm2> {{resp|u}} Why not?
 * <sm2>plance_invis_01.mp3</sm2> Invisibility!
 * <sm2>plance_invis_02.mp3</sm2> {{resp|u}} Are we alone again?
 * <sm2>plance_regen_01.mp3</sm2> Regeneration!
@@ -23422,6 +23641,18 @@
 * <sm2>Phoenix_bird_laugh.mp3</sm2> 
 * <sm2>Phoenix_bird_victory.mp3</sm2> 
 * <sm2>Phoenix_bird_death_defeat.mp3</sm2> 
+* <sm2>puck_spawn_01.mp3</sm2> Puck!
+* <sm2>puck_spawn_02.mp3</sm2> In your tongue, I am known as Puck.
+* <sm2>puck_spawn_03.mp3</sm2> This might prove a sport of some interest.
+* <sm2>puck_spawn_04.mp3</sm2> Interesting.
+* <sm2>puck_spawn_05.mp3</sm2> What is this, a game of some sort?
+* <sm2>puck_spawn_06.mp3</sm2> A likely way to pass a fraction of an eon.
+* <sm2>puck_spawn_07.mp3</sm2> Ah, gambits and exploits await.
+* <sm2>puck_spawn_08.mp3</sm2> This should be less tiresome than another age in chrysalis.
+* <sm2>puck_move_08.mp3</sm2> With alacrity.
+* <sm2>puck_attack_11.mp3</sm2> Stay and amuse me!
+* <sm2>puck_ability_orb_01.mp3</sm2> Here I am!
+* <sm2>puck_level_01.mp3</sm2> A metamorphosis!
 * <sm2>puck_spawn_01.mp3</sm2> Puck!
 * <sm2>puck_spawn_02.mp3</sm2> In your tongue, I am known as Puck.
 * <sm2>puck_spawn_03.mp3</sm2> This might prove a sport of some interest.
@@ -23587,6 +23818,7 @@
 * <sm2>puck_bottle_01.mp3</sm2> I may require this at some point.
 * <sm2>puck_bottle_02.mp3</sm2> Patience, my prize.
 * <sm2>puck_bottle_03.mp3</sm2> The vessel proves useful.
+* <sm2>puck_spawn_04.mp3</sm2> {{resp|300}} Interesting.
 * <sm2>puck_lasthit_03.mp3</sm2> {{resp|300}} A prize.
 * <sm2>puck_doubdam_01.mp3</sm2> Double damage!
 * <sm2>puck_doubdam_02.mp3</sm2> Double harm shall I deal.
@@ -23897,6 +24129,7 @@
 * <sm2>pud_bottle_01.mp3</sm2> Don\'t want to use it all at once.
 * <sm2>pud_bottle_02.mp3</sm2> Leave this bit for later.
 * <sm2>pud_bottle_03.mp3</sm2> I\'ll just tuck this under here for later.
+* <sm2>pud_purch_04.mp3</sm2> {{resp|300}} Nice!
 * <sm2>pud_lasthit_06.mp3</sm2> {{resp|300}} Lovely...
 * <sm2>pud_doubdam_01.mp3</sm2> Double damage!
 * <sm2>pud_doubdam_02.mp3</sm2> I\'ll be chopping up double damage!
@@ -23975,6 +24208,18 @@
 * <sm2>pugna_spawn_03.mp3</sm2> Who dare cross my path?
 * <sm2>pugna_spawn_04.mp3</sm2> I bring oblivion.
 * <sm2>pugna_spawn_05.mp3</sm2> I channel the power of the Nether Reaches.
+* <sm2>pugna_battlebegins_01.mp3</sm2> Time to earn myself a bad reputation.
+* <sm2>pugna_move_09.mp3</sm2> By the Nether Reaches.
+* <sm2>pugna_level_02.mp3</sm2> Oblivion\'s power infuses.
+* <sm2>pugna_level_03.mp3</sm2> Who needs a blade when you have oblivion?
+* <sm2>pugna_respawn_06.mp3</sm2> A new age of dark magic starts now.
+* <sm2>pugna_move_17.mp3</sm2> Oblivion comes.
+* <sm2>pugna_attack_13.mp3</sm2> Nether sorceries.
+* <sm2>pugna_spawn_01.mp3</sm2> Pugna!
+* <sm2>pugna_spawn_02.mp3</sm2> I\'ll take all you have and more.
+* <sm2>pugna_spawn_03.mp3</sm2> Who dare cross my path?
+* <sm2>pugna_spawn_04.mp3</sm2> I bring oblivion.
+* <sm2>pugna_spawn_05.mp3</sm2> I channel the power of the Nether Reaches.
 * <sm2>pugna_inthebag_01.mp3</sm2> It is in the bag!
 * <sm2>pugna_battlebegins_01.mp3</sm2> Time to earn myself a bad reputation.
 * <sm2>pugna_move_01.mp3</sm2> Oh yes.
@@ -24045,7 +24290,6 @@
 * <sm2>pugna_ability_nward_02.mp3</sm2> {{resp|u}} Go ahead, cast a spell!
 * <sm2>pugna_ability_nward_03.mp3</sm2> {{resp|u}} Try your magic now.
 * <sm2>pugna_ability_nward_04.mp3</sm2> {{resp|u}} My wicked wards.
-* <sm2>pugna_ability_nward_06.mp3</sm2> {{resp|u}} The Nether reaches out!
 * <sm2>pugna_ability_nward_09.mp3</sm2> {{resp|u}} It\'s on your head.
 * <sm2>pugna_ability_nward_05.mp3</sm2> You should know better than that.
 * <sm2>pugna_ability_nward_07.mp3</sm2> You did that to yourself.
@@ -24167,6 +24411,7 @@
 * <sm2>pugna_bottle_01.mp3</sm2> I\'ll uncork this when the time is right.
 * <sm2>pugna_bottle_02.mp3</sm2> A forethought of malice.
 * <sm2>pugna_bottle_03.mp3</sm2> A nether vial.
+* <sm2>pugna_ability_nward_06.mp3</sm2> {{resp|300}} The Nether reaches out!
 * <sm2>pugna_lasthit_03.mp3</sm2> {{resp|300}} I\'ll take that.
 * <sm2>pugna_doubdam_01.mp3</sm2> Double damage!
 * <sm2>pugna_doubdam_02.mp3</sm2> Doubly damned.
@@ -24239,6 +24484,18 @@
 * <sm2>pugna_anger_02.mp3</sm2> {{resp|u}} Huuhhh.
 * <sm2>pugna_anger_03.mp3</sm2> {{resp|u}} Grrr.
 * <sm2>pugna_happy_02.mp3</sm2> {{resp|u}} Oh.
+* <sm2>pain_spawn_01.mp3</sm2> Queendom come!
+* <sm2>pain_spawn_02.mp3</sm2> There will be pain, there will be screaming.
+* <sm2>pain_spawn_03.mp3</sm2> So begins the reign of pain.
+* <sm2>pain_spawn_04.mp3</sm2> Queen of Pain.
+* <sm2>pain_begin_01.mp3</sm2> Make way for your Queen.
+* <sm2>pain_kill_04.mp3</sm2> Pain is the best teacher.
+* <sm2>pain_attack_08.mp3</sm2> Sweet pain.
+* <sm2>pain_cast_03.mp3</sm2> Agony awaits!
+* <sm2>pain_kill_03.mp3</sm2> I\'m a pain specialist.
+* <sm2>pain_respawn_01.mp3</sm2> Long live your Queen!
+* <sm2>pain_respawn_08.mp3</sm2> Bringing the pain!
+* <sm2>pain_attack_10.mp3</sm2> Pain builds character.
 * <sm2>pain_spawn_01.mp3</sm2> Queendom come!
 * <sm2>pain_spawn_02.mp3</sm2> There will be pain, there will be screaming.
 * <sm2>pain_spawn_03.mp3</sm2> So begins the reign of pain.
@@ -24409,6 +24666,7 @@
 * <sm2>pain_fastres_01.mp3</sm2> I\'ll be my own successor!
 * <sm2>pain_bottle_01.mp3</sm2> Bottle royale.
 * <sm2>pain_bottle_03.mp3</sm2> Into the bottle.
+* <sm2>pain_purch_03.mp3</sm2> {{resp|300}} Fit for a Queen.
 * <sm2>pain_lasthit_03.mp3</sm2> {{resp|300}} Worthy tribute.
 * <sm2>pain_doubdam_01.mp3</sm2> Double damage!
 * <sm2>pain_doubdam_02.mp3</sm2> {{resp|u}} I\'ll have them screaming duets!
@@ -24501,7 +24759,18 @@
 * <sm2>pain_anger_04.mp3</sm2> {{resp|u}} Rar!
 * <sm2>pain_happy_02.mp3</sm2> {{resp|u}} Hm.
 * <sm2>raz_spawn_01.mp3</sm2> Razor.
-* <sm2>raz_spawn_02.mp3</sm2> {{resp|u}} I am Razor.
+* <sm2>raz_spawn_02.mp3</sm2> I am Razor.
+* <sm2>raz_spawn_03.mp3</sm2> I bring the spark of death.
+* <sm2>raz_spawn_04.mp3</sm2> I will raze my enemies.
+* <sm2>raz_spawn_05.mp3</sm2> I enter the fray.
+* <sm2>raz_spawn_06.mp3</sm2> The Lightning Revenant lives!
+* <sm2>raz_spawn_07.mp3</sm2> The Lightning Revenant lives!
+* <sm2>raz_spawn_08.mp3</sm2> From the Underscape, I rise.
+* <sm2>raz_spawn_09.mp3</sm2> With Razor, you get the edge.
+* <sm2>raz_kill_10.mp3</sm2> Your ashes will fall like rain.
+* <sm2>raz_kill_11.mp3</sm2> To the Narrow Maze with you!
+* <sm2>raz_kill_12.mp3</sm2> You can\'t escape the Underscape.
+* <sm2>raz_spawn_01.mp3</sm2> Razor.
 * <sm2>raz_spawn_03.mp3</sm2> I bring the spark of death.
 * <sm2>raz_spawn_04.mp3</sm2> I will raze my enemies.
 * <sm2>raz_spawn_06.mp3</sm2> The Lightning Revenant lives!
@@ -24673,6 +24942,7 @@
 * <sm2>raz_bottle_01.mp3</sm2> I\'ll save this for later.
 * <sm2>raz_bottle_02.mp3</sm2> Lightning in a bottle!
 * <sm2>raz_bottle_03.mp3</sm2> Delayed gratification.
+* <sm2>raz_purch_03.mp3</sm2> {{resp|300}} Now my enemies pay!
 * <sm2>raz_lasthit_07.mp3</sm2> {{resp|300}} Gold is a great conductor.
 * <sm2>raz_doubdam_01.mp3</sm2> Double damage!
 * <sm2>raz_doubdam_02.mp3</sm2> Lightning strikes twice!
@@ -24749,10 +25019,20 @@
 * <sm2>raz_anger_06.mp3</sm2> {{resp|u}} Uuuhhh!
 * <sm2>riki_spawn_01.mp3</sm2> Riki
 * <sm2>riki_spawn_02.mp3</sm2> Riki here.
-* <sm2>riki_spawn_03.mp3</sm2> {{resp|u}} Rikimaru.
+* <sm2>riki_spawn_03.mp3</sm2> Rikimaru.
 * <sm2>riki_spawn_04.mp3</sm2> I am Riki.
 * <sm2>riki_spawn_05.mp3</sm2> At your service.
-* <sm2>riki_spawn_06.mp3</sm2> {{resp|u}} Rikimaru, at your service.
+* <sm2>riki_spawn_06.mp3</sm2> Rikimaru, at your service.
+* <sm2>riki_spawn_07.mp3</sm2> My trade is deathcraft.
+* <sm2>riki_spawn_08.mp3</sm2> I speak softly, but carry a sharp knife.
+* <sm2>riki_move_09.mp3</sm2> Whom shall I kill?
+* <sm2>riki_kill_03.mp3</sm2> Heh-ho, you didn\'t see that coming.
+* <sm2>riki_kill_08.mp3</sm2> Cloaked and daggered.
+* <sm2>riki_respawn_10.mp3</sm2> Rikimaru comes for you.
+* <sm2>riki_spawn_01.mp3</sm2> Riki
+* <sm2>riki_spawn_02.mp3</sm2> Riki here.
+* <sm2>riki_spawn_04.mp3</sm2> I am Riki.
+* <sm2>riki_spawn_05.mp3</sm2> At your service.
 * <sm2>riki_spawn_07.mp3</sm2> My trade is deathcraft.
 * <sm2>riki_spawn_08.mp3</sm2> I speak softly, but carry a sharp knife.
 * <sm2>riki_inthebag_01.mp3</sm2> It\'s in the bag!
@@ -24883,12 +25163,12 @@
 * <sm2>riki_respawn_07.mp3</sm2> I\'ve been here the whole time.
 * <sm2>riki_respawn_08.mp3</sm2> I wasn\'t dead. Just invisible.
 * <sm2>riki_respawn_09.mp3</sm2> My skill set is narrow, but very sharp.
-* <sm2>riki_respawn_10.mp3</sm2> {{resp|u}} Rikimaru comes for you.
 * <sm2>riki_respawn_11.mp3</sm2> Healthy, stealthy and wise.
 * <sm2>riki_laugh_07.mp3</sm2> Heh-ha heh heh heh heh heh he heh.
 * <sm2>riki_bottle_01.mp3</sm2> In the bottle.
 * <sm2>riki_bottle_02.mp3</sm2> Out of sight.
 * <sm2>riki_bottle_03.mp3</sm2> Into the bottle with you.
+* <sm2>riki_purch_03.mp3</sm2> {{resp|300}} They\'ll never see this coming.
 * <sm2>riki_lasthit_09.mp3</sm2> {{resp|300}} Death\'s bounty.
 * <sm2>riki_doubdam_01.mp3</sm2> Double damage!
 * <sm2>riki_doubdam_02.mp3</sm2> Seeing double.
@@ -24976,6 +25256,17 @@
 * <sm2>riki_exposed_03.mp3</sm2> {{resp|u}} Take a picture, it\'ll last longer.
 * <sm2>riki_exposed_04.mp3</sm2> {{resp|u}} I\'m not really here.
 * <sm2>riki_exposed_05.mp3</sm2> {{resp|u}} Dah, cover me up!
+* <sm2>rubick_spawn_01.mp3</sm2> My thirst for knowledge cannot be quenched.
+* <sm2>rubick_spawn_02.mp3</sm2> I shall see what they have in store.
+* <sm2>rubick_spawn_03.mp3</sm2> What wonders will I see this day?
+* <sm2>rubick_spawn_04.mp3</sm2> Rubick!
+* <sm2>rubick_spawn_05.mp3</sm2> I am Rubick, the Grand Magus.
+* <sm2>rubick_spawn_06.mp3</sm2> Grand Magus!
+* <sm2>rubick_move_14.mp3</sm2> Such fascinating energies!
+* <sm2>rubick_move_21.mp3</sm2> No sorcery lies beyond my grasp.
+* <sm2>rubick_attack_14.mp3</sm2> Face the Magus!
+* <sm2>rubick_spellsteal_13.mp3</sm2> I am no thief. I merely borrow.
+* <sm2>rubick_spellsteal_14.mp3</sm2> There are none who cannot be mimicked.
 * <sm2>rubick_spawn_01.mp3</sm2> My thirst for knowledge cannot be quenched.
 * <sm2>rubick_spawn_02.mp3</sm2> I shall see what they have in store.
 * <sm2>rubick_spawn_03.mp3</sm2> What wonders will I see this day?
@@ -25682,6 +25973,7 @@
 * <sm2>skg_bottle_01.mp3</sm2> I\'ll save this for later.
 * <sm2>skg_bottle_02.mp3</sm2> Wisest to wait awhile. 
 * <sm2>skg_bottle_03.mp3</sm2> This ought to keep.
+* <sm2>skg_happy_03.mp3</sm2> {{resp|300}} Mm.
 * <sm2>skg_lasthit_07.mp3</sm2> {{resp|300}} I\'ll take your tribute.
 * <sm2>skg_doubdam_01.mp3</sm2> Double damage!
 * <sm2>skg_doubdam_02.mp3</sm2> {{resp|u}} I\'ll heap double damage on my foe!
@@ -25769,7 +26061,6 @@
 * <sm2>skg_anger_04.mp3</sm2> {{resp|u}} Ayyh.
 * <sm2>skg_anger_05.mp3</sm2> {{resp|u}} Mm nn.
 * <sm2>skg_anger_06.mp3</sm2> {{resp|u}} Hm hm.
-* <sm2>skg_happy_03.mp3</sm2> {{resp|u}} Mm.
 * <sm2>skg_acknow_01.mp3</sm2> {{resp|u}} Eh ya ya ya ya.
 * <sm2>skg_acknow_02.mp3</sm2> {{resp|u}} Mm hm.
 * <sm2>skg_acknow_03.mp3</sm2> {{resp|u}} Yeh.
@@ -25778,6 +26069,18 @@
 * <sm2>skg_acknow_06.mp3</sm2> {{resp|u}} Mm hm.
 * <sm2>skg_acknow_07.mp3</sm2> {{resp|u}} Mm hm.
 * <sm2>skg_acknow_08.mp3</sm2> {{resp|u}} Ah ha.
+* <sm2>shadow_demon_spawn_01.mp3</sm2> Shadow Demon!
+* <sm2>shadow_demon_spawn_02.mp3</sm2> Your old master has returned!
+* <sm2>shadow_demon_spawn_03.mp3</sm2> Heed me, and it will go better for you.
+* <sm2>shadow_demon_spawn_04.mp3</sm2> {{Tooltip|Sa nith icha gluth.|This land will be consumed.}}
+* <sm2>shadow_demon_spawn_05.mp3</sm2> This time it is the demon who will do the summoning!
+* <sm2>shadow_demon_battlebegins_01.mp3</sm2> I will scatter all who gather here today.
+* <sm2>shadow_demon_attack_02.mp3</sm2> Dominion is mine!
+* <sm2>shadow_demon_attack_03.mp3</sm2> Fall before me!
+* <sm2>shadow_demon_attack_04.mp3</sm2> By my shadow!
+* <sm2>shadow_demon_attack_07.mp3</sm2> Come into my dominion!
+* <sm2>shadow_demon_level_up_02.mp3</sm2> How my shadow darkens.
+* <sm2>shadow_demon_level_up_03.mp3</sm2> Fearsome energies invoked!
 * <sm2>shadow_demon_spawn_01.mp3</sm2> Shadow Demon!
 * <sm2>shadow_demon_spawn_02.mp3</sm2> Your old master has returned!
 * <sm2>shadow_demon_spawn_03.mp3</sm2> Heed me, and it will go better for you.
@@ -25861,7 +26164,6 @@
 * <sm2>shadow_demon_ability_soul_catcher_05.mp3</sm2> Bah!
 * <sm2>shadow_demon_ability_soul_catcher_06.mp3</sm2> Slipped my trap!
 * <sm2>shadow_demon_ability_soul_catcher_07.mp3</sm2> Bad catch!
-* <sm2>shadow_demon_ability_shadow_poison_01.mp3</sm2> {{resp|u}} Just you wait.
 * <sm2>shadow_demon_ability_shadow_poison_02.mp3</sm2> {{resp|u}} Slowly now...
 * <sm2>shadow_demon_ability_shadow_poison_04.mp3</sm2> {{resp|u}} You\'re sickening!
 * <sm2>shadow_demon_ability_shadow_poison_05.mp3</sm2> That was sick!
@@ -26014,6 +26316,7 @@
 * <sm2>shadow_demon_bottle_01.mp3</sm2> I can wait a bit longer.
 * <sm2>shadow_demon_bottle_02.mp3</sm2> Patience is my middle name.
 * <sm2>shadow_demon_bottle_03.mp3</sm2> The shadows gather.
+* <sm2>shadow_demon_ability_shadow_poison_01.mp3</sm2> {{resp|300}} Just you wait.
 * <sm2>shadow_demon_rival_14.mp3</sm2> {{resp|300}} {{Tooltip|Ozh icha tak lash.|I will take my share.}}
 * <sm2>shadow_demon_lasthit_06.mp3</sm2> {{resp|300}} Demon gold.
 * <sm2>shadow_demon_doubdam_01.mp3</sm2> Double damage!
@@ -26093,8 +26396,18 @@
 * <sm2>shadow_demon_anger_06.mp3</sm2> {{resp|u}} Rrrah.
 * <sm2>shadow_demon_anger_07.mp3</sm2> {{resp|u}} Ehrrr
 * <sm2>shadow_demon_anger_08.mp3</sm2> {{resp|u}} Grrr.
-* <sm2>nev_spawn_01.mp3</sm2> <sm2>nev_arc_spawn_01.mp3</sm2> {{resp|u}} Nevermore...
-* <sm2>nev_spawn_02.mp3</sm2> <sm2>nev_arc_spawn_02.mp3</sm2> {{resp|u}} Nevermore is here.
+* <sm2>nev_spawn_01.mp3</sm2> <sm2>nev_arc_spawn_01.mp3</sm2> Nevermore...
+* <sm2>nev_spawn_02.mp3</sm2> <sm2>nev_arc_spawn_02.mp3</sm2> Nevermore is here.
+* <sm2>nev_spawn_03.mp3</sm2> <sm2>nev_arc_spawn_03.mp3</sm2> I come for souls.
+* <sm2>nev_spawn_04.mp3</sm2> <sm2>nev_arc_spawn_04.mp3</sm2> I sense the proximity of souls...
+* <sm2>nev_spawn_05.mp3</sm2> <sm2>nev_arc_spawn_05.mp3</sm2> It\'s now or Nevermore.
+* <sm2>nev_spawn_06.mp3</sm2> <sm2>nev_arc_spawn_06.mp3</sm2> It\'s now or never.
+* <sm2>nev_spawn_07.mp3</sm2> <sm2>nev_arc_spawn_07.mp3</sm2> Never say Nevermore....
+* <sm2>nev_spawn_09.mp3</sm2> <sm2>nev_arc_spawn_09.mp3</sm2> Souls await!
+* <sm2>nev_ability_presence_02.mp3</sm2> <sm2>nev_arc_ability_presence_02.mp3</sm2> Fear my presence.
+* <sm2>nev_spawn_10.mp3</sm2> <sm2>nev_arc_spawn_10.mp3</sm2> Souls!
+* <sm2>nev_spawn_11.mp3</sm2> <sm2>nev_arc_spawn_11.mp3</sm2> Shadow Fiend.
+* <sm2>nev_kill_02.mp3</sm2> <sm2>nev_arc_kill_02.mp3</sm2> Your soul is mine.
 * <sm2>nev_spawn_03.mp3</sm2> <sm2>nev_arc_spawn_03.mp3</sm2> I come for souls.
 * <sm2>nev_spawn_04.mp3</sm2> <sm2>nev_arc_spawn_04.mp3</sm2> I sense the proximity of souls...
 * <sm2>nev_spawn_05.mp3</sm2> <sm2>nev_arc_spawn_05.mp3</sm2> It\'s now or Nevermore.
@@ -26309,6 +26622,7 @@
 * <sm2>nev_bottle_01.mp3</sm2> <sm2>nev_arc_bottle_01.mp3</sm2> I\'ll save this for later.
 * <sm2>nev_bottle_02.mp3</sm2> <sm2>nev_arc_bottle_02.mp3</sm2> Something else for my collection.
 * <sm2>nev_bottle_03.mp3</sm2> <sm2>nev_arc_bottle_03.mp3</sm2> Something else to collect.
+* <sm2>nev_regen_02.mp3</sm2> <sm2>nev_arc_regen_02.mp3</sm2> {{resp|300}} My shadow darkens!
 * <sm2>nev_lasthit_03.mp3</sm2> <sm2>nev_arc_lasthit_03.mp3</sm2> {{resp|300}} I\'ll take that.
 * <sm2>nev_doubdam_01.mp3</sm2> <sm2>nev_arc_doubdam_01.mp3</sm2> Double damage!
 * <sm2>nev_doubdam_02.mp3</sm2> <sm2>nev_arc_doubdam_02.mp3</sm2> {{resp|u}} Double damage means double damnation.
@@ -26319,7 +26633,6 @@
 * <sm2>nev_invis_01.mp3</sm2> <sm2>nev_arc_invis_01.mp3</sm2> Invisibility!
 * <sm2>nev_invis_02.mp3</sm2> <sm2>nev_arc_invis_02.mp3</sm2> Beware the shadows.
 * <sm2>nev_regen_01.mp3</sm2> <sm2>nev_arc_regen_01.mp3</sm2> Regeneration!
-* <sm2>nev_regen_02.mp3</sm2> <sm2>nev_arc_regen_02.mp3</sm2> {{resp|u}} My shadow darkens!
 * <sm2>nev_notyet_01.mp3</sm2> <sm2>nev_arc_notyet_01.mp3</sm2> Not yet.
 * <sm2>nev_notyet_02.mp3</sm2> <sm2>nev_arc_notyet_02.mp3</sm2> I\'m not ready.
 * <sm2>nev_notyet_03.mp3</sm2> <sm2>nev_arc_notyet_03.mp3</sm2> The time is not ripe.
@@ -26391,6 +26704,18 @@
 * <sm2>nev_anger_09.mp3</sm2> <sm2>nev_arc_anger_09.mp3</sm2> {{resp|u}} Hurr ah!
 * <sm2>shad_spawn_01.mp3</sm2> Shadow Shaman.
 * <sm2>shad_spawn_02.mp3</sm2> I am Shadow Shaman.
+* <sm2>shad_spawn_03.mp3</sm2> Hear me, I speak for the shades!
+* <sm2>shad_spawn_04.mp3</sm2> I am the messenger of those gone by.
+* <sm2>shad_spawn_05.mp3</sm2> I am the medium between the worlds!
+* <sm2>shad_attack_05.mp3</sm2> The bones are thrown.
+* <sm2>shad_attack_09.mp3</sm2> For the ancestors.
+* <sm2>shad_attack_10.mp3</sm2> Beat you like a drum!
+* <sm2>shad_kill_02.mp3</sm2> The ancestors are expecting you.
+* <sm2>shad_win_03.mp3</sm2> For our fathers, gone beyond the hills!
+* <sm2>shad_move_12.mp3</sm2> The spirit moves me.
+* <sm2>shad_ability_ward_04.mp3</sm2> My wards, come forth!
+* <sm2>shad_spawn_01.mp3</sm2> Shadow Shaman.
+* <sm2>shad_spawn_02.mp3</sm2> I am Shadow Shaman.
 * <sm2>shad_spawn_04.mp3</sm2> I am the messenger of those gone by.
 * <sm2>shad_spawn_05.mp3</sm2> I am the medium between the worlds!
 * <sm2>shad_inthebag_01.mp3</sm2> It is in the bag!
@@ -26447,7 +26772,6 @@
 * <sm2>shad_ability_entrap_02.mp3</sm2> Entrapped.
 * <sm2>shad_ability_entrap_03.mp3</sm2> You\'re not going anywhere.
 * <sm2>shad_ability_ward_01.mp3</sm2> {{resp|u}} Care for some company?
-* <sm2>shad_ability_ward_02.mp3</sm2> {{resp|u}} Take heed.
 * <sm2>shad_ability_ward_03.mp3</sm2> {{resp|u}} Come forth!
 * <sm2>shad_ability_ward_04.mp3</sm2> My wards, come forth!
 * <sm2>shad_ability_ward_05.mp3</sm2> I summon my wards!
@@ -26541,6 +26865,7 @@
 * <sm2>shad_bottle_01.mp3</sm2> I\'ll hide you away.
 * <sm2>shad_bottle_02.mp3</sm2> Saved for later.
 * <sm2>shad_bottle_03.mp3</sm2> For when it\'s needed.
+* <sm2>shad_ability_ward_02.mp3</sm2> {{resp|300}} Take heed.
 * <sm2>shad_lasthit_03.mp3</sm2> {{resp|300}} Fortune\'s change.
 * <sm2>shad_doubdam_01.mp3</sm2> Double damage!
 * <sm2>shad_doubdam_02.mp3</sm2> Charm of double harm.
@@ -26625,6 +26950,18 @@
 * <sm2>silen_spawn_02.mp3</sm2> There is purity in silence.
 * <sm2>silen_spawn_03.mp3</sm2> I bear the gift of silence.
 * <sm2>silen_spawn_04.mp3</sm2> Silencer comes to war.
+* <sm2>silen_battlebegins_01.mp3</sm2> A hush falls on the battlefield.
+* <sm2>silen_ability_glaive_02.mp3</sm2> The glaives will silence you.
+* <sm2>silen_ability_silence_02.mp3</sm2> Silence!
+* <sm2>silen_level_06.mp3</sm2> The silence deepens.
+* <sm2>silen_kill_03.mp3</sm2> Silence is virtue.
+* <sm2>silen_kill_10.mp3</sm2> Silence, mere mortal.
+* <sm2>silen_attack_03.mp3</sm2> I\'ll cut you down.
+* <sm2>silen_respawn_04.mp3</sm2> Hush now. I\'m here.
+* <sm2>silen_spawn_01.mp3</sm2> Silencer!
+* <sm2>silen_spawn_02.mp3</sm2> There is purity in silence.
+* <sm2>silen_spawn_03.mp3</sm2> I bear the gift of silence.
+* <sm2>silen_spawn_04.mp3</sm2> Silencer comes to war.
 * <sm2>silen_inthebag_01.mp3</sm2> It goes without saying, this one is in the bag!
 * <sm2>silen_battlebegins_01.mp3</sm2> A hush falls on the battlefield.
 * <sm2>silen_move_01.mp3</sm2> Yes.
@@ -26669,7 +27006,6 @@
 * <sm2>silen_ability_curse_08.mp3</sm2> {{resp|u}} As good as mute.
 * <sm2>silen_ability_curse_09.mp3</sm2> {{resp|u}} Now we see what you really are.
 * <sm2>silen_ability_curse_10.mp3</sm2> {{resp|u}} Your power evaporated.
-* <sm2>silen_ability_glaive_02.mp3</sm2> {{resp|u}} The glaives will silence you.
 * <sm2>silen_ability_glaive_03.mp3</sm2> {{resp|u}} The steel flies.
 * <sm2>silen_ability_intsteal_01.mp3</sm2> Once a warrior, now a fool.
 * <sm2>silen_ability_intsteal_02.mp3</sm2> Your intelligence flows to me.
@@ -26682,8 +27018,6 @@
 * <sm2>silen_kill_13.mp3</sm2> I take, you give.
 * <sm2>silen_rival_03.mp3</sm2> {{Hero icon|Invoker|16px}} Time for a little brain drain.
 * <sm2>silen_ability_silence_01.mp3</sm2> {{resp|u}} I can hear a pin drop.
-* <sm2>silen_ability_silence_02.mp3</sm2> {{resp|u}} Silence!
-* <sm2>silen_ability_silence_03.mp3</sm2> {{resp|u}} Behold.
 * <sm2>silen_ability_silence_05.mp3</sm2> {{resp|u}} Calm yourselves.
 * <sm2>silen_ability_silence_06.mp3</sm2> {{resp|u}} You shall not cast.
 * <sm2>silen_ability_silence_07.mp3</sm2> {{resp|u}} None shall cast.
@@ -26807,6 +27141,7 @@
 * <sm2>silen_bottle_03.mp3</sm2> For when it suits me.
 * <sm2>silen_bottle_04.mp3</sm2> Into the soundproof glass.
 * <sm2>silen_bottle_05.mp3</sm2> You haven\'t heard the last of this.
+* <sm2>silen_ability_silence_03.mp3</sm2> {{resp|300}} Behold.
 * <sm2>silen_lasthit_07.mp3</sm2> {{resp|300}} Coin for me.
 * <sm2>silen_doubdam_01.mp3</sm2> Double damage!
 * <sm2>silen_doubdam_02.mp3</sm2> I cut two ways.
@@ -26906,6 +27241,18 @@
 * <sm2>silen_happy_06.mp3</sm2> {{resp|u}} Ahh.
 * <sm2>silen_happy_07.mp3</sm2> {{resp|u}} Hmm.
 * <sm2>silen_happy_08.mp3</sm2> {{resp|u}} Mmm.
+* <sm2>drag_spawn_01.mp3</sm2> Dragonus.
+* <sm2>drag_spawn_02.mp3</sm2> Skywrath Mage!
+* <sm2>drag_spawn_03.mp3</sm2> Court mage to the Nest of Thorns am I.
+* <sm2>drag_spawn_04.mp3</sm2> I serve the Ghastly Eyrie.
+* <sm2>drag_move_04.mp3</sm2> \'Tis my honor.
+* <sm2>drag_move_05.mp3</sm2> My power is summoned.
+* <sm2>drag_attack_03.mp3</sm2> By the talons of Skree\'auk!
+* <sm2>drag_attack_07.mp3</sm2> Who dares fly against me?
+* <sm2>drag_attack_11.mp3</sm2> By the ancient powers!
+* <sm2>drag_cast_02.mp3</sm2> The skies are dark with Skywrath power!
+* <sm2>drag_ancient_seal_01.mp3</sm2> By the Ancient Seal!
+* <sm2>drag_levelup_02.mp3</sm2> The Skywrath live through me!
 * <sm2>drag_spawn_01.mp3</sm2> Dragonus.
 * <sm2>drag_spawn_02.mp3</sm2> Skywrath Mage!
 * <sm2>drag_spawn_03.mp3</sm2> Court mage to the Nest of Thorns am I.
@@ -27099,6 +27446,7 @@
 * <sm2>drag_bottle_01.mp3</sm2> An opportunity for patience.
 * <sm2>drag_bottle_02.mp3</sm2> I bide my time and this rune.
 * <sm2>drag_bottle_03.mp3</sm2> Wait with me!
+* <sm2>drag_purch_01.mp3</sm2> {{resp|300}} Not for myself but for the cause.
 * <sm2>drag_lasthit_11.mp3</sm2> {{resp|300}} \'Tis mine.
 * <sm2>drag_doubdam_01.mp3</sm2> Double damage!
 * <sm2>drag_doubdam_02.mp3</sm2> Like twin swipes of Skree\'auk\'s talons!
@@ -27181,7 +27529,18 @@
 * <sm2>drag_happy_05.mp3</sm2> {{resp|u}} Ooh.
 * <sm2>drag_happy_06.mp3</sm2> {{resp|u}} Pfff, ah!
 * <sm2>slar_spawn_01.mp3</sm2> Slardar.
-* <sm2>slar_spawn_02.mp3</sm2> {{resp|u}} I am Slardar.
+* <sm2>slar_spawn_02.mp3</sm2> I am Slardar.
+* <sm2>slar_spawn_03.mp3</sm2> From the deeps, I rise.
+* <sm2>slar_spawn_04.mp3</sm2> The deep ones send me forth.
+* <sm2>slar_spawn_05.mp3</sm2> Guardian of the deeps.
+* <sm2>slar_move_10.mp3</sm2> Slither.
+* <sm2>slar_move_13.mp3</sm2> Deep ones guide me.
+* <sm2>slar_cast_02.mp3</sm2> You won\'t escape.
+* <sm2>slar_attack_07.mp3</sm2> No mercy.
+* <sm2>slar_level_04.mp3</sm2> Packed to the gills!
+* <sm2>slar_move_15.mp3</sm2> To the fight.
+* <sm2>slar_attack_09.mp3</sm2> Yeeeah, you\'re in deep water.
+* <sm2>slar_spawn_01.mp3</sm2> Slardar.
 * <sm2>slar_spawn_03.mp3</sm2> From the deeps, I rise.
 * <sm2>slar_spawn_05.mp3</sm2> Guardian of the deeps.
 * <sm2>slar_inthebag_01.mp3</sm2> Eh heh it\'s in the bag.
@@ -27234,7 +27593,6 @@
 * <sm2>slar_level_01.mp3</sm2> Scaling up!
 * <sm2>slar_level_02.mp3</sm2> {{resp|u}} My lure brightens!
 * <sm2>slar_level_03.mp3</sm2> My power grows!
-* <sm2>slar_level_04.mp3</sm2> {{resp|u}} Packed to the gills!
 * <sm2>slar_level_05.mp3</sm2> My strength increases.
 * <sm2>slar_level_06.mp3</sm2> He hess he hess he hess.
 * <sm2>slar_level_07.mp3</sm2> He hess he hess he hess hes.
@@ -27322,6 +27680,7 @@
 * <sm2>slar_bottle_02.mp3</sm2> Water tight to twenty fathoms.
 * <sm2>slar_bottle_03.mp3</sm2> I\'ll tap this later.
 * <sm2>slar_bottle_04.mp3</sm2> Water tight.
+* <sm2>slar_happy_04.mp3</sm2> {{resp|300}} Mmmmem.
 * <sm2>slar_lasthit_01.mp3</sm2> {{resp|300}} A soldier\'s fortune.
 * <sm2>slar_doubdam_01.mp3</sm2> Double damage!
 * <sm2>slar_doubdam_02.mp3</sm2> Double duty.
@@ -27412,6 +27771,18 @@
 * <sm2>slark_spawn_03.mp3</sm2> In I crawl.
 * <sm2>slark_spawn_04.mp3</sm2> If I\'d known I\'d end up here, I\'d have stayed in Dark Reef Prison.
 * <sm2>slark_spawn_05.mp3</sm2> Oh no, you\'ll bait no hook with me.
+* <sm2>slark_dark_pact_03.mp3</sm2> The dark runs deep.
+* <sm2>slark_dark_pact_04.mp3</sm2> By the Dark Pact.
+* <sm2>slark_dark_pact_05.mp3</sm2> Sealed in darkness.
+* <sm2>slark_dark_pact_06.mp3</sm2> By the Dark Ones.
+* <sm2>slark_shadow_dance_02.mp3</sm2> Shadows keep me.
+* <sm2>slark_levelup_06.mp3</sm2> Dark Reef Rising!
+* <sm2>slark_respawn_02.mp3</sm2> It\'s never dark enough.
+* <sm2>slark_spawn_01.mp3</sm2> Slark.
+* <sm2>slark_spawn_02.mp3</sm2> Nightcrawler.
+* <sm2>slark_spawn_03.mp3</sm2> In I crawl.
+* <sm2>slark_spawn_04.mp3</sm2> If I\'d known I\'d end up here, I\'d have stayed in Dark Reef Prison.
+* <sm2>slark_spawn_05.mp3</sm2> Oh no, you\'ll bait no hook with me.
 * <sm2>slark_inthebag_01.mp3</sm2> When I say a thing, you know it\'s true. So I\'m calling it right here and now. This one\'s in the bag!
 * <sm2>slark_inthebag_02.mp3</sm2> Oh this one\'s in the bag-hook, line and sinker.
 * <sm2>slark_battlebegins_01.mp3</sm2> Stay out of my way and maybe you won\'t get hurt, but I doubt it.
@@ -27457,8 +27828,6 @@
 * <sm2>slark_cast_03.mp3</sm2> On your belly and crawl.
 * <sm2>slark_cast_04.mp3</sm2> You\'ll be sorry when you see me.
 * <sm2>slark_dark_pact_01.mp3</sm2> {{resp|u}} I call darkness from the deep.
-* <sm2>slark_dark_pact_03.mp3</sm2> {{resp|u}} The dark runs deep.
-* <sm2>slark_dark_pact_04.mp3</sm2> {{resp|u}} By the Dark Pact.
 * <sm2>slark_pounce_01.mp3</sm2> Eeyah!
 * <sm2>slark_pounce_02.mp3</sm2> You\'re bound!
 * <sm2>slark_pounce_03.mp3</sm2> Caught out!
@@ -27610,6 +27979,7 @@
 * <sm2>slark_bottle_01.mp3</sm2> I\'ll put you in lockup.
 * <sm2>slark_bottle_02.mp3</sm2> In you go.
 * <sm2>slark_bottle_03.mp3</sm2> Patience, patience.
+* <sm2>slark_happy_04.mp3</sm2> {{resp|300}} Mmh. Oh that\'s nice.
 * <sm2>slark_lasthit_09.mp3</sm2> {{resp|300}} I\'ll take that.
 * <sm2>slark_doubdam_01.mp3</sm2> Double damage!
 * <sm2>slark_doubdam_02.mp3</sm2> Met you once, cut you twice.
@@ -27693,11 +28063,22 @@
 * <sm2>slark_happy_01.mp3</sm2> {{resp|u}} Alright.
 * <sm2>slark_happy_02.mp3</sm2> {{resp|u}} Ahhhhhh!
 * <sm2>slark_happy_03.mp3</sm2> {{resp|u}} Ahhhhhh.
-* <sm2>slark_happy_04.mp3</sm2> {{resp|u}} Mmh. Oh that\'s nice.
 * <sm2>slark_happy_05.mp3</sm2> {{resp|u}} Yeeeeeeah.
 * <sm2>slark_happy_06.mp3</sm2> {{resp|u}} I like it.
 * <sm2>slark_happy_07.mp3</sm2> {{resp|u}} Oh that\'s very nice.
 * <sm2>slark_happy_08.mp3</sm2> {{resp|u}} Oh, th\'feeling is right, yeah.
+* <sm2>snip_spawn_01.mp3</sm2> Sniper!
+* <sm2>snip_spawn_02.mp3</sm2> Sniper here!
+* <sm2>snip_spawn_03.mp3</sm2> Time for target practice.
+* <sm2>snip_spawn_04.mp3</sm2> Take your best shot. I will.
+* <sm2>snip_spawn_05.mp3</sm2> I come: Lock, stock and barrel.
+* <sm2>snip_spawn_06.mp3</sm2> I call the shots around here.
+* <sm2>snip_move_15.mp3</sm2> Sure as shootin\'!
+* <sm2>snip_move_24.mp3</sm2> Into the breach!
+* <sm2>snip_move_25.mp3</sm2> Run and gun!
+* <sm2>snip_attack_10.mp3</sm2> Gunpowder justice.
+* <sm2>snip_cast_01.mp3</sm2> My sights are set!
+* <sm2>snip_level_01.mp3</sm2> My aim is truer than ever!
 * <sm2>snip_spawn_01.mp3</sm2> Sniper!
 * <sm2>snip_spawn_02.mp3</sm2> Sniper here!
 * <sm2>snip_spawn_04.mp3</sm2> Take your best shot. I will.
@@ -27890,6 +28271,7 @@
 * <sm2>snip_bottle_02.mp3</sm2> This will come in handy.
 * <sm2>snip_bottle_03.mp3</sm2> Just in case.
 * <sm2>snip_bottle_04.mp3</sm2> Jarate!
+* <sm2>snip_happy_03.mp3</sm2> {{resp|300}} Heyeah!
 * <sm2>snip_purch_03.mp3</sm2> {{resp|300}} Ah, this will come in handy.
 * <sm2>snip_doubdam_01.mp3</sm2> Double damage!
 * <sm2>snip_doubdam_02.mp3</sm2> Double action!
@@ -27971,6 +28353,18 @@
 * <sm2>snip_anger_05.mp3</sm2> {{resp|u}} Ah!
 * <sm2>snip_anger_06.mp3</sm2> {{resp|u}} Grrrrr!
 * <sm2>snip_happy_02.mp3</sm2> {{resp|u}} Ahhh!
+* <sm2>spec_spawn_01.mp3</sm2> Spectre!
+* <sm2>spec_spawn_02.mp3</sm2> From another dimension, a world beyond.
+* <sm2>spec_spawn_03.mp3</sm2> What is this place?
+* <sm2>spec_spawn_04.mp3</sm2> I have come here a stranger, lost.
+* <sm2>spec_cast_01.mp3</sm2> Into disorder!
+* <sm2>spec_cast_02.mp3</sm2> Clear away!
+* <sm2>spec_level_01.mp3</sm2> Closer to the origin!
+* <sm2>spec_level_02.mp3</sm2> Soon I will ascend!
+* <sm2>spec_level_03.mp3</sm2> Closer to Ascension!
+* <sm2>spec_level_04.mp3</sm2> \'\'Laughter\'\'
+* <sm2>spec_attack_05.mp3</sm2> I will it!
+* <sm2>spec_deny_02.mp3</sm2> Disordered.
 * <sm2>spec_spawn_01.mp3</sm2> Spectre!
 * <sm2>spec_spawn_02.mp3</sm2> From another dimension, a world beyond.
 * <sm2>spec_spawn_03.mp3</sm2> What is this place?
@@ -28060,6 +28454,8 @@
 * <sm2>spec_respawn_05.mp3</sm2> I had hoped to Ascend, but it has not transpired.
 * <sm2>spec_fastres_01.mp3</sm2> That won\'t work on me!
 * <sm2>spec_bottle_01.mp3</sm2> I will bide my time.
+* <sm2>spec_lasthit_01.mp3</sm2> {{resp|300}} What is this?
+* <sm2>spec_redux_purch_01.mp3</sm2> {{resp|300}} Wildest energies.
 * <sm2>spec_purch_01.mp3</sm2> {{resp|300}} This is well.
 * <sm2>spec_doubdam_01.mp3</sm2> Double damage!
 * <sm2>spec_doubdam_02.mp3</sm2> {{resp|u}} A useful skill.
@@ -28119,6 +28515,17 @@
 * <sm2>spir_spawn_02.mp3</sm2> My iron will shall break them.
 * <sm2>spir_spawn_03.mp3</sm2> I\'ll break their spirits and their backs.
 * <sm2>spir_spawn_04.mp3</sm2> This form suits my purpose.
+* <sm2>spir_battlebegins_01.mp3</sm2> The peace is broken!
+* <sm2>spir_ability_charge_07.mp3</sm2> Didn\'t see me coming, did you.
+* <sm2>spir_ability_charge_10.mp3</sm2> Look who\'s here?
+* <sm2>spir_ability_charge_14.mp3</sm2> Here I come!
+* <sm2>spir_ability_charge_15.mp3</sm2> Charge!
+* <sm2>spir_ability_charge_16.mp3</sm2> Charging in!
+* <sm2>spir_ability_charge_19.mp3</sm2> You\'re mine now!
+* <sm2>spir_spawn_01.mp3</sm2> Spirit Breaker.
+* <sm2>spir_spawn_02.mp3</sm2> My iron will shall break them.
+* <sm2>spir_spawn_03.mp3</sm2> I\'ll break their spirits and their backs.
+* <sm2>spir_spawn_04.mp3</sm2> This form suits my purpose.
 * <sm2>spir_inthebag_01.mp3</sm2> Oh, yes, this one, my friends, is in the bag!
 * <sm2>spir_inthebag_02.mp3</sm2> All bullshit aside, this one\'s in the bag.
 * <sm2>spir_battlebegins_01.mp3</sm2> The peace is broken!
@@ -28168,13 +28575,10 @@
 * <sm2>spir_ability_charge_06.mp3</sm2> {{resp|u}} Long distance runner.
 * <sm2>spir_ability_charge_02.mp3</sm2> Charge!
 * <sm2>spir_ability_charge_14.mp3</sm2> Here I come!
-* <sm2>spir_ability_charge_15.mp3</sm2> {{resp|u}} Charge!
-* <sm2>spir_ability_charge_16.mp3</sm2> {{resp|u}} Charging in!
 * <sm2>spir_ability_charge_17.mp3</sm2> {{resp|u}} Charging in!
 * <sm2>spir_ability_charge_19.mp3</sm2> You\'re mine now!
 * <sm2>spir_ability_charge_08.mp3</sm2> {{resp|u}} Where\'d I come from?
 * <sm2>spir_ability_charge_09.mp3</sm2> {{resp|u}} Here I am.
-* <sm2>spir_ability_charge_10.mp3</sm2> {{resp|u}} Look who\'s here?
 * <sm2>spir_ability_charge_12.mp3</sm2> {{resp|u}} Look who\'s here.
 * <sm2>spir_ability_charge_13.mp3</sm2> {{resp|u}} Rip and run.
 * <sm2>spir_ability_charge_18.mp3</sm2> {{resp|u}} Thought you had me, didn\'t you?
@@ -28303,6 +28707,7 @@
 * <sm2>spir_bottle_01.mp3</sm2> Put by for later.
 * <sm2>spir_bottle_02.mp3</sm2> I\'ll break this out later.
 * <sm2>spir_bottle_03.mp3</sm2> Preserved in spirits.
+* <sm2>spir_purch_03.mp3</sm2> {{resp|300}} My patience is rewarded.
 * <sm2>spir_lasthit_02.mp3</sm2> {{resp|300}} Gold for me.
 * <sm2>spir_doubdam_01.mp3</sm2> Double damage!
 * <sm2>spir_doubdam_02.mp3</sm2> Ah, I\'ll gore my foes upon each horn.
@@ -28593,6 +28998,7 @@
 * <sm2>ss_bottle_04.mp3</sm2> This\'ll get better with age.
 * <sm2>ss_bottle_05.mp3</sm2> I\'ll decant this a bit later.
 * <sm2>ss_bottle_06.mp3</sm2> I\'ll save this till it\'s five oclock somewhere.
+* <sm2>ss_purch_01.mp3</sm2> {{resp|300}} I\'ve been wanting this...
 * <sm2>ss_lasthit_05.mp3</sm2> {{resp|300}} Stupendous!
 * <sm2>ss_doubdam_01.mp3</sm2> Double Damage!
 * <sm2>ss_doubdam_02.mp3</sm2> Storm Force - Double Damage!
@@ -28667,9 +29073,17 @@
 * <sm2>ss_acknow_03.mp3</sm2> {{resp|u}} Ah.
 * <sm2>ss_acknow_08.mp3</sm2> {{resp|u}} Ah.
 * <sm2>ss_acknow_09.mp3</sm2> {{resp|u}} Ah.
-* <sm2>sven_spawn_01.mp3</sm2> {{resp|u}} Rogue Knight!
+* <sm2>sven_spawn_01.mp3</sm2> Rogue Knight!
 * <sm2>sven_spawn_02.mp3</sm2> Rogue Knight at your service!
-* <sm2>sven_spawn_03.mp3</sm2> {{resp|u}} Sven here.
+* <sm2>sven_spawn_03.mp3</sm2> Sven here.
+* <sm2>sven_spawn_04.mp3</sm2> Sven stands ready.
+* <sm2>sven_spawn_05.mp3</sm2> Ready.
+* <sm2>sven_spawn_06.mp3</sm2> I am ready.
+* <sm2>sven_spawn_07.mp3</sm2> So it begins.
+* <sm2>Sven_battlebegins_02.mp3</sm2> There is no greater honor!
+* <sm2>sven_move_05.mp3</sm2> My code compels me.
+* <sm2>sven_attack_09.mp3</sm2> Feel my blade!
+* <sm2>sven_spawn_02.mp3</sm2> Rogue Knight at your service!
 * <sm2>sven_spawn_04.mp3</sm2> Sven stands ready.
 * <sm2>sven_spawn_05.mp3</sm2> Ready.
 * <sm2>sven_spawn_06.mp3</sm2> I am ready.
@@ -28889,6 +29303,7 @@
 * <sm2>sven_bottle_01.mp3</sm2> I\'ll save this for later.
 * <sm2>sven_bottle_02.mp3</sm2> Better I hold onto this.
 * <sm2>sven_bottle_03.mp3</sm2> This must be mine.
+* <sm2>sven_purch_02.mp3</sm2> {{resp|300}} I will put you to good use.
 * <sm2>sven_lasthit_05.mp3</sm2> {{resp|300}} I\'ll take that.
 * <sm2>sven_doubdam_01.mp3</sm2> Double damage!
 * <sm2>sven_doubdam_02.mp3</sm2> One Knight, twice the damage.
@@ -28997,6 +29412,18 @@
 * <sm2>tech_spawn_04.mp3</sm2> If you want explosions. Accept no substitutes!
 * <sm2>tech_spawn_05.mp3</sm2> I am Squee! I\'m Spleen! And I\'m Spoon!
 * <sm2>tech_spawn_06.mp3</sm2> They call me Squee! They call me Spleen! They don\'t know I\'m here. Who said that?
+* <sm2>tech_attack_01.mp3</sm2> Get \'em!
+* <sm2>tech_cast_01.mp3</sm2> Let\'s light the fuse!
+* <sm2>tech_cast_02.mp3</sm2> This is gonna be fun! Ha ha ha!
+* <sm2>tech_cast_03.mp3</sm2> He he he he! Oh, this is gonna be fun!
+* <sm2>tech_setmine_11.mp3</sm2> Did we put the right fuse on that one?
+* <sm2>tech_settrap_01.mp3</sm2> Trap is set! Oh ho ho oh boy!
+* <sm2>tech_spawn_01.mp3</sm2> Techies!
+* <sm2>tech_spawn_02.mp3</sm2> We\'re Techies Demolitions! Hey, how you doing?
+* <sm2>tech_spawn_03.mp3</sm2> Techies Demolitions! We put the tech in tech-nically we meant to do that.
+* <sm2>tech_spawn_04.mp3</sm2> If you want explosions. Accept no substitutes!
+* <sm2>tech_spawn_05.mp3</sm2> I am Squee! I\'m Spleen! And I\'m Spoon!
+* <sm2>tech_spawn_06.mp3</sm2> They call me Squee! They call me Spleen! They don\'t know I\'m here. Who said that?
 * <sm2>tech_inthebag_01.mp3</sm2> This one is in the bag! Uh, but the fuses are in there!
 * <sm2>tech_inthebag_02.mp3</sm2> This one is in the barrel! Um, just me in here.
 * <sm2>tech_begin_01.mp3</sm2> Measurements made. Bombs built. Powder\'s dry. Okay, let\'s blow something up!
@@ -29067,7 +29494,6 @@
 * <sm2>tech_attack_20.mp3</sm2> Catch!
 * <sm2>tech_attack_24.mp3</sm2> Eh hu ho ho ho ho!
 * <sm2>tech_attack_25.mp3</sm2> Oo ho ho, ooh ho ho ho!
-* <sm2>tech_cast_01.mp3</sm2> {{resp|u}} Let\'s light the fuse!
 * <sm2>tech_setmine_01.mp3</sm2> Planted.
 * <sm2>tech_setmine_02.mp3</sm2> Planted.
 * <sm2>tech_setmine_04.mp3</sm2> Set.
@@ -29682,6 +30108,18 @@
 * <sm2>temp_spawn_02.mp3</sm2> Templar Assassin.
 * <sm2>temp_spawn_03.mp3</sm2> In defense of the Temple.
 * <sm2>temp_spawn_04.mp3</sm2> Lanaya.
+* <sm2>temp_move_06.mp3</sm2> So it is revealed.
+* <sm2>temp_move_12.mp3</sm2> As the Temple requires.
+* <sm2>temp_psiblades_02.mp3</sm2> Few shall elude my blades.
+* <sm2>temp_cast_01.mp3</sm2> None shall elude me!
+* <sm2>temp_cast_02.mp3</sm2> The Temple sent me!
+* <sm2>temp_cast_03.mp3</sm2> I am driven by secrets!
+* <sm2>temp_psiblades_02.mp3</sm2> Few shall elude my blades.
+* <sm2>temp_psiblades_04.mp3</sm2> My blades and my mind are as one.
+* <sm2>temp_spawn_01.mp3</sm2> The mysteries cannot protect themselves.
+* <sm2>temp_spawn_02.mp3</sm2> Templar Assassin.
+* <sm2>temp_spawn_03.mp3</sm2> In defense of the Temple.
+* <sm2>temp_spawn_04.mp3</sm2> Lanaya.
 * <sm2>temp_inthebag_01.mp3</sm2> It\'s an open secret, obvious to all, that this one is in the bag!
 * <sm2>temp_begins_01.mp3</sm2> Well that\'s it. The secret is out!
 * <sm2>temp_move_01.mp3</sm2> Yes.
@@ -29726,7 +30164,6 @@
 * <sm2>temp_meld_04.mp3</sm2> {{resp|u}} Tis a secret!
 * <sm2>temp_meld_05.mp3</sm2> {{resp|u}} The secret\'s out!
 * <sm2>temp_psiblades_01.mp3</sm2> {{resp|u}} My reach extends!
-* <sm2>temp_psiblades_02.mp3</sm2> {{resp|u}} Few shall elude my blades.
 * <sm2>temp_psiblades_03.mp3</sm2> {{resp|u}} Psi no more!
 * <sm2>temp_psionictrap_01.mp3</sm2> Trap set!
 * <sm2>temp_psionictrap_02.mp3</sm2> Set!
@@ -29859,6 +30296,7 @@
 * <sm2>temp_bottle_01.mp3</sm2> I\'ll hide this away.
 * <sm2>temp_bottle_02.mp3</sm2> Secreted for now.
 * <sm2>temp_bottle_03.mp3</sm2> In a hidden place with you.
+* <sm2>temp_itemmoderate_02.mp3</sm2> {{resp|300}} The Hidden Ones have blessed me.
 * <sm2>temp_lasthit_07.mp3</sm2> {{resp|300}} Blessings.
 * <sm2>temp_doubdam_01.mp3</sm2> Double damage!
 * <sm2>temp_doubdam_02.mp3</sm2> A mysterious force.
@@ -29931,6 +30369,18 @@
 * <sm2>temp_happy_02.mp3</sm2> {{resp|u}} Mm!
 * <sm2>temp_happy_03.mp3</sm2> {{resp|u}} Ah!
 * <sm2>temp_happy_04.mp3</sm2> {{resp|u}} Ahhh!
+* <sm2>terr_spawn_01.mp3</sm2> <sm2>terr_shards_spawn_01.mp3</sm2> Terrorblade.
+* <sm2>terr_spawn_02.mp3</sm2> <sm2>terr_shards_spawn_02.mp3</sm2> I appear unto the world.
+* <sm2>terr_spawn_03.mp3</sm2> <sm2>terr_shards_spawn_03.mp3</sm2> The self-righteous shall choke on their sanctimony.
+* <sm2>terr_spawn_04.mp3</sm2> <sm2>terr_shards_spawn_04.mp3</sm2> I am unnatural born.
+* <sm2>terr_spawn_05.mp3</sm2> <sm2>terr_shards_spawn_05.mp3</sm2> From the hell of hells I come.
+* <sm2>terr_battlebegins_02.mp3</sm2> <sm2>terr_shards_battlebegins_02.mp3</sm2> Terror steals across the land.
+* <sm2>terr_move_06.mp3</sm2> <sm2>terr_shards_move_06.mp3</sm2> The wise flee my foot falls.
+* <sm2>terr_attack_05.mp3</sm2> <sm2>terr_shards_attack_05.mp3</sm2> Fear he who fears nothing.
+* <sm2>terr_levelup_09.mp3</sm2> <sm2>terr_shards_levelup_09.mp3</sm2> The self-righteous shall pay.
+* <sm2>terr_respawn_01.mp3</sm2> <sm2>terr_shards_respawn_01.mp3</sm2> A demon\'s rage is stronger than death.
+* <sm2>terr_battlebegins_02.mp3</sm2> <sm2>terr_shards_battlebegins_02.mp3</sm2> Terror steals across the land.
+* <sm2>terr_move_10.mp3</sm2> <sm2>terr_shards_move_10.mp3</sm2> The path of darkness.
 * <sm2>terr_spawn_01.mp3</sm2> <sm2>terr_morph_spawn_01.mp3</sm2> <sm2>terr_shards_spawn_01.mp3</sm2> Terrorblade.
 * <sm2>terr_spawn_02.mp3</sm2> <sm2>terr_morph_spawn_02.mp3</sm2> <sm2>terr_shards_spawn_02.mp3</sm2> I appear unto the world.
 * <sm2>terr_spawn_03.mp3</sm2> <sm2>terr_morph_spawn_03.mp3</sm2> <sm2>terr_shards_spawn_03.mp3</sm2> The self-righteous shall choke on their sanctimony.
@@ -30331,6 +30781,7 @@
 * <sm2>terr_bottle_01.mp3</sm2> <sm2>terr_morph_bottle_01.mp3</sm2> <sm2>terr_shards_bottle_01.mp3</sm2> Saved for later.
 * <sm2>terr_bottle_02.mp3</sm2> <sm2>terr_morph_bottle_02.mp3</sm2> <sm2>terr_shards_bottle_02.mp3</sm2> Into the bottle keep.
 * <sm2>terr_bottle_03.mp3</sm2> <sm2>terr_morph_bottle_03.mp3</sm2> <sm2>terr_shards_bottle_03.mp3</sm2> The bottle without bottom.
+* <sm2>terr_itemdrop_moderate_02.mp3</sm2> <sm2>terr_morph_itemdrop_moderate_02.mp3</sm2> <sm2>terr_shards_itemdrop_moderate_02.mp3</sm2> {{resp|300}} What have we here?
 * <sm2>terr_lasthit_06.mp3</sm2> <sm2>terr_shards_lasthit_06.mp3</sm2> {{resp|300}} Coin of the realm.
 * <sm2>terr_morph_lasthit_06.mp3</sm2> Coin of the realm.
 * <sm2>terr_doubdam_02.mp3</sm2> <sm2>terr_morph_doubdam_02.mp3</sm2> <sm2>terr_shards_doubdam_02.mp3</sm2> Double damage!
@@ -30448,6 +30899,18 @@
 * <sm2>tide_spawn_05.mp3</sm2> A sea-change is coming.
 * <sm2>tide_spawn_06.mp3</sm2> We enter uncharted waters.
 * <sm2>tide_spawn_07.mp3</sm2> Time to make waves.
+* <sm2>tide_spawn_08.mp3</sm2> The hunt begins.
+* <sm2>tide_spawn_09.mp3</sm2> Tidehunter.
+* <sm2>tide_attack_10.mp3</sm2> Chum\'s in the water.
+* <sm2>tide_kill_09.mp3</sm2> Rip tide!
+* <sm2>tide_respawn_03.mp3</sm2> In with the tide.
+* <sm2>tide_spawn_01.mp3</sm2> I am Tidehunter.
+* <sm2>tide_spawn_02.mp3</sm2> The tide is rolling out.
+* <sm2>tide_spawn_03.mp3</sm2> Time and Tidehunter wait for no man.
+* <sm2>tide_spawn_04.mp3</sm2> I step from the sea.
+* <sm2>tide_spawn_05.mp3</sm2> A sea-change is coming.
+* <sm2>tide_spawn_06.mp3</sm2> We enter uncharted waters.
+* <sm2>tide_spawn_07.mp3</sm2> Time to make waves.
 * <sm2>tide_spawn_09.mp3</sm2> Tidehunter.
 * <sm2>tide_inthebag_01.mp3</sm2> It\'s in the bag!
 * <sm2>tide_spawn_08.mp3</sm2> The hunt begins.
@@ -30532,7 +30995,7 @@
 * <sm2>tide_rival_09.mp3</sm2> {{Hero icon|Kunkka|16px}} The admirable Kunkka dies like a dog!
 * <sm2>tide_rival_10.mp3</sm2> {{Hero icon|Morphling|16px}} I always pitied you, Morphling, for having to carry Kunkka\'s ships.
 * <sm2>tide_rival_11.mp3</sm2> {{Hero icon|Morphling|16px}} Alas poor Morphling, so full of tasty fish.
-* <sm2>tide_rival_12.mp3</sm2> {{Hero icon|Siren|16px}} Ah, sweet Siren, if only you\'d steered Kunkka onto the rocks.
+* <sm2>tide_rival_12.mp3</sm2> {{Hero icon|Naga Siren|16px}} Ah, sweet Siren, if only you\'d steered Kunkka onto the rocks.
 * <sm2>tide_rival_13.mp3</sm2> {{Hero icon|Lina|16px}} You should put your fire to work burning up Kunkka\'s ships.
 * <sm2>tide_rival_14.mp3</sm2> {{Hero icon|Clinkz|16px}} Why fire your arrows at me when Kunkka\'s sails need burning?
 * <sm2>tide_rival_15.mp3</sm2> {{Hero icon|Slardar|16px}} Why fight me, Slardar? Together we could have brought Kunkka to the bottom.
@@ -30681,6 +31144,18 @@
 * <sm2>timb_spawn_03.mp3</sm2> I cut things. It\'s what I do. What else would I do?
 * <sm2>timb_spawn_04.mp3</sm2> Trees? What do you mean there\'s trees out there?
 * <sm2>timb_spawn_05.mp3</sm2> I\'m not a lumberjack. This. This is personal.
+* <sm2>timb_begin_01.mp3</sm2> There are trees everywhere!
+* <sm2>timb_move_08.mp3</sm2> That one looks angry!
+* <sm2>timb_attack_04.mp3</sm2> Ha ha! Chop chop!
+* <sm2>timb_reactivearmor_03.mp3</sm2> It is dangerous out there.
+* <sm2>timb_levelup_05.mp3</sm2> Wait till they get a load of me.
+* <sm2>timb_levelup_06.mp3</sm2> They can try to stop me. They can try!
+* <sm2>timb_kill_14.mp3</sm2> Nobody takes me seriously.
+* <sm2>timb_spawn_01.mp3</sm2> Timbersaw!
+* <sm2>timb_spawn_02.mp3</sm2> I\'m Rizzrack. Don\'t touch me!
+* <sm2>timb_spawn_03.mp3</sm2> I cut things. It\'s what I do. What else would I do?
+* <sm2>timb_spawn_04.mp3</sm2> Trees? What do you mean there\'s trees out there?
+* <sm2>timb_spawn_05.mp3</sm2> I\'m not a lumberjack. This. This is personal.
 * <sm2>timb_inthebag_01.mp3</sm2> This one is in the bag. And that one is too. And that one! They are all in the bag.
 * <sm2>timb_begin_01.mp3</sm2> There are trees everywhere!
 * <sm2>timb_move_01.mp3</sm2> Yes.
@@ -30734,7 +31209,6 @@
 * <sm2>timb_reactivearmor_05.mp3</sm2> {{resp|u}} Ha ha!
 * <sm2>timb_chakram_02.mp3</sm2> {{resp|5}} I\'ll cut everyone!
 * <sm2>timb_chakram_03.mp3</sm2> {{resp|5}} Spin blade, spin!
-* <sm2>timb_chakram_05.mp3</sm2> {{resp|u}} Clear cutting!
 * <sm2>timb_chakram_06.mp3</sm2> {{resp|5}} He ha ha ha ha!
 * <sm2>timb_chakram_07.mp3</sm2> {{resp|5}} Eh ha ha ha ha ha ha ha!
 * <sm2>timb_chakram_08.mp3</sm2> {{resp|5}} Ha ha ha ha ha ha ha ha!
@@ -30898,6 +31372,7 @@
 * <sm2>timb_bottle_01.mp3</sm2> This is my scheming face.
 * <sm2>timb_bottle_02.mp3</sm2> Never know! You just never, never know.
 * <sm2>timb_bottle_03.mp3</sm2> This will save me?
+* <sm2>timb_chakram_05.mp3</sm2> {{resp|300}} Clear cutting!
 * <sm2>timb_lasthit_03.mp3</sm2> {{resp|300}} Gold!
 * <sm2>timb_doubdam_01.mp3</sm2> Double damage!
 * <sm2>timb_doubdam_02.mp3</sm2> I\'ll cut and then I\'ll cut again.
@@ -30978,6 +31453,18 @@
 * <sm2>timb_happy_06.mp3</sm2> {{resp|u}} Mmm.
 * <sm2>timb_happy_07.mp3</sm2> {{resp|u}} Ah.
 * <sm2>timb_happy_08.mp3</sm2> {{resp|u}} Mmm!
+* <sm2>tink_spawn_01.mp3</sm2> Tinker!
+* <sm2>tink_spawn_02.mp3</sm2> I am perfectly suited for this environment.
+* <sm2>tink_spawn_03.mp3</sm2> Ready, willing and fully enabled!
+* <sm2>tink_spawn_04.mp3</sm2> Sometimes I think you only want me for my hazard suit!
+* <sm2>tink_spawn_05.mp3</sm2> I have several theories I\'d like to put into practice.
+* <sm2>tink_spawn_06.mp3</sm2> Clinker... I mean, Tinker!
+* <sm2>tink_spawn_07.mp3</sm2> Greetings!
+* <sm2>tink_spawn_08.mp3</sm2> Dr. Clinker!
+* <sm2>tink_spawn_09.mp3</sm2> Gaaa, Dr. Tinker.
+* <sm2>tink_begin_01.mp3</sm2> Conditions could hardly be more ideal!
+* <sm2>tink_attack_03.mp3</sm2> Into the fray!
+* <sm2>tink_attack_04.mp3</sm2> I carry a charge!
 * <sm2>tink_spawn_01.mp3</sm2> Tinker!!
 * <sm2>tink_spawn_02.mp3</sm2> I am perfectly suited for this environment.
 * <sm2>tink_spawn_03.mp3</sm2> Ready, willing and fully enabled!
@@ -31026,7 +31513,6 @@
 * <sm2>tink_ability_heatseekingmissile_02.mp3</sm2> {{resp|20}} Incoming!
 * <sm2>tink_ability_heatseekingmissile_03.mp3</sm2> {{resp|20}} Heads up!
 * <sm2>tink_ability_heatseekingmissile_05.mp3</sm2> Ooh! They never miss!
-* <sm2>tink_ability_marchofthemachines_01.mp3</sm2> {{resp|u}} Ha ha ha, it\'s working!
 * <sm2>tink_ability_marchofthemachines_03.mp3</sm2> {{resp|20}} March, March!
 * <sm2>tink_ability_marchofthemachines_04.mp3</sm2> {{resp|20}} Go my little friends! Go!
 * <sm2>tink_ability_marchofthemachines_05.mp3</sm2> {{resp|20}} Look at them go!
@@ -31182,6 +31668,7 @@
 * <sm2>tink_respawn_13.mp3</sm2> I encountered unexpected interference. 
 * <sm2>tink_fastres_01.mp3</sm2> I\'ve got a lifetime warranty!
 * <sm2>tink_bottle_01.mp3</sm2> I\'ll prudently put this aside.
+* <sm2>tink_ability_marchofthemachines_01.mp3</sm2> {{resp|300}} Ha ha ha, it\'s working!
 * <sm2>tink_lasthit_07.mp3</sm2> {{resp|300}} Smart money!
 * <sm2>tink_doubdam_01.mp3</sm2> Double damage!
 * <sm2>tink_doubdam_02.mp3</sm2> {{resp|u}} Can one ever do too much damage?
@@ -31286,9 +31773,18 @@
 * <sm2>tink_taunt_01.mp3</sm2> {{resp|u}} If you were a genius like me, you\'d be running for cover right now!
 * <sm2>tink_taunt_02.mp3</sm2> {{resp|u}} I\'ve got a theory I\'d like to test out, on your skull!
 * <sm2>tink_taunt_03.mp3</sm2> {{resp|u}} Try to outsmart me, and you\'ll just end up, smarting.
-* <sm2>tiny_spawn_01.mp3</sm2> {{resp|u}} I am Tiny.
-* <sm2>tiny_spawn_02.mp3</sm2> {{resp|u}} Tiny here.
-* <sm2>tiny_spawn_03.mp3</sm2> {{resp|u}} Are you ready to rubble?
+* <sm2>tiny_spawn_01.mp3</sm2> I am Tiny.
+* <sm2>tiny_spawn_02.mp3</sm2> Tiny here.
+* <sm2>tiny_spawn_03.mp3</sm2> Are you ready to rubble?
+* <sm2>tiny_spawn_04.mp3</sm2> No stone unturned.
+* <sm2>tiny_spawn_05.mp3</sm2> Who breathes life into these old stones?
+* <sm2>tiny_spawn_06.mp3</sm2> My stones gather.
+* <sm2>tiny_spawn_07.mp3</sm2> Sticks and stones will break their bones!
+* <sm2>tiny_spawn_08.mp3</sm2> They call me Tiny.
+* <sm2>tiny_spawn_09.mp3</sm2> Tiny!
+* <sm2>tiny_attack_12.mp3</sm2> Tiny smash!
+* <sm2>tiny_attack_13.mp3</sm2> Tiny, coming in.
+* <sm2>tiny_cast_01.mp3</sm2> Hard times coming!
 * <sm2>tiny_spawn_04.mp3</sm2> No stone unturned.
 * <sm2>tiny_spawn_05.mp3</sm2> Who breathes life into these old stones?
 * <sm2>tiny_spawn_06.mp3</sm2> My stones gather.
@@ -31332,7 +31828,6 @@
 * <sm2>tiny_ability_toss_08.mp3</sm2> {{resp|u}} Sorry.
 * <sm2>tiny_ability_toss_09.mp3</sm2> {{resp|u}} A stone\'s throw.
 * <sm2>tiny_ability_toss_10.mp3</sm2> {{resp|u}} It\'s not far, as the stone flies.
-* <sm2>tiny_ability_toss_13.mp3</sm2> {{resp|u}} Stone fall!
 * <sm2>tiny_ability_toss_14.mp3</sm2> {{resp|u}} Aaaaavalanche!
 * <sm2>tiny_ability_toss_15.mp3</sm2> {{resp|u}} Avalanche.
 * <sm2>tiny_ability_toss_01.mp3</sm2> Mmmehh!
@@ -31447,6 +31942,7 @@
 * <sm2>tiny_bottle_01.mp3</sm2> Better saved for later.
 * <sm2>tiny_bottle_02.mp3</sm2> Put aside for now.
 * <sm2>tiny_bottle_03.mp3</sm2> Into the bottle with ya.
+* <sm2>tiny_ability_toss_13.mp3</sm2> {{resp|300}} Stone fall!
 * <sm2>tiny_purch_04.mp3</sm2> {{resp|300}} What have we here?
 * <sm2>tiny_lasthit_07.mp3</sm2> {{resp|300}} I\'ll take that.
 * <sm2>tiny_doubdam_01.mp3</sm2> Double damage!
@@ -31524,6 +32020,18 @@
 * <sm2>tiny_anger_06.mp3</sm2> {{resp|u}} You leave Little Roc alone!
 * <sm2>tiny background.mp3</sm2> {{resp|u}} \'\'Background noise\'\'
 * <sm2>tiny background.wav</sm2> {{resp|u}} \'\'Background noise\'\'
+* <sm2>treant_spawn_01.mp3</sm2> Treant.
+* <sm2>treant_spawn_02.mp3</sm2> Treant Protector.
+* <sm2>treant_spawn_03.mp3</sm2> All in good time.
+* <sm2>treant_spawn_04.mp3</sm2> Someone requires my protection!
+* <sm2>treant_spawn_05.mp3</sm2> The seasons wheel past in a blur.
+* <sm2>treant_spawn_06.mp3</sm2> Thoughts cross my mind as the sun crosses the sky.
+* <sm2>treant_battlebegins_01.mp3</sm2> The time has come, and will soon be gone.
+* <sm2>treant_attack_06.mp3</sm2> Be careful where you wander.
+* <sm2>treant_attack_12.mp3</sm2> Do not provoke me.
+* <sm2>treant_cast_02.mp3</sm2> Trees can be ferocious if provoked.
+* <sm2>treant_attack_02.mp3</sm2> Who threatens here?
+* <sm2>treant_ability_leechseed_03.mp3</sm2> Nature is not always kind.
 * <sm2>treant_spawn_01.mp3</sm2> Treant.
 * <sm2>treant_spawn_02.mp3</sm2> Treant Protector.
 * <sm2>treant_spawn_03.mp3</sm2> All in good time.
@@ -31763,6 +32271,7 @@
 * <sm2>treant_bottle_02.mp3</sm2> For a moment from now.
 * <sm2>treant_bottle_03.mp3</sm2> I have just the knot for this.
 * <sm2>treant_bottle_04.mp3</sm2> Preserved.
+* <sm2>treant_drop_medium.mp3</sm2> {{resp|300}} Isn\'t that pretty!
 * <sm2>treant_purch_01.mp3</sm2> {{resp|r}} Mmm. What sort of prize is this?
 * <sm2>treant_levelup_02.mp3</sm2> {{resp|300}} Oh my. This is good.
 * <sm2>treant_doubdam_01.mp3</sm2> Double damage!
@@ -32217,466 +32726,490 @@
 * <sm2>troll_happy_01.mp3</sm2> {{resp|u}} Heeeah.
 * <sm2>troll_happy_02.mp3</sm2> {{resp|u}} Aghhh.
 * <sm2>troll_happy_03.mp3</sm2> {{resp|u}} Ahhhh.
-* <sm2>tusk_spawn_01.mp3</sm2> Tusk! 
-* <sm2>tusk_spawn_02.mp3</sm2> The Tusk! 
-* <sm2>tusk_spawn_03.mp3</sm2> Ymir! 
-* <sm2>tusk_spawn_04.mp3</sm2> I am Ymir! 
-* <sm2>tusk_spawn_05.mp3</sm2> The Tusk is always ready for a fight! 
-* <sm2>tusk_spawn_06.mp3</sm2> Well well! It\'s been a while since I came this far south. 
-* <sm2>tusk_spawn_07.mp3</sm2> They call me the Terror from the Barrier. They call me the Snowball from Cobalt. But you may call me Tusk! 
-* <sm2>tusk_spawn_08.mp3</sm2> I am the Tusk. 
-* <sm2>tusk_inthebag_02.mp3</sm2> I\'m betting this one\'s in the bag! 
-* <sm2>tusk_inthebag_01.mp3</sm2> Oh yeah. This one\'s in the bucket. 
-* <sm2>tusk_battlebegins_01.mp3</sm2> Who\'s ready for a fight? The first hit is free! Anyone? 
-* <sm2>tusk_move_01.mp3</sm2> Yes. 
-* <sm2>tusk_move_02.mp3</sm2> Yes. 
-* <sm2>tusk_move_03.mp3</sm2> Onward. 
-* <sm2>tusk_move_04.mp3</sm2> Why not? 
-* <sm2>tusk_move_05.mp3</sm2> Could be good. 
-* <sm2>tusk_move_06.mp3</sm2> Snowstorms\'a\'comin\'. 
-* <sm2>tusk_move_07.mp3</sm2> Sounds like a good idea. 
-* <sm2>tusk_move_08.mp3</sm2> If you say so. 
-* <sm2>tusk_move_09.mp3</sm2> I say! 
-* <sm2>tusk_move_10.mp3</sm2> The North comes with me! 
-* <sm2>tusk_move_11.mp3</sm2> Yep! 
-* <sm2>tusk_move_12.mp3</sm2> Yep! 
-* <sm2>tusk_move_13.mp3</sm2> You betcha! 
-* <sm2>tusk_move_14.mp3</sm2> You betcha! 
-* <sm2>tusk_move_15.mp3</sm2> Ha ha! 
-* <sm2>tusk_move_16.mp3</sm2> Ha ha! 
-* <sm2>tusk_move_17.mp3</sm2> Got it! 
-* <sm2>tusk_move_18.mp3</sm2> Got it! 
-* <sm2>tusk_move_19.mp3</sm2> Ya sure. 
-* <sm2>tusk_move_20.mp3</sm2> Ya sure. 
-* <sm2>tusk_move_21.mp3</sm2> Ya. 
-* <sm2>tusk_move_22.mp3</sm2> Yeh. 
-* <sm2>tusk_move_23.mp3</sm2> Mmhmm. 
-* <sm2>tusk_move_24.mp3</sm2> Mmhmm. 
-* <sm2>tusk_move_25.mp3</sm2> Okie-dokie. 
+* <sm2>tusk_spawn_01.mp3</sm2> Tusk!
+* <sm2>tusk_spawn_02.mp3</sm2> The Tusk!
+* <sm2>tusk_spawn_03.mp3</sm2> Ymir!
+* <sm2>tusk_spawn_04.mp3</sm2> I am Ymir!
+* <sm2>tusk_spawn_05.mp3</sm2> The Tusk is always ready for a fight!
+* <sm2>tusk_spawn_06.mp3</sm2> Well well! It\'s been a while since I came this far south.
+* <sm2>tusk_spawn_07.mp3</sm2> They call me the Terror from the Barrier. They call me the Snowball from Cobalt. But you may call me Tusk!
+* <sm2>tusk_spawn_08.mp3</sm2> I am the Tusk.
+* <sm2>tusk_battlebegins_01.mp3</sm2> Who\'s ready for a fight? The first hit is free! Anyone?
+* <sm2>tusk_move_06.mp3</sm2> Snowstorms\'a\'comin\'.
+* <sm2>tusk_move_10.mp3</sm2> The North comes with me!
+* <sm2>tusk_attack_09.mp3</sm2> Time to brawl.
+* <sm2>tusk_spawn_01.mp3</sm2> Tusk!
+* <sm2>tusk_spawn_02.mp3</sm2> The Tusk!
+* <sm2>tusk_spawn_03.mp3</sm2> Ymir!
+* <sm2>tusk_spawn_04.mp3</sm2> I am Ymir!
+* <sm2>tusk_spawn_05.mp3</sm2> The Tusk is always ready for a fight!
+* <sm2>tusk_spawn_06.mp3</sm2> Well well! It\'s been a while since I came this far south.
+* <sm2>tusk_spawn_07.mp3</sm2> They call me the Terror from the Barrier. They call me the Snowball from Cobalt. But you may call me Tusk!
+* <sm2>tusk_spawn_08.mp3</sm2> I am the Tusk.
+* <sm2>tusk_inthebag_02.mp3</sm2> I\'m betting this one\'s in the bag!
+* <sm2>tusk_inthebag_01.mp3</sm2> Oh yeah. This one\'s in the bucket.
+* <sm2>tusk_battlebegins_01.mp3</sm2> Who\'s ready for a fight? The first hit is free! Anyone?
+* <sm2>tusk_move_01.mp3</sm2> Yes.
+* <sm2>tusk_move_02.mp3</sm2> Yes.
+* <sm2>tusk_move_03.mp3</sm2> Onward.
+* <sm2>tusk_move_04.mp3</sm2> Why not?
+* <sm2>tusk_move_05.mp3</sm2> Could be good.
+* <sm2>tusk_move_06.mp3</sm2> Snowstorms\'a\'comin\'.
+* <sm2>tusk_move_07.mp3</sm2> Sounds like a good idea.
+* <sm2>tusk_move_08.mp3</sm2> If you say so.
+* <sm2>tusk_move_09.mp3</sm2> I say!
+* <sm2>tusk_move_10.mp3</sm2> The North comes with me!
+* <sm2>tusk_move_11.mp3</sm2> Yep!
+* <sm2>tusk_move_12.mp3</sm2> Yep!
+* <sm2>tusk_move_13.mp3</sm2> You betcha!
+* <sm2>tusk_move_14.mp3</sm2> You betcha!
+* <sm2>tusk_move_15.mp3</sm2> Ha ha!
+* <sm2>tusk_move_16.mp3</sm2> Ha ha!
+* <sm2>tusk_move_17.mp3</sm2> Got it!
+* <sm2>tusk_move_18.mp3</sm2> Got it!
+* <sm2>tusk_move_19.mp3</sm2> Ya sure.
+* <sm2>tusk_move_20.mp3</sm2> Ya sure.
+* <sm2>tusk_move_21.mp3</sm2> Ya.
+* <sm2>tusk_move_22.mp3</sm2> Yeh.
+* <sm2>tusk_move_23.mp3</sm2> Mmhmm.
+* <sm2>tusk_move_24.mp3</sm2> Mmhmm.
+* <sm2>tusk_move_25.mp3</sm2> Okie-dokie.
 * <sm2>tusk_move_26.mp3</sm2> {{resp|r}} Tusky-duskie.
-* <sm2>tusk_attack_01.mp3</sm2> Attack! 
-* <sm2>tusk_attack_02.mp3</sm2> This should be fun! 
-* <sm2>tusk_attack_03.mp3</sm2> I have punching for you! 
-* <sm2>tusk_attack_04.mp3</sm2> Come here. 
-* <sm2>tusk_attack_05.mp3</sm2> Let us fight! 
-* <sm2>tusk_attack_06.mp3</sm2> Knuckles cracked and ready! 
-* <sm2>tusk_attack_07.mp3</sm2> Time to bruise. 
-* <sm2>tusk_attack_08.mp3</sm2> I say we should trade blows! 
-* <sm2>tusk_attack_09.mp3</sm2> Time to brawl. 
-* <sm2>tusk_attack_10.mp3</sm2> Fight! 
-* <sm2>tusk_attack_11.mp3</sm2> Fight! 
-* <sm2>tusk_attack_12.mp3</sm2> Let\'s see what you\'re made of. 
-* <sm2>tusk_attack_13.mp3</sm2> Come and fight me! 
-* <sm2>tusk_attack_14.mp3</sm2> Get ready! Here I come! 
-* <sm2>tusk_cast_01.mp3</sm2> Let us keep this clean. 
-* <sm2>tusk_cast_02.mp3</sm2> When you are ready. 
-* <sm2>tusk_cast_03.mp3</sm2> Want to try your luck? 
-* <sm2>tusk_iceshards_01.mp3</sm2> Ice shards! 
-* <sm2>tusk_iceshards_02.mp3</sm2> Ice shards! 
-* <sm2>tusk_iceshards_03.mp3</sm2> You are going nowhere! 
-* <sm2>tusk_iceshards_05.mp3</sm2> Freeze! Ha ha ha! 
-* <sm2>tusk_iceshards_06.mp3</sm2> Freeze! 
-* <sm2>tusk_iceshards_07.mp3</sm2> {{resp|u}} Eergh! 
+* <sm2>tusk_attack_01.mp3</sm2> Attack!
+* <sm2>tusk_attack_02.mp3</sm2> This should be fun!
+* <sm2>tusk_attack_03.mp3</sm2> I have punching for you!
+* <sm2>tusk_attack_04.mp3</sm2> Come here.
+* <sm2>tusk_attack_05.mp3</sm2> Let us fight!
+* <sm2>tusk_attack_06.mp3</sm2> Knuckles cracked and ready!
+* <sm2>tusk_attack_07.mp3</sm2> Time to bruise.
+* <sm2>tusk_attack_08.mp3</sm2> I say we should trade blows!
+* <sm2>tusk_attack_09.mp3</sm2> Time to brawl.
+* <sm2>tusk_attack_10.mp3</sm2> Fight!
+* <sm2>tusk_attack_11.mp3</sm2> Fight!
+* <sm2>tusk_attack_12.mp3</sm2> Let\'s see what you\'re made of.
+* <sm2>tusk_attack_13.mp3</sm2> Come and fight me!
+* <sm2>tusk_attack_14.mp3</sm2> Get ready! Here I come!
+* <sm2>tusk_cast_01.mp3</sm2> Let us keep this clean.
+* <sm2>tusk_cast_02.mp3</sm2> When you are ready.
+* <sm2>tusk_cast_03.mp3</sm2> Want to try your luck?
+* <sm2>tusk_iceshards_01.mp3</sm2> Ice shards!
+* <sm2>tusk_iceshards_02.mp3</sm2> Ice shards!
+* <sm2>tusk_iceshards_03.mp3</sm2> You are going nowhere!
+* <sm2>tusk_iceshards_05.mp3</sm2> Freeze! Ha ha ha!
+* <sm2>tusk_iceshards_06.mp3</sm2> Freeze!
+* <sm2>tusk_iceshards_07.mp3</sm2> {{resp|u}} Eergh!
 * <sm2>tusk_iceshards_04.mp3</sm2> Packed special for you!
-* <sm2>tusk_snowball_01.mp3</sm2> Snowball! 
-* <sm2>tusk_snowball_02.mp3</sm2> Snowball! 
-* <sm2>tusk_snowball_04.mp3</sm2> Allihopa! 
-* <sm2>tusk_snowball_05.mp3</sm2> Ally-oop! 
-* <sm2>tusk_snowball_09.mp3</sm2> Ally-oop! 
-* <sm2>tusk_snowball_12.mp3</sm2> {{resp|u}} Stick around! 
-* <sm2>tusk_snowball_13.mp3</sm2> {{resp|u}} Stay awhile! 
-* <sm2>tusk_kill_17.mp3</sm2> I am the Snowball from Cobalt! 
-* <sm2>tusk_kill_18.mp3</sm2> That trick won the great brawl at White Fields! 
-* <sm2>tusk_kill_19.mp3</sm2> It\'s just a little snow! 
-* <sm2>tusk_snowball_11.mp3</sm2> Here\'s snow in your eye! 
-* <sm2>tusk_snowball_14.mp3</sm2> Snow says no! 
-* <sm2>tusk_snowball_15.mp3</sm2> Ta-da! 
-* <sm2>tusk_snowball_16.mp3</sm2> Ta-da! 
-* <sm2>tusk_snowball_17.mp3</sm2> {{resp|u}} Well I tried. 
-* <sm2>tusk_snowball_18.mp3</sm2> {{resp|u}} Where did they go? 
-* <sm2>tusk_snowball_19.mp3</sm2> {{resp|u}} Was worth a try! 
-* <sm2>tusk_snowball_20.mp3</sm2> {{resp|u}} Ta... Da... Ah, hmm. 
-* <sm2>tusk_snowball_21.mp3</sm2> {{resp|u}} Ta-dah oh. 
-* <sm2>tusk_snowball_22.mp3</sm2> {{resp|u}} Ta-da oh hm. 
-* <sm2>tusk_snowball_23.mp3</sm2> {{resp|u}} That was a big ball of failure. 
-* <sm2>tusk_snowball_24.mp3</sm2> {{resp|u}} Dohmvzm! 
-* <sm2>tusk_snowball_25.mp3</sm2> {{resp|u}} Euvm. 
-* <sm2>tusk_snowball_26.mp3</sm2> {{resp|u}} Well, we\'re here. 
+* <sm2>tusk_snowball_01.mp3</sm2> Snowball!
+* <sm2>tusk_snowball_02.mp3</sm2> Snowball!
+* <sm2>tusk_snowball_04.mp3</sm2> Allihopa!
+* <sm2>tusk_snowball_05.mp3</sm2> Ally-oop!
+* <sm2>tusk_snowball_09.mp3</sm2> Ally-oop!
+* <sm2>tusk_snowball_12.mp3</sm2> {{resp|u}} Stick around!
+* <sm2>tusk_snowball_13.mp3</sm2> {{resp|u}} Stay awhile!
+* <sm2>tusk_kill_17.mp3</sm2> I am the Snowball from Cobalt!
+* <sm2>tusk_kill_18.mp3</sm2> That trick won the great brawl at White Fields!
+* <sm2>tusk_kill_19.mp3</sm2> It\'s just a little snow!
+* <sm2>tusk_snowball_11.mp3</sm2> Here\'s snow in your eye!
+* <sm2>tusk_snowball_14.mp3</sm2> Snow says no!
+* <sm2>tusk_snowball_15.mp3</sm2> Ta-da!
+* <sm2>tusk_snowball_16.mp3</sm2> Ta-da!
+* <sm2>tusk_snowball_17.mp3</sm2> {{resp|u}} Well I tried.
+* <sm2>tusk_snowball_18.mp3</sm2> {{resp|u}} Where did they go?
+* <sm2>tusk_snowball_19.mp3</sm2> {{resp|u}} Was worth a try!
+* <sm2>tusk_snowball_20.mp3</sm2> {{resp|u}} Ta... Da... Ah, hmm.
+* <sm2>tusk_snowball_21.mp3</sm2> {{resp|u}} Ta-dah oh.
+* <sm2>tusk_snowball_22.mp3</sm2> {{resp|u}} Ta-da oh hm.
+* <sm2>tusk_snowball_23.mp3</sm2> {{resp|u}} That was a big ball of failure.
+* <sm2>tusk_snowball_24.mp3</sm2> {{resp|u}} Dohmvzm!
+* <sm2>tusk_snowball_25.mp3</sm2> {{resp|u}} Euvm.
+* <sm2>tusk_snowball_26.mp3</sm2> {{resp|u}} Well, we\'re here.
 * <sm2>tusk_snowball_27.mp3</sm2> {{resp|u}} I will just let you off here.
-* <sm2>tusk_snowball_03.mp3</sm2> Snowball fight! 
-* <sm2>tusk_snowball_06.mp3</sm2> Let\'s go! 
-* <sm2>tusk_snowball_07.mp3</sm2> Let\'s go! 
-* <sm2>tusk_snowball_08.mp3</sm2> Snowball fight! 
-* <sm2>tusk_snowball_10.mp3</sm2> Let\'s go! 
-* <sm2>tusk_frozensigil_01.mp3</sm2> Ah, this will turn down the temperature. 
-* <sm2>tusk_frozensigil_02.mp3</sm2> Much better! 
-* <sm2>tusk_frozensigil_03.mp3</sm2> Ah! The chill of home. 
-* <sm2>tusk_frozensigil_04.mp3</sm2> Mm, a cozy cold. 
-* <sm2>tusk_frozensigil_05.mp3</sm2> Love the cold! 
-* <sm2>tusk_superpunch_ready_01.mp3</sm2> {{resp|u}} Ready! 
-* <sm2>tusk_superpunch_ready_02.mp3</sm2> {{resp|u}} This next one is gonna sting. 
-* <sm2>tusk_superpunch_ready_03.mp3</sm2> {{resp|u}} Winding up! 
-* <sm2>tusk_superpunch_ready_04.mp3</sm2> {{resp|u}} Come at me! 
-* <sm2>tusk_superpunch_ready_05.mp3</sm2> {{resp|u}} Ready when you are. 
-* <sm2>tusk_superpunch_attack_01.mp3</sm2> Walrus Punch! 
-* <sm2>tusk_superpunch_attack_02.mp3</sm2> Keen Punch! 
-* <sm2>tusk_superpunch_attack_03.mp3</sm2> Oglodi Punch! 
-* <sm2>tusk_superpunch_attack_04.mp3</sm2> Greevil Punch! 
-* <sm2>tusk_superpunch_attack_05.mp3</sm2> Fundamental Punch! 
-* <sm2>tusk_superpunch_attack_06.mp3</sm2> Elemental Punch! 
-* <sm2>tusk_superpunch_attack_07.mp3</sm2> Dire Punch! 
-* <sm2>tusk_superpunch_attack_08.mp3</sm2> Radiant Punch! 
-* <sm2>tusk_superpunch_attack_09.mp3</sm2> Roshan Punch! 
-* <sm2>tusk_superpunch_attack_10.mp3</sm2> Grievous Punch! 
-* <sm2>tusk_superpunch_attack_11.mp3</sm2> Heroic Punch! 
-* <sm2>tusk_superpunch_attack_12.mp3</sm2> Phoenix Punch! 
-* <sm2>tusk_superpunch_attack_13.mp3</sm2> Ozkavosh Punch! 
-* <sm2>tusk_superpunch_attack_14.mp3</sm2> Chaos Punch! 
-* <sm2>tusk_superpunch_attack_15.mp3</sm2> Puck Punch! 
-* <sm2>tusk_superpunch_attack_16.mp3</sm2> Omni Punch! 
-* <sm2>tusk_superpunch_attack_17.mp3</sm2> Shadow Punch! 
-* <sm2>tusk_superpunch_attack_18.mp3</sm2> Phantom Punch! 
-* <sm2>tusk_superpunch_attack_19.mp3</sm2> Lunch Punch! 
-* <sm2>tusk_superpunch_attack_20.mp3</sm2> Icehouse Punch! 
-* <sm2>tusk_superpunch_attack_21.mp3</sm2> Cucumber Punch! 
-* <sm2>tusk_superpunch_attack_22.mp3</sm2> Inclement Punch! 
-* <sm2>tusk_superpunch_attack_23.mp3</sm2> Ultimate Punch! 
-* <sm2>tusk_superpunch_attack_24.mp3</sm2> Magnificent Punch! 
-* <sm2>tusk_superpunch_attack_25.mp3</sm2> My Signature Punch! 
-* <sm2>tusk_superpunch_attack_26.mp3</sm2> Boreal Punch! 
-* <sm2>tusk_superpunch_attack_27.mp3</sm2> Arctic Punch! 
-* <sm2>tusk_superpunch_attack_28.mp3</sm2> Tundra Punch! 
-* <sm2>tusk_superpunch_attack_29.mp3</sm2> Permafrost Punch! 
-* <sm2>tusk_superpunch_attack_30.mp3</sm2> Icy Punch! 
-* <sm2>tusk_superpunch_attack_31.mp3</sm2> Polar Punch! 
-* <sm2>tusk_superpunch_attack_32.mp3</sm2> Galactic Punch! 
-* <sm2>tusk_superpunch_attack_33.mp3</sm2> Crash Punch! 
-* <sm2>tusk_superpunch_attack_34.mp3</sm2> Cannon Punch! 
-* <sm2>tusk_superpunch_attack_35.mp3</sm2> Orbital Punch! 
-* <sm2>tusk_superpunch_attack_36.mp3</sm2> Onehellofa Punch! 
-* <sm2>tusk_superpunch_attack_37.mp3</sm2> Thesaurical Punch! 
-* <sm2>tusk_superpunch_attack_38.mp3</sm2> That\'s the Love Punch! 
-* <sm2>tusk_superpunch_attack_39.mp3</sm2> Love Punch! 
-* <sm2>tusk_superpunch_attack_40.mp3</sm2> Friendship Punch! 
-* <sm2>tusk_superpunch_attack_41.mp3</sm2> Counter Punch! 
-* <sm2>tusk_superpunch_attack_42.mp3</sm2> Thirty Degrees Below Punch! 
-* <sm2>tusk_superpunch_attack_43.mp3</sm2> Penetrating Punch! 
-* <sm2>tusk_superpunch_attack_44.mp3</sm2> Equatorial Punch! 
-* <sm2>tusk_superpunch_attack_45.mp3</sm2> Iceberg Punch! 
-* <sm2>tusk_superpunch_attack_46.mp3</sm2> Icicle Punch! Ooo. 
-* <sm2>tusk_superpunch_attack_47.mp3</sm2> Snowdrift Punch! 
-* <sm2>tusk_superpunch_attack_48.mp3</sm2> Winterfreeze Punch! 
-* <sm2>tusk_superpunch_attack_49.mp3</sm2> Snowflake Punch! 
-* <sm2>tusk_superpunch_attack_50.mp3</sm2> Pudge Punch! 
-* <sm2>tusk_superpunch_attack_51.mp3</sm2> Drunk Punch! 
-* <sm2>tusk_superpunch_attack_52.mp3</sm2> Dragon Punch! 
-* <sm2>tusk_superpunch_attack_53.mp3</sm2> Falcon Punch! 
-* <sm2>tusk_superpunch_attack_54.mp3</sm2> Crocodile Punch! 
-* <sm2>tusk_superpunch_attack_55.mp3</sm2> Another Punch! 
-* <sm2>tusk_superpunch_attack_56.mp3</sm2> And Another Punch! 
-* <sm2>tusk_superpunch_attack_57.mp3</sm2> And Another Punch! 
-* <sm2>tusk_superpunch_attack_58.mp3</sm2> Punch Punch! 
-* <sm2>tusk_superpunch_attack_59.mp3</sm2> Punch Punch Punch! 
-* <sm2>tusk_superpunch_attack_60.mp3</sm2> Puncha Puncha Puncha! 
-* <sm2>tusk_superpunch_attack_61.mp3</sm2> Horsekick Punch! 
-* <sm2>tusk_superpunch_attack_62.mp3</sm2> Moderately Painful Punch! 
-* <sm2>tusk_superpunch_attack_63.mp3</sm2> {{resp|u}} Regrettable Punch! 
-* <sm2>tusk_superpunch_attack_64.mp3</sm2> Bug Punch! 
-* <sm2>tusk_superpunch_attack_65.mp3</sm2> Face Punch! 
-* <sm2>tusk_superpunch_attack_66.mp3</sm2> Cruncha Puncha! 
-* <sm2>tusk_superpunch_attack_67.mp3</sm2> Surgical Punch! 
-* <sm2>tusk_superpunch_attack_68.mp3</sm2> Crippling Punch! 
-* <sm2>tusk_superpunch_attack_69.mp3</sm2> Narwhal Punch! 
-* <sm2>tusk_superpunch_attack_70.mp3</sm2> Action Punch! 
-* <sm2>tusk_superpunch_attack_71.mp3</sm2> Final Punch! 
-* <sm2>tusk_superpunch_attack_72.mp3</sm2> Fruit Punch! 
-* <sm2>tusk_superpunch_attack_73.mp3</sm2> Spiked Punch! 
-* <sm2>tusk_superpunch_attack_74.mp3</sm2> Diet Punch! 
-* <sm2>tusk_superpunch_attack_75.mp3</sm2> Face Punch! 
-* <sm2>tusk_superpunch_attack_76.mp3</sm2> Hole Punch! 
-* <sm2>tusk_superpunch_attack_78.mp3</sm2> Magnus Punch! 
-* <sm2>tusk_superpunch_attack_79.mp3</sm2> Double Dragon Punch Punch! 
-* <sm2>tusk_superpunch_attack_80.mp3</sm2> Punchdrunk Punch! 
-* <sm2>tusk_superpunch_attack_81.mp3</sm2> {{resp|u}} Here\'s a Bunch of Punches! 
-* <sm2>tusk_superpunch_attack_82.mp3</sm2> {{resp|u}} Whole Bunch of Punches! 
+* <sm2>tusk_snowball_03.mp3</sm2> Snowball fight!
+* <sm2>tusk_snowball_06.mp3</sm2> Let\'s go!
+* <sm2>tusk_snowball_07.mp3</sm2> Let\'s go!
+* <sm2>tusk_snowball_08.mp3</sm2> Snowball fight!
+* <sm2>tusk_snowball_10.mp3</sm2> Let\'s go!
+* <sm2>tusk_frozensigil_01.mp3</sm2> Ah, this will turn down the temperature.
+* <sm2>tusk_frozensigil_02.mp3</sm2> Much better!
+* <sm2>tusk_frozensigil_03.mp3</sm2> Ah! The chill of home.
+* <sm2>tusk_frozensigil_04.mp3</sm2> Mm, a cozy cold.
+* <sm2>tusk_frozensigil_05.mp3</sm2> Love the cold!
+* <sm2>tusk_superpunch_ready_01.mp3</sm2> {{resp|u}} Ready!
+* <sm2>tusk_superpunch_ready_02.mp3</sm2> {{resp|u}} This next one is gonna sting.
+* <sm2>tusk_superpunch_ready_03.mp3</sm2> {{resp|u}} Winding up!
+* <sm2>tusk_superpunch_ready_04.mp3</sm2> {{resp|u}} Come at me!
+* <sm2>tusk_superpunch_ready_05.mp3</sm2> {{resp|u}} Ready when you are.
+* <sm2>tusk_superpunch_attack_01.mp3</sm2> Walrus Punch!
+* <sm2>tusk_superpunch_attack_02.mp3</sm2> Keen Punch!
+* <sm2>tusk_superpunch_attack_03.mp3</sm2> Oglodi Punch!
+* <sm2>tusk_superpunch_attack_04.mp3</sm2> Greevil Punch!
+* <sm2>tusk_superpunch_attack_05.mp3</sm2> Fundamental Punch!
+* <sm2>tusk_superpunch_attack_06.mp3</sm2> Elemental Punch!
+* <sm2>tusk_superpunch_attack_07.mp3</sm2> Dire Punch!
+* <sm2>tusk_superpunch_attack_08.mp3</sm2> Radiant Punch!
+* <sm2>tusk_superpunch_attack_09.mp3</sm2> Roshan Punch!
+* <sm2>tusk_superpunch_attack_10.mp3</sm2> Grievous Punch!
+* <sm2>tusk_superpunch_attack_11.mp3</sm2> Heroic Punch!
+* <sm2>tusk_superpunch_attack_12.mp3</sm2> Phoenix Punch!
+* <sm2>tusk_superpunch_attack_13.mp3</sm2> Ozkavosh Punch!
+* <sm2>tusk_superpunch_attack_14.mp3</sm2> Chaos Punch!
+* <sm2>tusk_superpunch_attack_15.mp3</sm2> Puck Punch!
+* <sm2>tusk_superpunch_attack_16.mp3</sm2> Omni Punch!
+* <sm2>tusk_superpunch_attack_17.mp3</sm2> Shadow Punch!
+* <sm2>tusk_superpunch_attack_18.mp3</sm2> Phantom Punch!
+* <sm2>tusk_superpunch_attack_19.mp3</sm2> Lunch Punch!
+* <sm2>tusk_superpunch_attack_20.mp3</sm2> Icehouse Punch!
+* <sm2>tusk_superpunch_attack_21.mp3</sm2> Cucumber Punch!
+* <sm2>tusk_superpunch_attack_22.mp3</sm2> Inclement Punch!
+* <sm2>tusk_superpunch_attack_23.mp3</sm2> Ultimate Punch!
+* <sm2>tusk_superpunch_attack_24.mp3</sm2> Magnificent Punch!
+* <sm2>tusk_superpunch_attack_25.mp3</sm2> My Signature Punch!
+* <sm2>tusk_superpunch_attack_26.mp3</sm2> Boreal Punch!
+* <sm2>tusk_superpunch_attack_27.mp3</sm2> Arctic Punch!
+* <sm2>tusk_superpunch_attack_28.mp3</sm2> Tundra Punch!
+* <sm2>tusk_superpunch_attack_29.mp3</sm2> Permafrost Punch!
+* <sm2>tusk_superpunch_attack_30.mp3</sm2> Icy Punch!
+* <sm2>tusk_superpunch_attack_31.mp3</sm2> Polar Punch!
+* <sm2>tusk_superpunch_attack_32.mp3</sm2> Galactic Punch!
+* <sm2>tusk_superpunch_attack_33.mp3</sm2> Crash Punch!
+* <sm2>tusk_superpunch_attack_34.mp3</sm2> Cannon Punch!
+* <sm2>tusk_superpunch_attack_35.mp3</sm2> Orbital Punch!
+* <sm2>tusk_superpunch_attack_36.mp3</sm2> Onehellofa Punch!
+* <sm2>tusk_superpunch_attack_37.mp3</sm2> Thesaurical Punch!
+* <sm2>tusk_superpunch_attack_38.mp3</sm2> That\'s the Love Punch!
+* <sm2>tusk_superpunch_attack_39.mp3</sm2> Love Punch!
+* <sm2>tusk_superpunch_attack_40.mp3</sm2> Friendship Punch!
+* <sm2>tusk_superpunch_attack_41.mp3</sm2> Counter Punch!
+* <sm2>tusk_superpunch_attack_42.mp3</sm2> Thirty Degrees Below Punch!
+* <sm2>tusk_superpunch_attack_43.mp3</sm2> Penetrating Punch!
+* <sm2>tusk_superpunch_attack_44.mp3</sm2> Equatorial Punch!
+* <sm2>tusk_superpunch_attack_45.mp3</sm2> Iceberg Punch!
+* <sm2>tusk_superpunch_attack_46.mp3</sm2> Icicle Punch!Ooo.
+* <sm2>tusk_superpunch_attack_47.mp3</sm2> Snowdrift Punch!
+* <sm2>tusk_superpunch_attack_48.mp3</sm2> Winterfreeze Punch!
+* <sm2>tusk_superpunch_attack_49.mp3</sm2> Snowflake Punch!
+* <sm2>tusk_superpunch_attack_50.mp3</sm2> Pudge Punch!
+* <sm2>tusk_superpunch_attack_51.mp3</sm2> Drunk Punch!
+* <sm2>tusk_superpunch_attack_52.mp3</sm2> Dragon Punch!
+* <sm2>tusk_superpunch_attack_53.mp3</sm2> Falcon Punch!
+* <sm2>tusk_superpunch_attack_54.mp3</sm2> Crocodile Punch!
+* <sm2>tusk_superpunch_attack_55.mp3</sm2> Another Punch!
+* <sm2>tusk_superpunch_attack_56.mp3</sm2> And Another Punch!
+* <sm2>tusk_superpunch_attack_57.mp3</sm2> And Another Punch!
+* <sm2>tusk_superpunch_attack_58.mp3</sm2> Punch Punch!
+* <sm2>tusk_superpunch_attack_59.mp3</sm2> Punch Punch Punch!
+* <sm2>tusk_superpunch_attack_60.mp3</sm2> Puncha Puncha Puncha!
+* <sm2>tusk_superpunch_attack_61.mp3</sm2> Horsekick Punch!
+* <sm2>tusk_superpunch_attack_62.mp3</sm2> Moderately Painful Punch!
+* <sm2>tusk_superpunch_attack_63.mp3</sm2> {{resp|u}} Regrettable Punch!
+* <sm2>tusk_superpunch_attack_64.mp3</sm2> Bug Punch!
+* <sm2>tusk_superpunch_attack_65.mp3</sm2> Face Punch!
+* <sm2>tusk_superpunch_attack_66.mp3</sm2> Cruncha Puncha!
+* <sm2>tusk_superpunch_attack_67.mp3</sm2> Surgical Punch!
+* <sm2>tusk_superpunch_attack_68.mp3</sm2> Crippling Punch!
+* <sm2>tusk_superpunch_attack_69.mp3</sm2> Narwhal Punch!
+* <sm2>tusk_superpunch_attack_70.mp3</sm2> Action Punch!
+* <sm2>tusk_superpunch_attack_71.mp3</sm2> Final Punch!
+* <sm2>tusk_superpunch_attack_72.mp3</sm2> Fruit Punch!
+* <sm2>tusk_superpunch_attack_73.mp3</sm2> Spiked Punch!
+* <sm2>tusk_superpunch_attack_74.mp3</sm2> Diet Punch!
+* <sm2>tusk_superpunch_attack_75.mp3</sm2> Face Punch!
+* <sm2>tusk_superpunch_attack_76.mp3</sm2> Hole Punch!
+* <sm2>tusk_superpunch_attack_78.mp3</sm2> Magnus Punch!
+* <sm2>tusk_superpunch_attack_79.mp3</sm2> Double Dragon Punch Punch!
+* <sm2>tusk_superpunch_attack_80.mp3</sm2> Punchdrunk Punch!
+* <sm2>tusk_superpunch_attack_81.mp3</sm2> {{resp|u}} Here\'s a Bunch of Punches!
 * <sm2>tusk_superpunch_attack_83.mp3</sm2> Magus Punch!
-* <sm2>tusk_levelup_01.mp3</sm2> Ah! A cold front! 
-* <sm2>tusk_levelup_02.mp3</sm2> Upped my weightclass! 
-* <sm2>tusk_levelup_03.mp3</sm2> Time to punch things up! 
-* <sm2>tusk_levelup_04.mp3</sm2> I flex! Hmmm! 
-* <sm2>tusk_levelup_05.mp3</sm2> Ah! A great workout! 
-* <sm2>tusk_levelup_06.mp3</sm2> A good warmup! 
-* <sm2>tusk_levelup_07.mp3</sm2> Now the fun begins! 
-* <sm2>tusk_levelup_08.mp3</sm2> They will not know what hit them. 
-* <sm2>tusk_levelup_09.mp3</sm2> I dare them to fight me. 
-* <sm2>tusk_levelup_10.mp3</sm2> This fight will be mine! 
-* <sm2>tusk_levelup_11.mp3</sm2> Ha ha ha ha ha ha ha ha ha! 
-* <sm2>tusk_levelup_12.mp3</sm2> Hm hm hm hm hm hm hm hm hm! 
-* <sm2>tusk_levelup_13.mp3</sm2> Ha ha! 
-* <sm2>tusk_levelup_14.mp3</sm2> Ha ha ha ha! 
-* <sm2>tusk_levelup_15.mp3</sm2> Ho ho ho ho ho! 
-* <sm2>tusk_levelup_16.mp3</sm2> He ha ha ha ha! 
-* <sm2>tusk_kill_01.mp3</sm2> That gets my seal of approval! 
-* <sm2>tusk_kill_02.mp3</sm2> You\'ve got blood on you. 
-* <sm2>tusk_kill_03.mp3</sm2> Stay frosty. 
-* <sm2>tusk_kill_04.mp3</sm2> I don\'t know my own strength! 
-* <sm2>tusk_kill_05.mp3</sm2> You were out of your weightclass! 
-* <sm2>tusk_kill_06.mp3</sm2> Aww, tough break. 
-* <sm2>tusk_kill_07.mp3</sm2> Pack some snow on it. You\'ll be fine. 
-* <sm2>tusk_kill_08.mp3</sm2> Survival of the fittest! 
-* <sm2>tusk_kill_09.mp3</sm2> You fought with such determination! 
-* <sm2>tusk_kill_10.mp3</sm2> You were all heart. I liked you. 
-* <sm2>tusk_kill_11.mp3</sm2> Care to go another round? 
-* <sm2>tusk_kill_12.mp3</sm2> I was just getting warmed up! 
-* <sm2>tusk_kill_13.mp3</sm2> Down for the count! 
-* <sm2>tusk_kill_14.mp3</sm2> Eh he! Eh he! 
-* <sm2>tusk_kill_15.mp3</sm2> Eh he! Eh he he he he he! 
-* <sm2>tusk_kill_16.mp3</sm2> Ah ha! Ah! Oh that\'s good. 
-* <sm2>tusk_kill_20.mp3</sm2> I never pull my punches. 
-* <sm2>tusk_kill_21.mp3</sm2> Knockout! 
-* <sm2>tusk_kill_22.mp3</sm2> Oh, that had to hurt! 
-* <sm2>tusk_kill_23.mp3</sm2> Bang! Zoom! To the Mad Moon! 
-* <sm2>tusk_kill_24.mp3</sm2> {{resp|u}} That was my favorite punch! You were impressed? 
-* <sm2>tusk_kill_25.mp3</sm2> {{resp|u}} That punch has ended more fights than I can remember! 
-* <sm2>tusk_kill_26.mp3</sm2> Fist bump! 
-* <sm2>tusk_deny_11.mp3</sm2> That went well! 
-* <sm2>tusk_laugh_01.mp3</sm2> He he! 
-* <sm2>tusk_laugh_02.mp3</sm2> Ha! 
-* <sm2>tusk_laugh_03.mp3</sm2> Ho ho ho! 
-* <sm2>tusk_laugh_04.mp3</sm2> Ha ha ha ha! 
-* <sm2>tusk_laugh_05.mp3</sm2> Oh ho ho ho ho ho ho! 
-* <sm2>tusk_laugh_06.mp3</sm2> Oh boy! Ha ha ha ha ha! 
-* <sm2>tusk_laugh_07.mp3</sm2> Oh ho! Wo ho ho ho ho! 
-* <sm2>tusk_laugh_08.mp3</sm2> Ah ha ha ha ha ha ha ha! 
-* <sm2>tusk_laugh_09.mp3</sm2> Wo ho! Wa ha ha ha ha! 
-* <sm2>tusk_laugh_10.mp3</sm2> Hueh heh! 
-* <sm2>tusk_rival_13.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} Sorry to do that to you darling. 
-* <sm2>tusk_rival_14.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} Sorry about that. 
-* <sm2>tusk_rival_15.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} You know I do not mean it, right? 
-* <sm2>tusk_rival_16.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} Apologies. 
-* <sm2>tusk_rival_17.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} Apologies. 
-* <sm2>tusk_rival_18.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} Well you did tell me not to go easy on you. 
-* <sm2>tusk_rival_19.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} Are you okay? 
-* <sm2>tusk_rival_20.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} I tried to warn you. 
-* <sm2>tusk_rival_02.mp3</sm2> {{Hero icon|Doom|16px}} Hell froze over. 
-* <sm2>tusk_rival_03.mp3</sm2> {{Hero icon|Lich|16px}} Even you should come in from the cold once in a while. 
-* <sm2>tusk_rival_04.mp3</sm2> {{Hero icon|Brewmaster|16px}} Not so fast. I will take that keg. 
-* <sm2>tusk_rival_05.mp3</sm2> {{Hero icon|Brewmaster|16px}} Oh! The Brewmaster\'s brew! I always wanted to try this! 
-* <sm2>tusk_rival_06.mp3</sm2> {{Hero icon|Winter Wyvern|16px}} Only a cruel beast turns one\'s friends against him. 
-* <sm2>tusk_rival_07.mp3</sm2> {{Hero icon|Ancient Apparition|16px}} Did you know that I shatter ice with my fists for fun? 
-* <sm2>tusk_rival_09.mp3</sm2> {{Hero icon|Pudge|16px}} You should bandage up that belly next time! 
-* <sm2>tusk_rival_10.mp3</sm2> {{Hero icon|Bane|16px}} Night night, Mr. Grim. 
-* <sm2>tusk_rival_11.mp3</sm2> {{Hero icon|Centaur Warrunner|16px}} I do not think you\'re having fun, man-horse! 
-* <sm2>tusk_rival_12.mp3</sm2> {{Hero icon|Troll Warlord|16px}} War is no reason to be unsporting. 
-* <sm2>tusk_rival_21.mp3</sm2> {{Hero icon|Bristleback|16px}} A rematch with me was a bad idea. 
+* <sm2>tusk_levelup_01.mp3</sm2> Ah! A cold front!
+* <sm2>tusk_levelup_02.mp3</sm2> Upped my weightclass!
+* <sm2>tusk_levelup_03.mp3</sm2> Time to punch things up!
+* <sm2>tusk_levelup_04.mp3</sm2> I flex! Hmmm!
+* <sm2>tusk_levelup_05.mp3</sm2> Ah! A great workout!
+* <sm2>tusk_levelup_06.mp3</sm2> A good warmup!
+* <sm2>tusk_levelup_07.mp3</sm2> Now the fun begins!
+* <sm2>tusk_levelup_08.mp3</sm2> They will not know what hit them.
+* <sm2>tusk_levelup_09.mp3</sm2> I dare them to fight me.
+* <sm2>tusk_levelup_10.mp3</sm2> This fight will be mine!
+* <sm2>tusk_levelup_11.mp3</sm2> Ha ha ha ha ha ha ha ha ha!
+* <sm2>tusk_levelup_12.mp3</sm2> Hm hm hm hm hm hm hm hm hm!
+* <sm2>tusk_levelup_13.mp3</sm2> Ha ha!
+* <sm2>tusk_levelup_14.mp3</sm2> Ha ha ha ha!
+* <sm2>tusk_levelup_15.mp3</sm2> Ho ho ho ho ho!
+* <sm2>tusk_levelup_16.mp3</sm2> He ha ha ha ha!
+* <sm2>tusk_kill_01.mp3</sm2> That gets my seal of approval!
+* <sm2>tusk_kill_02.mp3</sm2> You\'ve got blood on you.
+* <sm2>tusk_kill_03.mp3</sm2> Stay frosty.
+* <sm2>tusk_kill_04.mp3</sm2> I don\'t know my own strength!
+* <sm2>tusk_kill_05.mp3</sm2> You were out of your weightclass!
+* <sm2>tusk_kill_06.mp3</sm2> Aww, tough break.
+* <sm2>tusk_kill_07.mp3</sm2> Pack some snow on it. You\'ll be fine.
+* <sm2>tusk_kill_08.mp3</sm2> Survival of the fittest!
+* <sm2>tusk_kill_09.mp3</sm2> You fought with such determination!
+* <sm2>tusk_kill_10.mp3</sm2> You were all heart. I liked you.
+* <sm2>tusk_kill_11.mp3</sm2> Care to go another round?
+* <sm2>tusk_kill_12.mp3</sm2> I was just getting warmed up!
+* <sm2>tusk_kill_13.mp3</sm2> Down for the count!
+* <sm2>tusk_kill_14.mp3</sm2> Eh he! Eh he!
+* <sm2>tusk_kill_15.mp3</sm2> Eh he! Eh he he he he he!
+* <sm2>tusk_kill_16.mp3</sm2> Ah ha! Ah! Oh that\'s good.
+* <sm2>tusk_kill_20.mp3</sm2> I never pull my punches.
+* <sm2>tusk_kill_21.mp3</sm2> Knockout!
+* <sm2>tusk_kill_22.mp3</sm2> Oh, that had to hurt!
+* <sm2>tusk_kill_23.mp3</sm2> Bang! Zoom! To the Mad Moon!
+* <sm2>tusk_kill_24.mp3</sm2> {{resp|u}} That was my favorite Punch! You were impressed?
+* <sm2>tusk_kill_25.mp3</sm2> {{resp|u}} That punch has ended more fights than I can remember!
+* <sm2>tusk_kill_26.mp3</sm2> Fist bump!
+* <sm2>tusk_deny_11.mp3</sm2> That went well!
+* <sm2>tusk_laugh_01.mp3</sm2> He he!
+* <sm2>tusk_laugh_02.mp3</sm2> Ha!
+* <sm2>tusk_laugh_03.mp3</sm2> Ho ho ho!
+* <sm2>tusk_laugh_04.mp3</sm2> Ha ha ha ha!
+* <sm2>tusk_laugh_05.mp3</sm2> Oh ho ho ho ho ho ho!
+* <sm2>tusk_laugh_06.mp3</sm2> Oh boy! Ha ha ha ha ha!
+* <sm2>tusk_laugh_07.mp3</sm2> Oh ho! Wo ho ho ho ho!
+* <sm2>tusk_laugh_08.mp3</sm2> Ah ha ha ha ha ha ha ha!
+* <sm2>tusk_laugh_09.mp3</sm2> Wo ho! Wa ha ha ha ha!
+* <sm2>tusk_laugh_10.mp3</sm2> Hueh heh!
+* <sm2>tusk_rival_13.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} Sorry to do that to you darling.
+* <sm2>tusk_rival_14.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} Sorry about that.
+* <sm2>tusk_rival_15.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} You know I do not mean it, right?
+* <sm2>tusk_rival_16.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} Apologies.
+* <sm2>tusk_rival_17.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} Apologies.
+* <sm2>tusk_rival_18.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} Well you did tell me not to go easy on you.
+* <sm2>tusk_rival_19.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} Are you okay?
+* <sm2>tusk_rival_20.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} I tried to warn you.
+* <sm2>tusk_rival_02.mp3</sm2> {{Hero icon|Doom|16px}} Hell froze over.
+* <sm2>tusk_rival_03.mp3</sm2> {{Hero icon|Lich|16px}} Even you should come in from the cold once in a while.
+* <sm2>tusk_rival_04.mp3</sm2> {{Hero icon|Brewmaster|16px}} Not so fast. I will take that keg.
+* <sm2>tusk_rival_05.mp3</sm2> {{Hero icon|Brewmaster|16px}} Oh! The Brewmaster\'s brew! I always wanted to try this!
+* <sm2>tusk_rival_06.mp3</sm2> {{Hero icon|Winter Wyvern|16px}} Only a cruel beast turns one\'s friends against him.
+* <sm2>tusk_rival_07.mp3</sm2> {{Hero icon|Ancient Apparition|16px}} Did you know that I shatter ice with my fists for fun?
+* <sm2>tusk_rival_09.mp3</sm2> {{Hero icon|Pudge|16px}} You should bandage up that belly next time!
+* <sm2>tusk_rival_10.mp3</sm2> {{Hero icon|Bane|16px}} Night night, Mr. Grim.
+* <sm2>tusk_rival_11.mp3</sm2> {{Hero icon|Centaur Warrunner|16px}} I do not think you\'re having fun, man-horse!
+* <sm2>tusk_rival_12.mp3</sm2> {{Hero icon|Troll Warlord|16px}} War is no reason to be unsporting.
+* <sm2>tusk_rival_21.mp3</sm2> {{Hero icon|Bristleback|16px}} A rematch with me was a bad idea.
 * <sm2>tusk_rival_22.mp3</sm2> {{Hero icon|Bristleback|16px}} {{resp|u}} You call those tusks? Hm hm!
-* <sm2>tusk_rival_01.mp3</sm2> {{Hero icon|Tidehunter|16px}} {{Hero icon|Naga Siren|16px}} {{Hero icon|Slardar|16px}} {{Hero icon|Slark|16px}} Now you are old chum. 
-* <sm2>tusk_rival_08.mp3</sm2> {{Hero icon|Meepo|16px}} {{Hero icon|Phantom Lancer|16px}} How many were there? Maybe I\'ve had one too many blows to the head! 
-* <sm2>tusk_firstblood_01.mp3</sm2> First blood! And that is how we do things in the north! Ha ha ha ha ha! 
-* <sm2>tusk_firstblood_02.mp3</sm2> That was first blood? I barely touched you! Ha ha ha ha ha ha ha! 
+* <sm2>tusk_rival_01.mp3</sm2> {{Hero icon|Tidehunter|16px}} {{Hero icon|Naga Siren|16px}} {{Hero icon|Slardar|16px}} {{Hero icon|Slark|16px}} Now you are old chum.
+* <sm2>tusk_rival_08.mp3</sm2> {{Hero icon|Meepo|16px}} {{Hero icon|Phantom Lancer|16px}} How many were there? Maybe I\'ve had one too many blows to the head!
+* <sm2>tusk_firstblood_01.mp3</sm2> First blood! And that is how we do things in the north! Ha ha ha ha ha!
+* <sm2>tusk_firstblood_02.mp3</sm2> That was first blood? I barely touched you! Ha ha ha ha ha ha ha!
 * <sm2>tusk_firstblood_03.mp3</sm2> First blood! Now who wants to be second?
-* <sm2>tusk_ally_01.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} {{resp|r}} Crystal Maiden! It is you! I have not seen you for... Oh it\'s been so long. 
-* <sm2>tusk_ally_02.mp3</sm2> {{Hero icon|Brewmaster|16px}} {{resp|r}} Find me after the battle, Brewmaster. The second round is on me. 
-* <sm2>tusk_ally_03.mp3</sm2> {{Hero icon|Ogre Magi|16px}} {{resp|r}} Ha! Ogre! Care to make a friendly wager? 
-* <sm2>tusk_ally_04.mp3</sm2> {{Hero icon|Lich|16px}} {{resp|r}} You have a chill on you Lich. 
-* <sm2>tusk_ally_05.mp3</sm2> {{Hero icon|Ancient Apparition|16px}} {{resp|r}} So are you supposed to be some kind of ice ghost? 
-* <sm2>tusk_ally_06.mp3</sm2> {{Hero icon|Winter Wyvern|16px}} {{resp|r}} Auroth, do you feel the chill in the air? It\'s a good day for a fight. 
-* <sm2>tusk_ally_07.mp3</sm2> {{Hero icon|Storm Spirit|16px}} {{resp|r}} Ho ho ho ho! Are you not the jovial sort! 
-* <sm2>tusk_ally_08.mp3</sm2> {{Hero icon|Magnus|16px}} {{resp|r}} I look forward to your kebabs, Magnus. 
-* <sm2>tusk_ally_09.mp3</sm2> {{Hero icon|Slardar|16px}} {{resp|r}} Break their armor and I will smash them, Slardar. 
-* <sm2>tusk_ally_10.mp3</sm2> {{Hero icon|Centaur Warrunner|16px}} {{resp|r}} We will win this battle, Centaur. 
-* <sm2>tusk_ally_11.mp3</sm2> {{Hero icon|Bristleback|16px}} {{Hero icon|Legion Commander|16px}} {{resp|r}} We should spar when this is over. 
+* <sm2>tusk_ally_01.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} {{resp|r}} Crystal Maiden! It is you! I have not seen you for... Oh it\'s been so long.
+* <sm2>tusk_ally_02.mp3</sm2> {{Hero icon|Brewmaster|16px}} {{resp|r}} Find me after the battle, Brewmaster. The second round is on me.
+* <sm2>tusk_ally_03.mp3</sm2> {{Hero icon|Ogre Magi|16px}} {{resp|r}} Ha! Ogre! Care to make a friendly wager?
+* <sm2>tusk_ally_04.mp3</sm2> {{Hero icon|Lich|16px}} {{resp|r}} You have a chill on you Lich.
+* <sm2>tusk_ally_05.mp3</sm2> {{Hero icon|Ancient Apparition|16px}} {{resp|r}} So are you supposed to be some kind of ice ghost?
+* <sm2>tusk_ally_06.mp3</sm2> {{Hero icon|Winter Wyvern|16px}} {{resp|r}} Auroth, do you feel the chill in the air? It\'s a good day for a fight.
+* <sm2>tusk_ally_07.mp3</sm2> {{Hero icon|Storm Spirit|16px}} {{resp|r}} Ho ho ho ho! Are you not the jovial sort!
+* <sm2>tusk_ally_08.mp3</sm2> {{Hero icon|Magnus|16px}} {{resp|r}} I look forward to your kebabs, Magnus.
+* <sm2>tusk_ally_09.mp3</sm2> {{Hero icon|Slardar|16px}} {{resp|r}} Break their armor and I will smash them, Slardar.
+* <sm2>tusk_ally_10.mp3</sm2> {{Hero icon|Centaur Warrunner|16px}} {{resp|r}} We will win this battle, Centaur.
+* <sm2>tusk_ally_11.mp3</sm2> {{Hero icon|Bristleback|16px}} {{Hero icon|Legion Commander|16px}} {{resp|r}} We should spar when this is over.
 * <sm2>tusk_ally_12.mp3</sm2> {{Hero icon|Bristleback|16px}} {{resp|u}} Nice tusks, Bristleback.
-* <sm2>tusk_lasthit_01.mp3</sm2> Just a warmup! 
-* <sm2>tusk_lasthit_02.mp3</sm2> Keep \'em coming! 
-* <sm2>tusk_lasthit_03.mp3</sm2> Good. Keep \'em coming! 
-* <sm2>tusk_lasthit_04.mp3</sm2> Cool off. 
-* <sm2>tusk_lasthit_05.mp3</sm2> Chill out. 
-* <sm2>tusk_lasthit_06.mp3</sm2> Don\'t take it personal. 
-* <sm2>tusk_lasthit_07.mp3</sm2> Nice try! 
-* <sm2>tusk_lasthit_08.mp3</sm2> Good practice. 
-* <sm2>tusk_lasthit_09.mp3</sm2> Punching bag. 
-* <sm2>tusk_lasthit_10.mp3</sm2> Wimp. 
-* <sm2>tusk_lasthit_11.mp3</sm2> Wimp! 
-* <sm2>tusk_lasthit_12.mp3</sm2> He\'s a sparrow. 
-* <sm2>tusk_lasthit_13.mp3</sm2> Featherweight. 
-* <sm2>tusk_deny_01.mp3</sm2> Denied! 
-* <sm2>tusk_deny_02.mp3</sm2> Aw denied! 
-* <sm2>tusk_deny_03.mp3</sm2> Uh huh! 
-* <sm2>tusk_deny_04.mp3</sm2> Uh uh! 
-* <sm2>tusk_deny_05.mp3</sm2> That\'s mine! 
-* <sm2>tusk_deny_06.mp3</sm2> Uh uh! 
-* <sm2>tusk_deny_07.mp3</sm2> Nope! 
-* <sm2>tusk_deny_08.mp3</sm2> No. 
-* <sm2>tusk_deny_09.mp3</sm2> I don\'t mind if I do. 
-* <sm2>tusk_deny_10.mp3</sm2> You should rethink that. 
-* <sm2>tusk_deny_12.mp3</sm2> Sorry friend. 
-* <sm2>tusk_deny_13.mp3</sm2> No you don\'t! 
-* <sm2>tusk_deny_14.mp3</sm2> Ah ha ha ha! 
-* <sm2>tusk_deny_15.mp3</sm2> Ah ha ha ha! 
-* <sm2>tusk_deny_16.mp3</sm2> Oh ha ha ha ha ha! 
-* <sm2>tusk_deny_17.mp3</sm2> Ho ho ho ha ha ha ha! 
-* <sm2>tusk_deny_18.mp3</sm2> Ah ha ha ha ha ha ha ha! 
-* <sm2>tusk_deny_19.mp3</sm2> Denied! 
-* <sm2>tusk_deny_20.mp3</sm2> Denied. 
-* <sm2>tusk_deny_21.mp3</sm2> Denied. 
-* <sm2>tusk_purch_01.mp3</sm2> {{resp|r}} Hoh! This had better be worth it. 
-* <sm2>tusk_purch_02.mp3</sm2> {{resp|r}} And this will help me punch? 
-* <sm2>tusk_purch_03.mp3</sm2> {{resp|r}} I will hit them with the heavy part. I think. 
-* <sm2>tusk_purch_04.mp3</sm2> {{resp|u}} It\'s very nice. What does it do? 
+* <sm2>tusk_lasthit_01.mp3</sm2> Just a warmup!
+* <sm2>tusk_lasthit_02.mp3</sm2> Keep \'em coming!
+* <sm2>tusk_lasthit_03.mp3</sm2> Good. Keep \'em coming!
+* <sm2>tusk_lasthit_04.mp3</sm2> Cool off.
+* <sm2>tusk_lasthit_05.mp3</sm2> Chill out.
+* <sm2>tusk_lasthit_06.mp3</sm2> Don\'t take it personal.
+* <sm2>tusk_lasthit_07.mp3</sm2> Nice try!
+* <sm2>tusk_lasthit_08.mp3</sm2> Good practice.
+* <sm2>tusk_lasthit_09.mp3</sm2> Punching bag.
+* <sm2>tusk_lasthit_10.mp3</sm2> Wimp.
+* <sm2>tusk_lasthit_11.mp3</sm2> Wimp!
+* <sm2>tusk_lasthit_12.mp3</sm2> He\'s a sparrow.
+* <sm2>tusk_lasthit_13.mp3</sm2> Featherweight.
+* <sm2>tusk_deny_01.mp3</sm2> Denied!
+* <sm2>tusk_deny_02.mp3</sm2> Aw denied!
+* <sm2>tusk_deny_03.mp3</sm2> Uh huh!
+* <sm2>tusk_deny_04.mp3</sm2> Uh uh!
+* <sm2>tusk_deny_05.mp3</sm2> That\'s mine!
+* <sm2>tusk_deny_06.mp3</sm2> Uh uh!
+* <sm2>tusk_deny_07.mp3</sm2> Nope!
+* <sm2>tusk_deny_08.mp3</sm2> No.
+* <sm2>tusk_deny_09.mp3</sm2> I don\'t mind if I do.
+* <sm2>tusk_deny_10.mp3</sm2> You should rethink that.
+* <sm2>tusk_deny_12.mp3</sm2> Sorry friend.
+* <sm2>tusk_deny_13.mp3</sm2> No you don\'t!
+* <sm2>tusk_deny_14.mp3</sm2> Ah ha ha ha!
+* <sm2>tusk_deny_15.mp3</sm2> Ah ha ha ha!
+* <sm2>tusk_deny_16.mp3</sm2> Oh ha ha ha ha ha!
+* <sm2>tusk_deny_17.mp3</sm2> Ho ho ho ha ha ha ha!
+* <sm2>tusk_deny_18.mp3</sm2> Ah ha ha ha ha ha ha ha!
+* <sm2>tusk_deny_19.mp3</sm2> Denied!
+* <sm2>tusk_deny_20.mp3</sm2> Denied.
+* <sm2>tusk_deny_21.mp3</sm2> Denied.
+* <sm2>tusk_purch_01.mp3</sm2> {{resp|r}} Hoh! This had better be worth it.
+* <sm2>tusk_purch_02.mp3</sm2> {{resp|r}} And this will help me punch?
+* <sm2>tusk_purch_03.mp3</sm2> {{resp|r}} I will hit them with the heavy part. I think.
+* <sm2>tusk_purch_04.mp3</sm2> {{resp|u}} It\'s very nice. What does it do?
 * <sm2>tusk_purch_05.mp3</sm2> {{resp|r}} It\'s very nice. What does it do?
-* <sm2>tusk_scepter_01.mp3</sm2> {{Item|Aghanim\'s Scepter|20px}} {{resp|r}} Ah! Scepter! 
-* <sm2>tusk_scepter_02.mp3</sm2> {{Item|Aghanim\'s Scepter|20px}} {{resp|r}} A snow scepter! 
-* <sm2>tusk_blink_01.mp3</sm2> {{Item|Blink Dagger|20px}} {{resp|r}} Blink dagger! 
-* <sm2>tusk_blink_02.mp3</sm2> {{Item|Blink Dagger|20px}} {{resp|r}} Some kind of an ice pick! 
-* <sm2>tusk_items_01.mp3</sm2> {{Item|Shiva\'s Guard|20px}} {{resp|r}} Shiva\'s Guard! Now that\'s cold! 
-* <sm2>tusk_items_02.mp3</sm2> {{Item|Assault Cuirass|20px}} {{resp|r}} Assault Cuirass! 
-* <sm2>tusk_items_03.mp3</sm2> {{Item|Monkey King Bar|20px}} {{resp|r}} Monkey King Bar! 
-* <sm2>tusk_items_04.mp3</sm2> {{Item|Battle Fury|20px}} {{resp|r}} Battlefury! 
-* <sm2>tusk_items_05.mp3</sm2> {{Item|Heart of Tarrasque|20px}} {{resp|r}} Heart of Tarrasque! 
-* <sm2>tusk_items_06.mp3</sm2> {{Item|Urn of Shadows|20px}} {{resp|r}} Urn of Shadows! 
-* <sm2>tusk_items_07.mp3</sm2> {{Item|Drum of Endurance|20px}} {{resp|r}} Drum of Endurance! 
-* <sm2>tusk_items_08.mp3</sm2> {{Item|Sange and Yasha|20px}} {{resp|r}} Sange and Yasha! 
-* <sm2>tusk_items_09.mp3</sm2> {{Item|Black King Bar|20px}} {{resp|r}} Black King Bar! 
-* <sm2>tusk_items_10.mp3</sm2> {{Item|Blade Mail|20px}} {{resp|r}} Blade Mail! 
-* <sm2>tusk_immort_01.mp3</sm2> {{Item|Aegis of the Immortal|20px}} Immortality! 
+* <sm2>tusk_scepter_01.mp3</sm2> {{Item|Aghanim\'s Scepter|20px}} {{resp|r}} Ah!Scepter!
+* <sm2>tusk_scepter_02.mp3</sm2> {{Item|Aghanim\'s Scepter|20px}} {{resp|r}} A snow scepter!
+* <sm2>tusk_blink_01.mp3</sm2> {{Item|Blink Dagger|20px}} {{resp|r}} Blink dagger!
+* <sm2>tusk_blink_02.mp3</sm2> {{Item|Blink Dagger|20px}} {{resp|r}} Some kind of an ice pick!
+* <sm2>tusk_items_01.mp3</sm2> {{Item|Shiva\'s Guard|20px}} {{resp|r}} Shiva\'s Guard! Now that\'s cold!
+* <sm2>tusk_items_02.mp3</sm2> {{Item|Assault Cuirass|20px}} {{resp|r}} Assault Cuirass!
+* <sm2>tusk_items_03.mp3</sm2> {{Item|Monkey King Bar|20px}} {{resp|r}} Monkey King Bar!
+* <sm2>tusk_items_04.mp3</sm2> {{Item|Battle Fury|20px}} {{resp|r}} Battlefury!
+* <sm2>tusk_items_05.mp3</sm2> {{Item|Heart of Tarrasque|20px}} {{resp|r}} Heart of Tarrasque!
+* <sm2>tusk_items_06.mp3</sm2> {{Item|Urn of Shadows|20px}} {{resp|r}} Urn of Shadows!
+* <sm2>tusk_items_07.mp3</sm2> {{Item|Drum of Endurance|20px}} {{resp|r}} Drum of Endurance!
+* <sm2>tusk_items_08.mp3</sm2> {{Item|Sange and Yasha|20px}} {{resp|r}} Sange and Yasha!
+* <sm2>tusk_items_09.mp3</sm2> {{Item|Black King Bar|20px}} {{resp|r}} Black King Bar!
+* <sm2>tusk_items_10.mp3</sm2> {{Item|Blade Mail|20px}} {{resp|r}} Blade Mail!
+* <sm2>tusk_immort_01.mp3</sm2> {{Item|Aegis of the Immortal|20px}} Immortality!
 * <sm2>tusk_immort_02.mp3</sm2> {{Item|Aegis of the Immortal|20px}} This fighter never falls.
-* <sm2>tusk_death_01.mp3</sm2> No! 
-* <sm2>tusk_death_02.mp3</sm2> No! 
-* <sm2>tusk_death_03.mp3</sm2> Fight fair! 
-* <sm2>tusk_death_04.mp3</sm2> Wow! You hit hard. 
-* <sm2>tusk_death_05.mp3</sm2> Oh that smarts! 
+* <sm2>tusk_death_01.mp3</sm2> No!
+* <sm2>tusk_death_02.mp3</sm2> No!
+* <sm2>tusk_death_03.mp3</sm2> Fight fair!
+* <sm2>tusk_death_04.mp3</sm2> Wow! You hit hard.
+* <sm2>tusk_death_05.mp3</sm2> Oh that smarts!
 * <sm2>tusk_death_06.mp3</sm2> Got me good... 
 * <sm2>tusk_death_07.mp3</sm2> Good show... 
 * <sm2>tusk_death_08.mp3</sm2> That one hurt... 
-* <sm2>tusk_death_09.mp3</sm2> Coulda been a contender. 
-* <sm2>tusk_death_10.mp3</sm2> Down for the count. 
+* <sm2>tusk_death_09.mp3</sm2> Coulda been a contender.
+* <sm2>tusk_death_10.mp3</sm2> Down for the count.
 * <sm2>tusk_death_11.mp3</sm2> My fight money... 
-* <sm2>tusk_death_12.mp3</sm2> This round is over. 
-* <sm2>tusk_death_13.mp3</sm2> Knocked out. 
+* <sm2>tusk_death_12.mp3</sm2> This round is over.
+* <sm2>tusk_death_13.mp3</sm2> Knocked out.
 * <sm2>tusk_death_19.mp3</sm2> This is outrageous.
-* <sm2>tusk_death_14.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} You learned well. 
-* <sm2>tusk_death_15.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} Atta girl. 
-* <sm2>tusk_death_16.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} Glad it was you. 
-* <sm2>tusk_death_17.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} Isn\'t she something. 
-* <sm2>tusk_death_18.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} I threw this one. 
-* <sm2>tusk_respawn_01.mp3</sm2> All right. Sparring is done. We fight for real this time! 
-* <sm2>tusk_respawn_02.mp3</sm2> Yes! I\'m good for a few more hits. 
-* <sm2>tusk_respawn_03.mp3</sm2> I\'m back. What did I miss? 
-* <sm2>tusk_respawn_04.mp3</sm2> It\'s going to be one of those kind of fights. 
-* <sm2>tusk_respawn_05.mp3</sm2> Did anyone get the name of that wagon that hit me? 
-* <sm2>tusk_respawn_06.mp3</sm2> The fight is back on! 
-* <sm2>tusk_respawn_07.mp3</sm2> Oh good. I returned. I was not done. 
-* <sm2>tusk_respawn_08.mp3</sm2> Dah! They started without me. 
-* <sm2>tusk_respawn_09.mp3</sm2> Ready for another round! 
-* <sm2>tusk_respawn_10.mp3</sm2> Heh heh! Let\'s see them try that again. 
-* <sm2>tusk_respawn_11.mp3</sm2> Oh yes. Ready for a comeback! 
-* <sm2>tusk_respawn_12.mp3</sm2> I don\'t know where I was, but it was too warm. 
-* <sm2>tusk_fastres_01.mp3</sm2> I insist on a rematch! 
-* <sm2>tusk_bottle_01.mp3</sm2> I\'ll just put this on ice. 
-* <sm2>tusk_bottle_02.mp3</sm2> Into my bucket. 
-* <sm2>tusk_bottle_03.mp3</sm2> For the next fight. 
-* <sm2>tusk_move_17.mp3</sm2> {{resp|300}} Got it! 
-* <sm2>tusk_doubdam_01.mp3</sm2> Double damage! 
-* <sm2>tusk_doubdam_02.mp3</sm2> I\'m a brawler in his prime! 
-* <sm2>tusk_haste_01.mp3</sm2> Haste! 
-* <sm2>tusk_haste_02.mp3</sm2> Tally-ho! 
-* <sm2>tusk_illus_01.mp3</sm2> Illusion! 
-* <sm2>tusk_illus_02.mp3</sm2> Time for a tag team! 
-* <sm2>tusk_invis_01.mp3</sm2> Invisibility! 
-* <sm2>tusk_invis_02.mp3</sm2> They will not see what hit them. 
-* <sm2>tusk_regen_01.mp3</sm2> Regeneration! 
-* <sm2>tusk_regen_02.mp3</sm2> Better than a stiff drink! 
-* <sm2>tusk_regen_03.mp3</sm2> Refridgeration! 
-* <sm2>tusk_notyet_01.mp3</sm2> Not yet. 
-* <sm2>tusk_notyet_04.mp3</sm2> I\'m not ready. 
-* <sm2>tusk_notyet_07.mp3</sm2> It\'s not time yet. 
-* <sm2>tusk_notyet_02.mp3</sm2> Not yet. 
-* <sm2>tusk_notyet_05.mp3</sm2> I\'m not ready. 
-* <sm2>tusk_notyet_08.mp3</sm2> It\'s not time yet. 
-* <sm2>tusk_notyet_03.mp3</sm2> Not yet! 
-* <sm2>tusk_notyet_06.mp3</sm2> I\'m not ready! 
-* <sm2>tusk_notyet_09.mp3</sm2> It\'s not time yet! 
-* <sm2>tusk_nomana_01.mp3</sm2> Out of mana. 
-* <sm2>tusk_nomana_04.mp3</sm2> No mana. 
-* <sm2>tusk_nomana_07.mp3</sm2> Not enough mana. 
-* <sm2>tusk_nomana_02.mp3</sm2> Out of mana. 
-* <sm2>tusk_nomana_05.mp3</sm2> No mana. 
-* <sm2>tusk_nomana_08.mp3</sm2> Not enough mana. 
-* <sm2>tusk_nomana_03.mp3</sm2> Out of mana! 
-* <sm2>tusk_nomana_06.mp3</sm2> No mana! 
-* <sm2>tusk_nomana_09.mp3</sm2> Not enough mana! 
-* <sm2>tusk_pain_01.mp3</sm2> Agh! 
-* <sm2>tusk_pain_02.mp3</sm2> Oof! 
-* <sm2>tusk_pain_03.mp3</sm2> Augh! 
-* <sm2>tusk_pain_04.mp3</sm2> Ooph! 
-* <sm2>tusk_pain_05.mp3</sm2> Ah! 
-* <sm2>tusk_pain_06.mp3</sm2> Oh! 
-* <sm2>tusk_pain_07.mp3</sm2> Omph! 
-* <sm2>tusk_pain_08.mp3</sm2> Agh! 
-* <sm2>tusk_pain_09.mp3</sm2> Oh! 
-* <sm2>tusk_pain_10.mp3</sm2> Oh! 
-* <sm2>tusk_pain_11.mp3</sm2> Aow! 
-* <sm2>tusk_pain_12.mp3</sm2> Owh! 
-* <sm2>tusk_pain_13.mp3</sm2> Mm! 
-* <sm2>tusk_underattack_01.mp3</sm2> {{resp|120}} I\'m under attack! 
-* <sm2>tusk_rare_01.mp3</sm2> It\'s a great day to do some squat thrusts and lift a barrel of fish, is it not? 
+* <sm2>tusk_death_14.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} You learned well.
+* <sm2>tusk_death_15.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} Atta girl.
+* <sm2>tusk_death_16.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} Glad it was you.
+* <sm2>tusk_death_17.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} Isn\'t she something.
+* <sm2>tusk_death_18.mp3</sm2> {{Hero icon|Crystal Maiden|16px}} I threw this one.
+* <sm2>tusk_respawn_01.mp3</sm2> All right. Sparring is done. We fight for real this time!
+* <sm2>tusk_respawn_02.mp3</sm2> Yes! I\'m good for a few more hits.
+* <sm2>tusk_respawn_03.mp3</sm2> I\'m back. What did I miss?
+* <sm2>tusk_respawn_04.mp3</sm2> It\'s going to be one of those kind of fights.
+* <sm2>tusk_respawn_05.mp3</sm2> Did anyone get the name of that wagon that hit me?
+* <sm2>tusk_respawn_06.mp3</sm2> The fight is back on!
+* <sm2>tusk_respawn_07.mp3</sm2> Oh good. I returned. I was not done.
+* <sm2>tusk_respawn_08.mp3</sm2> Dah! They started without me.
+* <sm2>tusk_respawn_09.mp3</sm2> Ready for another round!
+* <sm2>tusk_respawn_10.mp3</sm2> Heh heh! Let\'s see them try that again.
+* <sm2>tusk_respawn_11.mp3</sm2> Oh yes. Ready for a comeback!
+* <sm2>tusk_respawn_12.mp3</sm2> I don\'t know where I was, but it was too warm.
+* <sm2>tusk_fastres_01.mp3</sm2> I insist on a rematch!
+* <sm2>tusk_bottle_01.mp3</sm2> I\'ll just put this on ice.
+* <sm2>tusk_bottle_02.mp3</sm2> Into my bucket.
+* <sm2>tusk_bottle_03.mp3</sm2> For the next fight.
+* <sm2>tusk_superpunch_attack_82.mp3</sm2> {{resp|300}} Whole Bunch of Punches!
+* <sm2>tusk_move_17.mp3</sm2> {{resp|300}} Got it!
+* <sm2>tusk_doubdam_01.mp3</sm2> Double damage!
+* <sm2>tusk_doubdam_02.mp3</sm2> I\'m a brawler in his prime!
+* <sm2>tusk_haste_01.mp3</sm2> Haste!
+* <sm2>tusk_haste_02.mp3</sm2> Tally-ho!
+* <sm2>tusk_illus_01.mp3</sm2> Illusion!
+* <sm2>tusk_illus_02.mp3</sm2> Time for a tag team!
+* <sm2>tusk_invis_01.mp3</sm2> Invisibility!
+* <sm2>tusk_invis_02.mp3</sm2> They will not see what hit them.
+* <sm2>tusk_regen_01.mp3</sm2> Regeneration!
+* <sm2>tusk_regen_02.mp3</sm2> Better than a stiff drink!
+* <sm2>tusk_regen_03.mp3</sm2> Refridgeration!
+* <sm2>tusk_notyet_01.mp3</sm2> Not yet.
+* <sm2>tusk_notyet_04.mp3</sm2> I\'m not ready.
+* <sm2>tusk_notyet_07.mp3</sm2> It\'s not time yet.
+* <sm2>tusk_notyet_02.mp3</sm2> Not yet.
+* <sm2>tusk_notyet_05.mp3</sm2> I\'m not ready.
+* <sm2>tusk_notyet_08.mp3</sm2> It\'s not time yet.
+* <sm2>tusk_notyet_03.mp3</sm2> Not yet!
+* <sm2>tusk_notyet_06.mp3</sm2> I\'m not ready!
+* <sm2>tusk_notyet_09.mp3</sm2> It\'s not time yet!
+* <sm2>tusk_nomana_01.mp3</sm2> Out of mana.
+* <sm2>tusk_nomana_04.mp3</sm2> No mana.
+* <sm2>tusk_nomana_07.mp3</sm2> Not enough mana.
+* <sm2>tusk_nomana_02.mp3</sm2> Out of mana.
+* <sm2>tusk_nomana_05.mp3</sm2> No mana.
+* <sm2>tusk_nomana_08.mp3</sm2> Not enough mana.
+* <sm2>tusk_nomana_03.mp3</sm2> Out of mana!
+* <sm2>tusk_nomana_06.mp3</sm2> No mana!
+* <sm2>tusk_nomana_09.mp3</sm2> Not enough mana!
+* <sm2>tusk_pain_01.mp3</sm2> Agh!
+* <sm2>tusk_pain_02.mp3</sm2> Oof!
+* <sm2>tusk_pain_03.mp3</sm2> Augh!
+* <sm2>tusk_pain_04.mp3</sm2> Ooph!
+* <sm2>tusk_pain_05.mp3</sm2> Ah!
+* <sm2>tusk_pain_06.mp3</sm2> Oh!
+* <sm2>tusk_pain_07.mp3</sm2> Omph!
+* <sm2>tusk_pain_08.mp3</sm2> Agh!
+* <sm2>tusk_pain_09.mp3</sm2> Oh!
+* <sm2>tusk_pain_10.mp3</sm2> Oh!
+* <sm2>tusk_pain_11.mp3</sm2> Aow!
+* <sm2>tusk_pain_12.mp3</sm2> Owh!
+* <sm2>tusk_pain_13.mp3</sm2> Mm!
+* <sm2>tusk_underattack_01.mp3</sm2> {{resp|120}} I\'m under attack!
+* <sm2>tusk_rare_01.mp3</sm2> It\'s a great day to do some squat thrusts and lift a barrel of fish, is it not?
 * <sm2>tusk_rare_02.mp3</sm2> {{resp|u}} I float like Destroyer and sting like Riki.
-* <sm2>tusk_rare_03.mp3</sm2> After a bar brawl it\'s customary, as a courtesy, to buy everyone who\'s still standing a round of drinks. 
+* <sm2>tusk_rare_03.mp3</sm2> After a bar brawl it\'s customary, as a courtesy, to buy everyone who\'s still standing a round of drinks.
 * <sm2>tusk_rare_04.mp3</sm2> Battle is battle. Why bet against me?
-* <sm2>tusk_lane_missing_01.mp3</sm2> Top is missing! 
-* <sm2>tusk_lane_missing_02.mp3</sm2> Middle is missing! 
-* <sm2>tusk_lane_missing_03.mp3</sm2> Bottom is missing! 
-* <sm2>tusk_thanks_01.mp3</sm2> Thanks! 
-* <sm2>tusk_thanks_02.mp3</sm2> Thanks! 
-* <sm2>tusk_thanks_03.mp3</sm2> That was nice of you! 
-* <sm2>tusk_laugh_01.mp3</sm2> He he! 
-* <sm2>tusk_laugh_02.mp3</sm2> Ha! 
-* <sm2>tusk_laugh_03.mp3</sm2> Ho ho ho! 
-* <sm2>tusk_laugh_04.mp3</sm2> Ha ha ha ha! 
-* <sm2>tusk_laugh_05.mp3</sm2> Oh ho ho ho ho ho ho! 
-* <sm2>tusk_laugh_06.mp3</sm2> Oh boy! Ha ha ha ha ha! 
-* <sm2>tusk_laugh_07.mp3</sm2> Oh ho! Wo ho ho ho ho! 
-* <sm2>tusk_laugh_08.mp3</sm2> Ah ha ha ha ha ha ha ha! 
-* <sm2>tusk_laugh_09.mp3</sm2> Wo ho! Wa ha ha ha ha! 
-* <sm2>tusk_laugh_10.mp3</sm2> Hueh heh! 
-* <sm2>tusk_win_01.mp3</sm2> Oh yes! 
-* <sm2>tusk_win_02.mp3</sm2> Yes! 
-* <sm2>tusk_win_03.mp3</sm2> Victory! 
-* <sm2>tusk_win_04.mp3</sm2> Never bet against Tusk! 
-* <sm2>tusk_win_05.mp3</sm2> And the winner, by unanimous decision, is me! 
-* <sm2>tusk_win_06.mp3</sm2> I have bloody knuckles and a smile. Now: who wants a drink? 
-* <sm2>tusk_lose_01.mp3</sm2> No! 
-* <sm2>tusk_lose_02.mp3</sm2> Defeated! 
-* <sm2>tusk_lose_03.mp3</sm2> Oh, I\'m going to be sore tomorrow. 
-* <sm2>tusk_lose_04.mp3</sm2> Ah, I wonder if they\'ll go double or nothing. 
-* <sm2>tusk_drop_common_01.mp3</sm2> A grand prize for a grand battle! 
-* <sm2>tusk_drop_medium_01.mp3</sm2> This is something I will treasure. 
-* <sm2>tusk_drop_rare_01.mp3</sm2> That is worth another round of drinks! 
-* <sm2>tusk_failure_01.mp3</sm2> {{resp|u}} Heh! I missed! 
-* <sm2>tusk_failure_02.mp3</sm2> {{resp|u}} That did not go well. 
-* <sm2>tusk_failure_03.mp3</sm2> {{resp|u}} Well there\'s your problem. 
-* <sm2>tusk_crumwiz_01.mp3</sm2> {{resp|u}} Crummy wizard. 
-* <sm2>tusk_shiwiz_01.mp3</sm2> {{resp|u}} [[Shitty wizard]]. 
-* <sm2>tusk_anger_01.mp3</sm2> {{resp|u}} Dahh! 
-* <sm2>tusk_anger_02.mp3</sm2> {{resp|u}} Dohgmdoooh! 
-* <sm2>tusk_anger_03.mp3</sm2> {{resp|u}} Euuughooh. 
-* <sm2>tusk_anger_04.mp3</sm2> {{resp|u}} Doomvhm. 
-* <sm2>tusk_anger_05.mp3</sm2> {{resp|u}} Hmmvm. 
-* <sm2>tusk_anger_06.mp3</sm2> {{resp|u}} Ahh. 
-* <sm2>tusk_anger_07.mp3</sm2> {{resp|u}} Hm mm gm! 
-* <sm2>tusk_anger_08.mp3</sm2> {{resp|u}} Drah! 
-* <sm2>tusk_anger_09.mp3</sm2> {{resp|u}} Haughm. 
-* <sm2>tusk_anger_10.mp3</sm2> {{resp|u}} Hmdm dmgh. 
-* <sm2>tusk_anger_11.mp3</sm2> {{resp|u}} Hmdmgh hm. 
-* <sm2>tusk_happy_01.mp3</sm2> {{resp|u}} Ah! 
-* <sm2>tusk_happy_02.mp3</sm2> {{resp|u}} Oh yeah. 
-* <sm2>tusk_happy_03.mp3</sm2> {{resp|u}} Ho ho ho ho! 
-* <sm2>tusk_happy_04.mp3</sm2> {{resp|u}} Mmm! 
-* <sm2>tusk_happy_05.mp3</sm2> {{resp|u}} Ahh. 
-* <sm2>tusk_happy_06.mp3</sm2> {{resp|u}} Mmm! 
-* <sm2>tusk_happy_07.mp3</sm2> {{resp|u}} Ha ha ha! 
-* <sm2>tusk_happy_08.mp3</sm2> {{resp|u}} Ohhh hm hm hm hm. 
+* <sm2>tusk_lane_missing_01.mp3</sm2> Top is missing!
+* <sm2>tusk_lane_missing_02.mp3</sm2> Middle is missing!
+* <sm2>tusk_lane_missing_03.mp3</sm2> Bottom is missing!
+* <sm2>tusk_thanks_01.mp3</sm2> Thanks!
+* <sm2>tusk_thanks_02.mp3</sm2> Thanks!
+* <sm2>tusk_thanks_03.mp3</sm2> That was nice of you!
+* <sm2>tusk_laugh_01.mp3</sm2> He he!
+* <sm2>tusk_laugh_02.mp3</sm2> Ha!
+* <sm2>tusk_laugh_03.mp3</sm2> Ho ho ho!
+* <sm2>tusk_laugh_04.mp3</sm2> Ha ha ha ha!
+* <sm2>tusk_laugh_05.mp3</sm2> Oh ho ho ho ho ho ho!
+* <sm2>tusk_laugh_06.mp3</sm2> Oh boy! Ha ha ha ha ha!
+* <sm2>tusk_laugh_07.mp3</sm2> Oh ho! Wo ho ho ho ho!
+* <sm2>tusk_laugh_08.mp3</sm2> Ah ha ha ha ha ha ha ha!
+* <sm2>tusk_laugh_09.mp3</sm2> Wo ho! Wa ha ha ha ha!
+* <sm2>tusk_laugh_10.mp3</sm2> Hueh heh!
+* <sm2>tusk_win_01.mp3</sm2> Oh yes!
+* <sm2>tusk_win_02.mp3</sm2> Yes!
+* <sm2>tusk_win_03.mp3</sm2> Victory!
+* <sm2>tusk_win_04.mp3</sm2> Never bet against Tusk!
+* <sm2>tusk_win_05.mp3</sm2> And the winner, by unanimous decision, is me!
+* <sm2>tusk_win_06.mp3</sm2> I have bloody knuckles and a smile. Now: who wants a drink?
+* <sm2>tusk_lose_01.mp3</sm2> No!
+* <sm2>tusk_lose_02.mp3</sm2> Defeated!
+* <sm2>tusk_lose_03.mp3</sm2> Oh, I\'m going to be sore tomorrow.
+* <sm2>tusk_lose_04.mp3</sm2> Ah, I wonder if they\'ll go double or nothing.
+* <sm2>tusk_drop_common_01.mp3</sm2> A grand prize for a grand battle!
+* <sm2>tusk_drop_medium_01.mp3</sm2> This is something I will treasure.
+* <sm2>tusk_drop_rare_01.mp3</sm2> That is worth another round of drinks!
+* <sm2>tusk_failure_01.mp3</sm2> {{resp|u}} Heh! I missed!
+* <sm2>tusk_failure_02.mp3</sm2> {{resp|u}} That did not go well.
+* <sm2>tusk_failure_03.mp3</sm2> {{resp|u}} Well there\'s your problem.
+* <sm2>tusk_crumwiz_01.mp3</sm2> {{resp|u}} Crummy wizard.
+* <sm2>tusk_shiwiz_01.mp3</sm2> {{resp|u}} [[Shitty wizard]].
+* <sm2>tusk_anger_01.mp3</sm2> {{resp|u}} Dahh!
+* <sm2>tusk_anger_02.mp3</sm2> {{resp|u}} Dohgmdoooh!
+* <sm2>tusk_anger_03.mp3</sm2> {{resp|u}} Euuughooh.
+* <sm2>tusk_anger_04.mp3</sm2> {{resp|u}} Doomvhm.
+* <sm2>tusk_anger_05.mp3</sm2> {{resp|u}} Hmmvm.
+* <sm2>tusk_anger_06.mp3</sm2> {{resp|u}} Ahh.
+* <sm2>tusk_anger_07.mp3</sm2> {{resp|u}} Hm mm gm!
+* <sm2>tusk_anger_08.mp3</sm2> {{resp|u}} Drah!
+* <sm2>tusk_anger_09.mp3</sm2> {{resp|u}} Haughm.
+* <sm2>tusk_anger_10.mp3</sm2> {{resp|u}} Hmdm dmgh.
+* <sm2>tusk_anger_11.mp3</sm2> {{resp|u}} Hmdmgh hm.
+* <sm2>tusk_happy_01.mp3</sm2> {{resp|u}} Ah!
+* <sm2>tusk_happy_02.mp3</sm2> {{resp|u}} Oh yeah.
+* <sm2>tusk_happy_03.mp3</sm2> {{resp|u}} Ho ho ho ho!
+* <sm2>tusk_happy_04.mp3</sm2> {{resp|u}} Mmm!
+* <sm2>tusk_happy_05.mp3</sm2> {{resp|u}} Ahh.
+* <sm2>tusk_happy_06.mp3</sm2> {{resp|u}} Mmm!
+* <sm2>tusk_happy_07.mp3</sm2> {{resp|u}} Ha ha ha!
+* <sm2>tusk_happy_08.mp3</sm2> {{resp|u}} Ohhh hm hm hm hm.
+* <sm2>abys_spawn_02.mp3</sm2> Lord of the Abyss.
+* <sm2>abys_spawn_03.mp3</sm2> This land will burn!
+* <sm2>abys_spawn_04.mp3</sm2> Cower, for the Abyssal Underlord has arrived.
+* <sm2>abys_spawn_05.mp3</sm2> I rule the [[Abyssal Horde]].
+* <sm2>abys_spawn_06.mp3</sm2> Who dares address me?
+* <sm2>abys_spawn_07.mp3</sm2> I come unbidden.
+* <sm2>abys_spawn_08.mp3</sm2> Behold my vile girth.
+* <sm2>abys_darkrift_01.mp3</sm2> A lord\'s work is never done.
+* <sm2>abys_levelup_04.mp3</sm2> My power, their misfortune.
+* <sm2>abys_levelup_06.mp3</sm2> I will teach them obedience!
+* <sm2>abys_levelup_07.mp3</sm2> Fear is my dominion.
+* <sm2>abys_levelup_09.mp3</sm2> All will suffer.
 * <sm2>abys_spawn_01.mp3</sm2> {{resp|u}} Abyssal Underlord!
 * <sm2>abys_spawn_02.mp3</sm2> Lord of the Abyss.
 * <sm2>abys_spawn_03.mp3</sm2> This land will burn!
@@ -32909,6 +33442,7 @@
 * <sm2>abys_bottle_01.mp3</sm2> A rune enslaved.
 * <sm2>abys_bottle_02.mp3</sm2> All according to plan.
 * <sm2>abys_bottle_03.mp3</sm2> They will not expect this.
+* <sm2>abys_purch_01.mp3</sm2> {{resp|300}} I deserve this.
 * <sm2>abys_deny_10.mp3</sm2> {{resp|300}} Mine!
 * <sm2>abys_doubdam_01.mp3</sm2> Double damage.
 * <sm2>abys_doubdam_02.mp3</sm2> I will skin them as they burn.
@@ -32995,6 +33529,18 @@
 * <sm2>abys_happy_02.mp3</sm2> {{resp|u}} Ohhhhh yea.
 * <sm2>abys_happy_03.mp3</sm2> {{resp|u}} Ahhhhh.
 * <sm2>abys_happy_04.mp3</sm2> {{resp|u}} Mmmmmm.
+* <sm2>undying_spawn_01.mp3</sm2> The Undying wakes.
+* <sm2>undying_spawn_02.mp3</sm2> Who disturbs the dead.
+* <sm2>undying_spawn_03.mp3</sm2> Dirge.
+* <sm2>undying_spawn_04.mp3</sm2> I bring the song of death.
+* <sm2>undying_spawn_05.mp3</sm2> My tomb is sundered.
+* <sm2>undying_move_19.mp3</sm2> The Dirge goes on.
+* <sm2>undying_attack_06.mp3</sm2> Against the living.
+* <sm2>undying_tombstone_01.mp3</sm2> Beware the restless dead.
+* <sm2>undying_tombstone_02.mp3</sm2> The dead hunger.
+* <sm2>undying_tombstone_03.mp3</sm2> They take the living.
+* <sm2>undying_tombstone_04.mp3</sm2> Bring out the dead.
+* <sm2>undying_tombstone_06.mp3</sm2> Rise from your grave.
 * <sm2>undying_spawn_01.mp3</sm2> <sm2>undying_big_spawn_01.mp3</sm2> The Undying wakes.
 * <sm2>undying_spawn_02.mp3</sm2> <sm2>undying_big_spawn_02.mp3</sm2> Who disturbs the dead.
 * <sm2>undying_spawn_03.mp3</sm2> <sm2>undying_big_spawn_03.mp3</sm2> Dirge.
@@ -33081,7 +33627,6 @@
 * <sm2>undying_tombstone_12.mp3</sm2> <sm2>undying_big_tombstone_12.mp3</sm2> Rise!
 * <sm2>undying_tombstone_13.mp3</sm2> <sm2>undying_big_tombstone_13.mp3</sm2> Hunger!
 * <sm2>undying_fleshgolem_01.mp3</sm2> <sm2>undying_big_fleshgolem_01.mp3</sm2> {{resp|u}} Plague!
-* <sm2>undying_fleshgolem_02.mp3</sm2> <sm2>undying_big_fleshgolem_02.mp3</sm2> {{resp|u}} My belly bursts!
 * <sm2>undying_fleshgolem_03.mp3</sm2> <sm2>undying_big_fleshgolem_03.mp3</sm2> {{resp|u}} Rage!
 * <sm2>undying_fleshgolem_04.mp3</sm2> <sm2>undying_big_fleshgolem_04.mp3</sm2> {{resp|u}} Flesh swells!
 * <sm2>undying_fleshgolem_05.mp3</sm2> <sm2>undying_big_fleshgolem_05.mp3</sm2> {{resp|u}} Die!
@@ -33248,8 +33793,8 @@
 * <sm2>undying_bottle_01.mp3</sm2> <sm2>undying_big_bottle_01.mp3</sm2> Tucked into flesh.
 * <sm2>undying_bottle_02.mp3</sm2> <sm2>undying_big_bottle_02.mp3</sm2> For when the living come.
 * <sm2>undying_bottle_03.mp3</sm2> <sm2>undying_big_bottle_03.mp3</sm2> Relic of life.
-* <sm2>undying_lasthit_08.mp3</sm2> {{resp|300}} Death tax.
-* <sm2>undying_big_lasthit_08.mp3</sm2> {{resp|u}} Death tax.
+* <sm2>undying_fleshgolem_02.mp3</sm2> <sm2>undying_big_fleshgolem_02.mp3</sm2> {{resp|300}} My belly bursts!
+* <sm2>undying_lasthit_08.mp3</sm2> <sm2>undying_big_lasthit_08.mp3</sm2> {{resp|300}} Death tax.
 * <sm2>undying_doubdam_01.mp3</sm2> <sm2>undying_big_doubdam_01.mp3</sm2> Double damage!
 * <sm2>undying_doubdam_02.mp3</sm2> <sm2>undying_big_doubdam_02.mp3</sm2> To claw them under.
 * <sm2>undying_haste_01.mp3</sm2> <sm2>undying_big_haste_01.mp3</sm2> Haste!
@@ -33373,11 +33918,18 @@
 * <sm2>ursa_spawn_02.mp3</sm2> I defend what is mine.
 * <sm2>ursa_spawn_03.mp3</sm2> Come not near the darkwoods where my kindred sleep.
 * <sm2>ursa_spawn_04.mp3</sm2> It is my spirit that keeps me safe, and not mere armor.
-* <sm2>ursa_spawn_06.mp3</sm2> {{resp|u}} R-r-r-r-r-r-r-r-r uuuuuuunuh!
-* <sm2>ursa_spawn_07.mp3</sm2> {{resp|u}} R-r-r-r-r-r-r-r-r uuuuuuuuuuuw!
-* <sm2>ursa_spawn_08.mp3</sm2> {{resp|u}} Rruuuuw. Rrunff. Hergh-Hrauugh!
-* <sm2>ursa_spawn_09.mp3</sm2> {{resp|u}} Hrauuuuuugh!
-* <sm2>ursa_spawn_11.mp3</sm2> {{resp|u}} Hraauuugh-oooo-hrrooogh!
+* <sm2>ursa_spawn_05.mp3</sm2> Fuzzy Wuzzy!
+* <sm2>ursa_spawn_06.mp3</sm2> R-r-r-r-r-r-r-r-r uuuuuuunuh!
+* <sm2>ursa_spawn_07.mp3</sm2> R-r-r-r-r-r-r-r-r uuuuuuuuuuuw!
+* <sm2>ursa_spawn_08.mp3</sm2> Rruuuuw. Rrunff. Hergh-Hrauugh!
+* <sm2>ursa_spawn_09.mp3</sm2> Hrauuuuuugh!
+* <sm2>ursa_spawn_10.mp3</sm2> Hraaauuuuuugh!
+* <sm2>ursa_spawn_11.mp3</sm2> Hraauuugh-oooo-hrrooogh!
+* <sm2>ursa_cast_04.mp3</sm2> I\'ll have you in my claws!
+* <sm2>ursa_spawn_01.mp3</sm2> Ursa Warrior!
+* <sm2>ursa_spawn_02.mp3</sm2> I defend what is mine.
+* <sm2>ursa_spawn_03.mp3</sm2> Come not near the darkwoods where my kindred sleep.
+* <sm2>ursa_spawn_04.mp3</sm2> It is my spirit that keeps me safe, and not mere armor.
 * <sm2>ursa_spawn_05.mp3</sm2> Fuzzy Wuzzy!
 * <sm2>ursa_inthebag_01.mp3</sm2> My friend, this is truly in the bag.
 * <sm2>ursa_inthebag_03.mp3</sm2> To all my cubs and kindred: it is most definitely in the bag.
@@ -33437,7 +33989,6 @@
 * <sm2>ursa_earthshock_03.mp3</sm2> {{resp|u}} Stop!
 * <sm2>ursa_earthshock_04.mp3</sm2> {{resp|u}} Stay your paws!
 * <sm2>ursa_earthshock_05.mp3</sm2> {{resp|u}} Lose your footing?
-* <sm2>ursa_overpower_01.mp3</sm2> {{resp|u}} Hrr-r-r-r-r I will rip you apart!
 * <sm2>ursa_overpower_03.mp3</sm2> {{resp|u}} I\'ll rip you apart!
 * <sm2>ursa_overpower_04.mp3</sm2> {{resp|u}} I\'ll rip you apart!
 * <sm2>ursa_overpower_05.mp3</sm2> {{resp|u}} Fear my claws!
@@ -33610,6 +34161,7 @@
 * <sm2>ursa_bottle_01.mp3</sm2> Abide, like a mother in her den.
 * <sm2>ursa_bottle_02.mp3</sm2> This can wait a bit.
 * <sm2>ursa_bottle_03.mp3</sm2> Why use it all at once?
+* <sm2>ursa_overpower_01.mp3</sm2> {{resp|300}} Hrr-r-r-r-r I will rip you apart!
 * <sm2>ursa_lasthit_01.mp3</sm2> {{resp|300}} Gold and sweet.
 * <sm2>ursa_doubdam_01.mp3</sm2> Double damage!
 * <sm2>ursa_doubdam_02.mp3</sm2> {{resp|u}} Slash and rend once, and then again.
@@ -33736,7 +34288,18 @@
 * <sm2>ursa_happy_17.mp3</sm2> {{resp|u}} Hoooh-uh.
 * <sm2>ursa_happy_18.mp3</sm2> {{resp|u}} Hbmmm haah.
 * <sm2>vng_spawn_01.mp3</sm2> Vengeful Spirit...
-* <sm2>vng_spawn_02.mp3</sm2> {{resp|u}} I am Vengeful Spirit.
+* <sm2>vng_spawn_02.mp3</sm2> I am Vengeful Spirit.
+* <sm2>vng_spawn_03.mp3</sm2> My name is Vengeance...
+* <sm2>vng_spawn_04.mp3</sm2> Vengeance is my mistress.
+* <sm2>vng_spawn_05.mp3</sm2> Call me Vengeance.
+* <sm2>vng_spawn_06.mp3</sm2> I am Vengeance!
+* <sm2>vng_spawn_07.mp3</sm2> Let it begin!
+* <sm2>vng_move_04.mp3</sm2> Let my vengeance soar!
+* <sm2>vng_move_05.mp3</sm2> Vengeance flies beside me.
+* <sm2>vng_move_06.mp3</sm2> With a vengeance!
+* <sm2>vng_attack_13.mp3</sm2> By Scree\'auk\'s talons!
+* <sm2>vng_levelup_02.mp3</sm2> Power like a promise of revenge!
+* <sm2>vng_spawn_01.mp3</sm2> Vengeful Spirit...
 * <sm2>vng_spawn_03.mp3</sm2> My name is Vengeance...
 * <sm2>vng_spawn_04.mp3</sm2> Vengeance is my mistress.
 * <sm2>vng_spawn_05.mp3</sm2> Call me Vengeance.
@@ -33902,6 +34465,7 @@
 * <sm2>vng_bottle_02.mp3</sm2> Saving this for later.
 * <sm2>vng_bottle_03.mp3</sm2> For later.
 * <sm2>vng_bottle_04.mp3</sm2> Later for you.
+* <sm2>vng_cast_04.mp3</sm2> {{resp|300}} I will slake my thirst for revenge.
 * <sm2>vng_drop_common_01.mp3</sm2> {{resp|300}} A gift from the goddess!
 * <sm2>vng_doubdam_01.mp3</sm2> Double Damage!
 * <sm2>vng_doubdam_02.mp3</sm2> {{resp|u}} My wrath redoubled!
@@ -33982,7 +34546,18 @@
 * <sm2>vng_happy_04.mp3</sm2> {{resp|u}} Hah!
 * <sm2>vng_happy_05.mp3</sm2> {{resp|u}} Ha!
 * <sm2>venm_spawn_01.mp3</sm2> Venomancer!
-* <sm2>venm_spawn_02.mp3</sm2> {{resp|u}} I am Venomancer!
+* <sm2>venm_spawn_02.mp3</sm2> I am Venomancer!
+* <sm2>venm_spawn_03.mp3</sm2> I come - the venomous one.
+* <sm2>venm_spawn_04.mp3</sm2> Dripping venom, I arrive.
+* <sm2>venm_move_05.mp3</sm2> A touch of venom.
+* <sm2>venm_move_09.mp3</sm2> My venom flows.
+* <sm2>venm_attack_02.mp3</sm2> Taste my venom!
+* <sm2>venm_attack_04.mp3</sm2> Deadly to the touch.
+* <sm2>venm_attack_11.mp3</sm2> Ah, sweet toxicity!
+* <sm2>venm_level_01.mp3</sm2> Concentrated venom.
+* <sm2>venm_level_04.mp3</sm2> Ever more venomous.
+* <sm2>venm_respawn_06.mp3</sm2> My enemies will taste my venom.
+* <sm2>venm_spawn_01.mp3</sm2> Venomancer!
 * <sm2>venm_spawn_03.mp3</sm2> I come - the venomous one.
 * <sm2>venm_spawn_04.mp3</sm2> Dripping venom, I arrive.
 * <sm2>venm_inthebag_01.mp3</sm2> In case you\'re wondering, it\'s in the bag!
@@ -34149,6 +34724,7 @@
 * <sm2>venm_bottle_01.mp3</sm2> A tainted chalice.
 * <sm2>venm_bottle_02.mp3</sm2> What\'s your poison?
 * <sm2>venm_bottle_03.mp3</sm2> I\'ll get back to this later.
+* <sm2>venm_rosh_06.mp3</sm2> {{resp|300}} It\'s a Venomancer enhancer.
 * <sm2>venm_lasthit_02.mp3</sm2> {{resp|300}} Gold for me.
 * <sm2>venm_rosh_05.mp3</sm2> {{resp|300}} I deserve this.
 * <sm2>venm_doubdam_01.mp3</sm2> Double damage!
@@ -34236,7 +34812,18 @@
 * <sm2>venm_rosh_02.mp3</sm2> {{resp|u}} It\'s all me.
 * <sm2>venm_rosh_03.mp3</sm2> {{resp|u}} It\'s not hard.
 * <sm2>venm_rosh_04.mp3</sm2> {{resp|u}} I owe it all to me.
-* <sm2>venm_rosh_06.mp3</sm2> {{resp|u}} It\'s a Venomancer enhancer.
+* <sm2>vipe_spawn_01.mp3</sm2> Viper.
+* <sm2>vipe_spawn_02.mp3</sm2> I spread my wings.
+* <sm2>vipe_spawn_03.mp3</sm2> From the nether reaches.
+* <sm2>vipe_spawn_04.mp3</sm2> Prepare for poison.
+* <sm2>vipe_battlebegins_01.mp3</sm2> I fly the nest.
+* <sm2>vipe_move_07.mp3</sm2> On leathern wings.
+* <sm2>vipe_move_13.mp3</sm2> With malicious intent.
+* <sm2>vipe_move_14.mp3</sm2> I fly into a rage.
+* <sm2>vipe_attack_07.mp3</sm2> Viperous.
+* <sm2>vipe_kill_03.mp3</sm2> Death...from above.
+* <sm2>vipe_respawn_06.mp3</sm2> I will have vengeance.
+* <sm2>vipe_respawn_09.mp3</sm2> From the nether reaches, I return.
 * <sm2>vipe_spawn_01.mp3</sm2> Viper.
 * <sm2>vipe_spawn_02.mp3</sm2> I spread my wings.
 * <sm2>vipe_spawn_03.mp3</sm2> From the nether reaches.
@@ -34375,6 +34962,7 @@
 * <sm2>vipe_bottle_01.mp3</sm2> Into the bottle.
 * <sm2>vipe_bottle_02.mp3</sm2> Bottled for later.
 * <sm2>vipe_bottle_03.mp3</sm2> Put this aside for now.
+* <sm2>vipe_purch_01.mp3</sm2> {{resp|300}} Ah, a flight of fancy.
 * <sm2>vipe_lasthit_01.mp3</sm2> {{resp|300}} Mine.
 * <sm2>vipe_doubdam_01.mp3</sm2> Double damage!
 * <sm2>vipe_doubdam_02.mp3</sm2> I\'ll up the dosage.
@@ -34449,6 +35037,18 @@
 * <sm2>vipe_anger_06.mp3</sm2> {{resp|u}} Haerrh.
 * <sm2>vipe_happy_01.mp3</sm2> {{resp|u}} Huheh.
 * <sm2>vipe_happy_02.mp3</sm2> {{resp|u}} Fleufeh.
+* <sm2>visa_spawn_01.mp3</sm2> Visage.
+* <sm2>visa_spawn_02.mp3</sm2> Necro\'lic.
+* <sm2>visa_spawn_03.mp3</sm2> That which passes beyond the veil must forever stay.
+* <sm2>visa_spawn_04.mp3</sm2> No soul may elude my gaze.
+* <sm2>visa_spawn_05.mp3</sm2> I am the unyielding face of death.
+* <sm2>visa_spawn_06.mp3</sm2> I am the guardian of the veil.
+* <sm2>visa_spawn_07.mp3</sm2> I am Visage.
+* <sm2>visa_begin_01.mp3</sm2> None may flee death for long.
+* <sm2>visa_move_07.mp3</sm2> My gaze never falters.
+* <sm2>visa_move_08.mp3</sm2> There is understanding.
+* <sm2>visa_move_18.mp3</sm2> The shadow spreads.
+* <sm2>visa_levelup_02.mp3</sm2> I perceive beyond this realm.
 * <sm2>visa_spawn_01.mp3</sm2> Visage.
 * <sm2>visa_spawn_02.mp3</sm2> Necro\'lic.
 * <sm2>visa_spawn_03.mp3</sm2> That which passes beyond the veil must forever stay.
@@ -34541,7 +35141,6 @@
 * <sm2>visa_gravebreak_02.mp3</sm2> {{resp|u}} The cloak fails.
 * <sm2>visa_gravebreak_03.mp3</sm2> {{resp|u}} My barrier corrodes.
 * <sm2>visa_gravebreak_04.mp3</sm2> {{resp|u}} Care must be taken.
-* <sm2>visa_summon_01.mp3</sm2> {{resp|u}} See them cower before us.
 * <sm2>visa_summon_02.mp3</sm2> {{resp|u}} Familiars! I summon you.
 * <sm2>visa_summon_03.mp3</sm2> Come, my friends!
 * <sm2>visa_summon_04.mp3</sm2> We shall hunt.
@@ -34709,6 +35308,7 @@
 * <sm2>visa_bottle_01.mp3</sm2> I am patient.
 * <sm2>visa_bottle_02.mp3</sm2> For when it is needed.
 * <sm2>visa_bottle_03.mp3</sm2> Its time will come.
+* <sm2>visa_summon_01.mp3</sm2> {{resp|300}} See them cower before us.
 * <sm2>visa_deny_10.mp3</sm2> {{resp|300}} Mine.
 * <sm2>visa_doubdam_01.mp3</sm2> Double damage!
 * <sm2>visa_doubdam_02.mp3</sm2> {{resp|u}} My gaze pierces.
@@ -34817,6 +35417,18 @@
 * <sm2>warl_spawn_02.mp3</sm2> You summon the Summoner?
 * <sm2>warl_spawn_03.mp3</sm2> A new chapter in my Black Grimoire.
 * <sm2>warl_spawn_04.mp3</sm2> I come and I command.
+* <sm2>warl_move_10.mp3</sm2> By the power of Gorroth.
+* <sm2>warl_move_12.mp3</sm2> Summoned forth.
+* <sm2>warl_incant_02.mp3</sm2> Zan karabos!
+* <sm2>warl_incant_03.mp3</sm2> Kor karamord!
+* <sm2>warl_incant_04.mp3</sm2> Kar kor!
+* <sm2>warl_incant_06.mp3</sm2> Kor!
+* <sm2>warl_incant_07.mp3</sm2> Morakan!
+* <sm2>warl_incant_08.mp3</sm2> Mordakar!
+* <sm2>warl_spawn_01.mp3</sm2> Warlock!
+* <sm2>warl_spawn_02.mp3</sm2> You summon the Summoner?
+* <sm2>warl_spawn_03.mp3</sm2> A new chapter in my Black Grimoire.
+* <sm2>warl_spawn_04.mp3</sm2> I come and I command.
 * <sm2>warl_inthebag_01.mp3</sm2> My friends, I\'m calling it: It\'s in the bag!
 * <sm2>warl_cast_01.mp3</sm2> Darkness stalks.
 * <sm2>warl_move_01.mp3</sm2> I go.
@@ -34880,7 +35492,6 @@
 * <sm2>warl_ability_reign_04.mp3</sm2> I command you: Go forth!
 * <sm2>warl_ability_reign_05.mp3</sm2> Chaos minion!
 * <sm2>warl_ability_reign_06.mp3</sm2> Chaos, come!
-* <sm2>warl_ability_reign_07.mp3</sm2> {{resp|u}} Let chaos reign!
 * <sm2>warl_ability_reign_01.mp3</sm2> Best Fiends Forever!
 * <sm2>warl_doubdemon_01.mp3</sm2> Double demon.
 * <sm2>warl_doubdemon_02.mp3</sm2> {{resp|u}} Double demon doubled!
@@ -34983,6 +35594,7 @@
 * <sm2>warl_bottle_01.mp3</sm2> Saved for later.
 * <sm2>warl_bottle_02.mp3</sm2> Behind the spirit glass.
 * <sm2>warl_bottle_03.mp3</sm2> Into the bottle.
+* <sm2>warl_ability_reign_07.mp3</sm2> {{resp|300}} Let chaos reign!
 * <sm2>warl_lasthit_06.mp3</sm2> {{resp|300}} Mine.
 * <sm2>warl_doubdam_01.mp3</sm2> Double damage!
 * <sm2>warl_doubdam_02.mp3</sm2> Double meaning.
@@ -35055,6 +35667,18 @@
 * <sm2>weav_spawn_03.mp3</sm2> The threads of fate are mine to weave.
 * <sm2>weav_spawn_04.mp3</sm2> The loom weaves and a new pattern appears.
 * <sm2>weav_spawn_05.mp3</sm2> I enter the pattern.
+* <sm2>weav_battlebegins_01.mp3</sm2> Let\'s weave a battle plan.
+* <sm2>weav_move_11.mp3</sm2> Cut and weave!
+* <sm2>weav_move_15.mp3</sm2> Scuttling in.
+* <sm2>weav_move_16.mp3</sm2> Skitter on.
+* <sm2>weav_kill_01.mp3</sm2> I weave your fate!
+* <sm2>weav_kill_03.mp3</sm2> A feast for my beetles.
+* <sm2>weav_respawn_04.mp3</sm2> More fates for me to weave.
+* <sm2>weav_spawn_01.mp3</sm2> Weaver!
+* <sm2>weav_spawn_02.mp3</sm2> Darkness weaves.
+* <sm2>weav_spawn_03.mp3</sm2> The threads of fate are mine to weave.
+* <sm2>weav_spawn_04.mp3</sm2> The loom weaves and a new pattern appears.
+* <sm2>weav_spawn_05.mp3</sm2> I enter the pattern.
 * <sm2>weav_inthebag_01.mp3</sm2> It\'s in the bag!
 * <sm2>weav_battlebegins_01.mp3</sm2> Let\'s weave a battle plan.
 * <sm2>weav_move_01.mp3</sm2> Yes.
@@ -35104,7 +35728,6 @@
 * <sm2>weav_ability_swarm_06.mp3</sm2> Skitter scatter!
 * <sm2>weav_ability_shukuchi_01.mp3</sm2> {{resp|u}} Passing through.
 * <sm2>weav_ability_shukuchi_03.mp3</sm2> {{resp|u}} Phasing in.
-* <sm2>weav_ability_shukuchi_05.mp3</sm2> {{resp|u}} Relentless.
 * <sm2>weav_ability_shukuchi_02.mp3</sm2> Don\'t mind me.
 * <sm2>weav_ability_shukuchi_04.mp3</sm2> Your fate is mine.
 * <sm2>weav_ability_timelap_01.mp3</sm2> {{resp|u}} Skitter back!
@@ -35208,6 +35831,7 @@
 * <sm2>weav_bottle_01.mp3</sm2> You\'ll have a place in the pattern.
 * <sm2>weav_bottle_02.mp3</sm2> Packed away.
 * <sm2>weav_bottle_03.mp3</sm2> I wove this bottle myself.
+* <sm2>weav_ability_shukuchi_05.mp3</sm2> {{resp|300}} Relentless.
 * <sm2>weav_lasthit_06.mp3</sm2> {{resp|300}} A golden thread.
 * <sm2>weav_doubdam_01.mp3</sm2> Double damage!
 * <sm2>weav_doubdam_02.mp3</sm2> Snick snick.
@@ -35286,7 +35910,18 @@
 * <sm2>weav_happy_01.mp3</sm2> {{resp|u}} Ehhheh.
 * <sm2>weav_happy_02.mp3</sm2> {{resp|u}} Heeeh.
 * <sm2>wind_spawn_01.mp3</sm2> Windranger at your service.
-* <sm2>wind_spawn_02.mp3</sm2> {{resp|u}} I am the Windranger.
+* <sm2>wind_spawn_02.mp3</sm2> I am the Windranger.
+* <sm2>wind_spawn_03.mp3</sm2> Time for target practice.
+* <sm2>wind_spawn_04.mp3</sm2> I run like the wind.
+* <sm2>wind_spawn_05.mp3</sm2> My quiver is full.
+* <sm2>wind_spawn_06.mp3</sm2> I\'m a straight shooter.
+* <sm2>wind_spawn_07.mp3</sm2> The markswoman of the wood.
+* <sm2>wind_spawn_08.mp3</sm2> A wind of change is blowing.
+* <sm2>wind_move_05.mp3</sm2> As the arrow flies.
+* <sm2>wind_move_10.mp3</sm2> Like the wind.
+* <sm2>wind_level_04.mp3</sm2> Feel the wind in your hair!
+* <sm2>wind_respawn_07.mp3</sm2> My next arrow will find its mark.
+* <sm2>wind_spawn_01.mp3</sm2> Windranger at your service.
 * <sm2>wind_spawn_05.mp3</sm2> My quiver is full.
 * <sm2>wind_spawn_06.mp3</sm2> I\'m a straight shooter.
 * <sm2>wind_spawn_07.mp3</sm2> The markswoman of the wood.
@@ -35475,6 +36110,7 @@
 * <sm2>wind_bottle_01.mp3</sm2> Put this away for later.
 * <sm2>wind_bottle_02.mp3</sm2> Saved for a rainy day.
 * <sm2>wind_bottle_03.mp3</sm2> No expiration date on this.
+* <sm2>wind_happy_02.mp3</sm2> {{resp|300}} Haaaaaa-ha
 * <sm2>wind_lasthit_03.mp3</sm2> {{resp|300}} Every coin helps.
 * <sm2>wind_doubdam_01.mp3</sm2> Double damage!
 * <sm2>wind_doubdam_02.mp3</sm2> {{resp|u}} One arrow, twice the knock-down.
@@ -35556,7 +36192,6 @@
 * <sm2>wind_anger_03.mp3</sm2> {{resp|u}} Eh-oh-eh-eh-eh-che
 * <sm2>wind_anger_04.mp3</sm2> {{resp|u}} Uuhhh!
 * <sm2>wind_anger_05.mp3</sm2> {{resp|u}} Eh-huhchuh
-* <sm2>wind_happy_02.mp3</sm2> {{resp|u}} Haaaaaa-ha
 * <sm2>winwyv_spawn_01.mp3</sm2> Winter Wyvern!
 * <sm2>winwyv_spawn_02.mp3</sm2> In I fly on wings of winter.
 * <sm2>winwyv_spawn_03.mp3</sm2> From the roost of winter.
@@ -35799,6 +36434,7 @@
 * <sm2>winwyv_bottle_01.mp3</sm2> I\'ll keep this on ice.
 * <sm2>winwyv_bottle_02.mp3</sm2> A cold flask.
 * <sm2>winwyv_bottle_03.mp3</sm2> Mm, patience.
+* <sm2>winwyv_purch_03.mp3</sm2> {{resp|300}} Mine, all mine.
 * <sm2>winwyv_lasthit_10.mp3</sm2> {{resp|300}} Don\'t mind if I do.
 * <sm2>winwyv_doubdam_01.mp3</sm2> Double damage!
 * <sm2>winwyv_doubdam_02.mp3</sm2> Twin wings of damage!
@@ -35903,7 +36539,18 @@
 * <sm2>winwyv_happy_07.mp3</sm2> {{resp|u}} Ahh!
 * <sm2>wdoc_spawn_01.mp3</sm2> De Doctor is in!
 * <sm2>wdoc_spawn_02.mp3</sm2> Witch Doctor!
-* <sm2>wdoc_spawn_03.mp3</sm2> {{resp|u}} Which doctor you expecting?
+* <sm2>wdoc_spawn_03.mp3</sm2> Which doctor you expecting?
+* <sm2>wdoc_spawn_04.mp3</sm2> With bones and spells I come.
+* <sm2>wdoc_move_06.mp3</sm2> Someone call de doctor?
+* <sm2>wdoc_move_09.mp3</sm2> By my bones.
+* <sm2>wdoc_move_10.mp3</sm2> With vim and vigor.
+* <sm2>wdoc_attack_07.mp3</sm2> Malpractice makes perfect.
+* <sm2>wdoc_attack_10.mp3</sm2> Strong medicine.
+* <sm2>wdoc_cast_01.mp3</sm2> Dis won\'t hurt a bit.
+* <sm2>wdoc_cast_02.mp3</sm2> Ready for your dose?
+* <sm2>wdoc_level_08.mp3</sm2> Feeling good, man.
+* <sm2>wdoc_spawn_01.mp3</sm2> De Doctor is in!
+* <sm2>wdoc_spawn_02.mp3</sm2> Witch Doctor!
 * <sm2>wdoc_spawn_04.mp3</sm2> With bones and spells I come.
 * <sm2>wdoc_move_06.mp3</sm2> Someone call de doctor?
 * <sm2>wdoc_inthebag_01.mp3</sm2> Oh yeah, it\'s in the bag!
@@ -36036,6 +36683,7 @@
 * <sm2>wdoc_bottle_01.mp3</sm2> It\'s a fetish of mine.
 * <sm2>wdoc_bottle_02.mp3</sm2> A bottle to hold my brew.
 * <sm2>wdoc_bottle_03.mp3</sm2> My last bottle was a skull.
+* <sm2>wdoc_purch_01.mp3</sm2> {{resp|300}} Whah, this will give them the envies.
 * <sm2>wdoc_purch_03.mp3</sm2> {{resp|r}} Just what the doctor ordered.
 * <sm2>wdoc_lasthit_04.mp3</sm2> {{resp|300}} I\'ll take dat!
 * <sm2>wdoc_doubdam_01.mp3</sm2> Double damage!
@@ -36116,6 +36764,18 @@
 * <sm2>wdoc_anger_06.mp3</sm2> {{resp|u}} Ooowah.
 * <sm2>wdoc_anger_07.mp3</sm2> {{resp|u}} Dah!
 * <sm2>wdoc_anger_08.mp3</sm2> {{resp|u}} Hmm.
+* <sm2>wraith_spawn_01.mp3</sm2> Wraith King!
+* <sm2>wraith_spawn_02.mp3</sm2> Bow to your king!
+* <sm2>wraith_spawn_03.mp3</sm2> King am I of all the wraiths.
+* <sm2>wraith_spawn_04.mp3</sm2> It\'s Wraith King, not Rage King! Arrgh...
+* <sm2>wraith_battlebegins_02.mp3</sm2> Comes now the King of Wraiths!
+* <sm2>wraith_move_02.mp3</sm2> By my decree.
+* <sm2>wraith_move_13.mp3</sm2> Behold the Wraith!
+* <sm2>wraith_move_14.mp3</sm2> Wraiths, your king is here!
+* <sm2>wraith_attack_02.mp3</sm2> Bow before me.
+* <sm2>wraith_attack_03.mp3</sm2> Take a knee, peasant.
+* <sm2>wraith_attack_06.mp3</sm2> Submit to the Wraith King\'s rule!
+* <sm2>wraith_attack_13.mp3</sm2> Behold your king!
 * <sm2>wraith_spawn_01.mp3</sm2> Wraith King!
 * <sm2>wraith_spawn_02.mp3</sm2> Bow to your king!
 * <sm2>wraith_spawn_03.mp3</sm2> King am I of all the wraiths.
@@ -36539,8 +37199,18 @@
 * <sm2>wraith_happy_09.mp3</sm2> {{resp|u}} Hmm.
 * <sm2>wraith_happy_10.mp3</sm2> {{resp|u}} Uhah!
 * <sm2>zuus_spawn_01.mp3</sm2> <sm2>zuus_arc_spawn_01.mp3</sm2> Zeus!
-* <sm2>zuus_spawn_02.mp3</sm2> <sm2>zuus_arc_spawn_02.mp3</sm2> {{resp|u}} It\'s true. I am Zeus.
-* <sm2>zuus_spawn_03.mp3</sm2> <sm2>zuus_arc_spawn_03.mp3</sm2> {{resp|u}} I am Zeus! You heard me.
+* <sm2>zuus_spawn_02.mp3</sm2> <sm2>zuus_arc_spawn_02.mp3</sm2> It\'s true. I am Zeus.
+* <sm2>zuus_spawn_03.mp3</sm2> <sm2>zuus_arc_spawn_03.mp3</sm2> I am Zeus! You heard me.
+* <sm2>zuus_spawn_04.mp3</sm2> <sm2>zuus_arc_spawn_04.mp3</sm2> Your god has arrived.
+* <sm2>zuus_spawn_05.mp3</sm2> <sm2>zuus_arc_spawn_05.mp3</sm2> Make your offerings. Zeus is here.
+* <sm2>zuus_spawn_06.mp3</sm2> <sm2>zuus_arc_spawn_06.mp3</sm2> Your prayers are answered.
+* <sm2>zuus_spawn_07.mp3</sm2> <sm2>zuus_arc_spawn_07.mp3</sm2> I descend to walk among mortals.
+* <sm2>zuus_spawn_08.mp3</sm2> <sm2>zuus_arc_spawn_08.mp3</sm2> Time to play god.
+* <sm2>zuus_move_02.mp3</sm2> <sm2>zuus_arc_move_02.mp3</sm2> Your prayer, answered.
+* <sm2>zuus_attack_06.mp3</sm2> <sm2>zuus_arc_attack_06.mp3</sm2> Heaven help you!
+* <sm2>zuus_ability_thunder_02.mp3</sm2> <sm2>zuus_arc_ability_thunder_02.mp3</sm2> You can\'t run from heaven!
+* <sm2>zuus_attack_09.mp3</sm2> <sm2>zuus_arc_attack_09.mp3</sm2> By my whiskers!
+* <sm2>zuus_spawn_01.mp3</sm2> <sm2>zuus_arc_spawn_01.mp3</sm2> Zeus!
 * <sm2>zuus_spawn_04.mp3</sm2> <sm2>zuus_arc_spawn_04.mp3</sm2> Your god has arrived.
 * <sm2>zuus_spawn_05.mp3</sm2> <sm2>zuus_arc_spawn_05.mp3</sm2> Make your offerings. Zeus is here.
 * <sm2>zuus_spawn_06.mp3</sm2> <sm2>zuus_arc_spawn_06.mp3</sm2> Your prayers are answered.
