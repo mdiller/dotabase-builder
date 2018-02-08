@@ -8,6 +8,7 @@ from collections import OrderedDict
 import os
 import json
 import shutil
+import re
 
 json_path = os.path.join(dotabase_dir, "../json/")
 
@@ -65,13 +66,16 @@ def dump_voices(filename):
 
 def dump_responses(directory):
 	os.makedirs(directory)
-	for hero in session.query(Hero):
-		data = dump_table(Response, hero.responses)
-		filename = os.path.join(directory, f"{hero.name}.json")
+	for voice in session.query(Voice):
+		data = dump_table(Response, voice.responses)
+		filename = voice.name.lower().replace(" ", "_")
+		filename = re.sub(r"[^a-z_]", "", filename)
+		filename = os.path.join(directory, f"{filename}.json")
 		write_json(filename, data)
 
 
 def generate_json():
+	print("generating json files...")
 	if os.path.exists(json_path):
 		shutil.rmtree(json_path)
 	os.makedirs(json_path)

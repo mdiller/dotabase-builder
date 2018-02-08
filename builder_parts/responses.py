@@ -14,6 +14,9 @@ def load():
 	for voice in session.query(Voice):
 		progress.tick()
 
+		if not voice.vsndevts_path:
+			continue
+
 		vsndevts_data = valve_readfile(config.vpk_path, voice.vsndevts_path, "vsndevts")
 
 		for key in vsndevts_data:
