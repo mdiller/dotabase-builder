@@ -18,7 +18,7 @@ def tryloadjson(text, strict=True):
 		return json.loads(text, strict=strict, object_pairs_hook=collections.OrderedDict)
 	except json.JSONDecodeError as e:
 		filename = "jsoncache/errored.json"
-		with open(filename, "wb+") as f:
+		with open(filename, "w+") as f:
 			f.write(text)
 		print(f"bad converted file saved to: {filename}")
 
@@ -152,7 +152,8 @@ def rulesfile2json(text):
 
 # Loads the response_texts scraped from the wiki as json
 def scrapedresponses2json(text):
-	text = re.sub(r'"', r"'", text)
+	text = re.sub(r'"', r'\'', text)
+	text = re.sub(r'\t', '', text)
 	text = re.sub(r'\* <sm2>', r'\t"', text)
 	text = re.sub(r'<sm2>', r'', text)
 	text = re.sub(r'\.mp3</sm2> ', r'": "', text)

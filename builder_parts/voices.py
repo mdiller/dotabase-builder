@@ -30,6 +30,18 @@ def load():
 	print("- loading cosmetics file (takes a bit)")
 	data = valve_readfile(config.vpk_path, paths['cosmetics_scripts_file'], "kv_nocomment", encoding="UTF-16")["items_game"]["items"]
 
+	custom_urls = {
+		"Announcer: Tuskar": "Announcer:_Tusk",
+		"Default Announcer": "Announcer_responses",
+		"Default Mega-Kill Announcer": "Announcer_responses"
+	}
+	custom_vsndevts = {
+		"Default Announcer": "/soundevents/voscripts/game_sounds_vo_announcer.vsndevts",
+		"Default Mega-Kill Announcer": "/soundevents/voscripts/game_sounds_vo_announcer_killing_spree.vsndevts",
+		"Announcer: Kunkka & Tidehunter": "/soundevents/voscripts/game_sounds_vo_announcer_dlc_kunkka_tide.vsndevts",
+		"Mega-Kills: Kunkka & Tidehunter": "/soundevents/voscripts/game_sounds_vo_announcer_dlc_kunkka_tide_killing_spree.vsndevts"
+	}
+
 	print("- loading from announcers")
 	for key in data:
 		announcer = data[key]
@@ -43,11 +55,18 @@ def load():
 		voice.name = announcer["name"]
 		voice.icon = "/panorama/images/icon_announcer_psd.png"
 		voice.image = f"/panorama/images/{announcer['image_inventory']}_png.png"
-		voice.url = name_to_url(announcer["name"])
 
-		for asset in announcer["visuals"]:
-			if announcer["visuals"][asset]["type"] == "announcer":
-				voice.vsndevts_path = "/" + announcer["visuals"][asset]["modifier"]
+		if voice.name in custom_urls:
+			voice.url = custom_urls[voice.name]
+		else:
+			voice.url = name_to_url(announcer["name"])
+
+		if voice.name in custom_vsndevts:
+			voice.vsndevts_path = custom_vsndevts[voice.name]
+		else:
+			for asset in announcer["visuals"]:
+				if announcer["visuals"][asset]["type"] == "announcer":
+					voice.vsndevts_path = "/" + announcer["visuals"][asset]["modifier"]
 
 		session.add(voice)
 
@@ -60,6 +79,12 @@ def load():
 			for voice in session.query(Voice).filter_by(name=name):
 				voice.url = name_to_url(pack["name"])
 		
+
+	data = read_json("builderdata/voice_actors.json")
+	print("- adding voice actors")
+	for voice in session.query(Voice):
+		if str(voice.id) in data:
+			voice.voice_actor = data[str(voice.id)]
 
 
 

@@ -3,73 +3,48 @@ import urllib.request
 import re
 import string
 import html
+import collections
+import json
+from bs4 import BeautifulSoup
 
 def unicodetoascii(text):
-	TEXT = (text.
-			replace('\\xe2\\x80\\x99', "'").
-			replace('\\xc3\\xa9', 'e').
-			replace('\\xe2\\x80\\x90', '-').
-			replace('\\xe2\\x80\\x91', '-').
-			replace('\\xe2\\x80\\x92', '-').
-			replace('\\xe2\\x80\\x93', '-').
-			replace('\\xe2\\x80\\x94', '-').
-			replace('\\xe2\\x80\\x94', '-').
-			replace('\\xe2\\x80\\x98', "'").
-			replace('\\xe2\\x80\\x9b', "'").
-			replace('\\xe2\\x80\\x9c', '"').
-			replace('\\xe2\\x80\\x9c', '"').
-			replace('\\xe2\\x80\\x9d', '"').
-			replace('\\xe2\\x80\\x9e', '"').
-			replace('\\xe2\\x80\\x9f', '"').
-			replace('\\xe2\\x80\\xa6', '...').#
-			replace('\\xe2\\x80\\xb2', "'").
-			replace('\\xe2\\x80\\xb3', "'").
-			replace('\\xe2\\x80\\xb4', "'").
-			replace('\\xe2\\x80\\xb5', "'").
-			replace('\\xe2\\x80\\xb6', "'").
-			replace('\\xe2\\x80\\xb7', "'").
-			replace('\\xe2\\x81\\xba', "+").
-			replace('\\xe2\\x81\\xbb', "-").
-			replace('\\xe2\\x81\\xbc', "=").
-			replace('\\xe2\\x81\\xbd', "(").
-			replace('\\xe2\\x81\\xbe', ")"))
-	return TEXT
+	conversions = {
+		'’': '\'',
+		'…': '...',
+		'—': '-',
+		'–': '-',
+		'é': 'e'
+	}
+	for key in conversions:
+		text = text.replace(key, conversions[key])
+	return text
 
 session = dotabase_session()
 
-heroes = []
-
-for hero in session.query(Hero):
-	heroes.append(hero.localized_name)
-
-heroes.sort()
-
+completed_urls = []
 f = open("responses_data.txt", "w+")
 
-for hero in heroes:
-	print("Retrieving for {}".format(hero))
-	hero = hero.replace(" ", "_")
-	hero = hero.replace("'", "%27")
-	url = "http://dota2.gamepedia.com/index.php?title={0}/Responses&action=edit".format(hero)
+for voice in session.query(Voice).order_by(Voice.name):
+	print(f"Retrieving for {voice.name}")
+	url = f"http://dota2.gamepedia.com/index.php?title={voice.url}&action=edit"
+
+	if voice.url in completed_urls:
+		continue
+	completed_urls.append(voice.url)
 
 	req = urllib.request.Request(url, headers = {"User-Agent" : 'Mozilla/5.0'})
 	response = urllib.request.urlopen(req)
-	the_page = response.read()
+	page_html = response.read()
 
-	string = str(the_page)
-
-	start = string.find("wpTextbox1\">")
-	end = string.find("</textarea>", start)
-
-	string = string[start:end]
-	string = html.unescape(string)
+	page_html = BeautifulSoup(page_html, 'html.parser')
+	string = page_html.find(id="wpTextbox1").contents[0]
 	string = unicodetoascii(string)
 
-
-	lines = string.split("\\n")
+	lines = string.split("\n")
 
 	for line in lines:
 		if line.startswith("* <sm2>"):
 			f.write(line + "\n")
+
 
 f.close()
