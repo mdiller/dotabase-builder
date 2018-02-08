@@ -3,6 +3,7 @@ from dotabase import *
 from utils import *
 from valve2json import valve_readfile
 import criteria_sentancing
+import os
 
 def load():
 	session.query(Response).delete()
@@ -13,15 +14,21 @@ def load():
 	progress = ProgressBar(session.query(Hero).count(), title="- loading from mp3 files:")
 	for hero in session.query(Hero):
 		progress.tick()
-		for root, dirs, files in os.walk(config.vpk_path + paths['response_mp3_path'] + hero.media_name):
-			for file in files:
-				response = Response()
-				response.name = file[:-4]
-				response.fullname = hero.media_name + "_" + response.name
-				response.mp3 = paths['response_mp3_path'] + hero.media_name + "/" + file
-				response.hero_id = hero.id
-				response.criteria = ""
-				session.add(response)
+
+		hero_data = json.loads(hero.json_data, object_pairs_hook=OrderedDict)
+		vsndevts_data = valve_readfile(config.vpk_path, "/" + hero_data.get("VoiceFile"), "vsndevts")
+
+		for key in vsndevts_data:
+			data = vsndevts_data[key]
+			filename = "/" + data["vsnd_files"][0].replace("vsnd", "mp3")
+			
+			response = Response()
+			response.fullname = key
+			response.name = os.path.basename(filename).replace(".mp3", "")
+			response.mp3 = filename
+			response.hero_id = hero.id
+			response.criteria = ""
+			session.add(response)
 
 	load_responses_text()
 

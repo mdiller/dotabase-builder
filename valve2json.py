@@ -63,10 +63,30 @@ def uncommentkvfile(text):
 
 	return result
 
+# converts an old file to the new format
+def vsndevts_from_old(text):
+	file_data = kvfile2json(text)
+	for key in file_data:
+		old_data = file_data[key]["operator_stacks"]["update_stack"]["reference_operator"]
+		data = OrderedDict()
+		data["type"] = old_data["reference_stack"]
+		for var in old_data["operator_variables"]:
+			value = old_data["operator_variables"][var]["value"]
+			if isinstance(value, str):
+				data[var] = value
+			else:
+				value_list = []
+				for i in value:
+					value_list.append(value[i])
+				data[var] = value_list
+		file_data[key] = data
+	return file_data
+
+
 def vsndevts2json(text):
 	# If this isnt there, its a kv1 file
 	if "<!-- kv3 " not in text:
-		return kvfile2json(text)
+		return vsndevts_from_old(text)
 	# else its a kv3 file
 
 	# get rid of troublesome comments
