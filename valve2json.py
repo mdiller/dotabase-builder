@@ -17,6 +17,11 @@ def tryloadjson(text, strict=True):
 	try:
 		return json.loads(text, strict=strict, object_pairs_hook=collections.OrderedDict)
 	except json.JSONDecodeError as e:
+		filename = "jsoncache/errored.json"
+		with open(filename, "w+") as f:
+			f.write(text)
+		print(f"bad converted file saved to: {filename}")
+
 		lines = text.split("\n")
 		start = e.lineno - 2
 		end = e.lineno + 2
@@ -57,6 +62,28 @@ def uncommentkvfile(text):
 		result += text[i]
 
 	return result
+
+def vsndevts2json(text):
+	# If this isnt there, its a kv1 file
+	if "<!-- kv3 " not in text:
+		return kvfile2json(text)
+	# else its a kv3 file
+
+	# get rid of troublesome comments
+	text = re.sub(r'<!-- .* -->', "", text)
+	# To convert Valve's KeyValue format to Json
+	text = re.sub(r'"\n{', r'": {', text)
+	text = re.sub(r'(\n\s*)([^\s]+) =', r'\1"\2":', text)
+	text = re.sub(r'(]|"|})(\n[\s]*")', r'\1,\2', text)
+	text = re.sub(r'",(\n\s*)(]|})', r'"\1\2', text)
+
+	text = re.sub(r'{\s*{([^{}]+)}\s*}', r'{\1}', text)
+	text = "{ " + text + " }"
+	# To re-include non-functional quotes
+	text = re.sub(r'TEMP_QUOTE_TOKEN', '\\"', text)
+
+	return tryloadjson(text, strict=False)
+
 
 # Regex strings for vk2json from:
 # http://dev.dota2.com/showthread.php?t=87191
@@ -127,7 +154,8 @@ def scrapedresponses2json(text):
 file_formats = {
 	"scrapedresponses": scrapedresponses2json,
 	"rules": rulesfile2json,
-	"kv": kvfile2json
+	"kv": kvfile2json,
+	"vsndevts": vsndevts2json
 }
 
 # Reads from converted json file unless overwrite parameter is specified

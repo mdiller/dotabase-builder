@@ -6,6 +6,7 @@
 	"emoticon_image_path": "/resource/flash3/images/emoticons/",
 	"hero_selection_path": "/resource/flash3/images/heroes/selection/",
 	"response_rules_path": "/scripts/talker/",
+	"vo_scripts_path": "/soundevents/voscripts/",
 	"response_mp3_path": "/sounds/vo/",
 	"hero_scripts_file": "/scripts/npc/npc_heroes.txt",
 	"item_scripts_file": "/scripts/npc/items.txt",
