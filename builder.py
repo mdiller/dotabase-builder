@@ -21,7 +21,8 @@ items,
 abilities, 
 heroes, 
 responses,
-voices)
+voices,
+loadingscreens)
 	
 
 def build_dotabase():
@@ -32,6 +33,7 @@ def build_dotabase():
 	heroes.load()
 	voices.load()
 	responses.load()
+	loadingscreens.load()
 	generate_json()
 	print("done")
 
