@@ -94,4 +94,6 @@ jsoncache/
 log/
 config.json
 
+temp.py
+
 VpkExtractor/packages

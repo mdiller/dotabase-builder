@@ -59,7 +59,7 @@
 	"keeper_of_the_light": [ "kotl" ],
 	"troll_warlord": [ "troll" ],
 	"shredder": [ "timber" ],
-	"bristleback": [ "bristle" ],
+	"bristleback": [ "bristle", "bb" ],
 	"skywrath_mage": [ "sky" ],
 	"abaddon": [ "arthas" ],
 	"elder_titan": [ "et" ],

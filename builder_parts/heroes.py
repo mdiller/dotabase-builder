@@ -62,7 +62,7 @@ def load():
 		hero.role_levels = hero_data.get('Rolelevels', '').replace(',', '|')
 		glow_color = hero_data.get('HeroGlowColor', None)
 		if glow_color:
-			hero.glow_color = "#{0:02x}{1:02x}{2:02x}".format(*map(int, glow_color.split(' ')))
+			hero.color = "#{0:02x}{1:02x}{2:02x}".format(*map(int, glow_color.split(' ')))
 
 		hero.json_data = json.dumps(hero_data, indent=4)
 
@@ -115,6 +115,13 @@ def load():
 			aliases.append(re.sub(r'[^a-z^\s]', r'', hero.real_name.lower()))
 		aliases.extend(data.get(hero.name, []))
 		hero.aliases = "|".join(aliases)
+
+	print("- adding hero colors")
+	data = read_json("builderdata/hero_colors.json")
+	for hero_name in data:
+		hero = session.query(Hero).filter_by(name=hero_name).first()
+		hero.color = data[hero_name]
+
 
 
 	session.commit()
