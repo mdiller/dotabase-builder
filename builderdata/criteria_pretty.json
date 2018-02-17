@@ -16,7 +16,7 @@
 	"Move": "Moving",
 	"ItemDrop": "Recieving {droptype|a|%} cosmetic item",
 	"Custom": "",
-	"Missing": "Calling missing for {lane|a lane|%}",
+	"Missing": "Calling missing for {lane|a|%} lane",
 	"Spawn": "Spawning",
 	"Learn": "Leveling up {ability|an ability|%}",
 	"LastHit": "Last hitting",
@@ -30,6 +30,10 @@
 	"NoMana": "Not enough mana",
 	"LevelUp": "Leveling up",
 	"Pain": "Taking damage",
+	"Followup_Generic": "Followup",
+	"Followup_Negative": "Followup (Negative)",
+	"Followup_Negative_Ongoing": "Followup (Ongoing Negative)",
+	"Followup_Positive": "Followup (Positive)",
 
 	"AllyNear": "{hero|An ally|%} is nearby",
 	"IsGolem": "while in golem form",
@@ -39,5 +43,10 @@
 	"IsInWolfForm": "while in wolf form",
 	"IsFirstBlood": "(First Blood)",
 	"IsReincarnating": "and respawning from aegis",
-	"IsGameStart": "As the game starts"
+	"IsGameStart": "As the game starts",
+
+	"IsAnnounceHeroPick": "A player picked {hero|a hero|%}",
+	"IsRoshanKilledGood": "Roshan killed by The Radiant",
+	"IsRoshanKilledBad": "Roshan killed by The Dire",
+	"IsTowerAttacked": "{team_attacked|A|%'s} {lane||%} tower is being attacked"
 }

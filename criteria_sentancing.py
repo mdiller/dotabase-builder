@@ -66,11 +66,11 @@ def build_dictionaries(session):
 				pretty_dict[crit.name] = "and stealing " + replace_dict[match]
 				crit_type_dict[crit.name] = "stolenspell"
 
-	for crit in session.query(Criterion).filter_by(matchkey="classname"):
-		pretty_dict[crit.name] = ""
-		crit_type_dict[crit.name] = None
-	for crit in session.query(Criterion).filter_by(matchkey="taunt_type"):
-		pretty_dict[crit.name] = ""
+	ignore_matchkeys = [ "classname", "announcer_voice", "taunt_type", "spectator", "player_team", "special_spawn" ]
+	for key in ignore_matchkeys:
+		for crit in session.query(Criterion).filter_by(matchkey=key):
+			pretty_dict[crit.name] = ""
+			crit_type_dict[crit.name] = None
 
 	for crit in session.query(Criterion).filter_by(matchkey="arrowhithero"):
 		pretty_dict[crit.name] = "Arrow hits " + {"yes":"a hero","no":"a creep","roshan":"roshan", "neutral_creep":"a neutral creep"}[crit.matchvalue]
@@ -90,12 +90,21 @@ def build_dictionaries(session):
 			pretty_dict[crit.name] = "an ultra rare"
 		crit_type_dict[crit.name] = "droptype"
 
+	# always for buildings
+	for crit in session.query(Criterion).filter_by(matchkey="team_attacked"):
+		pretty_dict[crit.name] = {
+			"good": "Radiant",
+			"bad": "Dire"
+		}[crit.matchvalue]
+		crit_type_dict[crit.name] = "team_attacked"
+
 	for crit in session.query(Criterion).filter_by(matchkey="lane"):
-		pretty_dict[crit.name] = "from {} lane".format({
+		pretty_dict[crit.name] = {
 			"mid": "middle",
 			"bot": "bottom",
-			"top": "top"
-			}.get(crit.matchvalue.lower(), "a"))
+			"top": "top",
+			"base": "base"
+		}.get(crit.matchvalue.lower(), "a")
 		crit_type_dict[crit.name] = "lane"
 
 	pretty_dict["LittleNag"] = ""
@@ -136,9 +145,24 @@ def replace_template(template, crit_list):
 	return template
 
 def pretty_response_crit(crits):
+	def is_significant(crit):
+		if (crit == "Custom" or crit.startswith("Followup")):
+			return False
+		if pretty_dict.get(crit.lower()) == "":
+			return False
+		return True
+
 	crits = crits.split(" ")
-	result = crits.pop(0)
-	result =  pretty_dict.get(result.lower(), result)
+
+	result = None
+	for i in range(len(crits)):
+		if is_significant(crits[i]):
+			result = crits.pop(i)
+			break
+	if not result:
+		result = crits.pop(0)
+
+	result = pretty_dict.get(result.lower(), result)
 
 	result = replace_template(result, crits)
 	ending = replace_template("{gametime|| %}{nag|| (%)}{chance|| (%)}", crits)
