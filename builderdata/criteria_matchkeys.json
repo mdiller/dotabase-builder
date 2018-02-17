@@ -1,0 +1,63 @@
+[
+	{
+		"key": "drop_type",
+		"convert": {
+			"common": "a common",
+			"rare": "a rare",
+			"ultra_rare": "an ultra rare"
+		}
+	},
+	{
+		"key": "arrowhithero",
+		"template": "Arrow hits {}",
+		"convert": {
+			"yes": "a hero",
+			"no": "a creep",
+			"roshan": "roshan", 
+			"neutral_creep": "a neutral creep"
+		}
+	},
+	{
+		"key": "team_attacked",
+		"convert": {
+			"good": "Radiant",
+			"bad": "Dire"
+		}
+	},
+	{
+		"key": "lane",
+		"convert": {
+			"mid": "middle",
+			"bot": "bottom",
+			"top": "top",
+			"base": "base"
+		}
+	},
+	{
+		"key": "nagtime",
+		"convert": {
+			">=7": "",
+			">5,<7": "medium naggy",
+			"<3": "very naggy"
+		},
+		"new_key": "nag"
+	},
+	{
+		"key": "expensive_item",
+		"convert": {
+			"1": "expensive"
+		},
+		"new_key": "price"
+	},
+	{
+		"key": "multiplekillcount",
+		"template": "{} heroes",
+		"convert": {
+			"2": "two", 
+			"3": "three", 
+			"4": "four", 
+			">4": "more than four"
+		},
+		"new_key": "hero"
+	}
+]

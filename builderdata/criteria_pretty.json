@@ -14,7 +14,7 @@
 	"Deny": "Denying",
 	"Bottling": "Bottling {rune|a rune|%}",
 	"Move": "Moving",
-	"ItemDrop": "Recieving {droptype|a|%} cosmetic item",
+	"ItemDrop": "Recieving {drop_type|a|%} cosmetic item",
 	"Custom": "",
 	"Missing": "Calling missing for {lane|a|%} lane",
 	"Spawn": "Spawning",

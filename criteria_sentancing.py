@@ -66,63 +66,33 @@ def build_dictionaries(session):
 				pretty_dict[crit.name] = "and stealing " + replace_dict[match]
 				crit_type_dict[crit.name] = "stolenspell"
 
-	ignore_matchkeys = [ "classname", "announcer_voice", "taunt_type", "spectator", "player_team", "special_spawn" ]
+	ignore_matchkeys = [ "classname", "announcer_voice", "taunt_type", "spectator", "player_team", "special_spawn", "customresponse" ]
 	for key in ignore_matchkeys:
 		for crit in session.query(Criterion).filter_by(matchkey=key):
 			pretty_dict[crit.name] = ""
 			crit_type_dict[crit.name] = None
 
-	for crit in session.query(Criterion).filter_by(matchkey="arrowhithero"):
-		pretty_dict[crit.name] = "Arrow hits " + {"yes":"a hero","no":"a creep","roshan":"roshan", "neutral_creep":"a neutral creep"}[crit.matchvalue]
-
-
 	for crit in session.query(Criterion).filter(Criterion.name.like("Chance_%")):
-		pretty_dict[crit.name] = "{} chance".format(crit.name[7:])
+		pretty_dict[crit.name] = f"{crit.name[7:]} chance"
 		crit_type_dict[crit.name] = "chance"
 
 	for crit in session.query(Criterion).filter_by(matchkey="gametime"):
-		pretty_dict[crit.name] = "at {} in".format(pretty_time(crit.matchvalue))
+		pretty_dict[crit.name] = f"at {pretty_time(crit.matchvalue)} in"
 		crit_type_dict[crit.name] = "gametime"
 
-	for crit in session.query(Criterion).filter_by(matchkey="drop_type"):
-		pretty_dict[crit.name] = "a " + crit.matchvalue
-		if pretty_dict[crit.name] == "a ultra_rare":
-			pretty_dict[crit.name] = "an ultra rare"
-		crit_type_dict[crit.name] = "droptype"
+	pretty_matchkeys = read_json("builderdata/criteria_matchkeys.json")
+	for matchkey in pretty_matchkeys:
+		for crit in session.query(Criterion).filter_by(matchkey=matchkey["key"]):
+			template = matchkey.get("template", "{}")
+			value = crit.matchvalue
+			if "convert" in matchkey:
+				if crit.matchvalue.lower() in matchkey["convert"]:
+					value = matchkey["convert"][crit.matchvalue.lower()]
+				else:
+					print(f"Missing key '{crit.matchvalue}' for matchkey '{crit.matchkey}'")
+			pretty_dict[crit.name] = template.format(value)
+			crit_type_dict[crit.name] = matchkey.get("new_key", matchkey["key"])
 
-	# always for buildings
-	for crit in session.query(Criterion).filter_by(matchkey="team_attacked"):
-		pretty_dict[crit.name] = {
-			"good": "Radiant",
-			"bad": "Dire"
-		}[crit.matchvalue]
-		crit_type_dict[crit.name] = "team_attacked"
-
-	for crit in session.query(Criterion).filter_by(matchkey="lane"):
-		pretty_dict[crit.name] = {
-			"mid": "middle",
-			"bot": "bottom",
-			"top": "top",
-			"base": "base"
-		}.get(crit.matchvalue.lower(), "a")
-		crit_type_dict[crit.name] = "lane"
-
-	pretty_dict["LittleNag"] = ""
-	pretty_dict["MediumNag"] = "medium naggy"
-	crit_type_dict["MediumNag"] = "nag"
-	pretty_dict["SuperNag"] = "very naggy"
-	crit_type_dict["SuperNag"] = "nag"
-
-	pretty_dict["IsExpensiveItem"] = "expensive"
-	crit_type_dict["IsExpensiveItem"] = "price"
-
-	for crit in session.query(Criterion).filter_by(matchkey="multiplekillcount"):
-		pretty_dict[crit.name] = {"2":"two", "3":"three", "4":"four", ">4":"more than four"}[crit.matchvalue] + " heroes"
-		crit_type_dict[crit.name] = "hero" # Because this takes the spot for 'Killing a hero'
-
-	for crit in session.query(Criterion).filter_by(matchkey="customresponse"):
-		pretty_dict[crit.name] = ""
-		# pretty_dict[crit.name] = "(using the '{}' cosmetic)".format(crit.matchvalue)
 
 	pretty_dict = {k.lower():v for k, v in pretty_dict.items()}
 	crit_type_dict = {k.lower():v for k, v in crit_type_dict.items()}
@@ -134,7 +104,7 @@ def replace_template(template, crit_list):
 	while match:
 		replacement = match.group(2)
 		for i in range(len(crit_list)):
-			if crit_type_dict.get(crit_list[i].lower()) == match.group(1):
+			if crit_type_dict.get(crit_list[i].lower()) == match.group(1) and pretty_dict[crit_list[i].lower()] != "":
 				replacement = match.group(3).replace("%", pretty_dict[crit_list[i].lower()])
 				crit_list.pop(i)
 				break
