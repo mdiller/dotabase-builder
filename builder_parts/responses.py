@@ -41,8 +41,6 @@ def load():
 	# Load response_rules
 	for root, dirs, files in os.walk(config.vpk_path + paths['response_rules_path']):
 		for file in files:
-			if "announcer" in file:
-				continue
 			data = valve_readfile(config.vpk_path, paths['response_rules_path'] + file, "rules")
 			for key in data:
 				if key.startswith("rule_"):
