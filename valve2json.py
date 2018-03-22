@@ -154,11 +154,13 @@ def rulesfile2json(text):
 def scrapedresponses2json(text):
 	text = re.sub(r'"', r'\'', text)
 	text = re.sub(r'\t', '', text)
+	text = re.sub(r'<!--.*-->', r'', text)
 	text = re.sub(r'\* <sm2>', r'\t"', text)
 	text = re.sub(r'<sm2>', r'', text)
 	text = re.sub(r'\.mp3</sm2> ', r'": "', text)
 	text = re.sub(r'\.mp3</sm2>', r'": "', text)
 	text = re.sub(r'\\\'', r"'", text)
+	text = re.sub(r'\[https[^ ]+ ([^\]]+)]', r'\1', text)
 	text = re.sub(r'\[\[File:[^[]+]]', r'', text)
 	text = re.sub(r'\[\[[^[\|]+\|([^[]+)]]', r'\1', text)
 	text = re.sub(r'\[\[([^[]+)]]', r'\1', text)
