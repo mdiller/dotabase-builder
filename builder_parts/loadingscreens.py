@@ -6,6 +6,12 @@ from PIL import Image
 import datetime
 import os
 import colorgram
+import colorsys
+
+def rgb_to_hsv(rgb):
+	rgb = tuple(map(lambda v: v / 255.0, rgb))
+	hsv = colorsys.rgb_to_hsv(*rgb)
+	return tuple(map(lambda v: int(v * 255), hsv))
 
 def load():
 	session.query(LoadingScreen).delete()
@@ -61,6 +67,10 @@ def load():
 		colors = colorgram.extract(config.vpk_path + loadingscreen.thumbnail, 5)
 
 		loadingscreen.color = "#{0:02x}{1:02x}{2:02x}".format(*colors[0].rgb)
+		hsv = rgb_to_hsv(colors[0].rgb)
+		loadingscreen.hue = hsv[0]
+		loadingscreen.saturation = hsv[1]
+		loadingscreen.value = hsv[2]
 
 
 
