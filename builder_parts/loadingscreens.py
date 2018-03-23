@@ -23,10 +23,15 @@ def load():
 		"Default Loading Screen": "/panorama/images/loadingscreens/default/startup_background_logo_png.png"
 	}
 
+	# this will be used later for assigning category
+	couriers = []
+
 	print("- loading loadingscreens from items_game")
 	# load all of the item scripts data information
 	for key in items_data:
 		data = items_data[key]
+		if data.get("prefab") == "courier":
+			couriers.append(data.get("name"))
 		if data.get("prefab") != "loading_screen":
 			continue # These are team loadingscreens
 		loadingscreen = LoadingScreen()
@@ -34,6 +39,8 @@ def load():
 		loadingscreen.name = data.get("name")
 		date_array = list(map(int, data.get("creation_date").split("-")))
 		loadingscreen.creation_date = datetime.date(date_array[0], date_array[1], date_array[2])
+		loadingscreen.category = "other"
+
 
 		if loadingscreen.name in custom_paths:
 			loadingscreen.image = custom_paths[loadingscreen.name]
@@ -72,24 +79,52 @@ def load():
 		loadingscreen.saturation = hsv[1]
 		loadingscreen.value = hsv[2]
 
+	## Categories:
+	# hero_set
+	# hud_skin
+	# tournament
+	# courier
+	# other
 
+	item_type_to_category = {
+		"#DOTA_WearableType_Hud_Skin_Bundle": "hud_skin",
+		"#DOTA_WearableType_Tournament_Bundle": "tournament"
+	}
 
-
-	print("- associating hero packs")
+	print("- associating item packs")
 	for key in items_data:
 		data = items_data[key]
 		if data.get("prefab") != "bundle":
 			continue
 		for name in data.get("bundle", []):
 			for loadingscreen in session.query(LoadingScreen).filter_by(name=name):
-
 				heroes = data.get("used_by_heroes", {})
-				if len(heroes) > 1:
-					print("MORE HEROES IN THIS PACK")
 				for hero_name in heroes:
 					hero = session.query(Hero).filter_by(full_name=hero_name).first()
 					if hero:
-						loadingscreen.hero_id = hero.id
-		
+						loadingscreen.hero_ids = str(hero.id)
+						loadingscreen.category = "hero_set"
+				if loadingscreen.category == "hero_set":
+					continue
+				category = item_type_to_category.get(data.get("item_type_name"))
+				if category:
+					loadingscreen.category = category
+					continue
+				if any(x in couriers for x in data.get("bundle", [])):
+					loadingscreen.category = "courier"
+					continue
+
+
+	print("- linking heroes")
+	data = read_json("builderdata/loadingscreen_heroes.json")
+	for screen in session.query(LoadingScreen):
+		if screen.name in data:
+			heroes = []
+			if screen.hero_ids:
+				heroes.append(screen.hero_ids)
+			for heroname in data[screen.name]:
+				hero = session.query(Hero).filter_by(name=heroname).first()
+				heroes.append(str(hero.id))
+			screen.hero_ids = "|".join(heroes)
 
 	session.commit()
