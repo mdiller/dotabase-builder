@@ -155,5 +155,10 @@ def load_pretty_criteria(session):
 		if response.criteria == "" or response.criteria is None:
 			response.pretty_criteria = "Unused"
 		else:
-			response.pretty_criteria = "\n".join([pretty_response_crit(c) for c in response.criteria.split("|")])
+			crits = [pretty_response_crit(c) for c in response.criteria.split("|")]
+			while "" in crits:
+				crits.remove("")
+			if len(crits) == 0:
+				crits.append("Unused")
+			response.pretty_criteria = "|".join(crits)
 

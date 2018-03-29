@@ -185,7 +185,10 @@ def scrapedresponses2json(text):
 	data = tryloadjson(text)
 	newdata = {}
 	for key in data:
-		newdata[key.lower()] = data[key]
+		value = data[key]
+		value = value.strip()
+		value = re.sub(r'^"([^"]+)"$', r'\1', value)
+		newdata[key.lower()] = value
 	return newdata
 
 file_formats = {
