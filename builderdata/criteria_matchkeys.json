@@ -59,5 +59,56 @@
 			">4": "more than four"
 		},
 		"new_key": "hero"
+	},
+	{
+		"key": "special_spawn",
+		"template": "Spawning in the loadout"
+	},
+	{
+		"key": "deny",
+		"convert": {
+			"0": "destroyed",
+			"1": "denied"
+		}
+	},
+	{
+		"key": "streak",
+		"template": "{} heroes",
+		"convert": {
+			"2": "two", 
+			"3": "three", 
+			"4": "four", 
+			"5": "five",
+			">9": "more than 9",
+			">84,<90": "84 to 90",
+			"default": "{}"
+		},
+		"new_key": "hero"
+	},
+	{
+		"key": "victim_team",
+		"convert": {
+			"radiant": "Dire",
+			"dire": "Radiant"
+		},
+		"new_key": "victor_team"
+	},
+	{
+		"key": "dire_heroes_alive",
+		"template": "Dire",
+		"new_key": "wiped_team"
+	},
+	{
+		"key": "radiant_heroes_alive",
+		"template": "Radiant",
+		"new_key": "wiped_team"
+	},
+	{
+		"key": "victim_in_fountain",
+		"template": "in their fountain"
+	},
+	{
+		"key": "player_team",
+		"template": ""
 	}
 ]

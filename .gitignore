@@ -97,3 +97,5 @@ config.json
 temp.py
 
 VpkExtractor/packages
+
+*.txt

@@ -3,6 +3,13 @@ from dotabase import *
 from sqlalchemy import func
 import re
 
+#removes duplicates from a list
+def remove_dupes(in_list):
+	result = []
+	for item in in_list:
+		if item not in result:
+			result.append(item)
+	return result
 
 def pretty_time(time):
 	if "," in time:
@@ -76,6 +83,10 @@ def build_dictionaries(session):
 		pretty_dict[crit.name] = f"{crit.name[7:]} chance"
 		crit_type_dict[crit.name] = "chance"
 
+	for crit in session.query(Criterion).filter(Criterion.name.like("IsAnnouncerLine_announcer_%")):
+		pretty_dict[crit.name] = ""
+		crit_type_dict[crit.name] = None
+
 	for crit in session.query(Criterion).filter_by(matchkey="gametime"):
 		pretty_dict[crit.name] = f"at {pretty_time(crit.matchvalue)} in"
 		crit_type_dict[crit.name] = "gametime"
@@ -88,6 +99,8 @@ def build_dictionaries(session):
 			if "convert" in matchkey:
 				if crit.matchvalue.lower() in matchkey["convert"]:
 					value = matchkey["convert"][crit.matchvalue.lower()]
+				elif "default" in matchkey["convert"]:
+					value = matchkey["convert"]["default"].format(value)
 				else:
 					print(f"Missing key '{crit.matchvalue}' for matchkey '{crit.matchkey}'")
 			pretty_dict[crit.name] = template.format(value)
@@ -98,7 +111,7 @@ def build_dictionaries(session):
 	crit_type_dict = {k.lower():v for k, v in crit_type_dict.items()}
 
 def replace_template(template, crit_list):
-	pattern = re.compile(r"\{([^\{]*?)\|([^\{]*?)\|([^\{]*?)\}")
+	pattern = re.compile(r"\{([^\{\}|]*?)\|([^\{\}|]*?)\|([^\{\}|]*?)\}")
 	match = pattern.search(template)
 
 	while match:
@@ -116,7 +129,7 @@ def replace_template(template, crit_list):
 
 def pretty_response_crit(crits):
 	def is_significant(crit):
-		if (crit == "Custom" or crit.startswith("Followup")):
+		if (crit == "Custom" or crit.startswith("Followup") or (crit_type_dict.get(crit.lower()) in [ "gametime", "chance", "player_team", "victor_team" ])):
 			return False
 		if pretty_dict.get(crit.lower()) == "":
 			return False
@@ -143,8 +156,7 @@ def pretty_response_crit(crits):
 			result += " " + temp
 
 	result += ending
-	return result
-
+	return result.strip()
 
 def load_pretty_criteria(session):
 	build_dictionaries(session)
@@ -160,5 +172,6 @@ def load_pretty_criteria(session):
 				crits.remove("")
 			if len(crits) == 0:
 				crits.append("Unused")
+			crits = remove_dupes(crits)
 			response.pretty_criteria = "|".join(crits)
 

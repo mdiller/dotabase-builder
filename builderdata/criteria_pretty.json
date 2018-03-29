@@ -48,5 +48,22 @@
 	"IsAnnounceHeroPick": "A player picked {hero|a hero|%}",
 	"IsRoshanKilledGood": "Roshan killed by The Radiant",
 	"IsRoshanKilledBad": "Roshan killed by The Dire",
-	"IsTowerAttacked": "{team_attacked|A|%'s} {lane||%} tower is being attacked"
+	"IsTowerAttacked": "{team_attacked|Your|%'s}{lane|| %} tower is being attacked",
+	"IsBarracksAttacked": "{team_attacked|Your|%'s}{lane|| %} barracks are being attacked",
+	"IsFortAttacked": "{team_attacked|Your|%'s} ancient is being attacked",
+	"IsShrineAttacked": "{team_attacked|Your|%'s}{lane|| %} shrine is being attacked",
+	"IsTowerKilled": "A friendly{lane|| %} tower was {deny|destroyed|%}",
+	"IsEnemyTowerKilled": "An enemy{lane| |'s %} tower was {deny|destroyed|%}",
+	"IsGoodTowerKilled": "{lane|A Radiant|Radiant's %} tower was {deny|destroyed|%}",
+	"IsBadTowerKilled": "{lane|A Dire|Dire's %} tower was {deny|destroyed|%}",
+	"IsBarracksKilled": "A friendly{lane|| %} barracks was {deny|destroyed|%}",
+	"IsEnemyBarracksKilled": "An enemy's{lane|| %} barracks was {deny|destroyed|%}",
+	"IsGoodBarracksKilled": "{lane|A Radiant|Radiant's %} barracks was {deny|destroyed|%}",
+	"IsBadBarracksKilled": "{lane|A Dire|Dire's %} barracks was {deny|destroyed|%}",
+	"IsShrineKilled": "A friendly{lane|| %} shrine was {deny|destroyed|%}",
+	"IsEnemyShrineKilled": "An enemy{lane| |'s %} shrine was {deny|destroyed|%}",
+	"IsGoodShrineKilled": "{lane|A Radiant|Radiant's %} shrine was {deny|destroyed|%}",
+	"IsBadShrineKilled": "{lane|A Dire|Dire's %} shrine was {deny|destroyed|%}",
+	"IsKillMessage": "{hero||Killing spree of %}{victor_team|| for %}",
+	"HeroDeath": "{wiped_team|{hero|A hero|%} was killed|% team was wiped}{victor_team|| by %}"
 }

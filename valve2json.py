@@ -187,7 +187,7 @@ def scrapedresponses2json(text):
 	for key in data:
 		value = data[key]
 		value = value.strip()
-		value = re.sub(r"^''(.+)''$", r'\1', value)
+		value = re.sub(r"''(.+)''", r'*\1*', value)
 		newdata[key.lower()] = value
 	return newdata
 
