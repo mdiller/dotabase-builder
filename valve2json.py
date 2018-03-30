@@ -18,7 +18,7 @@ def tryloadjson(text, strict=True):
 		return json.loads(text, strict=strict, object_pairs_hook=collections.OrderedDict)
 	except json.JSONDecodeError as e:
 		filename = "jsoncache/errored.json"
-		with open(filename, "w+") as f:
+		with open(filename, "w+", encoding="utf-16") as f:
 			f.write(text)
 		print(f"bad converted file saved to: {filename}")
 
@@ -120,6 +120,7 @@ def kvfile2json(text, remove_comments=True):
 	if remove_comments:
 		text = uncommentkvfile(text)
 	# To convert Valve's KeyValue format to Json
+	text = re.sub('﻿', '', text) # remove zero width no-break space
 	text = re.sub(r'"([^"]*)"(\s*){', r'"\1": {', text)
 	text = re.sub(r'"([^"]*)"\s*"([^"]*)"', r'"\1": "\2",', text)
 	text = re.sub(r',(\s*[}\]])', r'\1', text)
@@ -215,7 +216,6 @@ def valve_readfile(sourcedir, filepath, fileformat, encoding=None, overwrite=Fal
 			data = file_formats[fileformat](text)
 	else:
 		raise ValueError("invalid fileformat argument: " + fileformat)
-
 
 	os.makedirs(os.path.dirname(json_file), exist_ok=True)
 	write_json(json_file, data)

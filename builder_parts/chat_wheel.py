@@ -10,7 +10,7 @@ def load():
 
 	print("- loading chat_wheel stuff from scripts")
 	# load all of the item scripts data information
-	data = valve_readfile(config.vpk_path, paths['chat_wheel_scripts_file'], "kv", encoding="UTF-16")["chat_wheel"]["messages"]
+	data = valve_readfile(config.vpk_path, paths['chat_wheel_scripts_file'], "kv", encoding="utf-8")["chat_wheel"]["messages"]
 	for key in data:
 		msg_data = data[key]
 

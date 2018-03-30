@@ -34,7 +34,7 @@ def load():
 		session.add(voice)
 
 	print("- loading cosmetics file (takes a bit)")
-	data = valve_readfile(config.vpk_path, paths['cosmetics_scripts_file'], "kv_nocomment", encoding="UTF-16")["items_game"]["items"]
+	data = valve_readfile(config.vpk_path, paths['cosmetics_scripts_file'], "kv_nocomment", encoding="UTF-8")["items_game"]["items"]
 
 	custom_urls = {
 		"Announcer: Tuskar": "Announcer:_Tusk",

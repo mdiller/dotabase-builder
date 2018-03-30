@@ -17,7 +17,7 @@ def load():
 	session.query(LoadingScreen).delete()
 	print("loadingscreens")
 
-	items_data = valve_readfile(config.vpk_path, paths['cosmetics_scripts_file'], "kv_nocomment", encoding="UTF-16")["items_game"]["items"]
+	items_data = valve_readfile(config.vpk_path, paths['cosmetics_scripts_file'], "kv_nocomment", encoding="UTF-8")["items_game"]["items"]
 
 	custom_paths = {
 		"Default Loading Screen": "/panorama/images/loadingscreens/default/startup_background_logo_png.png"
