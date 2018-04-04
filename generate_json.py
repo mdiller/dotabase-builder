@@ -31,8 +31,10 @@ def dump_table(table, query=None):
 				data[col.name] = json.loads(value, object_pairs_hook=OrderedDict)
 			elif value is None or value == "":
 				continue
-			else:
+			elif isinstance(value, int) or isinstance(value, bool) or isinstance(value, float):
 				data[col.name] = value
+			else:
+				data[col.name] = str(value)
 		full_data.append(data)
 	return full_data
 
@@ -64,6 +66,10 @@ def dump_voices(filename):
 	data = dump_table(Voice)
 	write_json(filename, data)
 
+def dump_loadingscreens(filename):
+	data = dump_table(LoadingScreen)
+	write_json(filename, data)
+
 def dump_responses(directory):
 	os.makedirs(directory)
 	for voice in session.query(Voice):
@@ -86,4 +92,5 @@ def generate_json():
 	dump_chatwheel(json_path + "chatwheel.json")
 	dump_criteria(json_path + "criteria.json")
 	dump_voices(json_path + "voices.json")
+	dump_loadingscreens(json_path + "loadingscreens.json")
 	dump_responses(json_path + "responses")

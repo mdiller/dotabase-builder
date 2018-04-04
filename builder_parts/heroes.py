@@ -30,7 +30,7 @@ def load():
 			if key in hero_data:
 				return hero_data[key]
 			else:
-				return data["npc_dota_hero_base"][key]
+				return data["npc_dota_hero_base"].get(key)
 
 		hero.full_name = heroname
 		hero.media_name = hero_data['VoiceFile'][37:-9]
@@ -58,6 +58,7 @@ def load():
 		hero.vision_day = get_val('VisionDaytimeRange')
 		hero.vision_night = get_val('VisionNighttimeRange')
 		hero.is_melee = get_val('AttackCapabilities') == "DOTA_UNIT_CAP_MELEE_ATTACK"
+		hero.material = get_val('GibType')
 		hero.roles = hero_data.get('Role', '').replace(',', '|')
 		hero.role_levels = hero_data.get('Rolelevels', '').replace(',', '|')
 		glow_color = hero_data.get('HeroGlowColor', None)
