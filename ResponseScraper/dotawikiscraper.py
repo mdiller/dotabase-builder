@@ -21,16 +21,11 @@ def unicodetoascii(text):
 
 session = dotabase_session()
 
-completed_urls = []
 f = open("responses_data.txt", "w+")
 
 for voice in session.query(Voice).order_by(Voice.name):
 	print(f"Retrieving for {voice.name}")
 	url = f"http://dota2.gamepedia.com/index.php?title={voice.url}&action=edit"
-
-	if voice.url in completed_urls:
-		continue
-	completed_urls.append(voice.url)
 
 	req = urllib.request.Request(url, headers = {"User-Agent" : 'Mozilla/5.0'})
 	response = urllib.request.urlopen(req)
@@ -43,10 +38,17 @@ for voice in session.query(Voice).order_by(Voice.name):
 	lines = string.split("\n")
 
 	loaded_lines = False
+
+	f.write("\"")
+	f.write(str(voice.id))
+	f.write("\": {\n")
+
 	for line in lines:
 		if line.startswith("* <sm2>"):
 			f.write(line + "\n")
 			loaded_lines = True
+
+	f.write("}, ")
 
 	if not loaded_lines:
 		print(f"didnt load any lines from {voice.name}")

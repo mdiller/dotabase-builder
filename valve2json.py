@@ -178,6 +178,9 @@ def scrapedresponses2json(text):
 	text = "{" + text + "}"
 	text = re.sub(r',(\s*)}', r'\1}', text)
 
+	# fix the hero identification things
+	text = re.sub(r'\'(\d+)\': {",', r'"\1": {', text)
+
 	# custom issues for these 2
 	text = re.sub('rick_and_morty_announcer_', 'rick_and_morty_', text, flags=re.IGNORECASE)
 	text = re.sub('rick_and_morty_killing_spree_announcer_', 'rick_and_morty_killing_spree_', text, flags=re.IGNORECASE)
@@ -185,11 +188,14 @@ def scrapedresponses2json(text):
 
 	data = tryloadjson(text)
 	newdata = {}
-	for key in data:
-		value = data[key]
-		value = value.strip()
-		value = re.sub(r"''(.+)''", r'*\1*', value)
-		newdata[key.lower()] = value
+	for heroid in data:
+		herodata = {}
+		for key in data[heroid]:
+			value = data[heroid][key]
+			value = value.strip()
+			value = re.sub(r"''(.+)''", r'*\1*', value)
+			herodata[key.lower()] = value
+		newdata[heroid] = herodata
 	return newdata
 
 file_formats = {
