@@ -26,6 +26,13 @@ def load():
 			response = Response()
 			response.fullname = key
 			response.name = os.path.basename(filename).replace(".mp3", "")
+
+			if not os.path.exists(config.vpk_path + filename):
+				filename = filename.replace(".mp3", ".wav")
+			if not os.path.exists(config.vpk_path + filename):
+				filename = filename.replace(".wav", ".mp3")
+				print(f"Missing file: {filename}")
+
 			response.mp3 = filename
 			response.voice_id = voice.id
 			response.hero_id = voice.hero_id
