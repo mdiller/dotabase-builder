@@ -5,6 +5,8 @@ from valve2json import valve_readfile
 import criteria_sentancing
 import os
 
+file_types = [ "mp3", "wav", "aac" ]
+
 def load():
 	session.query(Response).delete()
 	session.query(Criterion).delete()
@@ -27,10 +29,13 @@ def load():
 			response.fullname = key
 			response.name = os.path.basename(filename).replace(".mp3", "")
 
+			for ext in file_types:
+				newname = filename.replace(".mp3", f".{ext}")
+				if os.path.exists(config.vpk_path + newname):
+					filename = newname
+					break
+
 			if not os.path.exists(config.vpk_path + filename):
-				filename = filename.replace(".mp3", ".wav")
-			if not os.path.exists(config.vpk_path + filename):
-				filename = filename.replace(".wav", ".mp3")
 				print(f"Missing file: {filename}")
 
 			response.mp3 = filename

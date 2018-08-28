@@ -116,6 +116,8 @@ def kv_nocommentfile2json(text):
 def kvfile2json(text, remove_comments=True):
 	# To temporarily hide non-functional quotes
 	text = re.sub(r'\\"', 'TEMP_QUOTE_TOKEN', text)
+	# remove the null hex char at the end of some files
+	text = re.sub(r'\x00$', '', text)
 	# get rid of troublesome comments
 	if remove_comments:
 		text = uncommentkvfile(text)

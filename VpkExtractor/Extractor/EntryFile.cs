@@ -5,6 +5,7 @@ using System.Linq;
 using ValveResourceFormat;
 using ValveResourceFormat.ResourceTypes;
 using SteamDatabase.ValvePak;
+using SkiaSharp;
 
 namespace VpkExtractor
 {
@@ -97,16 +98,25 @@ namespace VpkExtractor
 						case Sound.AudioFileType.WAV:
 							extension = "wav";
 							break;
-					}
+                        case Sound.AudioFileType.AAC:
+                            extension = "aac";
+                            break;
+                    }
 					break;
 				case ResourceType.Texture:
 					extension = "png";
 					var bitmap = ((Texture)resource.Blocks[BlockType.DATA]).GenerateBitmap();
-					using (var stream = new MemoryStream())
-					{
-						bitmap.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
-						data = stream.ToArray();
-					}
+                    using (var image = SKImage.FromBitmap(bitmap))
+                    {
+                        using (var imgdata = image.Encode(SKEncodedImageFormat.Png, 80))
+                        {
+                            using (var stream = new MemoryStream())
+					        {
+						        imgdata.SaveTo(stream);
+						        data = stream.ToArray();
+					        }
+                        }
+                    }
 					break;
 				case ResourceType.Particle:
 				case ResourceType.Mesh:

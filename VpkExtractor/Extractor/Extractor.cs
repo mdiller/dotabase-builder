@@ -52,6 +52,7 @@ namespace VpkExtractor
 			{
                 CopyNormalFiles("txt");
                 ExtractFiles("txt");
+                ExtractFiles("vsndevts_c", true);
                 ExtractFiles("vxml_c", true);
                 ExtractFiles("vjs_c", true);
                 ExtractFiles("vcss_c", true);

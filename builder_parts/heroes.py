@@ -85,11 +85,17 @@ def load():
 		session.add(hero)
 
 
-	print("- loading hero data from dota_english")
-	# Load additional information from the dota_english.txt file
+	print("- loading hero names from dota_english file")
+	# Load hero names from dota_english file
 	data = valve_readfile(config.vpk_path, paths['dota_english_file'], "kv", encoding="UTF-16")["lang"]["Tokens"]
 	for hero in session.query(Hero):
 		hero.localized_name = data[hero.full_name]
+
+
+	print("- loading bio from hero lore file")
+	# Load bio from hero lore file
+	data = valve_readfile(config.vpk_path, paths['localization_hero_lore'], "kv", encoding="UTF-16")["hero_lore"]
+	for hero in session.query(Hero):
 		hero.bio = data[hero.full_name + "_bio"].replace("<br>", "\n")
 
 	print("- adding hero image files")
