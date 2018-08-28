@@ -90,6 +90,7 @@ def load():
 	data = valve_readfile(config.vpk_path, paths['dota_english_file'], "kv", encoding="UTF-16")["lang"]["Tokens"]
 	for hero in session.query(Hero):
 		hero.localized_name = data[hero.full_name]
+		hero.hype = data[hero.full_name + "_hype"]
 
 
 	print("- loading bio from hero lore file")
