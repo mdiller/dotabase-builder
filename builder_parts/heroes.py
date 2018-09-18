@@ -95,7 +95,7 @@ def load():
 
 	print("- loading bio from hero lore file")
 	# Load bio from hero lore file
-	data = valve_readfile(config.vpk_path, paths['localization_hero_lore'], "kv", encoding="UTF-16")["hero_lore"]
+	data = valve_readfile(config.vpk_path, paths['localization_hero_lore'], "kv", encoding="UTF-16")["lang"]["Tokens"]
 	for hero in session.query(Hero):
 		hero.bio = data[hero.full_name + "_bio"].replace("<br>", "\n")
 
