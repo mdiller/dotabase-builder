@@ -77,7 +77,7 @@ def ability_special_add_talent(ability_special, ability_query):
 				}[talent_operation]
 
 			values = attribute["value"].split(" ")
-			talent_value = float(talent_attribute["value"])
+			talent_value = float(re.sub(r"[a-z]", "", talent_attribute["value"]))
 			for i in range(len(values)):
 				values[i] = str(do_op(float(values[i]), talent_value))
 			attribute["talent_value"] = clean_values(" ".join(values))

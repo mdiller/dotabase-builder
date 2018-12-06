@@ -14,6 +14,11 @@ def name_to_url(name):
 		name = name.replace(key, conversions[key])
 	return name
 
+def vsndevts_to_media_name(text):
+	text = text.replace("soundevents/voscripts/game_sounds_vo_", "")
+	text = text.replace(".vsndevts", "")
+	return text 
+
 def load():
 	session.query(Voice).delete()
 	print("Voices")
@@ -28,7 +33,7 @@ def load():
 		voice.image = hero.portrait
 		voice.url = name_to_url(hero.localized_name) + "/Responses"
 
-		voice.vsndevts_path = "/" + json.loads(hero.json_data).get("VoiceFile")
+		voice.media_name = vsndevts_to_media_name(json.loads(hero.json_data).get("VoiceFile"))
 		voice.hero_id = hero.id
 
 		session.add(voice)
@@ -43,11 +48,14 @@ def load():
 		"Announcer: Bristleback": "Bristleback_Announcer_Pack",
 		"Mega-Kills: Bristleback": "Bristleback_Announcer_Pack"
 	}
-	custom_vsndevts = {
-		"Default Announcer": "/soundevents/voscripts/game_sounds_vo_announcer.vsndevts",
-		"Default Mega-Kill Announcer": "/soundevents/voscripts/game_sounds_vo_announcer_killing_spree.vsndevts",
-		"Announcer: Kunkka & Tidehunter": "/soundevents/voscripts/game_sounds_vo_announcer_dlc_kunkka_tide.vsndevts",
-		"Mega-Kills: Kunkka & Tidehunter": "/soundevents/voscripts/game_sounds_vo_announcer_dlc_kunkka_tide_killing_spree.vsndevts"
+	custom_media_name = {
+		"Default Announcer": "announcer",
+		"Default Mega-Kill Announcer": "announcer_killing_spree",
+		"Announcer: Kunkka & Tidehunter": "announcer_dlc_kunkka_tide",
+		"Mega-Kills: Kunkka & Tidehunter": "announcer_dlc_kunkka_tide_killing_spree",
+		"Announcer: Meepo": "announcer_dlc_meepo",
+		"Mega-Kills: Meepo": "announcer_dlc_meepo_killing_spree",
+		"Mega-Kills: Gabe Newell": "announcer_dlc_gaben_killing_spree"
 	}
 
 	print("- loading from announcers")
@@ -69,12 +77,12 @@ def load():
 		else:
 			voice.url = name_to_url(announcer["name"])
 
-		if voice.name in custom_vsndevts:
-			voice.vsndevts_path = custom_vsndevts[voice.name]
+		if voice.name in custom_media_name:
+			voice.media_name = custom_media_name[voice.name]
 		else:
 			for asset in announcer["visuals"]:
 				if announcer["visuals"][asset]["type"] == "announcer":
-					voice.vsndevts_path = "/" + announcer["visuals"][asset]["modifier"]
+					voice.media_name = vsndevts_to_media_name(announcer["visuals"][asset]["modifier"])
 
 		session.add(voice)
 

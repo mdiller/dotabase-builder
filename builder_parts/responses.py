@@ -2,6 +2,7 @@ from __main__ import session, config, paths
 from dotabase import *
 from utils import *
 from valve2json import valve_readfile
+from vccd_reader import ClosedCaptionFile
 import criteria_sentancing
 import os
 
@@ -16,10 +17,17 @@ def load():
 	for voice in session.query(Voice):
 		progress.tick()
 
-		if not voice.vsndevts_path:
+		if not voice.media_name:
 			continue
 
-		vsndevts_data = valve_readfile(config.vpk_path, voice.vsndevts_path, "vsndevts")
+		vsndevts_path = f"/soundevents/voscripts/game_sounds_vo_{voice.media_name}.vsndevts"
+		vsndevts_data = valve_readfile(config.vpk_path, vsndevts_path, "vsndevts")
+		captionsFilename = f"{config.vpk_path}/resource/subtitles/subtitles_{voice.media_name}_english.dat"
+		if os.path.exists(captionsFilename):
+			captionsFile = ClosedCaptionFile(captionsFilename)
+		else:
+			print(f"missing {captionsFilename}")
+			captionsFile = None
 
 		for key in vsndevts_data:
 			data = vsndevts_data[key]
@@ -42,46 +50,18 @@ def load():
 			response.voice_id = voice.id
 			response.hero_id = voice.hero_id
 			response.criteria = ""
+
+			if captionsFile:
+				text = captionsFile.lookup(response.fullname)
+				if text and not ("_arc_" in text):
+					response.text = text
+					response.text_simple = text.replace("...", " ")
+					response.text_simple = " " + re.sub(r'[^a-z^0-9^A-Z^\s]', r'', response.text_simple).lower() + " "
+					response.text_simple = re.sub(r'\s+', r' ', response.text_simple)
+				else:
+					response.text = ""
+
 			session.add(response)
-	
-
-	fulldata = valve_readfile(paths['scraped_responses_dir'], paths['scraped_responses_file'], "scrapedresponses")
-	progress = ProgressBar(len(fulldata), title="- loading response texts")
-	for voiceid in fulldata:
-		progress.tick()
-		voice = session.query(Voice).filter_by(id=int(voiceid)).first()
-		data = fulldata[voiceid]
-
-		for response in session.query(Response).filter_by(voice_id=voice.id):
-			text = ""
-
-			# these to help with some weird shit
-			fullname = re.sub(r'^announcer_', '', response.fullname)
-			fullname = re.sub(r'defensegrid', 'defense_grid', fullname)
-			fullname = re.sub(r'techies_tech_ann', 'tech_ann', fullname)
-			fullname = re.sub(r'dlc_tusk_tusk_ann', 'greevling_tusk_ann', fullname)
-			if voice.id == 49: # dragon knight
-				fullname = f"dk_{response.name}"
-
-			if response.fullname in data:
-				text = data[response.fullname]
-			elif fullname in data:
-				text = data[fullname]
-			elif response.name in data:
-				text = data[response.name]
-
-			if text != "":
-				text = re.sub(r'<!--.*-->', r'', text)
-				text = re.sub(r'{{Tooltip\|([^|]+)\|(.*)}}', r'\1 (\2)', text)
-				text = re.sub(r'{{tooltip\|\?\|(.*)}}', r'(\1)', text)
-				text = re.sub(r'{{.*}}', r'', text)
-				response.text = text
-				response.text_simple = text.replace("...", " ")
-				response.text_simple = " " + re.sub(r'[^a-z^0-9^A-Z^\s]', r'', response.text_simple).lower() + " "
-				response.text_simple = re.sub(r'\s+', r' ', response.text_simple)
-			else:
-				response.text = ""
-
 
 	print("- loading criteria")
 	rules = {}
