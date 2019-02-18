@@ -99,7 +99,7 @@ def vsndevts2json(text):
 
 	text = re.sub(r'{\s*{([^{}]+)}\s*}', r'{\1}', text)
 	if not re.match(r"^\s*\{", text):
-		text = "{ noodle" + text + " }"
+		text = "{ " + text + " }"
 	# To re-include non-functional quotes
 	text = re.sub(r'TEMP_QUOTE_TOKEN', '\\"', text)
 
