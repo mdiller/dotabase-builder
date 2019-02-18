@@ -102,9 +102,10 @@ def load():
 	print("- adding hero image files")
 	# Add img files to hero
 	for hero in session.query(Hero):
-		hero.icon = paths['hero_icon_path'] + hero.name + ".png"
-		hero.image = paths['hero_image_path'] + hero.name + ".png"
-		hero.portrait = paths['hero_selection_path'] + hero.full_name + ".png"
+		file_ending = hero.full_name + "_png.png"
+		hero.icon = paths['hero_icon_path'] + file_ending
+		hero.image = paths['hero_image_path'] + file_ending
+		hero.portrait = paths['hero_selection_path'] + file_ending
 
 	print("- adding hero real names")
 	data = read_json("builderdata/hero_names.json")

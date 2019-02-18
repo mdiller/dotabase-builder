@@ -19,7 +19,7 @@ def load():
 		emoticon.id = int(emoticonid)
 		emoticon.name = data[emoticonid]['aliases']['0']
 		emoticon.ms_per_frame = data[emoticonid]['ms_per_frame']
-		emoticon.url = paths['emoticon_image_path'] + data[emoticonid]['image_name']
+		emoticon.url = paths['emoticon_image_path'] + data[emoticonid]['image_name'].replace(".png", "_png.png")
 		try:
 			img = Image.open(config.vpk_path + emoticon.url)
 			emoticon.frames = int(img.size[0] / img.size[1])

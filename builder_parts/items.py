@@ -49,8 +49,9 @@ def load():
 	print("- adding item icon files")
 	# Add img files to item
 	for item in session.query(Item):
-		if os.path.isfile(config.vpk_path + paths['item_img_path'] + item.name.replace("item_", "") + ".png"):
-			item.icon = paths['item_img_path'] + item.name.replace("item_", "") + ".png"
+		iconpath = paths['item_img_path'] + item.name.replace("item_", "") + "_png.png"
+		if os.path.isfile(config.vpk_path + iconpath):
+			item.icon = iconpath
 		else:
 			if "recipe" in item.name:
 				item.icon = paths['item_img_path'] + "recipe.png"
