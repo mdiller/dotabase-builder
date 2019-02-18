@@ -129,7 +129,8 @@ def kvfile2json(text, remove_comments=True):
 	text = re.sub(r',(\s*[}\]])', r'\1', text)
 	text = re.sub(r'([}\]])(\s*)("[^"]*":\s*)?([{\[])', r'\1,\2\3\4', text)
 	text = re.sub(r'}(\s*"[^"]*":)', r'},\1', text)
-	text = "{ " + text + " }"
+	if not re.match(r"^\s*\{", text):
+		text = "{ " + text + " }"
 	# To re-include non-functional quotes
 	text = re.sub(r'TEMP_QUOTE_TOKEN', '\\"', text)
 
