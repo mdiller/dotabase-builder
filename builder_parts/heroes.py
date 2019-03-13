@@ -62,6 +62,7 @@ def load():
 		hero.roles = hero_data.get('Role', '').replace(',', '|')
 		hero.role_levels = hero_data.get('Rolelevels', '').replace(',', '|')
 		glow_color = hero_data.get('HeroGlowColor', None)
+		hero.color = "#ffffff" # should have a default color
 		if glow_color:
 			hero.color = "#{0:02x}{1:02x}{2:02x}".format(*map(int, glow_color.split(' ')))
 
