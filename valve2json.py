@@ -85,7 +85,7 @@ def vsndevts_from_old(text):
 
 def vsndevts2json(text):
 	# If this isnt there, its a kv1 file
-	if "<!-- kv3 " not in text:
+	if not (re.match(r'^\{\s*[^\s"]+\s=\s+\{', text) or ("<!-- kv3 " in text)):
 		return vsndevts_from_old(text)
 	# else its a kv3 file
 
