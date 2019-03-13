@@ -169,7 +169,7 @@ class ProgressBar:
 	def render(self):
 		chunks = '█' * int(round(self.percent * self.max_chunks))
 		spaces = ' ' * (self.max_chunks - len(chunks))
-		sys.stdout.write(f"\r{self.title} |{chunks + spaces}| ({self.percent:.0%}): ".encode("utf8").decode(sys.stdout.encoding))
+		sys.stdout.write(f"\r{self.title} |{chunks + spaces}| {self.percent:.0%}".encode("utf8").decode(sys.stdout.encoding))
 		if self.current == self.total:
 			sys.stdout.write("\n")
 		sys.stdout.flush()
