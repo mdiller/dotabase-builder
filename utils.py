@@ -1,6 +1,9 @@
 import sys, os, json, re
 from collections import OrderedDict
 
+def printerr(*args, **kwargs):
+	print(*args, file=sys.stderr, **kwargs)
+
 def clean_values(values, join_string=" ", percent=False):
 	if values is None:
 		return None
@@ -166,10 +169,12 @@ class ProgressBar:
 	def render(self):
 		chunks = '█' * int(round(self.percent * self.max_chunks))
 		spaces = ' ' * (self.max_chunks - len(chunks))
-		sys.stdout.write(f"\r{self.title} |{chunks + spaces}| {self.percent:.0%}")
+		sys.stdout.write(f"\r{self.title} |{chunks + spaces}| ({self.percent:.0%}): ".encode("utf8").decode(sys.stdout.encoding))
 		if self.current == self.total:
 			sys.stdout.write("\n")
 		sys.stdout.flush()
+		if self.current == self.total:
+			sys.stderr.flush()
 
 
 class Config:

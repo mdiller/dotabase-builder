@@ -56,6 +56,6 @@ def load():
 			if "recipe" in item.name:
 				item.icon = paths['item_img_path'] + "recipe.png"
 			else:
-				print(f"icon file not found for {item.name}")
+				printerr(f"icon file not found for {item.name}", flush=True)
 
 	session.commit()

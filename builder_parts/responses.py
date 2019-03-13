@@ -26,7 +26,7 @@ def load():
 		if os.path.exists(captionsFilename):
 			captionsFile = ClosedCaptionFile(captionsFilename)
 		else:
-			print(f"missing {captionsFilename}")
+			printerr(f"missing {captionsFilename}")
 			captionsFile = None
 
 		for key in vsndevts_data:
@@ -44,7 +44,7 @@ def load():
 					break
 
 			if not os.path.exists(config.vpk_path + filename):
-				print(f"Missing file: {filename}")
+				printerr(f"Missing file: {filename}")
 
 			response.mp3 = filename
 			response.voice_id = voice.id
