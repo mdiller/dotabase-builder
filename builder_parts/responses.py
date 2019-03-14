@@ -89,18 +89,21 @@ def load():
 		criterion.required = "required" in vals
 		session.add(criterion)
 
-	progress = ProgressBar(len(rules), title="- linking rules:")
+	progress = ProgressBar(len(rules) + session.query(Response).count(), title="- linking rules:")
+	pre_responses = {}
 	for key in rules:
-		response_criteria = rules[key]['criteria'].rstrip()
 		progress.tick()
-
+		response_criteria = rules[key]['criteria'].rstrip()
 		for fullname in groups[rules[key]['response']]:
-			response = session.query(Response).filter_by(fullname=fullname).first()
-			if response is not None:
-				if response.criteria == "":
-					response.criteria = response_criteria
-				else:
-					response.criteria += "|" + response_criteria
+			if fullname not in pre_responses:
+				pre_responses[fullname] = response_criteria
+			else:
+				pre_responses[fullname] += "|" + response_criteria
+
+	for response in session.query(Response):
+		progress.tick()
+		if response.fullname in pre_responses:
+			response.criteria = pre_responses[response.fullname]
 
 	print("- generating pretty criteria")
 	criteria_sentancing.load_pretty_criteria(session)
