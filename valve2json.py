@@ -13,9 +13,20 @@ from __main__ import config
 
 json_cache_dir = "jsoncache"
 
+def dict_handle_duplicates(ordered_pairs):
+	d = collections.OrderedDict()
+	for k, v in ordered_pairs:
+		original_k = k
+		i = 1
+		while k in d:
+			k = f"{original_k}{i}"
+			i += 1
+		d[k] = v
+	return d
+
 def tryloadjson(text, strict=True):
 	try:
-		return json.loads(text, strict=strict, object_pairs_hook=collections.OrderedDict)
+		return json.loads(text, strict=strict, object_pairs_hook=dict_handle_duplicates)
 	except json.JSONDecodeError as e:
 		filename = "jsoncache/errored.json"
 		with open(filename, "w+", encoding="utf-16") as f:
