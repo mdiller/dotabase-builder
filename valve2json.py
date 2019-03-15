@@ -4,7 +4,7 @@ import string
 import os.path
 import collections
 from utils import *
-from __main__ import config
+from __main__ import config, paths
 
 # Converts valve's obsure and unusable text formats to json
 # can do the following formats:
@@ -212,6 +212,36 @@ def scrapedresponses2json(text):
 			herodata[key.lower()] = value
 		newdata[heroid] = herodata
 	return newdata
+
+class AssetModifier():
+	def __init__(self, data):
+		self.data = data
+		self.type = data.get("type")
+		self.asset = data.get("asset")
+		self.modifier = data.get("modifier")
+
+# a class that allows easier access to the items_game file
+class ItemsGame():
+	def __init__(self):
+		self.data = valve_readfile(config.vpk_path, paths['cosmetics_scripts_file'], "kv_nocomment", encoding="UTF-8")["items_game"]
+		self.items = self.data["items"]
+		self.item_name_dict = {}
+		self.by_prefab = {}
+		for key, item in self.items.items():
+			item["id"] = key
+			self.item_name_dict[item.get("name")] = item
+			prefab = item.get("prefab")
+			if prefab not in self.by_prefab:
+				self.by_prefab[prefab] = []
+			self.by_prefab[prefab].append(item)
+
+	def get_asset_modifier(self, item, asset_type):
+		for key, data in item.get("visuals", {}).items():
+			if not "asset_modifier" in key:
+				continue
+			elif data.get("type") == asset_type:
+				return AssetModifier(data)
+		return None
 
 file_formats = {
 	"scrapedresponses": scrapedresponses2json,

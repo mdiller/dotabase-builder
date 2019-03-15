@@ -1,7 +1,7 @@
 from __main__ import session, config, paths
 from dotabase import *
 from utils import *
-from valve2json import valve_readfile
+from valve2json import valve_readfile, ItemsGame
 
 def name_to_url(name):
 	conversions = {
@@ -39,7 +39,7 @@ def load():
 		session.add(voice)
 
 	print("- loading cosmetics file (takes a bit)")
-	data = valve_readfile(config.vpk_path, paths['cosmetics_scripts_file'], "kv_nocomment", encoding="UTF-8")["items_game"]["items"]
+	items_game = ItemsGame()
 
 	custom_urls = {
 		"Announcer: Tuskar": "Announcer:_Tusk",
@@ -50,24 +50,15 @@ def load():
 	}
 	custom_media_name = {
 		"Default Announcer": "announcer",
-		"Default Mega-Kill Announcer": "announcer_killing_spree",
-		"Announcer: Kunkka & Tidehunter": "announcer_dlc_kunkka_tide",
-		"Mega-Kills: Kunkka & Tidehunter": "announcer_dlc_kunkka_tide_killing_spree",
-		"Announcer: Meepo": "announcer_dlc_meepo",
-		"Mega-Kills: Meepo": "announcer_dlc_meepo_killing_spree",
-		"Mega-Kills: Gabe Newell": "announcer_dlc_gaben_killing_spree"
+		"Default Mega-Kill Announcer": "announcer_killing_spree"
 	}
 
 	print("- loading from announcers")
-	for key in data:
-		announcer = data[key]
-		if announcer.get("prefab") != "announcer":
-			continue
-
+	for announcer in items_game.by_prefab["announcer"]:
 		voice = Voice()
 
 		# the first announcer has id = 586, so this will not interfere with hero ids
-		voice.id = int(key)
+		voice.id = int(announcer["id"])
 		voice.name = announcer["name"]
 		voice.icon = "/panorama/images/icon_announcer_psd.png"
 		voice.image = f"/panorama/images/{announcer['image_inventory']}_png.png"
@@ -80,16 +71,15 @@ def load():
 		if voice.name in custom_media_name:
 			voice.media_name = custom_media_name[voice.name]
 		else:
-			for asset in announcer["visuals"]:
-				if announcer["visuals"][asset]["type"] == "announcer":
-					voice.media_name = vsndevts_to_media_name(announcer["visuals"][asset]["modifier"])
+			ass_mod = items_game.get_asset_modifier(announcer, "announcer")
+			if ass_mod:
+				voice.media_name = ass_mod.asset.replace("npc_dota_hero_", "")
 
 		session.add(voice)
 
 	print("- associating announcer packs")
-	for key in data:
-		pack = data[key]
-		if pack.get("prefab") != "bundle" or pack.get("name") == "Assembly of Announcers Pack":
+	for pack in items_game.by_prefab["bundle"]:
+		if pack.get("name") == "Assembly of Announcers Pack":
 			continue
 		for name in pack.get("bundle", []):
 			for voice in session.query(Voice).filter_by(name=name):
