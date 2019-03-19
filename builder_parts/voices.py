@@ -32,6 +32,7 @@ def load():
 		voice.icon = hero.icon
 		voice.image = hero.portrait
 		voice.url = name_to_url(hero.localized_name) + "/Responses"
+		voice.criteria = None
 
 		voice.media_name = vsndevts_to_media_name(json.loads(hero.json_data).get("VoiceFile"))
 		voice.hero_id = hero.id
@@ -62,6 +63,7 @@ def load():
 		voice.name = announcer["name"]
 		voice.icon = "/panorama/images/icon_announcer_psd.png"
 		voice.image = f"/panorama/images/{announcer['image_inventory']}_png.png"
+		voice.criteria = None
 
 		if voice.name in custom_urls:
 			voice.url = custom_urls[voice.name]
@@ -76,6 +78,54 @@ def load():
 				voice.media_name = ass_mod.asset.replace("npc_dota_hero_", "")
 
 		session.add(voice)
+
+	added_names = []
+	print("- loading from hero cosmetics")
+	for item in items_game.by_prefab["wearable"]:
+		criteria = []
+		for ass_mod in items_game.get_asset_modifiers(item, "response_criteria"):
+			criteria.append(ass_mod.asset)
+		if len(criteria) == 0:
+			continue
+		criteria = "|".join(map(lambda c: f"customresponse:{c}", criteria))
+		icon = None
+		for ass_mod in items_game.get_asset_modifiers(item, "icon_replacement_hero_minimap"):
+			icon = f"/panorama/images/heroes/icons/{ass_mod.modifier}_png.png"
+		skip = False
+		for pack in items_game.by_prefab["bundle"]:
+			if item["name"] not in pack["bundle"]:
+				continue
+			for item_name in pack["bundle"]:
+				if item_name in added_names:
+					voice = session.query(Voice).filter_by(name=item_name).first()
+					voice.criteria += f"|{criteria}"
+					skip = True
+				if not icon:
+					related_item = items_game.item_name_dict[item_name]
+					for ass_mod in items_game.get_asset_modifiers(related_item, "icon_replacement_hero_minimap"):
+						icon = f"/panorama/images/heroes/icons/{ass_mod.modifier}_png.png"
+						break
+		if skip:
+			continue
+
+		voice = Voice()
+		voice.id = int(item["id"])
+		voice.name = item["name"]
+		voice.image = f"/panorama/images/{item['image_inventory']}_png.png"
+		voice.icon = icon
+		voice.criteria = criteria
+		voice.media_name = None
+
+		for hero_name in item.get("used_by_heroes", {}):
+			hero = session.query(Hero).filter_by(full_name=hero_name).first()
+			if hero:
+				voice.hero_id = hero.id
+				if not voice.icon:
+					voice.icon = hero.icon
+
+		added_names.append(voice.name)
+		session.add(voice)
+
 
 	print("- associating announcer packs")
 	for pack in items_game.by_prefab["bundle"]:

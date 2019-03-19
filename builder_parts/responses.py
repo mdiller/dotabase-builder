@@ -4,6 +4,7 @@ from utils import *
 from valve2json import valve_readfile
 from vccd_reader import ClosedCaptionFile
 import criteria_sentancing
+import re
 import os
 
 file_types = [ "mp3", "wav", "aac" ]
@@ -89,6 +90,20 @@ def load():
 		criterion.required = "required" in vals
 		session.add(criterion)
 
+	voice_linker = {}
+	# fix up voice.criteria
+	for voice in session.query(Voice):
+		if voice.criteria:
+			crits = []
+			for crit in voice.criteria.split("|"):
+				key, value = crit.split(":")
+				realcrit = session.query(Criterion).filter_by(matchkey=key).filter_by(matchvalue=value).first()
+				if realcrit:
+					crits.append(realcrit.name)
+			voice.criteria = "|".join(crits)
+			pattern = f"(^|\|| ){voice.criteria}($|\|| )"
+			voice_linker[pattern] = voice
+
 	progress = ProgressBar(len(rules) + session.query(Response).count(), title="- linking rules:")
 	pre_responses = {}
 	for key in rules:
@@ -104,6 +119,9 @@ def load():
 		progress.tick()
 		if response.fullname in pre_responses:
 			response.criteria = pre_responses[response.fullname]
+			for pattern, voice in voice_linker.items():
+				if re.search(pattern, response.criteria):
+					response.voice_id = voice.id
 
 	print("- generating pretty criteria")
 	criteria_sentancing.load_pretty_criteria(session)

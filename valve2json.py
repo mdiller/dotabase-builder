@@ -235,6 +235,15 @@ class ItemsGame():
 				self.by_prefab[prefab] = []
 			self.by_prefab[prefab].append(item)
 
+	def get_asset_modifiers(self, item, asset_type):
+		result = []
+		for key, data in item.get("visuals", {}).items():
+			if not "asset_modifier" in key:
+				continue
+			elif data.get("type") == asset_type:
+				result.append(AssetModifier(data))
+		return result
+
 	def get_asset_modifier(self, item, asset_type):
 		for key, data in item.get("visuals", {}).items():
 			if not "asset_modifier" in key:
