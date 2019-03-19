@@ -90,6 +90,8 @@ def ability_special_add_header(ability_special, strings, name):
 	for attribute in ability_special:
 		header = strings.get(f"DOTA_Tooltip_ability_{name}_{attribute['key']}")
 		if header is None:
+			header = strings.get(f"DOTA_Tooltip_Ability_{name}_{attribute['key']}")
+		if header is None:
 			continue
 		match = re.match(r"(%)?(\+\$)?(.*)", header)
 		header = match.group(3)
