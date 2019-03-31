@@ -54,7 +54,7 @@ def load():
 
 			if captionsFile:
 				text = captionsFile.lookup(response.fullname)
-				if text and not ("_arc_" in text):
+				if text:
 					response.text = text
 					response.text_simple = text.replace("...", " ")
 					response.text_simple = " " + re.sub(r'[^a-z^0-9^A-Z^\s]', r'', response.text_simple).lower() + " "
