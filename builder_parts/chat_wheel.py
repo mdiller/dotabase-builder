@@ -2,13 +2,15 @@ from __main__ import session, config, paths
 from dotabase import *
 from utils import *
 from valve2json import valve_readfile
-
+import os
 
 def load():
 	session.query(ChatWheelMessage).delete()
 	print("chat_wheel")
 
 	print("- loading chat_wheel stuff from scripts")
+	# load sounds info from vsndevts file
+	sounds_data = valve_readfile(config.vpk_path, paths['chat_wheel_vsndevts_file'], "vsndevts")
 	# load all of the item scripts data information
 	data = valve_readfile(config.vpk_path, paths['chat_wheel_scripts_file'], "kv", encoding="utf-8")["chat_wheel"]
 	for key in data["messages"]:
@@ -23,9 +25,12 @@ def load():
 		message.image = msg_data.get("image")
 		message.all_chat = msg_data.get("all_chat") == "1"
 		if message.sound:
-			if message.sound == "soundboard.crash":
-				message.sound = "soundboard.crash_burn"
-			message.sound = f"/sounds/misc/soundboard/{message.sound.replace('soundboard.', '')}.wav"
+			if message.sound not in sounds_data:
+				printerr(f"Couldn't find vsndevts entry for {message.sound}, skipping")
+				continue
+			message.sound = "/" + sounds_data[message.sound]["vsnd_files"][0].replace(".vsnd", ".wav")
+			if not os.path.exists(config.vpk_path + message.sound):
+				printerr(f"Missing file: {message.sound}")
 		if message.image:
 			message.image = f"/panorama/images/{message.image}"
 

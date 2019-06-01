@@ -12,6 +12,7 @@
 	"ability_scripts_file": "/scripts/npc/npc_abilities.txt",
 	"emoticon_scripts_file": "/scripts/emoticons.txt",
 	"chat_wheel_scripts_file": "/scripts/chat_wheel.txt",
+	"chat_wheel_vsndevts_file": "/soundevents/game_sounds.vsndevts",
 	"dota_english_file": "/resource/localization/dota_english.txt",
 	"scraped_responses_dir": "ResponseScraper",
 	"scraped_responses_file": "/responses_data.txt",
