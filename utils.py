@@ -43,7 +43,8 @@ def get_ability_special(ability_special, name):
 		talent_keys = { 
 			"LinkedSpecialBonus": "talent_name", 
 			"LinkedSpecialBonusField": "talent_value_key", 
-			"LinkedSpecialBonusOperation": "talent_operation"
+			"LinkedSpecialBonusOperation": "talent_operation",
+			"RequiresScepter": "aghs_upgrade"
 		}
 		for key in talent_keys:
 			if key in obj:
@@ -76,7 +77,8 @@ def ability_special_add_talent(ability_special, ability_query):
 				return {
 					"SPECIAL_BONUS_ADD": value1 + value2,
 					"SPECIAL_BONUS_SUBTRACT": value1 - value2,
-					"SPECIAL_BONUS_MULTIPLY": value1 * value2
+					"SPECIAL_BONUS_MULTIPLY": value1 * value2,
+					"SPECIAL_BONUS_PERCENTAGE_ADD": value1 * (1 + (value2 / 100))
 				}[talent_operation]
 
 			values = attribute["value"].split(" ")
