@@ -3,6 +3,16 @@ from dotabase import *
 from utils import *
 from valve2json import valve_readfile
 
+def build_replacements_dict(item):
+	specials = json.loads(item.ability_special, object_pairs_hook=OrderedDict)
+	result = {
+		"abilitycastrange": item.cast_range,
+		"customval_team_tomes_used": "0"
+	}
+	for attrib in specials:
+		if attrib["key"] not in result:
+			result[attrib["key"]] = clean_values(attrib["value"], "/")
+	return result
 
 def load():
 	session.query(Item).delete()
@@ -24,6 +34,7 @@ def load():
 		item.quality = item_data.get("ItemQuality")
 		item.mana_cost = clean_values(item_data.get('AbilityManaCost'))
 		item.cooldown = clean_values(item_data.get('AbilityCooldown'))
+		item.cast_range = clean_values(item_data.get('AbilityCastRange'))
 		item.base_level = item_data.get("ItemBaseLevel")
 		item.ability_special = json.dumps(get_ability_special(item_data.get("AbilitySpecial"), itemname), indent=4)
 
@@ -44,7 +55,7 @@ def load():
 		ability_special = json.loads(item.ability_special, object_pairs_hook=OrderedDict)
 		ability_special = ability_special_add_header(ability_special, data, item.name)
 		item.ability_special = json.dumps(ability_special, indent=4)
-		item.description = clean_description(item.description, ability_special, base_level=item.base_level)
+		item.description = clean_description(item.description, build_replacements_dict(item), base_level=item.base_level)
 
 	print("- adding item icon files")
 	# Add img files to item

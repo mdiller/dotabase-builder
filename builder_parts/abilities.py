@@ -4,7 +4,18 @@ from utils import *
 from valve2json import valve_readfile
 import re
 
-	
+def build_replacements_dict(ability):
+	specials = json.loads(ability.ability_special, object_pairs_hook=OrderedDict)
+	result = {
+		"abilityduration": ability.duration,
+		"abilitychanneltime": ability.channel_time,
+		"abilitycastpoint": ability.cast_point,
+		"abilitycastrange": ability.cast_range
+	}
+	for attrib in specials:
+		if attrib["key"] not in result:
+			result[attrib["key"]] = clean_values(attrib["value"], "/")
+	return result
 
 def load():
 	session.query(Ability).delete()
@@ -79,11 +90,15 @@ def load():
 				notes.append(data[key])
 		ability.note = "" if len(notes) == 0 else "\n".join(notes)
 
+
 		ability_special = json.loads(ability.ability_special, object_pairs_hook=OrderedDict)
 		ability_special = ability_special_add_talent(ability_special, session.query(Ability))
 		ability_special = ability_special_add_header(ability_special, data, ability.name)
 		ability.ability_special = json.dumps(ability_special, indent=4)
-		ability.description = clean_description(ability.description, ability_special)
+		replacements_dict = build_replacements_dict(ability)
+		ability.aghanim = clean_description(ability.aghanim, replacements_dict)
+		ability.description = clean_description(ability.description, replacements_dict)
+		ability.note = clean_description(ability.note, replacements_dict)
 
 	print("- adding ability icon files")
 	# Add img files to ability

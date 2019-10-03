@@ -84,6 +84,8 @@ def ability_special_add_talent(ability_special, ability_query):
 			values = attribute["value"].split(" ")
 			talent_value = float(re.sub(r"[a-z]", "", talent_attribute["value"]))
 			for i in range(len(values)):
+				if values[i] == "":
+					values[i] = "0"
 				values[i] = str(do_op(float(values[i]), talent_value))
 			attribute["talent_value"] = clean_values(" ".join(values))
 	return ability_special
@@ -112,7 +114,7 @@ def ability_special_add_header(ability_special, strings, name):
 	return ability_special
 
 # Cleans up the descriptions of items and abilities
-def clean_description(text, ability_special, base_level=None):
+def clean_description(text, replacements_dict, base_level=None):
 	text = re.sub(r'</h1> ', r'</h1>', text)
 	text = re.sub(r'<h1>([^<]+)</h1>', r'\n# \1\n', text)
 	text = re.sub(r'<(br|BR)>', r'\n', text)
@@ -124,10 +126,9 @@ def clean_description(text, ability_special, base_level=None):
 		if value == "":
 			return "%"
 		else:
-			for attrib in ability_special:
-				if attrib["key"] == value:
-					value = clean_values(attrib["value"], "/")
-					return bold_values(value, "/", base_level)
+			if value in replacements_dict:
+				return bold_values(replacements_dict[value], "/", base_level)
+
 			print(f"Missing attrib %{value}%")
 			return f"%{value}%"
 
