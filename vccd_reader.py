@@ -84,8 +84,11 @@ def crcHash(buffer):
 # print(crcHash("abaddon_abad_ally_01"))
 
 class ClosedCaption():
-	def __init__(self, f):
+	def __init__(self, f, version):
 		self.hash = struct.unpack("<I", f.read(4))[0]
+		self.extra = None
+		if version > 1:
+			self.extra = f"0x{f.read(4).hex()}"
 		self.blocknum = struct.unpack("<i", f.read(4))[0]
 		self.offset = struct.unpack("<H", f.read(2))[0]
 		self.length = struct.unpack("<H", f.read(2))[0]
@@ -94,6 +97,8 @@ class ClosedCaption():
 	def __str__(self):
 		result =  f"text: {self.text}\n"
 		result += f"hash: {self.hash}\n"
+		if self.extra:
+			result += f"extra: {self.extra}\n"
 		result += f"blocknum: {self.blocknum}\n"
 		result += f"offset: {self.offset}\n"
 		result += f"length: {self.length}\n\n"
@@ -118,7 +123,7 @@ class ClosedCaptionFile():
 		self.captions = []
 
 		for i in range(self.directorysize):
-			self.captions.append(ClosedCaption(f))
+			self.captions.append(ClosedCaption(f, self.version))
 		f.close()
 
 		# load all of the caption text
