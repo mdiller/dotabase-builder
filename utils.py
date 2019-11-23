@@ -114,7 +114,7 @@ def ability_special_add_header(ability_special, strings, name):
 	return ability_special
 
 # Cleans up the descriptions of items and abilities
-def clean_description(text, replacements_dict, base_level=None):
+def clean_description(text, replacements_dict, base_level=None, value_bolding=True):
 	text = re.sub(r'</h1> ', r'</h1>', text)
 	text = re.sub(r'<h1>([^<]+)</h1>', r'\n# \1\n', text)
 	text = re.sub(r'<(br|BR)>', r'\n', text)
@@ -127,12 +127,16 @@ def clean_description(text, replacements_dict, base_level=None):
 			return "%"
 		else:
 			if value in replacements_dict:
-				return bold_values(replacements_dict[value], "/", base_level)
+				new_value = clean_values(replacements_dict[value], "/")
+				if value_bolding:
+					new_value = bold_values(new_value, "/", base_level)
+				return new_value
 
 			print(f"Missing attrib %{value}%")
 			return f"%{value}%"
 
 	text = re.sub(r'%([^%\s]*)%', replace_attrib, text)
+	text = re.sub(r'\{s:([^}\s]*)\}', replace_attrib, text)
 
 	# include the percent in bold if the value is in bold
 	text = re.sub(r'\*\*%', '%**', text)

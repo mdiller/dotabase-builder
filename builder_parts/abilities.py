@@ -14,7 +14,7 @@ def build_replacements_dict(ability):
 	}
 	for attrib in specials:
 		if attrib["key"] not in result:
-			result[attrib["key"]] = clean_values(attrib["value"], "/")
+			result[attrib["key"]] = attrib["value"]
 	return result
 
 def load():
@@ -95,10 +95,15 @@ def load():
 		ability_special = ability_special_add_talent(ability_special, session.query(Ability))
 		ability_special = ability_special_add_header(ability_special, data, ability.name)
 		ability.ability_special = json.dumps(ability_special, indent=4)
+
 		replacements_dict = build_replacements_dict(ability)
-		ability.aghanim = clean_description(ability.aghanim, replacements_dict)
+		ability.localized_name = clean_description(ability.localized_name, replacements_dict, value_bolding=False)
 		ability.description = clean_description(ability.description, replacements_dict)
 		ability.note = clean_description(ability.note, replacements_dict)
+		ability.aghanim = clean_description(ability.aghanim, replacements_dict)
+
+		if ability.localized_name.startswith(": "):
+			ability.localized_name = ability.localized_name[2:]
 
 	print("- adding ability icon files")
 	# Add img files to ability

@@ -11,7 +11,7 @@ def build_replacements_dict(item):
 	}
 	for attrib in specials:
 		if attrib["key"] not in result:
-			result[attrib["key"]] = clean_values(attrib["value"], "/")
+			result[attrib["key"]] = attrib["value"]
 	return result
 
 def load():
