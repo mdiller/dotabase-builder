@@ -2,12 +2,18 @@ from __main__ import session, config, paths
 from dotabase import *
 from utils import *
 from valve2json import valve_readfile
+import re
 
 attribute_dict = {
 	"DOTA_ATTRIBUTE_STRENGTH": "strength",
 	"DOTA_ATTRIBUTE_AGILITY": "agility",
 	"DOTA_ATTRIBUTE_INTELLECT": "intelligence"
 }
+
+def simple_html_to_markdown(text):
+	text = re.sub("<br>", "\n", text)
+	text = re.sub(r"<i>[^>]+</i>", r"\*\1\*", text)
+	return text
 
 def load():
 	session.query(Hero).delete()
@@ -100,7 +106,7 @@ def load():
 	# Load bio from hero lore file
 	data = valve_readfile(config.vpk_path, paths['localization_hero_lore'], "kv", encoding="UTF-16")["lang"]["Tokens"]
 	for hero in session.query(Hero):
-		hero.bio = data[hero.full_name + "_bio"].replace("<br>", "\n")
+		hero.bio = simple_html_to_markdown(data[hero.full_name + "_bio"])
 
 	print("- adding hero image files")
 	# Add img files to hero
