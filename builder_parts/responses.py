@@ -94,8 +94,7 @@ def load():
 
 	
 	custom_voice_criteria = { # because valve did customresponse:arcana for 2 things
-		"Tempest Helm of the Thundergod": "IsZeusEconArcana",
-		"Demon Eater": "IsShadowFiendEconArcana"
+		"Tempest Helm of the Thundergod": "IsZeusEconArcana"
 	}
 	# fix up voice.criteria
 	for voice in session.query(Voice):
