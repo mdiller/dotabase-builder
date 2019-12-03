@@ -21,7 +21,7 @@ def write_json(filename, data):
 # dumps an sqlalchemy table to json
 def dump_table(table, query=None):
 	full_data = []
-	if not query:
+	if query is None:
 		query = session.query(table)
 	for item in query:
 		data = OrderedDict()
