@@ -18,6 +18,8 @@ def load():
 	session.query(Item).delete()
 	print("items")
 
+	added_ids = []
+
 	print("- loading items from item scripts")
 	# load all of the item scripts data information
 	data = valve_readfile(config.vpk_path, paths['item_scripts_file'], "kv")["DOTAAbilities"]
@@ -28,7 +30,7 @@ def load():
 		item = Item()
 
 		item.name = itemname
-		item.id = item_data['ID']
+		item.id = int(item_data['ID'])
 		item.cost = item_data.get('ItemCost')
 		item.aliases = "|".join(item_data.get("ItemAliases", "").split(";"))
 		item.quality = item_data.get("ItemQuality")
@@ -39,6 +41,11 @@ def load():
 		item.ability_special = json.dumps(get_ability_special(item_data.get("AbilitySpecial"), itemname), indent=4)
 
 		item.json_data = json.dumps(item_data, indent=4)
+
+		if item.id in added_ids:
+			print(f"duplicate id on: {itemname}")
+			continue
+		added_ids.append(item.id)
 
 		session.add(item)
 

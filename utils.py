@@ -65,29 +65,33 @@ def ability_special_add_talent(ability_special, ability_query):
 	for attribute in ability_special:
 		talent = attribute.get("talent_name")
 		if talent:
-			talent = ability_query.filter_by(name=talent).first()
-			value_key = attribute.get("talent_value_key", "value")
-			talent_operation = attribute.get("talent_operation", "SPECIAL_BONUS_ADD") # SUBTRACT, MULTIPLY
+			try:
+				talent = ability_query.filter_by(name=talent).first()
+				value_key = attribute.get("talent_value_key", "value")
+				talent_operation = attribute.get("talent_operation", "SPECIAL_BONUS_ADD") # SUBTRACT, MULTIPLY
 
-			talent_ability_special = json.loads(talent.ability_special, object_pairs_hook=OrderedDict)
+				talent_ability_special = json.loads(talent.ability_special, object_pairs_hook=OrderedDict)
 
-			talent_attribute = next(a for a in talent_ability_special if a["key"] == value_key)
+				talent_attribute = next(a for a in talent_ability_special if a["key"] == value_key)
 
-			def do_op(value1, value2):
-				return {
-					"SPECIAL_BONUS_ADD": value1 + value2,
-					"SPECIAL_BONUS_SUBTRACT": value1 - value2,
-					"SPECIAL_BONUS_MULTIPLY": value1 * value2,
-					"SPECIAL_BONUS_PERCENTAGE_ADD": value1 * (1 + (value2 / 100))
-				}[talent_operation]
+				def do_op(value1, value2):
+					return {
+						"SPECIAL_BONUS_ADD": value1 + value2,
+						"SPECIAL_BONUS_SUBTRACT": value1 - value2,
+						"SPECIAL_BONUS_MULTIPLY": value1 * value2,
+						"SPECIAL_BONUS_PERCENTAGE_ADD": value1 * (1 + (value2 / 100))
+					}[talent_operation]
 
-			values = attribute["value"].split(" ")
-			talent_value = float(re.sub(r"[a-z]", "", talent_attribute["value"]))
-			for i in range(len(values)):
-				if values[i] == "":
-					values[i] = "0"
-				values[i] = str(do_op(float(values[i]), talent_value))
-			attribute["talent_value"] = clean_values(" ".join(values))
+				values = attribute["value"].split(" ")
+				talent_value = float(re.sub(r"[a-z]", "", talent_attribute["value"]))
+				for i in range(len(values)):
+					if values[i] == "":
+						values[i] = "0"
+					values[i] = str(do_op(float(values[i]), talent_value))
+				attribute["talent_value"] = clean_values(" ".join(values))
+			except Exception as e:
+				print("errored while adding talent")
+				return ability_special
 	return ability_special
 
 def ability_special_add_header(ability_special, strings, name):

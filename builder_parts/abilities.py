@@ -21,13 +21,16 @@ def load():
 	session.query(Ability).delete()
 	print("Abilities")
 
+	added_ids = []
+
 	print("- loading abilities from ability scripts")
 	# load all of the ability scripts data information
 	data = valve_readfile(config.vpk_path, paths['ability_scripts_file'], "kv")["DOTAAbilities"]
 	for abilityname in data:
 		if(abilityname == "Version" or
 			abilityname == "ability_deward" or
-			abilityname == "dota_base_ability"):
+			abilityname == "dota_base_ability" or
+			not data[abilityname]['ID'].isdigit()):
 			continue
 
 		ability_data = data[abilityname]
@@ -45,7 +48,7 @@ def load():
 				return None
 
 		ability.name = abilityname
-		ability.id = ability_data['ID']
+		ability.id = int(ability_data['ID'])
 		ability.type = get_val('AbilityType', default_base=True)
 		ability.behavior = get_val('AbilityBehavior', default_base=True)
 		ability.cast_range = clean_values(get_val('AbilityCastRange'))
@@ -56,6 +59,11 @@ def load():
 		ability.damage = clean_values(get_val('AbilityDamage'))
 		ability.mana_cost = clean_values(get_val('AbilityManaCost'))
 		ability.ability_special = json.dumps(get_ability_special(ability_data.get("AbilitySpecial"), abilityname), indent=4)
+
+		if ability.id in added_ids:
+			print(f"duplicate id on: {abilityname}")
+			continue
+		added_ids.append(ability.id)
 
 		def get_enum_val(key, prefix):
 			value = get_val(key)

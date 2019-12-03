@@ -12,7 +12,7 @@ attribute_dict = {
 
 def simple_html_to_markdown(text):
 	text = re.sub("<br>", "\n", text)
-	text = re.sub(r"<i>[^>]+</i>", r"\*\1\*", text)
+	text = re.sub(r"<i>([^>]+)</i>", r"\*\1\*", text)
 	return text
 
 def load():
@@ -82,11 +82,12 @@ def load():
 		for slot in range(1, 30):
 			if "Ability" + str(slot) in hero_data:
 				ability = session.query(Ability).filter_by(name=hero_data["Ability" + str(slot)]).first()
-				if ability.name.startswith("special_bonus"):
-					talents.append(ability.localized_name)
-				else:
-					ability.hero_id = hero.id
-					ability.ability_slot = slot
+				if ability:
+					if ability.name.startswith("special_bonus"):
+						talents.append(ability.localized_name)
+					else:
+						ability.hero_id = hero.id
+						ability.ability_slot = slot
 		if len(talents) != 8:
 			raise ValueError("{} only has {} talents?".format(hero.localized_name, len(talents)))
 		hero.talents = "|".join(talents)
@@ -97,8 +98,12 @@ def load():
 	print("- loading hero names from dota_english file")
 	# Load hero names from dota_english file
 	data = valve_readfile(config.vpk_path, paths['dota_english_file'], "kv", encoding="UTF-16")["lang"]["Tokens"]
+	data_abilities = valve_readfile(config.vpk_path, paths['localization_abilities'], "kv", encoding="UTF-16")["lang"]["Tokens"]
 	for hero in session.query(Hero):
-		hero.localized_name = data[hero.full_name]
+		if hero.full_name in data:
+			hero.localized_name = data[hero.full_name]
+		else:
+			hero.localized_name = data_abilities[hero.full_name]
 		hero.hype = data[hero.full_name + "_hype"]
 
 
