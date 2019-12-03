@@ -91,9 +91,18 @@ def load():
 		session.add(criterion)
 
 	voice_linker = {}
+
+	
+	custom_voice_criteria = { # because valve did customresponse:arcana for 2 things
+		"Tempest Helm of the Thundergod": "IsZeusEconArcana",
+		"Demon Eater": "IsShadowFiendEconArcana"
+	}
 	# fix up voice.criteria
 	for voice in session.query(Voice):
 		if voice.criteria:
+			if voice.name in custom_voice_criteria:
+				voice.criteria = custom_voice_criteria[voice.name]
+				continue
 			crits = []
 			for crit in voice.criteria.split("|"):
 				key, value = crit.split(":")
