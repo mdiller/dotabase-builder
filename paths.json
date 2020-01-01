@@ -9,6 +9,7 @@
 	"response_mp3_path": "/sounds/vo/",
 	"hero_scripts_file": "/scripts/npc/npc_heroes.txt",
 	"item_scripts_file": "/scripts/npc/items.txt",
+	"neutral_item_scripts_file": "/scripts/npc/neutral_items.txt",
 	"ability_scripts_file": "/scripts/npc/npc_abilities.txt",
 	"emoticon_scripts_file": "/scripts/emoticons.txt",
 	"chat_wheel_scripts_file": "/scripts/chat_wheel.txt",

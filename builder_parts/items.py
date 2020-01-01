@@ -38,6 +38,7 @@ def load():
 		item.cooldown = clean_values(item_data.get('AbilityCooldown'))
 		item.cast_range = clean_values(item_data.get('AbilityCastRange'))
 		item.base_level = item_data.get("ItemBaseLevel")
+		item.secret_shop = item_data.get("SecretShop") == "1"
 		item.ability_special = json.dumps(get_ability_special(item_data.get("AbilitySpecial"), itemname), indent=4)
 
 		item.json_data = json.dumps(item_data, indent=4)
@@ -63,6 +64,16 @@ def load():
 		ability_special = ability_special_add_header(ability_special, data, item.name)
 		item.ability_special = json.dumps(ability_special, indent=4)
 		item.description = clean_description(item.description, build_replacements_dict(item), base_level=item.base_level)
+
+	print("- adding neutral item data")
+	data = valve_readfile(config.vpk_path, paths['neutral_item_scripts_file'], "kv")["neutral_items"]
+	item_tier_map = {}
+	for tier in data:
+		for name in data[tier]["items"]:
+			item_tier_map[name] = tier
+	for item in session.query(Item):
+		if item.name in item_tier_map:
+			item.neutral_tier = item_tier_map[item.name]
 
 	print("- adding item icon files")
 	# Add img files to item
