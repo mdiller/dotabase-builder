@@ -27,6 +27,8 @@ def load():
 		if itemname == "Version":
 			continue
 		item_data = data[itemname]
+		if item_data.get('IsObsolete') == "1":
+			continue # ignore obsolete items
 		item = Item()
 
 		item.name = itemname
