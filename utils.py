@@ -35,7 +35,7 @@ def get_ability_special(ability_special, name):
 		new_item = OrderedDict()
 
 		# remove unneeded stuff (mostly talents linking)
-		bad_keys = [ "CalculateSpellDamageTooltip", "levelkey" ]
+		bad_keys = [ "CalculateSpellDamageTooltip", "levelkey", "ad_linked_ability", "linked_ad_abilities" ]
 		for key in bad_keys:
 			if key in obj:
 				del obj[key]

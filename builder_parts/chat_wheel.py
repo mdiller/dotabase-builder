@@ -28,6 +28,9 @@ def load():
 			if message.sound not in sounds_data:
 				printerr(f"Couldn't find vsndevts entry for {message.sound}, skipping")
 				continue
+			if "vsnd_files" not in sounds_data[message.sound]:
+				printerr(f"no associated vsnd files found for {message.sound}, skipping")
+				continue
 			message.sound = "/" + sounds_data[message.sound]["vsnd_files"][0].replace(".vsnd", ".wav")
 			if not os.path.exists(config.vpk_path + message.sound):
 				printerr(f"Missing file: {message.sound}")
