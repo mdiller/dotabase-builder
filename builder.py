@@ -41,6 +41,10 @@ parts_dict = {
 	"loadingscreens": loadingscreens
 }
 
+def dump_sql():
+	print("dumping sql...")
+	os.system(f"cd \"{dotabase_dir}\" && sqlite3 dotabase.db \".dump\" > dotabase.db.sql")
+
 def build_dotabase():
 	if single_part:
 		if single_part not in parts_dict:
@@ -59,6 +63,7 @@ def build_dotabase():
 		responses.load()
 		loadingscreens.load()
 	generate_json()
+	dump_sql()
 	print("done")
 
 
