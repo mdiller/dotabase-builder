@@ -54,7 +54,7 @@ def load():
 
 	print("- loading item data from dota_english")
 	# Load additional information from the dota_english.txt file
-	data = valve_readfile(config.vpk_path, paths['localization_abilities'], "kv", encoding="UTF-16")["lang"]["Tokens"]
+	data = valve_readfile(config.vpk_path, paths['localization_abilities'], "kv", encoding="UTF-8")["lang"]["Tokens"]
 	for item in session.query(Item):
 		item_tooltip = "DOTA_Tooltip_Ability_" + item.name 
 		item_tooltip2 = "DOTA_Tooltip_ability_" + item.name 

@@ -48,7 +48,7 @@ def load():
 
 	print("- loading chat wheel data from dota_english")
 	# Load additional information from the dota_english.txt file
-	data = valve_readfile(config.vpk_path, paths['dota_english_file'], "kv", encoding="UTF-16")["lang"]["Tokens"]
+	data = valve_readfile(config.vpk_path, paths['dota_english_file'], "kv", encoding="UTF-8")["lang"]["Tokens"]
 	for message in session.query(ChatWheelMessage):
 		if message.label is None or message.message is None:
 			continue

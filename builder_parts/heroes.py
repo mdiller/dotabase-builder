@@ -98,8 +98,8 @@ def load():
 
 	print("- loading hero names from dota_english file")
 	# Load hero names from dota_english file
-	data = valve_readfile(config.vpk_path, paths['dota_english_file'], "kv", encoding="UTF-16")["lang"]["Tokens"]
-	data_abilities = valve_readfile(config.vpk_path, paths['localization_abilities'], "kv", encoding="UTF-16")["lang"]["Tokens"]
+	data = valve_readfile(config.vpk_path, paths['dota_english_file'], "kv", encoding="UTF-8")["lang"]["Tokens"]
+	data_abilities = valve_readfile(config.vpk_path, paths['localization_abilities'], "kv", encoding="UTF-8")["lang"]["Tokens"]
 	for hero in session.query(Hero):
 		if hero.full_name in data:
 			hero.localized_name = data[hero.full_name]
@@ -110,7 +110,7 @@ def load():
 
 	print("- loading bio from hero lore file")
 	# Load bio from hero lore file
-	data = valve_readfile(config.vpk_path, paths['localization_hero_lore'], "kv", encoding="UTF-16")["lang"]["Tokens"]
+	data = valve_readfile(config.vpk_path, paths['localization_hero_lore'], "kv", encoding="UTF-8")["lang"]["Tokens"]
 	for hero in session.query(Hero):
 		hero.bio = simple_html_to_markdown(data[hero.full_name + "_bio"])
 

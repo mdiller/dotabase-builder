@@ -86,7 +86,10 @@ def load():
 		vals = criteria[key].split(" ")
 		criterion.matchkey = vals[0]
 		criterion.matchvalue = vals[1]
-		criterion.weight = vals[3] if "weight" in vals else 1.0
+		if "weight" in vals:
+			criterion.weight = float(vals[vals.index("weight") + 1])
+		else:
+			criterion.weight = 1.0
 		criterion.required = "required" in vals
 		session.add(criterion)
 
