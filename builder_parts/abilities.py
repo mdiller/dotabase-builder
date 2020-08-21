@@ -60,6 +60,25 @@ def load():
 		ability.mana_cost = clean_values(get_val('AbilityManaCost'))
 		ability.ability_special = json.dumps(get_ability_special(ability_data.get("AbilitySpecial"), abilityname), indent=4)
 
+		# link talents
+		link_fixes = {
+			"axe_counter_culling_blade": "axe_culling_blade",
+			"troll_warlord_whirling_axes": "troll_warlord_whirling_axes_ranged troll_warlord_whirling_axes_melee",
+			"invoker_sunstrike": "invoker_sun_strike",
+			"morphling_adaptive_strike": "morphling_adaptive_strike_agi morphling_adaptive_strike_str"
+		}
+		for special in ability_data.get("AbilitySpecial", {}).values():
+			link = special.get("ad_linked_ability")
+			if link:
+				if link in [ "multi_linked_ability", "multi_linked_or_ability" ]:
+					link = special["linked_ad_abilities"].split(" ")[0]
+				if link in [ "special_bonus_inherent" ]:
+					continue # doesn't link to a different ability
+				if link in link_fixes:
+					link = link_fixes[link]
+				link = link.replace(" ", "|")
+				ability.linked_abilities = link
+
 		if ability.id in added_ids:
 			print(f"duplicate id on: {abilityname}")
 			continue
@@ -77,6 +96,7 @@ def load():
 		ability.spell_immunity = get_enum_val('SpellImmunityType', "SPELL_IMMUNITY_(ENEMIES|ALLIES)_")
 		ability.target_team = get_enum_val('AbilityUnitTargetTeam', "DOTA_UNIT_TARGET_TEAM_")
 		ability.dispellable = get_enum_val('SpellDispellableType', "SPELL_DISPELLABLE_")
+
 
 		ability.json_data = json.dumps(ability_data, indent=4)
 
