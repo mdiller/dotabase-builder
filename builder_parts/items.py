@@ -20,6 +20,9 @@ def load():
 
 	added_ids = []
 
+	item_name_fixes = {
+		"item_trident1": "item_trident"
+	}
 	print("- loading items from item scripts")
 	# load all of the item scripts data information
 	data = valve_readfile(config.vpk_path, paths['item_scripts_file'], "kv")["DOTAAbilities"]
@@ -31,7 +34,7 @@ def load():
 			continue # ignore obsolete items
 		item = Item()
 
-		item.name = itemname
+		item.name = item_name_fixes.get(itemname, itemname)
 		item.id = int(item_data['ID'])
 		item.cost = item_data.get('ItemCost')
 		item.aliases = "|".join(item_data.get("ItemAliases", "").split(";"))
@@ -41,7 +44,7 @@ def load():
 		item.cast_range = clean_values(item_data.get('AbilityCastRange'))
 		item.base_level = item_data.get("ItemBaseLevel")
 		item.secret_shop = item_data.get("SecretShop") == "1"
-		item.ability_special = json.dumps(get_ability_special(item_data.get("AbilitySpecial"), itemname), indent=4)
+		item.ability_special = json.dumps(get_ability_special(item_data.get("AbilitySpecial"), item.name), indent=4)
 
 		item.json_data = json.dumps(item_data, indent=4)
 
@@ -51,6 +54,26 @@ def load():
 		added_ids.append(item.id)
 
 		session.add(item)
+
+	print("- linking recipes")
+	for item in session.query(Item):
+		json_data = json.loads(item.json_data)
+		if json_data.get("ItemRecipe", "0") != "0":
+			components = list(json_data.get("ItemRequirements", {"01": None}).values())[0]
+			if components is None:
+				continue
+			components = components.replace(";", " ").strip().split(" ")
+			if item.cost != 0:
+				components.append(item.name)
+			crafted_item_name = json_data.get("ItemResult")
+			crafted_item = session.query(Item).filter_by(name=crafted_item_name).first()
+			if not crafted_item:
+				raise ValueError(f"Can't find crafted item {crafted_item_name}")
+			crafted_item.recipe = "|".join(components)
+
+			if item.cost == 0 and not json_data.get("ItemIsNeutralDrop"):
+				session.delete(item)
+
 
 	print("- loading item data from dota_english")
 	# Load additional information from the dota_english.txt file
