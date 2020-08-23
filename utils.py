@@ -101,7 +101,7 @@ def ability_special_add_header(ability_special, strings, name):
 			header = strings.get(f"DOTA_Tooltip_Ability_{name}_{attribute['key']}")
 		if header is None:
 			continue
-		match = re.match(r"(%)?(\+\$)?(.*)", header)
+		match = re.match(r"(%)?([\+\-]\$)?(.*)", header)
 		header = match.group(3)
 
 		attribute["value"] = clean_values(attribute["value"], percent=match.group(1))
@@ -109,12 +109,19 @@ def ability_special_add_header(ability_special, strings, name):
 			attribute["talent_value"] = clean_values(attribute["talent_value"], percent=match.group(1))
 
 		if match.group(2):
-			attribute["header"] = "+"
+			attribute["header"] = match.group(2)[0]
 			attribute["footer"] = strings[f"dota_ability_variable_{header}"]
 			if header in "dota_ability_variable_attack_range":
 				attribute["footer"] = re.sub(r"<[^>]*>", "", attribute["footer"])
 		else:
-			attribute["header"] = re.sub(r"<[^>]*>", "", header)
+			# check if we look like "-Something" (without colon) or w/ a plus
+			header = re.sub(r"<[^>]*>", "", header)
+			match = re.match(r"([\+\-])([^:]*)", header)
+			if match:
+				attribute["header"] = match.group(1)
+				attribute["footer"] = match.group(2)
+			else:
+				attribute["header"] = header
 	return ability_special
 
 # Cleans up the descriptions of items and abilities

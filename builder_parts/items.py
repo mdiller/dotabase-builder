@@ -55,25 +55,6 @@ def load():
 
 		session.add(item)
 
-	print("- linking recipes")
-	for item in session.query(Item):
-		json_data = json.loads(item.json_data)
-		if json_data.get("ItemRecipe", "0") != "0":
-			components = list(json_data.get("ItemRequirements", {"01": None}).values())[0]
-			if components is None:
-				continue
-			components = components.replace(";", " ").strip().split(" ")
-			if item.cost != 0:
-				components.append(item.name)
-			crafted_item_name = json_data.get("ItemResult")
-			crafted_item = session.query(Item).filter_by(name=crafted_item_name).first()
-			if not crafted_item:
-				raise ValueError(f"Can't find crafted item {crafted_item_name}")
-			crafted_item.recipe = "|".join(components)
-
-			if item.cost == 0 and not json_data.get("ItemIsNeutralDrop"):
-				session.delete(item)
-
 
 	print("- loading item data from dota_english")
 	# Load additional information from the dota_english.txt file
@@ -99,6 +80,27 @@ def load():
 	for item in session.query(Item):
 		if item.name in item_tier_map:
 			item.neutral_tier = item_tier_map[item.name]
+
+	print("- linking recipes")
+	for recipe in session.query(Item):
+		json_data = json.loads(recipe.json_data)
+		if json_data.get("ItemRecipe", "0") != "0":
+			components = list(json_data.get("ItemRequirements", {"01": None}).values())[0]
+			if components is None:
+				continue
+			components = components.replace(";", " ").strip().split(" ")
+			if recipe.cost != 0:
+				components.append(recipe.name)
+			crafted_item_name = json_data.get("ItemResult")
+			crafted_item = session.query(Item).filter_by(name=crafted_item_name).first()
+			if not crafted_item:
+				raise ValueError(f"Can't find crafted item {crafted_item_name}")
+			crafted_item.recipe = "|".join(components)
+			if recipe.neutral_tier is not None: # stuff like trident
+				crafted_item.neutral_tier = recipe.neutral_tier
+
+			if recipe.cost == 0 and not json_data.get("ItemIsNeutralDrop"):
+				session.delete(recipe)
 
 	print("- adding item icon files")
 	# Add img files to item
