@@ -4,16 +4,22 @@ from utils import *
 from valve2json import valve_readfile
 import re
 
-def build_replacements_dict(ability):
+def build_replacements_dict(ability, aghanim=False):
 	specials = json.loads(ability.ability_special, object_pairs_hook=OrderedDict)
 	result = {
 		"abilityduration": ability.duration,
 		"abilitychanneltime": ability.channel_time,
 		"abilitycastpoint": ability.cast_point,
-		"abilitycastrange": ability.cast_range
+		"abilitycastrange": ability.cast_range,
+		"abilitychargerestoretime": ability.cooldown,
+		"charge_restore_time": ability.cooldown,
+		"max_charges": ability.charges
 	}
 	for attrib in specials:
-		if attrib["key"] not in result:
+		is_aghs_upgrade = attrib.get("aghs_upgrade") == "1" and not ability.aghanim_grants
+		if is_aghs_upgrade and not aghanim:
+			continue
+		if (attrib["key"] not in result) or is_aghs_upgrade:
 			result[attrib["key"]] = attrib["value"]
 	return result
 
@@ -54,11 +60,16 @@ def load():
 		ability.cast_range = clean_values(get_val('AbilityCastRange'))
 		ability.cast_point = clean_values(get_val('AbilityCastPoint'))
 		ability.channel_time = clean_values(get_val('AbilityChannelTime'))
-		ability.cooldown = clean_values(get_val('AbilityCooldown'))
+		ability.charges = clean_values(get_val('AbilityCharges'))
+		if ability.charges:
+			ability.cooldown = clean_values(get_val('AbilityChargeRestoreTime'))
+		else:
+			ability.cooldown = clean_values(get_val('AbilityCooldown'))
 		ability.duration = clean_values(get_val('AbilityDuration'))
 		ability.damage = clean_values(get_val('AbilityDamage'))
 		ability.mana_cost = clean_values(get_val('AbilityManaCost'))
 		ability.ability_special = json.dumps(get_ability_special(ability_data.get("AbilitySpecial"), abilityname), indent=4)
+		ability.aghanim_grants = get_val("IsGrantedByScepter") == "1"
 
 		# link talents
 		link_fixes = {
@@ -111,13 +122,13 @@ def load():
 		ability.description = data.get(ability_tooltip + "_Description", "")
 		ability.lore = data.get(ability_tooltip + "_Lore", "")
 		ability.aghanim = data.get(ability_tooltip + "_aghanim_description", "")
+
 		notes = []
 		for i in range(8):
 			key = f"{ability_tooltip}_Note{i}"
 			if key in data:
 				notes.append(data[key])
 		ability.note = "" if len(notes) == 0 else "\n".join(notes)
-
 
 		ability_special = json.loads(ability.ability_special, object_pairs_hook=OrderedDict)
 		ability_special = ability_special_add_talent(ability_special, session.query(Ability))
@@ -128,10 +139,14 @@ def load():
 		ability.localized_name = clean_description(ability.localized_name, replacements_dict, value_bolding=False)
 		ability.description = clean_description(ability.description, replacements_dict)
 		ability.note = clean_description(ability.note, replacements_dict)
+		replacements_dict = build_replacements_dict(ability, aghanim=True)
 		ability.aghanim = clean_description(ability.aghanim, replacements_dict)
 
 		if ability.localized_name.startswith(": "):
 			ability.localized_name = ability.localized_name[2:]
+
+		if ability.aghanim_grants and ability.aghanim == "":
+			ability.aghanim = f"Adds new ability: {ability.localized_name}."
 
 	print("- adding ability icon files")
 	# Add img files to ability

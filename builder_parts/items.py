@@ -7,7 +7,8 @@ def build_replacements_dict(item):
 	specials = json.loads(item.ability_special, object_pairs_hook=OrderedDict)
 	result = {
 		"abilitycastrange": item.cast_range,
-		"customval_team_tomes_used": "0"
+		"customval_team_tomes_used": "0",
+		"abilitychanneltime": json.loads(item.json_data).get("AbilityChannelTime", "")
 	}
 	for attrib in specials:
 		if attrib["key"] not in result:
