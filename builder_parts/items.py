@@ -57,6 +57,14 @@ def load():
 		session.add(item)
 
 
+	print("- adding item aliases")
+	data = read_json("builderdata/item_aliases.json")
+	for item in session.query(Item):
+		aliases = item.aliases.split("|")
+		aliases.extend(data.get(item.name, []))
+		item.aliases = "|".join(aliases)
+
+
 	print("- loading item data from dota_english")
 	# Load additional information from the dota_english.txt file
 	data = valve_readfile(config.vpk_path, paths['localization_abilities'], "kv", encoding="UTF-8")["lang"]["Tokens"]
