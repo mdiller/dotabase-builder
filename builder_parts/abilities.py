@@ -111,6 +111,19 @@ def load():
 
 		ability.json_data = json.dumps(ability_data, indent=4)
 
+		gold_talent_match = re.match(r"ad_special_bonus_gold_(\d+_.)", ability.name)
+		if gold_talent_match:
+			ability.talent_slot = [
+				"150_r",
+				"150_l",
+				"250_r",
+				"250_l",
+				"500_r",
+				"500_l",
+				"750_r",
+				"750_l"
+			].index(gold_talent_match.group(1))
+
 		session.add(ability)
 
 	print("- loading ability data from dota_english")
@@ -155,6 +168,6 @@ def load():
 		if os.path.isfile(config.vpk_path + iconpath):
 			ability.icon = iconpath
 		else:
-			ability.icon = paths['ability_icon_path'] + "wisp_empty1_png.png"
+			ability.icon = paths['ability_icon_path'] + "attribute_bonus_png.png"
 
 	session.commit()
