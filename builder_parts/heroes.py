@@ -79,23 +79,14 @@ def load():
 
 		talents = []
 
-		# Link abilities and add talents
-		talent_slot = -1
+		# Link abilities
 		for slot in range(1, 30):
 			if "Ability" + str(slot) in hero_data:
 				ability = session.query(Ability).filter_by(name=hero_data["Ability" + str(slot)]).first()
 				if ability:
-					ability.hero_id = hero.id
-					if ability.name.startswith("special_bonus"):
-						talent_slot += 1
-						ability.talent_slot = talent_slot
-						talents.append(ability.localized_name)
-					else:
-						ability.ability_slot = slot
-		if len(talents) != 8:
-			raise ValueError("{} only has {} talents?".format(hero.localized_name, len(talents)))
-
-		hero.talents = "|".join(talents)
+					if not ability.name.startswith("special_bonus"):
+						ability.hero_id = hero.id
+						ability.slot = slot
 
 		session.add(hero)
 

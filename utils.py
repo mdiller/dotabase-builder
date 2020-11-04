@@ -1,8 +1,7 @@
 import sys, os, json, re
+import colorama # support ansi colors on windows
 from collections import OrderedDict
-
-def printerr(*args, **kwargs):
-	print(*args, file=sys.stderr, **kwargs)
+colorama.init()
 
 def clean_values(values, join_string=" ", percent=False):
 	if values is None:
@@ -143,7 +142,7 @@ def clean_description(text, replacements_dict, base_level=None, value_bolding=Tr
 					new_value = bold_values(new_value, "/", base_level)
 				return new_value
 
-			print(f"Missing attrib %{value}%")
+			printerr(f"Missing attrib %{value}%")
 			return f"%{value}%"
 
 	text = re.sub(r'%([^%\s]*)%', replace_attrib, text)
@@ -158,6 +157,16 @@ def clean_description(text, replacements_dict, base_level=None, value_bolding=Tr
 		text = text[1:]
 
 	return text
+
+class ansicolors:
+	CLEAR = '\033[0m'
+	RED = '\033[31m'
+	GREEN = '\033[32m'
+	YELLOW = '\033[33m'
+	BLUE = '\033[34m'
+def printerr(error_text):
+	print(f"{ansicolors.RED}   {error_text}{ansicolors.CLEAR}")
+
 
 def write_json(filename, data):
 	text = json.dumps(data, indent="\t")

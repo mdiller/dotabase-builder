@@ -52,7 +52,7 @@ def load():
 		loadingscreen.thumbnail = os.path.dirname(loadingscreen.image) + "/thumbnail.png"
 
 		if not os.path.exists(config.vpk_path + loadingscreen.image):
-			print(f"Couldn't find loadingscreen at {loadingscreen.image}, skipping")
+			printerr(f"Couldn't find loadingscreen at {loadingscreen.image}, skipping")
 			continue # skip this loadingscreen because it doesn't exist
 
 		session.add(loadingscreen)

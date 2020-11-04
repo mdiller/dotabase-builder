@@ -26,6 +26,7 @@ emoticons,
 items, 
 abilities, 
 heroes, 
+talents,
 responses,
 voices,
 loadingscreens)
@@ -36,6 +37,7 @@ parts_dict = {
 	"items": items,
 	"abilities": abilities,
 	"heroes": heroes,
+	"talents": talents,
 	"voices": voices,
 	"responses": responses,
 	"loadingscreens": loadingscreens
@@ -59,6 +61,7 @@ def build_dotabase():
 		items.load()
 		abilities.load()
 		heroes.load()
+		talents.load()
 		voices.load()
 		responses.load()
 		loadingscreens.load()

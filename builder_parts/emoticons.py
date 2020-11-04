@@ -7,7 +7,7 @@ from valve2json import valve_readfile
 
 def load():
 	session.query(Emoticon).delete()
-	print("emoticons")
+	print("Emoticons")
 
 	print("- loading emoticons from scripts")
 	# load all of the item scripts data information

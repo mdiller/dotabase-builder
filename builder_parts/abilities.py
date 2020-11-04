@@ -71,27 +71,9 @@ def load():
 		ability.ability_special = json.dumps(get_ability_special(ability_data.get("AbilitySpecial"), abilityname), indent=4)
 		ability.aghanim_grants = get_val("IsGrantedByScepter") == "1"
 
-		# link talents
-		link_fixes = {
-			"axe_counter_culling_blade": "axe_culling_blade",
-			"troll_warlord_whirling_axes": "troll_warlord_whirling_axes_ranged troll_warlord_whirling_axes_melee",
-			"invoker_sunstrike": "invoker_sun_strike",
-			"morphling_adaptive_strike": "morphling_adaptive_strike_agi morphling_adaptive_strike_str"
-		}
-		for special in ability_data.get("AbilitySpecial", {}).values():
-			link = special.get("ad_linked_ability")
-			if link:
-				if link in [ "multi_linked_ability", "multi_linked_or_ability" ]:
-					link = special["linked_ad_abilities"].split(" ")[0]
-				if link in [ "special_bonus_inherent" ]:
-					continue # doesn't link to a different ability
-				if link in link_fixes:
-					link = link_fixes[link]
-				link = link.replace(" ", "|")
-				ability.linked_abilities = link
 
 		if ability.id in added_ids:
-			print(f"duplicate id on: {abilityname}")
+			print_error(f"duplicate id on: {abilityname}")
 			continue
 		added_ids.append(ability.id)
 
@@ -110,19 +92,6 @@ def load():
 
 
 		ability.json_data = json.dumps(ability_data, indent=4)
-
-		gold_talent_match = re.match(r"ad_special_bonus_gold_(\d+_.)", ability.name)
-		if gold_talent_match:
-			ability.talent_slot = [
-				"150_r",
-				"150_l",
-				"250_r",
-				"250_l",
-				"500_r",
-				"500_l",
-				"750_r",
-				"750_l"
-			].index(gold_talent_match.group(1))
 
 		session.add(ability)
 

@@ -17,7 +17,7 @@ def build_replacements_dict(item):
 
 def load():
 	session.query(Item).delete()
-	print("items")
+	print("Items")
 
 	added_ids = []
 

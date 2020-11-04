@@ -6,7 +6,7 @@ import os
 
 def load():
 	session.query(ChatWheelMessage).delete()
-	print("chat_wheel")
+	print("Chat Wheels")
 
 	print("- loading chat_wheel stuff from scripts")
 	# load sounds info from vsndevts file
