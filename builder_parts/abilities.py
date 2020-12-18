@@ -16,7 +16,7 @@ def build_replacements_dict(ability, aghanim=False):
 		"max_charges": ability.charges
 	}
 	for attrib in specials:
-		is_aghs_upgrade = attrib.get("aghs_upgrade") == "1" and not ability.aghanim_grants
+		is_aghs_upgrade = attrib.get("aghs_upgrade") == "1" and not ability.scepter_grants
 		if is_aghs_upgrade and not aghanim:
 			continue
 		if (attrib["key"] not in result) or is_aghs_upgrade:
@@ -69,7 +69,8 @@ def load():
 		ability.damage = clean_values(get_val('AbilityDamage'))
 		ability.mana_cost = clean_values(get_val('AbilityManaCost'))
 		ability.ability_special = json.dumps(get_ability_special(ability_data.get("AbilitySpecial"), abilityname), indent=4)
-		ability.aghanim_grants = get_val("IsGrantedByScepter") == "1"
+		ability.scepter_grants = get_val("IsGrantedByScepter") == "1"
+		ability.shard_grants = get_val("IsGrantedByShard") == "1"
 
 
 		if ability.id in added_ids:
@@ -103,7 +104,8 @@ def load():
 		ability.localized_name = data.get(ability_tooltip, ability.name)
 		ability.description = data.get(ability_tooltip + "_Description", "")
 		ability.lore = data.get(ability_tooltip + "_Lore", "")
-		ability.aghanim = data.get(ability_tooltip + "_aghanim_description", "")
+		ability.scepter_description = data.get(ability_tooltip + "_scepter_description", "")
+		ability.shard_description = data.get(ability_tooltip + "_shard_description", "")
 
 		notes = []
 		for i in range(8):
@@ -122,13 +124,17 @@ def load():
 		ability.description = clean_description(ability.description, replacements_dict)
 		ability.note = clean_description(ability.note, replacements_dict)
 		replacements_dict = build_replacements_dict(ability, aghanim=True)
-		ability.aghanim = clean_description(ability.aghanim, replacements_dict)
+		ability.scepter_description = clean_description(ability.scepter_description, replacements_dict)
+		ability.shard_description = clean_description(ability.shard_description, replacements_dict)
 
 		if ability.localized_name.startswith(": "):
 			ability.localized_name = ability.localized_name[2:]
 
-		if ability.aghanim_grants and ability.aghanim == "":
-			ability.aghanim = f"Adds new ability: {ability.localized_name}."
+		if ability.scepter_grants and ability.scepter_description == "":
+			ability.scepter_description = f"Adds new ability: {ability.localized_name}."
+
+		if ability.shard_grants and ability.shard_description == "":
+			ability.shard_description = f"Adds new ability: {ability.localized_name}."
 
 	print("- adding ability icon files")
 	# Add img files to ability

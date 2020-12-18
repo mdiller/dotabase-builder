@@ -16,6 +16,9 @@ def clean_values(values, join_string=" ", percent=False):
 	return join_string.join(values)
 
 def bold_values(values, separator, base_level):
+	if values is None:
+		printerr("bad values passed to bold_values()")
+		return "";
 	values = values.split(separator)
 	if base_level and base_level <= len(values):
 		values[base_level - 1] = f"**{values[base_level - 1]}**"
@@ -52,7 +55,7 @@ def get_ability_special(ability_special, name):
 
 		items = list(obj.items())
 		if len(items) != 2: # catch this for future bad_keys
-			raise ValueError(f"Theres a bad key in the AbilitySpecial of {name}")
+			printerr(f"Theres a bad key in the AbilitySpecial of {name}")
 
 		new_item["key"] = items[1][0]
 		new_item["value"] = clean_values(items[1][1])
