@@ -71,6 +71,8 @@ def load():
 		ability.ability_special = json.dumps(get_ability_special(ability_data.get("AbilitySpecial"), abilityname), indent=4)
 		ability.scepter_grants = get_val("IsGrantedByScepter") == "1"
 		ability.shard_grants = get_val("IsGrantedByShard") == "1"
+		ability.scepter_description = get_val("HasScepterUpgrade")
+		ability.shard_description = get_val("HasShardUpgrade")
 
 
 		if ability.id in added_ids:
@@ -104,8 +106,14 @@ def load():
 		ability.localized_name = data.get(ability_tooltip, ability.name)
 		ability.description = data.get(ability_tooltip + "_Description", "")
 		ability.lore = data.get(ability_tooltip + "_Lore", "")
-		ability.scepter_description = data.get(ability_tooltip + "_scepter_description", "")
-		ability.shard_description = data.get(ability_tooltip + "_shard_description", "")
+		if ability.scepter_description == "1":
+			ability.scepter_description = data.get(ability_tooltip + "_scepter_description", "")
+		else:
+			ability.scepter_description = ""
+		if ability.shard_description == "1":
+			ability.shard_description = data.get(ability_tooltip + "_shard_description", "")
+		else:
+			ability.shard_description = ""
 
 		notes = []
 		for i in range(8):
