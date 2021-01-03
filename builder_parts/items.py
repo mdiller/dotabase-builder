@@ -97,7 +97,7 @@ def load():
 			components = list(json_data.get("ItemRequirements", {"01": None}).values())[0]
 			if components is None:
 				continue
-			components = components.replace(";", " ").strip().split(" ")
+			components = components.replace(";", " ").replace("*", "").strip().split(" ")
 			if recipe.cost != 0:
 				components.append(recipe.name)
 			crafted_item_name = json_data.get("ItemResult")
