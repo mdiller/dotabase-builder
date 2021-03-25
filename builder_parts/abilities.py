@@ -20,7 +20,8 @@ def build_replacements_dict(ability, aghanim=False):
 		if is_aghs_upgrade and not aghanim:
 			continue
 		if (attrib["key"] not in result) or is_aghs_upgrade:
-			result[attrib["key"]] = attrib["value"]
+			if attrib["value"] != "":
+				result[attrib["key"]] = attrib["value"]
 	return result
 
 def load():
@@ -123,9 +124,17 @@ def load():
 				notes.append(data[key])
 		ability.note = "" if len(notes) == 0 else "\n".join(notes)
 
+		ability_special_value_fixes = {
+			"abilityduration": ability.duration
+		}
+
 		ability_special = json.loads(ability.ability_special, object_pairs_hook=OrderedDict)
 		ability_special = ability_special_add_talent(ability_special, session.query(Ability))
 		ability_special = ability_special_add_header(ability_special, data, ability.name)
+		for key in ability_special_value_fixes:
+			for special in ability_special:
+				if special["key"] == key and special["value"] == "":
+					special["value"] = ability_special_value_fixes[key]
 		ability.ability_special = json.dumps(ability_special, indent=4)
 
 		replacements_dict = build_replacements_dict(ability)
