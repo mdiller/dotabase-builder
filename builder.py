@@ -1,5 +1,6 @@
 #!/usr/bin/env python3.6
 
+from sqlalchemy import desc
 from dotabase import *
 from utils import *
 import os
@@ -29,7 +30,8 @@ heroes,
 talents,
 responses,
 voices,
-loadingscreens)
+loadingscreens,
+patches)
 
 parts_dict = {
 	"chat_wheel": chat_wheel,
@@ -40,12 +42,24 @@ parts_dict = {
 	"talents": talents,
 	"voices": voices,
 	"responses": responses,
-	"loadingscreens": loadingscreens
+	"loadingscreens": loadingscreens,
+	"patches": patches
 }
 
 def dump_sql():
 	print("dumping sql...")
 	os.system(f"cd \"{dotabase_dir}\" && sqlite3 dotabase.db \".dump\" > dotabase.db.sql")
+
+# updates the dotabase readme info
+def update_readme():
+	print("updating readme info...")
+	dota_version_path = os.path.join(dotabase_dir, "../DOTA_VERSION")
+	data = read_json(dota_version_path)
+
+	patch = session.query(Patch).order_by(desc(Patch.timestamp)).first()
+	data["message"] = patch.number
+
+	write_json(dota_version_path, data)
 
 def build_dotabase():
 	if single_part:
@@ -65,8 +79,10 @@ def build_dotabase():
 		voices.load()
 		responses.load()
 		loadingscreens.load()
+		patches.load()
 	generate_json()
 	dump_sql()
+	update_readme()
 	print("done")
 
 

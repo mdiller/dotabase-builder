@@ -100,7 +100,7 @@ def load():
 			hero.localized_name = data[hero.full_name]
 		else:
 			hero.localized_name = data_abilities[hero.full_name]
-		hero.hype = data[hero.full_name + "_hype"]
+		hero.hype = simple_html_to_markdown(data[hero.full_name + "_hype"])
 
 
 	print("- loading bio from hero lore file")

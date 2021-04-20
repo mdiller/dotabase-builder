@@ -70,6 +70,10 @@ def dump_loadingscreens(filename):
 	data = dump_table(LoadingScreen)
 	write_json(filename, data)
 
+def dump_patches(filename):
+	data = dump_table(Patch)
+	write_json(filename, data)
+
 def dump_talents(filename):
 	data = dump_table(Talent)
 	write_json(filename, data)
@@ -97,5 +101,6 @@ def generate_json():
 	dump_criteria(json_path + "criteria.json")
 	dump_voices(json_path + "voices.json")
 	dump_loadingscreens(json_path + "loadingscreens.json")
+	dump_patches(json_path + "patches.json")
 	dump_talents(json_path + "talents.json")
 	dump_responses(json_path + "responses")
