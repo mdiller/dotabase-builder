@@ -4,20 +4,49 @@ from utils import *
 from valve2json import valve_readfile
 import os
 
+
 def load():
 	session.query(ChatWheelMessage).delete()
 	print("Chat Wheels")
 
-	print("- loading chat_wheel stuff from scripts")
+	print("- loading chat_wheel vsndevts infos")
 	# load sounds info from vsndevts file
-	sounds_data = valve_readfile(config.vpk_path, paths['chat_wheel_vsndevts_file'], "vsndevts")
+	vsndevts_data = valve_readfile(config.vpk_path, paths['chat_wheel_vsndevts_file'], "vsndevts")
+	extra_vsndevts_dirs = [ "teamfandom", "team_fandom" ]
+	for subdir in extra_vsndevts_dirs:
+		fulldirpath = os.path.join(config.vpk_path, f"soundevents/{subdir}")
+		for file in os.listdir(fulldirpath):
+			if file.endswith(".vsndevts"):
+				filepath = f"/soundevents/{subdir}/{file}"
+				more_vsndevts_data = valve_readfile(config.vpk_path, filepath, "vsndevts")
+				vsndevts_data.update(more_vsndevts_data)	
+
+	print("- loading chat_wheel info from scripts")
 	# load all of the item scripts data information
+	scripts_data = valve_readfile(config.vpk_path, paths['chat_wheel_scripts_file'], "kv", encoding="utf-8")["chat_wheel"]
+	chatwheel_scripts_subdir = "scripts/chat_wheels"
+	scripts_messages = scripts_data["messages"]
+	scripts_categories = scripts_data["categories"]
+	for file in os.listdir(os.path.join(config.vpk_path, chatwheel_scripts_subdir)):
+		filepath = f"/{chatwheel_scripts_subdir}/{file}"
+		more_chatwheel_data = valve_readfile(config.vpk_path, filepath, "kv", encoding="utf-8")["chat_wheel"]
+		scripts_messages.update(more_chatwheel_data.get("messages", {}))
+		scripts_categories.update(more_chatwheel_data.get("categories", {}))
+
+	existing_ids = set()
+	print("- process all chat_wheel data")
 	data = valve_readfile(config.vpk_path, paths['chat_wheel_scripts_file'], "kv", encoding="utf-8")["chat_wheel"]
-	for key in data["messages"]:
-		msg_data = data["messages"][key]
+	for key in scripts_messages:
+		msg_data = scripts_messages[key]
+
+		message_id = int(msg_data["message_id"])
+		if message_id in existing_ids:
+			printerr(f"duplicate message_id {message_id} found, skipping")
+			continue
+		existing_ids.add(message_id)
 
 		message = ChatWheelMessage()
-		message.id = int(msg_data["message_id"])
+		message.id = message_id
 		message.name = key
 		message.label = msg_data.get("label")
 		message.message = msg_data.get("message")
@@ -25,13 +54,19 @@ def load():
 		message.image = msg_data.get("image")
 		message.all_chat = msg_data.get("all_chat") == "1"
 		if message.sound:
-			if message.sound not in sounds_data:
+			if message.sound not in vsndevts_data:
 				printerr(f"Couldn't find vsndevts entry for {message.sound}, skipping")
 				continue
-			if "vsnd_files" not in sounds_data[message.sound]:
+			if "vsnd_files" not in vsndevts_data[message.sound]:
 				printerr(f"no associated vsnd files found for {message.sound}, skipping")
 				continue
-			message.sound = "/" + sounds_data[message.sound]["vsnd_files"][0].replace(".vsnd", ".wav")
+			message.sound = "/" + vsndevts_data[message.sound]["vsnd_files"][0]
+
+			if not os.path.exists(config.vpk_path + message.sound):
+				message.sound = message.sound.replace("vsnd", "wav")
+			if not os.path.exists(config.vpk_path + message.sound):
+				message.sound = message.sound.replace("wav", "mp3")
+
 			if not os.path.exists(config.vpk_path + message.sound):
 				printerr(f"Missing file: {message.sound}")
 		if message.image:
@@ -39,16 +74,18 @@ def load():
 
 		session.add(message)
 
-	for category in data["categories"]:
-		for msg in data["categories"][category]["messages"]:
+	for category in scripts_categories:
+		for msg in scripts_categories[category]["messages"]:
 			for message in session.query(ChatWheelMessage).filter_by(name=msg):
 				if message.category is not None:
 					raise ValueError(f"More than one category for chatwheel: {message.name}")
 				message.category = category
 
 	print("- loading chat wheel data from dota_english")
-	# Load additional information from the dota_english.txt file
+	# Load localization info from dota_english.txt and teamfandom_english.txt
 	data = valve_readfile(config.vpk_path, paths['dota_english_file'], "kv", encoding="UTF-8")["lang"]["Tokens"]
+	data.update(valve_readfile(config.vpk_path, "/resource/localization/teamfandom_english.txt", "kv", encoding="UTF-8")["lang"]["Tokens"])
+
 	for message in session.query(ChatWheelMessage):
 		if message.label is None or message.message is None:
 			continue
