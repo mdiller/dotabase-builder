@@ -134,6 +134,35 @@ def load():
 				if re.search(pattern, response.criteria):
 					response.voice_id = voice.id
 
+	print("- adding hero chatwheel criteria")
+	chatwheel_criteria = set()
+	chatwheel_data = valve_readfile(config.vpk_path, paths['chat_wheel_scripts_file'], "kv", encoding="utf-8")["chat_wheel"]
+	for hero in chatwheel_data["hero_messages"]:
+		for chatwheel_id in chatwheel_data["hero_messages"][hero]:
+			chatwheel_message = chatwheel_data["hero_messages"][hero][chatwheel_id]
+			chatwheel_criteria.add(chatwheel_message['unlock_hero_badge_tier'])
+			new_criteria = f"HeroChatWheel {chatwheel_message['unlock_hero_badge_tier']}"
+			for response in session.query(Response).filter_by(fullname=chatwheel_message["sound"]):
+				if response.criteria != "":
+					new_criteria = "|" + new_criteria
+				response.criteria += new_criteria
+	for crit in chatwheel_criteria:
+		criterion = Criterion()
+		criterion.name = crit
+		criterion.matchkey = "badge_tier"
+		criterion.matchvalue = crit.replace("Tier", "").lower()
+		criterion.weight = 1.0
+		criterion.required = True
+		session.add(criterion)
+	criterion = Criterion()
+	criterion.name = "HeroChatWheel"
+	criterion.matchkey = "Concept"
+	criterion.matchvalue = "DOTA_CHATWHEEL_THINGIE"
+	criterion.weight = 1.0
+	criterion.required = True
+	session.add(criterion)
+
+
 	print("- generating pretty criteria")
 	criteria_sentancing.load_pretty_criteria(session)
 

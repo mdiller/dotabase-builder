@@ -86,6 +86,9 @@
 		"new_key": "hero"
 	},
 	{
+		"key": "badge_tier"
+	},
+	{
 		"key": "victim_team",
 		"convert": {
 			"radiant": "Dire",
