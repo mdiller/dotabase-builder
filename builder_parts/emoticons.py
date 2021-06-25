@@ -31,7 +31,7 @@ def load():
 			emoticon.frames = int(img.size[0] / img.size[1])
 		except:
 			# Error loading this image, so dont add it to the database
-			printerr(f"Couldn't find emoticon {emoticon.name}")
+			printerr(f"Couldn't find emoticon {emoticon.name} at {emoticon.url}")
 			continue
 
 		session.add(emoticon)

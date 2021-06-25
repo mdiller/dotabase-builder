@@ -44,10 +44,12 @@ def load():
 			if ass_mod:
 				image_path = ass_mod.asset
 				if ".vtex" in image_path:
-					image_path = image_path.replace(".vtex", "")
+					image_path = image_path.replace(".vtex", ".png")
+				elif ".png" in image_path:
+					image_path = image_path.replace(".png", "_png.png")
 				else:
-					image_path += "_tga"
-				loadingscreen.image = f"/panorama/images/{image_path}.png"
+					image_path += "_tga.png"
+				loadingscreen.image = f"/panorama/images/{image_path}"
 		
 		loadingscreen.thumbnail = os.path.dirname(loadingscreen.image) + "/thumbnail.png"
 
