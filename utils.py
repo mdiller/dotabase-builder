@@ -46,7 +46,8 @@ def get_ability_special(ability_special, name):
 			"LinkedSpecialBonus": "talent_name", 
 			"LinkedSpecialBonusField": "talent_value_key", 
 			"LinkedSpecialBonusOperation": "talent_operation",
-			"RequiresScepter": "aghs_upgrade"
+			"RequiresScepter": "scepter_upgrade",
+			"RequiresShard": "shard_upgrade"
 		}
 		for key in talent_keys:
 			if key in obj:
@@ -55,7 +56,9 @@ def get_ability_special(ability_special, name):
 
 		items = list(obj.items())
 		if len(items) != 2: # catch this for future bad_keys
-			printerr(f"Theres a bad key in the AbilitySpecial of {name}")
+			bad_keys = list(map(lambda i: i[0], items))
+			bad_keys.remove("var_type")
+			printerr(f"Theres a bad key in the AbilitySpecial of {name}: one of {bad_keys}")
 
 		new_item["key"] = items[1][0]
 		new_item["value"] = clean_values(items[1][1])
@@ -145,10 +148,10 @@ def clean_description(text, replacements_dict, base_level=None, value_bolding=Tr
 					new_value = bold_values(new_value, "/", base_level)
 				return new_value
 
-			printerr(f"Missing attrib %{value}%")
+			printerr(f"Missing attrib '{value}' FROM {text}")
 			return f"%{value}%"
 
-	text = re.sub(r'%([^%\s]*)%', replace_attrib, text)
+	text = re.sub(r'%([^%}\s]*)%', replace_attrib, text)
 	text = re.sub(r'\{s:([^}\s]*)\}', replace_attrib, text)
 
 	# include the percent in bold if the value is in bold

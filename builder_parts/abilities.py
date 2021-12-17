@@ -4,7 +4,7 @@ from utils import *
 from valve2json import valve_readfile
 import re
 
-def build_replacements_dict(ability, aghanim=False):
+def build_replacements_dict(ability, scepter=False, shard=False):
 	specials = json.loads(ability.ability_special, object_pairs_hook=OrderedDict)
 	result = {
 		"abilityduration": ability.duration,
@@ -16,10 +16,13 @@ def build_replacements_dict(ability, aghanim=False):
 		"max_charges": ability.charges
 	}
 	for attrib in specials:
-		is_aghs_upgrade = attrib.get("aghs_upgrade") == "1" and not ability.scepter_grants
-		if is_aghs_upgrade and not aghanim:
+		is_scepter_upgrade = attrib.get("scepter_upgrade") == "1" and not ability.scepter_grants
+		if is_scepter_upgrade and not scepter:
 			continue
-		if (attrib["key"] not in result) or is_aghs_upgrade:
+		is_shard_upgrade = attrib.get("shard_upgrade") == "1" and not ability.shard_grants
+		if is_shard_upgrade and not shard:
+			continue
+		if (attrib["key"] not in result) or is_scepter_upgrade or is_shard_upgrade:
 			if attrib["value"] != "":
 				result[attrib["key"]] = attrib["value"]
 	return result
@@ -141,8 +144,9 @@ def load():
 		ability.localized_name = clean_description(ability.localized_name, replacements_dict, value_bolding=False)
 		ability.description = clean_description(ability.description, replacements_dict)
 		ability.note = clean_description(ability.note, replacements_dict)
-		replacements_dict = build_replacements_dict(ability, aghanim=True)
+		replacements_dict = build_replacements_dict(ability, scepter=True)
 		ability.scepter_description = clean_description(ability.scepter_description, replacements_dict)
+		replacements_dict = build_replacements_dict(ability, shard=True)
 		ability.shard_description = clean_description(ability.shard_description, replacements_dict)
 
 		if ability.localized_name.startswith(": "):
