@@ -154,6 +154,10 @@ def load():
 		if ability.shard_grants and ability.shard_description == "":
 			ability.shard_description = f"Adds new ability: {ability.localized_name}."
 
+		# special case for skywrath who has an innate shard
+		if ability.id == 5584:
+			ability.shard_description = data.get("DOTA_Tooltip_ability_skywrath_mage_shard_description", "")
+
 	print("- adding ability icon files")
 	# Add img files to ability
 	for ability in session.query(Ability):
