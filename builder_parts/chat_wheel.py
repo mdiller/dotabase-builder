@@ -11,7 +11,7 @@ def load():
 
 	print("- loading chat_wheel vsndevts infos")
 	# load sounds info from vsndevts file
-	vsndevts_data = valve_readfile(config.vpk_path, paths['chat_wheel_vsndevts_file'], "vsndevts")
+	vsndevts_data = CaseInsensitiveDict(valve_readfile(config.vpk_path, paths['chat_wheel_vsndevts_file'], "vsndevts"))
 	extra_vsndevts_dirs = [ "teamfandom", "team_fandom" ]
 	for subdir in extra_vsndevts_dirs:
 		fulldirpath = os.path.join(config.vpk_path, f"soundevents/{subdir}")
@@ -25,8 +25,8 @@ def load():
 	# load all of the item scripts data information
 	scripts_data = valve_readfile(config.vpk_path, paths['chat_wheel_scripts_file'], "kv", encoding="utf-8")["chat_wheel"]
 	chatwheel_scripts_subdir = "scripts/chat_wheels"
-	scripts_messages = scripts_data["messages"]
-	scripts_categories = scripts_data["categories"]
+	scripts_messages = CaseInsensitiveDict(scripts_data["messages"])
+	scripts_categories = CaseInsensitiveDict(scripts_data["categories"])
 	for file in os.listdir(os.path.join(config.vpk_path, chatwheel_scripts_subdir)):
 		filepath = f"/{chatwheel_scripts_subdir}/{file}"
 		more_chatwheel_data = valve_readfile(config.vpk_path, filepath, "kv", encoding="utf-8")["chat_wheel"]
@@ -60,7 +60,11 @@ def load():
 			if "vsnd_files" not in vsndevts_data[message.sound]:
 				printerr(f"no associated vsnd files found for {message.sound}, skipping")
 				continue
-			message.sound = "/" + vsndevts_data[message.sound]["vsnd_files"][0]
+
+			soundfile = vsndevts_data[message.sound]["vsnd_files"]
+			if isinstance(soundfile, list):
+				soundfile = soundfile[0]
+			message.sound = "/" + soundfile
 
 			if not os.path.exists(config.vpk_path + message.sound):
 				message.sound = message.sound.replace("vsnd", "wav")
@@ -68,7 +72,7 @@ def load():
 				message.sound = message.sound.replace("wav", "mp3")
 
 			if not os.path.exists(config.vpk_path + message.sound):
-				printerr(f"Missing file: {message.sound}")
+				printerr(f"Missing chatweel id {message.id} file: {message.sound}")
 		if message.image:
 			message.image = f"/panorama/images/{message.image}"
 
