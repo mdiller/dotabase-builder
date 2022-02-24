@@ -6,6 +6,7 @@ from valve2json import valve_readfile
 def build_replacements_dict(item):
 	specials = json.loads(item.ability_special, object_pairs_hook=OrderedDict)
 	result = {
+		"abilityduration": item.duration,
 		"abilitycastrange": item.cast_range,
 		"customval_team_tomes_used": "0",
 		"abilitychanneltime": json.loads(item.json_data).get("AbilityChannelTime", "")
@@ -43,9 +44,10 @@ def load():
 		item.mana_cost = clean_values(item_data.get('AbilityManaCost'))
 		item.cooldown = clean_values(item_data.get('AbilityCooldown'))
 		item.cast_range = clean_values(item_data.get('AbilityCastRange'))
+		item.duration = clean_values(item_data.get('AbilityDuration'))
 		item.base_level = item_data.get("ItemBaseLevel")
 		item.secret_shop = item_data.get("SecretShop") == "1"
-		item.ability_special = json.dumps(get_ability_special(item_data.get("AbilitySpecial"), item.name), indent=4)
+		item.ability_special = json.dumps(get_ability_special(item_data, item.name), indent=4)
 
 		item.json_data = json.dumps(item_data, indent=4)
 

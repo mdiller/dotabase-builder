@@ -27,31 +27,47 @@ def bold_values(values, separator, base_level):
 	return separator.join(values)
 
 
-def get_ability_special(ability_special, name):
-	if ability_special is None:
-		return []
+ability_special_talent_keys = { 
+	"LinkedSpecialBonus": "talent_name", 
+	"LinkedSpecialBonusField": "talent_value_key", 
+	"LinkedSpecialBonusOperation": "talent_operation",
+	"RequiresScepter": "scepter_upgrade",
+	"RequiresShard": "shard_upgrade"
+}
+def get_ability_special_AbilityValues(ability_values, name):
+	result = []
+	for key, value in ability_values.items():
+		new_item = OrderedDict()
+		new_item["key"] = key
+		if isinstance(value, str):
+			new_item["value"] = value
+		else:
+			if "values" in value:
+				new_item["value"] = value["values"]
+			else:
+				new_item["value"] = value["value"]
+			for subkey in value:
+				if subkey in ability_special_talent_keys:
+					new_item[ability_special_talent_keys[subkey]] = value[subkey]
+		result.append(new_item)
+	return result
+
+def get_ability_special_AbilitySpecial(ability_special, name):
 	result = []
 	for index_key in ability_special:
 		obj = ability_special[index_key].copy()
 
 		new_item = OrderedDict()
 
-		# remove unneeded stuff (mostly talents linking)
-		bad_keys = [ "CalculateSpellDamageTooltip", "levelkey", "ad_linked_ability", "linked_ad_abilities" ]
+		# remove unneeded stuff (mostly ablility draft? linking)
+		bad_keys = [ "CalculateSpellDamageTooltip", "levelkey", "ad_linked_ability", "ad_linked_abilities", "linked_ad_abilities" ]
 		for key in bad_keys:
 			if key in obj:
 				del obj[key]
 
-		talent_keys = { 
-			"LinkedSpecialBonus": "talent_name", 
-			"LinkedSpecialBonusField": "talent_value_key", 
-			"LinkedSpecialBonusOperation": "talent_operation",
-			"RequiresScepter": "scepter_upgrade",
-			"RequiresShard": "shard_upgrade"
-		}
-		for key in talent_keys:
+		for key in ability_special_talent_keys:
 			if key in obj:
-				new_item[talent_keys[key]] = obj[key]
+				new_item[ability_special_talent_keys[key]] = obj[key]
 				del obj[key]
 
 		items = list(obj.items())
@@ -66,6 +82,16 @@ def get_ability_special(ability_special, name):
 
 	return result
 
+
+def get_ability_special(json_data, name):
+	if "AbilitySpecial" in json_data:
+		return get_ability_special_AbilitySpecial(json_data.get("AbilitySpecial"), name)
+	elif "AbilityValues" in json_data:
+		return get_ability_special_AbilityValues(json_data.get("AbilityValues"), name)
+	else:
+		return []
+
+# adds talent info
 def ability_special_add_talent(ability_special, ability_query):
 	for attribute in ability_special:
 		talent = attribute.get("talent_name")

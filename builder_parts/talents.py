@@ -39,12 +39,13 @@ def load():
 						talent.ability_id = ability.id
 						talent.slot = talent_slot
 						# link talents
-						ability_specials = json.loads(ability.json_data).get("AbilitySpecial", {}).values()
+						ability_data = json.loads(ability.json_data)
+						ability_specials = ability_data.get("AbilitySpecial", {}).values()
 						for special in ability_specials:
-							link = special.get("ad_linked_ability")
+							link = special.get("ad_linked_abilities")
+							if not link:
+								link = ability_data.get("ad_linked_abilities")
 							if link:
-								if link in [ "multi_linked_ability", "multi_linked_or_ability" ]:
-									link = special["linked_ad_abilities"].split(" ")[0]
 								if link in [ "special_bonus_inherent" ]:
 									continue # doesn't link to a different ability
 								if link in link_fixes:

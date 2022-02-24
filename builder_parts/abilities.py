@@ -13,7 +13,10 @@ def build_replacements_dict(ability, scepter=False, shard=False):
 		"abilitycastrange": ability.cast_range,
 		"abilitychargerestoretime": ability.cooldown,
 		"charge_restore_time": ability.cooldown,
-		"max_charges": ability.charges
+		"abilitycooldown": ability.cooldown,
+		"max_charges": ability.charges,
+		"AbilityCharges": ability.charges,
+		"abilitymanacost": ability.mana_cost
 	}
 	for attrib in specials:
 		is_scepter_upgrade = attrib.get("scepter_upgrade") == "1" and not ability.scepter_grants
@@ -72,7 +75,7 @@ def load():
 		ability.duration = clean_values(get_val('AbilityDuration'))
 		ability.damage = clean_values(get_val('AbilityDamage'))
 		ability.mana_cost = clean_values(get_val('AbilityManaCost'))
-		ability.ability_special = json.dumps(get_ability_special(ability_data.get("AbilitySpecial"), abilityname), indent=4)
+		ability.ability_special = json.dumps(get_ability_special(ability_data, abilityname), indent=4)
 		ability.scepter_grants = get_val("IsGrantedByScepter") == "1"
 		ability.shard_grants = get_val("IsGrantedByShard") == "1"
 		ability.scepter_upgrades = get_val("HasScepterUpgrade") == "1"
@@ -101,6 +104,26 @@ def load():
 		ability.json_data = json.dumps(ability_data, indent=4)
 
 		session.add(ability)
+
+	print("- intermediate ability linking")
+	# intermedate re-linking and setting of ability metadata
+	for ability in session.query(Ability):
+		ability_data = json.loads(ability.json_data, object_pairs_hook=OrderedDict)
+		abilityvalues = ability_data.get("AbilityValues")
+		if abilityvalues:
+			for key, valdict in abilityvalues.items():
+				if not isinstance(valdict, str):
+					for subkey in valdict:
+						if subkey.startswith("special_bonus"):
+							# this is a talent value we need to link
+							talent = session.query(Ability).filter_by(name=subkey).first()
+							talent_ability_special = json.loads(talent.ability_special, object_pairs_hook=OrderedDict)
+							talent_ability_special.append({
+								"key": f"bonus_{key}",
+								"value": valdict[subkey]
+							})
+							talent.ability_special = json.dumps(talent_ability_special, indent=4)
+
 
 	print("- loading ability data from dota_english")
 	# Load additional information from the dota_english.txt file
