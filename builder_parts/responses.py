@@ -9,6 +9,7 @@ import os
 
 file_types = [ "mp3", "wav", "aac" ]
 
+
 def load():
 	session.query(Response).delete()
 	session.query(Criterion).delete()
@@ -24,8 +25,11 @@ def load():
 		vsndevts_path = f"/soundevents/voscripts/game_sounds_vo_{voice.media_name}.vsndevts"
 		vsndevts_data = valve_readfile(config.vpk_path, vsndevts_path, "vsndevts")
 		captionsFilename = f"{config.vpk_path}/resource/subtitles/subtitles_{voice.media_name}_english.dat"
+		captionsFilename2 = f"{config.vpk_path}/resource/subtitles/subtitles_{voice.media_name}_english_staging.dat"
 		if os.path.exists(captionsFilename):
 			captionsFile = ClosedCaptionFile(captionsFilename)
+		elif os.path.exists(captionsFilename2):
+			captionsFile = ClosedCaptionFile(captionsFilename2)
 		else:
 			printerr(f"missing {captionsFilename}")
 			captionsFile = None
@@ -135,13 +139,15 @@ def load():
 					response.voice_id = voice.id
 
 	print("- adding hero chatwheel criteria")
-	chatwheel_criteria = set()
+	chatwheel_criteria = []
 	chatwheel_data = valve_readfile(config.vpk_path, paths['chat_wheel_scripts_file'], "kv", encoding="utf-8")["chat_wheel"]
 	for hero in chatwheel_data["hero_messages"]:
 		for chatwheel_id in chatwheel_data["hero_messages"][hero]:
 			chatwheel_message = chatwheel_data["hero_messages"][hero][chatwheel_id]
-			chatwheel_criteria.add(chatwheel_message['unlock_hero_badge_tier'])
-			new_criteria = f"HeroChatWheel {chatwheel_message['unlock_hero_badge_tier']}"
+			badge_tier = chatwheel_message['unlock_hero_badge_tier']
+			if badge_tier not in chatwheel_criteria:
+				chatwheel_criteria.append(badge_tier)
+			new_criteria = f"HeroChatWheel {badge_tier}"
 			for response in session.query(Response).filter_by(fullname=chatwheel_message["sound"]):
 				if response.criteria != "":
 					new_criteria = "|" + new_criteria

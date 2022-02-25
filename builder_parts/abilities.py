@@ -116,11 +116,13 @@ def load():
 					for subkey in valdict:
 						if subkey.startswith("special_bonus"):
 							# this is a talent value we need to link
+							value = valdict[subkey]
+							value = re.sub(r"(\+|-)", "", value) # clean it up so we dont have duplicate things (the header contains these)
 							talent = session.query(Ability).filter_by(name=subkey).first()
 							talent_ability_special = json.loads(talent.ability_special, object_pairs_hook=OrderedDict)
 							talent_ability_special.append({
 								"key": f"bonus_{key}",
-								"value": valdict[subkey]
+								"value": value
 							})
 							talent.ability_special = json.dumps(talent_ability_special, indent=4)
 
