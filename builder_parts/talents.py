@@ -60,17 +60,17 @@ def load():
 	# load ability draft gold talents
 	print("- loading ability draft talents")
 	for ability in session.query(Ability):
-		gold_talent_match = re.match(r"ad_special_bonus_gold_(\d+_.)", ability.name)
+		gold_talent_match = re.match(r"ad_special_bonus_gold_(lvl\d+_.)", ability.name)
 		if gold_talent_match:
 			talent_slot = [
-				"150_l", # note that "l" apparently means right, and "r" apparently means left.
-				"150_r",
-				"250_l",
-				"250_r",
-				"500_l",
-				"500_r",
-				"750_l",
-				"750_r"
+				"lvl10_l", # note that "l" apparently means right, and "r" apparently means left.
+				"lvl10_r",
+				"lvl15_l",
+				"lvl15_r",
+				"lvl20_l",
+				"lvl20_r",
+				"lvl25_l",
+				"lvl25_r"
 			].index(gold_talent_match.group(1))
 			talent = Talent()
 			talent.ability_id = ability.id
