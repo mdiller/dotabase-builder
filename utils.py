@@ -65,6 +65,15 @@ def get_ability_special_AbilitySpecial(ability_special, name):
 			if key in obj:
 				del obj[key]
 
+		# useful keys we can add to the abilityspecial
+		good_keys = {
+			"DamageTypeTooltip": "damagetype"
+		}
+		for key in good_keys:
+			if key in obj:
+				new_item[good_keys[key]] = obj[key]
+				del obj[key]
+
 		for key in ability_special_talent_keys:
 			if key in obj:
 				new_item[ability_special_talent_keys[key]] = obj[key]
