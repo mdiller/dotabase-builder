@@ -3,6 +3,7 @@
 from sqlalchemy import desc
 from dotabase import *
 from utils import *
+import importlib.metadata
 import os
 import sys
 
@@ -46,6 +47,21 @@ parts_dict = {
 	"patches": patches
 }
 
+def update_pkg_version():
+	pkgversion = importlib.metadata.version("dotabase")
+	filename = os.path.join(dotabase_dir, "../VERSION")
+
+	with open(filename, "r") as f:
+		fileversion = f.read()
+
+	if fileversion.strip() == pkgversion.strip():
+		version = list(map(lambda i: int(i), pkgversion.split(".")))
+		version[-1] += 1
+		version = ".".join(map(lambda s: str(s), version))
+		with open(filename, "w+") as f:
+			f.write(version)
+		print(f"version updated to: {version}")
+
 def dump_sql():
 	print("dumping sql...")
 	os.system(f"cd \"{dotabase_dir}\" && sqlite3 dotabase.db \".dump\" > dotabase.db.sql")
@@ -83,7 +99,8 @@ def build_dotabase():
 	generate_json()
 	dump_sql()
 	update_readme()
-	print("done")
+	update_pkg_version()
+	print("done!")
 
 
 if __name__ == "__main__":
