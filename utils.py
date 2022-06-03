@@ -1,4 +1,5 @@
 import sys, os, json, re
+import decimal
 import colorama # support ansi colors on windows
 from collections import OrderedDict
 colorama.init()
@@ -27,6 +28,39 @@ def bold_values(values, separator, base_level):
 	return separator.join(values)
 
 
+
+# adds/subtracts the modifier from the base value. Assumes 0 if no base value given
+def do_simple_math(base_value, modifier):
+	if base_value is None:
+		base_value = "0"
+	if " " in base_value or " " in modifier:
+		# this is a multi-part value like "10 20 30 40" so just do these individually
+		values = base_value.split(" ")
+		modifiers = modifier.split(" ")
+		valcount = max(len(values), len(modifiers))
+
+		if len(values) == 1:
+			values = [base_value] * valcount
+		if len(modifiers) == 1:
+			modifiers = [modifier] * valcount
+
+		results = []
+		for i in range(valcount):
+			results.append(do_simple_math(values[i], modifiers[i]))
+		return " ".join(results)
+	base_value_decimal = decimal.Decimal(base_value)
+
+	if "%" in modifier:
+		modifier = modifier.replace("%", "")
+		modifier_decimal = decimal.Decimal(modifier)
+		modifier_decimal = modifier_decimal / 100
+	else:
+		modifier_decimal = decimal.Decimal(modifier)
+	value = base_value_decimal + modifier_decimal
+	value = str(value)
+	value = re.sub(r"\.0+$", "", value)
+	return value
+
 ability_special_talent_keys = { 
 	"LinkedSpecialBonus": "talent_name", 
 	"LinkedSpecialBonusField": "talent_value_key", 
@@ -36,19 +70,29 @@ ability_special_talent_keys = {
 }
 def get_ability_special_AbilityValues(ability_values, name):
 	result = []
-	for key, value in ability_values.items():
+	for avkey, value in ability_values.items():
 		new_item = OrderedDict()
-		new_item["key"] = key
+		new_item["key"] = avkey
 		if isinstance(value, str):
 			new_item["value"] = value
 		else:
-			if "values" in value:
-				new_item["value"] = value["values"]
-			else:
-				new_item["value"] = value["value"]
+			# value is a dictionary
+			valuekeys = [ "values", "value" ]
+			for key in valuekeys:
+				if key in value:
+					new_item["value"] = value[key]
+					break
 			for subkey in value:
 				if subkey in ability_special_talent_keys:
 					new_item[ability_special_talent_keys[subkey]] = value[subkey]
+			
+			if "special_bonus_shard" in value:
+				new_item["shard_value"] = do_simple_math(value.get("value"), value["special_bonus_shard"])
+				new_item["shard_bonus"] = re.sub(r"[^\d]", "", value["special_bonus_shard"])
+			if "special_bonus_scepter" in value:
+				new_item["scepter_value"] = do_simple_math(value.get("value"), value["special_bonus_scepter"])
+				new_item["scepter_bonus"] = re.sub(r"[^\d]", "", value["special_bonus_scepter"])
+
 		result.append(new_item)
 	return result
 
@@ -101,37 +145,41 @@ def get_ability_special(json_data, name):
 		return []
 
 # adds talent info
-def ability_special_add_talent(ability_special, ability_query):
+def ability_special_add_talent(ability_special, ability_query, ability_name):
 	for attribute in ability_special:
 		talent = attribute.get("talent_name")
 		if talent:
-			try:
-				talent = ability_query.filter_by(name=talent).first()
-				value_key = attribute.get("talent_value_key", "value")
-				talent_operation = attribute.get("talent_operation", "SPECIAL_BONUS_ADD") # SUBTRACT, MULTIPLY
+			talent = ability_query.filter_by(name=talent).first()
+			value_key = attribute.get("talent_value_key", "value")
+			talent_operation = attribute.get("talent_operation", "SPECIAL_BONUS_ADD") # SUBTRACT, MULTIPLY
 
-				talent_ability_special = json.loads(talent.ability_special, object_pairs_hook=OrderedDict)
-
-				talent_attribute = next(a for a in talent_ability_special if a["key"] == value_key)
-
-				def do_op(value1, value2):
-					return {
-						"SPECIAL_BONUS_ADD": value1 + value2,
-						"SPECIAL_BONUS_SUBTRACT": value1 - value2,
-						"SPECIAL_BONUS_MULTIPLY": value1 * value2,
-						"SPECIAL_BONUS_PERCENTAGE_ADD": value1 * (1 + (value2 / 100))
-					}[talent_operation]
-
-				values = attribute["value"].split(" ")
-				talent_value = float(re.sub(r"[a-z]", "", talent_attribute["value"]))
-				for i in range(len(values)):
-					if values[i] == "":
-						values[i] = "0"
-					values[i] = str(do_op(float(values[i]), talent_value))
-				attribute["talent_value"] = clean_values(" ".join(values))
-			except Exception as e:
-				print("errored while adding talent")
+			if talent is None:
+				printerr(f"The wrong MISSING talent ({attribute.get('talent_name')}) is linked to the ability special for {ability_name}: {attribute.get('key')}")
 				return ability_special
+
+			talent_ability_special = json.loads(talent.ability_special, object_pairs_hook=OrderedDict)
+
+			talent_attribute = next((a for a in talent_ability_special if a["key"] == value_key), None)
+
+			if talent_attribute is None:
+				printerr(f"The wrong talent ({talent.name}: {talent.localized_name}) is linked to the ability special for {ability_name}: {attribute.get('key')}")
+				return ability_special
+
+			def do_op(value1, value2):
+				return {
+					"SPECIAL_BONUS_ADD": value1 + value2,
+					"SPECIAL_BONUS_SUBTRACT": value1 - value2,
+					"SPECIAL_BONUS_MULTIPLY": value1 * value2,
+					"SPECIAL_BONUS_PERCENTAGE_ADD": value1 * (1 + (value2 / 100))
+				}[talent_operation]
+
+			values = attribute["value"].split(" ")
+			talent_value = float(re.sub(r"[a-z]", "", talent_attribute["value"]))
+			for i in range(len(values)):
+				if values[i] == "":
+					values[i] = "0"
+				values[i] = str(do_op(float(values[i]), talent_value))
+			attribute["talent_value"] = clean_values(" ".join(values))
 	return ability_special
 
 def ability_special_add_header(ability_special, strings, name):
@@ -144,7 +192,8 @@ def ability_special_add_header(ability_special, strings, name):
 		match = re.match(r"(%)?([\+\-]\$)?(.*)", header)
 		header = match.group(3)
 
-		attribute["value"] = clean_values(attribute["value"], percent=match.group(1))
+		if "value" in attribute:
+			attribute["value"] = clean_values(attribute["value"], percent=match.group(1))
 		if "talent_value" in attribute:
 			attribute["talent_value"] = clean_values(attribute["talent_value"], percent=match.group(1))
 

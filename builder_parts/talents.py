@@ -22,6 +22,7 @@ def load():
 	}
 
 	# load all talents from heroes
+	talent_names = []
 	progress = ProgressBar(session.query(Hero).count(), title="- loading talents from heroes")
 	for hero in session.query(Hero):
 		# Link abilities and add talents
@@ -38,6 +39,7 @@ def load():
 						talent.hero_id = hero.id
 						talent.ability_id = ability.id
 						talent.slot = talent_slot
+						talent_names.append(ability.name)
 						# link talents
 						ability_data = json.loads(ability.json_data)
 						ability_specials = ability_data.get("AbilitySpecial", {}).values()
@@ -56,6 +58,25 @@ def load():
 						talent_slot += 1
 		if talent_slot != 8:
 			raise ValueError("{} only has {} talents?".format(hero.localized_name, len(talents)))
+	
+	talent_names = "|".join(talent_names)
+	print("- scanning abilities to link them to talents where necessary")
+	for ability in session.query(Ability):
+		if "AbilityValues" in ability.json_data and re.search(talent_names, ability.json_data):
+			ability_data = json.loads(ability.json_data)
+			for value in ability_data["AbilityValues"].values():
+				if not isinstance(value, str):
+					for key in value:
+						if re.match(f"^({talent_names})$", key):
+							talent_ability = session.query(Ability).filter_by(name=key).first()
+							talent = session.query(Talent).filter_by(ability_id=talent_ability.id).first()
+							if talent.linked_abilities is None:
+								talent.linked_abilities = ability.name
+							elif ability.name not in talent.linked_abilities:
+								talent.linked_abilities += f"|{ability.name}"
+									
+
+
 
 	# load ability draft gold talents
 	print("- loading ability draft talents")

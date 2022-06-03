@@ -26,8 +26,17 @@ def build_replacements_dict(ability, scepter=False, shard=False):
 		if is_shard_upgrade and not shard:
 			continue
 		if (attrib["key"] not in result) or is_scepter_upgrade or is_shard_upgrade:
-			if attrib["value"] != "":
-				result[attrib["key"]] = attrib["value"]
+			value = attrib.get("value")
+			if shard and attrib.get("shard_value"):
+				value = attrib.get("shard_value")
+			if scepter and attrib.get("scepter_value"):
+				value = attrib.get("scepter_value")
+			if value and value != "":
+				result[attrib["key"]] = value
+		if shard and attrib.get("shard_bonus"):
+			result[f"bonus_{attrib['key']}"] = attrib.get("shard_bonus")
+		if scepter and attrib.get("scepter_bonus"):
+			result[f"bonus_{attrib['key']}"] = attrib.get("scepter_bonus")
 	return result
 
 def load():
@@ -52,6 +61,13 @@ def load():
 		def get_val(key, default_base=False):
 			if key in ability_data:
 				val = ability_data[key]
+				if ' ' in val and all(x == val.split(' ')[0] for x in val.split(' ')):
+					return val.split(' ')[0]
+				return val
+			elif "AbilityValues" in ability_data and key in ability_data["AbilityValues"]:
+				val = ability_data["AbilityValues"][key]
+				if not isinstance(val, str):
+					val = val["value"]
 				if ' ' in val and all(x == val.split(' ')[0] for x in val.split(' ')):
 					return val.split(' ')[0]
 				return val
@@ -83,7 +99,7 @@ def load():
 
 
 		if ability.id in added_ids:
-			print_error(f"duplicate id on: {abilityname}")
+			printerr(f"duplicate id on: {abilityname}")
 			continue
 		added_ids.append(ability.id)
 
@@ -119,6 +135,10 @@ def load():
 							value = valdict[subkey]
 							value = re.sub(r"(\+|-)", "", value) # clean it up so we dont have duplicate things (the header contains these)
 							talent = session.query(Ability).filter_by(name=subkey).first()
+							if talent is None:
+								if subkey not in [ "special_bonus_scepter", "special_bonus_shard" ]:
+									printerr(f"Can't find special_bonus when attempting to link '{ability.name}' '{key}' ('{subkey}')")
+								break
 							talent_ability_special = json.loads(talent.ability_special, object_pairs_hook=OrderedDict)
 							talent_ability_special.append({
 								"key": f"bonus_{key}",
@@ -157,7 +177,7 @@ def load():
 		}
 
 		ability_special = json.loads(ability.ability_special, object_pairs_hook=OrderedDict)
-		ability_special = ability_special_add_talent(ability_special, session.query(Ability))
+		ability_special = ability_special_add_talent(ability_special, session.query(Ability), ability.name)
 		ability_special = ability_special_add_header(ability_special, data, ability.name)
 		for key in ability_special_value_fixes:
 			for special in ability_special:

@@ -5,6 +5,102 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
+			"name": "Dotabase Build",
+			"type": "python",
+			"request": "launch",
+			"program": "builder.py",
+			"console": "integratedTerminal"
+		},
+		{
+			"name": "Dotabase (chat_wheel)",
+			"type": "python",
+			"request": "launch",
+			"program": "builder.py",
+			"console": "integratedTerminal",
+			"args": [ "chat_wheel" ]
+		},
+
+		{
+			"name": "Dotabase (emoticons)",
+			"type": "python",
+			"request": "launch",
+			"program": "builder.py",
+			"console": "integratedTerminal",
+			"args": [ "emoticons" ]
+		},
+
+		{
+			"name": "Dotabase (items)",
+			"type": "python",
+			"request": "launch",
+			"program": "builder.py",
+			"console": "integratedTerminal",
+			"args": [ "items" ]
+		},
+
+		{
+			"name": "Dotabase (abilities)",
+			"type": "python",
+			"request": "launch",
+			"program": "builder.py",
+			"console": "integratedTerminal",
+			"args": [ "abilities" ]
+		},
+
+		{
+			"name": "Dotabase (heroes)",
+			"type": "python",
+			"request": "launch",
+			"program": "builder.py",
+			"console": "integratedTerminal",
+			"args": [ "heroes" ]
+		},
+
+		{
+			"name": "Dotabase (talents)",
+			"type": "python",
+			"request": "launch",
+			"program": "builder.py",
+			"console": "integratedTerminal",
+			"args": [ "talents" ]
+		},
+
+		{
+			"name": "Dotabase (voices)",
+			"type": "python",
+			"request": "launch",
+			"program": "builder.py",
+			"console": "integratedTerminal",
+			"args": [ "voices" ]
+		},
+
+		{
+			"name": "Dotabase (responses)",
+			"type": "python",
+			"request": "launch",
+			"program": "builder.py",
+			"console": "integratedTerminal",
+			"args": [ "responses" ]
+		},
+
+		{
+			"name": "Dotabase (loadingscreens)",
+			"type": "python",
+			"request": "launch",
+			"program": "builder.py",
+			"console": "integratedTerminal",
+			"args": [ "loadingscreens" ]
+		},
+
+		{
+			"name": "Dotabase (patches)",
+			"type": "python",
+			"request": "launch",
+			"program": "builder.py",
+			"console": "integratedTerminal",
+			"args": [ "patches" ]
+		},
+		{
 			"name": "Python: Current File",
 			"type": "python",
 			"request": "launch",
@@ -14,3 +110,7 @@
 		}
 	]
 }
+
+
+
+		
