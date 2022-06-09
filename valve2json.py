@@ -24,6 +24,10 @@ def dict_handle_duplicates(ordered_pairs):
 		d[k] = v
 	return d
 
+class CustomJsonParsingException(Exception):
+	def __init__(self, message):
+		self.message = message
+
 def tryloadjson(text, strict=True):
 	try:
 		return json.loads(text, strict=strict, object_pairs_hook=dict_handle_duplicates)
@@ -34,14 +38,13 @@ def tryloadjson(text, strict=True):
 		print(f"bad converted file saved to: {filename}")
 
 		lines = text.split("\n")
-		start = e.lineno - 2
-		end = e.lineno + 2
+		start = e.lineno - 4
+		end = e.lineno + 4
 		if start < 0:
 			start = 0
 		if end > len(lines):
 			end = len(lines)
-		print("Error parsing this JSON text:\n" + "\n".join(lines[start:end]) + "\n")
-		raise
+		raise CustomJsonParsingException("Error parsing this JSON text:\n" + "\n".join(lines[start:end]) + "\n")
 
 # Redefine with error printing
 def read_json(filename):
@@ -268,17 +271,22 @@ def valve_readfile(sourcedir, filepath, fileformat, encoding=None, overwrite=Fal
 	json_file = os.path.splitext(json_cache_dir + filepath)[0]+'.json'
 	vpk_file = sourcedir + filepath
 
-	if (not (overwrite or config.overwrite_json)) and os.path.isfile(json_file) and (os.path.getmtime(json_file) > os.path.getmtime(vpk_file)):
-		with open(json_file, 'r') as f:
-			text = f.read()
-			return tryloadjson(text)
+	try:
+		if (not (overwrite or config.overwrite_json)) and os.path.isfile(json_file) and (os.path.getmtime(json_file) > os.path.getmtime(vpk_file)):
+			with open(json_file, 'r') as f:
+				text = f.read()
+				return tryloadjson(text)
 
-	if(fileformat in file_formats):
-		with open(vpk_file, 'r', encoding=encoding) as f:
-			text = f.read()
-			data = file_formats[fileformat](text)
-	else:
-		raise ValueError("invalid fileformat argument: " + fileformat)
+		if(fileformat in file_formats):
+			with open(vpk_file, 'r', encoding=encoding) as f:
+				text = f.read()
+				data = file_formats[fileformat](text)
+		else:
+			raise ValueError("invalid fileformat argument: " + fileformat)
+	except CustomJsonParsingException as e:
+		message = f"Errored loading: {vpk_file}\n" + e.message
+		print(message)
+		exit(1)
 
 	os.makedirs(os.path.dirname(json_file), exist_ok=True)
 	write_json(json_file, data)
