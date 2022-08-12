@@ -1,7 +1,8 @@
-from __main__ import session, config, paths
+from __main__ import session
+session: sqlsession.Session
 from dotabase import *
 from utils import *
-from valve2json import valve_readfile
+from valve2json import valve_readfile, DotaFiles
 import os
 
 
@@ -11,31 +12,31 @@ def load():
 
 	print("- loading chat_wheel vsndevts infos")
 	# load sounds info from vsndevts file
-	vsndevts_data = CaseInsensitiveDict(valve_readfile(config.vpk_path, paths['chat_wheel_vsndevts_file'], "vsndevts"))
+	vsndevts_data = CaseInsensitiveDict(DotaFiles.game_sounds_vsndevts.read())
 	extra_vsndevts_dirs = [ "teamfandom", "team_fandom" ]
 	for subdir in extra_vsndevts_dirs:
 		fulldirpath = os.path.join(config.vpk_path, f"soundevents/{subdir}")
 		for file in os.listdir(fulldirpath):
 			if file.endswith(".vsndevts"):
 				filepath = f"/soundevents/{subdir}/{file}"
-				more_vsndevts_data = valve_readfile(config.vpk_path, filepath, "vsndevts")
+				more_vsndevts_data = valve_readfile(filepath, "vsndevts")
 				vsndevts_data.update(more_vsndevts_data)	
 
 	print("- loading chat_wheel info from scripts")
 	# load all of the item scripts data information
-	scripts_data = valve_readfile(config.vpk_path, paths['chat_wheel_scripts_file'], "kv", encoding="utf-8")["chat_wheel"]
+	scripts_data = DotaFiles.chat_wheel.read()["chat_wheel"]
 	chatwheel_scripts_subdir = "scripts/chat_wheels"
 	scripts_messages = CaseInsensitiveDict(scripts_data["messages"])
 	scripts_categories = CaseInsensitiveDict(scripts_data["categories"])
 	for file in os.listdir(os.path.join(config.vpk_path, chatwheel_scripts_subdir)):
 		filepath = f"/{chatwheel_scripts_subdir}/{file}"
-		more_chatwheel_data = valve_readfile(config.vpk_path, filepath, "kv", encoding="utf-8")["chat_wheel"]
+		more_chatwheel_data = valve_readfile(filepath, "kv", encoding="utf-8")["chat_wheel"]
 		scripts_messages.update(more_chatwheel_data.get("messages", {}))
 		scripts_categories.update(more_chatwheel_data.get("categories", {}))
 
 	existing_ids = set()
 	print("- process all chat_wheel data")
-	data = valve_readfile(config.vpk_path, paths['chat_wheel_scripts_file'], "kv", encoding="utf-8")["chat_wheel"]
+	data = DotaFiles.chat_wheel.read()["chat_wheel"]
 	for key in scripts_messages:
 		msg_data = scripts_messages[key]
 
@@ -87,8 +88,8 @@ def load():
 
 	print("- loading chat wheel data from dota_english")
 	# Load localization info from dota_english.txt and teamfandom_english.txt
-	data = valve_readfile(config.vpk_path, paths['dota_english_file'], "kv", encoding="UTF-8")["lang"]["Tokens"]
-	data.update(valve_readfile(config.vpk_path, "/resource/localization/teamfandom_english.txt", "kv", encoding="UTF-8")["lang"]["Tokens"])
+	data = DotaFiles.dota_english.read()["lang"]["Tokens"]
+	data.update(DotaFiles.teamfandom_english.read()["lang"]["Tokens"])
 
 	for message in session.query(ChatWheelMessage):
 		if message.label is None or message.message is None:

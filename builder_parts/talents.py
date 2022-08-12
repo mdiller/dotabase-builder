@@ -1,4 +1,5 @@
-from __main__ import session, config, paths
+from __main__ import session
+session: sqlsession.Session
 from dotabase import *
 from utils import *
 import re
@@ -57,7 +58,7 @@ def load():
 						session.add(talent)
 						talent_slot += 1
 		if talent_slot != 8:
-			raise ValueError("{} only has {} talents?".format(hero.localized_name, len(talents)))
+			raise ValueError("{} only has {} talents?".format(hero.localized_name, len(talent_names)))
 	
 	talent_names = "|".join(talent_names)
 	print("- scanning abilities to link them to talents where necessary")

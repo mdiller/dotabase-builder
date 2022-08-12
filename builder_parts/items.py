@@ -1,7 +1,8 @@
-from __main__ import session, config, paths
+from __main__ import session
+session: sqlsession.Session
 from dotabase import *
 from utils import *
-from valve2json import valve_readfile
+from valve2json import DotaFiles, DotaPaths
 
 def build_replacements_dict(item):
 	specials = json.loads(item.ability_special, object_pairs_hook=OrderedDict)
@@ -27,7 +28,7 @@ def load():
 	}
 	print("- loading items from item scripts")
 	# load all of the item scripts data information
-	data = valve_readfile(config.vpk_path, paths['item_scripts_file'], "kv")["DOTAAbilities"]
+	data = DotaFiles.items.read()["DOTAAbilities"]
 	for itemname in data:
 		if itemname == "Version":
 			continue
@@ -69,7 +70,7 @@ def load():
 
 	print("- loading item data from dota_english")
 	# Load additional information from the dota_english.txt file
-	data = valve_readfile(config.vpk_path, paths['localization_abilities'], "kv", encoding="UTF-8")["lang"]["Tokens"]
+	data = DotaFiles.abilities_english.read()["lang"]["Tokens"]
 	for item in session.query(Item):
 		item_tooltip = "DOTA_Tooltip_Ability_" + item.name 
 		item_tooltip2 = "DOTA_Tooltip_ability_" + item.name 
@@ -83,7 +84,7 @@ def load():
 		item.description = clean_description(item.description, build_replacements_dict(item), base_level=item.base_level)
 
 	print("- adding neutral item data")
-	data = valve_readfile(config.vpk_path, paths['neutral_item_scripts_file'], "kv")["neutral_items"]
+	data = DotaFiles.neutral_items.read()["neutral_items"]
 	item_tier_map = {}
 	for tier in data:
 		for name in data[tier]["items"]:
@@ -116,12 +117,12 @@ def load():
 	print("- adding item icon files")
 	# Add img files to item
 	for item in session.query(Item):
-		iconpath = paths['item_img_path'] + item.name.replace("item_", "") + "_png.png"
+		iconpath = DotaPaths.item_images + item.name.replace("item_", "") + "_png.png"
 		if os.path.isfile(config.vpk_path + iconpath):
 			item.icon = iconpath
 		else:
 			if "recipe" in item.name:
-				item.icon = paths['item_img_path'] + "recipe.png"
+				item.icon = DotaPaths.item_images + "recipe.png"
 			else:
 				printerr(f"icon file not found for {item.name}")
 

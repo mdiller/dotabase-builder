@@ -11,8 +11,6 @@ single_part = None
 if len(sys.argv) > 1:
 	single_part = sys.argv[1]
 
-config = Config()
-paths = read_json("paths.json")
 if config.overwrite_db and os.path.isfile(dotabase_db) and (single_part is None):
 	print("overwriting db")
 	os.remove(dotabase_db)

@@ -1,7 +1,8 @@
-from __main__ import session, config, paths
+from __main__ import session
+session: sqlsession.Session
 from dotabase import *
 from utils import *
-from valve2json import valve_readfile
+from valve2json import valve_readfile, DotaFiles, DotaPaths
 from vccd_reader import ClosedCaptionFile
 import criteria_sentancing
 import re
@@ -23,7 +24,7 @@ def load():
 			continue
 
 		vsndevts_path = f"/soundevents/voscripts/game_sounds_vo_{voice.media_name}.vsndevts"
-		vsndevts_data = valve_readfile(config.vpk_path, vsndevts_path, "vsndevts")
+		vsndevts_data = valve_readfile(vsndevts_path, "vsndevts")
 		captionsFilename = f"{config.vpk_path}/resource/subtitles/subtitles_{voice.media_name}_english.dat"
 		captionsFilename2 = f"{config.vpk_path}/resource/subtitles/subtitles_{voice.media_name}_english_staging.dat"
 		if os.path.exists(captionsFilename):
@@ -73,9 +74,9 @@ def load():
 	groups = {}
 	criteria = {}
 	# Load response_rules
-	for root, dirs, files in os.walk(config.vpk_path + paths['response_rules_path']):
+	for root, dirs, files in os.walk(config.vpk_path + DotaPaths.response_rules):
 		for file in files:
-			data = valve_readfile(config.vpk_path, paths['response_rules_path'] + file, "rules")
+			data = valve_readfile(DotaPaths.response_rules + file, "rules")
 			for key in data:
 				if key.startswith("rule_"):
 					rules[key[5:]] = data[key]
@@ -140,7 +141,7 @@ def load():
 
 	print("- adding hero chatwheel criteria")
 	chatwheel_criteria = []
-	chatwheel_data = valve_readfile(config.vpk_path, paths['chat_wheel_scripts_file'], "kv", encoding="utf-8")["chat_wheel"]
+	chatwheel_data = DotaFiles.chat_wheel.read()["chat_wheel"]
 	for hero in chatwheel_data["hero_messages"]:
 		for chatwheel_id in chatwheel_data["hero_messages"][hero]:
 			chatwheel_message = chatwheel_data["hero_messages"][hero][chatwheel_id]

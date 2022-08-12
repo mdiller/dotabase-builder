@@ -1,7 +1,8 @@
-from __main__ import session, config, paths
+from __main__ import session
+session: sqlsession.Session
 from dotabase import *
 from utils import *
-from valve2json import valve_readfile, ItemsGame
+from valve2json import ItemsGame
 
 def name_to_url(name):
 	conversions = {

@@ -1,7 +1,8 @@
-from __main__ import session, config, paths
+from __main__ import session
+session: sqlsession.Session
 from dotabase import *
 from utils import *
-from valve2json import valve_readfile
+from valve2json import DotaFiles, DotaPaths
 import re
 
 attribute_dict = {
@@ -20,7 +21,7 @@ def load():
 	print("Heroes")
 
 	# load all of the hero scripts data information
-	data = valve_readfile(config.vpk_path, paths['hero_scripts_file'], "kv")["DOTAHeroes"]
+	data = DotaFiles.npc_heroes.read()["DOTAHeroes"]
 	progress = ProgressBar(len(data), title="- loading from hero scripts")
 	for heroname in data:
 		progress.tick()
@@ -93,8 +94,8 @@ def load():
 
 	print("- loading hero names from dota_english file")
 	# Load hero names from dota_english file
-	data = valve_readfile(config.vpk_path, paths['dota_english_file'], "kv", encoding="UTF-8")["lang"]["Tokens"]
-	data_abilities = valve_readfile(config.vpk_path, paths['localization_abilities'], "kv", encoding="UTF-8")["lang"]["Tokens"]
+	data = DotaFiles.dota_english.read()["lang"]["Tokens"]
+	data_abilities = DotaFiles.abilities_english.read()["lang"]["Tokens"]
 	for hero in session.query(Hero):
 		if hero.full_name in data:
 			hero.localized_name = data[hero.full_name]
@@ -105,7 +106,7 @@ def load():
 
 	print("- loading bio from hero lore file")
 	# Load bio from hero lore file
-	data = valve_readfile(config.vpk_path, paths['localization_hero_lore'], "kv", encoding="UTF-8")["lang"]["Tokens"]
+	data = DotaFiles.hero_lore_english.read()["lang"]["Tokens"]
 	for hero in session.query(Hero):
 		hero.bio = simple_html_to_markdown(data[hero.full_name + "_bio"])
 
@@ -113,9 +114,9 @@ def load():
 	# Add img files to hero
 	for hero in session.query(Hero):
 		file_ending = hero.full_name + "_png.png"
-		hero.icon = paths['hero_icon_path'] + file_ending
-		hero.image = paths['hero_image_path'] + file_ending
-		hero.portrait = paths['hero_selection_path'] + file_ending
+		hero.icon = DotaPaths.hero_icon_images + file_ending
+		hero.image = DotaPaths.hero_side_images + file_ending
+		hero.portrait = DotaPaths.hero_selection_images + file_ending
 
 	print("- adding hero real names")
 	data = read_json("builderdata/hero_names.json")

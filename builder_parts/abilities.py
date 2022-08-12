@@ -1,7 +1,8 @@
-from __main__ import session, config, paths
+from __main__ import session
+session: sqlsession.Session
 from dotabase import *
 from utils import *
-from valve2json import valve_readfile
+from valve2json import DotaFiles, DotaPaths
 import re
 
 def build_replacements_dict(ability, scepter=False, shard=False):
@@ -47,7 +48,7 @@ def load():
 
 	print("- loading abilities from ability scripts")
 	# load all of the ability scripts data information
-	data = valve_readfile(config.vpk_path, paths['ability_scripts_file'], "kv")["DOTAAbilities"]
+	data = DotaFiles.npc_abilities.read()["DOTAAbilities"]
 	for abilityname in data:
 		if(abilityname == "Version" or
 			abilityname == "ability_deward" or
@@ -149,7 +150,7 @@ def load():
 
 	print("- loading ability data from dota_english")
 	# Load additional information from the dota_english.txt file
-	data = valve_readfile(config.vpk_path, paths['localization_abilities'], "kv", encoding="UTF-8")["lang"]["Tokens"]
+	data = DotaFiles.abilities_english.read()["lang"]["Tokens"]
 	data = CaseInsensitiveDict(data)
 	for ability in session.query(Ability):
 		ability_tooltip = "DOTA_Tooltip_ability_" + ability.name 
@@ -210,10 +211,10 @@ def load():
 	print("- adding ability icon files")
 	# Add img files to ability
 	for ability in session.query(Ability):
-		iconpath = paths['ability_icon_path'] + ability.name + "_png.png"
+		iconpath = DotaPaths.ability_icon_images + ability.name + "_png.png"
 		if os.path.isfile(config.vpk_path + iconpath):
 			ability.icon = iconpath
 		else:
-			ability.icon = paths['ability_icon_path'] + "attribute_bonus_png.png"
+			ability.icon = DotaPaths.ability_icon_images + "attribute_bonus_png.png"
 
 	session.commit()

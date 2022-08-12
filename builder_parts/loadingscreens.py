@@ -1,7 +1,8 @@
-from __main__ import session, config, paths
+from __main__ import session
+session: sqlsession.Session
 from dotabase import *
 from utils import *
-from valve2json import valve_readfile, ItemsGame
+from valve2json import DotaFiles, ItemsGame
 from PIL import Image
 import datetime
 import os

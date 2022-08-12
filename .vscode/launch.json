@@ -101,12 +101,11 @@
 			"args": [ "patches" ]
 		},
 		{
-			"name": "Python: Current File",
+			"name": "Run Current File",
 			"type": "python",
 			"request": "launch",
-			"program": "builder.py",
-			"console": "integratedTerminal",
-			"justMyCode": true
+			"program": "${file}",
+			"console": "integratedTerminal"
 		}
 	]
 }

@@ -1,10 +1,10 @@
+from importlib.resources import path
 import json
 import re
 import string
 import os.path
 import collections
 from utils import *
-from __main__ import config, paths
 
 # Converts valve's obsure and unusable text formats to json
 # can do the following formats:
@@ -172,53 +172,6 @@ def rulesfile2json(text):
 
 	return tryloadjson(text)
 
-# Loads the response_texts scraped from the wiki as json
-def scrapedresponses2json(text):
-	text = re.sub(r'"', r'\'', text)
-	text = re.sub(r'\t', '', text)
-	text = re.sub(r'<!--.*-->', r'', text)
-	text = re.sub(r'\* <sm2>', r'\t"', text)
-	text = re.sub(r'<sm2>', r'', text)
-	text = re.sub(r'\.mp3</sm2> ', r'": "', text)
-	text = re.sub(r'\.mp3</sm2>', r'": "', text)
-	text = re.sub(r'\\\'', r"'", text)
-	text = re.sub(r'\[https[^ ]+ ([^\]]+)]', r'\1', text)
-	text = re.sub(r'\[\[File:[^[]+]]', r'', text)
-	text = re.sub(r'\[\[[^[\|]+\|([^[]+)]]', r'\1', text)
-	text = re.sub(r'\[\[([^[]+)]]', r'\1', text)
-	text = re.sub(r'\[', r'', text)
-	text = re.sub(r']', r'', text)
-	text = re.sub(r'\{.*\} ', r'', text)
-	text = re.sub(r'"(.*)": "(.*)": "(.*)\n', r'"\1": "\3\n', text) # Arcana stuff
-	text = re.sub(r'"(.*)": "(.*)": "(.*)\n', r'"\1": "\3\n', text) # Multiple Arcana stuff
-	text = re.sub(r'\n.*\.wav.*\n', r'\n', text) # No wav files allowed
-	text = re.sub(r'\n', '",\n', text)
-	text = re.sub(r'<br />', ' ', text)
-	text = re.sub(r'<small>[^<]*</small>', r'', text)
-	text = re.sub(r'<([^>]+)>', r'*\1*', text)
-	text = "{" + text + "}"
-	text = re.sub(r',(\s*)}', r'\1}', text)
-
-	# fix the hero identification things
-	text = re.sub(r'\'(\d+)\': {",', r'"\1": {', text)
-
-	# custom issues for these 2
-	text = re.sub('rick_and_morty_announcer_', 'rick_and_morty_', text, flags=re.IGNORECASE)
-	text = re.sub('rick_and_morty_killing_spree_announcer_', 'rick_and_morty_killing_spree_', text, flags=re.IGNORECASE)
-	text = re.sub('dlc_cm_', 'cm_ann_', text, flags=re.IGNORECASE)
-
-	data = tryloadjson(text)
-	newdata = {}
-	for heroid in data:
-		herodata = {}
-		for key in data[heroid]:
-			value = data[heroid][key]
-			value = value.strip()
-			value = re.sub(r"''(.+)''", r'*\1*', value)
-			herodata[key.lower()] = value
-		newdata[heroid] = herodata
-	return newdata
-
 class AssetModifier():
 	def __init__(self, data):
 		self.data = data
@@ -229,7 +182,7 @@ class AssetModifier():
 # a class that allows easier access to the items_game file
 class ItemsGame():
 	def __init__(self):
-		self.data = valve_readfile(config.vpk_path, paths['cosmetics_scripts_file'], "kv_nocomment", encoding="UTF-8")["items_game"]
+		self.data = DotaFiles.items_game.read()["items_game"]
 		self.items = self.data["items"]
 		self.item_name_dict = {}
 		self.by_prefab = {}
@@ -258,16 +211,10 @@ class ItemsGame():
 				return AssetModifier(data)
 		return None
 
-file_formats = {
-	"scrapedresponses": scrapedresponses2json,
-	"rules": rulesfile2json,
-	"kv": kvfile2json,
-	"kv_nocomment": kv_nocommentfile2json,
-	"vsndevts": vsndevts2json
-}
 
 # Reads from converted json file unless overwrite parameter is specified
-def valve_readfile(sourcedir, filepath, fileformat, encoding=None, overwrite=False):
+def valve_readfile(filepath, fileformat, encoding=None, overwrite=False):
+	sourcedir = config.vpk_path
 	json_file = os.path.splitext(json_cache_dir + filepath)[0]+'.json'
 	vpk_file = sourcedir + filepath
 
@@ -291,3 +238,49 @@ def valve_readfile(sourcedir, filepath, fileformat, encoding=None, overwrite=Fal
 	os.makedirs(os.path.dirname(json_file), exist_ok=True)
 	write_json(json_file, data)
 	return data
+
+class ValveFile():
+	path: str
+	format: str
+	encoding: str
+	def __init__(self, path, format="kv", encoding=None):
+		self.path = path
+		self.format = format
+		self.encoding = encoding
+	
+	def read(self):
+		return valve_readfile(self.path, self.format, self.encoding)
+
+file_formats = {
+	"kv": kvfile2json,
+	"rules": rulesfile2json,
+	"kv_nocomment": kv_nocommentfile2json,
+	"vsndevts": vsndevts2json
+}
+
+class DotaFiles():
+	npc_abilities = ValveFile("/scripts/npc/npc_abilities.txt")
+	npc_heroes = ValveFile("/scripts/npc/npc_heroes.txt")
+	items = ValveFile("/scripts/npc/items.txt")
+	neutral_items = ValveFile("/scripts/npc/neutral_items.txt")
+	npc_abilities = ValveFile("/scripts/npc/npc_abilities.txt")
+	emoticons = ValveFile("/scripts/emoticons.txt", encoding="UTF-16")
+	chat_wheel = ValveFile("/scripts/chat_wheel.txt", encoding="utf-8")
+	game_sounds_vsndevts = ValveFile("/soundevents/game_sounds.vsndevts", "vsndevts")
+	dota_english = ValveFile("/resource/localization/dota_english.txt", encoding="UTF-8")
+	items_game = ValveFile("/scripts/items/items_game.txt", "kv_nocomment", encoding="UTF-8")
+	hero_lore_english = ValveFile("/resource/localization/hero_lore_english.txt", encoding="utf-8")
+	abilities_english = ValveFile("/resource/localization/abilities_english.txt", encoding="UTF-8")
+	teamfandom_english = ValveFile("/resource/localization/teamfandom_english.txt", encoding="utf-8")
+
+class DotaPaths():
+	response_mp3s = "/sounds/vo/"
+	item_images = "/panorama/images/items/"
+	ability_icon_images = "/panorama/images/spellicons/"
+	hero_side_images = "/panorama/images/heroes/"
+	hero_icon_images = "/panorama/images/heroes/icons/"
+	hero_selection_images = "/panorama/images/heroes/selection/"
+	emoticon_images = "/panorama/images/emoticons/"
+	response_rules = "/scripts/talker/"
+
+
