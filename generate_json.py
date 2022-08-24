@@ -3,6 +3,7 @@
 # 1. gives the viewer an idea of what is in the database
 # 2. provides a way to look at what changes between each update
 from __main__ import session
+import sqlalchemy.orm.session as sqlsession
 session: sqlsession.Session
 from dotabase import *
 from collections import OrderedDict

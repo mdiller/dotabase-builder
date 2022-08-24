@@ -49,7 +49,12 @@ def do_simple_math(base_value, modifier):
 		for i in range(valcount):
 			results.append(do_simple_math(values[i], modifiers[i]))
 		return " ".join(results)
-	base_value_decimal = decimal.Decimal(base_value)
+
+	if base_value == "FIELD_INTEGER":
+		base_value_decimal = 0 # god dammit valve y u do this. supposed to be a number n you give me "FIELD_INTEGER"????
+	else:
+		base_value_decimal = decimal.Decimal(base_value)
+
 
 	if "%" in modifier:
 		modifier = modifier.replace("%", "")

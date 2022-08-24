@@ -263,7 +263,6 @@ class DotaFiles():
 	npc_heroes = ValveFile("/scripts/npc/npc_heroes.txt")
 	items = ValveFile("/scripts/npc/items.txt")
 	neutral_items = ValveFile("/scripts/npc/neutral_items.txt")
-	npc_abilities = ValveFile("/scripts/npc/npc_abilities.txt")
 	emoticons = ValveFile("/scripts/emoticons.txt", encoding="UTF-16")
 	chat_wheel = ValveFile("/scripts/chat_wheel.txt", encoding="utf-8")
 	game_sounds_vsndevts = ValveFile("/soundevents/game_sounds.vsndevts", "vsndevts")

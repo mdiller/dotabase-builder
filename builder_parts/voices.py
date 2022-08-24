@@ -1,4 +1,5 @@
 from __main__ import session
+import sqlalchemy.orm.session as sqlsession
 session: sqlsession.Session
 from dotabase import *
 from utils import *
