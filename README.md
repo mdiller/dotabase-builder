@@ -4,7 +4,7 @@ A collection of scripts and programs to extract dota's game files and build an s
 ## VPK Extraction
 The main library/tool that this builder leans on is [ValveResourceFormat](https://github.com/SteamDatabase/ValveResourceFormat "Valve Source 2 file decompiler/compiler"). This lovely project is what allows me to extract the data from dota's vpk files, and decompile some of the obscure file formats like vsnd_c into more friendly ones like mp3. I'm using the Decompiler from this project in a call that looks about like this:
 ```
-dotnet Decompiler.dll -i "<vpk_location>" --recursive --vpk_cache True -d -e "txt,dat,vsndevts_c,vxml_c,vjs_c,vcss_c,png,cfg,res,vsnd_c,vtex_c" -o "<vpk_out_location>" --threads 16
+./Decompiler.exe -i "<vpk_location>" --vpk_cache -d -e "txt,dat,vsndevts_c,vxml_c,vjs_c,vcss_c,png,cfg,res,vsnd_c,vtex_c" -o "<vpk_out_location>" --threads 16
 ```
 
 ## Dota 2 Wiki Scraper

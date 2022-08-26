@@ -219,8 +219,13 @@ def ability_special_add_header(ability_special, strings, name):
 				attribute["header"] = header
 	return ability_special
 
+ATTRIBUTE_TEMPLATE_PATTERNS = [
+	r'%([^%}\s/]*)%',
+	r'\{s:([^}\s]*)\}'
+]
+
 # Cleans up the descriptions of items and abilities
-def clean_description(text, replacements_dict, base_level=None, value_bolding=True):
+def clean_description(text, replacements_dict, base_level=None, value_bolding=True, report_errors=True):
 	text = re.sub(r'</h1> ', r'</h1>', text)
 	text = re.sub(r'<h1>([^<]+)</h1>', r'\n# \1\n', text)
 	text = re.sub(r'<(br|BR)>', r'\n', text)
@@ -228,21 +233,28 @@ def clean_description(text, replacements_dict, base_level=None, value_bolding=Tr
 	text = re.sub(r'<font color=.*>(.*)</font>', r'\1', text)
 
 	def replace_attrib(match):
-		value = match.group(1)
-		if value == "":
+		key = match.group(1)
+		if key == "":
 			return "%"
 		else:
-			if value in replacements_dict:
-				new_value = clean_values(replacements_dict[value], "/")
+			new_value = None
+			if key in replacements_dict:
+				new_value = replacements_dict[key]
+			elif key.lower() in replacements_dict:
+				new_value = replacements_dict[key.lower()]
+			
+			if new_value is not None:
+				new_value = clean_values(new_value, "/")
 				if value_bolding:
 					new_value = bold_values(new_value, "/", base_level)
 				return new_value
+		
+			if report_errors:
+				printerr(f"Missing attrib '{key}' FROM {text}")
+			return f"%{key}%"
 
-			printerr(f"Missing attrib '{value}' FROM {text}")
-			return f"%{value}%"
-
-	text = re.sub(r'%([^%}\s]*)%', replace_attrib, text)
-	text = re.sub(r'\{s:([^}\s]*)\}', replace_attrib, text)
+	for pattern in ATTRIBUTE_TEMPLATE_PATTERNS:
+		text = re.sub(pattern, replace_attrib, text)
 
 	# include the percent in bold if the value is in bold
 	text = re.sub(r'\*\*%', '%**', text)
@@ -260,7 +272,12 @@ class ansicolors:
 	GREEN = '\033[32m'
 	YELLOW = '\033[33m'
 	BLUE = '\033[34m'
+
 def printerr(error_text):
+	global CURRENT_PROGRESS_BAR
+	if CURRENT_PROGRESS_BAR is not None:
+		CURRENT_PROGRESS_BAR.errors.append(error_text)
+		return
 	print(f"{ansicolors.RED}   {error_text}{ansicolors.CLEAR}")
 
 
@@ -305,13 +322,18 @@ class CaseInsensitiveDict(dict):
 			v = super(CaseInsensitiveDict, self).pop(k)
 			self.__setitem__(k, v)
 
+CURRENT_PROGRESS_BAR = None
+
 class ProgressBar:
 	def __init__(self, total, title="Percent:"):
+		global CURRENT_PROGRESS_BAR
 		self.total = total
 		self.current = 0
 		self.max_chunks = 10
 		self.title = title
+		self.errors = []
 		self.render()
+		CURRENT_PROGRESS_BAR = self
 
 	def tick(self):
 		oldpercent = int(self.percent * 100)
@@ -324,6 +346,7 @@ class ProgressBar:
 		return self.current / self.total
 
 	def render(self):
+		global CURRENT_PROGRESS_BAR
 		chunks = '█' * int(round(self.percent * self.max_chunks))
 		spaces = ' ' * (self.max_chunks - len(chunks))
 		sys.stdout.write(f"\r{self.title} |{chunks + spaces}| {self.percent:.0%}".encode("utf8").decode(sys.stdout.encoding))
@@ -332,6 +355,9 @@ class ProgressBar:
 		sys.stdout.flush()
 		if self.current == self.total:
 			sys.stderr.flush()
+			CURRENT_PROGRESS_BAR = None
+			for error in self.errors:
+				printerr(error)
 
 
 class Config:

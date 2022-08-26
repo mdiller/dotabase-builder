@@ -1,11 +1,10 @@
-from __main__ import session
-import sqlalchemy.orm.session as sqlsession
-session: sqlsession.Session
+from builder import session
 from dotabase import *
 from utils import *
 from valve2json import DotaFiles, DotaPaths
 
-def build_replacements_dict(item):
+
+def build_replacements_dict(item: Item):
 	specials = json.loads(item.ability_special, object_pairs_hook=OrderedDict)
 	result = {
 		"abilityduration": item.duration,
@@ -49,6 +48,7 @@ def load():
 		item.duration = clean_values(item_data.get('AbilityDuration'))
 		item.base_level = item_data.get("ItemBaseLevel")
 		item.secret_shop = item_data.get("SecretShop") == "1"
+		item.shop_tags = "|".join(item_data.get("ItemShopTags", "").split(";"))
 		item.ability_special = json.dumps(get_ability_special(item_data, item.name), indent=4)
 
 		item.json_data = json.dumps(item_data, indent=4)

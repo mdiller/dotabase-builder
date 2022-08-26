@@ -71,11 +71,14 @@ def update_readme():
 	data = read_json(dota_version_path)
 
 	patch = session.query(Patch).order_by(desc(Patch.timestamp)).first()
-	if data["message"] != patch.number:
-		print(f"dota version updated to: {patch.number}")
-		data["message"] = patch.number
+	if patch is None:
+		printerr("No patches found!")
 	else:
-		print(f"keeping patch at: {data['message']}")
+		if data["message"] != patch.number:
+			print(f"dota version updated to: {patch.number}")
+			data["message"] = patch.number
+		else:
+			print(f"keeping patch at: {data['message']}")
 
 	write_json(dota_version_path, data)
 

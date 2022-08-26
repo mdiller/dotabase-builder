@@ -1,6 +1,4 @@
-from __main__ import session
-import sqlalchemy.orm.session as sqlsession
-session: sqlsession.Session
+from builder import session
 from dotabase import *
 from utils import *
 import re
@@ -56,6 +54,13 @@ def load():
 									link = link_fixes[link]
 								link = link.replace(" ", "|")
 								talent.linked_abilities = link
+						
+						for pattern in ATTRIBUTE_TEMPLATE_PATTERNS:
+							if re.search(pattern, ability.localized_name):
+								printerr(f"Missing attribute in {hero.localized_name}'s talent: '{ability.localized_name}'")
+							if re.search(pattern, ability.description):
+								printerr(f"Missing attribute in {hero.localized_name}'s talent: '{ability.description}'")
+
 						session.add(talent)
 						talent_slot += 1
 		if talent_slot != 8:

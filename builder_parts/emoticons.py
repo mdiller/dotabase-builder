@@ -1,6 +1,4 @@
-from __main__ import session
-import sqlalchemy.orm.session as sqlsession
-session: sqlsession.Session
+from builder import session
 from dotabase import *
 from utils import *
 from PIL import Image

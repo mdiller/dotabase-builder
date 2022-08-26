@@ -1,12 +1,10 @@
-from __main__ import session
-import sqlalchemy.orm.session as sqlsession
-session: sqlsession.Session
+from builder import session
 from dotabase import *
 from utils import *
 from valve2json import DotaFiles, DotaPaths
 import re
 
-def build_replacements_dict(ability, scepter=False, shard=False):
+def build_replacements_dict(ability: Ability, scepter=False, shard=False):
 	specials = json.loads(ability.ability_special, object_pairs_hook=OrderedDict)
 	result = {
 		"abilityduration": ability.duration,
@@ -37,8 +35,10 @@ def build_replacements_dict(ability, scepter=False, shard=False):
 				result[attrib["key"]] = value
 		if shard and attrib.get("shard_bonus"):
 			result[f"bonus_{attrib['key']}"] = attrib.get("shard_bonus")
+			result[f"shard_{attrib['key']}"] = attrib.get("shard_value")
 		if scepter and attrib.get("scepter_bonus"):
 			result[f"bonus_{attrib['key']}"] = attrib.get("scepter_bonus")
+			result[f"scepter_{attrib['key']}"] = attrib.get("scepter_value")
 	return result
 
 def load():
@@ -187,9 +187,10 @@ def load():
 					special["value"] = ability_special_value_fixes[key]
 		ability.ability_special = json.dumps(ability_special, indent=4)
 
+		is_probably_talent = ability.name.startswith("special_bonus")
 		replacements_dict = build_replacements_dict(ability)
-		ability.localized_name = clean_description(ability.localized_name, replacements_dict, value_bolding=False)
-		ability.description = clean_description(ability.description, replacements_dict)
+		ability.localized_name = clean_description(ability.localized_name, replacements_dict, value_bolding=False, report_errors=not is_probably_talent)
+		ability.description = clean_description(ability.description, replacements_dict, report_errors=not is_probably_talent)
 		ability.note = clean_description(ability.note, replacements_dict)
 		replacements_dict = build_replacements_dict(ability, scepter=True)
 		ability.scepter_description = clean_description(ability.scepter_description, replacements_dict)
