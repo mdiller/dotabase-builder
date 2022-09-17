@@ -60,6 +60,9 @@ def do_simple_math(base_value, modifier):
 		modifier = modifier.replace("%", "")
 		modifier_decimal = decimal.Decimal(modifier)
 		modifier_decimal = modifier_decimal / 100
+	elif "=" in modifier: # TODO: this for lifestealer infest aghs, sets it to the new value. too tired to implement right now
+		modifier = modifier.replace("=", "")
+		modifier_decimal = decimal.Decimal(modifier)
 	else:
 		modifier_decimal = decimal.Decimal(modifier)
 	value = base_value_decimal + modifier_decimal
