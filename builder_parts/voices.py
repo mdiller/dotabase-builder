@@ -104,6 +104,8 @@ def load():
 					related_item = items_game.item_name_dict[item_name]
 					for ass_mod in items_game.get_asset_modifiers(related_item, "icon_replacement_hero_minimap"):
 						icon = f"/panorama/images/heroes/icons/{ass_mod.modifier}_png.png"
+						if icon and "npc_dota_hero_rubick_alt1" in icon: # this one is wrong in the data, so heres an ugly fix
+							icon = f"/panorama/images/heroes/icons/npc_dota_hero_rubick_alt_png.png"
 						break
 		if skip:
 			continue
