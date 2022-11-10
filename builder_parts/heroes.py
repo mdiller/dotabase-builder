@@ -96,10 +96,11 @@ def load():
 	data = DotaFiles.dota_english.read()["lang"]["Tokens"]
 	data_abilities = DotaFiles.abilities_english.read()["lang"]["Tokens"]
 	for hero in session.query(Hero):
-		if hero.full_name in data:
-			hero.localized_name = data[hero.full_name]
+		hero_full_name = hero.full_name + ":n"
+		if hero_full_name in data:
+			hero.localized_name = data[hero_full_name]
 		else:
-			hero.localized_name = data_abilities[hero.full_name]
+			hero.localized_name = data_abilities[hero_full_name]
 		hero.hype = simple_html_to_markdown(data[hero.full_name + "_hype"])
 
 
