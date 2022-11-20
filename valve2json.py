@@ -136,6 +136,9 @@ def kvfile2json(text, remove_comments=True):
 	# get rid of troublesome comments
 	if remove_comments:
 		text = uncommentkvfile(text)
+
+	# custom fixes because Valve does dum things
+	text = re.sub(" and turn rate reduced by %dMODIFIER_PROPERTY_TURN_RATE_PERCENTAGE%%%.", "", text)
 	
 	# To convert Valve's KeyValue format to Json
 	text = re.sub('﻿', '', text) # remove zero width no-break space
