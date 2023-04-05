@@ -3,6 +3,7 @@ import decimal
 import colorama # support ansi colors on windows
 import datetime
 from collections import OrderedDict
+from dotabase import LocaleString
 colorama.init()
 
 def clean_values(values, join_string=" ", percent=False):
@@ -228,41 +229,46 @@ ATTRIBUTE_TEMPLATE_PATTERNS = [
 ]
 
 # Cleans up the descriptions of items and abilities
-def clean_description(text, replacements_dict, base_level=None, value_bolding=True, report_errors=True):
+def clean_description(text, replacements_dict=None, base_level=None, value_bolding=True, report_errors=True):
+	if text is None or text == "":
+		return text
 	text = re.sub(r'</h1> ', r'</h1>', text)
 	text = re.sub(r'<h1>([^<]+)</h1>', r'\n# \1\n', text)
 	text = re.sub(r'<(br|BR)>', r'\n', text)
+	text = re.sub(r"<i>([^<]+)</i>", r"\*\1\*", text)
 	text = re.sub(r'<span class="GameplayValues GameplayVariable">(.*)</span>', r'**\1**', text)
 	text = re.sub(r'<font color=.*>(.*)</font>', r'\1', text)
+	text = re.sub(r'<b>([^<]+)</b>', r'**\1**', text)
 
-	def replace_attrib(match):
-		key = match.group(1)
-		if key == "":
-			return "%"
-		else:
-			new_value = None
-			if key in replacements_dict:
-				new_value = replacements_dict[key]
-			elif key.lower() in replacements_dict:
-				new_value = replacements_dict[key.lower()]
+	if replacements_dict:
+		def replace_attrib(match):
+			key = match.group(1)
+			if key == "":
+				return "%"
+			else:
+				new_value = None
+				if key in replacements_dict:
+					new_value = replacements_dict[key]
+				elif key.lower() in replacements_dict:
+					new_value = replacements_dict[key.lower()]
+				
+				if new_value is not None:
+					new_value = clean_values(new_value, "/")
+					if value_bolding:
+						new_value = bold_values(new_value, "/", base_level)
+					return new_value
 			
-			if new_value is not None:
-				new_value = clean_values(new_value, "/")
-				if value_bolding:
-					new_value = bold_values(new_value, "/", base_level)
-				return new_value
-		
-			if report_errors:
-				printerr(f"Missing attrib '{key}' FROM {text}")
-			return f"%{key}%"
+				if report_errors:
+					printerr(f"Missing attrib '{key}' FROM {text}")
+				return f"%{key}%"
 
-	for pattern in ATTRIBUTE_TEMPLATE_PATTERNS:
-		text = re.sub(pattern, replace_attrib, text)
+		for pattern in ATTRIBUTE_TEMPLATE_PATTERNS:
+			text = re.sub(pattern, replace_attrib, text)
 
-	# include the percent in bold if the value is in bold
-	text = re.sub(r'\*\*%', '%**', text)
-	# replace double percents that are redundant now
-	text = re.sub(r'%%', '%', text)
+		# include the percent in bold if the value is in bold
+		text = re.sub(r'\*\*%', '%**', text)
+		# replace double percents that are redundant now
+		text = re.sub(r'%%', '%', text)
 
 	if text.startswith("\n"):
 		text = text[1:]
@@ -439,3 +445,14 @@ class SimpleTimer():
 
 	def __repr__(self):
 		return self.__str__()
+
+# adds a locale string to the 
+def addLocaleString(session, lang, target, column, value):
+	if value == "" or value == None or value == getattr(target, column):
+		return None
+	string = LocaleString()
+	string.lang = lang
+	string.target = target
+	string.column = column
+	string.value = value
+	session.add(string)

@@ -10,11 +10,6 @@ attribute_dict = {
 	"DOTA_ATTRIBUTE_INTELLECT": "intelligence"
 }
 
-def simple_html_to_markdown(text):
-	text = re.sub("<br>", "\n", text)
-	text = re.sub(r"<i>([^>]+)</i>", r"\*\1\*", text)
-	return text
-
 def load():
 	session.query(Hero).delete()
 	print("Heroes")
@@ -91,24 +86,37 @@ def load():
 		session.add(hero)
 
 
-	print("- loading hero names from dota_english file")
+	print("- loading hero names from dota_lang files")
 	# Load hero names from dota_english file
-	data = DotaFiles.dota_english.read()["lang"]["Tokens"]
-	data_abilities = DotaFiles.abilities_english.read()["lang"]["Tokens"]
+	lang_data = DotaFiles.lang_dota
 	for hero in session.query(Hero):
-		hero_full_name = hero.full_name + ":n"
-		if hero_full_name in data:
-			hero.localized_name = data[hero_full_name]
-		else:
-			hero.localized_name = data_abilities[hero_full_name]
-		hero.hype = simple_html_to_markdown(data[hero.full_name + "_hype"])
+		for lang, data in lang_data:
+			data = data.read()["lang"]["Tokens"]
+			hero_full_name = hero.full_name + ":n"
+			
+			localized_name = data.get(hero_full_name, "")
+			localized_name = re.sub(r"#\|[fm]\|#", "", localized_name)
+			hype = clean_description(data.get(hero.full_name + "_hype"))
+			if lang == "english":
+				hero.localized_name = localized_name
+				hero.hype = hype
+			else:
+				addLocaleString(session, lang, hero, "localized_name", localized_name)
+				addLocaleString(session, lang, hero, "hype", hype)
 
 
-	print("- loading bio from hero lore file")
+	print("- loading bio from hero lore files")
 	# Load bio from hero lore file
-	data = DotaFiles.hero_lore_english.read()["lang"]["Tokens"]
+	lang_data = DotaFiles.lang_hero_lore
 	for hero in session.query(Hero):
-		hero.bio = simple_html_to_markdown(data[hero.full_name + "_bio"])
+		for lang, data in lang_data:
+			data = data.read()["lang"]["Tokens"]
+			bio = clean_description(data.get(hero.full_name + "_bio"))
+			if lang == "english":
+				hero.bio = bio
+			else:
+				addLocaleString(session, lang, hero, "bio", bio)
+	
 
 	print("- adding hero image files")
 	# Add img files to hero

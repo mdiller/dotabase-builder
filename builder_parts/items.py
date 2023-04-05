@@ -68,21 +68,38 @@ def load():
 		aliases.extend(data.get(item.name, []))
 		item.aliases = "|".join(aliases)
 
-
-	print("- loading item data from dota_english")
 	# Load additional information from the dota_english.txt file
-	data = DotaFiles.abilities_english.read()["lang"]["Tokens"]
+	english_data = DotaFiles.abilities_english.read()["lang"]["Tokens"]
+	lang_data = DotaFiles.lang_abilities
+	progress = ProgressBar(session.query(Item).count(), title="- loading item data from lang files")
 	for item in session.query(Item):
+		progress.tick()
 		item_tooltip = "DOTA_Tooltip_Ability_" + item.name 
 		item_tooltip2 = "DOTA_Tooltip_ability_" + item.name 
-		item.localized_name = data.get(item_tooltip, item.name)
-		item.description = data.get(item_tooltip + "_Description", data.get(item_tooltip2 + "_Description", ""))
-		item.lore = data.get(item_tooltip + "_Lore", data.get(item_tooltip2 + "_Lore", ""))
 
 		ability_special = json.loads(item.ability_special, object_pairs_hook=OrderedDict)
-		ability_special = ability_special_add_header(ability_special, data, item.name)
+		ability_special = ability_special_add_header(ability_special, english_data, item.name)
 		item.ability_special = json.dumps(ability_special, indent=4)
-		item.description = clean_description(item.description, build_replacements_dict(item), base_level=item.base_level)
+		replacements_dict = build_replacements_dict(item)
+		
+		for lang, data in lang_data:
+			data = data.read()["lang"]["Tokens"]
+			info = {}
+			info["localized_name"] = data.get(item_tooltip, item.name)
+			info["description"] = data.get(item_tooltip + "_Description", data.get(item_tooltip2 + "_Description", ""))
+			info["lore"] = data.get(item_tooltip + "_Lore", data.get(item_tooltip2 + "_Lore", ""))
+
+			report_errors = lang == "english"
+
+			info["description"] = clean_description(info["description"], replacements_dict, base_level=item.base_level, report_errors=report_errors)
+			info["lore"] = clean_description(info["lore"])
+			
+			if lang == "english":
+				for key in info:
+					setattr(item, key, info[key])
+			else:
+				for key in info:
+					addLocaleString(session, lang, item, key, info[key])
 
 	print("- adding neutral item data")
 	data = DotaFiles.neutral_items.read()["neutral_items"]

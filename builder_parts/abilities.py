@@ -1,7 +1,7 @@
 from builder import session
 from dotabase import *
 from utils import *
-from valve2json import DotaFiles, DotaPaths
+from valve2json import DotaFiles, DotaPaths, ValveFile
 import re
 
 def build_replacements_dict(ability: Ability, scepter=False, shard=False):
@@ -148,54 +148,78 @@ def load():
 							})
 							talent.ability_special = json.dumps(talent_ability_special, indent=4)
 
+	print("- loading ability localization files")
+	# Load additional information from the ability localization files
+	english_data = DotaFiles.abilities_english.read()["lang"]["Tokens"]
+	english_data = CaseInsensitiveDict(english_data)
+	lang_data = []
+	for lang, file in DotaFiles.lang_abilities:
+		data = file.read()["lang"]["Tokens"]
+		data = CaseInsensitiveDict(data)
+		lang_data.append((lang, data))
 
-	print("- loading ability data from dota_english")
-	# Load additional information from the dota_english.txt file
-	data = DotaFiles.abilities_english.read()["lang"]["Tokens"]
-	data = CaseInsensitiveDict(data)
+	progress = ProgressBar(session.query(Ability).count(), title="- loading data from ability localization files")
 	for ability in session.query(Ability):
-		ability_tooltip = "DOTA_Tooltip_ability_" + ability.name 
-		ability.localized_name = data.get(ability_tooltip, ability.name)
-		ability.description = data.get(ability_tooltip + "_Description", "")
-		ability.lore = data.get(ability_tooltip + "_Lore", "")
-		if ability.scepter_upgrades:
-			ability.scepter_description = data.get(ability_tooltip + "_scepter_description", "")
-		else:
-			ability.scepter_description = ""
-		if ability.shard_upgrades:
-			ability.shard_description = data.get(ability_tooltip + "_shard_description", "")
-		else:
-			ability.shard_description = ""
+		progress.tick()
+		ability_tooltip = "DOTA_Tooltip_ability_" + ability.name
 
-		notes = []
-		for i in range(8):
-			key = f"{ability_tooltip}_Note{i}"
-			if key in data:
-				notes.append(data[key])
-		ability.note = "" if len(notes) == 0 else "\n".join(notes)
-
+		# do ability_special with just english
 		ability_special_value_fixes = {
 			"abilityduration": ability.duration
 		}
-
 		ability_special = json.loads(ability.ability_special, object_pairs_hook=OrderedDict)
 		ability_special = ability_special_add_talent(ability_special, session.query(Ability), ability.name)
-		ability_special = ability_special_add_header(ability_special, data, ability.name)
+		ability_special = ability_special_add_header(ability_special, english_data, ability.name)
 		for key in ability_special_value_fixes:
 			for special in ability_special:
 				if special["key"] == key and special["value"] == "":
 					special["value"] = ability_special_value_fixes[key]
 		ability.ability_special = json.dumps(ability_special, indent=4)
 
-		is_probably_talent = ability.name.startswith("special_bonus")
+		# construct replacement dicts
 		replacements_dict = build_replacements_dict(ability)
-		ability.localized_name = clean_description(ability.localized_name, replacements_dict, value_bolding=False, report_errors=not is_probably_talent)
-		ability.description = clean_description(ability.description, replacements_dict, report_errors=not is_probably_talent)
-		ability.note = clean_description(ability.note, replacements_dict)
-		replacements_dict = build_replacements_dict(ability, scepter=True)
-		ability.scepter_description = clean_description(ability.scepter_description, replacements_dict)
-		replacements_dict = build_replacements_dict(ability, shard=True)
-		ability.shard_description = clean_description(ability.shard_description, replacements_dict)
+		replacements_dict_scepter = build_replacements_dict(ability, scepter=True)
+		replacements_dict_shard = build_replacements_dict(ability, shard=True)
+
+		# language-specific stuff
+		for lang, data in lang_data:
+			info = {}
+			info["localized_name"] = data.get(ability_tooltip, ability.name)
+			info["description"] = data.get(ability_tooltip + "_Description", "")
+			info["lore"] = data.get(ability_tooltip + "_Lore", "")
+
+			if ability.scepter_upgrades:
+				info["scepter_description"] = data.get(ability_tooltip + "_scepter_description", "")
+			else:
+				info["scepter_description"] = ""
+			if ability.shard_upgrades:
+				info["shard_description"] = data.get(ability_tooltip + "_shard_description", "")
+			else:
+				info["shard_description"] = ""
+
+			notes = []
+			for i in range(8):
+				key = f"{ability_tooltip}_Note{i}"
+				if key in data:
+					notes.append(data[key])
+			info["note"] = "" if len(notes) == 0 else "\n".join(notes)
+
+			is_probably_talent = ability.name.startswith("special_bonus")
+
+			report_errors = lang == "english"
+
+			info["localized_name"] = clean_description(info["localized_name"], replacements_dict, value_bolding=False, report_errors=report_errors and not is_probably_talent)
+			info["description"] = clean_description(info["description"], replacements_dict, report_errors=report_errors and not is_probably_talent)
+			info["note"] = clean_description(info["note"], replacements_dict, report_errors=report_errors)
+			info["scepter_description"] = clean_description(info["scepter_description"], replacements_dict_scepter, report_errors=report_errors)
+			info["shard_description"] = clean_description(info["shard_description"], replacements_dict_shard, report_errors=report_errors)
+
+			if lang == "english":
+				for key in info:
+					setattr(ability, key, info[key])
+			else:
+				for key in info:
+					addLocaleString(session, lang, ability, key, info[key])
 
 		if ability.localized_name.startswith(": "):
 			ability.localized_name = ability.localized_name[2:]

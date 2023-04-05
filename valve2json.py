@@ -5,6 +5,7 @@ import string
 import os.path
 import collections
 from utils import *
+import typing
 
 # Converts valve's obsure and unusable text formats to json
 # can do the following formats:
@@ -136,9 +137,6 @@ def kvfile2json(text, remove_comments=True):
 	# get rid of troublesome comments
 	if remove_comments:
 		text = uncommentkvfile(text)
-
-	# custom fixes because Valve does dum things
-	text = re.sub(" and turn rate reduced by %dMODIFIER_PROPERTY_TURN_RATE_PERCENTAGE%%%.", "", text)
 	
 	# To convert Valve's KeyValue format to Json
 	text = re.sub('﻿', '', text) # remove zero width no-break space
@@ -153,6 +151,16 @@ def kvfile2json(text, remove_comments=True):
 	text = re.sub(r'}(\s*"[^"]*":)', r'},\1', text)
 	if not re.match(r"^\s*\{", text):
 		text = "{ " + text + " }"
+
+	# cut-off things after closing quotes
+	text = re.sub(r'(\n\s+"[^"]*":\s*"[^"\n]*",?\s*)[^,"{}]+\n', r'\1\n', text)
+
+	# ignore dangling quotes
+	text = re.sub(r'\n\s*"\s*\n', r'\n', text)
+
+	# custom fixes because Valve does dum things (this is for when this is just randomly on a line)
+	# text = re.sub("and turn rate reduced by %dMODIFIER_PROPERTY_TURN_RATE_PERCENTAGE%%%.", "", text)
+
 	# To re-include non-functional quotes
 	text = re.sub(r'TEMP_QUOTE_TOKEN', '\\"', text)
 
@@ -218,7 +226,7 @@ class ItemsGame():
 
 
 # Reads from converted json file unless overwrite parameter is specified
-def valve_readfile(filepath, fileformat, encoding=None, overwrite=False):
+def valve_readfile(filepath, fileformat, encoding=None, overwrite=False) -> dict:
 	sourcedir = config.vpk_path
 	json_file = os.path.splitext(json_cache_dir + filepath)[0]+'.json'
 	vpk_file = sourcedir + filepath
@@ -252,9 +260,34 @@ class ValveFile():
 		self.path = path
 		self.format = format
 		self.encoding = encoding
+		self.read_data = None
 	
-	def read(self):
-		return valve_readfile(self.path, self.format, self.encoding)
+	def read(self) -> dict:
+		if self.read_data:
+			return self.read_data
+		else:
+			self.read_data = valve_readfile(self.path, self.format, self.encoding)
+			return self.read_data
+
+# creates a list of tuples of a given type of lang files
+def createLangFiles(dir, pattern) -> typing.List[typing.Tuple[str, ValveFile]]:
+	fulldir = config.vpk_path + dir
+	files = os.listdir(fulldir)
+	files = [f for f in files if os.path.isfile(os.path.join(fulldir, f)) and re.search(pattern, f)]
+	results = []
+	for file in files:
+		match = re.search(pattern, file)
+		lang = match.group(1)
+		new_tuple = (
+			lang,
+			ValveFile(dir + file, encoding="UTF-8")
+		)
+		if lang == "english":
+			results.insert(0, new_tuple)
+		else:
+			results.append(new_tuple)
+	
+	return results
 
 file_formats = {
 	"kv": kvfile2json,
@@ -276,6 +309,10 @@ class DotaFiles():
 	hero_lore_english = ValveFile("/resource/localization/hero_lore_english.txt", encoding="utf-8")
 	abilities_english = ValveFile("/resource/localization/abilities_english.txt", encoding="UTF-8")
 	teamfandom_english = ValveFile("/resource/localization/teamfandom_english.txt", encoding="utf-8")
+	
+	lang_abilities = createLangFiles("/resource/localization/", r"abilities_(.*)\.txt")
+	lang_hero_lore = createLangFiles("/resource/localization/", r"hero_lore_(.*)\.txt")
+	lang_dota = createLangFiles("/resource/localization/", r"dota_(.*)\.txt")
 
 class DotaPaths():
 	response_mp3s = "/sounds/vo/"
