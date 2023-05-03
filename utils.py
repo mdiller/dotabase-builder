@@ -136,11 +136,15 @@ def get_ability_special_AbilitySpecial(ability_special, name):
 		items = list(obj.items())
 		if len(items) != 2: # catch this for future bad_keys
 			bad_keys = list(map(lambda i: i[0], items))
-			bad_keys.remove("var_type")
+			if "var_type" in bad_keys:
+				bad_keys.remove("var_type")
 			printerr(f"Theres a bad key in the AbilitySpecial of {name}: one of {bad_keys}")
 
-		new_item["key"] = items[1][0]
-		new_item["value"] = clean_values(items[1][1])
+		if items[0][0] == "var_type":
+			del items[0]
+
+		new_item["key"] = items[0][0]
+		new_item["value"] = clean_values(items[0][1])
 		result.append(new_item)
 
 	return result

@@ -7,7 +7,8 @@ import re
 attribute_dict = {
 	"DOTA_ATTRIBUTE_STRENGTH": "strength",
 	"DOTA_ATTRIBUTE_AGILITY": "agility",
-	"DOTA_ATTRIBUTE_INTELLECT": "intelligence"
+	"DOTA_ATTRIBUTE_INTELLECT": "intelligence",
+	"DOTA_ATTRIBUTE_ALL": "universal"
 }
 
 def load():

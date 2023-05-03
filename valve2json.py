@@ -141,6 +141,7 @@ def kvfile2json(text, remove_comments=True):
 	# To convert Valve's KeyValue format to Json
 	text = re.sub('﻿', '', text) # remove zero width no-break space
 	
+	text = re.sub(r'(\n\s+)(value)', r'\1"\2"', text) # fix a thing where some valve employees forgot to put double quotes around the thing
 	text = re.sub(r'(?:\n\s*)([a-z_]+)\s*\n\s*{', r'"\1": {', text)
 	text = re.sub(r'"([^"]*)"(\s*){', r'"\1": {', text)
 	text = re.sub(r'(\n\s+"[^"]*"\s*)([0-9\-]+)(?=\n\s+["}])', r'\1"\2"', text) # fix places where a number doesnt have quotes around it
