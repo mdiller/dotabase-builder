@@ -134,6 +134,9 @@ def kvfile2json(text, remove_comments=True):
 	text = re.sub(r'\\"', 'TEMP_QUOTE_TOKEN', text)
 	# remove the null hex char at the end of some files
 	text = re.sub(r'\x00$', '', text)
+	# fix places where people forgot a closing quote
+	text = re.sub(r'(\n\s+"[^"]*"\s*"[^"\n]*)(?=\n\s+"[^\s\n])', r'\1"', text)
+
 	# get rid of troublesome comments
 	if remove_comments:
 		text = uncommentkvfile(text)
@@ -145,7 +148,6 @@ def kvfile2json(text, remove_comments=True):
 	text = re.sub(r'(?:\n\s*)([a-z_]+)\s*\n\s*{', r'"\1": {', text)
 	text = re.sub(r'"([^"]*)"(\s*){', r'"\1": {', text)
 	text = re.sub(r'(\n\s+"[^"]*"\s*)([0-9\-]+)(?=\n\s+["}])', r'\1"\2"', text) # fix places where a number doesnt have quotes around it
-	text = re.sub(r'(\n\s+"[^"]*"\s*"[^"\n]*)(?=\n\s+")', r'\1"', text) # fix places where people forgot a closing quote
 	text = re.sub(r'"([^"]*)"\s*"([^"]*)"', r'"\1": "\2",', text)
 	text = re.sub(r',(\s*[}\]])', r'\1', text)
 	text = re.sub(r'([}\]])(\s*)("[^"]*":\s*)?([{\[])', r'\1,\2\3\4', text)
