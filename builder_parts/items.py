@@ -7,6 +7,9 @@ from valve2json import DotaFiles, DotaPaths
 def build_replacements_dict(item: Item):
 	specials = json.loads(item.ability_special, object_pairs_hook=OrderedDict)
 	result = {
+		"abilityhealthcost": item.health_cost,
+		"abilitychargerestoretime": item.cooldown,
+		"abilitycooldown": item.cooldown,
 		"abilityduration": item.duration,
 		"abilitycastrange": item.cast_range,
 		"customval_team_tomes_used": "0",
@@ -42,8 +45,11 @@ def load():
 		item.cost = item_data.get('ItemCost')
 		item.aliases = "|".join(item_data.get("ItemAliases", "").split(";"))
 		item.quality = item_data.get("ItemQuality")
+		item.health_cost = clean_values(item_data.get('AbilityHealthCost'))
 		item.mana_cost = clean_values(item_data.get('AbilityManaCost'))
 		item.cooldown = clean_values(item_data.get('AbilityCooldown'))
+		if item_data.get('AbilityChargeRestoreTime'):
+			item.cooldown = clean_values(item_data.get('AbilityChargeRestoreTime'))
 		item.cast_range = clean_values(item_data.get('AbilityCastRange'))
 		item.duration = clean_values(item_data.get('AbilityDuration'))
 		item.base_level = item_data.get("ItemBaseLevel")

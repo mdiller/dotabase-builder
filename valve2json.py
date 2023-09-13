@@ -109,7 +109,7 @@ def vsndevts2json(text):
 	# To convert Valve's KeyValue format to Json
 	text = re.sub(r'"\n{', r'": {', text)
 	text = re.sub(r'(\n\s*)([^\s]+) =', r'\1"\2":', text)
-	text = re.sub(r'(]|"|}|\d)(\n[\s]+")', r'\1,\2', text)
+	text = re.sub(r'(null|]|"|}|\d)(\n[\s]+")', r'\1,\2', text)
 	text = re.sub(r'("|\d),(\n\s*)(]|})', r'\1\2\3', text)
 
 	text = re.sub(r'{\s*{([^{}]+)}\s*}', r'{\1}', text)

@@ -12,7 +12,7 @@ def load():
 	print("- loading chat_wheel vsndevts infos")
 	# load sounds info from vsndevts file
 	vsndevts_data = CaseInsensitiveDict(DotaFiles.game_sounds_vsndevts.read())
-	extra_vsndevts_dirs = [ "teamfandom", "team_fandom" ]
+	extra_vsndevts_dirs = [ "teamfandom", "team_fandom", "stickers" ]
 	for subdir in extra_vsndevts_dirs:
 		fulldirpath = os.path.join(config.vpk_path, f"soundevents/{subdir}")
 		for file in os.listdir(fulldirpath):

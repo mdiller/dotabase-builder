@@ -36,7 +36,12 @@ def load():
 
 		for key in vsndevts_data:
 			data = vsndevts_data[key]
-			filename = "/" + data["vsnd_files"][0].replace("vsnd", "mp3")
+			if data is None:
+				continue
+			vsnd_file = data["vsnd_files"]
+			if not isinstance(vsnd_file, str):
+				vsnd_file = vsnd_file[0] # this is an array, get the first one
+			filename = "/" + vsnd_file.replace("vsnd", "mp3")
 			
 			response = Response()
 			response.fullname = key

@@ -20,11 +20,10 @@ def build_replacements_dict(ability: Ability, scepter=False, shard=False):
 	}
 	for attrib in specials:
 		is_scepter_upgrade = attrib.get("scepter_upgrade") == "1" and not ability.scepter_grants
-		if is_scepter_upgrade and not scepter:
-			continue
 		is_shard_upgrade = attrib.get("shard_upgrade") == "1" and not ability.shard_grants
-		if is_shard_upgrade and not shard:
-			continue
+		if (is_scepter_upgrade and not scepter) or (is_shard_upgrade and not shard):
+			if (attrib["key"] in result):
+				continue # skip this if we we don't want to *override* stuff with shard/scepter stuff
 		if (attrib["key"] not in result) or is_scepter_upgrade or is_shard_upgrade:
 			value = attrib.get("value")
 			if shard and attrib.get("shard_value"):
@@ -92,6 +91,7 @@ def load():
 			ability.cooldown = clean_values(get_val('AbilityCooldown'))
 		ability.duration = clean_values(get_val('AbilityDuration'))
 		ability.damage = clean_values(get_val('AbilityDamage'))
+		ability.health_cost = clean_values(get_val('AbilityHealthCost'))
 		ability.mana_cost = clean_values(get_val('AbilityManaCost'))
 		ability.ability_special = json.dumps(get_ability_special(ability_data, abilityname), indent=4)
 		ability.scepter_grants = get_val("IsGrantedByScepter") == "1"

@@ -238,7 +238,7 @@ def clean_description(text, replacements_dict=None, base_level=None, value_boldi
 		return text
 	text = re.sub(r'</h1> ', r'</h1>', text)
 	text = re.sub(r'<h1>([^<]+)</h1>', r'\n# \1\n', text)
-	text = re.sub(r'<(br|BR)>', r'\n', text)
+	text = re.sub(r'<(br|BR) ?/?>', r'\n', text)
 	text = re.sub(r"<i>([^<]+)</i>", r"\*\1\*", text)
 	text = re.sub(r'<span class="GameplayValues GameplayVariable">(.*)</span>', r'**\1**', text)
 	text = re.sub(r'<font color=.*>(.*)</font>', r'\1', text)
