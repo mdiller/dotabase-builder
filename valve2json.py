@@ -2,6 +2,7 @@ from importlib.resources import path
 import json
 import re
 import string
+import os
 import os.path
 import collections
 from utils import *
@@ -13,6 +14,8 @@ import typing
 # response_rules script format
 
 json_cache_dir = "jsoncache"
+if not os.path.exists(json_cache_dir):
+    os.makedirs(json_cache_dir)
 
 def dict_handle_duplicates(ordered_pairs):
 	d = collections.OrderedDict()
@@ -29,7 +32,7 @@ class CustomJsonParsingException(Exception):
 	def __init__(self, message):
 		self.message = message
 
-def tryloadjson(text, strict=True):
+def tryloadjson(text, strict=True, parser=None):
 	try:
 		return json.loads(text, strict=strict, object_pairs_hook=dict_handle_duplicates)
 	except json.JSONDecodeError as e:
@@ -45,6 +48,8 @@ def tryloadjson(text, strict=True):
 			start = 0
 		if end > len(lines):
 			end = len(lines)
+		if parser:
+			print(f"Parser: {parser}()")
 		raise CustomJsonParsingException("Error parsing this JSON text:\n" + "\n".join(lines[start:end]) + "\n")
 
 # Redefine with error printing
@@ -100,8 +105,8 @@ def vsndevts_from_old(text):
 
 def vsndevts2json(text):
 	# If this isnt there, its a kv1 file
-	if not (re.match(r'^\{\s*[^\s"]+\s=\s+\{', text) or ("<!-- kv3 " in text)):
-		return vsndevts_from_old(text)
+	# if not (re.match(r'^\{\s*[^\s"]+\s=\s+\{', text) or ("<!-- kv3 " in text)):
+	# 	return vsndevts_from_old(text)
 	# else its a kv3 file
 
 	# get rid of troublesome comments
@@ -118,7 +123,10 @@ def vsndevts2json(text):
 	# To re-include non-functional quotes
 	text = re.sub(r'TEMP_QUOTE_TOKEN', '\\"', text)
 
-	return tryloadjson(text, strict=False)
+	# undo places where we quoted already-quoted stuff:
+	text = re.sub(r'(\n\s+")"([^"]+)"(":\s*\n)', r'\1\2\3', text)
+
+	return tryloadjson(text, strict=False, parser="vsndevts2json")
 
 # Regex strings for vk2json from:
 # http://dev.dota2.com/showthread.php?t=87191
@@ -167,7 +175,7 @@ def kvfile2json(text, remove_comments=True):
 	# To re-include non-functional quotes
 	text = re.sub(r'TEMP_QUOTE_TOKEN', '\\"', text)
 
-	return tryloadjson(text, strict=False)
+	return tryloadjson(text, strict=False, parser="kvfile2json")
 
 # Loads a response_rules file as json
 def rulesfile2json(text):
@@ -186,7 +194,7 @@ def rulesfile2json(text):
 	text = re.sub(r',(\s*)}', r'\1}', text)
 	text = re.sub(r',(\s*)]', r'\1]', text)
 
-	return tryloadjson(text)
+	return tryloadjson(text, parser="rulesfile2json")
 
 class AssetModifier():
 	def __init__(self, data):
