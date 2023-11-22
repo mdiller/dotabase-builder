@@ -52,6 +52,7 @@ def load():
 		message.message = msg_data.get("message")
 		message.sound = msg_data.get("sound")
 		message.image = msg_data.get("image")
+		message.source = msg_data.get("source")
 		message.all_chat = msg_data.get("all_chat") == "1"
 		if message.sound:
 			if message.sound not in vsndevts_data:

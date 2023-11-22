@@ -30,7 +30,9 @@ def load():
 		"item_trident1": "item_trident"
 	}
 	print("- loading items from item scripts")
+
 	# load all of the item scripts data information
+	item_id_map = DotaFiles.npc_ids.read()["DOTAAbilityIDs"]["ItemAbilities"]["Locked"]
 	data = DotaFiles.items.read()["DOTAAbilities"]
 	for itemname in data:
 		if itemname == "Version":
@@ -41,7 +43,7 @@ def load():
 		item = Item()
 
 		item.name = item_name_fixes.get(itemname, itemname)
-		item.id = int(item_data['ID'])
+		item.id = item_id_map[item.name]
 		item.cost = item_data.get('ItemCost')
 		item.aliases = "|".join(item_data.get("ItemAliases", "").split(";"))
 		item.quality = item_data.get("ItemQuality")

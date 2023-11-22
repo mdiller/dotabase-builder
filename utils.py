@@ -142,6 +142,10 @@ def get_ability_special_AbilitySpecial(ability_special, name):
 
 		if items[0][0] == "var_type":
 			del items[0]
+		
+		if len(items) == 0:
+			printerr(f"Empty AbilitySpecial entry in {name}")
+			continue
 
 		new_item["key"] = items[0][0]
 		new_item["value"] = clean_values(items[0][1])

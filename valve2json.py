@@ -308,6 +308,7 @@ file_formats = {
 }
 
 class DotaFiles():
+	npc_ids = ValveFile("/scripts/npc/npc_ability_ids.txt")
 	npc_abilities = ValveFile("/scripts/npc/npc_abilities.txt")
 	npc_heroes = ValveFile("/scripts/npc/npc_heroes.txt")
 	items = ValveFile("/scripts/npc/items.txt")
@@ -334,5 +335,6 @@ class DotaPaths():
 	hero_selection_images = "/panorama/images/heroes/selection/"
 	emoticon_images = "/panorama/images/emoticons/"
 	response_rules = "/scripts/talker/"
+	npc_hero_scripts = "/scripts/npc/heroes/"
 
 

@@ -1,7 +1,7 @@
 from builder import session
 from dotabase import *
 from utils import *
-from valve2json import DotaFiles, DotaPaths, ValveFile
+from valve2json import DotaFiles, DotaPaths, ValveFile, valve_readfile
 import re
 
 def build_replacements_dict(ability: Ability, scepter=False, shard=False):
@@ -45,18 +45,21 @@ def load():
 	print("Abilities")
 
 	added_ids = []
-
+	
 	print("- loading abilities from ability scripts")
 	# load all of the ability scripts data information
-	data = DotaFiles.npc_abilities.read()["DOTAAbilities"]
-	for abilityname in data:
+	ability_id_map = DotaFiles.npc_ids.read()["DOTAAbilityIDs"]["UnitAbilities"]["Locked"]
+	main_data = DotaFiles.npc_abilities.read()["DOTAAbilities"]
+	ability_base = main_data["ability_base"]
+
+	# this method called by loop below it
+	def add_ability(abilityname, data_source):
 		if(abilityname == "Version" or
 			abilityname == "ability_deward" or
-			abilityname == "dota_base_ability" or
-			not data[abilityname]['ID'].isdigit()):
-			continue
+			abilityname == "dota_base_ability"):
+			return
 
-		ability_data = data[abilityname]
+		ability_data = data_source[abilityname]
 		ability = Ability()
 
 		def get_val(key, default_base=False):
@@ -73,12 +76,12 @@ def load():
 					return val.split(' ')[0]
 				return val
 			elif default_base:
-				return data["ability_base"][key]
+				return ability_base[key]
 			else:
 				return None
 
 		ability.name = abilityname
-		ability.id = int(ability_data['ID'])
+		ability.id = ability_id_map[ability.name]
 		ability.type = get_val('AbilityType', default_base=True)
 		ability.behavior = get_val('AbilityBehavior', default_base=True)
 		ability.cast_range = clean_values(get_val('AbilityCastRange'))
@@ -93,7 +96,7 @@ def load():
 		ability.damage = clean_values(get_val('AbilityDamage'))
 		ability.health_cost = clean_values(get_val('AbilityHealthCost'))
 		ability.mana_cost = clean_values(get_val('AbilityManaCost'))
-		ability.ability_special = json.dumps(get_ability_special(ability_data, abilityname), indent=4)
+		ability.ability_special = json.dumps(get_ability_special(ability_data, ability.name), indent=4)
 		ability.scepter_grants = get_val("IsGrantedByScepter") == "1"
 		ability.shard_grants = get_val("IsGrantedByShard") == "1"
 		ability.scepter_upgrades = get_val("HasScepterUpgrade") == "1"
@@ -101,8 +104,8 @@ def load():
 
 
 		if ability.id in added_ids:
-			printerr(f"duplicate id on: {abilityname}")
-			continue
+			printerr(f"duplicate id on: {ability.name}")
+			return
 		added_ids.append(ability.id)
 
 		def get_enum_val(key, prefix):
@@ -118,10 +121,20 @@ def load():
 		ability.target_team = get_enum_val('AbilityUnitTargetTeam', "DOTA_UNIT_TARGET_TEAM_")
 		ability.dispellable = get_enum_val('SpellDispellableType', "SPELL_DISPELLABLE_")
 
-
 		ability.json_data = json.dumps(ability_data, indent=4)
 
 		session.add(ability)
+
+
+	for key in main_data:
+		add_ability(key, main_data)
+
+	for root, dirs, files in os.walk(config.vpk_path + DotaPaths.npc_hero_scripts):
+		for file in files:
+			hero_data = valve_readfile(DotaPaths.npc_hero_scripts + file, "kv")["DOTAAbilities"]
+			for key in hero_data:
+				add_ability(key, hero_data)
+	
 
 	print("- intermediate ability linking")
 	# intermedate re-linking and setting of ability metadata
