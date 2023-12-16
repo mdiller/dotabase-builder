@@ -145,7 +145,7 @@ def load():
 
 	print("- adding hero chatwheel criteria")
 	chatwheel_criteria = []
-	chatwheel_data = DotaFiles.chat_wheel.read()["chat_wheel"]
+	chatwheel_data = DotaFiles.chat_wheel_heroes.read()["chat_wheel"]
 	for hero in chatwheel_data["hero_messages"]:
 		for chatwheel_id in chatwheel_data["hero_messages"][hero]:
 			chatwheel_message = chatwheel_data["hero_messages"][hero][chatwheel_id]

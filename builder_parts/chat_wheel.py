@@ -24,9 +24,10 @@ def load():
 	print("- loading chat_wheel info from scripts")
 	# load all of the item scripts data information
 	scripts_data = DotaFiles.chat_wheel.read()["chat_wheel"]
+	scripts_data_categories = DotaFiles.chat_wheel_categories.read()["chat_wheel"]
 	chatwheel_scripts_subdir = "scripts/chat_wheels"
 	scripts_messages = CaseInsensitiveDict(scripts_data["messages"])
-	scripts_categories = CaseInsensitiveDict(scripts_data["categories"])
+	scripts_categories = CaseInsensitiveDict(scripts_data_categories["categories"])
 	for file in os.listdir(os.path.join(config.vpk_path, chatwheel_scripts_subdir)):
 		filepath = f"/{chatwheel_scripts_subdir}/{file}"
 		more_chatwheel_data = valve_readfile(filepath, "kv", encoding="utf-8")["chat_wheel"]

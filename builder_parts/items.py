@@ -91,7 +91,7 @@ def load():
 		replacements_dict = build_replacements_dict(item)
 		
 		for lang, data in lang_data:
-			data = data.read()["lang"]["Tokens"]
+			data = CaseInsensitiveDict(data.read()["lang"]["Tokens"])
 			info = {}
 			info["localized_name"] = data.get(item_tooltip, item.name)
 			info["description"] = data.get(item_tooltip + "_Description", data.get(item_tooltip2 + "_Description", ""))

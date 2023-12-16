@@ -65,7 +65,7 @@ def load():
 
 		if not os.path.exists(config.vpk_path + loadingscreen.thumbnail):
 			image = Image.open(config.vpk_path + loadingscreen.image)
-			image.thumbnail((128, 64), Image.ANTIALIAS)
+			image.thumbnail((128, 64), Image.LANCZOS)
 			image.save(config.vpk_path + loadingscreen.thumbnail, format="PNG")
 
 		colors = colorgram.extract(config.vpk_path + loadingscreen.thumbnail, 5)

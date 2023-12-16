@@ -6,10 +6,10 @@ from collections import OrderedDict
 from dotabase import LocaleString
 colorama.init()
 
-def clean_values(values, join_string=" ", percent=False):
+def clean_values(values: str, join_string=" ", percent=False):
 	if values is None:
 		return None
-	values = values.split(" ")
+	values = values.strip().split(" ")
 	for i in range(len(values)):
 		values[i] = re.sub(r"\.0+$", "", values[i])
 		if percent and values[i][-1] != "%":
@@ -109,7 +109,10 @@ def get_ability_special_AbilityValues(ability_values, name):
 def get_ability_special_AbilitySpecial(ability_special, name):
 	result = []
 	for index_key in ability_special:
-		obj = ability_special[index_key].copy()
+		if isinstance(ability_special[index_key], str):
+			obj = { "value": ability_special[index_key] }
+		else:
+			obj = ability_special[index_key].copy()
 
 		new_item = OrderedDict()
 

@@ -315,6 +315,8 @@ class DotaFiles():
 	neutral_items = ValveFile("/scripts/npc/neutral_items.txt")
 	emoticons = ValveFile("/scripts/emoticons.txt", encoding="UTF-16")
 	chat_wheel = ValveFile("/scripts/chat_wheel.txt", encoding="utf-8")
+	chat_wheel_categories = ValveFile("/scripts/chat_wheel_categories.txt", encoding="utf-8")
+	chat_wheel_heroes = ValveFile("/scripts/chat_wheel_heroes.txt", encoding="utf-8")
 	game_sounds_vsndevts = ValveFile("/soundevents/game_sounds.vsndevts", "vsndevts")
 	dota_english = ValveFile("/resource/localization/dota_english.txt", encoding="UTF-8")
 	items_game = ValveFile("/scripts/items/items_game.txt", "kv_nocomment", encoding="UTF-8")

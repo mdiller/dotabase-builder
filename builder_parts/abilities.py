@@ -79,9 +79,15 @@ def load():
 				return ability_base[key]
 			else:
 				return None
+		
+		def get_ability_id(name):
+			if name in ability_id_map:
+				return ability_id_map[name]
+			name = name.replace("1", "")
+			return ability_id_map[name]
 
 		ability.name = abilityname
-		ability.id = ability_id_map[ability.name]
+		ability.id = get_ability_id(ability.name)
 		ability.type = get_val('AbilityType', default_base=True)
 		ability.behavior = get_val('AbilityBehavior', default_base=True)
 		ability.cast_range = clean_values(get_val('AbilityCastRange'))
