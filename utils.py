@@ -7,8 +7,8 @@ from dotabase import LocaleString
 colorama.init()
 
 def clean_values(values: str, join_string=" ", percent=False):
-	if values is None:
-		return None
+	if values is None or values == "":
+		return values
 	values = values.strip().split(" ")
 	for i in range(len(values)):
 		values[i] = re.sub(r"\.0+$", "", values[i])
@@ -76,7 +76,8 @@ ability_special_talent_keys = {
 	"LinkedSpecialBonusField": "talent_value_key", 
 	"LinkedSpecialBonusOperation": "talent_operation",
 	"RequiresScepter": "scepter_upgrade",
-	"RequiresShard": "shard_upgrade"
+	"RequiresShard": "shard_upgrade",
+	"RequiresFacet": "facet_upgrade"
 }
 def get_ability_special_AbilityValues(ability_values, name):
 	result = []
@@ -92,6 +93,12 @@ def get_ability_special_AbilityValues(ability_values, name):
 				if key in value:
 					new_item["value"] = value[key]
 					break
+			if not "value" in new_item:
+				prefix = "special_bonus_facet_"
+				for key in value:
+					if key.startswith(prefix):
+						new_item["value"] = value[key]
+						break
 			for subkey in value:
 				if subkey in ability_special_talent_keys:
 					new_item[ability_special_talent_keys[subkey]] = value[subkey]
@@ -249,6 +256,7 @@ def clean_description(text, replacements_dict=None, base_level=None, value_boldi
 	text = re.sub(r"<i>([^<]+)</i>", r"\*\1\*", text)
 	text = re.sub(r'<span class="GameplayValues GameplayVariable">(.*)</span>', r'**\1**', text)
 	text = re.sub(r'<font color=.*>(.*)</font>', r'\1', text)
+	text = re.sub(r" color='[^']+'>", r'>', text)
 	text = re.sub(r'<b>([^<]+)</b>', r'**\1**', text)
 
 	if replacements_dict:
@@ -363,6 +371,8 @@ class ProgressBar:
 
 	@property
 	def percent(self):
+		if self.total == 0:
+			return 0
 		return self.current / self.total
 
 	def render(self):

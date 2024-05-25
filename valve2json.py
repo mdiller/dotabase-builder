@@ -169,6 +169,9 @@ def kvfile2json(text, remove_comments=True):
 	# ignore dangling quotes
 	text = re.sub(r'\n\s*"\s*\n', r'\n', text)
 
+	# uncomment single quotes
+	text = re.sub(r"\\'", "'", text)
+
 	# custom fixes because Valve does dum things (this is for when this is just randomly on a line)
 	# text = re.sub("and turn rate reduced by %dMODIFIER_PROPERTY_TURN_RATE_PERCENTAGE%%%.", "", text)
 
@@ -334,6 +337,7 @@ class DotaPaths():
 	ability_icon_images = "/panorama/images/spellicons/"
 	hero_side_images = "/panorama/images/heroes/"
 	hero_icon_images = "/panorama/images/heroes/icons/"
+	facet_icon_images = "/panorama/images/hud/facets/icons/"
 	hero_selection_images = "/panorama/images/heroes/selection/"
 	emoticon_images = "/panorama/images/emoticons/"
 	response_rules = "/scripts/talker/"

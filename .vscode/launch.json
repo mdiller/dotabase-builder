@@ -39,6 +39,15 @@
 		},
 
 		{
+			"name": "Dotabase (facets)",
+			"type": "python",
+			"request": "launch",
+			"program": "builder.py",
+			"console": "integratedTerminal",
+			"args": [ "facets" ]
+		},
+
+		{
 			"name": "Dotabase (abilities)",
 			"type": "python",
 			"request": "launch",

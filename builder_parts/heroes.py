@@ -75,10 +75,29 @@ def load():
 
 		talents = []
 
+		# Link facets
+		for facetname in hero_data.get("Facets", []):
+			facet = session.query(Facet).filter_by(name=facetname).first()
+			facet.hero_id = hero.id
+			facet_data = hero_data["Facets"][facetname]
+			for ability in facet_data.get("Abilities", []):
+				abilityinfo = facet_data["Abilities"][ability]
+				abilityname = abilityinfo["AbilityName"]
+				ability = session.query(Ability).filter_by(name=abilityname).first()
+				if ability.facet_id != None:
+					printerr(f"Ability {ability.name} has an existing facet_id {ability.facet_id}, being overridden by {facet.id}")
+				ability.facet_id = facet.id
+				ability.hero_id = hero.id
+				if "AbilityIndex" in abilityinfo:
+					ability.slot = int(abilityinfo["AbilityIndex"]) + 1
+
 		# Link abilities
 		for slot in range(1, 30):
 			if "Ability" + str(slot) in hero_data:
-				ability = session.query(Ability).filter_by(name=hero_data["Ability" + str(slot)]).first()
+				abilityname = hero_data["Ability" + str(slot)]
+				if abilityname == "generic_hidden":
+					continue
+				ability = session.query(Ability).filter_by(name=abilityname).first()
 				if ability:
 					if not ability.name.startswith("special_bonus"):
 						ability.hero_id = hero.id

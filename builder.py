@@ -24,6 +24,7 @@ from builder_parts import (
 chat_wheel,
 emoticons, 
 items, 
+facets, 
 abilities, 
 heroes, 
 talents,
@@ -36,6 +37,7 @@ parts_dict = {
 	"chat_wheel": chat_wheel,
 	"emoticons": emoticons,
 	"items": items,
+	"facets": facets,
 	"abilities": abilities,
 	"heroes": heroes,
 	"talents": talents,
@@ -94,6 +96,7 @@ def build_dotabase():
 		chat_wheel.load()
 		emoticons.load()
 		items.load()
+		facets.load()
 		abilities.load()
 		heroes.load()
 		talents.load()
