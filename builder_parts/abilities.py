@@ -180,6 +180,17 @@ def load():
 				add_ability(key, hero_data)
 	
 
+	print("- loading ability localization files")
+	# Load additional information from the ability localization files
+	english_data = DotaFiles.abilities_english.read()["lang"]["Tokens"]
+	english_data = CaseInsensitiveDict(english_data)
+	lang_data = []
+	for lang, file in DotaFiles.lang_abilities:
+		data = file.read()["lang"]["Tokens"]
+		data = CaseInsensitiveDict(data)
+		lang_data.append((lang, data))
+	
+
 	print("- intermediate ability linking")
 	# intermedate re-linking and setting of ability metadata
 	for ability in session.query(Ability):
@@ -212,17 +223,8 @@ def load():
 								"key": f"bonus_{key}",
 								"value": value
 							})
+							talent_ability_special = ability_special_add_header(talent_ability_special, english_data, ability.name)
 							talent.ability_special = json.dumps(talent_ability_special, indent=4)
-
-	print("- loading ability localization files")
-	# Load additional information from the ability localization files
-	english_data = DotaFiles.abilities_english.read()["lang"]["Tokens"]
-	english_data = CaseInsensitiveDict(english_data)
-	lang_data = []
-	for lang, file in DotaFiles.lang_abilities:
-		data = file.read()["lang"]["Tokens"]
-		data = CaseInsensitiveDict(data)
-		lang_data.append((lang, data))
 
 	progress = ProgressBar(session.query(Ability).count(), title="- loading data from ability localization files")
 	for ability in session.query(Ability):
@@ -365,13 +367,16 @@ def load():
 						ability = session.query(Ability).filter_by(name=ability_name).first()
 
 						if ability is not None:
+							bold_values = True
+							if ability.name.startswith("special_bonus_"):
+								bold_values = False # don't bold values if this is a talent
 							newstring = FacetAbilityString()
 							newstring.id = facet_ability_string_id_current
 							newstring.facet_id = facet.id
 							newstring.ability_id = ability.id
 
 							replacements_dict = build_replacements_dict_facetabilitystrings(facet, ability)
-							newstring.description = clean_description(data[key], replacements_dict, report_errors=True)
+							newstring.description = clean_description(data[key], replacements_dict, value_bolding=bold_values, report_errors=True)
 				
 							session.add(newstring)
 							abilitystrings_map[key] = (newstring, replacements_dict)
@@ -379,7 +384,7 @@ def load():
 					else:
 						if key in abilitystrings_map:
 							thestring, replacements_dict = abilitystrings_map[key]
-							description = clean_description(data[key], replacements_dict, report_errors=False)
+							description = clean_description(data[key], replacements_dict, value_bolding=False, report_errors=False)
 							addLocaleString(session, lang, thestring, "description", description)
 
 

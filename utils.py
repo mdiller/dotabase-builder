@@ -12,6 +12,7 @@ def clean_values(values: str, join_string=" ", percent=False):
 	values = values.strip().split(" ")
 	for i in range(len(values)):
 		values[i] = re.sub(r"\.0+$", "", values[i])
+		values[i] = re.sub(r"^=", "", values[i])
 		if percent and values[i][-1] != "%":
 			values[i] += "%"
 	if all(x == values[0] for x in values):
