@@ -213,9 +213,10 @@ def ability_special_add_talent(ability_special, ability_query, ability_name):
 
 def ability_special_add_header(ability_special, strings, name):
 	for attribute in ability_special:
-		header = strings.get(f"DOTA_Tooltip_ability_{name}_{attribute['key']}")
+		key = re.sub("^bonus_", "", attribute['key'])
+		header = strings.get(f"DOTA_Tooltip_ability_{name}_{key}")
 		if header is None:
-			header = strings.get(f"DOTA_Tooltip_Ability_{name}_{attribute['key']}")
+			header = strings.get(f"DOTA_Tooltip_Ability_{name}_{key}")
 		if header is None:
 			continue
 		match = re.match(r"(%)?([\+\-]\$)?(.*)", header)
