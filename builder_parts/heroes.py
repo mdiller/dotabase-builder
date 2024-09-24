@@ -106,9 +106,9 @@ def load():
 		session.add(hero)
 
 
-	print("- loading hero names from dota_lang files")
-	# Load hero names from dota_english file
-	lang_data = DotaFiles.lang_dota
+	print("- loading hero names from abilities_lang files")
+	# Load hero names
+	lang_data = DotaFiles.lang_abilities
 	for hero in session.query(Hero):
 		for lang, data in lang_data:
 			data = data.read()["lang"]["Tokens"]
@@ -116,12 +116,22 @@ def load():
 			
 			localized_name = data.get(hero_full_name, "")
 			localized_name = re.sub(r"#\|[fm]\|#", "", localized_name)
-			hype = clean_description(data.get(hero.full_name + "_hype"))
 			if lang == "english":
 				hero.localized_name = localized_name
-				hero.hype = hype
 			else:
 				addLocaleString(session, lang, hero, "localized_name", localized_name)
+	
+	print("- loading hero hype from dota_lang files")
+	# load hero hype
+	lang_data = DotaFiles.lang_dota
+	for hero in session.query(Hero):
+		for lang, data in lang_data:
+			data = data.read()["lang"]["Tokens"]
+
+			hype = clean_description(data.get(hero.full_name + "_hype"))
+			if lang == "english":
+				hero.hype = hype
+			else:
 				addLocaleString(session, lang, hero, "hype", hype)
 
 
