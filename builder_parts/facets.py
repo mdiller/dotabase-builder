@@ -29,6 +29,9 @@ def load():
 		for facetname in hero_data["Facets"]:
 			facet_data = hero_data["Facets"][facetname]
 
+			if facet_data.get("Deprecated") == "true":
+				continue # skip deprecated facets
+
 			facet = Facet()
 
 			facet.id = current_id

@@ -12,8 +12,18 @@ import re
 def build_replacements_dict_facetabilitystrings(facet: Facet, ability: Ability):
 	specials = json.loads(facet.ability_special, object_pairs_hook=OrderedDict)
 	result = build_replacements_dict(ability)
-	for attrib in specials:
-		result[attrib["key"]] = attrib["value"]
+	if not ability.name.startswith("special_bonus_"):
+		for attrib in specials:
+			key = attrib["key"]
+			value = attrib["value"]
+			if key in result:
+				result[key] = value
+			else:
+				modified_key = re.sub("^bonus_", "", key)
+				if modified_key in result:
+					result[modified_key] = value
+				else:
+					result[key] = value
 	return result
 
 def build_replacements_dict_facet(facet: Facet):
@@ -288,9 +298,6 @@ def load():
 			else:
 				for key in info:
 					addLocaleString(session, lang, ability, key, info[key])
-
-		if ability.localized_name.startswith(": "):
-			ability.localized_name = ability.localized_name[2:]
 
 		if ability.scepter_grants and ability.scepter_description == "":
 			ability.scepter_description = f"Adds new ability: {ability.localized_name}."

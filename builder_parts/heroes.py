@@ -78,6 +78,8 @@ def load():
 		# Link facets
 		for facetname in hero_data.get("Facets", []):
 			facet = session.query(Facet).filter_by(name=facetname).first()
+			if facet is None:
+				continue
 			facet.hero_id = hero.id
 			facet_data = hero_data["Facets"][facetname]
 			for ability in facet_data.get("Abilities", []):

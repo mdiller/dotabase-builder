@@ -14,7 +14,8 @@ def clean_values(values: str, join_string=" ", percent=False):
 		values[i] = re.sub(r"\.0+$", "", values[i])
 		values[i] = re.sub(r"^=", "", values[i])
 		if percent and values[i][-1] != "%":
-			values[i] += "%"
+			if not re.match(r"^x[0-9]+$", values[i]):
+				values[i] += "%"
 	if all(x == values[0] for x in values):
 		return values[0]
 	return join_string.join(values)
@@ -214,9 +215,15 @@ def ability_special_add_talent(ability_special, ability_query, ability_name):
 def ability_special_add_header(ability_special, strings, name):
 	for attribute in ability_special:
 		key = re.sub("^bonus_", "", attribute['key'])
-		header = strings.get(f"DOTA_Tooltip_ability_{name}_{key}")
-		if header is None:
-			header = strings.get(f"DOTA_Tooltip_Ability_{name}_{key}")
+		keys = []
+		for a in ["ability", "Ability"]:
+			for b in [key, attribute['key']]:
+				keys.append(f"DOTA_Tooltip_{a}_{name}_{b}")
+
+		header = None
+		for k in keys:
+			if header is None:
+				header = strings.get(k)
 		if header is None:
 			continue
 		match = re.match(r"(%)?([\+\-]\$)?(.*)", header)
@@ -290,6 +297,8 @@ def clean_description(text, replacements_dict=None, base_level=None, value_boldi
 		text = re.sub(r'\*\*%', '%**', text)
 		# replace double percents that are redundant now
 		text = re.sub(r'%%', '%', text)
+		# do what we think the ": {s" stuff means
+		text = re.sub(r"^: [x\+\-]?", "", text)
 
 	if text.startswith("\n"):
 		text = text[1:]
