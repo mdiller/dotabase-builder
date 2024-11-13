@@ -92,6 +92,7 @@ def load():
 		ability_id_map[good_name] = ability_id_map[bad_name]
 		del ability_id_map[bad_name]
 
+	# TODO: THEY SEEM TO HAVE JUST REMOVED TALENTS FROM  main_data, SO WE GOTTA JUST ADD ABILITIES BY ID FROM ability_id_map, AND ACCEPT THAT THE DATA MIGHT NOT EXIST
 	# this method called by loop below it
 	def add_ability(abilityname, data_source):
 		if(abilityname == "Version" or
@@ -99,7 +100,7 @@ def load():
 			abilityname == "dota_base_ability"):
 			return
 
-		ability_data = data_source[abilityname]
+		ability_data = data_source.get(abilityname)
 		ability = Ability()
 
 		def get_val(key, default_base=False):
@@ -135,26 +136,45 @@ def load():
 
 		ability.name = abilityname
 		ability.id = get_ability_id(ability.name)
-		ability.type = get_val('AbilityType', default_base=True)
-		ability.behavior = get_val('AbilityBehavior', default_base=True)
-		ability.cast_range = clean_values(get_val('AbilityCastRange'))
-		ability.cast_point = clean_values(get_val('AbilityCastPoint'))
-		ability.channel_time = clean_values(get_val('AbilityChannelTime'))
-		ability.charges = clean_values(get_val('AbilityCharges'))
-		if ability.charges:
-			ability.cooldown = clean_values(get_val('AbilityChargeRestoreTime'))
-		else:
-			ability.cooldown = clean_values(get_val('AbilityCooldown'))
-		ability.duration = clean_values(get_val('AbilityDuration'))
-		ability.damage = clean_values(get_val('AbilityDamage'))
-		ability.health_cost = clean_values(get_val('AbilityHealthCost'))
-		ability.mana_cost = clean_values(get_val('AbilityManaCost'))
-		ability.ability_special = json.dumps(get_ability_special(ability_data, ability.name), indent=4)
-		ability.scepter_grants = get_val("IsGrantedByScepter") == "1"
-		ability.shard_grants = get_val("IsGrantedByShard") == "1"
-		ability.scepter_upgrades = get_val("HasScepterUpgrade") == "1"
-		ability.shard_upgrades = get_val("HasShardUpgrade") == "1"
-		ability.innate = get_val("Innate") == "1"
+		ability.json_data = "{}"
+		ability.ability_special = "[]"
+
+		if ability_data is not None:
+			ability.type = get_val('AbilityType', default_base=True)
+			ability.behavior = get_val('AbilityBehavior', default_base=True)
+			ability.cast_range = clean_values(get_val('AbilityCastRange'))
+			ability.cast_point = clean_values(get_val('AbilityCastPoint'))
+			ability.channel_time = clean_values(get_val('AbilityChannelTime'))
+			ability.charges = clean_values(get_val('AbilityCharges'))
+			if ability.charges:
+				ability.cooldown = clean_values(get_val('AbilityChargeRestoreTime'))
+			else:
+				ability.cooldown = clean_values(get_val('AbilityCooldown'))
+			ability.duration = clean_values(get_val('AbilityDuration'))
+			ability.damage = clean_values(get_val('AbilityDamage'))
+			ability.health_cost = clean_values(get_val('AbilityHealthCost'))
+			ability.mana_cost = clean_values(get_val('AbilityManaCost'))
+			ability.ability_special = json.dumps(get_ability_special(ability_data, ability.name), indent=4)
+			ability.scepter_grants = get_val("IsGrantedByScepter") == "1"
+			ability.shard_grants = get_val("IsGrantedByShard") == "1"
+			ability.scepter_upgrades = get_val("HasScepterUpgrade") == "1"
+			ability.shard_upgrades = get_val("HasShardUpgrade") == "1"
+			ability.innate = get_val("Innate") == "1"
+
+			def get_enum_val(key, prefix):
+				value = get_val(key)
+				if value:
+					return re.sub(prefix, "", value).lower().replace(" ", "")
+				else:
+					return value
+
+			ability.behavior = get_enum_val('AbilityBehavior', "DOTA_ABILITY_BEHAVIOR_")
+			ability.damage_type = get_enum_val('AbilityUnitDamageType', "DAMAGE_TYPE_")
+			ability.spell_immunity = get_enum_val('SpellImmunityType', "SPELL_IMMUNITY_(ENEMIES|ALLIES)_")
+			ability.target_team = get_enum_val('AbilityUnitTargetTeam', "DOTA_UNIT_TARGET_TEAM_")
+			ability.dispellable = get_enum_val('SpellDispellableType', "SPELL_DISPELLABLE_")
+
+			ability.json_data = json.dumps(ability_data, indent=4)
 
 
 		if ability.id in added_ids:
@@ -162,32 +182,17 @@ def load():
 			return
 		added_ids.append(ability.id)
 
-		def get_enum_val(key, prefix):
-			value = get_val(key)
-			if value:
-				return re.sub(prefix, "", value).lower().replace(" ", "")
-			else:
-				return value
-
-		ability.behavior = get_enum_val('AbilityBehavior', "DOTA_ABILITY_BEHAVIOR_")
-		ability.damage_type = get_enum_val('AbilityUnitDamageType', "DAMAGE_TYPE_")
-		ability.spell_immunity = get_enum_val('SpellImmunityType', "SPELL_IMMUNITY_(ENEMIES|ALLIES)_")
-		ability.target_team = get_enum_val('AbilityUnitTargetTeam', "DOTA_UNIT_TARGET_TEAM_")
-		ability.dispellable = get_enum_val('SpellDispellableType', "SPELL_DISPELLABLE_")
-
-		ability.json_data = json.dumps(ability_data, indent=4)
-
 		session.add(ability)
 
-
-	for key in main_data:
-		add_ability(key, main_data)
 
 	for root, dirs, files in os.walk(config.vpk_path + DotaPaths.npc_hero_scripts):
 		for file in files:
 			hero_data = valve_readfile(DotaPaths.npc_hero_scripts + file, "kv")["DOTAAbilities"]
 			for key in hero_data:
 				add_ability(key, hero_data)
+
+	for key in ability_id_map:
+		add_ability(key, main_data)
 	
 
 	print("- loading ability localization files")
@@ -200,7 +205,6 @@ def load():
 		data = CaseInsensitiveDict(data)
 		lang_data.append((lang, data))
 	
-
 	print("- intermediate ability linking")
 	# intermedate re-linking and setting of ability metadata
 	for ability in session.query(Ability):
