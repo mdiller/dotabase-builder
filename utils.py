@@ -2,6 +2,7 @@ import sys, os, json, re
 import decimal
 import colorama # support ansi colors on windows
 import datetime
+import re
 from collections import OrderedDict
 from dotabase import LocaleString
 colorama.init()
@@ -58,6 +59,7 @@ def do_simple_math(base_value, modifier):
 	else:
 		base_value_decimal = decimal.Decimal(base_value)
 
+	operation = lambda a, b: a + b
 
 	if "%" in modifier:
 		modifier = modifier.replace("%", "")
@@ -66,9 +68,14 @@ def do_simple_math(base_value, modifier):
 	elif "=" in modifier: # TODO: this for lifestealer infest aghs, sets it to the new value. too tired to implement right now
 		modifier = modifier.replace("=", "")
 		modifier_decimal = decimal.Decimal(modifier)
+	elif "x" in modifier:
+		modifier = modifier.replace("x", "")
+		operation = lambda a, b: a * b
+		modifier_decimal = decimal.Decimal(modifier)
 	else:
 		modifier_decimal = decimal.Decimal(modifier)
-	value = base_value_decimal + modifier_decimal
+
+	value = operation(base_value_decimal, modifier_decimal)
 	value = str(value)
 	value = re.sub(r"\.0+$", "", value)
 	return value
@@ -237,8 +244,7 @@ def ability_special_add_header(ability_special, strings, name):
 		if match.group(2):
 			attribute["header"] = match.group(2)[0]
 			attribute["footer"] = strings[f"dota_ability_variable_{header}"]
-			if header in "dota_ability_variable_attack_range":
-				attribute["footer"] = re.sub(r"<[^>]*>", "", attribute["footer"])
+			attribute["footer"] = re.sub(r"<[^>]*>", "", attribute["footer"])
 		else:
 			# check if we look like "-Something" (without colon) or w/ a plus
 			header = re.sub(r"<[^>]*>", "", header)
@@ -336,7 +342,8 @@ class CaseInsensitiveDict(dict):
 		return key.lower() if isinstance(key, str) else key
 	def __init__(self, *args, **kwargs):
 		super(CaseInsensitiveDict, self).__init__(*args, **kwargs)
-		self._convert_keys()
+		remove_colons = kwargs.get("remove_colons", False)
+		self._convert_keys(remove_colons)
 	def __getitem__(self, key):
 		return super(CaseInsensitiveDict, self).__getitem__(self.__class__._k(key))
 	def __setitem__(self, key, value):
@@ -356,10 +363,13 @@ class CaseInsensitiveDict(dict):
 	def update(self, E={}, **F):
 		super(CaseInsensitiveDict, self).update(self.__class__(E))
 		super(CaseInsensitiveDict, self).update(self.__class__(**F))
-	def _convert_keys(self):
+	def _convert_keys(self, remove_colons=False):
 		for k in list(self.keys()):
 			v = super(CaseInsensitiveDict, self).pop(k)
+			if remove_colons:
+				k = re.sub(r":.+$", "", k)
 			self.__setitem__(k, v)
+
 
 CURRENT_PROGRESS_BAR = None
 

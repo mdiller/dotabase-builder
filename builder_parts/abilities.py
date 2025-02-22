@@ -217,6 +217,8 @@ def load():
 						if subkey.startswith("special_bonus"):
 							# this is a talent value we need to link
 							value = valdict[subkey]
+							if isinstance(value, OrderedDict) and "value" in value:
+								value = value["value"]
 							value = re.sub(r"(\+|-)", "", value) # clean it up so we dont have duplicate things (the header contains these)
 
 							# special_bonus_facet_drow_ranger_sidestep

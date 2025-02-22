@@ -58,6 +58,7 @@ def load():
 		item.secret_shop = item_data.get("SecretShop") == "1"
 		item.shop_tags = "|".join(item_data.get("ItemShopTags", "").split(";"))
 		item.ability_special = json.dumps(get_ability_special(item_data, item.name), indent=4)
+		item.is_neutral_enhancement = item_data.get("ItemIsNeutralPassiveDrop") == "1"
 
 		item.json_data = json.dumps(item_data, indent=4)
 
@@ -91,7 +92,7 @@ def load():
 		replacements_dict = build_replacements_dict(item)
 		
 		for lang, data in lang_data:
-			data = CaseInsensitiveDict(data.read()["lang"]["Tokens"])
+			data = CaseInsensitiveDict(data.read()["lang"]["Tokens"], remove_colons=True)
 			info = {}
 			info["localized_name"] = data.get(item_tooltip, item.name)
 			info["description"] = data.get(item_tooltip + "_Description", data.get(item_tooltip2 + "_Description", ""))
@@ -110,11 +111,15 @@ def load():
 					addLocaleString(session, lang, item, key, info[key])
 
 	print("- adding neutral item data")
-	data = DotaFiles.neutral_items.read()["neutral_items"]
+	data = DotaFiles.neutral_items.read()["neutral_items"]["neutral_tiers"]
 	item_tier_map = {}
 	for tier in data:
 		for name in data[tier]["items"]:
-			item_tier_map[name] = tier
+			if name not in item_tier_map:
+				item_tier_map[name] = tier
+		for name in data[tier]["enhancements"]:
+			if name not in item_tier_map:
+				item_tier_map[name] = tier
 	for item in session.query(Item):
 		if item.name in item_tier_map:
 			item.neutral_tier = item_tier_map[item.name]
@@ -143,7 +148,7 @@ def load():
 	print("- adding item icon files")
 	# Add img files to item
 	for item in session.query(Item):
-		iconpath = DotaPaths.item_images + item.name.replace("item_", "") + "_png.png"
+		iconpath = (DotaPaths.item_images + item.name.replace("item_", "") + "_png.png").lower()
 		if os.path.isfile(config.vpk_path + iconpath):
 			item.icon = iconpath
 		else:
