@@ -170,6 +170,7 @@ def kvfile2json(text, remove_comments=True):
 	text = re.sub(r'\n\s*"\s*\n', r'\n', text)
 
 	# uncomment single quotes
+	text = re.sub(r"\\\\'", "'", text)
 	text = re.sub(r"\\'", "'", text)
 
 	# custom fixes because Valve does dum things (this is for when this is just randomly on a line)

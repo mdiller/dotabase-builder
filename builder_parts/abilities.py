@@ -112,7 +112,12 @@ def load():
 			elif "AbilityValues" in ability_data and key in ability_data["AbilityValues"]:
 				val = ability_data["AbilityValues"][key]
 				if not isinstance(val, str):
-					val = val["value"]
+					if "value" in val:
+						val = val["value"]
+					elif default_base:
+						return ability_base[key]
+					else:
+						return None
 				if ' ' in val and all(x == val.split(' ')[0] for x in val.split(' ')):
 					return val.split(' ')[0]
 				return val
@@ -217,8 +222,11 @@ def load():
 						if subkey.startswith("special_bonus"):
 							# this is a talent value we need to link
 							value = valdict[subkey]
-							if isinstance(value, OrderedDict) and "value" in value:
-								value = value["value"]
+							if isinstance(value, OrderedDict):
+								if "value" in value:
+									value = value["value"]
+								else:
+									value = "0"
 							value = re.sub(r"(\+|-)", "", value) # clean it up so we dont have duplicate things (the header contains these)
 
 							# special_bonus_facet_drow_ranger_sidestep

@@ -45,7 +45,7 @@ def load():
 		item.name = item_name_fixes.get(itemname, itemname)
 		item.id = item_id_map[item.name]
 		item.cost = item_data.get('ItemCost')
-		item.aliases = "|".join(item_data.get("ItemAliases", "").split(";"))
+		item.aliases = "|".join(item_data.get("ItemAliases", "").split(";")) # moved this cuz they moved it to the localizations
 		item.quality = item_data.get("ItemQuality")
 		item.health_cost = clean_values(item_data.get('AbilityHealthCost'))
 		item.mana_cost = clean_values(item_data.get('AbilityManaCost'))
@@ -90,6 +90,14 @@ def load():
 		ability_special = ability_special_add_header(ability_special, english_data, item.name)
 		item.ability_special = json.dumps(ability_special, indent=4)
 		replacements_dict = build_replacements_dict(item)
+
+		new_aliases = english_data.get(f"DOTA_SearchAlias_Ability_{item.name}", "")
+		new_aliases = new_aliases.split(";")
+		aliases = item.aliases.split("|")
+		aliases.extend(new_aliases)
+		aliases = list(filter(lambda a: a != "", aliases))
+		item.aliases = "|".join(aliases)
+
 		
 		for lang, data in lang_data:
 			data = CaseInsensitiveDict(data.read()["lang"]["Tokens"], remove_colons=True)

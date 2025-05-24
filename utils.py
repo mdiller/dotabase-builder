@@ -8,6 +8,8 @@ from dotabase import LocaleString
 colorama.init()
 
 def clean_values(values: str, join_string=" ", percent=False):
+	if isinstance(values, OrderedDict) and "value" in values:
+		values = values["value"]
 	if values is None or values == "":
 		return values
 	values = values.strip().split(" ")
