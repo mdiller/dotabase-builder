@@ -30,14 +30,15 @@ def load():
 			facet_data = hero_data["Facets"][facetname]
 
 			if facet_data.get("Deprecated") == "true":
-				continue # skip deprecated facets
+				slot += 1 # skip this but it matters for the slot id
+				continue
 
 			facet = Facet()
 
 			facet.id = current_id
 			facet.name = facetname
 			# facet.hero_id = ""
-			facet.icon_name = facet_data["Icon"]
+			facet.icon_name = facet_data["Icon"].lower()
 			facet.icon = DotaPaths.facet_icon_images + facet.icon_name + "_png.png"
 			facet.color = facet_data["Color"]
 			facet.gradient_id = int(facet_data.get("GradientID", 0))
