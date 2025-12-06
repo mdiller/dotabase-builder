@@ -151,7 +151,7 @@ def load():
 			ability.cast_point = clean_values(get_val('AbilityCastPoint'))
 			ability.channel_time = clean_values(get_val('AbilityChannelTime'))
 			ability.charges = clean_values(get_val('AbilityCharges'))
-			if ability.charges:
+			if ability.charges and ability.charges != "0":
 				ability.cooldown = clean_values(get_val('AbilityChargeRestoreTime'))
 			else:
 				ability.cooldown = clean_values(get_val('AbilityCooldown'))
@@ -183,8 +183,9 @@ def load():
 
 
 		if ability.id in added_ids:
-			printerr(f"duplicate id on: {ability.name}")
-			return
+			ability2 = session.query(Ability).filter_by(id=ability.id).first()
+			printerr(f"duplicate ability id: {ability.name}({ability.id}) = {ability2.name}({ability.id}). (GONNA JUST SAY FUCK IT AND ADD 123456))")
+			ability2.id = ability2.id + 123456
 		added_ids.append(ability.id)
 
 		session.add(ability)
@@ -195,6 +196,8 @@ def load():
 			hero_data = valve_readfile(DotaPaths.npc_hero_scripts + file, "kv")["DOTAAbilities"]
 			for key in hero_data:
 				add_ability(key, hero_data)
+				if key in ability_id_map:
+					del ability_id_map[key]
 
 	for key in ability_id_map:
 		add_ability(key, main_data)
@@ -214,6 +217,8 @@ def load():
 	# intermedate re-linking and setting of ability metadata
 	for ability in session.query(Ability):
 		ability_data = json.loads(ability.json_data, object_pairs_hook=OrderedDict)
+		if ability_data == '':
+			continue
 		abilityvalues = ability_data.get("AbilityValues")
 		if abilityvalues:
 			for key, valdict in abilityvalues.items():

@@ -59,12 +59,15 @@ def load():
 							if re.search(pattern, ability.localized_name):
 								printerr(f"Missing attribute in {hero.localized_name}'s talent: '{ability.localized_name}'")
 							if re.search(pattern, ability.description):
-								printerr(f"Missing attribute in {hero.localized_name}'s talent: '{ability.description}'")
+								printerr(f"Missing attribute in {hero.localized_name}'s talent description: '{ability.description}'")
 
 						session.add(talent)
 						talent_slot += 1
 		if talent_slot != 8:
-			raise ValueError("{} only has {} talents?".format(hero.localized_name, talent_slot))
+			talents_found = session.query(Talent).filter_by(hero_id=hero.id).order_by(Talent.slot).all()
+			talents_found = list(map(lambda t: "  " + t.ability.localized_name, talents_found))
+			talents_found = "\n".join(talents_found)
+			raise ValueError("{} only has {} talents?\ntalents found:\n{}".format(hero.localized_name, talent_slot, talents_found))
 	
 	talent_names = "|".join(talent_names)
 	print("- scanning abilities to link them to talents where necessary")

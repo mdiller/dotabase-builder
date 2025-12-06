@@ -92,6 +92,8 @@ ability_special_talent_keys = {
 }
 def get_ability_special_AbilityValues(ability_values, name):
 	result = []
+	if ability_values == '' or ability_values is None:
+		return result
 	for avkey, value in ability_values.items():
 		new_item = OrderedDict()
 		new_item["key"] = avkey
