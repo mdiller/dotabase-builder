@@ -71,7 +71,11 @@ def load():
 		colors = colorgram.extract(config.vpk_path + loadingscreen.thumbnail, 5)
 
 		loadingscreen.color = "#{0:02x}{1:02x}{2:02x}".format(*colors[0].rgb)
-		hsv = rgb_to_hsv(colors[0].rgb)
+		rgb = colors[0].rgb
+		hsv = rgb_to_hsv(rgb)
+		loadingscreen.r = rgb[0]
+		loadingscreen.g = rgb[1]
+		loadingscreen.b = rgb[2]
 		loadingscreen.hue = hsv[0]
 		loadingscreen.saturation = hsv[1]
 		loadingscreen.value = hsv[2]
