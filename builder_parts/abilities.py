@@ -92,12 +92,16 @@ def load():
 		ability_id_map[good_name] = ability_id_map[bad_name]
 		del ability_id_map[bad_name]
 
+	IGNORED_ABILITIES = [
+		"Version",
+		"Version1",
+		"ability_deward",
+		"dota_base_ability"
+	]
 	# TODO: THEY SEEM TO HAVE JUST REMOVED TALENTS FROM  main_data, SO WE GOTTA JUST ADD ABILITIES BY ID FROM ability_id_map, AND ACCEPT THAT THE DATA MIGHT NOT EXIST
 	# this method called by loop below it
 	def add_ability(abilityname, data_source):
-		if(abilityname == "Version" or
-			abilityname == "ability_deward" or
-			abilityname == "dota_base_ability"):
+		if(abilityname in IGNORED_ABILITIES):
 			return
 
 		ability_data = data_source.get(abilityname)
@@ -137,10 +141,15 @@ def load():
 			if name in ability_id_map:
 				return ability_id_map[name]
 			name = name.replace("1", "")
-			return ability_id_map[name]
+			return ability_id_map.get(name)
 
 		ability.name = abilityname
 		ability.id = get_ability_id(ability.name)
+
+		if ability.id is None:
+			printerr(f"Skipping '{ability.name}' because id = None")
+			return
+
 		ability.json_data = "{}"
 		ability.ability_special = "[]"
 
