@@ -5,6 +5,7 @@ from dotabase import *
 from utils import *
 import importlib.metadata
 import os
+import subprocess
 import sys
 
 single_part = None
@@ -109,6 +110,12 @@ def build_dotabase():
 	update_readme()
 	update_pkg_version()
 	print("done!")
+	result = subprocess.run(
+		["git", "diff", "--stat", "--color=always", ":!*.sql"],
+		cwd=dotabase_dir,
+		capture_output=True
+	)
+	print(result.stdout.decode("utf-8", errors="replace"), end="")
 
 
 if __name__ == "__main__":
