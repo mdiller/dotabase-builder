@@ -116,6 +116,8 @@ def get_ability_special_AbilityValues(ability_values, name):
 				if subkey in ability_special_talent_keys:
 					new_item[ability_special_talent_keys[subkey]] = value[subkey]
 			
+			if "hero_levelup" in value:
+				new_item["hero_levelup"] = value["hero_levelup"]
 			if "special_bonus_shard" in value:
 				new_item["shard_value"] = do_simple_math(value.get("value"), value["special_bonus_shard"])
 				new_item["shard_bonus"] = re.sub(r"[^\d]", "", value["special_bonus_shard"])
@@ -244,6 +246,8 @@ def ability_special_add_header(ability_special, strings, name):
 			attribute["value"] = clean_values(attribute["value"], percent=match.group(1))
 		if "talent_value" in attribute:
 			attribute["talent_value"] = clean_values(attribute["talent_value"], percent=match.group(1))
+		if "hero_levelup" in attribute:
+			attribute["hero_levelup"] = clean_values(attribute["hero_levelup"], percent=match.group(1))
 
 		if match.group(2):
 			attribute["header"] = match.group(2)[0]

@@ -327,6 +327,13 @@ def load():
 				for key in info:
 					addLocaleString(session, lang, ability, key, info[key])
 
+		# If an ability is disabled by default and enabled by scepter, treat it as granted by scepter
+		ability_special_parsed = json.loads(ability.ability_special)
+		for special in ability_special_parsed:
+			if special.get("key") == "enabled" and special.get("value") == "0" and (special.get("scepter_value") == "1" or special.get("scepter_bonus") == "1"):
+				ability.scepter_grants = True
+				break
+
 		if ability.scepter_grants and ability.scepter_description == "":
 			ability.scepter_description = f"Adds new ability: {ability.localized_name}."
 
