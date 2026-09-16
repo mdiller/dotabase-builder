@@ -200,6 +200,38 @@ def rulesfile2json(text):
 
 	return tryloadjson(text, parser="rulesfile2json")
 
+def deep_merge(a, b):
+	for key, value in b.items():
+		if key in a and isinstance(a[key], dict) and isinstance(value, dict):
+			deep_merge(a[key], value)
+		else:
+			a[key] = value
+	return a
+
+# Resolves Source engine "#base "path"" include directives (as seen in files
+# like npc_heroes.txt, which now just #base's in one file per hero) by
+# stripping them out, parsing the remaining text normally, then recursively
+# parsing each included file (relative to filepath's directory) and deep
+# merging its data in. Can be plugged into other file types by passing
+# resolve_includes=True to ValveFile.
+def resolve_base_includes(text, filepath, fileformat, encoding=None):
+	sourcedir = config.vpk_path
+	base_dir = os.path.dirname(filepath)
+
+	include_paths = re.findall(r'#base\s+"([^"]+)"', text)
+	text = re.sub(r'#base\s+"[^"]+"\n?', '', text)
+
+	data = file_formats[fileformat](text)
+
+	for include_path in include_paths:
+		included_filepath = base_dir + "/" + include_path
+		with open(sourcedir + included_filepath, 'r', encoding=encoding) as f:
+			included_text = f.read()
+		included_data = resolve_base_includes(included_text, included_filepath, fileformat, encoding)
+		deep_merge(data, included_data)
+
+	return data
+
 class AssetModifier():
 	def __init__(self, data):
 		self.data = data
@@ -241,7 +273,7 @@ class ItemsGame():
 
 
 # Reads from converted json file unless overwrite parameter is specified
-def valve_readfile(filepath, fileformat, encoding=None, overwrite=False) -> dict:
+def valve_readfile(filepath, fileformat, encoding=None, overwrite=False, resolve_includes=False) -> dict:
 	sourcedir = config.vpk_path
 	json_file = os.path.splitext(json_cache_dir + filepath)[0]+'.json'
 	vpk_file = sourcedir + filepath
@@ -255,7 +287,10 @@ def valve_readfile(filepath, fileformat, encoding=None, overwrite=False) -> dict
 		if(fileformat in file_formats):
 			with open(vpk_file, 'r', encoding=encoding) as f:
 				text = f.read()
-				data = file_formats[fileformat](text)
+				if resolve_includes:
+					data = resolve_base_includes(text, filepath, fileformat, encoding)
+				else:
+					data = file_formats[fileformat](text)
 		else:
 			raise ValueError("invalid fileformat argument: " + fileformat)
 	except CustomJsonParsingException as e:
@@ -271,17 +306,18 @@ class ValveFile():
 	path: str
 	format: str
 	encoding: str
-	def __init__(self, path, format="kv", encoding=None):
+	def __init__(self, path, format="kv", encoding=None, resolve_includes=False):
 		self.path = path
 		self.format = format
 		self.encoding = encoding
+		self.resolve_includes = resolve_includes
 		self.read_data = None
-	
+
 	def read(self) -> dict:
 		if self.read_data:
 			return self.read_data
 		else:
-			self.read_data = valve_readfile(self.path, self.format, self.encoding)
+			self.read_data = valve_readfile(self.path, self.format, self.encoding, resolve_includes=self.resolve_includes)
 			return self.read_data
 
 # creates a list of tuples of a given type of lang files
@@ -314,7 +350,7 @@ file_formats = {
 class DotaFiles():
 	npc_ids = ValveFile("/scripts/npc/npc_ability_ids.txt")
 	npc_abilities = ValveFile("/scripts/npc/npc_abilities.txt")
-	npc_heroes = ValveFile("/scripts/npc/npc_heroes.txt")
+	npc_heroes = ValveFile("/scripts/npc/npc_heroes.txt", resolve_includes=True)
 	items = ValveFile("/scripts/npc/items.txt")
 	neutral_items = ValveFile("/scripts/npc/neutral_items.txt")
 	emoticons = ValveFile("/scripts/emoticons.txt", encoding="UTF-16")

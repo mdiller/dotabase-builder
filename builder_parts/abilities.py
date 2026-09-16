@@ -6,7 +6,7 @@ PROMPT:
 from builder import session
 from dotabase import *
 from utils import *
-from valve2json import DotaFiles, DotaPaths, ValveFile, valve_readfile
+from valve2json import DotaFiles, DotaPaths, ValveFile
 import re
 
 def build_replacements_dict_facetabilitystrings(facet: Facet, ability: Ability):
@@ -200,13 +200,17 @@ def load():
 		session.add(ability)
 
 
-	for root, dirs, files in os.walk(config.vpk_path + DotaPaths.npc_hero_scripts):
-		for file in files:
-			hero_data = valve_readfile(DotaPaths.npc_hero_scripts + file, "kv")["DOTAAbilities"]
-			for key in hero_data:
-				add_ability(key, hero_data)
-				if key in ability_id_map:
-					del ability_id_map[key]
+	heroes_data = DotaFiles.npc_heroes.read()["DOTAHeroes"]
+	for hero_key, hero in heroes_data.items():
+		if not isinstance(hero, dict):
+			continue
+		ability_definitions = hero.get("AbilityDefinitions")
+		if not ability_definitions:
+			continue
+		for key in ability_definitions:
+			add_ability(key, ability_definitions)
+			if key in ability_id_map:
+				del ability_id_map[key]
 
 	for key in ability_id_map:
 		add_ability(key, main_data)
