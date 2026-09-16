@@ -374,10 +374,8 @@ class DotaPaths():
 	ability_icon_images = "/panorama/images/spellicons/"
 	hero_side_images = "/panorama/images/heroes/"
 	hero_icon_images = "/panorama/images/heroes/icons/"
-	facet_icon_images = "/panorama/images/hud/facets/icons/"
 	hero_selection_images = "/panorama/images/heroes/selection/"
 	emoticon_images = "/panorama/images/emoticons/"
 	response_rules = "/scripts/talker/"
-	npc_hero_scripts = "/scripts/npc/heroes/"
 
 

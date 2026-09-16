@@ -87,8 +87,7 @@ ability_special_talent_keys = {
 	"LinkedSpecialBonusField": "talent_value_key", 
 	"LinkedSpecialBonusOperation": "talent_operation",
 	"RequiresScepter": "scepter_upgrade",
-	"RequiresShard": "shard_upgrade",
-	"RequiresFacet": "facet_upgrade"
+	"RequiresShard": "shard_upgrade"
 }
 def get_ability_special_AbilityValues(ability_values, name):
 	result = []
@@ -106,12 +105,6 @@ def get_ability_special_AbilityValues(ability_values, name):
 				if key in value:
 					new_item["value"] = value[key]
 					break
-			if not "value" in new_item:
-				prefix = "special_bonus_facet_"
-				for key in value:
-					if key.startswith(prefix):
-						new_item["value"] = value[key]
-						break
 			for subkey in value:
 				if subkey in ability_special_talent_keys:
 					new_item[ability_special_talent_keys[subkey]] = value[subkey]

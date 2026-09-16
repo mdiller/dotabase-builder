@@ -23,11 +23,10 @@ from generate_json import generate_json
 # Import all parts now that we have the things they need
 from builder_parts import (
 chat_wheel,
-emoticons, 
-items, 
-facets, 
-abilities, 
-heroes, 
+emoticons,
+items,
+abilities,
+heroes,
 talents,
 responses,
 voices,
@@ -38,7 +37,6 @@ parts_dict = {
 	"chat_wheel": chat_wheel,
 	"emoticons": emoticons,
 	"items": items,
-	"facets": facets,
 	"abilities": abilities,
 	"heroes": heroes,
 	"talents": talents,
@@ -97,7 +95,6 @@ def build_dotabase():
 		chat_wheel.load()
 		emoticons.load()
 		items.load()
-		facets.load()
 		abilities.load()
 		heroes.load()
 		talents.load()
